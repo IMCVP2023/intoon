@@ -28,7 +28,7 @@ function getClient()
     $client = new Google_Client();
     $client->setApplicationName('Gmail API PHP Quickstart');
     //$client->setScopes(Google_Service_Gmail::GMAIL_READONLY);
-	$client->setAuthConfig('../../plugin/google-api-php-client-main/credentials.json');
+	$client->setAuthConfig('../../plugin/google-api-php-client-main/imcvp_credentials.json');
 	$client->setIncludeGrantedScopes(true);
     $client->setAccessType('offline');
     $client->setPrompt('select_account consent');
@@ -36,7 +36,7 @@ function getClient()
 
 	//$redirect_uri = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
 	
-	$redirect_uri = 'https://icomes.or.kr/main/ajax/client/ajax_gmail.php';
+	$redirect_uri = 'https://imcvp.org/main/ajax/client/ajax_gmail.php';
 	$client->setRedirectUri($redirect_uri);
 
 	//$client->Authorization("Bearer ya29.a0ARrdaM9mYnPVm2C5-i9h0Av545RZ-52p3qi5fTvhrf4Jyo01DFwZQDCm21sDfNbD6rsq6rYG5V3Us2Pi0yZFcFgVWwnISInUUlbk8b_S0sx81ysEJb0mc3axZWlMAxpCpd4oQgHgNSS0_ho4apRgpNUA9Eae");
@@ -61,8 +61,8 @@ function getClient()
     $tokenPath = 'token_dev.json';
 
 	// online server
-	if($_SERVER['HTTP_HOST'] === "www.icomes.or.kr" || $_SERVER['HTTP_HOST'] === "icomes.or.kr") {
-		$tokenPath = 'token.json';
+	if($_SERVER['HTTP_HOST'] === "www.imcvp.org" || $_SERVER['HTTP_HOST'] === "imcvp.org") {
+		$tokenPath = 'imcvp_token.json';
 	}
 
     if (file_exists($tokenPath)) {
