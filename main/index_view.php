@@ -93,11 +93,11 @@
 			<!-- <video src="https://player.vimeo.com/progressive_redirect/playback/685374881/rendition/1080p?loc=external&signature=0f96f408d54e4adfe00f0f0a8b8c6a593fa2ecb767763e3709010a574d1a8a3f" autoplay="autoplay" muted="muted" playsinline id="main_2023_video_bg" loop></video> -->
 		<!-- </div> -->
 		<div class="container">
-			<img src="/main/img/img_vsl_text.png" class="pc_only img_vsl_text" alt="">
+			<img src="/main/img/img_vsl_text_2.png" class="pc_only img_vsl_text" alt="">
 			<div class="mb_only img_vsl_text" style="">
-				<img src="/main/img/img_vsl_text_mb.svg" alt="">
-				<p>Sep. 7(Thu) ~ Sep. 9(Sat)</p>
-				<p>CONRAD Seoul Hotel, Korea</p>
+				<img src="/main/img/img_vsl_text_mb.png" alt="">
+				<!-- <p>Sep. 7(Thu) ~ Sep. 9(Sat)</p>
+				<p>CONRAD Seoul Hotel, Korea</p> -->
 			</div>
 			<!-- 상단 타이틀 -->
 			<div class="txt_wrap">
@@ -186,43 +186,43 @@
 			<ul class="main_speaker2">
 				<li class="index_speaker5">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">Thiruma V. Arumugam</h5>
-					<div class="career">La Trobe University,<br>Australia</div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD</div>
 				</li>
 				<li class="index_speaker1">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">Robert R. Wolfe</h5>
-					<div class="career">University of Arkansas for<br>Medical Sciences, USA</div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD</div>
 				</li>
 				<li class="index_speaker6">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">Tamas Horvath</h5>
-					<div class="career">Yale University,<br>USA</div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD</div>
 				</li>
 				<li class="index_speaker7">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">John Wilding</h5>
-					<div class="career">University of Liverpool,<br>UK</div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD</div>
 				</li>
 				<li class="index_speaker2">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">Matthias Blüher</h5>
-					<div class="career">University of Leipzig,<br>Germany</div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD</div>
 				</li>
 				<li class="index_speaker8">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">Jae Myoung Suh</h5>
-					<div class="career">KAIST,<br>Republic of Korea</div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD</div>
 				</li>
 				<li class="index_speaker3">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">Zachary Knight</h5>
-					<div class="career">University of California,<br>San Francisco, USA</div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD</div>
 				</li>
 				<li class="index_speaker4">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">Jae-Heon Kang</h5>
-					<div class="career">Sungkyunkwan University,<br>Republic of Korea</div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD</div>
 				</li>
 			</ul>
 		</div>
@@ -349,8 +349,8 @@
 </div> -->
 
 <!-- 230831 팝업 1/2 -->
-<div class="popup main_pop application_pop" style="display:block;">
-    <!-- <div class="pop_bg"></div> -->
+<!-- <div class="popup main_pop application_pop" style="display:block;">
+    <div class="pop_bg"></div>
     <div class="pop_contents">
 		<img src="/main/img/230831_pop01.png" alt="">
 		<div class="close_area">
@@ -363,9 +363,9 @@
     </div>
 </div>
 
-<!-- 230831 팝업 2/2 -->
+230831 팝업 2/2
 <div class="popup main_pop symposium_pop" style="display:block;">
-    <!-- <div class="pop_bg"></div> -->
+    <div class="pop_bg"></div>
     <div class="pop_contents">
 		<img src="/main/img/230831_pop02.png" alt="">
 		<a href="https://forms.gle/dvj5zCac9edUhBjR8" target="_blank">
@@ -379,10 +379,10 @@
 			<a href="javascript:;" class="pop_close" onclick="closeWin()">Close <img src="/main/img/main_pop_close.png" alt=""></a>
 		</div>	
     </div>
-</div>
+</div> -->
 
 
-<script>
+<!-- <script>
     // 쿠키 가져오기
     var getCookie = function (cname) {
         var name = cname + "=";
@@ -422,3 +422,4 @@
         });
     });
 </script>
+ -->

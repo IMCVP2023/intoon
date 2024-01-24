@@ -1,0 +1,225 @@
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
+PHP Fatal error:  Uncaught DomainException: Unable to read the credential file specified by  GOOGLE_APPLICATION_CREDENTIALS: file ./key.json does not exist in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php:79
+Stack trace:
+#0 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/ApplicationDefaultCredentials.php(160): Google\Auth\CredentialsLoader::fromEnv()
+#1 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(1247): Google\Auth\ApplicationDefaultCredentials::getCredentials('https://www.goo...', NULL, Array, Object(Google\Auth\Cache\MemoryCacheItemPool), NULL)
+#2 /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/src/Client.php(299): Google\Client->createApplicationDefaultCredentials()
+#3 /var/www/kosso.org/main/push_library/push.php(19): Google\Client->fetchAccessTokenWithAssertion()
+#4 /var/www/icomes.or.kr/main/push_library/push_schedule.php(3): include_once('/var/www/kosso....')
+#5 {main}
+  thrown in /var/www/icomes.or.kr/main/plugin/google-api-php-client-main/vendor/google/auth/src/CredentialsLoader.php on line 79
