@@ -58,7 +58,7 @@ function getClient()
     // The file token.json stores the user's access and refresh tokens, and is
     // created automatically when the authorization flow completes for the first
     // time.
-    $tokenPath = 'token_dev.json';
+    $tokenPath = 'imcvp_token.json';
 
 	// online server
 	if($_SERVER['HTTP_HOST'] === "www.imcvp.org" || $_SERVER['HTTP_HOST'] === "imcvp.org") {
@@ -110,7 +110,7 @@ $client = getClient();
 $service = new Google_Service_Gmail($client);
 
 // Print the labels in the user's account.
-$user = 'info@icomes.or.kr';
+$user = 'secretariat@imcvp.org';
 
 
 function createMessage($language, $mail_type, $fname, $to, $subject, $time, $tmp_password, $callback_url, $type=0, $file="", $cc="", $bcc="", $id="", $date="", $category="", $title="", array $data = [], $registration_no = "") {
@@ -122,7 +122,7 @@ function createMessage($language, $mail_type, $fname, $to, $subject, $time, $tmp
 		$background_img_url = "https://icomes.or.kr";
 	}
 
- $rawMessageString = "From: ICOMES2023<info@icomes.or.kr>\r\n";
+ $rawMessageString = "From: IMCVP2024<secretariat@imcvp.org>\r\n";
  $rawMessageString .= "To: <{$to}>\r\n";
  $rawMessageString .= 'Subject: =?utf-8?B?' . base64_encode($subject) . "?=\r\n";
  $rawMessageString .= "MIME-Version: 1.0\r\n";
@@ -229,7 +229,7 @@ if($language == "ko") {
 										</tr>
 										<tr>
 											<td colspan='3'>
-												<div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[ICOMES 2023] Welcome to ICOMES 2023!</div>
+												<div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[IMCVP 2024] Welcome to IMCVP 2024!</div>
 											</td>
 										</tr>
 										<tr>
@@ -237,7 +237,7 @@ if($language == "ko") {
 											<td>
 												<div>
 													<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$first_name} {$last_name},</p>
-													<p style='font-size:14px;color:#170F00;margin-top:14px;'>Thank you for signing up for the ICOMES 2023.<br>Your profile has been successfully created.<br>Please review the information that you have entered as below.<br>If necessary, you can access ‘ICOMES 2023 website - MY PAGE’ to review, modify or update your personal information.</p>
+													<p style='font-size:14px;color:#170F00;margin-top:14px;'>Thank you for signing up for the IMCVP 2024.<br>Your profile has been successfully created.<br>Please review the information that you have entered as below.<br>If necessary, you can access ‘IMCVP 2024 website - MY PAGE’ to review, modify or update your personal information.</p>
 													<table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 														<tbody>
 															<tr>
@@ -261,7 +261,7 @@ if($language == "ko") {
 															</tr>
 														</tbody>	
 													</table>
-													<p>We express our gratitude to you for your interest in ICOMES 2023.</p>
+													<p>We express our gratitude to you for your interest in IMCVP 2024.</p>
 												</div>
 											</td>
 											<td width='74' style='width:74px;'></td>
@@ -396,7 +396,7 @@ if($language == "ko") {
 								</tr>
 								<tr>
 									<td colspan='3'>
-										<div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[ICOMES 2023] Temporary Password</div>
+										<div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[IMCVP 2024] Temporary Password</div>
 									</td>
 								</tr>
 								<tr>
@@ -407,7 +407,7 @@ if($language == "ko") {
 												<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Member of : {$fname}<br><span style='font-size:14px;color:#170F00;font-weight:normal;'>You requested a temporary password at : {$time}</span></p>
 											</div>
 											<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname},</p>
-											<p style='font-size:14px;color:#170F00;margin-top:14px;'>You can log in to the ICOMES 2023 website using the ID & Temporary Password below and modify your password on the personal information on my page.</p>
+											<p style='font-size:14px;color:#170F00;margin-top:14px;'>You can log in to the IMCVP 2024 website using the ID & Temporary Password below and modify your password on the personal information on my page.</p>
 											<table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 												<tbody>
 													<tr>
@@ -651,7 +651,7 @@ if($language == "ko") {
 											<tr>
 												<td width='74' style='width:74px;'></td>
 												<td>
-													<div style='font-weight:bold; text-align:center; font-size: 21px; color: #00666B; padding: 20px 0;'>[ICOMES 2023] Completed Registration</div>
+													<div style='font-weight:bold; text-align:center; font-size: 21px; color: #00666B; padding: 20px 0;'>[IMCVP 2024] Completed Registration</div>
 												</td>
 												<td width='74' style='width:74px;'></td>
 											</tr>
@@ -660,7 +660,7 @@ if($language == "ko") {
 												<td>
 													<div>
 														<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$name_title} {$fname},</p>
-														<p style='font-size:14px;color:#170F00;margin-top:14px;'>We express our gratitude for your registration for the International Congress on Obesity and MEtabolic Syndrome (ICOMES) 2023.	The registration details are presented below.<br/>Should you have any inquiries regarding your registration, kindly reach out to the ICOMES 2023 Secretariat for assistance.(<a href='mailto:icomes@into-on.com'>icomes@into-on.com</a>)</p>
+														<p style='font-size:14px;color:#170F00;margin-top:14px;'>We express our gratitude for your registration for the International Meeting Cardio Vascular disease Prevention (IMCVP) 2024.	The registration details are presented below.<br/>Should you have any inquiries regarding your registration, kindly reach out to the IMCVP 2024 Secretariat for assistance.(<a href='mailto:secretariat@imcvp.org'>secretariat@imcvp.org</a>)</p>
 														<table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 															<tbody>
 																<tr style='border-bottom:1px solid #000;'>
@@ -753,7 +753,7 @@ if($language == "ko") {
 																 -->
 															</tbody>	
 														</table>
-														<p>We eagerly anticipate your presence in Seoul, Korea this coming September.</p>
+														<p>We eagerly anticipate your presence in Seoul, Korea this coming November.</p>
 													</div>
 												</td>
 												<td width='74' style='width:74px;'></td>
@@ -762,7 +762,7 @@ if($language == "ko") {
 												<td width='74' style='width:74px;'></td>
 												<td>
 													<p>Warmest regards,</p>
-													<p>Secretariat of ICOMES 2023</p>
+													<p>Secretariat of IMVCP 2024</p>
 													<br/>
 													<div style='text-align: center;'>
 														<a href='https://www.icomes.or.kr/'><img src='https://www.icomes.or.kr/main/img/icomes_btn.png' alt=''></a>
@@ -1022,8 +1022,8 @@ if($language == "ko") {
 		$rawMessageString .= '<div><table width="750" style="border:1px solid #000; border-radius:27px 27px 0 0; padding: 0;">
 								<tr><td colspan="3"><img src="https://'.$url.'/main/img/mail_header_2023.png" width="750" style="width:100%; max-width:100%;"></td></tr>
 								<tr><td width="74" style="width:74px;"></td><td>
-								<div style="font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;">[ICOMES 2023] Completed Abstract Submission</div></td><td width="74" style="width:74px;"></td></tr>
-								<tr><td width="74" style="width:74px;"></td><td><div><p style="font-size:15px; font-weight:bold; color:#000; margin:0;">Dear '.$first_name.' '.$last_name.',</p><p style="font-size:14px;color:#170F00;margin-top:14px;">Thank you for the online submission of your abstract to ICOMES 2023.<br>Your abstract has been successfully submitted as follows.</p>
+								<div style="font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;">[IMCVP 2024] Completed Abstract Submission</div></td><td width="74" style="width:74px;"></td></tr>
+								<tr><td width="74" style="width:74px;"></td><td><div><p style="font-size:15px; font-weight:bold; color:#000; margin:0;">Dear '.$first_name.' '.$last_name.',</p><p style="font-size:14px;color:#170F00;margin-top:14px;">Thank you for the online submission of your abstract to IMCVP 2024.<br>Your abstract has been successfully submitted as follows.</p>
 								<!-- Abstract Submission Status -->
 								<p style="font-size:17px; font-weight:bold; color:#000;  margin: 30px 0 0;">Abstract Submission Status</p>
 								<table width="586" style="width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:10px 0 30px;">
@@ -1147,7 +1147,7 @@ if($language == "ko") {
 			}
 		}
 
-		$rawMessageString .=  '<p style="margin: 0 34px 10px 0">If you have any questions regarding abstract submission, please contact the secretariat.(<a href="mailto:icomes_abstracts@into-on.com">icomes_abstracts@into-on.com</a>) We look forward to seeing you in ICOMES 2023</p>
+		$rawMessageString .=  '<p style="margin: 0 34px 10px 0">If you have any questions regarding abstract submission, please contact the secretariat.(<a href="mailto:secretariat@imcvp.org">secretariat@imcvp.org</a>) We look forward to seeing you in IMCVP 2024</p>
 								</div>
 								</td>
 								<td width="74" style="width:74px;"></td>
@@ -1157,7 +1157,7 @@ if($language == "ko") {
 									<td>
 										<!-- 23.04.25 수정된 버튼 마크업 -->
 										<p>Best regards,</p>
-										<p>Secretariat of ICOMES 2023</p><br/>
+										<p>Secretariat of IMCVP 2024</p><br/>
 										<div style="text-align: center;">
 											<a href="https://'.$url.'/">
 												<img src="https://'.$url.'/main/img/icomes_btn.png" alt="">
@@ -1243,13 +1243,13 @@ if($_POST["flag"] == "signup") {
 		
 		$user_data = sql_fetch($select_user_query);
 
-		$subject = "[ICOMES 2023] Welcome to ICOMES 2023!";
+		$subject = "[IMCVP 2024] Welcome to IMCVP 2024!";
 		$callback_url = D9_DOMAIN."/signup_certified.php?idx=".$user_data["idx"];
 		
 		$message =createMessage("en", "sign_up", "", $email, $subject, date("Y-m-d H:i:s"), "", $callback_url, 1);
 		//var_dump($message); exit;
-		createDraft($service, "info@icomes.or.kr", $message);
-		sendMessage($service, "info@icomes.or.kr", $message);
+		createDraft($service, "secretariat@imcvp.org", $message);
+		sendMessage($service, "secretariat@imcvp.org", $message);
 
 	} catch(\Throwable $tw) {
 		echo $tw->getMessage();
@@ -1295,9 +1295,9 @@ if($_POST["flag"] == "find_password"){
 		$subject = $locale("mail_find_password_subject");
 		$callback_url = D9_DOMAIN."/password_reset.php?e=".$email."&t=".$random_token;
 
-		$message =createMessage($language, "find_password", $name, $email, "[ICOMES 2023]".$subject, date("Y-m-d H:i:s"), $temporary_password, $callback_url, 0);
-		createDraft($service, "info@icomes.or.kr", $message);
-		sendMessage($service, "info@icomes.or.kr", $message);
+		$message =createMessage($language, "find_password", $name, $email, "[IMCVP 2024]".$subject, date("Y-m-d H:i:s"), $temporary_password, $callback_url, 0);
+		createDraft($service, "secretariat@imcvp.org", $message);
+		sendMessage($service, "secretariat@imcvp.org", $message);
 
 		$hash_temporary_password = password_hash($temporary_password, PASSWORD_DEFAULT);
 
@@ -1337,9 +1337,9 @@ else if($_POST["flag"] == "payment"){
 	$name = $_POST["name"] ?? null;
 	$email = $_POST["email"] ?? null;
 	$data = $_POST["data"] ?? null;
-	$message =createMessage("en", "payment", $name , $email, "[ICOMES] Payment Confirmation", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
-	createDraft($service, "info@icomes.or.kr", $message);
-	sendMessage($service, "info@icomes.or.kr", $message);
+	$message =createMessage("en", "payment", $name , $email, "[IMCVP 2024] Payment Confirmation", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
+	createDraft($service, "secretariat@imcvp.org", $message);
+	sendMessage($service, "secretariat@imcvp.org", $message);
 }
 
 else if($_POST["flag"] == "registration"){
@@ -1347,15 +1347,15 @@ else if($_POST["flag"] == "registration"){
 	$email = $_POST["email"] ?? null;
 	$data = $_POST["data"] ?? null;
 	$registration_idx = $_POST["registration_idx"] ?? null;
-	$message =createMessage("en", "registration", $name , $email, "[ICOMES] Registration", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
-	createDraft($service, "info@icomes.or.kr", $message);
-	sendMessage($service, "info@icomes.or.kr", $message);
+	$message =createMessage("en", "registration", $name , $email, "[IMCVP 2024] Registration", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
+	createDraft($service, "secretariat@imcvp.org", $message);
+	sendMessage($service, "secretariat@imcvp.org", $message);
 
 	$invitation_check_yn = $_POST["invitation_check_yn"] ?? null;
 	if($invitation_check_yn == "Y") {
-		$message =createMessage("en", "visa_registration", $name , $email, "[ICOMES] Registration Invitation", date("Y-m-d H:i:s"), "", "", 1);
-		createDraft($service, "info@icomes.or.kr", $message);
-		sendMessage($service, "info@icomes.or.kr", $message);
+		$message =createMessage("en", "visa_registration", $name , $email, "[IMCVP 2024] Registration Invitation", date("Y-m-d H:i:s"), "", "", 1);
+		createDraft($service, "secretariat@imcvp.org", $message);
+		sendMessage($service, "secretariat@imcvp.org", $message);
 	}
 
 	if($message) {
@@ -1428,9 +1428,9 @@ else if($_POST["flag"] == "abstract"){
 		"nation_map"				=> $nation_map
 	];
 
-	$message =createMessage($language, "abstract", "", $email, "[ICOMES 2023]".$subject, date("Y-m-d H:i:s"), "", "", 1, "", "", "", $user_email, date("Y-m-d H:i:s"), $title, $abstract_title, $data);
-	createDraft($service, "info@icomes.or.kr", $message);
-	sendMessage($service, "info@icomes.or.kr", $message);
+	$message =createMessage($language, "abstract", "", $email, "[IMCVP 2024]".$subject, date("Y-m-d H:i:s"), "", "", 1, "", "", "", $user_email, date("Y-m-d H:i:s"), $title, $abstract_title, $data);
+	createDraft($service, "secretariat@imcvp.org", $message);
+	sendMessage($service, "secretariat@imcvp.org", $message);
 }
 
 
