@@ -22,8 +22,8 @@ class Push
 
             $fields = array(
                 'registration_ids'  => $to_list,
-                'data' => $data
-                // 'notification'      => array('title'=> $title,'body'=> $message,'sound'=>'default')
+                'data' => $data,
+                'notification'      => array('title'=> $title,'body'=> $message,'sound'=>'default')
             );
 
             self::sendAsync($url, $headers, $fields);

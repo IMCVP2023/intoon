@@ -1,6 +1,6 @@
 <?php
 
-$root_path = '/var/www/icomes.or.kr/main';
+$root_path = ROOT_PATH;
 
 include_once("{$root_path}/plugin/PHPMailer/PHPMailerAutoload.php");
 include_once("{$root_path}/plugin/PHPMailer/class.phpmailer.php");
@@ -38,7 +38,7 @@ function mailer($language, $mail_type, $fname, $to, $subject, $time, $tmp_passwo
 	if($_SERVER["HTTP_HOST"] == "43.200.170.254") {
 		$background_img_url = "http://".$_SERVER["HTTP_HOST"]."/main";
 	} else {
-		$background_img_url = "https://icomes.or.kr/";
+		$background_img_url = "https://2023.icomes.or.kr/";
 	}
 
 

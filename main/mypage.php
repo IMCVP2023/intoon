@@ -123,10 +123,10 @@
             ?>
 			<div class="down_btns">
 				<button class="btn blue_btn nowrap book"><img src="./img/icons/icon_download_white.svg" alt="">
-                    <a href="">Abstract Book Download</a>
+                    <a href="http://184a8b4a1a076d93.kinxzone.com/Abstractbook.pdf" target="_blank">Abstract Book Download</a>
                 </button>
 				<button class="btn blue_btn nowrap book"><img src="./img/icons/icon_download_white.svg" alt="">
-                    <a href="">Program Book Download</a>
+                    <a href="http://184a8b4a1a076d93.kinxzone.com/Programbook.pdf" target="_blank">Program Book Download</a>
                 </button>
 			</div>
             <?php
@@ -490,11 +490,11 @@
 <script src="./js/script/client/member.js"></script>
 <script>
 $(document).ready(function() {
-    $('.book').on('click', function(event) {
+    <!-- $('.book').on('click', function(event) {
         event.preventDefault();
         alert('Updates are planned.');
         return false;
-    });
+    }); -->
 
     //비밀번호 입력 시 비밀번호 필수값으로 전환
     $("#password, #re_password").on("change", function() {

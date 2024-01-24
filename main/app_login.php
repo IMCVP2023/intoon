@@ -41,10 +41,10 @@
 
 <script>
 $(document).ready(function(){
-	var varUA = navigator.userAgent.toLowerCase();
-	if ( varUA.indexOf('android') > -1) {
-		alert("Please update the app.")
-	}
+//	var varUA = navigator.userAgent.toLowerCase();
+//	if ( varUA.indexOf('android') > -1) {
+//		alert("Please update the app.")
+//	}
 
     let icomes_device = null;
     let icomes_token = null;

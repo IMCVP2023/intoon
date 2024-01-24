@@ -527,6 +527,19 @@
 	
 </section>
 
+<?php
+    if(!empty($session_user) && $session_app_type == 'Y') {
+?>
+<div class="popup app_pop" style="display:block;">
+    <div class="pop_bg"></div>
+    <div class="pop_contents">
+		<img src="/main/img/app_pop_stamp_tour_event.png" alt="">
+    </div>
+</div>
+<?php
+    } 
+?>
+
 <script>
 	$(document).ready(function() {
 		$(window).resize(function() {

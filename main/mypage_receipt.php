@@ -23,7 +23,8 @@
 				IFNULL(FORMAT(pa.total_price_kr, 0), 0) AS total_price_kr_text, 
 				IFNULL(FORMAT(pa.total_price_us, 0), 0) AS total_price_us_text,
 				DATE_FORMAT(pa.payment_date, '%Y-%m-%d') AS payment_date_text,
-				DATE_FORMAT(rr.register_date, '%Y.%m.%d') AS register_date_text
+				DATE_FORMAT(rr.register_date, '%Y.%m.%d') AS register_date_text,
+				rr.price
 			FROM request_registration AS rr
 			LEFT JOIN member AS mb
 				ON mb.idx = rr.register
@@ -81,7 +82,8 @@
 								</tr>
 								<tr>
 									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Registration Fee</th>
-									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;"><?= $total_price ?></td>
+<!--									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;">--><?php //= $total_price ?><!--</td>-->
+									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;"><?= number_format($data['price']) ?></td>
 								</tr>
 								<tr>
 									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-right:1px solid #000066; border-bottom:3px solid #000066; text-align:left;">Payment Method</th>

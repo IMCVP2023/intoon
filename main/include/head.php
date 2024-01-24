@@ -52,11 +52,15 @@
 
 <body>
     <?php
+
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 	if (strpos($_SERVER["PHP_SELF"], "/main/") !== false) {
 		include_once("./common/common.php");
 	} else {
 		include_once("./main/common/common.php");
 	}
+
 	
 	// 230718 HUBDNC 위치 변경
 	$_page_config = array(
@@ -119,5 +123,5 @@
 	$current_date->format('Y-m-d');
 
 	$intvl = $current_date->diff($d_day);
-	$d_days = $intvl->days + 1;
+	$d_days = $intvl->days ;
 ?>
