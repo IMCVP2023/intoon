@@ -8,7 +8,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="IMCVP 2024">
-    <!-- <meta property="og:image" content="/main/img/poster2023.jpg" /> -->
+    <meta property="og:image" content="/main/img/poster2024.jpg" />
     <meta property="og:description" content="2024 IMCVP hosted by KSCP">
     <meta name="description" content="2024 IMCVP hosted by KSCP">
 
