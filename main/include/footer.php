@@ -4,7 +4,8 @@
     <div class="fixed_btn_wrap">
         <ul class="toolbar_wrap">
             <li>
-                <a href="/main/program_glance.php">
+                <a class="not_yet">
+                <!-- <a href="/main/program_glance.php"> -->
                     <img src="/main/img/icons/tool_program.svg" alt="">
                 </a>
             </li>
@@ -13,13 +14,15 @@
             ?>
             <!--[230824] 다운로드 버튼 추가 / 파일 전달X-->
             <li>
-                <a href="http://184a8b4a1a076d93.kinxzone.com/Abstractbook.pdf" target="_blank" class="type2 pink">
+                <a class="not_yet type2 pink">
+                <!-- <a href="http://184a8b4a1a076d93.kinxzone.com/Abstractbook.pdf" target="_blank" class="type2 pink"> -->
                     <i><img src="/main/img/icons/icon_download_abstract.svg" alt=""></i>
                     Abstract Book <br />Download
                 </a>
             </li>
             <li>
-                <a href="http://184a8b4a1a076d93.kinxzone.com/Programbook.pdf" target="_blank" class="type2 violet">
+                <a class="not_yet type2 violet">
+                <!-- <a href="http://184a8b4a1a076d93.kinxzone.com/Programbook.pdf" target="_blank" class="not_yet type2 violet"> -->
                     <i><img src="/main/img/icons/icon_download_program.svg" alt=""></i>
                     Program Book <br />Download
                 </a>
@@ -28,12 +31,12 @@
             } else {
             ?>
             <li>
-                <button type="button" class="online_registration_alert">
+                <button type="button" class="not_yet">
                     <i><img src="/main/img/icons/tool_regist.svg" alt=""></i>Registration
                 </button>
             </li>
             <li>
-                <button type="button" class="online_submission_alert">
+                <button type="button" class="not_yet">
                     <i><img src="/main/img/icons/tool_abstract.svg" alt=""></i>Abstract
                 </button>
             </li>
@@ -88,7 +91,7 @@
     </div> -->
     <div class="sponsor_logo-wrap container">
         <ul class="s_logo_list">
-            <li><a href="https://www.alvogen.com/" class="alvogen">Alvogen</a></li>
+            <!-- <li><a href="https://www.alvogen.com/" class="alvogen">Alvogen</a></li>
             <li><a href="https://www.novonordisk.com/" class="novo_nordisk">novo nordisk</a></li>
             <li><a href="https://www.handok.co.kr/eng/" class="handok">HANDOK</a></li>
             <li><a href="http://eng.yuhan.co.kr/Main/" class="yuhan">YUHAN</a></li>
@@ -112,7 +115,7 @@
             <li><a href="http://www.dalimpharm.co.kr/en_index.html" class="dalimbiotech">dalimbiotech</a></li>
             <li><a href="https://www.jw-pharma.co.kr/pharma/en/main.jsp" class="jw_pharm">jw Pharmaceutical</a></li>
             <li class="small"><a href="https://www.lilly.co.kr/" class="lilly">Lilly</a></li>
-            <li class="small"><a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a></li>
+            <li class="small"><a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a></li> -->
         </ul>
     </div>
     <footer class="footer">
@@ -122,58 +125,31 @@
             <div class="f_bottom clearfix">
                 <div class="footer_l">
                     <div class="clearfix">
-                        <img src="/main/img/icons/fl01.png" alt="">
-                        <img src="/main/img/icons/fl02.png" alt="">
-                        <a href="https://www.visitseoul.net/index"><img style="margin-top: 35px;"
-                                src="/main/img/icons/fl03.png" alt=""></a>
-                        <img src="/main/img/icons/fl04.png" alt="">
+                        <a href="https://koreascp.or.kr:459/" target="_blank">
+                            <img src="/main/img/icons/kscp_logo_white.png" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="footer_c">
-                    <!-- <p>Organized by</p> -->
-                    <p>Korean Society for the Study of Obesity(KSSO)</p>
+                    <p>Korean Society of Cardiovascular Disease Prevention (KSCP)</p>
                     <ul>
-                        <li>Room 1010, Renaissance tower, 14 Mallijae-ro, Mapo-gu, Seoul, Korea</li>
-                        <li>T. 82-2-364-0886,0887</li>
-                        <li>F. 82-2-364-0883</li>
-                        <li>E. <a href="mailto:webmaster@kosso.or.kr"
-                                class="font_inherit link">webmaster@kosso.or.kr</a></li>
-                        <li>W. <a href="https://www.kosso.or.kr" class="font_inherit link">https://www.kosso.or.kr</a>
+                        <li>#805, 99, Seongsuil-ro, Seongdong-gu, Seoul (Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
+                        <li>T. 82-2-6408-1505</li>
+                        <!-- <li>F. 82-2-364-0883</li> -->
+                        <li>E. <a href="mailto:kscpmd@kscpmd.or.kr"
+                                class="font_inherit link">kscpmd@kscpmd.or.kr </a></li>
+                        <li>W. <a href="https://koreascp.or.kr:459/" class="font_inherit link">https://koreascp.or.kr</a>
                         </li>
                     </ul>
-                    <!--
-                    <ul>
-                        <li>Tel. 82-2-6941-0888, 82-2-364-0886,0887 / Fax. 82-2-364-0883</li>
-                        <li>Email. webmaster@kosso.or.kr / kosso@kosso.or.kr</li>
-                        <li>Business Registration Number. 121-82-61144</li>
-                    </ul>
-                    <ul>
-                        <li><span class="bold">President.</span> Chang Beom Lee</li>
-                        <li>Room 1010, Renaissance tower, 14 Mallijae-ro, Mapo-gu, Seoul, Kore</li>
-                    </ul>
-					-->
                 </div>
                 <div class="footer_r">
-                    <!-- <p>Conference Secretariat</p> -->
-                    <p>Secretariat of ICOMES 2023</p>
+                    <p>Secretariat of IMCVP 2024</p>
                     <ul>
                         <li>A-Block Richensia 4F, 341 Baekbeom-ro, Yongsan-gu, Seoul 04315, Korea</li>
-                        <li>T. 82-2-2285-2582</li>
-                        <li>F. 82-2-2285-2530</li>
+                        <li>T. 82-2-2285-2592</li>
+                        <li>F. 82-2-2039-7804</li>
                         <li>E. <a href="mailto:icomes@into-on.com" class="font_inherit link">icomes@into-on.com</a></li>
                     </ul>
-                    <!--
-                    <ul>
-                        <li>Tel. +82-2-2285-2582  | Fax : 82-2-2285-2530
-                            <br />Email : icomes@into-on.com
-                        </li>
-                        <li><br /></li>
-                        <li>A-Block Richensia 4F, 341 Baekbeom-ro,
-                            <br /> Yongsan-gu, Seoul, Korea
-                        </li>
-                        <li>Tel : +82-2-2285-2582 ㅣEmail : icomes@into-on.com</li>
-                    </ul>
-					-->
                 </div>
             </div>
         </div>

@@ -322,11 +322,11 @@
 				<h3 class="title">Use of Personal Information</h3>
 				<div class="term_box">
 					<strong>Purpose</strong>
-					<p>The Korean Society for the Study of Obesity (KSSO) provides online pre-registration services for ICOMES 2023. Based on your personal information, you can sign up for the conference and complete the payment for registration.</p>
+					<p>Korean Society of Cardiovascular Disease Prevention (KSCP) provides online pre-registration services for IMCVP 2023. Based on your personal information, you can sign up for the conference and complete the payment for registration.</p>
 					<strong>Collecting Personal Information</strong>
-					<p>ICOMES 2023 requires you to provide your personal information to complete pre-registration online. You will be asked to enter your name, ID (email), password, date of birth, institution/organization, department, mobile, and telephone number.</p>
+					<p>IMCVP 2024 requires you to provide your personal information to complete pre-registration online. You will be asked to enter your name, ID (email), password, date of birth, institution/organization, department, mobile, and telephone number.</p>
 					<strong>Storing Personal Information</strong>
-					<p>ICOMES 2023 will continue to store your personal information to provide you with useful services, such as conference updates and newsletters.</p>
+					<p>IMCVP 2024 will continue to store your personal information to provide you with useful services, such as conference updates and newsletters.</p>
 				</div>
 				<div class="term_label">
 					<input type="checkbox" class="checkbox input required" data-name="terms 1" id="terms1" name="terms1" value="Y">
@@ -370,7 +370,7 @@
 							</td>
 						</tr>
 						<tr class="korea_radio">
-							<th class="nowrap"><span class="red_txt">*</span>대한비만학회(KSSO) 회원 여부</th>
+							<th class="nowrap"><span class="red_txt">*</span>대한심뇌혈관질환예방학회(KSCP) 회원 여부</th>
 							<td>
 								<div class="label_wrap">
 									<input type="radio" class="new_radio" name="user" id="user1">
@@ -384,14 +384,14 @@
 							<th style="background-color:transparent"></th>
 							<td>
 								<!-- <button type="button" class="btn green_btn long_btn" onclick="javascript:window.open('https://www.lipid.or.kr/member/member_confirm.php')">한국지질동맥경화학회 회원정보로 간편 가입</button> -->
-								<p>대한비만학회 회원 정보로 간편 가입</p>
+								<p>대한심뇌혈관질환예방학회 회원 정보로 간편 가입</p>
 								<ul class="simple_join clearfix">
 									<li>
-										<label for="">KSSO ID<span class="red_txt">*</span></label>
+										<label for="">KSCP ID<span class="red_txt">*</span></label>
 										<input class="email_id" name="kor_id" type="text" maxlength="60">
 									</li>
 									<li>
-										<label for="">KSSO PW<span class="red_txt">*</span></label>
+										<label for="">KSCP PW<span class="red_txt">*</span></label>
 										<input class="passwords" name="kor_pw" type="password" maxlength="60">
 									</li>
 									<li>
@@ -406,7 +406,7 @@
 											<!-- <a href="javascript:;" class="term2_btn red_txt"> Details ></a> -->
 										</label>
 									</div>
-									<a href="https://www.kosso.or.kr/join/search_id.html" target="_blank" class="id_pw_find">KSSO 회원 ID/PW 찾기</a>
+									<a href="https://koreascp.or.kr:459/member/findid.htm" target="_blank" class="id_pw_find">KSCP 회원 ID/PW 찾기</a>
 								</div>
 								
 								<!-- <div> -->
