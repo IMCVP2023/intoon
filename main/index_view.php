@@ -146,28 +146,32 @@
 		<div class="dates_area">
 			<ul>
 				<li>
-					<a href="/main/abstract_submission_guideline.php">
+					<a class="not_yet">
+					<!-- <a href="/main/abstract_submission_guideline.php"> -->
 						<h2>August 10 <span>(Thu)</span></h2>
 						<!-- <i><img src="/main/img/icons/icon_report.svg" alt=""></i> -->
 						<p>Abstract Submission<br/>Deadline</p>
 					</a>
 				</li>
 				<li>
-					<a href="/main/abstract_submission_guideline.php">
+					<a class="not_yet">
+					<!-- <a href="/main/abstract_submission_guideline.php"> -->
 						<h2>August 14 <span>(Mon)</span></h2>
 						<!-- <i><img src="/main/img/icons/icon_letter.svg" alt=""></i> -->
 						<p>Notification of<br/>Acceptance</p>
 					</a>
 				</li>
 				<li>
-					<a href="/main/registration_guidelines.php">
+					<a class="not_yet">
+					<!-- <a href="/main/registration_guidelines.php"> -->
 						<h2>August 24 <span>(Thu)</span></h2>
 						<!-- <i><img src="/main/img/icons/icon_calendar.svg" alt=""></i> -->
 						<p>Pre-Registration <br/>Deadline</p>
 					</a>
 				</li>
 				<li>
-					<a href="/main/abstract_submission_award.php">
+					<a class="not_yet">
+					<!-- <a href="/main/abstract_submission_award.php"> -->
 						<!-- <h2>2 Jun</h2> -->
 						<h2>Awards &amp;<br/>Grants</h2>
 						<i><img src="/main/img/img_trophy.svg" alt=""></i>
