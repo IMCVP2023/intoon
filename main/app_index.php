@@ -101,10 +101,10 @@
 
 <script>
 	$(document).ready(function(){
-		var varUA = navigator.userAgent.toLowerCase();
-		if ( varUA.indexOf('android') > -1) {
-			alert("Please update the app.")
-		}
+//		var varUA = navigator.userAgent.toLowerCase();
+//		if ( varUA.indexOf('android') > -1) {
+//			alert("Please update the app.")
+//		}
 		$(".app_header").addClass("simple");
 		$(".app_nav_btn img").attr("src", "/main/img/icons/icon_hamburger2.svg");
 	});

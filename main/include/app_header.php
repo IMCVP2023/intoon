@@ -87,10 +87,10 @@
 					</ul>
 				</li> -->
 				<li>
-					<a href="javascript:void(0)" download class="pdf_view">Program Book <br/>Download</a>
+					<a href="http://184a8b4a1a076d93.kinxzone.com/Programbook.pdf" download class="pdf_view">Program Book <br/>Download</a>
 				</li>
 				<li>
-					<a href="javascript:void(0)" download class="pdf_view">Abstract Book <br/>Download</a>
+					<a href="http://184a8b4a1a076d93.kinxzone.com/Abstractbook.pdf" download class="pdf_view">Abstract Book <br/>Download</a>
 				</li>
 			</ul>
 		</div>

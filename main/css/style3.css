@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/*app_sponsorship 팝업*/
+.app_pop {width:calc(100% - 36%); height:100%; margin-left: 18%;}
+.app_pop .pop_bg{width:100%;}
+.app_pop .pop_contents {width:100%; max-height:88vh; padding: 0;}
+.app_pop .pop_contents > img {width: 100%;}
+.app_pop .pop_close {width:auto; height:auto; position:static;}
+.app_pop .pop_close img {width:auto;}
+
 /*230830 app_program_detail*/
 .app_program_detail .tab_cont .day_ul {display: none;}
 .app_program_detail .tab_cont .day_ul.on {display: flex;}
@@ -7,7 +15,7 @@
 /* 22.03.15 ICoLA 2022 NEW Main - HUBDNC LJH2*/
 .container {max-width: 1200px;}
 .main_section.icola_main .container {position:relative; max-width: 1200px; padding: 90px 0 156px;}
-.section_bg {height: 100vh; width: 100%; padding-top: 117px; background-image:url("https://image.webeon.net/icomes/main.png"); background-position: center; background-size: cover; background-repeat: no-repeat;overflow-x: hidden;}
+.section_bg {height: 100vh; width: 100%; padding-top: 117px; background-image:url("../img/main.png"); background-position: center; background-size: cover; background-repeat: no-repeat;overflow-x: hidden;}
 /* .section_bg {min-height: 100vh; padding-top: 117px; background: center top 20px / cover no-repeat url("../img/main_bg2.png");} */
 /*.section_bg {height: 100vh; width: 100vw;padding-top: 126px; background-image:url("https://velog.velcdn.com/images/crystal025/post/d903e8b2-ff90-4f18-aa11-5003c7b08739/image.png"); background-position: center; background-size: cover; background-repeat: no-repeat;}*/
 /* 220614 메인페이지 sponsor slide 추가작업 - HUBDNCHYJ */

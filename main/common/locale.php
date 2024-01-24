@@ -1,7 +1,6 @@
 <?php
     //root 절대주소로 변경_211025
 	include_once($d9_path['path']."/common/common.php");
-
 	function locale($type) {
 		include_once(D9_COMMON_PATH."/lang.php");
 		try {
