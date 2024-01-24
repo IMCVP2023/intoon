@@ -148,7 +148,7 @@
                         <li>A-Block Richensia 4F, 341 Baekbeom-ro, Yongsan-gu, Seoul 04315, Korea</li>
                         <li>T. 82-2-2285-2592</li>
                         <li>F. 82-2-2039-7804</li>
-                        <!-- <li>E. <a href="mailto:icomes@into-on.com" class="font_inherit link">icomes@into-on.com</a></li> -->
+                        <li>E. <a href="mailto:secretariat@imcvp.org" class="font_inherit link">secretariat@imcvp.org</a></li>
                     </ul>
                 </div>
             </div>
