@@ -21,7 +21,8 @@ $locale = locale($language);
                 if ($_SESSION["USER"]["idx"] == "") {
                 ?>
                 <li><a href="/main/login.php">Log in</a></li>
-                <li><a href="/main/signup.php">Sign up</a></li>
+                <li><a href="/main/comingsoon.php">Sign up</a></li>
+                <!-- <li><a href="/main/signup.php">Sign up</a></li> -->
                 <?php
                 } else {
                 ?>
@@ -39,7 +40,8 @@ $locale = locale($language);
                     if ($_SESSION["USER"]["idx"] == "") {
                     ?>
                     <li><a href="/main/login.php">Log in</a></li>
-                    <li><a href="/main/signup.php">Sign up</a></li>
+                    <li><a href="/main/comingsoon.php">Sign up</a></li>
+                    <!-- <li><a href="/main/signup.php">Sign up</a></li> -->
                     <?php
                     } else {
                     ?>
