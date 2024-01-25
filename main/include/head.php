@@ -8,7 +8,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="IMCVP 2024">
-    <meta property="og:image" content="/main/img/poster2024.jpg" />
+    <meta property="og:image" content="/main/img/M_thumb.png" />
     <meta property="og:description" content="2024 IMCVP hosted by KSCP">
     <meta name="description" content="2024 IMCVP hosted by KSCP">
 	<meta name="google-signin-client_id" content="415925125444-2ahs6htkg2108k74gsusus494lqluvrh.apps.googleusercontent.com">
@@ -54,9 +54,9 @@
 
 <body>
     <?php
-
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+//[240125] sujeong / 주석 -> 초록 editor 가 에러로 돌아가는 코드라서...주석...
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
 	if (strpos($_SERVER["PHP_SELF"], "/main/") !== false) {
 		include_once("./common/common.php");
 	} else {

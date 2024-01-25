@@ -286,10 +286,11 @@ function other_change(value) {
 	$("#submit_btn").addClass("gray_btn");
 }*/
 $(document).ready(function() {
-    alert("The abstract submission has expired.\nAbstract submission is not available.");
-    window.history.back();
-    window.location.href = "/main/index.php";
-    return;
+    //[240124] sujoeng / abstract 허용
+    // alert("The abstract submission has expired.\nAbstract submission is not available.");
+    // window.history.back();
+    // window.location.href = "/main/index.php";
+    // return;
 
     $(document).on("click", ".blue_btn", function() {
         var idx = $(this).data("idx");
@@ -1343,20 +1344,20 @@ $(document).ready(function() {
                             echo                '<div>';
                             echo                    '<ul class="author_chk_wrap">';
                             echo						'<li>';
-                            echo							'<input type="checkbox" class="checkbox" id="author_chk1_1_{$i}" onchange="setUserInformation($(this))">';
-                            echo							'<label for="author_chk1_1_{$i}">';
+                            echo							'<input type="checkbox" class="checkbox" id="author_chk1_1_'.$i.'" onchange="setUserInformation($(this))">';
+                            echo							'<label for="author_chk1_1_'.$i.'">';
                             echo								'<i></i>Same as sign-up information<span class="red_txt">*</span>';
                             echo							'</label>';
                             echo						'</li>';
 							echo						'<li>';
-                            echo							'<input type="checkbox" class="checkbox presenting_author" id="author_chk1_2_{$i}" name="add_co_presenting_author'.$i.'" value="Y" '.($coauthor["add_co_presenting_author"] == 'Y' ? "checked" : "").' onchange="check_value()">';
-                            echo							'<label for="author_chk1_2_{$i}">';
+                            echo							'<input type="checkbox" class="checkbox presenting_author" id="author_chk1_2_'.$i.'"  name="add_co_presenting_author'.$i.'" value="Y" '.($coauthor["add_co_presenting_author"] == 'Y' ? "checked" : "").' onchange="check_value()">';
+                            echo							'<label for="author_chk1_2_'.$i.'">';
                             echo								'<i></i>Presenting Author<span class="red_txt">*</span>';
                             echo							'</label>';
                             echo						'</li>';
 							echo						'<li>';
-                            echo							'<input type="checkbox" class="checkbox corresponding_author" id="author_chk1_3_{$i}" name="add_co_corresponding_author'.$i.'" value="Y" '.($coauthor["add_co_corresponding_author"] == 'Y' ? "checked" : "").' onchange="check_value()">';
-                            echo							'<label for="author_chk1_3_{$i}">';
+                            echo							'<input type="checkbox" class="checkbox corresponding_author"  id="author_chk1_3_'.$i.'"  name="add_co_corresponding_author'.$i.'" value="Y" '.($coauthor["add_co_corresponding_author"] == 'Y' ? "checked" : "").' onchange="check_value()">';
+                            echo							'<label for="author_chk1_3_'.$i.'">';
                             echo								'<i></i>Corresponding Author<span class="red_txt">*</span>';
                             echo							'</label>';
                             echo						'</li>';

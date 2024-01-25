@@ -13,7 +13,7 @@ $locale = locale($language);
             </div>
             <!-- <div class="text_center g_h_logo"><img src="/main/img/icon_logo2.svg" alt="" class="pointer" onClick="javascript:location.href='/main/index.php'"></div> -->
             <!-- [240123]sujeong / header logo -->
-            <div class="g_h_logo"><img src="/main/img/icons/logo.gif" alt="" class="pointer"
+            <div class="g_h_logo"><img src="/main/img/icons/site_title.png" alt="" class="pointer"
                     onClick="javascript:location.href='/main/index.php'"></div>
             <ul class="g_h_tool">
                 <!-- <li><a href="/main/index.php">Home</a></li> -->
@@ -290,9 +290,9 @@ $(document).ready(function() {
                     <li><a href="/main/sponsor_exhibition.php">Exhibition</a></li> -->
                 </ul>
             </li>
-            <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m7"]) ? "show" : "") ?>">
+            <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m6"]) ? "show" : "") ?>">
                 <a href="javascript:;"><span>Venue</span></a>
-                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m7"]) ? "block" : "none") ?>">
+                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m6"]) ? "block" : "none") ?>">
                     <li><a href="/main/comingsoon.php">Conrad Seoul</a></li>
                     <li><a href="/main/comingsoon.php">Accommodation</a></li>
                     <li><a href="/main/comingsoon.php">Floor Plan</a></li>

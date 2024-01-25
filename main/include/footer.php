@@ -126,7 +126,7 @@
                 <div class="footer_l">
                     <div class="clearfix">
                         <a href="https://koreascp.or.kr:459/" target="_blank">
-                            <img src="/main/img/icons/kscp_logo_white.png" alt="">
+                            <img src="/main/img/icons/KSCP_logo.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                         <li>A-Block Richensia 4F, 341 Baekbeom-ro, Yongsan-gu, Seoul 04315, Korea</li>
                         <li>T. 82-2-2285-2592</li>
                         <li>F. 82-2-2039-7804</li>
-                        <li>E. <a href="mailto:secretariat@imcvp.org" class="font_inherit link">secretariat@imcvp.org</a></li>
+                        <li>E. <a href="mailto:imcvp@into-on.com" class="font_inherit link">imcvp@into-on.com</a></li>
                     </ul>
                 </div>
             </div>

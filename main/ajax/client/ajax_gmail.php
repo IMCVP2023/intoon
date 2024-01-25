@@ -270,9 +270,23 @@ if($language == "ko") {
 											<td width='74' style='width:74px;'></td>
 											<td style='padding-top:16px;'>
 												<p>Warmest regards,</p>
-												<div style='text-align: center;'>
-													<a href='https://www.icomes.or.kr/'><img src='https://www.icomes.or.kr/main/img/icomes_btn.png' alt=''></a>
-												</div>
+												<div style='text-align: center; padding-top:30px;'>
+								<table align='center' cellspacing='0' cellpadding='0' width='100%'>
+									<tr>
+										<td align='center'>
+											<table border='0' class='mobile-button' cellspacing='0' cellpadding='0'>
+												<tr>
+													<td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
+														<a href='https://imcvp.org/main/registration.php' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
+															<span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>사전등록 바로가기</span>
+														</a><!--[if mso]>&nbsp;<![endif]-->
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</div>
 											</td>
 											<td width='74' style='width:74px;'></td>
 										</tr>
@@ -428,9 +442,23 @@ if($language == "ko") {
 								<tr>
 									<td width='74' style='width:74px;'></td>
 									<td>
-										<div style='text-align: center;'>
-											<a href='{$callback_url}'><img src='https://www.icomes.or.kr/main/img/icomes_pw_btn.png' alt=''></a>
-										</div>
+										<div style='text-align: center; padding-top:30px;'>
+								<table align='center' cellspacing='0' cellpadding='0' width='100%'>
+									<tr>
+										<td align='center'>
+											<table border='0' class='mobile-button' cellspacing='0' cellpadding='0'>
+												<tr>
+													<td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
+														<a href='{$callback_url}' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
+															<span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>홈페이지 바로가기</span>
+														</a><!--[if mso]>&nbsp;<![endif]-->
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</div>
 										<p>Best regards,</p>
 									</td>
 									<td width='74' style='width:74px;'></td>
@@ -764,9 +792,23 @@ if($language == "ko") {
 													<p>Warmest regards,</p>
 													<p>Secretariat of IMVCP 2024</p>
 													<br/>
-													<div style='text-align: center;'>
-														<a href='https://www.icomes.or.kr/'><img src='https://www.icomes.or.kr/main/img/icomes_btn.png' alt=''></a>
-													</div>
+													<div style='text-align: center; padding-top:30px;'>
+								<table align='center' cellspacing='0' cellpadding='0' width='100%'>
+									<tr>
+										<td align='center'>
+											<table border='0' class='mobile-button' cellspacing='0' cellpadding='0'>
+												<tr>
+													<td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
+														<a href='https://imcvp.org/main' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
+															<span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>홈페이지 바로가기</span>
+														</a><!--[if mso]>&nbsp;<![endif]-->
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</div>
 												</td>
 												<td width='74' style='width:74px;'></td>
 											</tr>
@@ -1158,11 +1200,23 @@ if($language == "ko") {
 										<!-- 23.04.25 수정된 버튼 마크업 -->
 										<p>Best regards,</p>
 										<p>Secretariat of IMCVP 2024</p><br/>
-										<div style="text-align: center;">
-											<a href="https://'.$url.'/">
-												<img src="https://'.$url.'/main/img/icomes_btn.png" alt="">
-											</a>
-										</div>	
+										<div style="text-align: center; padding-top:30px;">
+								<table align="center" cellspacing="0" cellpadding="0" width="100%">
+									<tr>
+										<td align="center">
+											<table border="0" class="mobile-button" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="center" bgcolor="#ffcc33" style="background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;" width="100%"><!--[if mso]>&nbsp;<![endif]-->
+														<a href="https://imcvp.org/main" target="_blank" style="font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;">
+															<span style="font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;">홈페이지 바로가기</span>
+														</a><!--[if mso]>&nbsp;<![endif]-->
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</div>
 									</td>
 									<td width="74" style="width:74px;"></td>
 								</tr>

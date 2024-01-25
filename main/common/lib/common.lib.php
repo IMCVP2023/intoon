@@ -2293,7 +2293,8 @@ function upload_image($file_obj, $file_directory_idx, $thumb_yn='N', $wish_width
 	$year_dir = date("Y");
 	$month_dir = date("m");
 	$day_dir = date("d");
-	
+	$thumb_yn='N';
+    
 	while(strlen("".$mili_sec) < 4){
 		$mili_sec = "0".$mili_sec;
 	}
