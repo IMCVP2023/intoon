@@ -117,3 +117,16 @@ function comma(v)
 		}
 	}
 }
+
+// pending 켜기
+function pending_on(){
+	$(".loading").show();
+	$("body").css("overflow-y","hidden");
+}
+
+// pending 끄기
+function pending_off(){
+	$(".loading").hide();
+	$(".pop_bg").hide();
+	$("body").css("overflow-y","auto");
+}

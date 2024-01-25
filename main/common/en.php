@@ -1,7 +1,7 @@
 <?php
 	$en = [
 		// HUBDNC HYJ 언어추가
-
+		"select_file" => "Select File",
 		//lecture_note_submission
 		"instructions" => "Instructions",
 		"presentation_type" => "Presentation Type",

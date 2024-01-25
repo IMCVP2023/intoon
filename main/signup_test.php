@@ -92,12 +92,12 @@
 	$(document).ready(function(){
 		$("#user1").change(function(){
 			if($("#user1").prop('checked') == true) {
-				$(".ksola_signup").addClass("on");
+				//$(".ksola_signup").addClass("on");
 			}
 		});
 		$("#user2").change(function(){
 			if($("#user2").prop('checked') == true) {
-				$(".ksola_signup").removeClass("on");
+				//$(".ksola_signup").removeClass("on");
 				$("input[name=ksola_member_type]").val("");
 			}
 		});
@@ -118,7 +118,7 @@
 			} else {
 				$(".korea_radio").removeClass("on");
 				$(".korea_only").removeClass("on");
-				$(".ksola_signup").removeClass("on");
+				//$(".ksola_signup").removeClass("on");
 
 				remove_value();
 				$("#user2").prop('checked', true);
@@ -229,13 +229,13 @@
 		//});
 		$("#mo_user1").change(function(){
 			if($("#mo_user1").prop('checked') == true) {
-				$(".mo_ksola_signup").addClass("on");
+				//$(".mo_ksola_signup").addClass("on");
 				
 			}
 		});
 		$("#mo_user2").change(function(){
 			if($("#mo_user2").prop('checked') == true) {
-				$(".mo_ksola_signup").removeClass("on");
+				//$(".mo_ksola_signup").removeClass("on");
 				$("input[name=ksola_member_type]").val("");
 			}
 		});
@@ -255,7 +255,7 @@
 			}else {
 				$(".mo_korea_radio").removeClass("on");
 				$(".mo_korea_only").removeClass("on");
-				$(".mo_ksola_signup").removeClass("on");
+				//$(".mo_ksola_signup").removeClass("on");
 
 				remove_value();
 				$("#mo_user2").prop('checked', true);
@@ -2232,16 +2232,17 @@ function gmailMail(data) {
 
 
 //red_api
-$("input[name=mo_kor_id]").on("change", function() {
-	var _this = $(this);
-	_this.val();
-	kor_api_check("mo_kor_id", _this.val(), "mo");
-});
-$("input[name=mo_kor_pw]").on("change", function() {
-	var _this = $(this);
-	_this.val();
-	kor_api_check("mo_kor_password", _this.val(), "mo");
-});
+//[240124] sujeong / 
+// $("input[name=mo_kor_id]").on("change", function() {
+// 	var _this = $(this);
+// 	_this.val();
+// 	kor_api_check("mo_kor_id", _this.val(), "mo");
+// });
+// $("input[name=mo_kor_pw]").on("change", function() {
+// 	var _this = $(this);
+// 	_this.val();
+// 	kor_api_check("mo_kor_password", _this.val(), "mo");
+// });
 
 
 $("input[name=kor_id]").on("change", function() {
