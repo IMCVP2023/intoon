@@ -3,7 +3,8 @@
 
 <?php
 //include_once('../../common/common.php');
-
+// error_reporting( E_ALL );
+// ini_set( "display_errors", 1 );
 include_once('../../plugin/google-api-php-client-main/vendor/autoload.php');
 
 
@@ -122,7 +123,7 @@ function createMessage($language, $mail_type, $fname, $to, $subject, $time, $tmp
 		$background_img_url = "https://icomes.or.kr";
 	}
 
- $rawMessageString = "From:IMCVP CONF <secretariat@imcvp.org>\r\n";
+ $rawMessageString = "From:IMCVP2024<secretariat@imcvp.org>\r\n";
  $rawMessageString .= "To: <{$to}>\r\n";
  $rawMessageString .= 'Subject: =?utf-8?B?' . base64_encode($subject) . "?=\r\n";
  $rawMessageString .= "MIME-Version: 1.0\r\n";
@@ -278,7 +279,7 @@ if($language == "ko") {
 												<tr>
 													<td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
 														<a href='https://imcvp.org/main/registration.php' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
-															<span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>사전등록 바로가기</span>
+															<span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>Go to registration</span>
 														</a><!--[if mso]>&nbsp;<![endif]-->
 													</td>
 												</tr>
@@ -403,7 +404,11 @@ if($language == "ko") {
 		 $rawMessageString .= "
 		 <table width='750' style='border:1px solid #000; border-radius:27px 27px 0 0; padding: 0;'>
 		 <tbody>
-			
+			 <tr>
+				 <td colspan='3'>
+					 <img src='https://imcvp.org/main/img/2024_mail_header.png' width='750' style='width:100%; max-width:100%;'>
+				 </td>
+			 </tr>
 			 <tr>
 				 <td colspan='3'>
 					 <div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[IMCVP 2024] Temporary Password</div>
@@ -413,9 +418,21 @@ if($language == "ko") {
 				 <td width='74' style='width:74px;'></td>
 				 <td>
 					 <div>
+						 <div style='margin-bottom:20px'>
+							 <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Member of : {$fname}<br><span style='font-size:14px;color:#170F00;font-weight:normal;'>You requested a temporary password at : {$time}</span></p>
+						 </div>
+						 <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname},</p>
 						 <p style='font-size:14px;color:#170F00;margin-top:14px;'>You can log in to the IMCVP 2024 website using the ID & Temporary Password below and modify your password on the personal information on my page.</p>
 						 <table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 							 <tbody>
+								 <tr>
+									 <th style='width:150px; text-align:left; font-size:14px; padding:10px; border-bottom:1px solid #000;'>ID(Email Address)</th>
+									 <td style='font-size:14px; padding:10px; border-left:1px solid #000; border-bottom:1px solid #000;'><a href='mailto:{$to}' class='link font_inherit'>{$to}</a></td>
+								 </tr>
+								 <tr>
+									 <th style='width:150px; text-align:left; font-size:14px; padding:10px; border-bottom:1px solid #000;'>Temporary Password</th>
+									 <td style='font-size:14px; padding:10px; border-left:1px solid #000; border-bottom:1px solid #000;'>{$tmp_password}</td>
+								 </tr>
 							 </tbody>	
 						 </table>
 						 <p style='color:#f00;'>Click the 'Change to temporary password' button to check your changed log-in information.</p>
@@ -427,13 +444,31 @@ if($language == "ko") {
 				 <td width='74' style='width:74px;'></td>
 				 <td>
 					 <div style='text-align: center; padding-top:30px;'>
-			 
+			 <table align='center' cellspacing='0' cellpadding='0' width='100%'>
+				 <tr>
+					 <td align='center'>
+						 <table border='0' class='mobile-button' cellspacing='0' cellpadding='0'>
+							 <tr>
+								 <td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
+									 <a href='{$callback_url}' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
+										 <span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>Change to temporary password</span>
+									 </a><!--[if mso]>&nbsp;<![endif]-->
+								 </td>
+							 </tr>
+						 </table>
+					 </td>
+				 </tr>
+			 </table>
 		 </div>
 					 <p>Best regards,</p>
 				 </td>
 				 <td width='74' style='width:74px;'></td>
 			 </tr>
-			 
+			 <tr>
+				 <td colspan='3' style='padding-top:50px;'>
+					 <img src='https://imcvp.org/main/img/2024_mail_footer.png' width='750' style='width:100%; max-width:100%;'>
+				 </td>
+			 </tr>
 		 </tbody>
 	 </table>
 		 ";
@@ -766,7 +801,7 @@ if($language == "ko") {
 												<tr>
 													<td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
 														<a href='https://imcvp.org/main' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
-															<span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>홈페이지 바로가기</span>
+															<span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>Go to IMCVP 2024 Website</span>
 														</a><!--[if mso]>&nbsp;<![endif]-->
 													</td>
 												</tr>
@@ -1174,7 +1209,7 @@ if($language == "ko") {
 												<tr>
 													<td align="center" bgcolor="#ffcc33" style="background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;" width="100%"><!--[if mso]>&nbsp;<![endif]-->
 														<a href="https://imcvp.org/main" target="_blank" style="font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;">
-															<span style="font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;">홈페이지 바로가기</span>
+															<span style="font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;">Go to IMCVP 2024 Website</span>
 														</a><!--[if mso]>&nbsp;<![endif]-->
 													</td>
 												</tr>
@@ -1334,15 +1369,15 @@ if($_POST["flag"] == "find_password"){
 
 		if($update_temporary_password) {
 			$res = [
-				code => 200,
-				msg => "success"
+				"code" => 200,
+				"msg" => "success"
 			];
 			echo json_encode($res);
 			exit;	
 		} else {
 			$res = [
-				code => 400,
-				msg => "update query error"
+				"code" => 400,
+				"msg" => "update query error"
 			];
 			echo json_encode($res);
 			exit;
@@ -1380,15 +1415,15 @@ else if($_POST["flag"] == "registration"){
 
 	if($message) {
 		$res = [
-			code => 200,
-			msg => "success"
+			"code" => 200,
+			"msg" => "success"
 		];
 		echo json_encode($res);
 		exit;	
 	} else {
 		$res = [
-			code => 400,
-			msg => "update query error"
+			"code" => 400,
+			"msg" => "update query error"
 		];
 		echo json_encode($res);
 		exit;
