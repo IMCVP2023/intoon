@@ -123,7 +123,7 @@ function createMessage($language, $mail_type, $fname, $to, $subject, $time, $tmp
 		$background_img_url = "https://icomes.or.kr";
 	}
 
- $rawMessageString = "From:IMCVP CONF <secretariat@imcvp.org>\r\n";
+ $rawMessageString = "From:IMCVP2024<secretariat@imcvp.org>\r\n";
  $rawMessageString .= "To: <{$to}>\r\n";
  $rawMessageString .= 'Subject: =?utf-8?B?' . base64_encode($subject) . "?=\r\n";
  $rawMessageString .= "MIME-Version: 1.0\r\n";
