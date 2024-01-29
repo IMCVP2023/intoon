@@ -148,7 +148,8 @@
 				<li>
 					<a class="not_yet">
 					<!-- <a href="/main/abstract_submission_guideline.php"> -->
-						<h2>August 10 <span>(Thu)</span></h2>
+						<!-- <h2>August 10 <span>(Thu)</span></h2> -->
+                        <h2>TBD</h2>
 						<!-- <i><img src="/main/img/icons/icon_report.svg" alt=""></i> -->
 						<p>Abstract Submission<br/>Deadline</p>
 					</a>
@@ -156,7 +157,8 @@
 				<li>
 					<a class="not_yet">
 					<!-- <a href="/main/abstract_submission_guideline.php"> -->
-						<h2>August 14 <span>(Mon)</span></h2>
+						<!-- <h2>August 14 <span>(Mon)</span></h2> -->
+                       <h2>TBD</h2>
 						<!-- <i><img src="/main/img/icons/icon_letter.svg" alt=""></i> -->
 						<p>Notification of<br/>Acceptance</p>
 					</a>
@@ -164,7 +166,8 @@
 				<li>
 					<a class="not_yet">
 					<!-- <a href="/main/registration_guidelines.php"> -->
-						<h2>August 24 <span>(Thu)</span></h2>
+						<!-- <h2>August 24 <span>(Thu)</span></h2> -->
+                        <h2>TBD</h2>
 						<!-- <i><img src="/main/img/icons/icon_calendar.svg" alt=""></i> -->
 						<p>Pre-Registration <br/>Deadline</p>
 					</a>
