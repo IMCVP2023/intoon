@@ -11,7 +11,6 @@
     <meta property="og:image" content="/main/img/M_thumb.png" />
     <meta property="og:description" content="2024 IMCVP hosted by KSCP">
     <meta name="description" content="2024 IMCVP hosted by KSCP">
-	<meta name="google-signin-client_id" content="415925125444-2ahs6htkg2108k74gsusus494lqluvrh.apps.googleusercontent.com">
 
     <!-- datepicker -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -37,7 +36,7 @@
     <script src="/main/js/lang.js"></script>
     <script src="/main/js/jquery.zoomooz.min.js"></script>
     <script src="/main/js/locale.js"></script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y16N5RM5E5"></script>
     <script>
