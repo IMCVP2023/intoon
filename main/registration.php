@@ -31,13 +31,13 @@ if($registrationNo){
 }
 
 //경로 주의
-if ($_SERVER["HTTP_HOST"] == "www.icomes.or.kr") {
-	echo "<script>location.replace('https://icomes.or.kr/main/registration.php')</script>";
+if ($_SERVER["HTTP_HOST"] == "www.imcvp.org") {
+	echo "<script>location.replace('https://imcvp.org/main/registration.php')</script>";
 }
 
-
+//날짜 변경 필요!!!
 $sql_during =	"SELECT
-						IF(NOW() BETWEEN '2022-08-18 17:00:00' AND '2023-09-07 22:00:00', 'Y', 'N') AS yn
+						IF(NOW() BETWEEN '2022-08-18 17:00:00' AND '2024-09-07 22:00:00', 'Y', 'N') AS yn
 					FROM info_event";
 $during_yn = sql_fetch($sql_during)['yn'];
 //!=="Y"
@@ -572,10 +572,10 @@ if ($during_yn !== "Y") {
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 	$(document).ready(function() {
-        alert("The registration has expired.\nOnline registration is not available.");
-        window.history.back();
-        window.location.href = "/main/index.php";
-        return;
+        // alert("The registration has expired.\nOnline registration is not available.");
+        // window.history.back();
+        // window.location.href = "/main/index.php";
+        // return;
 
 		$('.etc1').hide();
 
