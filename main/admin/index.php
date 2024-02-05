@@ -2,7 +2,7 @@
 <html>
 	<body>
 	<section class="adm_login">
-		<div class="logo"><img src="../img/logo.png" alt="logo"><span>관리자</span></div>
+		<div class="logo"><img src="/main/img/icons/site_title.png" alt="logo"><span>관리자</span></div>
 		<input type="text" name="id" placeholder="아이디">
 		<input type="password" name="password" placeholder="비밀번호">
 		<button class="btn submit" onclick="login();">로그인</button>
