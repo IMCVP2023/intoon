@@ -93,9 +93,9 @@
 			<!-- <video src="https://player.vimeo.com/progressive_redirect/playback/685374881/rendition/1080p?loc=external&signature=0f96f408d54e4adfe00f0f0a8b8c6a593fa2ecb767763e3709010a574d1a8a3f" autoplay="autoplay" muted="muted" playsinline id="main_2023_video_bg" loop></video> -->
 		<!-- </div> -->
 		<div class="container">
-			<img src="/main/img/img_vsl_text_2.png" class="pc_only img_vsl_text" alt="">
+			<img src="/main/img/img_vsl_text_3.png" class="pc_only img_vsl_text" alt="">
 			<div class="mb_only img_vsl_text" style="">
-				<img src="/main/img/img_vsl_text_mb.png" alt="">
+				<img src="/main/img/img_vsl_text_mb_2.png" alt="">
 				<!-- <p>Sep. 7(Thu) ~ Sep. 9(Sat)</p>
 				<p>CONRAD Seoul Hotel, Korea</p> -->
 			</div>
