@@ -133,7 +133,7 @@
                 <div class="footer_c">
                     <p>Korean Society of Cardiovascular Disease Prevention (KSCP)</p>
                     <ul>
-                        <li>#805, 99, Seongsuil-ro, Seongdong-gu, Seoul (Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
+                        <li>#805, 99, Seongsuil-ro, Seongdong-gu, Seoul Korea(Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
                         <li>T. 82-2-6408-1505</li>
                         <!-- <li>F. 82-2-364-0883</li> -->
                         <li>E. <a href="mailto:kscpmd@kscpmd.or.kr"

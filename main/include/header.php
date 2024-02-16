@@ -20,7 +20,8 @@ $locale = locale($language);
                 <?php
                 if ($_SESSION["USER"]["idx"] == "") {
                 ?>
-                <li><a href="/main/login.php">Log in</a></li>
+                <li><a href="/main/comingsoon.php">Log in</a></li>
+                <!-- <li><a href="/main/login.php">Log in</a></li> -->
                 <li><a href="/main/comingsoon.php">Sign up</a></li>
                 <!-- <li><a href="/main/signup.php">Sign up</a></li> -->
                 <?php
@@ -218,7 +219,7 @@ $(document).ready(function() {
 	</div>
 	-->
     <div class="m_nav_top">
-        <img src="/main/img/icon_logo_blue.svg" alt="" class="pointer logo"
+        <img src="/main/img/icons/site_title.png" alt="" class="pointer logo"
             onclick="javascript:location.href='/main/index.php'">
         <button type="button" class="n_nav_close"><img src="/main/img/icons/m_nav_close.svg"></button>
     </div>

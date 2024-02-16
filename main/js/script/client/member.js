@@ -33,6 +33,41 @@ $(document).ready(function(){
 		}
 	});
 
+	
+	//[240216] sujoeng / 모바일 이메일 체크 추가
+	$("input[name=mo_email]").on("change", function(){
+		var email = $(this).val();
+		var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+		
+		if(email.match(regExp) != null) {
+			$.ajax({
+				url : PATH+"ajax/client/ajax_member.php", 
+				type : "POST", 
+				data :  {
+					flag : "id_check",
+					email : email
+				},
+				dataType : "JSON", 
+				success : function(res){
+					if(res.code == 200) {
+					} else if(res.code == 400) {
+						alert(locale(language.value)("used_email_msg"));
+						$("input[name=mo_email]").val("").focus();
+						return;
+					} else {
+						alert(locale(language.value)("reject_msg"))
+						return;
+					}
+				}
+			});
+		} else {
+			alert(locale(language.value)("format_email"));
+			$(this).val("").focus();
+			return;
+		}
+	});
+
+
 	//비밀번호 띄어쓰기 막기
 	$(".passwords").on("keyup", function(){
 		$(this).val($(this).val().replace(/[\s]/g,""));
