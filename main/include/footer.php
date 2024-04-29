@@ -4,41 +4,52 @@
     <div class="fixed_btn_wrap">
         <ul class="toolbar_wrap">
             <li>
-                <a class="not_yet">
-                <!-- <a href="/main/program_glance.php"> -->
-                    <img src="/main/img/icons/tool_program.svg" alt="">
+                <!-- <a class="not_yet"> -->
+                <a href="/main/board_notice.php">
+                    <img src="/main/img/icons/footer_notice.png" alt="">
+                    <!-- <img src="/main/img/icons/tool_program.svg" alt=""> -->
                 </a>
             </li>
             <?php
             if ($_SESSION["USER"]["regi_status"] == 2 || $_SESSION["USER"]["regi_status"] == 5) {
             ?>
             <!--[230824] 다운로드 버튼 추가 / 파일 전달X-->
-            <li>
+            <!-- <li>
                 <a class="not_yet type2 pink">
-                <!-- <a href="http://184a8b4a1a076d93.kinxzone.com/Abstractbook.pdf" target="_blank" class="type2 pink"> -->
+                <a href="http://184a8b4a1a076d93.kinxzone.com/Abstractbook.pdf" target="_blank" class="type2 pink"> 
                     <i><img src="/main/img/icons/icon_download_abstract.svg" alt=""></i>
                     Abstract Book <br />Download
                 </a>
             </li>
             <li>
                 <a class="not_yet type2 violet">
-                <!-- <a href="http://184a8b4a1a076d93.kinxzone.com/Programbook.pdf" target="_blank" class="not_yet type2 violet"> -->
+                <a href="http://184a8b4a1a076d93.kinxzone.com/Programbook.pdf" target="_blank" class="not_yet type2 violet"> 
                     <i><img src="/main/img/icons/icon_download_program.svg" alt=""></i>
                     Program Book <br />Download
+                </a>
+            </li> -->
+            <li>
+                <a class="not_yet">
+                    <img src="/main/img/icons/footer_registration.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a class="not_yet">
+                    <img src="/main/img/icons/footer_abstract.png" alt="">
                 </a>
             </li>
             <?php
             } else {
             ?>
             <li>
-                <button type="button" class="not_yet">
-                    <i><img src="/main/img/icons/tool_regist.svg" alt=""></i>Registration
-                </button>
+                <a class="not_yet">
+                    <img src="/main/img/icons/footer_registration.png" alt="">
+                </a>
             </li>
             <li>
-                <button type="button" class="not_yet">
-                    <i><img src="/main/img/icons/tool_abstract.svg" alt=""></i>Abstract
-                </button>
+                <a class="not_yet">
+                    <img src="/main/img/icons/footer_abstract.png" alt="">
+                </a>
             </li>
             <?php
             }
@@ -46,18 +57,32 @@
             <?php
             if ($_SESSION["USER"]["idx"] == "") {
             ?>
-            <li><button type="button" onClick="alert('Need to login.')"><i><img src="/main/img/icons/tool_mypage.svg"
-                            alt=""></i>My page</button></li>
+            <!-- <li><button type="button" onClick="alert('Need to login.')"><i>
+                <img src="/main/img/icons/footer_mypage.png" alt="">
+                <img src="/main/img/icons/tool_mypage.svg" alt="">
+            </i></button></li> -->
+                <li>
+                    <a href="/main/login.php" onClick="alert('Need to login.')">
+                        <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
+                    </a>
+                </li>
             <?php
             } else {
             ?>
-            <li><button type="button" onClick="location.href='/main/mypage.php'"><i><img
-                            src="/main/img/icons/tool_mypage.svg" alt=""></i>My Page</button></li>
+            <!-- <li><button type="button" onClick="location.href='/main/mypage.php'"><i> -->
+                <li>
+                    <a href="/main/mypage.php">
+                        <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
+                    </a>
+                </li>
+                 
+            <!-- </li> -->
             <?php
             }
             ?>
 
         </ul>
+        <!-- <button type="button" class="btn_plus"><img src="/main/img/icons/icon_plus_white.svg" alt=""></button> -->
         <button type="button" class="btn_top"><img src="/main/img/icons/icon_top_btn.svg" alt=""></button>
     </div>
     <!-- 220323 HUBDNC LJH 추가 : 끝 -->
@@ -89,9 +114,9 @@
             <li><img src="./img/sponsor/logo23.png" alt=""></li>
         </ul>
     </div> -->
-    <div class="sponsor_logo-wrap container">
+    <!-- <div class="sponsor_logo-wrap container">
         <ul class="s_logo_list">
-            <!-- <li><a href="https://www.alvogen.com/" class="alvogen">Alvogen</a></li>
+          <li><a href="https://www.alvogen.com/" class="alvogen">Alvogen</a></li>
             <li><a href="https://www.novonordisk.com/" class="novo_nordisk">novo nordisk</a></li>
             <li><a href="https://www.handok.co.kr/eng/" class="handok">HANDOK</a></li>
             <li><a href="http://eng.yuhan.co.kr/Main/" class="yuhan">YUHAN</a></li>
@@ -115,9 +140,9 @@
             <li><a href="http://www.dalimpharm.co.kr/en_index.html" class="dalimbiotech">dalimbiotech</a></li>
             <li><a href="https://www.jw-pharma.co.kr/pharma/en/main.jsp" class="jw_pharm">jw Pharmaceutical</a></li>
             <li class="small"><a href="https://www.lilly.co.kr/" class="lilly">Lilly</a></li>
-            <li class="small"><a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a></li> -->
+            <li class="small"><a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a></li>
         </ul>
-    </div>
+    </div> -->
     <footer class="footer">
         <div class="container">
             <br>
@@ -156,16 +181,16 @@
     </footer>
 </div>
 
-<div class="popup term3">
+<!-- <div class="popup term3">
     <div class="pop_bg"></div>
     <div class="pop_contents">
         <button type="button" class="pop_close"><img src="/main/img/icons/pop_close.png"></button>
         <h3 class="pop_title">Terms</h3>
         <?= $locale("terms") ?>
     </div>
-</div>
+</div> -->
 
-
+<!-- 
 <div class="popup term4">
     <div class="pop_bg"></div>
     <div class="pop_contents">
@@ -173,19 +198,39 @@
         <h3 class="pop_title">Conditions</h3>
         <?= $locale("privacy") ?>
     </div>
-</div>
+</div> -->
 <script>
-$('.term3_btn').on('click', function() {
-    $('.term3').show();
-})
-$('.term4_btn').on('click', function() {
-        $('.term4').show();
-    })
+// $('.term3_btn').on('click', function() {
+//     $('.term3').show();
+// })
+// $('.term4_btn').on('click', function() {
+//         $('.term4').show();
+//     })
 
-    <
-    !--$('.type2').on('click', function(event) {
-        event.preventDefault();
-        alert('Updates are planned.');
-        return false;
-    }) -- >
+//     $('.type2').on('click', function(event) {
+//         event.preventDefault();
+//         alert('Updates are planned.');
+//         return false;
+//     }) 
+
+
+//[240415] sujeong plus btn
+
+// $('.toolbar_wrap').css({
+//     opacity: 0,
+//     transform: 'translateY(100%)', 
+//     transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out' 
+// })
+// $('.btn_plus, .toolbar_wrap').hover(() => {
+//     $('.toolbar_wrap').css({
+//         opacity: 1,
+//         transform: 'translateY(0)' 
+// })
+// },()=>{
+//     $('.toolbar_wrap').css({
+//         opacity: 0,
+//         transform: 'translateY(100%)'
+// })
+// });
+
 </script>

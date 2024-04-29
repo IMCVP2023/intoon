@@ -102,7 +102,7 @@
 	$html .= '<th>ID(Email)</th>';
 	$html .= '<th>국내/국외</th>';
 	$html .= '<th>Country(ENG)</th>';
-	$html .= '<th>KSSO 회원 여부</th>';
+	$html .= '<th>KSCP 회원 여부</th>';
 	$html .= '<th>Name</th>';
 	$html .= '<th>First Name</th>';
 	$html .= '<th>Last Name</th>';
@@ -247,7 +247,7 @@
 						<tr class="tr_center">
 							<th>ID(Email)</th>
 							<th>Country(Eng)</th>
-							<th>KSSO 회원 여부</th>
+							<th>KSCP 회원 여부</th>
 							<th>Name</th>
 							<th>First Name</th>
 							<th>Last Name</th>

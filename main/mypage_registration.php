@@ -88,10 +88,17 @@
 <section class="mypage container">
     <h1 class="page_title">Mypage</h1>
     <div class="inner">
-		<ul class="tab_green">
+		<div class="page_menu_box">
+				<div><a href="./mypage.php">Account</a></div>
+				<div class="on"><a href="./mypage_registration.php">Registration</a></div>
+				<div><a href="./mypage_abstract.php">Abstract</a></div>
+				<div class="menu_line"></div>
+			</div>
+
+		<!-- <ul class="tab_green">
 			<li><a href="./mypage.php">Account</a></li>
 			<li class="on"><a href="./mypage_registration.php">Registration</a></li>
-			<li><a href="./mypage_abstract.php">Abstract</a></li>
+			<li><a href="./mypage_abstract.php">Abstract</a></li> -->
 			<?php
 				//if($during_yn == 'N') {
 			?>
@@ -110,7 +117,7 @@
 			<?php
 				//} 
 			?>
-		</ul>
+		<!-- </ul> -->
 		<!-- 행사끝나고 나서 공개예정 -->
         <?php
         if ($currentDateTime >= $targetDateTime){
@@ -319,7 +326,7 @@
 													<td><?=$list["phone"] ?? "-"?></td>
 												</tr>
 												<tr>
-													<th>Member of KSSO</th>
+													<th>Member of KSCP</th>
 													<td><?=$list["ksso_member_status"] ?? "-"?></td>
 												</tr>
 												<tr>
@@ -574,7 +581,7 @@
 							<td>82-10-1234-5678</td>
 						</tr>
 						<tr>
-							<th>Member of KSSO</th>
+							<th>Member of KSCP</th>
 							<td>Member</td>
 						</tr>
 						<tr>
@@ -782,7 +789,7 @@
 								</td>
 							</tr>
 							<tr>
-								<th>KSSO Member Status *</th>
+								<th>KSCP Member Status *</th>
 								<td class="banquet_style">
 									<input type="radio" class="radio" id="member" name="member_status" value="1">
 									<label for="member" class="banquet_label"><?=$locale("member_status_select1")?></label>

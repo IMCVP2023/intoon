@@ -45,31 +45,17 @@
 						WHERE `type` = 1
 						AND is_deleted = 'N'
 						ORDER BY register_date DESC
-						LIMIT 5";
-	$notice_list = get_data($notice_list_query) ?? [];
-	$total_notice = count($notice_list);
+						LIMIT 3";
+	$notice_list = get_data($notice_list_query);
 
-	//230519 HUBDNC_NYM Newsletter 쿼리
-	$newsletter_list_query = "	SELECT
-									idx,
-									title_en,
-									title_ko,
-									DATE_FORMAT(register_date, '%Y-%m-%d') AS date_ymd
-								FROM board
-								WHERE `type` = 0
-								AND is_deleted = 'N'
-								ORDER BY register_date DESC
-								LIMIT 5";
-	$newsletter_list = get_data($newsletter_list_query) ?? [];	
-	$total_newsletter = count($newsletter_list) ?? 0;
+	//$notice_cnt = count($notice_list);
 ?>
 
 <style>
-	body {background-color:rgba(234,234,234,0.45);}
 	.index_sponsor_wrap {display:block;}
 </style>
 
-<section class="main_section">
+<section class="main_section icola_main">
 	<!-- 배경이미지
 	<div class="bg_wrap">
 		<div class="dim"></div>
@@ -88,99 +74,66 @@
 	</div>
 	-->
 	<div class="section_bg">
-		<!-- <div class="video_wrap"> -->
-			<!-- <div class="dim"></div> -->
-			<!-- <video src="https://player.vimeo.com/progressive_redirect/playback/685374881/rendition/1080p?loc=external&signature=0f96f408d54e4adfe00f0f0a8b8c6a593fa2ecb767763e3709010a574d1a8a3f" autoplay="autoplay" muted="muted" playsinline id="main_2023_video_bg" loop></video> -->
-		<!-- </div> -->
 		<div class="container">
+			<!-- 상단 타이틀 -->
 			<img src="/main/img/img_vsl_text_3.png" class="pc_only img_vsl_text" alt="">
 			<div class="mb_only img_vsl_text" style="">
 				<img src="/main/img/img_vsl_text_mb_2.png" alt="">
 				<!-- <p>Sep. 7(Thu) ~ Sep. 9(Sat)</p>
 				<p>CONRAD Seoul Hotel, Korea</p> -->
 			</div>
-			<!-- 상단 타이틀 -->
 			<div class="txt_wrap">
-				<!-- <h5><strong>Now is the Time to Conquer Obesity -->
-				<!-- 	</strong></h5> -->
-				<!-- <h1 class="e_title"><?= substr($info['event_title'], 0, 7) ?><span>2023</span></h1> -->
-				<!-- <p class="e_fullname">2023 <b class="point_txt f_bold">I</b>nternational <b -->
-				<!-- 		class="point_txt f_bold">C</b>ongress on <b class="point_txt f_bold">O</b>besity and <b -->
-				<!-- 		class="point_txt f_bold">ME</b>tabolic <b class="point_txt f_bold">S</b>yndrome hosted by KSSO</p> -->
-				<!-- <p class="e_place"> -->
-					<?php
-					/*$date_start = date_create($info['period_event_start']);
-					$date_end = date_create($info['period_event_end']);
 
-					$format_start = "M d(D)";
-					$format_end = "d(D), Y";
-
-					if (date_format($date_start, 'Y') != date_format($date_end, 'Y')) {
-						$format_start = "M d(D), Y";
-						$format_end = "M d(D), Y";
-					} else if (date_format($date_start, 'F') != date_format($date_end, 'F')) {
-						$format_end = "M d(D), Y";
-					}
-
-					$date_text = date_format($date_start, $format_start) . "-" . date_format($date_end, $format_end);
-					$venue_text = $info['venue_name'];*/
-					?>
-					<!-- <?= $date_text ?>&nbsp;/&nbsp;<?= $venue_text ?> -->
-					<!-- SEP 7<span>(Thu)</span>-9<span>(Sat)</span>, 2023 / CONRAD Seoul Hotel, Korea -->
+				<!-- <h1><?=$info['event_title']?>ICoLA 2022 <br/><span class="green_t"><span class="light">with</span> APSAVD</h1></span>
+				<p class="event_name">
+					
+					The 11<sup>th</sup> <b>I</b>nternational <b>C</b>ongress <b>o</b>n <b>L</b>ipid & <b>A</b>therosclerosis
+					<br/>with <b>A</b>sian-<b>P</b>acific <b>S</b>ociety of <b>A</b>therosclerosis and <b>V</b>ascular <b>D</b>isease -->
+					
+					<!--<b>T</b>he <b>c</b>onference <b>f</b>ormat (Face-to-face or online) <b>w</b>ill <b>b</b>e <b>a</b>nnounced <b>b</b>efore <b>l</b>ong <b>i</b>n<br class="responsive_br"/><b>c</b>onsideration <b>o</b>f <b>t</b>he <b>C</b>OVID 19 <b>s</b>ituation. <b>P</b>lease <b>c</b>heck <b>o</b>ur <b>w</b>ebsite <b>r</b>egularly.-->
 				<!-- </p> -->
-				<!-- <p class="sub_section_title main_theme"><?= $locale("theme_txt") ?></p> -->
-				<!-- <div class="clearfix2">
+				<!-- <p class="event_hold">
+					<?php
+						$date_start = date_create($info['period_event_start']);
+						$date_end = date_create($info['period_event_end']);
+
+						$format_start = "M d(D)";
+						$format_end = "d(D), Y";
+
+						if (date_format($date_start, 'Y') != date_format($date_end, 'Y')) {
+							$format_start = "M d(D), Y";
+							$format_end = "M d(D), Y";
+						} else if (date_format($date_start, 'F') != date_format($date_end, 'F')) {
+							$format_end = "M d(D), Y";
+						}
+
+						$date_text = date_format($date_start, $format_start)."~".date_format($date_end, $format_end);
+						$venue_text = $info['venue_name'];
+					?>
+					<?=$date_text?>&nbsp;/&nbsp;<?=$venue_text?>
+					<span class="event_date">SEP 15<span>(Thu)</span> ~ 17<span>(Sat)</span>, 2022</span>
+					<span class="event_place">CONRAD Seoul, Korea</span>
+					
+				</p>
+				<p class="event_msg">* This congress will be an on-site event in Seoul, Republic of Korea.</p> -->
+				<!-- 
+				<p class="sub_section_title main_theme"><?=$locale("theme_txt")?></p>
+				<div class="clearfix2">
 					<div class="live_btn">
-						<p class="live_tit">Registration Information</p>
+						<p class="live_tit">Connecting to Live Platform</p>
 						<p class="onair_btn w1024"> ON-AIR <span>Technical Support - Tel. +82-2-2039-7802,  +82-2-6959-4868, +82-2-3275-3028</span></p>
-						<button type="button" class="sub_section_title main_theme liveenter_btn"
-							onClick="javascript:window.location.href='/main/registration_guidelines.php';">Register
-							Now</button>
+						<p class="sub_section_title main_theme liveenter_btn">Enter</p>
 					</div>
+				</div>
+				-->
+				<!-- <div class="main_btn_wrap">
+				<button type="button" class="btn_register_now" onClick="javascript:alert('Coming soon.');">Register Now</button>
+					<button type="button" class="btn_circle_arrow"></button>
 				</div> -->
 			</div>
 		</div>
 		<div class="main_btn_wrap">
 			<button type="button" class="btn_circle_arrow"></button>
-		</div>
-		<div class="dates_area">
-			<ul>
-				<li>
-					<a class="not_yet">
-					<!-- <a href="/main/abstract_submission_guideline.php"> -->
-						<!-- <h2>August 10 <span>(Thu)</span></h2> -->
-                        <h2>TBD</h2>
-						<!-- <i><img src="/main/img/icons/icon_report.svg" alt=""></i> -->
-						<p>Abstract Submission<br/>Deadline</p>
-					</a>
-				</li>
-				<li>
-					<a class="not_yet">
-					<!-- <a href="/main/abstract_submission_guideline.php"> -->
-						<!-- <h2>August 14 <span>(Mon)</span></h2> -->
-                       <h2>TBD</h2>
-						<!-- <i><img src="/main/img/icons/icon_letter.svg" alt=""></i> -->
-						<p>Notification of<br/>Acceptance</p>
-					</a>
-				</li>
-				<li>
-					<a class="not_yet">
-					<!-- <a href="/main/registration_guidelines.php"> -->
-						<!-- <h2>August 24 <span>(Thu)</span></h2> -->
-                        <h2>TBD</h2>
-						<!-- <i><img src="/main/img/icons/icon_calendar.svg" alt=""></i> -->
-						<p>Pre-Registration <br/>Deadline</p>
-					</a>
-				</li>
-				<li>
-					<a class="not_yet">
-					<!-- <a href="/main/abstract_submission_award.php"> -->
-						<!-- <h2>2 Jun</h2> -->
-						<h2>Awards &amp;<br/>Grants</h2>
-						<i><img src="/main/img/img_trophy.svg" alt=""></i>
-					</a>
-				</li>
-			</ul>
 		</div>
 	</div>
 </section>
@@ -188,48 +141,38 @@
 <!-- Plenary Speakers -->
 <div class="speakers_wrap">
 	<div class="container">
-		<h3 class="title">Plenary &amp; Keynote Speakers</h3>
-		<div class="">
-			<ul class="main_speaker2">
-				<li class="index_speaker5">
-					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">TBD</h5>
-					<div class="career">TBD</div>
-				</li>
+		<h1 class="speakers_wrap_title">Plenary Speakers</h1>
+		<div class="speakers_slick">
+			<ul class="main_speaker2 slick-slider">
 				<li class="index_speaker1">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
 					<h5 class="title">TBD</h5>
-					<div class="career">TBD</div>
-				</li>
-				<li class="index_speaker6">
-					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">TBD</h5>
-					<div class="career">TBD</div>
-				</li>
-				<li class="index_speaker7">
-					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">TBD</h5>
-					<div class="career">TBD</div>
+					<div class="career">TBD,<br>TBD</div>
 				</li>
 				<li class="index_speaker2">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
 					<h5 class="title">TBD</h5>
-					<div class="career">TBD</div>
-				</li>
-				<li class="index_speaker8">
-					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">TBD</h5>
-					<div class="career">TBD</div>
+					<div class="career">TBD,<br>TBD</div>
 				</li>
 				<li class="index_speaker3">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
 					<h5 class="title">TBD</h5>
-					<div class="career">TBD</div>
+					<div class="career">TBD,<br>TBD</div>
 				</li>
 				<li class="index_speaker4">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
 					<h5 class="title">TBD</h5>
-					<div class="career">TBD</div>
+					<div class="career">TBD,<br>TBD</div>
+				</li>
+				<li class="index_speaker5">
+					<div class="profile_circle"><div class="profile_wrap"></div></div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD,<br>TBD</div>
+				</li>
+				<li class="index_speaker6">
+					<div class="profile_circle"><div class="profile_wrap"></div></div>
+					<h5 class="title">TBD</h5>
+					<div class="career">TBD,<br>TBD</div>
 				</li>
 			</ul>
 		</div>
@@ -239,32 +182,47 @@
 <section>
 	<div class="container">
 		<div class="noti_wrap">
-			<!-- 2022년 버전에 뉴스레터 없어서 테스트 텍스트로 넣어놓음 -->
-			<div class="noti_area">
-				<h3 class="title">Newsletter<a href="/main/board_newsletter.php" class="moreview_btn">+</a></h3>
+			<div class="dates_area">
+				<h3 class="noti_wrap_title title">Key dates</h3>
 				<ul>
-				<?php
-					if ($total_newsletter > 0) {
-						foreach ($newsletter_list AS $newsletter) {
-				?>
-							<li><a href="/main/board_newsletter_detail.php?no=<?= $newsletter["idx"] ?>"><p><?= $newsletter["title_en"] ?></p><span><?= $newsletter["date_ymd"] ?? "-" ?></span></a></li>
-				<?php
-						}
-					} else {
-				?>
-						<li>
-							<div class='no_data'>Will be updated</div>
-						</li>
-				<?php
-					}
-				?>
+					<li>
+						<a class="not_yet">
+						<!-- <a href="/main/abstract_submission_guideline.php"> -->
+							<h2>TBD</h2>
+							<i><img src="/main/img/icons/icon_report.svg" alt=""></i>
+							<p>Abstract Submission<br/>Deadline</p>
+						</a>
+					</li>
+					<li>
+						<a class="not_yet">
+						<!-- <a href="/main/abstract_submission_guideline.php"> -->
+							<h2>TBD</h2>
+							<i><img src="/main/img/icons/icon_letter.svg" alt=""></i>
+							<p>Notification of<br/>Acceptance</p>
+						</a>
+					</li>
+					<li>
+						<a class="not_yet">
+						<!-- <a href="/main/registration_guidelines.php"> -->
+							<h2>TBD</h2>
+							<i><img src="/main/img/icons/icon_calendar.svg" alt=""></i>
+							<p>Early-Registration<br/>Deadline</p>
+						</a>
+					</li>
+					<li>
+						<a class="not_yet">
+						<!-- <a href="/main/registration_guidelines.php"> -->
+							<h2>TBD</h2>
+							<i><img src="/main/img/icons/icon_paper.svg" alt=""></i>
+							<p>Pre-Registration<br/>Deadline</p>
+						</a>
+					</li>
 				</ul>
 			</div>
-			<!-- 2022년 버전에 공지사항 없어서 테스트 텍스트로 넣어놓음 -->
 			<div class="noti_area">
-				<h3 class="title">Notice<a href="/main/board_notice.php" class="moreview_btn">+</a></h3>
-				<ul>
-					<?php if(count($notice_list) > 0) { ?>
+				<h3 class="noti_wrap_title title">News & Notice</h3>
+				<ul>					
+				<?php if(count($notice_list) > 0) { ?>
 						<?php 
 							for($i = 0; $i < count($notice_list); $i++) { 
 								$notice = $notice_list[$i];
@@ -276,157 +234,168 @@
 							<div class='no_data'>Will be updated</div>
 						</li>
 					<?php } ?>
+					
 				</ul>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- fixed_btn : register > 실제 등록 가능기간이기 전까지 주석처리 ()
-<button type="button" class="btn_fixed_triangle"><span>Register<br>Now</span></button>-->
-<!-- page loading bar 주석-->
-<div class="page_loading">
-	<video id="vid_auto" preload="auto" muted="muted" volume="0" playsinline autoplay onended="myFunction()"></video>
-</div>
-<!-- 2023 팝업 -->
-<!--
-<div class="popup pop_2023" style="display:block;">
-	<div class="pop_bg"></div>
-	<div class="pop_contents">
-		<img src="/main/img/pop_2023_bg.png" class="bg" alt="">
-		<img src="/main/img/pop_2023_line.png" class="line" alt="">
-		<div class="pop_text_box">
-			<h1>
-				<p>See you on the next</p>
-				<p>ICoLA 2023</p>
-				<p>Seoul, Korea</p>
-			</h1>
-			<div class="btns">
-				<button>September 14(Thu) - 16(Sat), 2023</button>
-			</div>
-		</div>
-		<div class="close_area clearfix2">
-			<div>
-				<input type="checkbox" id="today_check" class="checkbox input required">
-				<label for="today_check">Do not open this window for 24 hours.</label>
-			</div>
-			<a href="javascript:;" class="">Close <img src="/main/img/main_pop_close.png" alt=""></a>
-		</div>	
-	</div>
-</div>
--->
-
-<!-- ICOMES 2023 Main 팝업
-<div class="popup last_breaking_pop">
-    <div class="pop_bg"></div>
-    <div class="pop_contents">
-		<a href="/main/abstract_submission.php"><img src="/main/img/Last_Breaking_popup_230731.png" alt=""></a>
-        <div class="pop_bottoms">
-			<button type="button" class="pop_close bold">Close</button>
-        </div>
-    </div>
-</div>
- -->
-
-<!-- 2023/08/16 팝업 -->
-<!-- <div class="popup notification_pop" style="display:block;">
-    <div class="pop_bg"></div>
-    <div class="pop_contents">
-		<div class="top">Notification of Acceptance</div>
-		<div class="inner">
-			<ul>
-				<li>
-					<button type="button" onClick="javascript:window.open('/main/download/Oral Presentation_0824.pdf')">Oral Presentation List<img src="/main/img/icons/download_w2.svg" /></button>			
-				</li>
-				<li>
-					<button type="button" onClick="javascript:window.open('/main/download/Guided Poster Presentation_0824.pdf')">Guided Poster Presentation List<img src="/main/img/icons/download_w2.svg" /></button>			
-				</li>
-				<li>
-					<button type="button" onClick="javascript:window.open('/main/download/Poster Exhibition_0824.pdf')">Poster Exhibition List<img src="/main/img/icons/download_w2.svg" /></button>
-				</li>
-			</ul>
-		</div>
-		<div class="close_area">
-			<div>
-				<input type="checkbox" id="today_check" name="hidden" class="checkbox input required">
-				<label for="today_check">Do not open this window for 24 hours.</label>
-			</div>
-			<a href="javascript:;" class="pop_close" onclick="closeWin()">Close <img src="/main/img/main_pop_close.png" alt=""></a>
-		</div>	
-    </div>
-</div> -->
-
-<!-- 230831 팝업 1/2 -->
-<!-- <div class="popup main_pop application_pop" style="display:block;">
-    <div class="pop_bg"></div>
-    <div class="pop_contents">
-		<img src="/main/img/230831_pop01.png" alt="">
-		<div class="close_area">
-			<div>
-				<input type="checkbox" id="today_check2" name="hidden" class="checkbox input required">
-				<label for="today_check2">Do not open this window for 24 hours.</label>
-			</div>
-			<a href="javascript:;" class="pop_close" onclick="closeWin()">Close <img src="/main/img/main_pop_close.png" alt=""></a>
-		</div>	
-    </div>
-</div>
-
-230831 팝업 2/2
-<div class="popup main_pop symposium_pop" style="display:block;">
-    <div class="pop_bg"></div>
-    <div class="pop_contents">
-		<img src="/main/img/230831_pop02.png" alt="">
-		<a href="https://forms.gle/dvj5zCac9edUhBjR8" target="_blank">
-            <img src="/main/img/230831_pop02_btn.png" alt="" class="main_pop_btn">        
-        </a>
-		<div class="close_area">
-			<div>
-				<input type="checkbox" id="today_check1" name="hidden" class="checkbox input required">
-				<label for="today_check1">Do not open this window for 24 hours.</label>
-			</div>
-			<a href="javascript:;" class="pop_close" onclick="closeWin()">Close <img src="/main/img/main_pop_close.png" alt=""></a>
-		</div>	
-    </div>
-</div> -->
-
 
 <!-- <script>
-    // 쿠키 가져오기
-    var getCookie = function (cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0; i<ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1);
-            if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
-        }
-        return "";
-    }
+	// 오늘 하루만 보기
 
-    // 24시간 기준 쿠키 설정하기  
-    var setCookie = function (cname, cvalue, exdays) {
-        var todayDate = new Date();
-        todayDate.setTime(todayDate.getTime() + (exdays*24*60*60*1000));    
-        var expires = "expires=" + todayDate.toUTCString(); // UTC기준의 시간에 exdays인자로 받은 값에 의해서 cookie가 설정 됩니다.
-        document.cookie = cname + "=" + cvalue + "; " + expires;
-    }
+	// 쿠키 가져오기
+	function getCookie (name) {
+		var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+		return value? value[2] : null;
+	}
 
-    var couponClose = function(){
-        if($("#today_check").is(":checked") == true){
-            setCookie("close","Y",1);   //기간( ex. 1은 하루, 7은 일주일)
-        }
-        $(".notification_pop").hide();
-    }
-    
-    $(document).ready(function(){
-        var cookiedata = document.cookie;
-        if(cookiedata.indexOf("close=Y")<0){
-            $(".notification_pop").show();
-        }else{
-            $(".notification_pop").hide();
-        }
-        $(".notification_pop .pop_close").click(function(){
-            couponClose();
-        });
-    });
+	console.log(getCookie("pop"))
+
+	//쿠키가 존재하지 않으면 팝업창을 연다.
+	if(getCookie("pop") == null)  {
+		$('.pop_2023').show();
+		$('.travel_grant_pop').show();
+		$('.deadline_pop').show();
+		$('.notification_pop').show();
+	} else {
+		$('.pop_2023').hide();
+		$('.travel_grant_pop').hide();
+		$('.deadline_pop').hide();
+		$('.notification_pop').hide();
+	}
+
+	$('.pop_2023 .close_area a, .travel_grant_pop .pop_close, .deadline_pop .pop_close, .notification_pop .pop_close').click(function(){
+		if($("#today_check, #today_check1").is(":checked")){
+			var toDate = new Date();
+			setHeaderCookie("pop", "done", 1);
+
+			console.log($("#today_check, #today_check1").is(":checked"))
+		}
+		$(this).parents(".popup").hide();
+		//$('.travel_grant_pop, .deadline_pop, .notification_pop').hide();
+	});
+
+</script> -->
+
+<script>
+	$('document').ready(function(){
+		$('.close_area a').click(function(){
+			$(this).parents('.popup').hide();
+		});
+		$('body').addClass('main');
+		
+		$('.main_speaker2').slick({
+			dots: false,
+			navigation: true,
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 6000,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 850,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 0,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+
+		});
+
+		//bg slider
+		var bg_slider = $('.main_bg_slider').slick({
+			dots: false,
+			infinite: true,
+			slidesToShow: 1,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 10000
+		});
+
+		
+		// var vid = document.getElementById("main_video_bg");
+		//vid.onended = function() {
+		//	bg_slider.slick('slickNext');
+		//};
+		//on-air 버튼 깜빡이기
+		//setInterval(function () {
+		//$('.onair_btn').toggleClass('changed');
+		//}, 700);
+
+		// circle_arrow click이벤트
+		// var header_top = $("header.green_header").outerHeight();
+		// var speakers_top = $(".speakers_wrap").offset().top;
+		// var want_position = speakers_top - header_top;
+		// $(".btn_circle_arrow").click(function(){
+		// 	$("html, body").animate({scrollTop: want_position + "px"}, 500);
+		// });
+
+	});
+
+	$(function () {
+		function load () {
+			console.log('x')
+		}
+	})
+	
+	// 쿠키 헤더 생성
+	function setHeaderCookie(name, value, hours, minute) {
+		var todayDate = new Date();
+		//var set_date = 24 - today.getHours();
+		todayDate.setHours(todayDate.getHours() + (hours + 9));
+		todayDate.setMinutes(todayDate.getMinutes() + minute);
+		todayDate.setSeconds(0);
+
+		document.cookie = name+ "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+	}
+
+	// 쿠키 가져오기
+	function getCookie (name) {
+		var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+		return value? value[2] : null;
+	}
+
+	
+	//page loading bar 주석
+	// $('.live_btn, .live_btn2').click(function(){
+	// 	$('#vid_auto').html('<source src="https://player.vimeo.com/external/595045789.hd.mp4?s=53cc26f55fa424c019f24192b49b06a165528174&profile_id=174">');
+	// 	$('.page_loading').addClass('active');
+	// })
+
+	// function myFunction(){
+	// 	$('.page_loading').removeClass('active');
+	// 	window.location.href = '/main/live';
+	// }
+
+	$(document).ready(function(){
+		$(window).resize(function(){
+			$(".main_bg_slider").slick("resize");
+			$(".main_bg_slider").slick("refresh");
+		})
+		$(window).trigger("resize")
+	});
 </script>
- -->

@@ -245,14 +245,14 @@ section.visa .circle_title + .details {margin-bottom: 72px;}
 .green_table .border_left {text-align:left;}
 .green_table input, .green_table select {width:100%; vertical-align:middle;}
 .green_table textarea {width:100%; min-height:150px; padding:16px;}
-.green_table .half input, .green_table .half select {width:calc(50% - 2px);}
+.green_table .half input, .green_table .half select {width:calc(50% - 3px);}
 .green_table .sel_3 select {width:calc(33.33% - 3px);}
 .green_table .phone_2 input:first-of-type {width:10%;}
 .green_table .phone_2 input:last-of-type {width:calc(90% - 5px);}
 .green_table select {height:40px; padding:0 25px 0 10px;}
 .green_table .btn3_box {margin-top:10px;}
 .green_table .btn3_box button {height:28px; width:calc(33.33% - 3px);}
-.green_table .radio:checked + label, .green_table .radio:not(:checked) + label {margin-right:10px;}
+.green_table .radio:checked + label, .green_table .radio:not(:checked) + label {margin:10px;}
 .green_table .radio~.green_open, .green_table .checkbox~.green_open {font-size:12px; cursor:pointer; margin-left:16px; color:inherit;}
 .green_table.step1 .radio:checked + label, .green_table.step1 .radio:not(:checked) + label {display:block;}
 
@@ -260,8 +260,8 @@ section.visa .circle_title + .details {margin-bottom: 72px;}
 .text_box {padding:30px; background-color: #F4F4F4; border-top: 2px solid #707070; font-size: 16px; line-height: 26px;}
 .devide_title {margin:50px 0 10px;}
 .table_caption_green {margin-bottom:10px;}
-.table_caption_green p {font-size:14px;}
-.green_table .file_submission label {width: calc(100% - 242px);}
+.table_caption_green p {font-size:14px; line-height: 1.7;}
+.green_table .file_submission label {width: calc(100% - 252px);}
 .green_table .file_submission .btn {padding:0; line-height:36px;}
 .green_table.file_table p {margin-bottom:10px;}
 .abstract_form + .pager_btn_wrap .btn + .btn {margin-left:12px;}
@@ -603,7 +603,7 @@ div.bg input[type=button]{background-color: #383d5b; border-color: #383d5b; colo
 	.speakers_wrap {padding: 50px 0;}
 
 	/* main > key dates */
-	.dates_area {display:none;}
+	/* .dates_area {display:none;} */
 	.noti_wrap {flex-direction: column; padding: 30px 0;}
 	.noti_wrap > div {width: 100%;}
 	.dates_area ul {min-height: auto;}

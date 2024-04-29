@@ -30,7 +30,7 @@
 	if(!empty($session_user) && $session_app_type == 'Y') {
 ?>
 		<div class="app_title_box">
-			<h2 class="app_title">ICOMES 2023<button type="button" class="app_title_prev" onclick="javascript:window.location.href='./app_index.php';"><img src="/main/img/icons/icon_arrow_prev_wh.svg" alt="이전페이지로 이동"></button></h2>
+			<h2 class="app_title">ICOMES 2024<button type="button" class="app_title_prev" onclick="javascript:window.location.href='./app_index.php';"><img src="/main/img/icons/icon_arrow_prev_wh.svg" alt="이전페이지로 이동"></button></h2>
 			<ul class="app_menu_tab">
 				<li class="on"><a href="./welcome.php">Welcome Message</a></li>
 				<li><a href="./organizing_committee.php">Organization</a></li>
@@ -48,36 +48,46 @@
 <!-- 			</div> -->
 <!-- 		</div> -->
     <div>
-		<h1 class="page_title">Welcome Message</h1>
+		<h1 class="page_title">Opening Address</h1>
         <div class="inner">
             <div>
-				<h3 class="title icon_none">Respected colleagues,</h3>
+				<!-- <h3 class="title icon_none">Respected colleagues,</h3> -->
 				<p class="welcome_txt">
-					We extend our warmest greetings and deepest appreciation to all the esteemed individuals dedicated to advancing academic research in the field of obesity and metabolic syndrome. As we emerge from the challenges of the COVID-19 pandemic, which profoundly impacted our lifestyles with reduced physical activity and changes in eating habits, we acknowledge the pressing concern of increased obesity. We gather here to renew our commitment to the fight against obesity. <br/><br/>The Korean Society for the Study of Obesity (KSSO) proudly presents the ‘International Congress on Obesity and MEtabolic Syndrome 2023 (ICOMES 2023)’ under the theme of ‘Now is the Time to Conquer Obesity.’ The conference will take place at the Conrad Seoul Hotel from September 7th to September 9th. Building upon the success of previous conferences, ‘ICOMES’ has evolved into a prominent international platform for exchanging insights and advancing obesity-related research. Our aim is to foster collaboration and knowledge exchange among obesity specialists, driving advancements in the field.  <br/><br/>This year, we are honored to introduce a distinguished group of Plenary Lecture speakers who will enlighten us with their invaluable expertise. Please join us in welcoming Thiruma V. Arumugam from La Trobe University (Australia), Robert R. Wolfe from the University of Arkansas for Medical Sciences (USA), Tamas Horvath from Yale University (USA), and John Wilding from the University of Liverpool (UK). <br/><br/>Additionally, we are privileged to present our esteemed Keynote Lecture speakers who bring a wealth of expertise and fresh perspectives to the forefront of research. Their captivating presentations will undoubtedly enhance our understanding of cutting-edge advancements in the field. Let us extend a warm welcome to Matthias Blüher from the University of Leipzig (Germany), Jae Myoung Suh from KAIST (Korea), Zachary Knight from the University of California (USA), and Jae-Heon Kang from Sungkyunkwan University (Korea). <br/><br/>At the beginning of this year, KSSO reaffirmed its determination to delve deeper into the field and embrace new challenges through cooperation with other international societies. We had the great opportunity to generously host three Joint Symposia at ICOMES 2023 with the world's most prestigious obesity associations: The Asia Oceania Association for the Study of Obesity (AOASO) as well as the European Association for the Study of Obesity (EASO) and The Obesity Society (TOS). <br/><br/>‘ICOMES 2023’ offers a remarkable opportunity to engage with experts, exchange knowledge, and foster collaborations. We encourage you to seize this chance to contribute to the advancement of obesity-related research and patient care. Now is the time to conquer obesity! <br/><br/>We eagerly anticipate your active participation and presence at ‘ICOMES 2023’.<br/><br/><br/>Best regards,
-
+				It is my great honor to cordially invite all of you to upcoming IMCVP 2024 (International Meeting of Cardiovascular Disease Prevention) (IMCVP
+2024). <br/>This IMCVP will be held in Grand Walkerhill Hotel, Seoul, Republic of Korea from 29 November to 30 November 2024. IMCVP is hosted soley by
+KSCP and newly named as an official conference of KSCP (Korean Society of Cardiovascular Disease Prevention). It is 3rd international
+conference hosted by KSCP. KSCP was founded in 2010 to promote national health through active academic activities in the field of
+cardiovascular disease prevention.<br/>In 2023 November, KSCP co-hosted international conference of ISCP at Seoul, Korea and many participants from the world joined us and
+shared current scientific evidence. I would like to deeply thank to organizing committee and scientific committee members of last year’s
+successful conference for their sincere devotion.<br/>This year, organizing committee of KSCP has decided to hold IMCVP 2024 in-person meeting and would like to invite all of you.<br/>IMCP 2024 will present current edge of scientific evidence and educational contents, key insight, practice-changing updates with world-class
+experts. It will bring together key stakeholders in all areas of cardiovascular disease prevention and promote better patient care. Many field of
+cardiovascular disease including hypertension, dyslipidemia, diabetes, angina, stroke, heart failure, epidemiology, nutrition, guidelines and
+new treatment methods will be covered and excellent professors will share their research results. It is our pride and pleasure to share up-todate scientific information in this field through IMCVP 2024<br/>As a president of KSCP hosting IMCVP 2024, I hope that this meeting can be the one of greatest academic experience you’ve ever had. I would
+like to express my sincerest gratitude to all of your attendance and continued support. I look forward to seeing you all at IMCVP in November
+2024.<br/>Thank you so much.<br/><br/>With best regards,<br/>Won-Young Lee,<br/>President of KSCP (Korean Society of Cardiovascular Disease Prevention)
 				</p>
 			</div>
+			<img src="./img/headman_img.png" alt = ""/>
             <div class="head_profile">
 				<div class="headman">
-					<div class="headman_l"><img src="./img/headman_img1.png" alt=""></div>
+				
+					<!-- <div class="headman_l"><img src="./img/headman_img1.png" alt=""></div>
 					<div class="headman_r">
-						<!-- <h5>Name</h5> -->
 						<h1>Sung Soo Kim, M.D., Ph.D</h1>
 						<h5>Chairman</h5>
 						<p>Korea Society for Study of Obesity</p>
 						<div class="headman_sign"><img src="./img/headman_sign1.png" alt=""></div>
-					</div>
+					</div> -->
 				</div>
-				<div class="headman">
+				<!-- <div class="headman">
 					<div class="headman_l"><img src="./img/headman_img2.png" alt=""></div>
 					<div class="headman_r">
-						<!-- <h5>Name</h5> -->
 						<h1>Cheol-Young Park, M.D., Ph.D</h1>
 						<h5>President</h5>
 						<p>Korea Society for Study of Obesity</p>
 						<div class="headman_sign"><img src="./img/headman_sign2_1.png" alt=""></div>
 					</div>
-				</div>
+				</div> -->
 			</div>
         </div>
     </div>

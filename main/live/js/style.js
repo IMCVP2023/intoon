@@ -9,14 +9,6 @@ $(document).ready(function () {
     $(".card").removeClass("flipped");
   });
 
-  //탭
-  /*$(".tab_pager li").click(function () {
-    var i = $(this).index();
-    $(".tab_pager li").removeClass("on");
-    $(this).addClass("on");
-    $(".tab_cont").removeClass("on");
-    $(".tab_cont").eq(i).addClass("on");
-  });*/
 
   if ($(".container").hasClass("video")){
     $(".mb_icon_menu").hide();

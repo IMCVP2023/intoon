@@ -2,6 +2,19 @@
 	include_once('./include/head.php');
 	include_once('./include/header.php');
 
+	//[240418] sujeong 추가 / reg_num 구하기 함수 (ex)IMCVP2024-0001)
+	// function createRegiCode($idx)
+	// {
+	// 	$year = date("Y");
+
+	// 	while (strlen("" . $idx) < 4) {
+	// 		$code_number = "0" . $idx;
+	// 	}
+
+	// 	$code = "IMCVP" . $year. "-" . $code_number;
+	// 	return $code;
+	// }
+
 	if($admin_permission["auth_apply_registration"] == 0){
 		echo '<script>alert("권한이 없습니다.");history.back();</script>';
 	}
@@ -34,141 +47,307 @@
 		$where .= " AND DATE(rr.register_date) <= '".$e_date."' ";
 	}
 	
-
-	$registration_list_query =  "
-									SELECT
-										rr.idx AS registration_idx, rr.email, rr.phone, CONCAT(rr.first_name,' ',rr.last_name) AS `name`, DATE_FORMAT(rr.register_date, '%y-%m-%d') AS register_date, rr.etc2,
-										rr.member_type, rr.member_other_type, rr.occupation_type, rr.occupation_other_type,
-										CONCAT(m.last_name_kor,'',m.first_name_kor) AS kor_name,
-										(
-											CASE rr.registration_type
-												#WHEN '2' THEN 'Online + Offline'
-												WHEN '1' THEN 'Online'
-												WHEN '0' THEN 'On-site'
-												ELSE '-'
-											END
-										) AS registration_type_text,
-										(
-											CASE rr.attendance_type
-												WHEN '0' THEN 'Committee'
-												WHEN '1' THEN 'Speaker'
-												WHEN '2' THEN 'Chairperson'
-												WHEN '3' THEN 'Panel'
-												WHEN '4' THEN 'Participants'
-												WHEN '5' THEN 'Sponsor'
-												ELSE '-'
-											END
-										) AS attendance_type_text,
-										(
-											CASE rr.is_score
-												WHEN '1' THEN 'Applied'
-												WHEN '0' THEN 'Not applied'
-												ELSE '-'
-											END
-										) AS is_score_text,
-										(
-											CASE
-												WHEN rr.status = '0'
-												THEN '등록취소'
-												WHEN rr.status = '1'
-												THEN '결제대기'
-												WHEN rr.status = '2'
-												THEN '결제완료'
-												WHEN rr.status = '3'
-												THEN '환불대기'
-												WHEN rr.status = '4'
-												THEN '환불완료'
-											    WHEN rr.status = '5'
-												THEN '현장결제'
-												ELSE '-'
-											END
-										) AS payment_status,
-										(
-											CASE
-												WHEN rr.payment_methods = '0' THEN 'Credit card'
-												WHEN rr.payment_methods = '1' THEN 'Bank transfer'
-												WHEN rr.payment_methods = '2' THEN 'Onsite payment'
-											END
-										) AS payment_methods,
-										rr.etc1, rr.licence_number, rr.specialty_number, rr.nutritionist_number, rr.dietitian_number,
-										rr.welcome_reception_yn, rr.day2_breakfast_yn, rr.day2_luncheon_yn, rr.day3_breakfast_yn, rr.day3_luncheon_yn, rr.special_request_food,
-										IFNULL(rr.promotion_code, '-') AS promotion_code, IFNULL(rr.recommended_by, '-') AS recommended_by,
-										(
-                                            CASE
-                                                WHEN rr.promotion_code = 0 THEN '100%'
-                                                WHEN rr.promotion_code = 1 THEN '50%'
-                                                WHEN rr.promotion_code = 2 THEN '30%'
-                                            END
-                                        ) AS discount_rate, rr.promotion_code_number,
-										n.nation_ko, n.nation_en,
-										m.idx AS member_idx,
-										m.affiliation, m.department,
-										m.affiliation_kor, m.department_kor,
-										m.nation_no,
-										m.date_of_birth,
-										rr.banquet_yn,
-										total_price_kr,
-										total_price_us,
-										member_status,
-										IFNULL(rr.register_path, '-') AS register_path, 
-										IFNULL(rr.conference_info, '-') AS conference_info,
-										m.ksola_member_status
-									FROM request_registration  rr
-									INNER JOIN (
-										SELECT
-											idx,
-											first_name_kor, last_name_kor,
-											affiliation, department, affiliation_kor, department_kor,
-											nation_no,
-											(
-												CASE
-													WHEN ksola_member_status = 0 THEN '비회원'
-													WHEN ksola_member_status = 1 THEN '정회원'
-													WHEN ksola_member_status = 2 THEN '평생회원'
-													WHEN ksola_member_status = 3 THEN '인터넷회원'
-												END
-											) AS ksola_member_status,
-											date_of_birth,
-											is_deleted
-										FROM member
-										WHERE is_deleted = 'N'
-									) AS m
-									ON rr.register = m.idx
-									LEFT JOIN nation n
-									ON rr.nation_no = n.idx
-									LEFT JOIN(
-										SELECT
-											idx,
-											total_price_kr,
-											total_price_us
-										FROM payment
-									) AS p
-									ON p.idx = rr.payment_no
-									WHERE rr.is_deleted = 'N'
-									{$where}
-									ORDER BY rr.idx DESC
-								";
+	//[240418] sujeong / 기존 query 문
+	// $registration_list_query =  "
+	// 								SELECT
+	// 									rr.idx AS registration_idx, rr.email, rr.phone, CONCAT(rr.first_name,' ',rr.last_name) AS `name`, DATE_FORMAT(rr.register_date, '%y-%m-%d') AS register_date, rr.etc2,
+	// 									rr.member_type, rr.member_other_type, rr.occupation_type, rr.occupation_other_type,
+	// 									CONCAT(m.last_name_kor,'',m.first_name_kor) AS kor_name,
+	// 									(
+	// 										CASE rr.registration_type
+	// 											#WHEN '2' THEN 'Online + Offline'
+	// 											WHEN '1' THEN 'Online'
+	// 											WHEN '0' THEN 'On-site'
+	// 											ELSE '-'
+	// 										END
+	// 									) AS registration_type_text,
+	// 									(
+	// 										CASE rr.attendance_type
+	// 											WHEN '0' THEN 'Committee'
+	// 											WHEN '1' THEN 'Speaker'
+	// 											WHEN '2' THEN 'Chairperson'
+	// 											WHEN '3' THEN 'Panel'
+	// 											WHEN '4' THEN 'Participants'
+	// 											WHEN '5' THEN 'Sponsor'
+	// 											ELSE '-'
+	// 										END
+	// 									) AS attendance_type_text,
+	// 									(
+	// 										CASE rr.is_score
+	// 											WHEN '1' THEN 'Applied'
+	// 											WHEN '0' THEN 'Not applied'
+	// 											ELSE '-'
+	// 										END
+	// 									) AS is_score_text,
+	// 									(
+	// 										CASE
+	// 											WHEN rr.status = '0'
+	// 											THEN '등록취소'
+	// 											WHEN rr.status = '1'
+	// 											THEN '결제대기'
+	// 											WHEN rr.status = '2'
+	// 											THEN '결제완료'
+	// 											WHEN rr.status = '3'
+	// 											THEN '환불대기'
+	// 											WHEN rr.status = '4'
+	// 											THEN '환불완료'
+	// 										    WHEN rr.status = '5'
+	// 											THEN '현장결제'
+	// 											ELSE '-'
+	// 										END
+	// 									) AS payment_status,
+	// 									(
+	// 										CASE
+	// 											WHEN rr.payment_methods = '0' THEN 'Credit card'
+	// 											WHEN rr.payment_methods = '1' THEN 'Bank transfer'
+	// 											WHEN rr.payment_methods = '2' THEN 'Onsite payment'
+	// 										END
+	// 									) AS payment_methods,
+	// 									rr.etc1, rr.licence_number, rr.specialty_number, rr.nutritionist_number, rr.dietitian_number,
+	// 									rr.welcome_reception_yn, rr.day2_breakfast_yn, rr.day2_luncheon_yn, rr.day3_breakfast_yn, rr.day3_luncheon_yn, rr.special_request_food,
+	// 									IFNULL(rr.promotion_code, '-') AS promotion_code, IFNULL(rr.recommended_by, '-') AS recommended_by,
+	// 									(
+    //                                         CASE
+    //                                             WHEN rr.promotion_code = 0 THEN '100%'
+    //                                             WHEN rr.promotion_code = 1 THEN '50%'
+    //                                             WHEN rr.promotion_code = 2 THEN '30%'
+    //                                         END
+    //                                     ) AS discount_rate, rr.promotion_code_number,
+	// 									n.nation_ko, n.nation_en,
+	// 									m.idx AS member_idx,
+	// 									m.affiliation, m.department,
+	// 									m.affiliation_kor, m.department_kor,
+	// 									m.nation_no,
+	// 									m.date_of_birth,
+	// 									rr.banquet_yn,
+	// 									total_price_kr,
+	// 									total_price_us,
+	// 									member_status,
+	// 									IFNULL(rr.register_path, '-') AS register_path, 
+	// 									IFNULL(rr.conference_info, '-') AS conference_info,
+	// 									m.ksola_member_status
+	// 								FROM request_registration  rr
+	// 								INNER JOIN (
+	// 									SELECT
+	// 										idx,
+	// 										first_name_kor, last_name_kor,
+	// 										affiliation, department, affiliation_kor, department_kor,
+	// 										nation_no,
+	// 										(
+	// 											CASE
+	// 												WHEN ksola_member_status = 0 THEN '비회원'
+	// 												WHEN ksola_member_status = 1 THEN '정회원'
+	// 												WHEN ksola_member_status = 2 THEN '평생회원'
+	// 												WHEN ksola_member_status = 3 THEN '인터넷회원'
+	// 											END
+	// 										) AS ksola_member_status,
+	// 										date_of_birth,
+	// 										is_deleted
+	// 									FROM member
+	// 									WHERE is_deleted = 'N'
+	// 								) AS m
+	// 								ON rr.register = m.idx
+	// 								LEFT JOIN nation n
+	// 								ON rr.nation_no = n.idx
+	// 								LEFT JOIN(
+	// 									SELECT
+	// 										idx,
+	// 										total_price_kr,
+	// 										total_price_us
+	// 									FROM payment
+	// 								) AS p
+	// 								ON p.idx = rr.payment_no
+	// 								WHERE rr.is_deleted = 'N'
+	// 								{$where}
+	// 								ORDER BY rr.idx DESC
+	// 							";
 	// status 상태(0:등록취소, 1:결제대기, 2:결제완료, 3:환불대기, 4:환불완료)	
+
+	//[240418] sujoeng / 바뀐 쿼리문 / 초록 제출 코드, topic, 심사유무, 채택 유무 출력
+	$registration_list_query = "
+				SELECT
+					rr.idx AS registration_idx,
+					MAX(rr.email) AS email,
+					MAX(rr.phone) AS phone,
+					CONCAT(MAX(rr.first_name), ' ', MAX(rr.last_name)) AS `name`,
+					DATE_FORMAT(MAX(rr.register_date), '%y-%m-%d') AS register_date,
+					MAX(rr.etc2) AS etc2,
+					MAX(rr.member_type) AS member_type,
+					MAX(rr.member_other_type) AS member_other_type,
+					MAX(rr.occupation_type) AS occupation_type,
+					MAX(rr.occupation_other_type) AS occupation_other_type,
+					CONCAT(MAX(m.last_name_kor), '', MAX(m.first_name_kor)) AS kor_name,
+					CASE MAX(rr.registration_type)
+						WHEN '1' THEN 'Online'
+						WHEN '0' THEN 'On-site'
+						ELSE '-'
+					END AS registration_type_text,
+					CASE MAX(rr.attendance_type)
+						WHEN '0' THEN 'Committee'
+						WHEN '1' THEN 'Speaker'
+						WHEN '2' THEN 'Chairperson'
+						WHEN '3' THEN 'Panel'
+						WHEN '4' THEN 'Participants'
+						WHEN '5' THEN 'Sponsor'
+						ELSE '-'
+					END AS attendance_type_text,
+					CASE MAX(rr.is_score)
+						WHEN '1' THEN 'Applied'
+						WHEN '0' THEN 'Not applied'
+						ELSE '-'
+					END AS is_score_text,
+					CASE MAX(rr.status)
+						WHEN '0' THEN '등록취소'
+						WHEN '1' THEN '결제대기'
+						WHEN '2' THEN '결제완료'
+						WHEN '3' THEN '환불대기'
+						WHEN '4' THEN '환불완료'
+						WHEN '5' THEN '현장결제'
+						ELSE '-'
+					END AS payment_status,
+					CASE MAX(rr.payment_methods)
+						WHEN '0' THEN 'Credit card'
+						WHEN '1' THEN 'Bank transfer'
+						WHEN '2' THEN 'Onsite payment'
+					END AS payment_methods,
+					MAX(rr.etc1) AS etc1,
+					MAX(rr.licence_number) AS licence_number,
+					MAX(rr.specialty_number) AS specialty_number,
+					MAX(rr.nutritionist_number) AS nutritionist_number,
+					MAX(rr.dietitian_number) AS dietitian_number,
+					MAX(rr.welcome_reception_yn) AS welcome_reception_yn,
+					MAX(rr.day2_breakfast_yn) AS day2_breakfast_yn,
+					MAX(rr.day2_luncheon_yn) AS day2_luncheon_yn,
+					MAX(rr.day3_breakfast_yn) AS day3_breakfast_yn,
+					MAX(rr.day3_luncheon_yn) AS day3_luncheon_yn,
+					MAX(rr.special_request_food) AS special_request_food,
+					IFNULL(MAX(rr.promotion_code), '-') AS promotion_code,
+					IFNULL(MAX(rr.recommended_by), '-') AS recommended_by,
+					CASE MAX(rr.promotion_code)
+						WHEN 0 THEN '100%'
+						WHEN 1 THEN '50%'
+						WHEN 2 THEN '30%'
+					END AS discount_rate,
+					MAX(rr.promotion_code_number) AS promotion_code_number,
+					MAX(n.nation_ko) AS nation_ko,
+					MAX(n.nation_en) AS nation_en,
+					MAX(m.idx) AS member_idx,
+					MAX(m.affiliation) AS affiliation,
+					MAX(m.department) AS department,
+					MAX(m.affiliation_kor) AS affiliation_kor,
+					MAX(m.department_kor) AS department_kor,
+					MAX(m.nation_no) AS nation_no,
+					MAX(m.date_of_birth) AS date_of_birth,
+					MAX(rr.banquet_yn) AS banquet_yn,
+					MAX(total_price_kr) AS total_price_kr,
+					MAX(total_price_us) AS total_price_us,
+					MAX(member_status) AS member_status,
+					IFNULL(MAX(rr.register_path), '-') AS register_path,
+					IFNULL(MAX(rr.conference_info), '-') AS conference_info,
+					MAX(m.ksola_member_status) AS ksola_member_status,
+					GROUP_CONCAT(
+						CASE rs.topic
+							WHEN 1 THEN 'Ischemic heart disease/ coronary artery disease'
+							WHEN 2 THEN 'Anti-platelets and anticoagulation'
+							WHEN 3 THEN 'Heart failure with reduced ejection fraction and preserved ejection fraction'
+							WHEN 4 THEN 'Cardiomyopathies'
+							WHEN 5 THEN 'Cardio-renal syndromes'
+							WHEN 6 THEN 'Preventive Cardiology'
+							WHEN 7 THEN 'Cardiac arrhythmias'
+							WHEN 8 THEN 'Peripheral arterial disease'
+							WHEN 9 THEN 'Pulmonary hypertension'
+							WHEN 10 THEN 'Geriatric pharmacology'
+							ELSE '-'
+						END
+						SEPARATOR '* '
+					) AS topics,
+					GROUP_CONCAT( rs.submission_code SEPARATOR '* ') AS submission_codes,
+					GROUP_CONCAT( rs.etc1 SEPARATOR '* ') AS etc1s,
+					GROUP_CONCAT(rs.etc2 SEPARATOR '* ') AS etc2s
+					
+				FROM request_registration rr
+				LEFT JOIN (
+					SELECT
+						idx,
+						first_name_kor,
+						last_name_kor,
+						affiliation,
+						department,
+						affiliation_kor,
+						department_kor,
+						nation_no,
+						CASE ksola_member_status
+							WHEN 0 THEN '비회원'
+							WHEN 1 THEN '정회원'
+							WHEN 2 THEN '평생회원'
+							WHEN 3 THEN '인터넷회원'
+						END AS ksola_member_status,
+						date_of_birth,
+						is_deleted
+					FROM member
+					WHERE is_deleted = 'N'
+				) AS m ON rr.register = m.idx
+				LEFT JOIN nation n ON rr.nation_no = n.idx
+				LEFT JOIN (
+					SELECT
+						idx,
+						total_price_kr,
+						total_price_us
+					FROM payment
+				) AS p ON p.idx = rr.payment_no
+				LEFT JOIN request_submission rs ON rr.register = rs.register AND rs.is_deleted = 'N'
+				WHERE rr.is_deleted = 'N'
+				{$where}
+				GROUP BY rr.idx;
+
+	";
+
 	$registration_list = get_data($registration_list_query);
+	
+	//[240418] sujeong / * 개수 세기
+	$star_count = 0;
+	foreach($registration_list as $list) {
+		if(!empty($list['submission_codes'])) {
+			// '*'의 개수를 세기 위해 substr_count 함수 사용
+			$count = substr_count($list['submission_codes'], '*');
+			
+			// 현재까지의 최대 개수와 비교하여 더 큰 값이 있다면 업데이트
+			if($count > $star_count) {
+				$star_count = $count;
+			}
+		}
+	}
+	$star_count = $star_count + 1;
+
+	$submission_code_list = "";
+	$topics_list = "";
+	$etc1s_list = "";
+	$etc2s_list = "";
+		
 
 	$html = '<table id="datatable" class="list_table">';
 	$html .= '<thead>';
 	$html .= '<tr class="tr_center">';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="3">Registration</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="15">Participants Inforatmion</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="4">평점신청(Korean Only)</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan='.($star_count*4).'>Abstract Inforatmion</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="17">Participants Inforatmion</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="7">평점신청(Korean Only)</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="7">Payment Information</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="5">Others</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="4">Others</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;"></th>';
 	$html .= '</tr>';
 	$html .= '<tr class="tr_center">';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">No</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Registration No.</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Date of Registration</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan='.$star_count.'>초록 제출 코드</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan='.$star_count.'>제출 초록 카테고리</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan='.$star_count.'>초록 심사 유무</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan='.$star_count.'>초록 채택 유무</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">ID(E-mail)</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">국내/국외</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Country</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">KSSO 회원 여부</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">KSCP 회원 여부</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Name</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">성함</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Affiliation(Institution)</th>';
@@ -196,10 +375,10 @@
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Promotion Code</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">추천인</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Welcome Reception</th>';
+	// $html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 1 Breakfast</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 1 Luncheon</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 2 Breakfast</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 3 Luncheon</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 3 Breakfast</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 3 Luncheon</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 2 Luncheon</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Special Request for Food</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Where did you get the information about the conference?</th>';
 	$html .= '</tr>';
@@ -208,7 +387,16 @@
 	
 	foreach($registration_list as $rk => $rl){
 		$member_status = ($rl["member_status"] == 0) ? "N" : "Y";
-		$register_no = !empty($rl["registration_idx"]) ? "ICOMES2023-".$rl["registration_idx"] : "-";
+		$register_no = !empty($rl["registration_idx"]) ? $rl["registration_idx"]: "-";
+		if(!empty($rl["registration_idx"])){
+			$code_number = $rl["registration_idx"];
+
+			while (strlen("" . $code_number) < 4) {
+				$code_number = "0" . $code_number;
+			}
+
+			$register_no = "IMCVP2024". "-" . $code_number;
+		}
 		$nation_type = ($rl["nation_no"] == 25) ? "국내" : "국외";
 
 		if(empty($rl["banquet_yn"])) {
@@ -312,6 +500,27 @@
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.($rk + 1).'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$register_no.'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["register_date"].'</td>';
+
+		$submission_code_list = explode("* ", $rl['submission_codes']);
+		$topics_list = explode("* ", $rl['topics']);
+		$etc1s_list = explode("* ", $rl['etc1s']);
+		$etc2s_list = explode("* ", $rl['etc2s']);
+		
+		
+		for($i = 0; $i< $star_count;$i++){
+			$html .= '<td style="border-style: solid; border-width:thin;">'.$submission_code_list[$i].'</td>';
+		}
+		for($j = 0; $j< $star_count;$j++){
+			$html .= '<td style="border-style: solid; border-width:thin;">'.$topics_list[$j].'</td>';
+		}
+		for($k = 0; $k< $star_count;$k++){
+			$html .= '<td style="border-style: solid; border-width:thin;">'.$etc1s_list[$k].'</td>';
+		}
+		for($l = 0; $l< $star_count;$l++){
+			$html .= '<td style="border-style: solid; border-width:thin;">'.$etc2s_list[$l].'</td>';
+		}
+
+
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["email"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$nation_type.'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["nation_en"].'</td>';
@@ -344,7 +553,7 @@
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["recommended_by"].'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["welcome_reception_yn"].'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day2_breakfast_yn"].'</td>';
-		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day2_luncheon_yn"].'</td>';
+		// $html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day2_luncheon_yn"].'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day3_breakfast_yn"].'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day3_luncheon_yn"].'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$special_request_food.'</td>';
@@ -418,7 +627,7 @@
 							<th>ID(Email)</th>
 							<th>Member Type</th>
 							<th>Country</th>
-							<th>KSSO 회원여부</th>
+							<th>KSCP 회원여부</th>
 							<th>Name</th>
 							<th>Affiliation(Institution)</th>
 							<th>Phone Number</th>
@@ -436,7 +645,16 @@
 							echo "<tr><td class='no_data' colspan='8'>No Data</td></td>";
 						} else {
 							foreach($registration_list as $list) {
-								$register_no = !empty($list["registration_idx"]) ? "ICOMES2023-".$list["registration_idx"] : "-";
+								$register_no = !empty($list["registration_idx"]) ? $list["registration_idx"] : "-";
+								if(!empty($list["registration_idx"])){
+									$code_number = $list["registration_idx"];
+
+									while (strlen("" . $code_number) < 4) {
+										$code_number = "0" . $code_number;
+									}
+
+									$register_no = "IMCVP2024". "-" . $code_number;
+								}
                                 $special_request_food = "";
                                 if($list['special_request_food'] === '0'){
                                     $special_request_food = "Not Applicable";
@@ -480,4 +698,5 @@
 <script>
 	var html = '<?=$html?>';
 </script>
+
 <?php include_once('./include/footer.php');?>

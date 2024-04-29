@@ -1,4 +1,10 @@
-<?php include_once("../../common/common.php");?>
+<?php 
+    include_once("../../common/common.php");
+	include_once('../../include/invited_speaker_data.php');
+    // error_reporting( E_ALL );
+    // ini_set( "display_errors", 1 );
+?>
+
 <?php
 if($_POST["flag"] == "favorite"){
     $member_idx = $_SESSION["USER"]["idx"];
@@ -31,15 +37,15 @@ if($_POST["flag"] == "favorite"){
 
         if($update_favorite){
             $res = [
-                code => 200,
-                msg => "success"
+                "code" => 200,
+                "msg" => "success"
             ];
             echo json_encode($res);
             exit;
         } else {
             $res = [
-                code => 400,
-                msg => "update favorite error"
+                "code" => 400,
+                "msg" => "update favorite error"
             ];
             echo json_encode($res);
             exit;
@@ -55,15 +61,15 @@ if($_POST["flag"] == "favorite"){
 
         if($insert_favorite){
             $res = [
-                code => 200,
-                msg => "success"
+                "code" => 200,
+                "msg" => "success"
             ];
             echo json_encode($res);
             exit;
         }else {
             $res = [
-                code => 400,
-                msg => "insert favorite error"
+                "code" => 400,
+                "msg" => "insert favorite error"
             ];
             echo json_encode($res);
             exit;
@@ -134,20 +140,233 @@ if($_POST["flag"] == "favorite"){
 
     if(isset($keywords_list)){
         $res = [
-            code => 200,
-            msg => "success",
-            result => $result_arr
+            "code" => 200,
+            "msg" => "success",
+            "result" => $result_arr
         ];
         echo json_encode($res);
         exit;
     } else {
         $res = [
-            code => 400,
-            msg => "select keywords error"
+            "code" => 400,
+            "msg" => "select keywords error"
+        ];
+        echo json_encode($res);
+        exit;
+    }
+}else if($_POST["flag"] === "invited_speaker") {
+    include_once('../../include/invited_speaker_data.php');
+
+    $first_word = $_POST["first_word"] ?? null;
+    $session_word = $_POST["session_word"] ?? null;
+    $search_word = $_POST["search_word"] ?? null;
+    $order = $_POST["order"] ?? null;
+    $category_bool = $_POST["category_bool"] ?? null;
+    //order을 넣은 이유는 가장 늦게 선택한 걸 마지막에 걸러주려고
+
+    $list = $invited_speaker_list;
+
+
+    //session 여부
+    if($category_bool == "true") {
+        array_splice($list, 75, 1);
+    } else {
+        array_splice($list, 76, 2);
+    }
+        
+    if($order == 1) {
+    
+        if(!empty($session_word)) {
+            $list = session_forder($list, $session_word);
+        }
+        if(!empty($search_word)) {
+            $list = search_forder($list, $search_word);
+        }
+        if(!empty($first_word)) {
+            $list = first_order($list, $first_word);
+        }
+        
+    }
+    else if($order == 2) {
+
+        if(!empty($first_word)) {
+            $list = first_order($list, $first_word);
+        }
+        if(!empty($search_word)) {
+            $list = search_forder($list, $search_word);
+        }
+        if(!empty($session_word)) {
+            $list = session_forder($list, $session_word);
+        }
+        
+    }
+    else if($order == 3) {
+
+        if(!empty($first_word)) {
+            $list = first_order($list, $first_word);
+        }
+        if(!empty($session_word)) {
+            $list = session_forder($list, $session_word);
+        }
+        if(!empty($search_word)) {
+            $list = search_forder($list, $search_word);
+        }
+    }
+    $res = [
+        "code" => 200,
+        "msg" => "success",
+        "list"=>$list, 
+        "total_count"=>count($list)
+    ];
+    echo json_encode($res);
+    exit;
+
+}
+else if($_POST["flag"] === "invited_speakers"){
+    $member_idx = $_SESSION["USER"]["idx"];
+    $search_word = $_POST["search_word"];
+    $first_word =  $_POST["first_word"];
+    $session_word =  $_POST["session_word"];
+
+    $row_sql = "";
+
+    if($search_word != ""){
+        $row_sql .= " AND(last_name LIKE '%{$search_word}%' OR first_name LIKE '%{$search_word}%' OR nation LIKE '%{$search_word}%' OR CONCAT(first_name,' ',last_name) LIKE '%{$search_word}%') ";
+    }
+    if($first_word != ""){
+        $row_sql .= " HAVING initial = '{$first_word}'";
+    }
+    if($session_word !== ""){
+        switch($session_word){
+            case 'Plenary Lectures':$row_sql .= " AND program_category_idx = 5"; break;
+            case 'Symposium':$row_sql .= " AND program_category_idx = 8"; break;
+            case 'joint': $row_sql .= " AND program_category_idx = 15"; break;
+        } 
+    }
+
+    $select_keywords_query = "
+                            SELECT DISTINCT LEFT(first_name, 1) AS initial, isp.idx, last_name, first_name, nation, affiliation, isp.image_path, isp.cv_path, pr.program_category_idx
+                            FROM invited_speaker isp
+                            LEFT JOIN program_contents pc ON pc.speaker_idx = isp.idx AND pc.is_deleted = 'N'
+                            LEFT JOIN program pr ON pc.program_idx = pr.idx
+                            WHERE isp.is_deleted = 'N'
+                                {$row_sql}
+                                ORDER BY first_name
+                            ";
+   
+    $keywords_list = get_data($select_keywords_query);
+
+    if(isset($keywords_list)){
+        $res = [
+            "code" => 200,
+            "msg" => "success",
+            "result" => $keywords_list
+        ];
+        echo json_encode($res);
+        exit;
+    } else {
+        $res = [
+            "code" => 400,
+            "msg" => "select keywords error"
         ];
         echo json_encode($res);
         exit;
     }
 }
+else if($_POST["flag"] === "invited_speaker_modal"){
+    $modal_idx = $_POST["idx"];
+
+    $select_keywords_query = "
+                            SELECT DISTINCT LEFT(first_name, 1) AS initial, isp.idx, last_name, first_name, nation, affiliation, isp.image_path, isp.cv_path, pr.program_category_idx,pr.program_name,pr.program_place_idx,pr.program_date, DATE_FORMAT(pr.start_time, '%H:%i')AS start_time, DATE_FORMAT(pr.end_time, '%H:%i')AS end_time
+                            FROM invited_speaker isp
+                            LEFT JOIN program_contents pc ON pc.speaker_idx = isp.idx AND pc.is_deleted = 'N'
+                            LEFT JOIN program pr ON pc.program_idx = pr.idx
+                            WHERE isp.is_deleted = 'N' AND isp.idx = '{$modal_idx}'
+                            ORDER BY first_name
+                            ";
+    $keywords_list = get_data($select_keywords_query);
+
+    if(isset($keywords_list)){
+        $res = [
+            "code" => 200,
+            "msg" => "success",
+            "result" => $keywords_list
+        ];
+        echo json_encode($res);
+        exit;
+    } else {
+        $res = [
+            "code" => 400,
+            "msg" => "select keywords error"
+        ];
+        echo json_encode($res);
+        exit;
+    }
+}
+
+function first_order($list, $first_word) {
+    $list_value = array();
+    foreach($list as $l) {
+        $last_name = substr($l["last_name"], 0, 1);
+
+        if($first_word == $last_name) {
+            $list_value[] = $l;
+        }
+    }
+    return $list_value;
+}
+function session_forder($list, $session_word) {
+    
+    $list_value = array();
+
+    foreach($list as $l) {
+        $session_type = $l["session_type"];
+        $joint = $l["joint"];
+
+        if(strrpos($session_type, $session_word) !== false || strrpos($joint, $session_word) !== false) {
+            $list_value[] = $l;
+        } else {
+            if($l["idx"] == 71) {
+                $session_type2 = $l["session_type2"];
+                if(strrpos($session_type2, $session_word) !== false || strrpos($joint, $session_word) !== false) {
+                    $list_value[] = $l;
+                }
+            }
+        }
+        
+    }
+    return $list_value;
+}
+function search_forder($list, $search_word) {
+    $list_value = array();
+
+    $search_word = strtolower($search_word);
+
+    foreach($list as $l) {
+        $first_name =strtolower($l["first_name"]);
+        $last_name = strtolower($l["last_name"]);
+
+        $name = $first_name." ".$last_name;
+
+        $affiliation = strtolower($l["affiliation"]);
+        $nation = strtolower($l["nation"]);
+        $session_type = strtolower($l["session_type"]);
+        $title = strtolower($l["title"]);
+        
+        if(strrpos($name, $search_word) !== false || strrpos($affiliation, $search_word) !== false || strrpos($nation, $search_word) !== false || strrpos($title, $search_word) !== false || strrpos($session_type, $search_word) !== false) {
+            $list_value[] = $l;
+        } else {
+            if($l["idx"] == 71) {
+                $session_type2 = $l["session_type2"];
+                $title2 = strtolower($l["title2"]);
+                if(strrpos($session_type2, $search_word) !== false || strrpos($title2, $search_word) !== false) {
+                    $list_value[] = $l;
+                }
+            }
+        }
+    }
+    return $list_value;
+}
+
 
 ?>
