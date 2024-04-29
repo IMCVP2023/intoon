@@ -235,6 +235,7 @@ $(document).ready(function(){
 		var main_section_height = $(".main_section").outerHeight();
 		var header_height = $("header").outerHeight();
 		var move_main_cont = main_section_height - header_height;
+		console.log(move_main_cont);
 		$("html, body").animate({scrollTop: move_main_cont}, 500);
 	});
 

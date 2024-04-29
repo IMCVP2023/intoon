@@ -1,1469 +1,1030 @@
 <?php
 include_once('./include/head.php');
 include_once('./include/header.php');
+include_once('./include/submission_data.php');
 
-//$_SESSION["abstract"] = "";
+//이전 눌렀을 때 값 유지되고 다른 페이지에서 오면 초기화한다.
+/*if($_SESSION["abstract_flag"] != "true") {
+		$_SESSION["abstract"] = "";
+	}
+	$_SESSION["abstract_flag"] = "";*/
 
-//업데이트 시 초록 인덱스
-$abstract_idx = $_GET["idx"];
-$session_use = $_GET["session"] ?? "N";
+$submission_idx = $_GET["idx"];
 
-//로그인 유무 확인 
-if (empty($_SESSION["USER"])) {
-	echo "<script>alert(locale(language.value)('need_login')); location.href=PATH+'login.php';</script>";
-	exit;
-}
+// 등록 가능한 기간인지
+$sql_during =    "SELECT
+						IF(DATE(NOW()) BETWEEN '2022-08-18 17:00:00' AND '2024-11-29 18:00:00', 'Y', 'N') AS yn
+					FROM info_event";
+$during_yn = sql_fetch($sql_during)['yn'];
 
-//로그인 회원 정보
-$user_info = $member;
 
-$user_abstract_category = $user_info["abstract_category"] ?? "";
-$user_nation_no = $user_info["nation_no"] ?? "";
-$user_first_name = $user_info["first_name"] ?? "";
-$user_last_name = $user_info["last_name"] ?? "";
-$user_first_name_kor = $user_info["first_name_kor"] ?? "";
-$user_last_name_kor = $user_info["last_name_kor"] ?? "";
-$user_email = $user_info["email"] ?? "";
-$user_info_institution = $user_info["affiliation"] ?? "";
-$user_info_department = $user_info["department"] ?? "";
-$user_info_affiliation = "";
-
-if ($user_info_department && $user_info_institution) {
-	$user_info_affiliation = $user_info_department . ", " . $user_info_institution;
-} else if ($user_info_institution) {
-	$user_info_affiliation = $user_info_institution;
-} else if ($user_info_department) {
-	$user_info_affiliation = $user_info_department;
-}
-
-//연락처 쪼깨기
-$user_info["phone"] = isset($user_info["phone"]) ? str_replace("82-01", "82-1", $user_info["phone"]) : "-";
-$_arr_phone = explode("-", $user_info["phone"]);
-$user_nation_tel = $_arr_phone[0];
-$user_phone = implode("-", array_splice($_arr_phone, 1));
-
-$user_affiliation_value = $user_info_affiliation ?? "";
-
-if (empty($abstract_idx)) {
+if ($during_yn !== "Y" && empty($submission_idx)) {
+    // 행사 기간이 아닐 때
 ?>
-<!-- 테스트
-<section class="submit_application abstract_online_submission container">
-    <h1 class="page_title">Online Submission </h1>
-    <div class="inner">
-        <div class="tab_area">
+<section class="container submit_application">
+    <div class="sub_background_box">
+        <div class="sub_inner">
+            <div>
+                <h2>Online Submission</h2>
+                <div class="color-bar"></div>
+            </div>
         </div>
-        <div class="container">
-            <img class="coming" src="./img/coming.png" />
-        </div>
-
     </div>
-</section> -->
+    <div class="inner">
+        <ul class="tab_pager location tab_pager_small">
+            <li><a href="./submission_guideline.php">
+                    <!--<?= $locale("abstract_menu1") ?>-->Abstract Submission<br>Guideline
+                </a></li>
+            <li class="on"><a href="./abstract_submission.php">
+                    <!--<?= $locale("abstract_menu2") ?>-->Online Submission
+                </a></li>
+            <!--<li><a href="./award.php"><!--<?= $locale("abstract_menu3") ?>Awards & Grants</a></li>-->
+        </ul>
+        <section class="coming">
+            <div class="container">
+                <div class="sub_banner">
+                    <h5>Abstract Submission<br>has been closed</h5>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
 <?php
-// 테스트
-//exit; 
 } else {
-    // -------------------------------------------------------------- Abstrcat Update -------------------------------------------------------------- //
-    if ($abstract_idx) {
 
-        $abstract_sql = "
-							SELECT
-								ra.idx, ra.nation_no,ra.last_name, ra.first_name, ra.city, ra.state, ra.affiliation, 
-								ra.email, ra.phone, ra.position, ra.position_other AS other_position, ra.abstract_category, title_en,
-								ra.presenting_author, ra.corresponding_author
-							FROM request_abstract AS ra
-							LEFT JOIN(
-								SELECT
-									idx, title_en, title_ko
-								FROM info_poster_abstract_category
-								WHERE is_deleted = 'N'
-							)AS c
-							ON ra.abstract_category = c.idx
-							WHERE ra.is_deleted = 'N'
-						";
-        $authors = sql_fetch($abstract_sql . " AND ra.idx = {$abstract_idx} AND ra.parent_author IS NULL ORDER BY ra.register_date DESC LIMIT 1");
-		
-		
-        if ($authors["idx"] == "") {
-            echo "<script>alert('Invalid abstract data'); history.back();</script>";
-            exit;
-        }
-
-		$submit_data = sql_fetch($abstract_sql . "  AND ra.idx = {$abstract_idx}");
-
-        $co_authors = sql_fetch($abstract_sql . "  AND ra.idx = {$abstract_idx}+1 ORDER BY ra.idx ASC");
-
-        foreach ($co_authors as $k => $v) {
-            $user_info["co_" . $k] = $v;
-
-            if ($k == "phone") {
-                $_arr_phone = explode("-", $v);
-                $co_nation_tel = $_arr_phone[0];
-                $co_phone = implode("-", array_splice($_arr_phone, 1));
-
-                $user_info["co_nation_tel"] = $co_nation_tel;
-                $user_info["co_phone"] = $co_phone;
-            }
-        }
-
-        $add_co_authors = get_data($abstract_sql . " AND ra.parent_author = {$abstract_idx} AND ra.idx <> {$abstract_idx} ORDER BY ra.idx ASC");
-
-        $no = 0;
-        $collect_key = ["first_name", "last_name", "affiliation", "email", "nation_no", "city", "state", "position", "phone", "other_position", "presenting_author", "corresponding_author", "idx"];
-        foreach ($add_co_authors as $ca) {
-            foreach ($ca as $k => $v) {
-                if (in_array($k, $collect_key)) {
-                    $coauthor_submit_data[$no]["add_co_" . $k] = $v;
-                }
-            }
-
-            $no = $no + 1;
-        }
+    //로그인 유무 확인 
+    if (empty($_SESSION["USER"])) {
+        echo "<script>alert(locale(language.value)('need_login')); location.href=PATH+'login.php';</script>";
+        exit;
     }
-}
 
-    // 사전 등록이 된 유저인지 확인(2023-05-15 제거)
-    // $registration_idx = check_registration($user_info["idx"]);
-    // if (!$registration_idx) {
-    //     echo "<script>alert(locale(language.value)('check_registration')); location.href=PATH+'registration_guidelines.php'</script>";
-    //     exit;
-    // }
-
-	if($session_use == "Y") {
-		$submit_data = isset($_SESSION["abstract"]["data"]) ? $_SESSION["abstract"]["data"] : "";
-        foreach ($authors as $k => $v) {
-            $user_info[$k] = $v;
-        }
-
-		$co_list = $_SESSION["abstract"]["co_data"] ?? [];
-		$coauthor_submit_data = [];
-
-		//co_author데이터 for문(INTO-ON)
-		for ($i = 0; $i < count($co_list); $i++) {
-			$coauthor_idx = $co_list[$i]["add_co_idx" . $i] ?? "";
-			$coauthor_presenting_author = $co_list[$i]["add_co_presenting_author" . $i] ?? "N";
-			$coauthor_corresponding_author = $co_list[$i]["add_co_corresponding_author" . $i] ?? "N";
-			$coauthor_nation_no = $co_list[$i]["add_co_nation_no" . $i] ?? "";
-			$coauthor_first_name = $co_list[$i]["add_co_first_name" . $i] ?? "";
-			$coauthor_last_name = $co_list[$i]["add_co_last_name" . $i] ?? "";
-			$coauthor_email = $co_list[$i]["add_co_email" . $i] ?? "";
-			$coauthor_nation_tel = $co_list[$i]["add_co_nation_tel" . $i] ?? "";
-			$coauthor_phone = $co_list[$i]["add_co_phone" . $i] ?? "";
-			$coauthor_affiliation = $co_list[$i]["add_co_affiliation" . $i] ?? "";
-
-			$coauthor_submit_data[] = [
-				"add_co_idx"					=> $coauthor_idx,
-				"add_co_presenting_author"		=> $coauthor_presenting_author,
-				"add_co_corresponding_author"	=> $coauthor_corresponding_author,
-				"add_co_nation_no"				=> $coauthor_nation_no,
-				"add_co_first_name"				=> $coauthor_first_name,
-				"add_co_last_name"				=> $coauthor_last_name,
-				"add_co_email"					=> $coauthor_email,
-				"add_co_nation_tel"				=> $coauthor_nation_tel,
-				"add_co_phone"					=> $coauthor_phone,
-				"add_co_affiliation"			=> $coauthor_affiliation
-			];
-		}
-
-		$data_count = count($coauthor_submit_data);
-	}
-
-	if(isset($submit_data)) {
-		$data_count = count($coauthor_submit_data);
-
-		if(isset($submit_data["nation_tel"])) {
-			$nation_tel = $submit_data["nation_tel"] ?? "";
-			$phone = $submit_data["phone"] ?? "";
-		} else if (isset($submit_data["phone"])) {
-			$_arr_phone = explode("-", $submit_data["phone"]);
-			$nation_tel = "+".$_arr_phone[0];
-			$phone = implode("-", array_splice($_arr_phone, 1));
-		}
-
-		$abstract_category = $submit_data["abstract_category"] ?? "";
-		$presenting_author = $submit_data["presenting_author"] ?? "N";
-		$corresponding_author = $submit_data["corresponding_author"] ?? "N";
-		$nation_no = $submit_data["nation_no"] ?? "";
-		$first_name = $submit_data["first_name"] ?? "";
-		$last_name = $submit_data["last_name"] ?? "";
-
-		$affiliation_value = array();
-		$coauthor_nation_tel = array();
-
-		$submit_data_affiliation = $submit_data["affiliation"];
-
-		$affiliation = $submit_data_affiliation ?? "";
-		$affiliation_value = $affiliation;
-
-		$position = $submit_data["position"] ?? "";
-		$other_position = $submit_data["other_position"] ?? "";
-		$email = $submit_data["email"] ?? "";
-		$submit_nation_tel = $nation_tel ?? "";
-		$submit_phone = $phone ?? "";
-	}
-
-    //국가정보 가져오기
-    $nation_query = "SELECT *
-					FROM nation
-					ORDER BY 
-					idx = 25 DESC, nation_en ASC";
+    // country
+    $nation_query = "SELECT
+							*
+						FROM nation
+						ORDER BY 
+						idx = 25 DESC, nation_en ASC";
     $nation_list = get_data($nation_query);
+    function get_nation_option_text($nation_list, $selected)
+    {
+        $nation_option_text = '<option value="" hidden>Choose</option>';
+        foreach ($nation_list as $nt) {
+            $nation_option_text .= '<option value="' . $nt['idx'] . '" ' . ($nt['idx'] == $selected ? 'selected' : '') . '>' . $nt['nation_en'] . '</option>';
+        }
+        return $nation_option_text;
+    }
 
-    //카테고리 정보 가져오기
-    $category_list = get_data($_abstract_category_query);
+    // affiliations
+    $af_query = "
+			SELECT
+				rsaf.idx, rsaf.`order`, rsaf.affiliation, rsaf.department, rsaf.department_detail, rsaf.nation_no
+			FROM request_submission_affiliation AS rsaf
+			WHERE rsaf.is_deleted = 'N'
+			AND rsaf.submission_idx = '" . $submission_idx . "'
+			AND rsaf.register = '" . $_SESSION["USER"]["idx"] . "'
+			ORDER BY rsaf.`order`
+		";
+    $af_list = get_data($af_query);
 
-    // -------------------------------------------------------------- Abstrcat Update -------------------------------------------------------------- //
+    // authors
+    $au_query = "
+			SELECT
+				rsau.idx, rsau.`order`, rsau.same_signup_yn, rsau.presenting_yn, rsau.corresponding_yn, rsau.first_name, rsau.last_name, rsau.name_kor, rsau.affiliation_kor, email, affiliation_selected, mobile
+			FROM request_submission_author AS rsau
+			WHERE rsau.is_deleted = 'N'
+			AND rsau.submission_idx = '" . $submission_idx . "'
+			AND rsau.register = '" . $_SESSION["USER"]["idx"] . "'
+			ORDER BY rsau.`order`
+		";
+    $au_list = get_data($au_query);
 
-	//세션에 저장된 논문 제출 데이터 (step2에서 step1으로 되돌아올시)
-	if(isset($_SESSION["abstract"]["data"])) {
-		$submit_data = isset($_SESSION["abstract"]["data"]) ? $_SESSION["abstract"]["data"] : [];
-		$co_submit_data = isset($_SESSION["abstract"]["co_data"]) ? $_SESSION["abstract"]["co_data"] : [];
-	} else if($abstract_idx) {
-		$submit_data_query = "SELECT idx, nation_no, first_name, last_name, affiliation, email, phone
-								FROM request_abstract
-								WHERE idx = {$abstract_idx}
-							";
-        $submit_data = sql_fetch($submit_data_query);
+    // author - affiliation/department select option
+    function get_affiliation_option_text($af_count, $selected)
+    {
+        $affiliation_option_text = '<option value="">select</option>';
+        for ($i = 1; $i <= $af_count; $i++) {
+            $affiliation_option_text .= '<option ' . ($i == $selected ? 'selected' : '') . '>' . $i . '</option>';
+        }
+        return $affiliation_option_text;
+    }
 
-		if(isset($submit_data)) {
-			$co_submit_data_query = "SELECT idx, nation_no, first_name, last_name, affiliation, email, phone
-									FROM request_abstract
-									WHERE parent_author = {$abstract_idx}
-									";
-			$co_submit_data = get_data($submit_data_query);
-		}
-	}
+    //초록 유효성 확인
+    if (isset($_GET['idx']) && (!$af_list || !$au_list)) {
+        echo "<script>alert('Invalid abstract data.'); history.go(-1);</script>";
+        exit;
+    }
 
-	if (!empty($nation_list)) {
-		echo "<script> var nation = [];";
-		foreach ($nation_list as $list) {
-			$idx = $list["idx"];
-			$nation_ko = $list["nation_ko"];
-			$nation_en = $list["nation_en"];
-
-			echo "nation.push({idx : {$idx}, nation_ko : '{$nation_ko}', nation_en : '{$nation_en}'});";
-		}
-	}
-	echo "</script>";
-
-	//제출타입 지정
-	echo "<script>var type = 'abstract';</script>";
-
+    // 국가번호
+    if ($member["phone"]) {
+        $_arr_phone = explode("-", $member["phone"]);
+        $nation_tel = $_arr_phone[0];
+        $phone = implode("-", array_splice($_arr_phone, 1));
+    }
 ?>
-<style>
-/*ldh 추가*/
-.btns {
-    width: calc(100% - 32px);
-    height: 59px;
-    max-width: 675px;
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 auto;
-}
 
-.btns span {
-    margin-left: 18px;
-    color: #fff;
-}
-</style>
-<script src="./js/script/client/submission.js" defer></script>
-<script defer>
-function other_change(value) {
-
-    var name = value.name;
-    var value = $('input[name=' + name + ']:checked').val();
-
-    if (value == '4') {
-        $("input[name=" + name + "]").parent().find(".other_input").show();
-
-    } else {
-        $("input[name=" + name + "]").parents("ul").find(".other_input").hide();
-    }
-}
-
-/*function change_select_box() {
-	$("#submit_btn").removeClass("blue_btn");
-	$("#submit_btn").addClass("gray_btn");
-}*/
-$(document).ready(function() {
-    //[240124] sujoeng / abstract 허용
-    // alert("The abstract submission has expired.\nAbstract submission is not available.");
-    // window.history.back();
-    // window.location.href = "/main/index.php";
-    // return;
-
-    $(document).on("click", ".blue_btn", function() {
-        var idx = $(this).data("idx");
-        var data = {};
-
-        var formData = $("form[name=abstract_form]").serializeArray();
-        var process = inputCheck(formData);
-        var status = process.status;
-        data["main_data"] = process.data;
-
-        if (!status) return false; // 유효성 검증 후 실패 시 return false;
-		
-
-		var form_list = $(".co_author_appended .abstract_form");
-		var co_form_cnt = form_list.length;
-
-		var co_data_arr = new Array();
-		var co_data_temp;
-		var co_data_chk;
-		var co_process;
-		var co_status;
-		var co_data;
-
-		if(form_list.length > 0) {
-			co_data_temp = $("form[name=coauthor_abstract_form"+i+"]").serializeArray();
-			co_process = inputCheck(co_data_temp);
-			co_status = co_process.status;
-			if (!co_status) return false;
-			co_data = co_process.data;
-			co_data_arr[i] = co_data;
-		}
-
-		for(var i=0;i<co_form_cnt;i++){
-			co_data_temp = $("form[name=coauthor_abstract_form"+i+"]").serializeArray();
-			co_process = inputCheck(co_data_temp);
-			co_status = co_process.status;
-			if (!co_status) return false;
-			co_data = co_process.data;
-			co_data_arr[i] = co_data;
-		}
-
-		data["co_data"] = co_data_arr;
-
-        if (status) {
-            $.ajax({
-                url: PATH + "ajax/client/ajax_submission.php",
-                type: "POST",
-                data: {
-                    flag: "submission_step1",
-                    type: "abstract",
-                    data: data,
-                },
-                dataType: "JSON",
-                success: function(res) {
-                    if (res.code == 200) {
-                        $(window).off("beforeunload");
-
-                        if (idx != "") {
-                            window.location.href = "./abstract_submission2.php?idx=" + idx;
-                        } else {
-                            window.location.href = "./abstract_submission2.php";
-                        }
-
-                    } else if (res.code == 400) {
-                        alert(locale(language.value)("reject_msg"));
-                        return false;
-                    }
-                    else {
-                        alert(locale(language.value)("retry_msg"));
-                        return false;
-                    }
-                }
-            });
-        }
-    });
-
-	$(document).on('change', '.nation', function() {
-		if($(this).val() == "25") {
-			$("input[name=phone]").attr("placeholder", "10-0000-0000");
-		} else {
-			$("input[name=phone]").attr("placeholder", "");
-		}
-	});
-
-	$(document).on('change', '.add_co_nation', function() {
-		const num = $(this).closest(".abstract_form").data("num");
-		if($(this).val() == "25") {
-			$("input[name=add_co_phone"+num+"]").attr("placeholder", "10-0000-0000");
-		} else {
-			$("input[name=add_co_phone"+num+"]").attr("placeholder", "");
-		}
-	});
-
-    $(document).on('click', '.affiliation_add', function() {
-        var instit = $(this).siblings('.institution').val();
-        var depart = $(this).siblings('.department').val();
-        var affiliation_input = $(this).parent().next().find("input");
-
-		var form_name = this.form.name;
-		var affiliation_cnt = $("form[name="+form_name+"]").find('.affiliation_wrap').find('li').length;
-
-        if (instit == '') {
-            alert('Please insert institution');
-        } else if (depart == '') {
-            alert('Please insert department');
-        } else if (affiliation_cnt > 9) {
-			alert('Affiliation cannot exceed 10');	
-        } else {
-			const value = depart + ', ' + instit;
-			const items = $(this).parent().next('.affiliation_form').find('.affiliation_wrap .affiliation_item');
-			for(var i = 0; i < items.length; i++) {
-				if(items[i].innerHTML == value) {
-					alert("Affiliation cannot be duplicated");
-					return;
-				}
-			}
-
-            html = '';
-            html += '<li class="clearfix">';
-            html += '<div><p class="affiliation_item">' + value + '</p></div>';
-            html += '<button type="button" class="btn gray2_btn form_btn affiliation_delete">Delete</button>';
-            html += '</li>';
-
-            $(this).siblings('.institution').val('');
-            $(this).siblings('.department').val('');
-            $(this).parent().next('.affiliation_form').show();
-            $(this).parent().next('.affiliation_form').find('.affiliation_wrap').append(html);
-        }
-
-        var affiliation = $(this).parent().next().children();
-        var affiliation_value = "";
-
-        for (var i = 0; i < affiliation.eq(0).find("p").length; i++) {
-            affiliation_value += affiliation.eq(0).find("p:eq(" + i + ")").text() + "★";
-        }
-
-        affiliation_input.val(affiliation_value);
-
-        check_value();
-    });
-
-    $(document).on('click', '.affiliation_delete', function() {
-        var hidden_value = $(this).parent().parent().next()[0].value;
-
-        var hidden_values = hidden_value.split("★");
-        $(this).parent().parent().next()[0].value = "";
-
-        for (var i = 0; i < hidden_values.length - 2; i++) {
-            $(this).parent().parent().next()[0].value += hidden_values[i] + "★";
-        }
-
-        var parents = $(this).parents('.affiliation_form');
-        var num = parents.children('li').length;
-        var affiliation_input = parents.siblings("input");
-        $(this).parent('li').remove();
-        if (num == 1) {
-            parents.hide();
-        }
-
-        //소속 업데이트
-        var affiliation_list = [];
-        var affiliation = parents.children("li");
-        for (i = 0; i < num; i++) {
-            affiliation_list.push(affiliation.eq(i).find("p").text());
-        }
-        affiliation_input.val(affiliation_list);
-
-        check_value();
-    });
-
-    $('input[name=position]').on('click', function() {
-        var name = $(this).attr("name");
-        var value = $('input[name=' + name + ']:checked').val();
-
-        if (value == '4') {
-            $(this).parent().find(".other_input").show();
-        } else {
-            $(this).parents("ul").find(".other_input").hide();
-        }
-    });
-
-    $('input[name=co_position]').on('click', function() {
-        var name = $(this).attr("name");
-        var value = $('input[name=' + name + ']:checked').val();
-
-        if (value == '4') {
-            $(this).parent().find(".other_input").show();
-        } else {
-            $(this).parents("ul").find(".other_input").hide();
-        }
-    });
-
-
-    //국가 값
-    var nation_list = <?php echo json_encode($nation_list) ?>;
-
-    //co-author select on change event
-    $('.number_of_author').on('change', function() {
-        var num = parseInt($(this).val());
-        var current_count = $('.co_author_appended .abstract_form').length;
-
-        if (num == 0) {
-            $('.co_author_appended').empty();
-        } else if (current_count < num) {
-            var html = '';
-            for (i = current_count; i < num; i++) {
-				html = '';
-
-                html += '<form name="coauthor_abstract_form' + i + '" class="abstract_form co_abstract" data-num="'+i+'">';
-                html += '<ul class="basic_ul">';
-                html += '<li>';
-                html += '<p class="label author_num">Author #' + (i + 2) + '</p>';
-                html += '<div>';
-                html += '<ul class="author_chk_wrap">';
-				html += '<li>';
-				html += '<input type="checkbox" class="checkbox" id="author_chk1_1_'+i+'" onchange="setUserInformation($(this))">';
-				html += '<label for="author_chk1_1_'+i+'">';
-				html += '<i></i>Same as sign-up information<span class="red_txt">*</span>';
-				html += '</label>';
-                html += '</li>';
-				html += '<li>';
-				html += '<input type="checkbox" class="checkbox presenting_author" id="author_chk1_2_'+i+'" name="add_co_presenting_author'+i+'" value="Y" onchange="check_value()">';
-				html += '<label for="author_chk1_2_'+i+'">';
-				html += '<i></i>Presenting Author<span class="red_txt">*</span>';
-				html += '</label>';
-                html += '</li>';
-				html += '<li>';
-				html += '<input type="checkbox" class="checkbox corresponding_author" id="author_chk1_3_'+i+'" name="add_co_corresponding_author'+i+'" value="Y" onchange="check_value()">';
-				html += '<label for="author_chk1_3_'+i+'">';
-				html += '<i></i>Corresponding Author<span class="red_txt">*</span>';
-				html += '</label>';
-                html += '</li>';
-                html += '</ul>';
-                html += '</div>';
-                html += '</li>';
-                html += '<li>';
-                html += '<p class="label"><?= $locale("country") ?> <span class="red_txt">*</span></p>';
-                html += '<div>';
-                html += '<select onchange="check_value()" class="required2 add_co_nation" name="add_co_nation_no' + i + '" data-count="' + i + '">';
-                html += '<option selected hidden>CHOOSE</option>';
-                $.each(nation_list, function(idx, value) {
-                    html += '<option value=' + value["idx"] + '>' + value["nation_en"] +
-                        '</option>';
-                });
-                html += '</select>';
-                html += '</div>';
-                html += '</li>';
-                html += '<li>';
-                html += '<p class="label"><?= $locale("name") ?> <span class="red_txt">*</span></p>';
-                html += '<div class="name_div clearfix2">';
-                html += '<input maxlength="60" placeholder="First name" class="required2 en_keyup" type="text" name="add_co_first_name' + i + '" value="" onchange="check_value()">';
-                html += '<input maxlength="60" placeholder="Last name" class="required2 en_keyup" type="text" name="add_co_last_name' + i + '" value="" onchange="check_value()">';
-                html += '</div>';
-                html += '</li>';
-                html += '<li>';
-                html +=
-                    '<p class="label"><?= $locale("affiliation") ?> <span class="red_txt">*</span>  <span class="mb10"><b style="color:#c71b1b;">Please click the "Add" button to add one or more affiliations or departments.</b></span></p>';
-                html += '<div>';
-                html += '<div class="clearfix affiliation_input">';
-                html += '<input maxlength="300" type="text" class="institution en_affiliation_keyup" placeholder="Institution">';
-                html += '<input maxlength="300" type="text" class="department en_affiliation_keyup" placeholder="Department">';
-                html += '<button type="button" class="btn gray2_btn form_btn affiliation_add">ADD</button>';
-                html += '</div>';
-                html += '<div class="clearfix affiliation_form">';
-                html += '<ul class="affiliation_wrap affiliation_wrap_' + i + '">';
-                html += '<li>';
-                html += '</li>';
-                html += '</ul>';
-                html += '<input type="hidden" name="add_co_affiliation' + i + '" onchange="check_value()">';
-                html += '</div>';
-                html += '</div>';
-                html += '</li>';
-                html += '<li>';
-                html += '<p class="label"><?= $locale("email") ?> <span class="red_txt">*</span></p>';
-                html += '<div>';
-                html += '<input maxlength="60" class="required2 email" type="text" name="add_co_email' + i + '" value="" onchange="check_value()">';
-                html += '</div>';
-                html += '</li>';
-                html += '<li>';
-                html += '<p class="label"><?= $locale("phone") ?> <span class="red_txt">*</span></p>';
-                html += '<div class="phone_div clearfix2">';
-                html += '<select class="required2" name="add_co_nation_tel' + i + '">';
-                html += '<option value="" selected></option>';
-                html += '</select>';
-                html += '<input class="required2 phone" type="text" name="add_co_phone' + i + '" value="" onchange="check_value()">';
-                html += '</div>';
-                html += '</li>';
-                html += '</ul>';
-                html == '</form>';
-
-				$('.co_author_appended').append(html);
-            }
-        } else if (current_count > num) {
-            for (i = current_count; i > num; i--) {
-                console.log('i', i);
-
-                $('.co_author_appended .section_title_wrap2').eq((i - 1)).remove();
-                $('.co_author_appended .abstract_form').eq((i - 1)).remove();
-            }
-        }
-
-		check_value();
-    });
-});
-
-//주저자와 공동저자가 동일 시 체크버튼 이벤트
-function same_add_author() {
-    if ($("#same_withs").is(":checked")) {
-        var nation_no = $("select[name=nation_no]").val();
-
-        if (nation_no != "") {
-            $("select[name=co_nation_no]").children("option[value=" + nation_no + "]").prop("selected", true);
-            $("select[name=co_nation_tel1] option").val($("select[name=nation_tel] option").val()).text($("select[name=nation_tel] option").val());
-        }
-        var position = $("input[name=position]:checked").val();
-
-        $("input[name=co_first_name]").val($("input[name=first_name]").val());
-        $("input[name=co_last_name]").val($("input[name=last_name]").val());
-        $("input[name=co_email").val($("input[name=email]").val());
-        $("input[name=co_phone]").val($("input[name=phone]").val());
-        if (position == "4") {
-            $("input[name=co_position][value=" + position + "]").prop("checked", true);
-            $("input[name=co_other_position]").val($("input[name=other_position]").val());
-            $("form[name=co_abstract_form] .other_input").show();
-
-        } else {
-            $("input[name=co_position][value=" + position + "]").prop("checked", true);
-        }
-
-        if ($("input[name=affiliation]").val() != "") {
-
-            var affiliation_wrap_02 = document.getElementsByClassName("affiliation_wrap_02")[0];
-            while (affiliation_wrap_02.hasChildNodes()) {
-                affiliation_wrap_02.removeChild(affiliation_wrap_02.firstChild);
-
-            }
-            $("input[name=co_affiliation]").val($("input[name=affiliation]").val());
-            $(".affiliation_wrap_02").append($(".affiliation_wrap_01").html()).show();
-        }
-    } else {
-        var nation_no = $("select[name=nation_no]").val();
-
-        if (nation_no != "") {
-            $("select[name=co_nation_no]").children("option[value=" + nation_no + "]").prop("selected", false);
-            $("select[name=co_nation_no]").children("option[hidden]").prop("selected", true);
-        }
-
-        $("select[name=co_nation_tel1] option").val("").text("select");
-        $("input[name=co_first_name]").val("");
-        $("input[name=co_last_name]").val("");
-        $("input[name=co_affililation]").val("");
-        $("input[name=co_position]").prop("checked", false); //[value="+position+"]
-        $("input[name=co_other_postion]").val("");
-        $("input[name=co_other_position]").hide();
-        $("input[name=co_email]").val("");
-        $("input[name=co_phone]").val("");
-
-        $(".affiliation_wrap_02").empty();
-    }
-
-    check_value();
-}
-
-//주저자와 교신저자가 동일 시 체크버튼 이벤트
-function add_author(i) {
-    if ($("#same_with" + i).is(":checked")) {
-        var nation_no = $("select[name=nation_no]").val();
-
-        if (nation_no != "") {
-            $("select[name=add_co_nation_no" + i + "]").children("option[value=" + nation_no + "]").prop("selected",
-                true);
-            $("select[name=add_co_nation_tel" + i + "] option").val($("select[name=nation_tel] option").val()).text($("select[name=nation_tel] option").val());
-        }
-        var position = $("input[name=position]:checked").val();
-
-        $("input[name=add_co_first_name" + i + "]").val($("input[name=first_name]").val());
-        $("input[name=add_co_last_name" + i + "]").val($("input[name=last_name]").val());
-        $("input[name=add_co_city" + i + "]").val($("input[name=city]").val());
-        $("input[name=add_co_state" + i + "]").val($("input[name=state]").val());
-        $("input[name=add_co_email" + i + "]").val($("input[name=email]").val());
-        $("input[name=add_co_phone" + i + "]").val($("input[name=phone]").val());
-        if (position == "4") {
-            $("input[name=add_co_position" + i + "][value=" + position + "]").prop("checked", true);
-            $("input[name=add_co_other_position" + i + "]").val($("input[name=other_position]").val());
-            $("form[name=coauthor_abstract_form" + i + "] .other_input").show();
-
-        } else {
-            $("input[name=add_co_position" + i + "][value=" + position + "]").prop("checked", true);
-        }
-
-        if ($("input[name=affiliation]").val() != "") {
-            var add_co_affiliation = document.getElementsByClassName("affiliation_wrap_" + i)[0];
-            while (add_co_affiliation.hasChildNodes()) {
-                add_co_affiliation.removeChild(add_co_affiliation.firstChild);
-
-            }
-            $("input[name=add_co_affiliation" + i + "]").val($("input[name=affiliation]").val());
-            $(".affiliation_wrap_" + i).append($(".affiliation_wrap_01").html()).show();
-        }
-    } else {
-        var nation_no = $("select[name=nation_no]").val();
-
-        if (nation_no != "") {
-            $("select[name=add_co_nation_no" + i + "]").children("option[value=" + nation_no + "]").prop("selected",
-                false);
-            $("select[name=add_co_nation_no" + i + "]").children("option[hidden]").prop("selected", true);
-        }
-
-        $("select[name=add_co_nation_tel" + i + "] option").val("").text("select");
-        $("input[name=add_co_first_name" + i + "]").val("");
-        $("input[name=add_co_last_name" + i + "]").val("");
-        $("input[name=add_co_city" + i + "]").val("");
-        $("input[name=add_co_state" + i + "]").val("");
-        $("input[name=add_co_affililation" + i + "]").val("");
-        $("input[name=add_co_position" + i + "]").prop("checked", false); //[value="+position+"]
-        $("form[name=coauthor_abstract_form" + i + "] .other_input").val("").hide();
-        $("input[name=add_co_email" + i + "]").val("");
-        $("input[name=add_co_phone" + i + "]").val("");
-
-        $(".affiliation_wrap_" + i).empty();
-    }
-
-    check_value();
-}
-
-function inputCheck(formData) {
-
-    var data = {};
-    var length_100 = ["email", "co_email"]
-    var length_50 = ["first_name", "last_name", "co_first_name", "co_last_name"];
-
-    var inputCheck = true;
-
-    $.each(formData, function(key, value) {
-        var ok = value["name"];
-        var ov = value["value"];
-
-        if (ov == "" || ov == null || ov == "undefinded") {
-            if (ok == "abstract_category") {
-                alert(locale(language.value)("check_abstract_category"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok == "nation_no") {
-                alert(locale(language.value)("check_nation"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok == "first_name") {
-                alert(locale(language.value)("check_first_name"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok == "last_name") {
-                alert(locale(language.value)("check_last_name"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok == "affiliation") {
-                alert(locale(language.value)("check_affiliation"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok == "email") {
-                alert(locale(language.value)("check_email"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok == "phone") {
-                alert(locale(language.value)("check_phone"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok.includes("add_co_nation_no")) {
-                alert(locale(language.value)("check_co_nation"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok.includes("add_co_first_name")) {
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok.includes("add_co_last_name")) {
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok.includes("add_co_email")) {
-                alert(locale(language.value)("check_co_email"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok.includes("co_affiliation")) {
-                alert(locale(language.value)("check_co_affiliation"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            } else if (ok.includes("add_co_phone")) {
-                alert(locale(language.value)("check_co_phone"));
-                $("input[name=" + ok + "]").focus();
-                inputCheck = false;
-                return false;
-            }
-        } else {
-            if ((length_50.indexOf(ok) + 1) && ov.length > 50) {
-                alert(ok + locale(language.value)("under_50"));
-                inputCheck = false;
-                return false;
-            } else if ((length_100.indexOf(ok) + 1) && ov.length > 100) {
-                alert(ok + locale(language.value)("under_100"));
-                inputCheck = false;
-                return false;
-            } else if (ok == "phone" && ov.length < 6) {
-                alert(ok + locale(language.value)("over_6"));
-                inputCheck = false;
-                return false;
-            } else if (ok == "phone" && ov.length > 20) {
-                alert(ok + locale(language.value)("under_20"));
-                inputCheck = false;
-                return false;
-            }
-        }
-
-        data[ok] = ov;
-    });
-
-	if($(".presenting_author:checked").length != 1) {
-		alert("please check only one presenting_author");
-		return false;
-	}
-
-	if($(".corresponding_author:checked").length != 1) {
-		alert("please check only one corresponding_author");
-		return false;
-	}
-
-    return {
-        data: data,
-        status: inputCheck
-    }
-}
-
-//체크 벨류
-function check_value() {
-	let email_regex = new RegExp('[a-z0-9]+@[a-z0-9]+\.[a-z]{2,3}');
-
-    var affiliation_len = $(".affiliation_wrap li").length;;
-
-    if (affiliation_len < 0) {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    }
-
-	var nation_no = $("select[name=nation_no]").val();
-
-    // position 유효성
-    var position_count = $('input.other_input').length;
-    var position_checked_count = $('input.radio.required2:checked').length;
-    var position_other_check_count = $('input.radio.required2[value=4]:checked').length;
-    var position_other_write_count = 0;
-    $('input.other_input').each(function() {
-        if ($(this).val()) {
-            position_other_write_count++;
-        }
-    });
-
-    // position 체크 안됨
-    if (position_count > position_checked_count) {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    }
-
-    // position other 체크했지만 값 입력하지 않음
-    if (position_other_check_count > position_other_write_count) {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    }
-
-    var abstract_category = $("select[name=abstract_category]").val();
-
-    var first_name = $("input[name=first_name]").val();
-    var first_name_len = first_name.trim().length;
-    first_name = (typeof(first_name) != "undefined") ? first_name : null;
-
-    var last_name = $("input[name=last_name]").val();
-    var last_name_len = last_name.trim().length;
-    last_name = (typeof(last_name) != "undefined") ? last_name : null;
-
-    //var city = $("input[name=city]").val();
-    //var city_len = city.trim().length;
-    //city = (typeof(city) != "undefined") ? city : null;
-
-    var affiliation = $("input[name=affiliation]").val();
-    var affiliation_len = affiliation.trim().length;
-    affiliation = (typeof(affiliation) != "undefined") ? affiliation : null;
-
-    var email = $("input[name=email]").val();
-    var email_len = email.trim().length;
-    email = (typeof(email) != "undefined") ? email : null;
-
-    var phone = $("input[name=phone]").val();
-    var phone_len = phone.trim().length;
-    phone = (typeof(phone) != "undefined") ? phone : null;
-
-	if (nation_no == "") {
-		$("#submit_btn").removeClass("blue_btn");
-		$("#submit_btn").addClass("gray_btn");
-		$("input[name=phone]").attr("placeholder", "");
-		return;
-	}
-    if (abstract_category == "") {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    }
-    if (!first_name) {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    }
-    if (!last_name) {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    }
-    if (!affiliation_len < 0) {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    }
-    if (!email) {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    } else if(!email_regex.test(email)) {
-		$("#submit_btn").removeClass("blue_btn");
-		$("#submit_btn").addClass("gray_btn");
-		alert("Please check email adress field.");
-		return;
-	}
-
-    if (!phone) {
-        $("#submit_btn").removeClass("blue_btn");
-        $("#submit_btn").addClass("gray_btn");
-        return;
-    } else {
-		if($("select[name=nation_no]").val() == 25) { // Republic of Korea
-			var regPhone = /^1([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
-			if (!regPhone.test(phone)) {
-				$("#submit_btn").removeClass("blue_btn");
-			    $("#submit_btn").addClass("gray_btn");
-				alert("Please enter your phone number correctly \nexample) 10-0000-0000");
-				return;
-			}
-		} else { // 해외 - 숫자만
-			var regPhone = /^[0-9]+$/;
-			if (!regPhone.test(phone)) {
-				$("#submit_btn").removeClass("blue_btn");
-			    $("#submit_btn").addClass("gray_btn");
-				alert("Please enter only digits for phone number field.");
-				return;
-			}
-		}
-	}
-
-	var form_list = $(".co_author_appended .abstract_form");
-	var is_valid = true;
-	if(form_list.length > 0) {
-		form_list.each(function (idx, obj) {
-			const form = $(obj);
-			const num = $(form).data("num");
-
-			var co_nation_no = form.find("select[name=add_co_nation_no"+num+"]").val();
-
-			var co_first_name = form.find("input[name=add_co_first_name"+num+"]").val();
-			co_first_name = (typeof(co_first_name) != "undefined") ? co_first_name : null;
-
-			var co_last_name = form.find("input[name=add_co_last_name"+num+"]").val();
-			co_last_name = (typeof(co_last_name) != "undefined") ? co_last_name : null;
-
-			var co_affiliation_len = form.find(".affiliation_wrap li").length;
-
-			var co_email = form.find("input[name=add_co_email"+num+"]").val();
-			co_email = (typeof(co_email) != "undefined") ? co_email : null;
-
-			var co_phone = form.find("input[name=add_co_phone"+num+"]").val();
-			co_phone = (typeof(co_phone) != "undefined") ? co_phone : null;
-
-			if (co_nation_no == "") {
-				$("#submit_btn").removeClass("blue_btn");
-				$("#submit_btn").addClass("gray_btn");
-				form.find("input[name=add_co_phone"+num+"]").attr("placeholder", "");
-				is_valid = false;
-				return;
-			} else {
-				if(co_nation_no == "25") {
-					form.find("input[name=add_co_phone"+num+"]").attr("placeholder", "10-0000-0000");
-				} else {
-					form.find("input[name=add_co_phone"+num+"]").attr("placeholder", "");
-				}
-			}
-			if (!co_first_name) {
-				$("#submit_btn").removeClass("blue_btn");
-				$("#submit_btn").addClass("gray_btn");
-				is_valid = false;
-				return;
-			}
-			if (!co_last_name) {
-				$("#submit_btn").removeClass("blue_btn");
-				$("#submit_btn").addClass("gray_btn");
-				is_valid = false;
-				return;
-			}
-			if (co_affiliation_len < 1) {
-				$("#submit_btn").removeClass("blue_btn");
-				$("#submit_btn").addClass("gray_btn");
-				is_valid = false;
-				return;
-			}
-			if (!co_email) {
-				$("#submit_btn").removeClass("blue_btn");
-				$("#submit_btn").addClass("gray_btn");
-				is_valid = false;
-				return;
-			}
-			if (!co_phone) {
-				$("#submit_btn").removeClass("blue_btn");
-				$("#submit_btn").addClass("gray_btn");
-				is_valid = false;
-				return;
-			}
-		});
-	}
-
-	if(is_valid) {
-		$("#submit_btn").removeClass("gray_btn");
-		$("#submit_btn").addClass("blue_btn");
-	}
-}
-
-// Same as sign-up information
-function setUserInformation(target) {
-	const form = target.closest(".abstract_form");
-
-	if(target.prop("checked")) {
-		if(form.hasClass("co_abstract")) {
-			const num = form.data("num");
-
-			form.find("select[name=add_co_nation_no"+num+"]").val($("input[name=user_nation_no]").val());
-			form.find("input[name=add_co_first_name"+num+"]").val($("input[name=user_first_name]").val());
-			form.find("input[name=add_co_last_name"+num+"]").val($("input[name=user_last_name]").val());
-			form.find("input[name=add_co_email"+num+"]").val($("input[name=user_email]").val());
-			form.find("input[name=add_co_phone"+num+"]").val($("input[name=user_phone]").val());
-			form.find("select[name=add_co_nation_tel"+num+"] option")[0].value = $("input[name=user_nation_tel]").val();
-			form.find("select[name=add_co_nation_tel"+num+"] option")[0].textContent = $("input[name=user_nation_tel]").val();
-			form.find("select[name=add_co_nation_tel"+num+"] option").click();
-
-			form.find(".institution").val($("input[name=user_info_institution]").val());
-			form.find(".department").val($("input[name=user_info_department]").val());
-			form.find(".affiliation_wrap").empty();
-			form.find(".affiliation_add").click();
-		} else {
-			form.find("select[name=nation_no]").val($("input[name=user_nation_no]").val());
-			form.find("input[name=first_name]").val($("input[name=user_first_name]").val());
-			form.find("input[name=last_name]").val($("input[name=user_last_name]").val());
-			form.find("input[name=email]").val($("input[name=user_email]").val());
-			form.find("input[name=phone]").val($("input[name=user_phone]").val());
-			form.find("select[name=nation_tel] option")[0].value = $("input[name=user_nation_tel]").val();
-			form.find("select[name=nation_tel] option")[0].textContent = $("input[name=user_nation_tel]").val();
-			form.find("select[name=nation_tel] option").click();
-
-			form.find(".institution").val($("input[name=user_info_institution]").val());
-			form.find(".department").val($("input[name=user_info_department]").val());
-			form.find(".affiliation_wrap").empty();
-			form.find(".affiliation_add").click();
-		}
-	} else {
-		if(form.hasClass("co_abstract")) {
-			const num = form.data("num");
-
-			form.find("select[name=add_co_nation_no"+num+"]").val("");
-			form.find("input[name=add_co_first_name"+num+"]").val("");
-			form.find("input[name=add_co_last_name"+num+"]").val("");
-			form.find("input[name=add_co_email"+num+"]").val("");
-			form.find("input[name=add_co_phone"+num+"]").val("");
-			form.find("select[name=add_co_nation_tel"+num+"] option")[0].value = "";
-			form.find("select[name=add_co_nation_tel"+num+"] option")[0].textContent = "";
-
-			form.find(".institution").val("");
-			form.find(".department").val("");
-			form.find(".affiliation_wrap").empty();
-			form.find("input[name=add_co_affiliation"+num+"]").val("");
-		} else {
-			form.find("select[name=nation_no]").val("");
-			form.find("input[name=first_name]").val("");
-			form.find("input[name=last_name]").val("");
-			form.find("input[name=email]").val("");
-			form.find("input[name=phone]").val("");
-			form.find("select[name=nation_tel] option")[0].value = "";
-			form.find("select[name=nation_tel] option")[0].textContent = "";
-			form.find("select[name=nation_tel] option").click();
-
-			form.find(".institution").val("");
-			form.find(".department").val("");
-			form.find(".affiliation_wrap").empty();
-			form.find("input[name=affiliation]").val("");
-		}
-	}
-	
-	check_value();
-}
-
-//핸드폰 유효성
-$(document).on('change keyup', ".phone", function(key) {
-    var _this = $(this);
-    if (key.keyCode != 8) {
-        var phone = _this.val().replace(/[^0-9 || -]/gi, '');
-        _this.val(phone);
-    }
-});
-$(document).ready(function() {
-    $(document).on("keyup", ".en_keyup", function(key) {
-        var pattern_eng = /[^a-zA-Z\s]/gi;
-        var _this = $(this);
-        if (key.keyCode != 8) {
-            var first_name = _this.val().replace(pattern_eng, '');
-            _this.val(first_name.trim());
-        }
-    });
-
-    $(document).on("keyup", ".num_keyup", function(key) {
-        var pattern_eng = /[^0-9]/gi;
-        var _this = $(this);
-        if (key.keyCode != 8) {
-            var first_name = _this.val().replace(pattern_eng, '');
-            _this.val(first_name.trim());
-        }
-    });
-    $(document).on("keyup", ".en_num_keyup", function(key) {
-        var pattern_eng = /[^0-9||a-zA-Z\s]/gi;
-        var _this = $(this);
-        if (key.keyCode != 8) {
-            var first_name = _this.val().replace(pattern_eng, '');
-            _this.val(first_name);
-        }
-    });
-	$(document).on("keyup", ".en_affiliation_keyup", function(key) {
-        var pattern_eng = /[^0-9||*-_@!#^&||a-zA-Z\s]/gi;
-        var _this = $(this);
-        if (key.keyCode != 8) {
-            var first_name = _this.val().replace(pattern_eng, '');
-            _this.val(first_name);
-        }
-    });
-
-    $(document).on("change", ".email", function() {
-        var email = $(this).val().trim();
-        var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-
-        if (email.match(regExp) != null) {
-            $(this).val(email);
-        } else {
-            alert("Invalid email format.");
-            $(this).val("").focus();
-            return;
-        }
-    });
-});
-</script>
+<!----------------------- 퍼블리싱 구분선 ----------------------->
 
 <section class="submit_application abstract_online_submission container">
-	<input type="hidden" name="user_abstract_category" value="<?=$user_abstract_category?>" />
-	<input type="hidden" name="user_nation_no" value="<?=$user_nation_no?>" />
-	<input type="hidden" name="user_first_name" value="<?=$user_first_name?>" />
-	<input type="hidden" name="user_last_name" value="<?=$user_last_name?>" />
-	<input type="hidden" name="user_first_name" value="<?=$user_first_name?>" />
-	<input type="hidden" name="user_last_name" value="<?=$user_last_name?>" />
-	<input type="hidden" name="user_info_institution" value="<?=$user_info_institution?>" />
-	<input type="hidden" name="user_info_department" value="<?=$user_info_department?>" />
-	<input type="hidden" name="user_email" value="<?=$user_email?>" />
-	<input type="hidden" name="user_nation_tel" value="<?=$user_nation_tel?>" />
-	<input type="hidden" name="user_phone" value="<?=$user_phone?>" />
-
-    <h1 class="page_title">Online Submission</h1>
+    <h1 class="page_title">Online Submission</h1>        
     <div class="inner">
-        <div>
+        <!-- <ul class="tab_pager location tab_pager_small">
+            <li><a href="./submission_guideline.php">
+                    Abstract Submission<br>Guideline
+                </a></li>
+            <li class="on"><a href="./abstract_submission.php">
+                  Online Submission
+                </a></li>
+          <li><a href="./award.php"><?= $locale("abstract_menu3") ?>Awards & Grants</a></li>
+        </ul> -->
+        <div class="section section1">
+
+            <!-- 제목 시작 -->
             <div class="steps_area">
                 <ul class="clearfix">
                     <li class="on">
-                        <p>Step 1</p>
-						<p class="sm_txt">Fill out author’s information</p>
+                        <p>STEP 01</p>
+                        <p class="sm_txt"><?= $locale("abstract_submit_tit1") ?></p>
                     </li>
                     <li>
-                        <p>Step 2</p>
-                        <p class="sm_txt">Enter the abstract section, including the type of presentation, topic categories, and title.</p>
+                        <p>STEP 02</p>
+                        <p class="sm_txt"><?= $locale("abstract_submit_tit2") ?></p>
                     </li>
                     <li>
-                        <p>Step 3</p>
-                        <p class="sm_txt">Complete and confirm submission.</p>
+                        <p>STEP 03</p>
+                        <p class="sm_txt"><?= $locale("submit_completed_tit") ?></p>
                     </li>
                 </ul>
             </div>
-            <div class="input_area">
-                <form name="abstract_form" class="abstract_form">
-                    <div>
+            <!-- //제목 끝 -->
+
+            <div class="abstract1_wrap">
+                <!-- 소속 시작 -->
+                <form name="affiliations_forms" class="abstract_form affiliations_forms">
                         <div class="section_title_wrap2">
                             <h3 class="title">
-								Author Information
+                                Affiliations
 								<p class="mini_alert essential"><span class="red_txt">*</span> All requested field(<span class="red_txt">*</span>) should be completed.</p>
+                                <button type="button" class="btn add_btn green_btn floatR af_add">Add</button>
 							</h3>
                         </div>
-                        <ul class="basic_ul">
-							<li>
-                                <p class="label author_num">Author #1</p>
-                                <div>
-									<ul class="author_chk_wrap">
-										<li>
-											<input type="checkbox" class="checkbox" id="author_chk1_1" onchange="setUserInformation($(this))">
-											<label for="author_chk1_1">
-												<i></i>Same as sign-up information<span class="red_txt">*</span>
-											</label>
-										</li>
-										<li>
-											<input type="checkbox" class="checkbox presenting_author" id="author_chk1_2" name="presenting_author" value="Y" <?= $presenting_author == "Y" ? "checked" : "" ?> onchange="check_value()">
-											<label for="author_chk1_2">
-												<i></i>Presenting Author<span class="red_txt">*</span>
-											</label>
-										</li>
-										<li>
-											<input type="checkbox" class="checkbox corresponding_author" id="author_chk1_3" name="corresponding_author" value="Y" <?= $corresponding_author == "Y" ? "checked" : "" ?> onchange="check_value()">
-											<label for="author_chk1_3">
-												<i></i>Corresponding Author<span class="red_txt">*</span>
-											</label>
-										</li>
-									</ul>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="label"><?= $locale("country") ?> <span class="red_txt">*</span></p>
-                                <div>
-                                    <select class="required2 nation" name="nation_no" data-count="0" onchange="check_value()">
-                                        <option value="" selected hidden>Choose </option>
-                                        <?php
-                                            foreach ($nation_list as $list) {
-                                                $nation = $language == "en" ? $list["nation_en"] : $list["nation_ko"];
-                                                $selected = $nation_no == $list["idx"] ? "selected" : "";
-                                                echo "<option value='" . $list["idx"] . "'" . $selected . ">" . $nation . "</option>";
-                                            }
-                                        ?>
-                                    </select>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="label"><?= $locale("name") ?> <span class="red_txt">*</span></p>
-                                <div class="name_div clearfix2">
-                                    <input maxlength="60" placeholder="First name" class="required2 en_keyup" type="text" name="first_name"
-                                        value="<?= $first_name ?>" onchange="check_value()">
-                                    <input maxlength="60" placeholder="Last name" class="required2 en_keyup" type="text" name="last_name"
-                                        value="<?= $last_name ?>" onchange="check_value()">
-                                </div>
-                            </li>
-                            <li>
-                                <p class="label"><?= $locale("affiliation") ?> <span class="red_txt">*</span> <span class="mb10"><b style="color:#c71b1b;">Please click the "Add" button to add one or more affiliations or departments.</b></span></p>
-                                <div>
-                                    <div class="clearfix affiliation_input">
-                                        <input maxlength="300" type="text" class="institution en_affiliation_keyup" placeholder="Institution">
-                                        <input maxlength="300" type="text" class="department en_affiliation_keyup" placeholder="Department">
-                                        <button type="button" class="btn gray2_btn form_btn affiliation_add">ADD</button>
-                                    </div>
-                                    <div class="clearfix affiliation_form">
-                                        <ul class="affiliation_wrap affiliation_wrap_01" style="<?= $affiliation != "" ? "display:block" : "" ?>">
-                                        <?php 
-											if (count($affiliation) - 1 <= 0) { 
-												if (!is_array($affiliation)) {
-													$affiliation_arr = explode("★", $affiliation);
-												} else {
-													$affiliation_arr = $affiliation;
-												}
+                    <!-- <div class="circle_title">
+                        
+                    </div> -->
+                    <p>Please fill out affiliations of all authors.</p>
+                    <!-- <p class="red_txt">* Fields with(*) must be filled out.</p> -->
 
-												for ($j = 0; $j < count($affiliation_arr) - 1; $j++) {
-													echo '<li class="clearfix">';
-													echo    '<div class="clearfix">';
-													echo        '<p class="affiliation_item">' . $affiliation_arr[$j] . '</p>';
-													echo    '</div>';
-													echo    '<button type="button" class="btn gray2_btn form_btn affiliation_delete">Delete</button>';
-													echo '</li>';
-												}
-											}
-										?>
-										</ul>
-                                        <input type="hidden" name="affiliation" value="<?= $affiliation ?>" onchange="check_value()">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="label"><?= $locale("email") ?> <span class="red_txt">*</span></p>
-                                <div>
-                                    <input maxlength="60" class="required2 email" type="text" name="email"
-                                        value="<?= $email ?>" onchange="check_value()">
-                                </div>
-                            </li>
-                            <li>
-                                <p class="label"><?= $locale("phone") ?> <span class="red_txt">*</span></p>
-                                <div class="phone_div clearfix2">
-                                    <select class="required2" name="nation_tel">
-                                        <option value="<?= isset($submit_phone) && $submit_phone != "" ? $submit_nation_tel : "" ?>" selected><?= isset($submit_phone) && $submit_phone != "" ? $submit_nation_tel : "" ?></option>
-                                    </select>
-                                    <input maxlength="60" class="required2 phone" type="text" name="phone" value="<?= $submit_phone ?>" onchange="check_value()">
-                                </div>
-                            </li>
-                        </ul>
+                    <!-- 소속 요소 시작 -->
+                    <?php
+                        if (count($af_list) > 0) {
+                            foreach ($af_list as $af) {
+                        ?>
+                    <div class="x_scroll af" data-order="<?= $af['order'] ?>">
+                        <table class="table green_table">
+                            <tbody>
+                                <tr>
+                                    <th rowspan="3">Affiliation #<span name="order"><?= $af['order'] ?></span>
+                                        <button type="button" class="mini_btn green_btn af_del">Delete</button>
+                                    </th>
+
+                                    <th class="border_left">Department <span class="red_txt">*</span></th>
+                                    <td class="half">
+                                        <select name="department"
+                                            id=""><?= get_department_option_text($department_list, $af['department']) ?></select>
+                                        <input type="text" name="department_other" class="en_num_keyup" maxlength="255"
+                                            value="<?= $af['department_detail'] ?>"
+                                            <?= ($af['department'] == 16) ? "" : "disabled" ?>>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th class="border_left">Affiliation <span class="red_txt">*</span></th>
+                                    <td><input type="text" name="affiliation" class="" maxlength="255"
+                                            value="<?= $af['affiliation'] ?>"></td>
+                                </tr>
+                                <tr>
+                                    <th class="border_left">Country <span class="red_txt">*</span></th>
+                                    <td>
+                                        <select class="required"
+                                            name="country"><?= get_nation_option_text($nation_list, $af['nation_no']) ?></select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </form>
-			</div>
-            <div class="clearfix2 coauthor_wrap">
-                <p><?= $locale("check_co_author2") ?></p>
-                <div>
-                    <select class="number_of_author">
-                        <?php
-                            for ($i = 0; $i <= 12; $i++) {
-                                if ($i == 0) {
-                                    echo "<option value='0' selected>Select</option>";
-                                } else {
-                                    if (($data_count - 2) == $i) {
-                                        echo "<option value=" . $i . " selected>" . $i . "</option>";
-                                    } else {
-                                        echo "<option value=" . $i . ">" . $i . "</option>";
-                                    }
-                                }
+                    <?php
                             }
-                            ?>
-                    </select>
+                        }
+                        ?>
+                    <!-- //소속 요소 끝 -->
+                </form>
+                <!-- //소속 끝 -->
+
+                <!-- 저자 시작 -->
+                <form name="authors_forms" class="abstract_form authors_forms">
+                <h3 class="title">Authors Information
+								<p class="mini_alert essential"><span class="red_txt">*</span> All requested field(<span class="red_txt">*</span>) should be completed.</p>
+                                <button type="button" class="btn add_btn green_btn floatR au_add">Add</button>
+							</h3>
+                    <!-- 저자 요소 시작 -->
+                    <?php
+                        if (count($au_list) > 0) {
+                            $token = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                            foreach ($au_list as $au) {
+                                $key = '';
+                                for ($i = 0; $i < 8; $i++) {
+                                    $key .= $token[mt_rand(0, strlen($token) - 1)];
+                                }
+
+                                $same_signup_flag = $au['same_signup_yn'] == 'Y';
+                                $presenting_flag = $au['presenting_yn'] == 'Y';
+                                $corresponding_flag = $au['corresponding_yn'] == 'Y';
+
+                                if ($au["mobile"]) {
+                                    $_arr_phone = explode("-", $au["mobile"]);
+                                    $au["nation_tel"] = $_arr_phone[0];
+                                    $au["mobile"] = implode("-", array_splice($_arr_phone, 1));
+                                }
+                        ?>
+                    <div class="x_scroll au" data-order="<?= $au['order'] ?>" data-key="<?= $key ?>">
+                        <table class="table green_table step1">
+                            <tbody>
+                                <tr>
+                                    <th rowspan="5">Authors #<span name="order"><?= $au['order'] ?></span>
+                                        <div class="btn3_box">
+                                            <button type="button" class="green_btn au_up">▲</button>
+                                            <button type="button" class="green_btn au_down">▼</button>
+                                            <button type="button" class="green_btn au_del">Ｘ</button>
+                                        </div>
+                                    </th>
+                                    <th class="border_left radios" colspan="4">
+                                        <input type="radio" class="radio" id="ssy<?= $key ?>" name="same_signup_yn"
+                                            value="<?= $key ?>" <?= $same_signup_flag ? "checked" : "" ?>>
+                                        <label for="ssy<?= $key ?>">Same as sign-up information<span
+                                                class="red_txt">*</span></label>
+                                        <input type="radio" class="radio" id="py<?= $key ?>" name="presenting_yn"
+                                            value="<?= $key ?>" <?= $presenting_flag ? "checked" : "" ?>>
+                                        <label for="py<?= $key ?>">Presenting author<span
+                                                class="red_txt">*</span></label>
+                                        <input type="radio" class="radio" id="cy<?= $key ?>" name="corresponding_yn"
+                                            value="<?= $key ?>" <?= $corresponding_flag ? "checked" : "" ?>>
+                                        <label for="cy<?= $key ?>">Corresponding author<span
+                                                class="red_txt">*</span></label>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="border_left">First name <span class="red_txt">*</span></th>
+                                    <td><input type="text" name="name_en_first" class="en_name_keyup" maxlength="60"
+                                            value="<?= $au['first_name'] ?>"></td>
+                                    <th class="border_left">Last name <span class="red_txt">*</span></th>
+                                    <td><input type="text" name="name_en_last" class="en_name_keyup" maxlength="60"
+                                            value="<?= $au['last_name'] ?>"></td>
+                                </tr>
+                                <!-- <tr>
+									<th class="border_left">성명(국문)</th>
+									<td><input type="text" name="name_ko" class="ko_keyup" maxlength="60" value="<?= $au['name_kor'] ?>"></td>
+									<th class="border_left">소속(국문)</th>
+									<td><input type="text" name="affiliation_ko" class="ko_num_keyup" maxlength="60" value="<?= $au['affiliation_kor'] ?>"></td>
+								</tr> -->
+                                <tr>
+                                    <th class="border_left">E-mail <span class="red_txt">*</span></th>
+                                    <td><input type="text" name="email" class="email" maxlength="60"
+                                            value="<?= $au['email'] ?>"></td>
+                                    <th class="border_left">Affiliation/</br />Department <span class="red_txt">*</span>
+                                    </th>
+                                    <td class="sel_3">
+                                        <?php
+                                                    $selected_array = explode("|", $au['affiliation_selected']);
+                                                    foreach ($selected_array as $selected) {
+                                                    ?>
+                                        <select name="" id=""
+                                            class="au_affiliation"><?= get_affiliation_option_text(count($af_list), $selected) ?></select>
+                                        <?php
+                                                    }
+                                                    ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="border_left">Phone Number <span class="red_txt"
+                                            name="mobile_required"><?= ($presenting_flag || $corresponding_flag) ? "*" : "" ?></span>
+                                    </th>
+                                    <td colspan="3" class="phone_2">
+                                        <input type="text" name="nation_tel" class="num_keyup" maxlength="5"
+                                            value="<?= $au["nation_tel"] ?>" placeholder="82">
+                                        <input type="text" name="mobile" class="num_keyup" maxlength="60"
+                                            value="<?= $au['mobile'] ?>">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <?php
+                            }
+                        }
+                        ?>
+                    <!-- <div class="x_scroll au">
+						<table class="table green_table step1">
+							<tbody>
+								<tr>
+									<th rowspan="5">
+										Authors #1
+										<div class="btn3_box">
+											<button type="button" class="green_btn">▲</button>
+											<button type="button" class="green_btn">▼</button>
+											<button type="button" class="green_btn">Ｘ</button>
+										</div>
+									</th>
+									<th class="border_left" colspan="4">
+										<input type="checkbox" class="radio" id="chk1">
+										<label for="chk1">
+											Same as sign-up information
+											<span class="red_txt">*</span>
+										</label>
+										<input type="checkbox" class="radio" id="chk2">
+										<label for="chk2">
+											presenting author
+											<span class="red_txt">*</span>
+										</label>
+										<input type="checkbox" class="radio" id="chk3">
+										<label for="chk3">
+											Corresponding author
+											<span class="red_txt">*</span>
+										</label>
+									</th>
+								</tr>
+								<tr>
+									<th class="border_left">First name <span class="red_txt">*</span></th>
+									<td><input type="text"></td>
+									<th class="border_left">Last name <span class="red_txt">*</span></th>
+									<td><input type="text"></td>
+								</tr>
+								<tr>
+									<th class="border_left">성명(국문)</th>
+									<td><input type="text"></td>
+									<th class="border_left">소속(국문)</th>
+									<td><input type="text"></td>
+								</tr>
+								<tr>
+									<th class="border_left">E-mail <span class="red_txt">*</span></th>
+									<td><input type="text"></td>
+									<th class="border_left">Affiliation/</br/>Department <span class="red_txt">*</span></th>
+									<td class="sel_3">
+										<select name="" id="" class="au_affiliation">
+											<option value="">3</option>
+										</select>
+										<select name="" id="" class="au_affiliation">
+											<option value="">3</option>
+										</select>
+										<select name="" id="" class="au_affiliation">
+											<option value="">3</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th class="border_left">Mobile <span class="red_txt">*</span></th>
+									<td colspan="3"><input type="text"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div> -->
+                    <!-- //저자 요소 끝 -->
+                </form>
+                <!-- //저자 끝 -->
+
+                <div class="pager_btn_wrap">
+                    <!-- <button type="button" class="btn submit is_submit" onclick="javascript:window.location.href='./abstract_submission2.php';"><?= $locale("next_btn") ?></button> -->
+                    <button type="button" class="btn green_btn submit_btn">Save &amp; Next</button>
                 </div>
             </div>
-
-            <!--coauthor append-->
-			<input type="hidden" id="co_count" value="<?= ($data_count - 1) ?>" />
-            <div class="co_author_appended">
-                <?php
-                    if (isset($coauthor_submit_data)) {
-                        for ($i = 0; $i < count($coauthor_submit_data); $i++) {
-							$coauthor = $coauthor_submit_data[$i];
-
-                            echo  '<form name="coauthor_abstract_form'.$i.'" class="abstract_form co_abstract" data-num="'.$i.'">';
-							echo     '<input type="hidden" name="add_co_idx' . $i . '" value="'.$coauthor["add_co_idx"].'">';
-                            echo        '<ul class="basic_ul">';
-							echo            '<li>';
-                            echo                '<p class="label author_num">' . 'Author #' . ($i + 2) . '</p>';
-                            echo                '<div>';
-                            echo                    '<ul class="author_chk_wrap">';
-                            echo						'<li>';
-                            echo							'<input type="checkbox" class="checkbox" id="author_chk1_1_'.$i.'" onchange="setUserInformation($(this))">';
-                            echo							'<label for="author_chk1_1_'.$i.'">';
-                            echo								'<i></i>Same as sign-up information<span class="red_txt">*</span>';
-                            echo							'</label>';
-                            echo						'</li>';
-							echo						'<li>';
-                            echo							'<input type="checkbox" class="checkbox presenting_author" id="author_chk1_2_'.$i.'"  name="add_co_presenting_author'.$i.'" value="Y" '.($coauthor["add_co_presenting_author"] == 'Y' ? "checked" : "").' onchange="check_value()">';
-                            echo							'<label for="author_chk1_2_'.$i.'">';
-                            echo								'<i></i>Presenting Author<span class="red_txt">*</span>';
-                            echo							'</label>';
-                            echo						'</li>';
-							echo						'<li>';
-                            echo							'<input type="checkbox" class="checkbox corresponding_author"  id="author_chk1_3_'.$i.'"  name="add_co_corresponding_author'.$i.'" value="Y" '.($coauthor["add_co_corresponding_author"] == 'Y' ? "checked" : "").' onchange="check_value()">';
-                            echo							'<label for="author_chk1_3_'.$i.'">';
-                            echo								'<i></i>Corresponding Author<span class="red_txt">*</span>';
-                            echo							'</label>';
-                            echo						'</li>';
-                            echo                    '</ul>';
-                            echo                '</div>';
-                            echo            '</li>';
-                            echo            '<li>';
-                            echo                '<p class="label">' . $locale("country") . '<span class="red_txt">*</span></p>';
-                            echo                '<div>';
-                            echo                    '<select onchange="check_value()" class="required2 add_co_nation" name="add_co_nation_no'.$i.'" data-count="'.$i.'">';
-                            echo                        '<option hidden>CHOOSE</option>';
-                            foreach ($nation_list as $list) {
-                                $nation = $language == "en" ? $list["nation_en"] : $list["nation_ko"];
-                                $selected = $coauthor["add_co_nation_no"] == $list["idx"] ? "selected" : "";
-                                echo "<option value='" . $list["idx"] . "'" . $selected . ">" . $nation . "</option>";
-                            }
-                            echo                    '</select>';
-                            echo                '</div>';
-                            echo            '</li>';
-                            echo            '<li>';
-                            echo                '<p class="label">' . $locale("name") . ' <span class="red_txt">*</span></p>';
-                            echo                '<div class="name_div clearfix2">';
-                            echo                    '<input maxlength="60" placeholder="First name" class="required2 en_keyup" type="text" name="add_co_first_name'.$i.'" value="' . $coauthor["add_co_first_name"] . '" onchange="check_value()">';
-                            echo                    '<input maxlength="60" placeholder="Last name" class="required2 en_keyup" type="text" name="add_co_last_name'.$i.'" value="' . $coauthor["add_co_last_name"] . '" onchange="check_value()">';
-                            echo                '</div>';
-                            echo            '</li>';
-                            echo            '<li>';
-                            echo                '<p class="label">' . $locale("affiliation") . ' <span class="red_txt">*</span>  <span class="mb10"><b style="color:#c71b1b;">Please click the "Add" button to add one or more affiliations or departments.</b></span></p>';
-                            echo                '<div>';
-                            echo                    '<div class="clearfix affiliation_input">';
-                            echo                        '<input maxlength="300" type="text" class="institution en_affiliation_keyup" placeholder="Institution">';
-                            echo                        '<input maxlength="300" type="text" class="department en_affiliation_keyup" placeholder="Department">';
-                            echo                        '<button type="button" class="btn gray2_btn form_btn affiliation_add">ADD</button>';
-                            echo                    '</div>';
-                            echo                    '<div class="clearfix affiliation_form">';
-                            echo                        '<ul class="affiliation_wrap affiliation_wrap_' . $i . '">';
-							if ($coauthor["add_co_affiliation"] != "") {
-                                if (!is_array($coauthor["add_co_affiliation"])) {
-                                    $coauthor_affiliation_arr = explode("★", $coauthor["add_co_affiliation"]);
-                                } else {
-                                    $coauthor_affiliation_arr = $coauthor["add_co_affiliation"];
-                                }
-
-                                for ($j = 0; $j < count($coauthor_affiliation_arr)-1; $j++) {
-                                    echo '<li class="clearfix">';
-                                    echo    '<div class="clearfix">';
-                                    echo        '<p class="affiliation_item">' . $coauthor_affiliation_arr[$j] . '</p>';
-                                    echo    '</div>';
-                                    echo    '<button type="button" class="btn gray2_btn form_btn affiliation_delete">Delete</button>';
-                                    echo '</li>';
-                                }
-                            }
-                            echo                        '</ul>';
-                            echo                        '<input type="hidden" value="' . $coauthor["add_co_affiliation"] . '" name="add_co_affiliation' . $i . '" onchange="check_value()">';
-                            echo                    '</div>';
-                            echo                '</div>';
-                            echo            '</li>';
-                            echo            '<li>';
-                            echo                '<p class="label">' . $locale("email") . ' <span class="red_txt">*</span></p>';
-                            echo                '<div>';
-                            echo                    '<input maxlength="60" class="required2 email" type="text" name="add_co_email' . $i . '" value="' . $coauthor["add_co_email"] . '" onchange="check_value()">';
-                            echo                '</div>';
-                            echo            '</li>';
-                            echo            '<li>';
-                            echo                '<p class="label">' . $locale("phone") . ' <span class="red_txt">*</span></p>';
-                            echo                '<div class="phone_div clearfix2">';
-                            echo                    '<select class="required2" name="add_co_nation_tel' . $i . '">';
-							if(!isset($coauthor["add_co_nation_tel"])) {
-								$co_arr_phone = explode("-", $coauthor["add_co_phone"]);
-								$co_nation_tel = isset($co_arr_phone[0]) ? '+'.$co_arr_phone[0] : "" ;
-								$co_phone = implode("-", array_splice($co_arr_phone, 1));
-							} else {
-								$co_nation_tel = $coauthor["add_co_nation_tel"];
-								$co_phone = $coauthor["add_co_phone"];
-							}
-                            echo                        '<option value="' . $co_nation_tel . '" selected>' . $co_nation_tel . '</option>';
-                            echo                    '</select>';
-                            echo                    '<input maxlength="60" class="required2 phone" type="text" name="add_co_phone' . $i . '" value="' . $co_phone . '" onchange="check_value()">';
-                            echo                '</div>';
-                            echo            '</li>';
-                            echo        '</ul>';
-                            echo        '<input type="hidden" value=' . $coauthor["add_co_idx"] . ' name="add_co_idx' . $i . '">';
-                            echo     '</form>';
-                        }
-                    }
-                    ?>
-            </div>
-            <!-- online_btn -->
-            <?php
-                if (!empty($abstract_idx) || !empty($submit_data)) {
-            ?>
-            <button type="button" id="submit_btn" class="btn btns blue_btn submit_btn" data-idx=<?= $abstract_idx ?>><?= $locale("next_btn") ?><!-- <span>&gt;</span> --></button>
-            <?php
-                } else {
-            ?>
-            <button type="button" id="submit_btn" class="btn btns gray_btn submit_btn"
-                data-idx=<?= $abstract_idx ?>><?= $locale("next_btn") ?><!-- <span>&gt;</span> --></button>
-            <?php
-                }
-            ?>
         </div>
-    </div>
-    <!--//section1-->
+        <!--//section1-->
     </div>
 </section>
+<!----------------------- 퍼블리싱 구분선 ----------------------->
 
+<script>
+const email_regex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+const submission_idx = '<?= $submission_idx ?>';
+
+const member_name_first = '<?= $member["first_name"] ?>';
+const member_name_last = '<?= $member["last_name"] ?>';
+const member_name_kor = '<?= $member["name_kor"] ?>';
+const member_affiliation_kor = '<?= $member["affiliation_kor"] ?>';
+const member_email = '<?= $member["email"] ?>';
+const member_nation_tel = '<?= $nation_tel ?>';
+const member_mobile = '<?= $phone ?>';
+
+var au_same;
+$(document).ready(function() {
+    /*$(document).on("click", ".circle_title .btn", function(){
+    	var clone = $(this).parents(".abstract_form").children(".x_scroll:last-of-type()").clone();
+    	$(this).parents(".abstract_form").append(clone)
+    });*/
+
+    // 처음 생성하는 경우 1개 생성
+    if (get_affiliation_count() <= 0) {
+        make_affiliation(1);
+    }
+    if (get_author_count() <= 0) {
+        make_author(1);
+        $("div.au input[type=radio]").prop("checked", true);
+        $('div.au span[name=mobile_required]').text("*");
+        $("div.au input[name=name_en_first]").val(member_name_first);
+        $("div.au input[name=name_en_last]").val(member_name_last);
+        $("div.au input[name=name_ko]").val(member_name_kor);
+        $("div.au input[name=affiliation_ko]").val(member_affiliation_kor);
+        $("div.au input[name=email]").val(member_email);
+        $("div.au input[name=nation_tel]").val(member_nation_tel);
+        $("div.au input[name=mobile]").val(member_mobile);
+    }
+
+    au_same = $('input.radio[name=same_signup_yn]:checked').parents('div.au');
+});
+
+//affiliations insert
+$(".af_add").on("click", function() {
+    var current_count = get_affiliation_count();
+    var order = current_count + 1;
+
+    if (order <= 20) {
+        make_affiliation(order);
+    } else {
+        // 20개까지만 가능
+        alert("Up to 20 can be added.");
+    }
+});
+
+//affiliations delete
+$(document).on("click", ".af_del", function() {
+    var current_count = get_affiliation_count();
+    if (current_count <= 1) {
+        // 1개 이상 필수
+        alert("At least 1 can not be deleted.");
+
+    } else if (confirm("Are you sure you want to remove?")) {
+        var af = $(this).parents("div.af");
+        af.remove();
+        set_affiliation_order();
+
+    }
+});
+
+// department disabled 예외처리
+$(document).on("change", "select[name=department]", function() {
+    var _this = $(this);
+
+    var val = _this.children("option:selected").val();
+    var select_other_flag = (val == 16); // Other professional
+
+    _this.siblings("input[name=department_other]").val("").prop("disabled", !select_other_flag);
+});
+
+//get count
+function get_affiliation_count() {
+    var current_count = $("div.af").length;
+    return current_count;
+}
+
+//set data-order
+function set_affiliation_order() {
+    var temp, temp_order;
+    var affiliation_option_text = '<option value="">select</option>';
+    $("div.af").each(function(index) {
+        temp = $(this);
+        0
+        temp_order = index + 1;
+
+        temp.data('order', temp_order);
+        temp.children('table').children('tbody').children('tr').children('th').children('span[name=order]')
+            .text(temp_order);
+
+        affiliation_option_text += '<option>' + temp.data('order') + '</option>';
+    });
+
+    $("div.au select.au_affiliation").html(affiliation_option_text);
+}
+
+// make af
+function make_affiliation(order) {
+    var html = "";
+    html += '<div class="x_scroll af" data-order="">';
+    html += '<table class="table green_table">';
+    html += '<tbody>';
+    html += '<tr>';
+    html += '<th rowspan="3">Affiliation #<span name="order"></span>';
+    html += '<button type="button" class="mini_btn green_btn af_del">Delete</button>';
+    html += '</th>';
+    html += '<th class="border_left">Department <span class="red_txt">*</span></th>';
+    html += '<td class="half">';
+    html += '<select name="department" id=""><?= get_department_option_text($department_list, 0) ?></select>&nbsp;';
+    html += '<input type="text" name="department_other" class="en_num_keyup" maxlength="255" disabled>';
+    html += '</td>';
+    html += '</tr>';
+    html += '<tr>';
+    html += '<th class="border_left">Affiliation <span class="red_txt">*</span></th>';
+    html += '<td><input type="text" name="affiliation" class="" maxlength="255"></td>';
+    html += '</tr>';
+    html += '<tr>';
+    html += '<th class="border_left">Country <span class="red_txt">*</span></th>';
+    html += '<td>';
+    html += '<select class="required" name="country"><?= get_nation_option_text($nation_list, 0) ?></select>';
+    html += '</td>';
+    html += '</tr>';
+    html += '</tbody>';
+    html += '</table>';
+    html += '</div>';
+
+    $("form[name=affiliations_forms]").append(html);
+
+    set_affiliation_order();
+}
+
+
+
+//authors insert
+$(".au_add").on("click", function() {
+    var current_count = get_author_count();
+    var order = current_count + 1;
+
+    if (order <= 20) {
+        make_author(order);
+    } else {
+        // 20개까지만 가능
+        alert("Up to 20 can be added.");
+    }
+});
+
+//authors up
+$(document).on("click", ".au_up", function() {
+    var au = $(this).parents("div.au");
+    var au_prev = au.prev();
+
+    //console.log('au_prev', au_prev);
+    if (!au_prev.hasClass("au")) {
+        alert("First group.");
+    } else {
+        var html = au.detach();
+        au_prev.before(html);
+        set_author_order();
+    }
+});
+
+//authors down
+$(document).on("click", ".au_down", function() {
+    var au = $(this).parents("div.au");
+    var au_next = au.next();
+
+    //console.log('au_next', au_next);
+    if (!au_next.hasClass("au")) {
+        alert("The last group.");
+    } else {
+        var html = au.detach();
+        au_next.after(html);
+        set_author_order();
+    }
+});
+
+//authors delete
+$(document).on("click", ".au_del", function() {
+    var current_count = get_author_count();
+    if (current_count <= 1) {
+        // 1개 이상 필수
+        alert("At least 1 can not be deleted.");
+
+    } else if (confirm("Are you sure you want to remove?")) {
+        var au = $(this).parents("div.au");
+        au.remove();
+        set_author_order();
+
+    }
+});
+
+// Same as sign-up information 적용
+$(document).on("change", "input.radio[name=same_signup_yn]", function() {
+    au_same.find("input[name=name_en_first]").val("");
+    au_same.find("input[name=name_en_last]").val("");
+    au_same.find("input[name=name_ko]").val("");
+    au_same.find("input[name=affiliation_ko]").val("");
+    au_same.find("input[name=email]").val("");
+    au_same.find("input[name=nation_tel]").val("");
+    au_same.find("input[name=mobile]").val("");
+
+    var au = $(this).parents('div.au');
+    au.find("input[name=name_en_first]").val(member_name_first);
+    au.find("input[name=name_en_last]").val(member_name_last);
+    au.find("input[name=name_ko]").val(member_name_kor);
+    au.find("input[name=affiliation_ko]").val(member_affiliation_kor);
+    au.find("input[name=email]").val(member_email);
+    au.find("input[name=nation_tel]").val(member_nation_tel);
+    au.find("input[name=mobile]").val(member_mobile);
+
+    au_same = au;
+});
+
+// authors radio 예외처리
+$(document).on("change", "input.radio", function() {
+    var temp, temp_au_tbody, py_chk, cy_chk, inner_text;
+    $("div.au .radios").each(function(index) {
+        temp = $(this);
+        temp_au_tbody = temp.parents("tbody");
+
+        py_chk = temp.children('input[name=presenting_yn]').prop('checked');
+        cy_chk = temp.children('input[name=corresponding_yn]').prop('checked');
+
+        inner_text = (py_chk || cy_chk) ? "*" : "";
+
+        temp_au_tbody.children('tr').children('th').children('span[name=mobile_required]').text(
+            inner_text);
+    });
+});
+
+//get count
+function get_author_count() {
+    var current_count = $("div.au").length;
+    return current_count;
+}
+
+//set data-order
+function set_author_order() {
+    var temp, temp_order;
+    $("div.au").each(function(index) {
+        temp = $(this);
+        0
+        temp_order = index + 1;
+
+        temp.data('order', temp_order);
+        temp.children('table').children('tbody').children('tr').children('th').children('span[name=order]')
+            .text(temp_order);
+    });
+}
+
+// make af
+function make_author(order) {
+
+    // radio 구분용 난수 생성
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var num = "0123456789";
+    var text1 = "";
+    var text2 = "";
+    for (var i = 0; i < 4; i++) {
+        text1 += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        text2 += num.charAt(Math.floor(Math.random() * num.length));
+    }
+    var key = (text1 + text2);
+
+    // affiliation option
+    var af_length = get_affiliation_count();
+    var affiliation_option_text = '<option value="">select</option>';
+    for (var i = 1; i <= af_length; i++) {
+        affiliation_option_text += '<option>' + i + '</option>';
+    }
+
+    var html = "";
+    html += '<div class="x_scroll au" data-order="" data-key="' + key + '">';
+    html += '<table class="table green_table step1">';
+    html += '<tbody>';
+    html += '<tr>';
+    html += '<th rowspan="5">Authors #<span name="order"></span>';
+    html += '<div class="btn3_box">';
+    html += '<button type="button" class="green_btn au_up">▲</button> ';
+    html += '<button type="button" class="green_btn au_down">▼</button> ';
+    html += '<button type="button" class="green_btn au_del">Ｘ</button>';
+    html += '</div>';
+    html += '</th>';
+    html += '<th class="border_left radios" colspan="4">';
+    html += '<input type="radio" class="radio" id="ssy' + key + '" name="same_signup_yn" value="' + key + '">';
+    html += '<label for="ssy' + key + '">Same as sign-up information<span class="red_txt">*</span></label>';
+    html += '<input type="radio" class="radio" id="py' + key + '" name="presenting_yn" value="' + key + '">';
+    html += '<label for="py' + key + '">Presenting author<span class="red_txt">*</span></label>';
+    html += '<input type="radio" class="radio" id="cy' + key + '" name="corresponding_yn" value="' + key + '">';
+    html += '<label for="cy' + key + '">Corresponding author<span class="red_txt">*</span></label>';
+    html += '</th>';
+    html += '</tr>';
+    html += '<tr>';
+    html += '<th class="border_left">First name <span class="red_txt">*</span></th>';
+    html += '<td><input type="text" name="name_en_first" class="en_name_keyup" maxlength="60"></td>';
+    html += '<th class="border_left">Last name <span class="red_txt">*</span></th>';
+    html += '<td><input type="text" name="name_en_last" class="en_name_keyup" maxlength="60"></td>';
+    html += '</tr>';
+    html += '<tr>';
+    /*html +=					'<th class="border_left">성명(국문)</th>';
+    html +=					'<td><input type="text" name="name_ko" class="ko_keyup" maxlength="60"></td>';
+    html +=					'<th class="border_left">소속(국문)</th>';
+    html +=					'<td><input type="text" name="affiliation_ko" class="ko_num_keyup" maxlength="60"></td>';
+    html +=				'</tr>';*/
+    html += '<tr>';
+    html += '<th class="border_left">E-mail <span class="red_txt">*</span></th>';
+    html += '<td><input type="text" name="email" class="email" maxlength="60"></td>';
+    html += '<th class="border_left">Affiliation/</br/>Department <span class="red_txt">*</span></th>';
+    html += '<td class="sel_3">';
+    html += '<select name="" id="" class="au_affiliation">' + affiliation_option_text + '</select> ';
+    html += '<select name="" id="" class="au_affiliation">' + affiliation_option_text + '</select> ';
+    html += '<select name="" id="" class="au_affiliation">' + affiliation_option_text + '</select>';
+    html += '</td>';
+    html += '</tr>';
+    html += '<tr>';
+    html += '<th class="border_left">Phone Number <span class="red_txt" name="mobile_required"></span></th>';
+    html += '<td colspan="3" class="phone_2">';
+    html += '<input type="text" name="nation_tel" class="num_keyup" maxlength="5" placeholder="82"> ';
+    html += '<input type="text" name="mobile" class="num_keyup" maxlength="60">';
+    html += '</td>';
+    html += '</tr>';
+    html += '</tbody>';
+    html += '</table>';
+    html += '</div>';
+
+    $("form[name=authors_forms]").append(html);
+
+    set_author_order();
+}
+
+
+
+$(document).on("change", ".ko_keyup", function(key) {
+    var pattern = /[^ㄱ-ㅎ가-힣\s]/gi;
+    var _this = $(this);
+    if (key.keyCode != 8) {
+        var first_name = _this.val().replace(pattern, '');
+        _this.val(first_name.trim());
+    }
+});
+$(document).on("change", ".ko_num_keyup", function(key) {
+    var pattern_eng = /[^0-9||ㄱ-ㅎ가-힣|| \s]/gi;
+    var _this = $(this);
+    if (key.keyCode != 8) {
+        var first_name = _this.val().replace(pattern_eng, '');
+        _this.val(first_name.trim());
+    }
+});
+
+$(document).on("change", ".en_keyup", function(key) {
+    var pattern = /[^a-zA-Z\s]/gi;
+    set_pattern(pattern, $(this), key.keyCode);
+});
+$(document).on("change", ".en_num_keyup", function(key) {
+    var pattern = /[^0-9||a-zA-Z||\s]/gi;
+    set_pattern(pattern, $(this), key.keyCode);
+});
+$(document).on("change", ".num_keyup", function(key) {
+    var pattern = /[^0-9-+]/gi;
+    set_pattern(pattern, $(this), key.keyCode);
+});
+
+$(document).on("change", ".en_name_keyup", function(key) {
+    var pattern = /[^a-zA-Z-\s]/gi;
+    set_pattern(pattern, $(this), key.keyCode);
+});
+$(document).on("change", "[name=affiliation]", function(key) {
+    var pattern = /[^0-9a-zA-Z,\s]/gi;
+    set_pattern(pattern, $(this), key.keyCode);
+});
+
+function set_pattern(pattern, _this, key_code) {
+    if (key_code != 8) {
+        var val = _this.val().replace(pattern, '');
+        _this.val(val.trim());
+    }
+}
+
+/*$(document).on("change", ".email" ,function(){
+	var email = $(this).val().trim();
+	var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+	
+	if(email.match(regExp) != null) {
+		$(this).val(email);
+	} else {
+		alert("Invalid email format.");
+		$(this).val("").focus();
+		return;
+	}
+});*/
+
+
+
+// save
+$('.submit_btn').click(function() {
+    var temp;
+
+    /* affiliations */
+    var af_verify_flag = true;
+    var af_array = new Array();
+    var af_text = "";
+    var af_temp_affiliation, af_temp_department, af_temp_department_other, af_temp_country;
+    $('div.af').each(function(index) {
+        temp = $(this);
+
+        // affiliation
+        af_temp_affiliation = temp.find('input[name=affiliation]');
+        if (af_temp_affiliation.val() == "") {
+            af_verify_flag = false;
+            alert(make_save_alert_msg("Affiliation", index));
+            af_temp_affiliation.focus();
+            return false;
+        }
+
+        // department
+        af_temp_department = temp.find('select[name=department] option:selected');
+        if (af_temp_department.val() == "") {
+            af_verify_flag = false;
+            alert(make_save_alert_msg("Department", index));
+            return false;
+        }
+
+        // department - other
+        af_temp_department_other = temp.find('input[name=department_other]');
+        if (af_temp_department.val() == "16" && af_temp_department_other.val() == "") {
+            af_verify_flag = false;
+            alert(make_save_alert_msg("Department", index));
+            af_temp_department_other.focus();
+            return false;
+        }
+
+        // country
+        af_temp_country = temp.find('select[name=country] option:selected');
+        if (af_temp_country.val() == "") {
+            af_verify_flag = false;
+            alert(make_save_alert_msg("Country", index));
+            return false;
+        }
+
+        af_text = temp.data('order') + '@#' + af_temp_affiliation.val() + '@#' + af_temp_department
+            .val() + '@#' + af_temp_department_other.val() + '@#' + af_temp_country.val();
+        af_array.push(af_text);
+    });
+
+    if (!af_verify_flag) {
+        return false;
+    }
+    /* //affiliations */
+
+    /* authors */
+    if ($('div.au input[name=same_signup_yn]:checked').length <= 0) {
+        alert("Please select the same as Sign-up Information.");
+        return false;
+
+    } else if ($('div.au input[name=presenting_yn]:checked').length <= 0) {
+        alert("Please select the Presenting.");
+        return false;
+
+    } else if ($('div.au input[name=corresponding_yn]:checked').length <= 0) {
+        alert("Please select the Corresponding.");
+        return false;
+    }
+
+    var au_verify_flag = true;
+    var au_array = new Array();
+    var au_text = "";
+    var au_temp_same, au_temp_presenting, au_temp_corresponding, au_temp_name_first, au_temp_name_last,
+        au_temp_name_ko, au_temp_affiliation_ko, au_temp_email, au_temp_affiliation_1, au_temp_affiliation_2,
+        au_temp_affiliation_3, au_temp_mobile;
+    $('div.au').each(function(index) {
+        temp = $(this);
+
+        // Presenting author
+        au_temp_same = temp.find('input[name=same_signup_yn]');
+
+        // Presenting author
+        au_temp_presenting = temp.find('input[name=presenting_yn]');
+
+        // Corresponding author
+        au_temp_corresponding = temp.find('input[name=corresponding_yn]');
+
+        // name - en - first
+        au_temp_name_first = temp.find('input[name=name_en_first]');
+        if (au_temp_name_first.val() == "") {
+            au_verify_flag = false;
+            alert(make_save_alert_msg("First Name", index));
+            au_temp_name_first.focus();
+            return false;
+        }
+
+        // name - en - last
+        au_temp_name_last = temp.find('input[name=name_en_last]');
+        if (au_temp_name_last.val() == "") {
+            au_verify_flag = false;
+            alert(make_save_alert_msg("Last Name", index));
+            au_temp_name_last.focus();
+            return false;
+        }
+
+        // name - ko
+        au_temp_name_ko = temp.find('input[name=name_ko]');
+
+        // affiliation - ko
+        au_temp_affiliation_ko = temp.find('input[name=affiliation_ko]');
+
+        // email
+        au_temp_email = temp.find('input[name=email]');
+        if (au_temp_email.val() == "") {
+            au_verify_flag = false;
+            alert(make_save_alert_msg("Email", index));
+            au_temp_email.focus();
+            return false;
+        } else if (au_temp_email.val().match(email_regex) == null) {
+            au_verify_flag = false;
+            alert(ordinal_number_array[index] + " email is invalid");
+            au_temp_email.val("").focus();
+            return;
+        }
+
+        // affiliation - select
+        au_temp_affiliation_1 = temp.find('select.au_affiliation').eq(0).children('option:selected');
+        //console.log('au_temp_affiliation_1', au_temp_affiliation_1.val());
+        if (au_temp_affiliation_1.val() == "") {
+            au_verify_flag = false;
+            alert(make_save_alert_msg("Affiliation", index));
+            return false;
+        }
+        au_temp_affiliation_2 = temp.find('select.au_affiliation').eq(1).children('option:selected');
+        au_temp_affiliation_3 = temp.find('select.au_affiliation').eq(2).children('option:selected');
+
+        // nation_tel
+        au_temp_nation_tel = temp.find('input[name=nation_tel]');
+        if ((au_temp_presenting.prop('checked') || au_temp_corresponding.prop('checked')) &&
+            au_temp_nation_tel.val() == "") {
+            au_verify_flag = false;
+            alert(make_save_alert_msg("Country code", index));
+            au_temp_nation_tel.focus();
+            return false;
+        }
+
+        // mobile
+        au_temp_mobile = temp.find('input[name=mobile]');
+        if ((au_temp_presenting.prop('checked') || au_temp_corresponding.prop('checked')) &&
+            au_temp_mobile.val() == "") {
+            au_verify_flag = false;
+            alert(make_save_alert_msg("Mobile", index));
+            au_temp_mobile.focus();
+            return false;
+        }
+
+
+        au_text = temp.data('order') + '@#' + (au_temp_same.prop('checked') ? "Y" : "N") + '@#' + (
+                au_temp_presenting.prop('checked') ? "Y" : "N") + '@#' + (au_temp_corresponding.prop(
+                'checked') ? "Y" : "N") + '@#' + au_temp_name_first.val() + '@#' + au_temp_name_last
+            .val() + '@#' + au_temp_email.val() + '@#' + au_temp_affiliation_1.val() + '@#' +
+            au_temp_affiliation_2.val() + '@#' + au_temp_affiliation_3.val() + '@#' + au_temp_nation_tel
+            .val() + '-' + au_temp_mobile.val();
+        au_array.push(au_text); // + '@#' + au_temp_name_ko.val() + '@#' + au_temp_affiliation_ko.val()
+    });
+
+    if (!au_verify_flag) {
+        return false;
+    }
+    /* //authors */
+
+    /* save */
+    $.ajax({
+        url: PATH + "ajax/client/ajax_submission2024.php",
+        type: "POST",
+        data: {
+            flag: "step1",
+            idx: submission_idx,
+            afs: af_array.join('%^'),
+            aus: au_array.join('%^')
+        },
+        dataType: "JSON",
+        success: function(res) {
+            console.log("1",res);
+            if (res.code == 200) {
+                //alert(locale(language.value)("send_mail_success"));
+                location.href = './abstract_submission2.php?idx=' + res.submission_idx
+            }
+            /* else if(res.code == 401) {
+            					alert(locale(language.value)("not_exist_email"));
+            					return false;
+            				} else if(res.code == 400) {
+            					alert(locale(language.value)("error_find_password"));
+            					return false;
+            				} else {
+            					alert(locale(language.value)("reject_msg"));
+            					return false;
+            				}*/
+        },
+        complete: function(res) {
+            console.log("2",res)
+            $(".loading").hide();
+            $("body").css("overflow-y", "auto");
+
+            //alreadyProcess = false;
+        }
+    });
+    /* //save */
+});
+
+// make alert
+const ordinal_number_array = ['1st', '2nd', '3rd'];
+for (var i = 4; i <= 20; i++) {
+    ordinal_number_array.push((i + 'th'));
+}
+
+function make_save_alert_msg(column, index) {
+    var msg = "Please enter the " + ordinal_number_array[index] + " " + column + ".";
+    return msg;
+}
+</script>
 <?php
+}
+
 include_once('./include/footer.php');
 ?>

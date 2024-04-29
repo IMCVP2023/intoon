@@ -365,9 +365,9 @@
 							<td><?=$is_score_text?></td>
 						</tr>
 						<tr>
-							<th>KSSO Member Status</th>
+							<th>KSCP Member Status</th>
 							<td><?=$member_status_text?></td>
-							<th>KSSO Academy number</th>
+							<th>KSCP Academy number</th>
 							<td><?=$academy_number?></td>
 						</tr>
 						<tr>

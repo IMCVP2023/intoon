@@ -92,7 +92,7 @@ $floor = get_data($sql_floor);
              <tr>
                  <th>Organized By</th>
                  <td>
-                     <?= htmlspecialchars_decode($info['overview_organized']) ?> (KSSO)
+                     <?= htmlspecialchars_decode($info['overview_organized']) ?> (KSCP)
                      <!--Korean Society for the Study of Obesity-->
                  </td>
              </tr>

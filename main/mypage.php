@@ -106,16 +106,90 @@
     font-weight: bold;
     color: #10BF99;
 }
+
+/* .sub_menu_box_2{
+	width: 100%;
+	height: 50px;
+	background-color: #DDD;
+	position: absolute;
+	top: 240px;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sub_menu{
+	max-width: 1200px;
+	width:100%;
+	height: 100%;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sub_menu > div{
+	width:33%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 16px;
+}
+
+.sub_menu > div > a {
+	font-weight: 700;
+}
+
+.sub_menu > div:hover{
+	background-color: #EEE;
+}
+
+.sub_menu > div.on{
+	background-color: #EEE;
+} */
 </style>
 
 <section class="container form_section mypage">
-    <h1 class="page_title">Mypage</h1>
+<!-- <h1 class="page_title">Mypage</h1> -->
+<div class="sub_background_box">
+		<div class="sub_inner">
+			<div>
+				<h2>My page</h2>
+				<ul>
+					<li>Home</li>
+					<li>Mypage</li>
+					<li>Account</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="sub_menu_box_2">
+		<div class="sub_menu">
+			<div class="on"><a href="./mypage.php">Account</a></div>
+			<div><a href="./mypage_registration.php">Registration</a></div>
+			<div><a href="./mypage_abstract.php">Abstract</a></div>
+		</div>
+	</div> -->
 	<div class="inner">
-		<ul class="tab_green">
+			<!-- <div class="page_menu_box">
+				<div class="on"><a href="./mypage.php">Account</a></div>
+				<div><a href="./mypage_registration.php">Registration</a></div>
+				<div><a href="./mypage_abstract.php">Abstract</a></div>
+				<div class="menu_line"></div>
+			</div> -->
+		<!-- <ul class="tab_green">
 			<li class="on"><a href="./mypage.php">Account</a></li>
 			<li><a href="./mypage_registration.php">Registration</a></li>
 			<li><a href="./mypage_abstract.php">Abstract</a></li>
-		</ul>
+		</ul> -->
+		<div class="sub_menu_box">
+			<div class="on"><a href="./mypage.php">Account</a></div>
+			<div><a href="./mypage_registration.php">Registration</a></div>
+			<div><a href="./mypage_abstract.php">Abstract</a></div>
+		</div>
+		
 		<div>
 			<!-- 230824 다운로드 버튼 추가 -->
             <?php
@@ -490,11 +564,11 @@
 <script src="./js/script/client/member.js"></script>
 <script>
 $(document).ready(function() {
-    <!-- $('.book').on('click', function(event) {
-        event.preventDefault();
-        alert('Updates are planned.');
-        return false;
-    }); -->
+    // $('.book').on('click', function(event) {
+    //     event.preventDefault();
+    //     alert('Updates are planned.');
+    //     return false;
+    // });
 
     //비밀번호 입력 시 비밀번호 필수값으로 전환
     $("#password, #re_password").on("change", function() {
@@ -1062,5 +1136,194 @@ function birthChk(input) {
     }
 
 }
+
+(function() {
+
+'use strict';
+
+const ClickyMenus = function( menu ) {
+
+  // DOM element(s)
+  let container = menu.parentElement,
+	currentMenuItem,
+	i,
+	len;
+
+  this.init = function() {
+	menuSetup();
+	document.addEventListener( 'click', closeOpenMenu );
+  }
+
+
+  /*===================================================
+  =            Menu Open / Close Functions            =
+  ===================================================*/
+  function toggleOnMenuClick( e ) {
+
+	const button = e.currentTarget;
+
+	// close open menu if there is one
+	if ( currentMenuItem && button !== currentMenuItem ) {
+	  toggleSubmenu( currentMenuItem );
+	}
+
+	toggleSubmenu( button );
+
+  };
+
+  function toggleSubmenu( button ) {
+
+	const submenu = document.getElementById( button.getAttribute( 'aria-controls' ) );
+
+	if ( 'true' === button.getAttribute( 'aria-expanded' ) ) {
+
+	  button.setAttribute( 'aria-expanded', false );
+	  submenu.setAttribute( 'aria-hidden', true );
+	  currentMenuItem = false;
+
+	} else {
+
+	  button.setAttribute( 'aria-expanded', true );
+	  submenu.setAttribute( 'aria-hidden', false );
+	  preventOffScreenSubmenu( submenu );
+	  currentMenuItem = button;
+
+	}
+
+  };
+
+  function preventOffScreenSubmenu( submenu ) {
+
+	const   screenWidth = window.innerWidth ||
+				document.documentElement.clientWidth ||
+				document.body.clientWidth,
+		parent = submenu.offsetParent,
+		menuLeftEdge = parent.getBoundingClientRect().left,
+		menuRightEdge = menuLeftEdge + submenu.offsetWidth;
+
+	if ( menuRightEdge + 32 > screenWidth ) { // adding 32 so it's not too close
+	  submenu.classList.add( 'sub-menu--right' );
+	}
+
+  }
+
+  function closeOnEscKey(e) {
+
+	if( 27 === e.keyCode ) {
+
+	  // we're in a submenu item
+	  if( null !== e.target.closest('ul[aria-hidden="false"]') ) {
+		currentMenuItem.focus();
+		toggleSubmenu( currentMenuItem );
+
+	  // we're on a parent item
+	  } else if ( 'true' === e.target.getAttribute('aria-expanded') ) {
+		toggleSubmenu( currentMenuItem );
+	  }
+
+	}
+
+  }
+
+  function closeOpenMenu( e ) {
+
+	if ( currentMenuItem && ! e.target.closest( '#' + container.id ) ) {
+	  toggleSubmenu( currentMenuItem );
+	}
+
+  };
+
+  /*===========================================================
+  =            Modify Menu Markup & Bind Listeners            =
+  =============================================================*/
+  function menuSetup() {
+
+	menu.classList.remove('no-js');
+
+	menu.querySelectorAll('ul').forEach( ( submenu ) => {
+
+	  const menuItem = submenu.parentElement;
+
+	  if ( 'undefined' !== typeof submenu ) {
+
+		let button = convertLinkToButton( menuItem );
+
+		setUpAria( submenu, button );
+
+		// bind event listener to button
+		button.addEventListener( 'click', toggleOnMenuClick );
+		menu.addEventListener( 'keyup', closeOnEscKey );
+
+	  }
+
+	});
+
+  };
+
+  /**
+   * Why do this? See https://justmarkup.com/articles/2019-01-21-the-link-to-button-enhancement/
+   */
+  function convertLinkToButton( menuItem ) {
+
+	const   link = menuItem.getElementsByTagName( 'a' )[0],
+		linkHTML = link.innerHTML,
+		linkAtts = link.attributes,
+		button = document.createElement( 'button' );
+
+	if( null !== link ) {
+
+	  // set button content and attributes
+	  button.innerHTML = linkHTML.trim();
+	  for( i = 0, len = linkAtts.length; i < len; i++ ) {
+		let attr = linkAtts[i];
+		if( 'href' !== attr.name ) {
+		  button.setAttribute( attr.name, attr.value );
+		}
+	  }
+
+	  menuItem.replaceChild( button, link );
+
+	}
+
+	return button;
+
+  }
+
+  function setUpAria( submenu, button ) {
+
+	const submenuId = submenu.getAttribute( 'id' );
+
+	let id;
+	if( null === submenuId ) {
+	  id = button.textContent.trim().replace(/\s+/g, '-').toLowerCase() + '-submenu';
+	} else {
+	  id = menuItemId + '-submenu';
+	}
+
+	// set button ARIA
+	button.setAttribute( 'aria-controls', id );
+	button.setAttribute( 'aria-expanded', false );
+
+	// set submenu ARIA
+	submenu.setAttribute( 'id', id );
+	submenu.setAttribute( 'aria-hidden', true );
+
+  }
+
+}
+
+/* Create a ClickMenus object and initiate menu for any menu with .clicky-menu class */
+document.addEventListener('DOMContentLoaded', function(){
+  const menus = document.querySelectorAll( '.clicky-menu' );
+
+  menus.forEach( menu => {
+
+	let clickyMenu = new ClickyMenus(menu);
+	clickyMenu.init();
+
+  });
+});
+
+}());
 </script>
 <?php include_once('./include/footer.php');?>

@@ -148,7 +148,7 @@ p.sub_section_title.main_theme{color: #000;font-weight: 600;letter-spacing: -0.5
 .tab_area2{margin-bottom:50px;}
 .tab_area2 .clearfix{display:inline-block;}
 .tab_area2{text-align:center;width: 100%;}
-.tab_area2 li, .tab_li li{/*width:calc(33.3333% - 13.4px)*/;height: 100%;background-color: #fff;padding: 6px 25px 8px;border-radius: 30px;color: #fff;}
+.tab_area2 li, .tab_li li{/*width:calc(33.3333% - 13.4px)*/height: 100%;background-color: #fff;padding: 6px 25px 8px;border-radius: 30px;color: #fff;}
 .tab_li {text-align:center; margin-bottom:50px;}
 .tab_li li{display:inline-block;}
 .tab_area2 .clearfix li, .tab_li li {margin-right:20px;border: 1px solid #707070}
@@ -271,7 +271,7 @@ section.container.login .page_title p {/*font-size:22px; font-weight:bold;*/ mar
 .inner {max-width:1232px; padding:0 16px; margin:50px auto 90px;}
 .inner.find_password {max-width:950px;}
 .container{width:calc(100% - 34px);margin:0 auto;max-width:1200px;}
-section.container {min-height: calc(100vh - 403px); padding: 87px 0 50px; margin-top: 117px;}
+section.container {min-height: calc(100vh - 403px); padding: 235px 0 50px; margin-top: 117px;}
 section.container.window_open {margin-top: 50px; padding-top:0;}
 /*section.container.program_detail {padding: 223px 0 50px; margin-top: 0;}*/
 .form_section{max-width:890px;margin:0 auto;width:calc(100% - 20px);padding:410px 0 250px;min-height:calc(100vh - 375px);}
@@ -505,7 +505,7 @@ table.center * {text-align:center;}
 
 /*slick*/
 /*.slick-arrow{font-size:0;width:40px;height:60px;background:url('../img/icons/arrows_left.png');background-repeat:no-repeat;background-position:center;background-size:90%;}*/
-.slick-arrow{font-size:0;width:40px;height:60px;background:url('../img/icons/arrows_left.svg');background-repeat:no-repeat;background-position:center;background-size:16px;}
+.slick-arrow{font-size:0;width:20px;height:60px;background:url('../img/icons/arrows_left.svg');background-repeat:no-repeat;background-position:center;background-size:16px;}
 .slick-arrow{position:absolute;top:50%;margin-top:-30px;}
 .slick-prev{left:0px;}
 /*.slick-next{right:0px;background:url('../img/icons/arrows_right.png');background-repeat:no-repeat;background-position:center;background-size:90%;}*/
@@ -623,7 +623,7 @@ section.container.sponsor {padding-top: 164px;}
 
 /* fixed button - 220323 HUBDNC LJH2 추가 */
 /*body {position: relative}*/
-.fixed_btn_clone {position: fixed; bottom: 32px; left: 32px; z-index: 1; width: 5px; height: 5px; opacity: 0;}
+.fixed_btn_clone {position: fixed; bottom: 32px; left: 32px; z-index: 1; width: 5px; height: 5px;}
 .fixed_btn_wrap {position: fixed; bottom: 32px; right: 24px; z-index: 100;}
 .toolbar_wrap {margin-bottom: 100px;}
 .toolbar_wrap li:not(:last-of-type) {margin-bottom: 6px;}
@@ -637,14 +637,22 @@ section.container.sponsor {padding-top: 164px;}
 .toolbar_wrap li > a.violet {background-color: #990066;}
 .toolbar_wrap button i {display: block; margin-bottom: 6px;}
 .toolbar_wrap button i img {max-width:70%;}
-.btn_top {display: none; position: absolute; bottom: 0; left: 10px; /*width: 64px; height: 64px;*/ width: 58px; height: 58px; border-radius: 50%; box-shadow: 0 0 8px 0 rgba(0,0,0,0.16); background-color: #fff;}
+.btn_top {display: none; position: absolute; bottom: 0; left: 22px; /*width: 64px; height: 64px;*/ width: 58px; height: 58px; border-radius: 50%; box-shadow: 0 0 8px 0 rgba(0,0,0,0.16); background-color: #fff;}
 .fixed_btn_wrap.on {position: absolute;}
 .fixed_btn_wrap.index_pg {right: 35px; bottom: 125px; }
 
 .form_table input, .form_table select {border-radius:0; width:100%; height:40px;}
 .pop_contents .form_table input, .pop_contents .form_table select {padding: 0 15px;}
 
+.btn_plus{position: absolute; bottom:78px; left: 22px; /*width: 64px; height: 64px;*/ width: 58px; height: 58px; border-radius: 50%; box-shadow: 0 0 8px 0 rgba(0,0,0,0.16); background-color: #080054;}
 
+.btn_plus img{
+	transform-origin: center center;
+}
+
+.btn_plus:hover img {
+    transform: rotate(45deg);
+}
 /*::-webkit-scrollbar {width: 5px;margin-right: 5px;}*/
 
 /* 스크롤 바 */
@@ -752,7 +760,7 @@ section.container.sponsor {padding-top: 164px;}
 	.schedule_btn_wrap .remove_alarm_btn {font-size: 14px !important; padding: 5px 10px !important; height: 30px !important;}
 
 	/* layout */
-	section.container {margin-top:76px; min-height: calc(100vh - 446px); padding: 30px 0 100px; margin-top: 56px;}
+	section.container {margin-top:76px; min-height: calc(100vh - 446px); padding: 230px 0 100px; margin-top: 56px;}
 }
 
 @media screen and (max-width: 1024px){

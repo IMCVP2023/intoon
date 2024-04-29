@@ -376,7 +376,7 @@ if ($flag == "step1") {
 
 	$name = $member["first_name"] . " " . $member["last_name"]; //$language == "en" ? $member["first_name"]." ".$member["last_name"] : $member["last_name"].$member["first_name"];
 	$email = $member['email'];
-	$subject = "[ISCP 2023] Abstract Successfully Submitted";
+	$subject = "[IMCVP 2024] Abstract Successfully Submitted";
 	$time = date("Y-m-d H:i:s");
 
 	//0602 임시주석 에러로 페이지가 넘어가지 않는 현상
@@ -403,8 +403,47 @@ if ($flag == "step1") {
 	}
 
 	return_value(200, 'submission update success');
+} 
+//[240418] sujeong / 초록 심사 코드 etc1 추가
+else if($flag == "etc1"){
+	$submission_idx = $_POST['idx'];
+	$etc1 =  $_POST['etc1'];
+
+	$sql_update = "
+			UPDATE request_submission
+			SET
+				etc1 = '" . $etc1 . "', 
+				modify_date = NOW()
+			WHERE idx = '" . $submission_idx . "'
+		";
+	$sql_update_result = sql_query($sql_update);
+	if (!$sql_update_result) {
+		return_value(500, 'submission update fail', array("sql" => $sql_update));
+	}
+
+	return_value(200, 'submission update success');
 }
 
+//[240418] sujeong / 초록 심사 코드 etc2 추가
+else if($flag == "etc2"){
+	$submission_idx = $_POST['idx'];
+	$etc2 =  $_POST['etc2'];
+
+	$sql_update = "
+			UPDATE request_submission
+			SET
+				etc2 = '" . $etc2 . "', 
+				modify_date = NOW()
+			WHERE idx = '" . $submission_idx . "'
+		";
+	$sql_update_result = sql_query($sql_update);
+	
+	if (!$sql_update_result) {
+		return_value(500, 'submission update fail', array("sql" => $sql_update));
+	}
+
+	return_value(200, 'submission update success');
+}
 
 
 function affiliationJson($affiliation)

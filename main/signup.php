@@ -305,7 +305,19 @@
 </script>
 
 <section class="container form_page sign_up">
-	<h1 class="page_title">Sign Up</h1>
+	<!-- <h1 class="page_title">Sign Up</h1> -->
+	<div class="sub_background_box">
+		<div class="sub_inner">
+			<div>
+				<h2>My page</h2>
+				<ul>
+					<li>Home</li>
+					<li>Mypage</li>
+					<li>Account</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<div class="inner">
 		<div class="sub_background_box">
 		<div class="sub_inner">
@@ -771,7 +783,7 @@
 					 	</div>
 					</li>
 					<li class="korea_radio mo_korea_radio">
-						<p class="label"><span class="red_txt">*</span>대한비만학회(KSSO) 회원 여부</p>
+						<p class="label"><span class="red_txt">*</span>대한심뇌혈관질환예방학회(KSCP) 회원 여부</p>
 						<div class="label_wrap">
 							<input type="radio" class="new_radio" name="mo_user" id="mo_user1">
 							<label for="mo_user1"><i></i>회원</label>	

@@ -166,7 +166,7 @@ if ($during_yn !== "Y") {
 						</tr>
 						<?php if($member_data['nation_en'] === "Republic of Korea"){ ?>
 							<tr> 
-								<th>Member of KSSO</th>
+								<th>Member of KSCP</th>
 								<td id='ksola_member_status'><?=$member_data['ksola_member_status'] == 0 ? 'Non-Member' : 'Member'?></td>
 							</tr>
 						<?php }?>

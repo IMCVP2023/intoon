@@ -20,6 +20,19 @@ $member_info = "SELECT
 					WHERE m.idx = " . $member_idx;
 $member_info_data = sql_fetch($member_info);
 
+$registration_info = "SELECT * 
+                      FROM request_registration
+                      WHERE register =" . $member_idx;
+
+$registration_info_data = sql_fetch($registration_info);
+$registration_yn = "";
+
+if(!$registration_info_data){
+    $registration_yn = "N";
+}else{
+    $registration_yn = "Y";
+}
+
 $sql_detail = "
 		SELECT
 			rs.submission_code,
@@ -27,7 +40,7 @@ $sql_detail = "
 			preferred_presentation_type,
 			topic, topic_detail,
 			title,
-			objectives, methods, results, conclusions, keywords,
+			objectives, methods, results, conclusions, keywords, etc1, etc2,
 			IFNULL(CONCAT(fi_image1.path, '/', fi_image1.save_name), '') AS image1_path, fi_image1.original_name AS image1_original_name, rs.image1_caption,
 			IFNULL(CONCAT(fi_image2.path, '/', fi_image2.save_name), '') AS image2_path, fi_image2.original_name AS image2_original_name, rs.image2_caption,
 			IFNULL(CONCAT(fi_image3.path, '/', fi_image3.save_name), '') AS image3_path, fi_image3.original_name AS image3_original_name, rs.image3_caption,
@@ -210,6 +223,45 @@ function get_auther_affiliation($author_idx)
                             <td><?= $member_info_data["member_register_date"] ?></td>
                             <th>Sumission Code</th>
                             <td><?= $detail["submission_code"] ?></td>
+                        </tr>
+                        <tr>
+                            <th>회원 등록 여부</th>
+                            <td><?php echo $registration_yn; ?></td>
+                            <th>회원 등록 코드</th>
+                            <td><?php 
+                            if($registration_yn === "Y"){
+                                if(!empty($registration_info_data["idx"])){
+                                    $code_number = $registration_info_data["idx"];
+                        
+                                    while (strlen("" . $code_number) < 4) {
+                                        $code_number = "0" . $code_number;
+                                    }
+                        
+                                    $register_no = "IMCVP2024". "-" . $code_number;
+                                }
+                                echo $register_no; 
+                            }else{
+                                echo "-";
+                            }
+                            ?></td>
+                        </tr>
+                        <tr>
+                            <th>초록 심사 여부</th>
+                            <td>
+                                <input type="radio" value="Y" id="etc1_y" <?=($detail["etc1"] == 'Y' ? "checked" : "")?> name="etc1"/>
+                                <label for="etc1_y">Yes</label>
+                                <input type="radio" value="N" id="etc1_n" <?=($detail["etc1"] == 'N' ? "checked" : "")?> name="etc1"/>
+                                <label for="etc1_n">No</label>
+                                <button class="border_btn etc1_save">Save</button>
+                            </td>
+                            <th>초록 채택 여부</th>
+                            <td>
+                                <input type="radio" value="Y" id="etc2_y" <?=($detail["etc2"] == 'Y' ? "checked" : "")?> name="etc2"/>
+                                <label for="etc2_y">Yes</label>
+                                <input type="radio" value="N" id="etc2_n" <?=($detail["etc2"] == 'N' ? "checked" : "")?> name="etc2"/>
+                                <label for="etc2_n">No</label>
+                                <button class="border_btn etc2_save">Save</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -564,10 +616,96 @@ function get_auther_affiliation($author_idx)
         //         location.href = './abstract_application_list2.php'
         //     }
         // })
-
-
-
-
+        $("input[name='etc1']").change(function(){
+            if($("input[id='etc1_y']").is(":checked")){
+                $("input:radio[id='etc1_n']").prop("checked", false); 
+            }else if($("input[id='etc1_n']").is(":checked")){
+                $("input:radio[id='etc1_y']").prop("checked", false); 
+            }
+        })
     }
+
+    $(".etc1_save").click(function(){
+        const idx = new URLSearchParams(window.location.search).get("idx");
+        $.ajax({
+            url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
+            type: "POST",
+            data: {
+                flag: "etc1",
+                idx: idx,
+                etc1 : $("input[name='etc1']").val()
+            },
+            dataType: "JSON",
+            success: function(res) {
+                if (res.code == 200) {
+                    alert("초록 심사가 업데이트 되었습니다.");
+                } else if (res.code == 400) {
+                    alert("초록 심사 업데이트에 실패했습니다.");
+                    return false;
+                } else {
+                    alert("초록 심사 업데이트에 실패했습니다.");
+                    return false;
+                }
+            }
+        });
+    })
+
+    $(".etc2_save").click(function(){
+        const idx = new URLSearchParams(window.location.search).get("idx");
+        $.ajax({
+            url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
+            type: "POST",
+            data: {
+                flag: "etc2",
+                idx: idx,
+                etc2 : $("input[name='etc2']").val()
+            },
+            dataType: "JSON",
+            success: function(res) {
+                if (res.code == 200) {
+                    alert("초록 채택 여부가 업데이트 되었습니다.");
+                    if(window.confirm("채택자에게 메일을 발송하시겠습니까?")){
+                        postGmail()
+                    }
+                } else if (res.code == 400) {
+                    alert("초록 채택 여부가 업데이트에 실패했습니다.");
+                    return false;
+                } else {
+                    alert("초록 채택 여부가 업데이트에 실패했습니다.");
+                    return false;
+                }
+            }
+        });
+    })
+
+    	//[240419] sujoeng / 초록 채택 메일 추가
+    function postGmail(){
+        const email = "<?php echo $member_info_data['email']; ?>";
+        const nickname = "<?php echo $member_info_data['name']; ?>";
+        const submissionCode = "<?php echo $detail['submission_code']; ?>";
+        const abstractTitle = "<?php echo strip_tags(htmlspecialchars_decode(stripslashes($detail['title']))); ?>";
+        const titleWithoutTags = abstractTitle.replace(/&nbsp;/g, ' ');
+        const topic = "<?php echo $topic; ?>";
+
+        $.ajax({
+                url: "https://imcvp.org/main/" + "ajax/client/ajax_gmail.php",
+                type: "POST",
+                data: {
+                    flag: "abstract_etc2",
+                    email: email,
+                    name: nickname,
+                    title: titleWithoutTags,
+                    topic_text: topic
+                },
+                dataType: "JSON",
+                success: function(res) {
+                    if(res.code === 200){
+                        alert("초록 채택 메일 발송 완료했습니다.")
+                    }else{
+                        alert("초록 채택 메일 발송 실패했습니다.")
+                    }
+                }
+            });
+        }
 </script>
 <?php include_once('./include/footer.php'); ?>

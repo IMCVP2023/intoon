@@ -1,629 +1,298 @@
-<?php include_once('./include/head.php'); ?>
-<?php include_once('./include/header.php'); ?>
+<?php include_once('./include/head.php');?>
+<?php include_once('./include/header.php');?>
 
 <section class="invited invited2 container">
     <h1 class="page_title">Invited Speakers</h1>
-    <div class="inner">
-        <div class="section section1 invited_speaker">
-            <div class="keynote_area">
-                <!-- <img class="coming" src="./img/coming.png" /> -->
-                <!--
-				<ul class="tab_green CenterserT">
-					<li id="tab1" class="on"><a href="javascript:;">Plenary Lecture</a></li>
-					<li id="tab2"><a href="javascript:;">Keynote Lecture</a></li>
-				</ul> -->
-                <div class="tab_wrap">
-                    <div class="tab_cont on">
-                        <ul class="speaker_list">
-							<li>
-                                <div class="top_wrap">
-                                    <h2>Plenary Lecture 1</h2>
-                                    <span class="date text_r">08:30-09:10,<br class="br_530_only"> Sep. 8(Fri)</span>
-                                </div>
-                                <div class="bottom_wrap">
-                                    <div class="flex">
-                                        <div class="profile_wrap">
-                                            <img src="./img/img_prof_Thiruma_V_Arumugam.jpg">
-                                        </div>
-                                        <div class="desc_wrap flex1">
-                                            <p class="">Intermittent Metabolic Switching and Brain Health</p>
-                                            <div>
-                                                <h4 class="title">Thiruma V. Arumugam</h4>
-                                                <h5>La Trobe University, Australia</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="top_wrap">
-                                    <h2>Plenary Lecture 2</h2>
-                                    <span class="date text_r">15:40-16:20,<br class="br_530_only"> Sep. 8(Fri)</span>
-                                </div>
-                                <div class="bottom_wrap">
-                                    <div class="flex">
-                                        <div class="profile_wrap">
-                                            <img src="./img/img_prof_Robert_R_Wolfe.jpg">
-                                        </div>
-                                        <div class="desc_wrap flex1">
-                                            <p class="">Understanding Human Metabolic Dysregulation In Vivo Using Stable Isotope Tracers: More than 50 Years of Experience</p>
-                                            <div>
-                                                <h4 class="title">Robert R. Wolfe</h4>
-                                                <h5>University of Arkansas for Medical Sciences, USA</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-							<li>
-                                <div class="top_wrap">
-                                    <h2>Plenary Lecture 3</h2>
-                                    <span class="date text_r">08:30-09:10,<br class="br_530_only"> Sep. 9(Sat)</span>
-                                </div>
-                                <div class="bottom_wrap">
-                                    <div class="flex">
-                                        <div class="profile_wrap">
-                                            <img src="./img/img_speakers06.jpg">
-                                        </div>
-                                        <div class="desc_wrap flex1">
-                                            <p class="">The Role of Hunger-promoting Hypothalamic Neurons in Obesity Therapeutics</p>
-                                            <div>
-                                                <h4 class="title">Tamas Horvath</h4>
-                                                <h5>Yale University, USA</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-							<li>
-                                <div class="top_wrap">
-                                    <h2>Plenary Lecture 4</h2>
-                                    <span class="date text_r">17:00-17:40,<br class="br_530_only"> Sep. 9(Sat)</span>
-                                </div>
-                                <div class="bottom_wrap">
-                                    <div class="flex">
-                                        <div class="profile_wrap">
-                                            <img src="./img/img_speakers07.jpg">
-                                        </div>
-                                        <div class="desc_wrap flex1">
-                                            <p class="">Current and Future in Obesity Management</p>
-                                            <div>
-                                                <h4 class="title">John Wilding</h4>
-                                                <h5>University of Liverpool, UK</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="top_wrap">
-                                    <h2>Keynote Lecture 1</h2>
-                                    <span class="date text_r">11:10-11:50,<br class="br_530_only"> Sep. 8(Fri)</span>
-                                </div>
-                                <div class="bottom_wrap">
-                                    <div class="flex">
-                                        <div class="profile_wrap">
-                                            <img src="./img/img_prof_Matthias_Bluher.png">
-                                        </div>
-                                        <div class="desc_wrap flex1">
-                                            <p class="">Adipose Tissue – A Treasure Box for Discoveries</p>
-                                            <div>
-                                                <h4 class="title">Matthias Blüher</h4>
-                                                <h5>University of Leipzig, Germany</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-							<li>
-                                <div class="top_wrap">
-                                    <h2>Keynote Lecture 2</h2>
-                                    <span class="date text_r">11:00-11:40,<br class="br_530_only"> Sep. 9(Sat)</span>
-                                </div>
-                                <div class="bottom_wrap">
-                                    <div class="flex">
-                                        <div class="profile_wrap">
-                                            <img src="./img/img_speakers08.jpg">
-                                        </div>
-                                        <div class="desc_wrap flex1">
-                                            <p class="">Decoding Adipocyte Plasticity: YAP/TAZ's Dual Control over Energy Storage and Leptin</p>
-                                            <div>
-                                                <h4 class="title">Jae Myoung Suh</h4>
-                                                <h5>KAIST, Republic of Korea</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="top_wrap">
-                                    <h2>Keynote Lecture 3</h2>
-                                    <span class="date text_r">13:50-14:30,<br class="br_530_only"> Sep. 9(Sat)</span>
-                                </div>
-                                <div class="bottom_wrap">
-                                    <div class="flex">
-                                        <div class="profile_wrap">
-                                            <img src="./img/img_speakers03_1.jpg">
-                                        </div>
-                                        <div class="desc_wrap flex1">
-                                            <p class="">Brainstem Circuits that Control Ingestion</p>
-                                            <div>
-                                                <h4 class="title">Zachary Knight</h4>
-                                                <h5>University of California, San Francisco, USA</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="top_wrap">
-                                    <h2>Keynote Lecture 4</h2>
-                                    <span class="date text_r">14:30-15:10,<br class="br_530_only"> Sep. 9(Sat)</span>
-                                </div>
-                                <div class="bottom_wrap">
-                                    <div class="flex" id="symposia">
-                                        <div class="profile_wrap">
-                                            <img src="./img/img_prof_jae_Heon_Kang.png">
-                                        </div>
-                                        <div class="desc_wrap flex1">
-                                            <p class="">National Obesity Strategy in Korea: Past, Present and Future</p>
-                                            <div>
-                                                <h4 class="title">Jae-Heon Kang</h4>
-                                                <h5>Sungkyunkwan University, Republic of Korea</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-
-                            <!--230516 Symposia ====================================================================== -->
-                        </ul>
-						<!--
-                        <h1 class="area_title">Symposia</h1>
-                        <ul class="speaker_list_2">
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 1
-                                    <span class="green_tag">09:20-09:40, Sep. 8(Fri)</span>
-                                </h2>
-                                <p>Obesity and the Risk of Cancer</p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Yun Kyung Cho</h4>
-                                        <h5>University of Ulsan, Republic of Korea</h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 1
-                                    <span class="green_tag">10:00-10:20, Sep. 8(Fri)</span>
-                                </h2>
-                                <p>Obesity Care in Cancer Survivors
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Annie Anderson
-                                        </h4>
-                                        <h5>University of Dundee, UK
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 6
-
-                                    <span class="green_tag">14:00-14:20, Sep. 8(Fri)
-                                    </span>
-                                </h2>
-                                <p>Effects of Exercise and Cerebral Glucose Metabolism as a Strategy for Preventing
-                                    Cognitive Impairment Associated with Diabetes
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Hideaki Soya</h4>
-                                        <h5>University of Tsukuba, Japan
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 6
-
-                                    <span class="green_tag">14:20-14:40, Sep. 8(Fri)
-                                    </span>
-                                </h2>
-                                <p>The Proinflammatory Effects of Chronic Excessive Exercise
-                                    <br /><br />
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Adelino Sanchez Ramos da Silva
-                                        </h4>
-                                        <h5>University of Sao Paulo, Brazil
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 6
-
-                                    <span class="green_tag">14:40-15:00, Sep. 8(Fri)
-                                    </span>
-                                </h2>
-                                <p>TBD
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Jung Gi Hong
-                                        </h4>
-                                        <h5>CHA University, Republic of Korea
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 7
-
-                                    <span class="green_tag">14:00-14:20, Sep. 8(Fri)
-                                    </span>
-                                </h2>
-                                <p>Adipose Metabolic Control
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Zach Gerhart-Hines
-                                        </h4>
-                                        <h5>University of Copenhagen, Denmark
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 7
-
-                                    <span class="green_tag">14:40-15:00, Sep. 8(Fri)
-                                    </span>
-                                </h2>
-                                <p>Microbiota in Obesity-Related Metabolic Diseases
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Je-Kyung Seong
-                                        </h4>
-                                        <h5>Seoul National University, Republic of Korea
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 11
-
-                                    <span class="green_tag">16:30-16:50, Sep. 8(Fri)
-                                    </span>
-                                </h2>
-                                <p>Food and Nutrition Services in Assisted Living Facilities for Older Adults
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Shirley Y. Chao
-                                        </h4>
-                                        <h5>Massachusetts Executive Office of Elder Affairs, USA
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 11
-
-                                    <span class="green_tag">16:50-17:10, Sep. 8(Fri)
-                                    </span>
-                                </h2>
-                                <p>Community-Based Strategies to Decrease Health Disparities and Improve Nutritional
-                                    Status for US Low-Income Population
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Seung Eun Jung
-                                        </h4>
-                                        <h5>The University of Alabama, USA
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 11
-
-                                    <span class="green_tag">17:10-17:30, Sep. 8(Fri)
-                                    </span>
-                                </h2>
-                                <p>Nutrition Management Strategies for the Elderly and the Disabled in Social
-                                    Welfare
-                                    Facilities
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Minsun Jeon
-                                        </h4>
-                                        <h5>Chungnam National University, Republic of Korea
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 12
-
-                                    <sp class="green_tag">16:50-17:10, Sep. 8(Fri)
-                                    </sp an>
-                                </h2>
-                                <p>Lifestyle Intervention on Biomarkers of Type 2 Diabetes in Obese Youth vs Adult
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Joon Young Kim
-                                        </h4>
-                                        <h5>Syracuse University, USA
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 13
-
-                                    <span class="green_tag">09:20-09:40, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>MAFLD and NAFLD in the Prediction of Incident Chronic Kidney Disease
-                                    <br /><br />
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Sang-Man Jin
-                                        </h4>
-                                        <h5>Sungkyunkwan University, Republic of Korea
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 14
-
-                                    <span class="green_tag">09:20-09:40, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>TBD
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Robert R. Wolfe
-                                        </h4>
-                                        <h5>University of Arkansas for Medical Sciences, USA
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 14
-
-                                    <span class="green_tag">09:40-10:00, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>TBD
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Melanie Cree-Green
-                                        </h4>
-                                        <h5>Children’s Hospital Colorado/University of Colorado Anschutz, USA
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 14
-
-                                    <span class="green_tag">10:00-10:20, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>TBD
-                                    <br /><br />
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Il-Young Kim
-                                        </h4>
-                                        <h5>Gachon University, Republic of Korea</h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 15
-
-                                    <span class="green_tag">09:20-09:40, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>Food and Nutrition Surveillance System for Monitoring Obesity and Health Status
-                                    in
-                                    the US
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Sohyun Park
-                                        </h4>
-                                        <h5>Centers for Disease Control and Prevention, USA
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 15
-
-                                    <span class="green_tag">09:40-10:00, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>Influence of Social and Environmental Factors on Obesity
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Ji-Yun Hwang
-                                        </h4>
-                                        <h5>Sangmyung University, Republic of Korea
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 15
-
-                                    <span class="green_tag">10:00-10:20, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>Socioeconomic Inequalities in Obesity
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Hyeon Chang Kim
-                                        </h4>
-                                        <h5>Yonsei University, Republic of Korea
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 17
-
-                                    <span class="green_tag">16:40-17:00, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>Triple G Agonist
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Se Hee Min
-                                        </h4>
-                                        <h5>Univeristy of Ulsan, Republic of Korea
-                                            <br /><br />
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 18
-
-                                    <span class="green_tag">16:00-16:20, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>TBD</p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Michael Krashes
-                                        </h4>
-                                        <h5>National Institute of Diabetes and Digestive and Kidney Diseases(NIDDK),
-                                            USA
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 18
-
-                                    <span class="green_tag">16:20-16:40, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>TBD</p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Yu Fu
-                                        </h4>
-                                        <h5>Institute of Molecular and Cell Biology (IMCB), Singapore
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 18
-
-                                    <span class="green_tag">16:40-17:00, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>TBD</p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Changjoon Lee
-                                        </h4>
-                                        <h5>Institute for Basic Science (IBS), Republic of Korea
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="gray_card">
-                                <h2>
-                                    Symposium 19
-
-                                    <span class="green_tag">16:40-17:00, Sep. 9(Sat)
-                                    </span>
-                                </h2>
-                                <p>Comorbidities of Childhood Obesity ; Psychiatric Disorder
-                                </p>
-                                <div class="flex">
-                                    <div class="desc_wrap flex1" style="padding: 0;">
-                                        <h4 class="title">Jeewon Lee
-                                        </h4>
-                                        <h5>Soonchunhayng University, Republic of Korea
-                                        </h5>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-						-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="inner">
+		<div>
+			<div class="searchArea">
+				<!-- <form action=""> -->
+					<div class="sort">
+						<div class="all on"><a href="#">ALL</a></div>
+						<ul class="sort first_words">
+							<li><a href="#" class="click_sumbit">A</a></li>
+							<li><a href="#" class="click_sumbit">B</a></li>
+							<li><a href="#" class="click_sumbit">C</a></li>
+							<li><a href="#" class="click_sumbit">D</a></li>
+							<li><a href="#" class="click_sumbit">E</a></li>
+							<li><a href="#" class="click_sumbit">F</a></li>
+							<li><a href="#" class="click_sumbit">G</a></li>
+							<li><a href="#" class="click_sumbit">H</a></li>
+							<li><a href="#" class="click_sumbit">I</a></li>
+							<li><a href="#" class="click_sumbit">J</a></li>
+							<li><a href="#" class="click_sumbit">K</a></li>
+							<li><a href="#" class="click_sumbit">L</a></li>
+							<li><a href="#" class="click_sumbit">M</a></li>
+							<li><a href="#" class="click_sumbit">N</a></li>
+							<li><a href="#" class="click_sumbit">O</a></li>
+							<li><a href="#" class="click_sumbit">P</a></li>
+							<li><a href="#" class="click_sumbit">Q</a></li>
+							<li><a href="#" class="click_sumbit">R</a></li>
+							<li><a href="#" class="click_sumbit">S</a></li>
+							<li><a href="#" class="click_sumbit">T</a></li>
+							<li><a href="#" class="click_sumbit">U</a></li>
+							<li><a href="#" class="click_sumbit">V</a></li>
+							<li><a href="#" class="click_sumbit">W</a></li>
+							<li><a href="#" class="click_sumbit">X</a></li>
+							<li><a href="#" class="click_sumbit">Y</a></li>
+							<li><a href="#" class="click_sumbit">Z</a></li>
+						</ul>
+						<ul class="category">
+							<li><a href="#" class="click_sumbit">Plenary Lectures</a></li>
+							<li><a href="#" class="click_sumbit">Symposia</a></li>
+							<li><a href="#" class="click_sumbit">Workshops</a></li>
+							<li><a href="#" class="click_sumbit">Joint Symposia</a></li>
+						</ul>
+					</div>
+					<div class="bg">
+						<input type="text" name="keyword" id="keyword" value="" onkeyup="enterkey()">
+						<input id="submit" type="button" value="Search">
+					</div>
+				<!-- </form>	 -->
+			</div>
+			<ul class="speaker_list">
+			</ul>
+		</div>
+	</div>
 </section>
+<input type="hidden" name="first_word">
+<input type="hidden" name="session_word">
 
-<?php include_once('./include/footer.php'); ?>
+<div class="modal_background" onclick="hideModal()" style="display: none;"></div>
+<div class="modal" style="display:none;">
+	<div class="modal_img_box">
+		<img class="modal_img" src="/main/img/invited_speaker/Alice_Pik_Shan_Kong/SYM16-1_Alice_PS_Kong.jpg" alt="speaker_img"/>
+		<div>
+			<p class="modal_name">Alice Pik Shan Kong</p>
+			<p class="modal_org">The Chinese University of Hong Kong</p>
+			<p class="italic modal_nation">Hong Kong</p>
+		</div>
+	</div>
+	<div class="modal_content_box">
+		<div class="content">
+		</div>
+	</div>
+</div>
+<script>
+
+	var brian_height =''; 
+
+	$(document).ready(function(){
+		search_list();
+	});
+
+	function enterkey() {
+		if (window.event.keyCode == 13) {
+			// 엔터키가 눌렸을 때
+			ajax_submit(3);
+		}
+	}
+
+
+	$(".all").click(function(){
+		
+		$(".all").addClass("on");
+		$(".first_words").find(".on").removeClass("on");
+		$(".category").find(".on").removeClass("on");
+		$("#keyword").val("");
+		$("input[name=first_word]").val("");
+		$("input[name=session_word]").val("");
+		search_list();
+	});
+
+	$(".first_words li").click(function(){
+
+		$(".all").removeClass("on");
+		$(".first_words").find(".on").removeClass("on");
+		$(this).addClass("on");
+
+		var first_word_value = $(this).children().html();
+		$("input[name=first_word]").val(first_word_value);
+
+		ajax_submit(1);
+
+	});
+
+
+	$(".category li").click(function(){
+		$(".all").removeClass("on");
+		$(".category").find(".on").removeClass("on");
+		$(this).addClass("on");
+
+		var session_word_value = $(this).children().html();
+		if(session_word_value === "Plenary lectures") {
+			session_word_value = "Plenary";
+		} else if(session_word_value === "Symposia") {
+			session_word_value = "Symposium";
+		} else if(session_word_value === "Workshops") {
+			session_word_value = "Workshop";
+		} else if(session_word_value === "Joint Symposia") {
+			session_word_value = "joint";
+		}
+
+		$("input[name=session_word]").val(session_word_value);
+
+		ajax_submit(2);
+
+	});
+
+	$("#submit").click(function(){
+		ajax_submit(3);
+	});
+
+	function ajax_submit(order) {
+		var first_word = $("input[name=first_word]").val();
+		var session_word= $("input[name=session_word]").val();
+		var search_word= $("#keyword").val();
+
+		search_list(first_word, session_word, search_word, order);
+
+	}
+
+
+	function search_list(first_word=null, session_word=null, search_word=null, order=null) {
+		
+		var category_bool = $(".category").children().hasClass("on");
+
+		var data = {
+			"flag"				: "invited_speakers",
+			"first_word"		: first_word,
+			"session_word"		: session_word,
+			"search_word"		: search_word,
+			"order"				: order,
+			"category_bool"		: category_bool
+		};
+		
+		$.ajax({
+			url : PATH+"ajax/client/ajax_invited_speakers.php",
+			type : "POST",
+			data : data,
+			dataType : "JSON",
+			success : function(res){
+				if(res.code == 200) {
+					//console.log(res);
+					var html = "";
+
+					$(".speaker_list").html(html);
+
+					var s_list = res["result"];
+
+					for(var i=0; i < s_list.length; i++) {
+						
+						var list =s_list[i];
+						var logo_img = "";
+						if(list["image"] == "./img/footer_logo.png") {
+							logo_img= " logo_img";
+						}
+
+						html += "<li data-idx='" + list['idx'] + "' onclick='showModal(\"" + list['idx'] + "\")'>";
+						html +=     "<div class='clearfix2'>";
+						html +=         "<div class='speaker_img" + logo_img + "' style='background:url(" + "\"" + list["image_path"] + "\"" + ") no-repeat center /cover;'></div>";
+						html +=         "<div class='speaker_info'>";
+						html +=             "<p class='bold'>" + list['first_name'] + " " + list['last_name'] + "</p>";
+						html +=             "<p>" + list['affiliation'] + "</p>";
+						html +=             "<p class='italic'>" + list['nation'] + "</p>";
+						html +=         "</div>";
+						html +=     "</div>";
+						html += "</li>";
+
+						$(".speaker_list").html(html);
+
+					}
+					var speaker_arr = [];
+					var max = '';
+					var text_height ='';
+				} else if(res.code == 400){
+					alert(res.msg);
+					return;
+				}
+			}
+		});
+	}
+
+	const modalBackground = document.querySelector(".modal_background");
+	const modal = document.querySelector(".modal");
+
+	/** modal 띄우는 함수 */
+	function showModal(idx){
+		modalBackground.style.display = "";
+		modal.style.display = "";
+		getModalDetail(idx)
+	}
+
+	/** ajax 요청 */
+	function getModalDetail(idx){
+		var data = {
+			"flag": "invited_speaker_modal",
+			"idx" : idx
+		};
+		
+		$.ajax({
+			url : PATH+"ajax/client/ajax_invited_speakers.php",
+			type : "POST",
+			data : data,
+			dataType : "JSON",
+			success : function(res){
+				if(res.code == 200) {
+					drawModal(res.result)
+				} else if(res.code == 400){
+					alert(res.msg);
+					return;
+				}
+			}
+		});
+	}
+
+	function drawModal(list){
+		const speakerImg = document.querySelector(".modal_img");
+		const speakerName = document.querySelector(".modal_name");
+		const speakerOrg = document.querySelector(".modal_org");
+		const speakerNation = document.querySelector(".modal_nation");
+		const contents = document.querySelector(".modal_content_box")
+		// console.log(list)
+
+		let contentsHtml = "";
+		let roomText = "";
+		list.map((li)=>{
+
+			speakerImg.src = li.image_path;
+			speakerName.innerText = li.first_name + " " + li.last_name;
+			speakerOrg.innerText = li.affiliation;
+			speakerNation.innerText = li.nation;
+			
+			switch(Number(li.program_place_idx)){
+				case 1 : roomText = "Room1"; break;
+				case 2 : roomText = "Room2"; break;
+				case 3 : roomText = "Room3"; break;
+				case 4 : roomText = "Room4"; break;
+				case 5 : roomText = "Room5"; break;
+				case 6 : roomText = "Room6"; break;
+				case 7 : roomText = "Room7"; break;
+				case 8 : roomText = "Room1~3"; break;
+			}
+
+			contentsHtml += `
+						<div class="content">
+							<div>
+								<p>• ${li.program_date?.split("-")[1]}월 ${li.program_date?.split("-")[2]}일</p>
+								<p>• ${li.start_time}~${li.end_time}</p>
+								<p>• ${roomText}</p>
+							</div>
+							<div>
+								<p>${li.program_name}</p>
+							</div>
+						</div>
+			`
+
+		})
+		contents.innerHTML = contentsHtml;
+	}
+
+	/** modal 없애는 함수 */
+	function hideModal(){
+		modalBackground.style.display = "none";
+		modal.style.display = "none";
+	}
+</script>
+
+<?php include_once('./include/footer.php');?>
