@@ -60,8 +60,8 @@
 		$category            = isset($data["category"]) ? $data["category"] : "";										// Category
 		$category_other      = isset($data["title_input"]) ? $data["title_input"] : "";
 
-        $occupation            = isset($data["occupation"]) ? $data["occupation"] : "";									// Type of Participation
-        $occupation_other      = isset($data["occupation_input"]) ? $data["occupation_input"] : "";
+        $occupation            = isset($data["occupation"]) ? $data["occupation"] : "N";									// Type of Participation
+        $occupation_other      = isset($data["occupation_input"]) ? $data["occupation_input"] : "N";
 
 		$rating              = isset($data["review"]) ? $data["review"] : "";											// 평점신청
 		$licence_number      = $data["licence_number"] != "" ? $data["licence_number"] : "";							// 의사면허번호
@@ -90,7 +90,9 @@
 		$day2_breakfast_yn    = $data["others2"] != "no" ? "Y" : "N";
 		$day2_luncheon_yn     = $data["others3"] != "no" ? "Y" : "N";
 		$day3_breakfast_yn    = $data["others4"] != "no" ? "Y" : "N";
-		$day3_luncheon_yn     = $data["others5"] != "no" ? "Y" : "N";
+
+		/**[240429] sujeong / day3 luncheon 삭제 모두 N이 들어가도록 */
+		$day3_luncheon_yn     = $data["others5"] != "no" ? "N" : "N";
         $promotion_code_number= isset($data["promotion_code"]) ? $data["promotion_code"] : "";                          // 프로모션코드 번호
 		$promotion_code       = isset($data["promotion_confirm_code"]) ? $data["promotion_confirm_code"] : "";			// 프로모션코드 할인율(0:100%, 1:50%, 2:30%)
 		$recommended_by       = isset($data["recommended_by"]) ? $data["recommended_by"] : "";							// 추천인

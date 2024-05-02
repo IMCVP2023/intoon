@@ -472,7 +472,7 @@ div.phone input:last-child {width:calc(100% - 102px); margin-left:6px;}
 .step_list > li.step4 > div:last-child {padding-top:20px;}
 .step_list > li > div p {font-size:16px; font-weight:400; line-height:26px;}
 .step_list > li > div p:first-of-type {margin-top:8px;}
-.text_box li {line-height:32px; font-size:18px;}
+.text_box li, .text_box li span, .text_box li a {line-height:32px; font-size:18px;}
 .text_box.indent li {text-indent: -20px; padding-left: 20px;}
 .text_box li a.link {text-indent: 0px;}
 .abstract_submission_guideline .section1 > div:not(:first-of-type) {margin-top:60px;}
@@ -1000,7 +1000,7 @@ br.br_530_only {display: none;}
 	.text_box, .abstract_submission_guideline .detail_table_common .c_table th {padding:16px 20px;}
 	.text_box, .abstract_submission_guideline .detail_table_common .c_table.type2 th {padding:16px 7px;}
 	.text_box > div {margin-top:20px;}
-	.text_box li {line-height: 28px; font-size: 16px;}
+	.text_box li, .text_box li span, .text_box li a {line-height: 28px; font-size: 16px;}
 	.text_box button {height:32px; font-size:14px; padding:0 20px;}
 	.text_box button + button {margin-left: 8px;}
 

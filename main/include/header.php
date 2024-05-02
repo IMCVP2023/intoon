@@ -27,7 +27,7 @@ $locale = locale($language);
                 <?php
                 } else {
                 ?>
-                <li><a href="/main/mypage.php">My page</a></li>
+                <li><a href="/main/mypage.php">My IMCVP</a></li>
                 <li><a class="logout_btn" href="javascript:;">Logout</a></li>
                 <?php
                 }
@@ -46,7 +46,7 @@ $locale = locale($language);
                     <?php
                     } else {
                     ?>
-                    <li><a href="/main/mypage.php">My page</a></li>
+                    <li><a href="/main/mypage.php">My IMCVP</a></li>
                     <li><a class="logout_btn" href="javascript:;">Logout</a></li>
                     <?php
                     }
@@ -177,6 +177,25 @@ $(document).ready(function() {
     $(".not_yet").click(function() {
         alert("Coming soon.")
     });
+
+    let lastScroll = 0;
+    $(window).on('scroll', function(){
+        let scrollTop = $(this).scrollTop();
+        // console.log(scrollTop)
+        if(scrollTop > lastScroll) {
+            //down
+            $('.g_h_bottom').addClass('header_fixed_top');
+        }
+        if(scrollTop < 10){
+            $('.g_h_bottom').removeClass('header_fixed_top');
+        }
+        // } else {
+        //     // up
+        //     $('.g_h_bottom').removeClass('fixed_top');
+        // }
+        lastScroll = scrollTop;
+    });
+
 
     $(".online_submission_alert").click(function(event) {
         event.preventDefault();

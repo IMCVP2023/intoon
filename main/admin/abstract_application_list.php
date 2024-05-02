@@ -38,7 +38,7 @@ if ($e_date != "") {
 
 
 $abstract_list_query = "SELECT
-								rs.idx, rs.etc1, rs.etc2, rr.status AS registration_status,
+								rs.idx, rs.etc1, rs.etc2,rs.etc1_date, rr.status AS registration_status,
 								member_idx,
 								DATE_FORMAT(rs.modify_date, '%y-%m-%d') AS submission_date,
 								IFNULL(rs.submission_code,'-') AS submission_code,
@@ -46,8 +46,8 @@ $abstract_list_query = "SELECT
 								nation_ko,
 								`name`,
 								CASE
-									WHEN preferred_presentation_type = 0 THEN 'Oral or Poster'
-									WHEN preferred_presentation_type = 1 THEN 'Poster' 
+									WHEN preferred_presentation_type = 0 THEN 'Poster Oral'
+									WHEN preferred_presentation_type = 1 THEN 'Poster Exhibition only' 
 								END AS pre_type,
 								rs.topic,
 								rs.topic_detail,
@@ -218,18 +218,18 @@ $html .= '<thead>';
 $html .= '<thead>';
 $html .= '<tr class="tr_center">';
 $html .= '<th style="background-color:#D0CECE; border-style: solid; border-width:thin;" colspan="5">Submission Information</th>';
-$html .= '<th style="background-color:#D0CECE; border-style: solid; border-width:thin;" colspan="3">Abstract Information</th>';
+$html .= '<th style="background-color:#D0CECE; border-style: solid; border-width:thin;" colspan="4">Abstract Information</th>';
 $html .= '<th style="background-color:#D9E1F2; border-style: solid; border-width:thin;" colspan="8">Abstract</th>';
 
 for ($i = 0; $i < $max_aff; $i++) {
-	$html .= '<th style="background-color:#FCE4D6; border-style: solid; border-width:thin;" colspan="4">Affiliation #' . $i . '</th>';
+	$html .= '<th style="background-color:#FCE4D6; border-style: solid; border-width:thin;" colspan="5">Affiliation #' . $i . '</th>';
 }
 
 for ($i = 0; $i < $max_au; $i++) {
 	$html .= '<th style="background-color:#FFF2CC; border-style: solid; border-width:thin;" colspan="7">Author #' . $i . '</th>';
 }
 
-$html .= '<th style="background-color:#E7E6E6; border-style: solid; border-width:thin;" colspan="2">Others</th>';
+$html .= '<th style="background-color:#E7E6E6; border-style: solid; border-width:thin;" colspan="3">Others</th>';
 $html .= '<th style="background-color:#000000; color:#FFFFFF; border-style: solid; border-width:thin;" colspan="11">Attachment</th>';
 $html .= '</tr>';
 $html .= '<tr class="tr_center">';
@@ -240,6 +240,7 @@ $html .= '<th style="border-style: solid; border-width:thin;">ID(Email)</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">Country</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">사전 등록 상태</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">초록 심사 유무</th>';
+$html .= '<th style="border-style: solid; border-width:thin;">초록 심사 일자</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">초록 채택 유무</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">Name</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">Oral or Poster / Poster</th>';
@@ -270,8 +271,8 @@ for ($i = 0; $i < $max_au; $i++) {
 	$html .= '<th style="border-style: solid; border-width:thin;">U Phone Number' . strval($i) . '</th>';
 }
 
-// $html .= '<th style="background-color:#CCCCFF; border-style: solid; border-width:thin;">Q1. Have you submitted this abstract or an abstract of a similar topic at another conference?</th>';
-// $html .= '<th style="background-color:#CCCCFF; border-style: solid; border-width:thin;">Q2. This research is supported by the grant of Korean Society of Lipid and Atherosclerosis</th>';
+ $html .= '<th style="background-color:#CCCCFF; border-style: solid; border-width:thin;">Q1. Have you submitted this abstract or ab abstract of a similar topic at another conference? </th>';
+$html .= '<th style="background-color:#CCCCFF; border-style: solid; border-width:thin;">Q2. TThis research is supported by the grant of Korean Society of Cardiovascular Disease Prevention</th>';
 $html .= '<th style="background-color:#CC66E1; border-style: solid; border-width:thin;">Travel Grants</th>';
 // $html .= '<th style="background-color:#CC66E1; border-style: solid; border-width:thin;">APSAVD Award</th>';
 // $html .= '<th style="background-color:#CC66E1; border-style: solid; border-width:thin;">IAS Grant</th>';
@@ -372,6 +373,7 @@ foreach ($abstract_list as $al) {
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["nation_ko"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $regist_status_text . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["etc1"] . '</td>';
+	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["etc1_date"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["etc2"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["name"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["pre_type"] . '</td>';
@@ -450,8 +452,8 @@ foreach ($abstract_list as $al) {
 		$au_cnt++;
 	}
 
-	// $html .= '<td style="border-style: solid; border-width:thin;">' . $al["similar_yn"] . '</td>';
-	// $html .= '<td style="border-style: solid; border-width:thin;">' . $al["support_yn"] . '</td>';
+	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["similar_yn"] . '</td>';
+	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["support_yn"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["travel_grants_yn"] . '</td>';
 	// $html .= '<td style="border-style: solid; border-width:thin;">' . $al["awards_yn"] . '</td>';
 	// $html .= '<td style="border-style: solid; border-width:thin;">' . $al["investigator_grants_yn"] . '</td>';

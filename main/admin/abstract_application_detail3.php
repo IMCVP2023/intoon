@@ -40,7 +40,7 @@ $sql_detail = "
 			preferred_presentation_type,
 			topic, topic_detail,
 			title,
-			objectives, methods, results, conclusions, keywords, etc1, etc2,
+			objectives, methods, results, conclusions, keywords, etc1, etc2, etc1_date,
 			IFNULL(CONCAT(fi_image1.path, '/', fi_image1.save_name), '') AS image1_path, fi_image1.original_name AS image1_original_name, rs.image1_caption,
 			IFNULL(CONCAT(fi_image2.path, '/', fi_image2.save_name), '') AS image2_path, fi_image2.original_name AS image2_original_name, rs.image2_caption,
 			IFNULL(CONCAT(fi_image3.path, '/', fi_image3.save_name), '') AS image3_path, fi_image3.original_name AS image3_original_name, rs.image3_caption,
@@ -263,6 +263,11 @@ function get_auther_affiliation($author_idx)
                                 <button class="border_btn etc2_save">Save</button>
                             </td>
                         </tr>
+                        <tr>
+                            <th>초록 심사 일자</th>
+                            <td colspan="3"><?php echo $detail['etc1_date'] ?></td>
+                        </tr>
+
                     </tbody>
                 </table>
 
@@ -374,33 +379,7 @@ function get_auther_affiliation($author_idx)
                         <col width="40%">
                     </colgroup>
                     <tbody>
-                        <!-- <tr>
-							<th>Abstract title</th>
-							<td><?= $author_detail["abstract_title"] ?></td>
-							<th>Abstract category</th>
-							<td><?= $author_detail["category"] ?></td>
-						</tr>
-						<tr>
-							<th>Abstract file</th>
-						<?php
-                        $ext = strtolower(end(explode(".", $author_detail["file_name"])));
-                        if ($ext == "pdf") {
-                        ?>
-							<td><a href="./pdf_viewer.php?path=<?= $author_detail["path"] ?>" target="_blank"><?= $author_detail["file_name"] ?></a></td>
-						<?php } else { ?>
-							<td><a href="<?= $author_detail["path"] ?>" download><?= $author_detail["file_name"] ?></a></td>
-						<?php } ?>
-							<th>Oral presentation</th>
-							<td><?= $author_detail["oral_presentation"] ?></td>
-						</tr> -->
-                        <!-- <tr>
-							<th>Thumbnail image</th>
-							<td colspan="3">
-								<div class="img_wrap">
-									<img src="" alt="썸네일"> 
-								</div>
-							</td>
-						</tr> -->
+                   
                         <tr>
                             <th>Abstract title</th>
                             <td colspan="3"><?= htmlspecialchars_decode(stripslashes($detail["title"])) ?></td>
@@ -420,13 +399,13 @@ function get_auther_affiliation($author_idx)
                         <tr>
                             <th>Preferred presentation type</th>
                             <td colspan="3">
-                                <?= ($detail["preferred_presentation_type"] == 0) ? "Oral or Poster" : "Poster"; ?></td>
+                                <?= ($detail["preferred_presentation_type"] == 0) ? "Poster Oral" : "Poster Exhibition only"; ?></td>
                         </tr>
                         <tr>
                             <th>Topic</th>
-                            <td><?= $topic; ?></td>
-                            <th>Topic detail</th>
-                            <td><?= $topic_detail; ?></td>
+                            <td colspan="3"><?= $topic; ?></td>
+                            <!-- <th>Topic detail</th>
+                            <td><?= $topic_detail; ?></td> -->
                         </tr>
                         <!-- ra.objectives, ra.method, ra.results, ra.conclusions, ra.keywords -->
                         <tr>
@@ -468,25 +447,23 @@ function get_auther_affiliation($author_idx)
                         }
                         ?>
                         <tr>
-                            <th>Have you submitted this abstract or an abstract of a similar topic at another
-                                conference?
-                            </th>
+                            <th>Q1. Have you submitted this abstract or ab abstract of a similar topic at another conference?</th>
                             <td><?= $detail["similar_yn"] == "Y" ? "Yes" : "No" ?></td>
-                            <!-- <th>This research is supported by the grant of Korean Society of Lipid and Atherosclerosis.</th> -->
+                            <th>Q2. This research is supported by the grant of Korean Society of Cardiovascular Disease Prevention</th>
                             <td><?= $detail["support_yn"] == "Y" ? "Yes" : "No" ?></td>
                         </tr>
                         <tr>
                             <th>Ask for IMCVP 2024 Travel Grants</th>
-                            <td><?= $detail["travel_grants_yn"] == "Y" ? "Yes" : "No" ?></td>
-                            <th>Apply for APSAVD Young Investigator Awards</th>
-                            <td><?= $detail["awards_yn"] == "Y" ? "Yes" : "No" ?></td>
+                            <td colspan="3"><?= $detail["travel_grants_yn"] == "Y" ? "Yes" : "No" ?></td>
+                            <!-- <th>Apply for APSAVD Young Investigator Awards</th>
+                            <td><?= $detail["awards_yn"] == "Y" ? "Yes" : "No" ?></td> -->
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <th>Ask for IAS Asia-Pacific Federation Young Investigator Grants</th>
                             <td colspan="3"><?= $detail["investigator_grants_yn"] == "Y" ? "Yes" : "No" ?></td>
-                            <!-- <th>Funding Acknowledgments</th> -->
-                            <!-- <td><?= $detail["funding_yn"] == "Y" ? "Yes" : "No" ?></td> -->
-                        </tr>
+                             <th>Funding Acknowledgments</th> 
+                              <td><?= $detail["funding_yn"] == "Y" ? "Yes" : "No" ?></td>
+                        </tr> -->
                         <?php
                         $key_prefix = "prove_age_";
                         $key_path = $key_prefix . "path";

@@ -221,7 +221,7 @@ if ($during_yn !== "Y") {
 							?>
                         </select>
                     </li>
-                    <li>
+                    <li style="display: none;">
                         <p class="label">Type of Occupation <span class="red_txt">*</span></p>
                         <ul class="half_ul">
                             <li>
@@ -346,17 +346,15 @@ if ($during_yn !== "Y") {
 									<?php
 										$others_arr = array(
 												"Welcome Reception",
+												"Day 1 Luncheon Symposium",
 												"Day 2 Breakfast Symposium",
-												"Day 2 Luncheon Symposium",
-												"Day 3 Breakfast Symposium",
-												"Day 3 Luncheon Symposium"
+												"Day 2 Luncheon Symposium"
 										);
 										$other_date_arr = array(
-												"September 7(Thu)",
-												"September 8(Fri)",
-												"September 8(Fri)",
-												"September 9(Sat)",
-												"September 9(Sat)"
+												"November 29 (Fri)",
+												"November 29 (Fri)",
+												"November 30 (Sat)",
+												"November 30 (Sat)"
 										);
 
 										$prev_data_arr = [];
@@ -436,8 +434,8 @@ if ($during_yn !== "Y") {
                         <ul class="chk_list info_check_list">
 							<?php
 								$conference_info_arr = array(
-									"Website of the Korea Society of Obesity",
-									"Promotional email from the Korea Society of Obesity",
+									"Website of the Korean Society of Cardiovascular Disease Prevention",
+									"Promotional email from the Korean Society of Cardiovascular Disease Prevention",
 									"Advertising email or the bulletin board from the relevant society",
 									"Information about affiliated companies/organizations",
 									"Invited as a speaker, moderator, and panelist",
@@ -654,8 +652,7 @@ if ($during_yn !== "Y") {
 
         $(".next_btn").on("click", function (){
              if(!$("input[name=others1]").is(":checked") | !$("input[name=others2]").is(":checked") |
-                 !$("input[name=others3]").is(":checked") | !$("input[name=others4]").is(":checked") |
-                 !$("input[name=others5]").is(":checked")) {
+                 !$("input[name=others3]").is(":checked") | !$("input[name=others4]").is(":checked")) {
                  $("#focus_others").focus();
                  alert("Please confirm the 'Others' section");
                  return false;

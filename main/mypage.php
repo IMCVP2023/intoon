@@ -269,7 +269,7 @@
 								}
 						?>
 								<tr name="ksola_tr" id="ksola_tr"> 
-									<th class="nowrap">대한비만학회 회원 여부</th> 
+									<th class="nowrap">대한심뇌혈관질환예방학회(KSCP) <br>회원 여부</th> 
 									<td>
 										<div class="max_normal">
 											<input type="checkbox" class="checkbox" id="membership_status1" disabled <?=$mem_chk ?>> 

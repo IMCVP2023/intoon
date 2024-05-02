@@ -372,9 +372,9 @@ function requireChecked(){
 	}
 
 	// Type of Occupation
-	if(!$("select[name=occupation] option:selected").val()) {
-		return -8;
-	}
+	// if(!$("select[name=occupation] option:selected").val()) {
+	// 	return -8;
+	// }
 
 	// Category
 	if(!$("select[name=category] option:selected").val()){
@@ -409,6 +409,9 @@ function requireChecked(){
 	// Others
 	const otherTotalCount = $("#othersList tr").length;
 	const otherCheckCount = $("input[name^=other]:checked").length;
+
+	// console.log("total",otherTotalCount)
+	// console.log("check",otherCheckCount)
 
 	if(otherTotalCount > otherCheckCount){
 		return -5;

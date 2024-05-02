@@ -13,7 +13,7 @@ $submission_idx = $_GET["idx"];
 
 // 등록 가능한 기간인지
 $sql_during =    "SELECT
-						IF(DATE(NOW()) BETWEEN '2022-08-18 17:00:00' AND '2024-11-29 18:00:00', 'Y', 'N') AS yn
+						IF(DATE(NOW()) BETWEEN '2022-08-18 17:00:00' AND '2024-10-07 18:00:00', 'Y', 'N') AS yn
 					FROM info_event";
 $during_yn = sql_fetch($sql_during)['yn'];
 
@@ -56,6 +56,15 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
     if (empty($_SESSION["USER"])) {
         echo "<script>alert(locale(language.value)('need_login')); location.href=PATH+'login.php';</script>";
         exit;
+    }
+
+    //[240502] sujeong / 기획팀 요청 추가 / 등록 유무 확인
+    // 사전 등록이 된 유저인지 확인
+    // 사전 등록 안 해도 제출 가능 하게 바뀌었음으로 주석처리
+    $registration_idx = check_registration($_SESSION["USER"]["idx"]);
+    if(!$registration_idx) {
+    	echo "<script>alert(locale(language.value)('check_registration')); location.href=PATH+'registration_guidelines.php'</script>";
+    	exit;
     }
 
     // country

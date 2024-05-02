@@ -35,19 +35,17 @@ $info = sql_fetch($sql_info);
             <div>
                 <div class="text_box">
                     <ul>
-                        <li>The ICOMES 2023 organizing committee cordially invites you to submit abstracts for oral presentations, poster exhibitions, and guided poster presentations. </li>
-                        <li>All abstracts must be submitted via the online submission system. <br/>Please read the guidelines before submitting your abstract(s).</li>
-                        <!--
-						<li class="f_bold">• If you are selected by submitting an abstract, 100% of the registration fee can be reduced.</li>
-						<li>• The reduction is based on the payment of the pre-registration fee, and only the submitter will receive a refund within 2 weeks after the congress.</li>
-						-->
+                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="violet_t under_line bold">poster oral, poster exhibitions.</span></li>
+                        <li>All congress abstracts must be submitted online via the "Online Submission System."</li>
+                        <li>Submitted abstracts will be reviewed by the Scientific Program Committee, and committee might request an oral presentation.</li>
+                        <li>All presenters are required to register and pay the registration fee.</li>
+                        <li>Please read the guidelines carefully before submitting your abstract.</li>
                     </ul>
                 </div>
-                <div class="text_center btn_box mt25">
-                    <!-- <a href="https://image.webeon.net/icomes/ICOMES%202023_Abstract%20template_ver1.docx" class="btn long_btn" target="_blank" download><img src="./img/icons/icon_download_yellow.svg" alt="">Abstract Template Download</a> -->
+                <!-- <div class="text_center btn_box mt25">
 					<a href="./download/ICOMES_2023_Abstract_form.docx" class="btn long_btn" target="_blank" download><img src="./img/icons/icon_download_white.svg" alt="">Abstract Form Download</a>
                     <a href="./abstract_submission.php" class="btn long_btn yellow_btn online_submission_alert">Go to Abstract Submission</a>
-                </div>
+                </div> -->
                 <!-- <a href="./download/ICOMES_2022_Abstract_template.docx" class="btn long_btn" target="_blank"><img src="./img/icons/icon_download_yellow.svg" alt="">Abstract Template Download</a></div> -->
             </div>
             <!-- <div class="details"> -->
@@ -70,49 +68,27 @@ $info = sql_fetch($sql_info);
 							</colgroup>
 							<tr>
 								<th>Abstract Submission<br class="br_mb_only"> System Open</th>
-								<td class="f_bold">Mid-May</td>
+								<!-- <th class="close_th">Abstract Submission<br class="br_mb_only"> System Open</th> -->
+								<td class="f_bold">Monday, <span class="f_bold violet_t">June 3</span>, 2024</td>
 							</tr>
 							<tr>
-								<th class="close_th">Abstract Submission<br class="br_mb_only"> Deadline</th>
-								<td><span class="font_inherit f_bold red_t">August 10 (Thu)</span></td>
+								<th>1<sup class="font_small">st</sup> round Abstract Submission<br class="br_mb_only"> Deadline</th>
+								<td><span class="font_inherit f_bold">Sunday, <span class="f_bold violet_t">August 18</span>, 2024</span></td>
+							</tr>
+                            <tr>
+								<th>2<sup class="font_small">nd</sup> round Abstract Submission<br class="br_mb_only"> Deadline</th>
+								<td><span class="font_inherit f_bold">Sunday, <span class="f_bold violet_t">October 6</span>, 2024</span></td>
 							</tr>
 							<tr>
-								<th>Notification of<br class="br_mb_only"> Abstract Acceptance</th>
-								<td class="f_bold">August 14 (Mon)</td>
+								<th>Notification of<br class="br_mb_only">Notification of acceptance</th>
+								<td class="f_bold">Wednesday, <span class="f_bold violet_t">October 16</span>, 2024</td>
 							</tr>
 							<tr>
 								<th>Registration Deadline for<br class="br_mb_only"> Approved Abstract Presenters</th>
-								<td class="f_bold">August 24 (Thu)</td>
+								<td class="f_bold">Sunday, <span class="f_bold violet_t">November 3</span>, 2024</td>
 							</tr>
 						</table>
-						<!--
-                        <table class="c_table detail_table">
-                            <colgroup>
-                                <col class="submission_col">
-                                <col>
-                            </colgroup>
-                            <tr>
-                                <th>Early May</th>
-                                <td>Abstract submission system open</td>
-                            </tr>
-                            <tr>
-                                <th>July <span class="font_inherit red_t">6</span> (Thu)</th>
-                                <td>Abstract submission deadline</td>
-                            </tr>
-                            <tr>
-                                <th>August 14(Mon)</th>
-                                <td>Notification of abstract acceptance</td>
-                            </tr>
-                            <tr>
-                                <th>August 24(Thu)</th>
-                                <td>Registration deadline for approved abstract presenters</td>
-                            </tr>
-                            <!--<tr>
-                                <th>Sep 7(Thu) ~ 9 (Sat), 2023</th>
-                                <td>ICOMES 2023</td>
-                            </tr>
-                        </table>
-						-->
+					
                 </div>
             </div>
             <!--keydate end-->
@@ -120,20 +96,7 @@ $info = sql_fetch($sql_info);
             }
             ?>
             <!--Presentation Type start-->
-            <!--<div>
-                <div class="section_title_wrap2">
-                    <h3 class="title"><?= $locale("presentation_type") ?></h3>
-                </div>
-                <div class="text_box">
-                    When you submit the abstract, select the possibility regarding the Oral presentation on the abstract
-                    submission page. It will be posted in the form of an Poster or given the oral presentation according
-                    to the selection.
-                    <div>
-                        <button type="button">Oral Presentation</button>
-                        <button type="button">Poster Exhibition</button>
-                    </div>
-                </div>
-            </div>-->
+           
             <!--Presentation Type end-->
             <!--Steps for Abstract Submission start-->
             <div>
@@ -144,56 +107,30 @@ $info = sql_fetch($sql_info);
 					<ul class="clearfix">
 						<li>
 							<p>Step 1</p>
-							<p class="sm_txt">Sign up and log in to the ICOMES 2023 website.</p>
+							<p class="sm_txt">All presenters must complete their registration before the registration deadline.</p>
 						</li>
 						<li>
 							<p>Step 2</p>
-							<p class="sm_txt">Read the submission guidelines and download the abstract form.</p>
+							<p class="sm_txt">Upon submitting your abstract, a confirmation letter will be emailed to you.</p>
 						</li>
 						<li>
 							<p>Step 3</p>
-							<p class="sm_txt">Fill out the abstract form and submit an abstract.</p>
+							<p class="sm_txt">To review or make changes to your submitted abstracts, please visit ‘My IMCVP’.</p>
 						</li>
 						<li>
 							<p>Step 4</p>
-							<p class="sm_txt">Enter the author's information and abstract section, including the type of presentation, topic categories, and title.</p>
+							<p class="sm_txt">You will receive an acceptance notification via email.</p>
 						</li>
-						<li>
+						<!-- <li>
 							<p>Step 5</p>
 							<p class="sm_txt">Complete and confirm submission.</p>
-						</li>
+						</li> -->
 					</ul>
 				</div>
+                <p class="red_t bold mt10">* Note: Accepted abstracts qualify for free registration for <span class="bold violet_t">the presenting author only per abstract.</span></p>
             </div>
             <!--Steps for Abstract Submission end-->
-            <!--Topic Categories start-->
-            <div>
-                <div class="section_title_wrap2">
-                    <h3 class="title"><?= $locale("topic_categories") ?></h3>
-                </div>
-                <div class="text_box">
-                    <ul>
-                        <li class="f_bold"><span class="bold">1. </span>Behavior and Public Health for Obesity</li>
-                        <li class="f_bold"><span class="bold">2. </span>Nutrition, Education and Exercise for Obesity
-                        </li>
-                        <li class="f_bold"><span class="bold">3. </span>Epidemiology of Obesity and Metabolic Syndrome
-                        </li>
-                        <li class="f_bold"><span class="bold">4. </span>Digital Therapeutics and Big Data Study</li>
-                        <li class="f_bold"><span class="bold">5. </span>Diabetes and Obesity</li>
-                        <li class="f_bold"><span class="bold">6. </span>Dyslipidemia, Hypertension and Obesity</li>
-                        <li class="f_bold"><span class="bold">7. </span>Other Comorbidities of Obesity and Metabolic
-                            Syndrome</li>
-                        <li class="f_bold"><span class="bold">8. </span>Pathophysiology of Obesity and Metabolic
-                            Syndrome</li>
-                        <li class="f_bold"><span class="bold">9. </span>Therapeutics of Obesity and Metabolic Syndrome
-                        </li>
-                        <li class="f_bold"><span class="bold">10. </span>Metabolic and Bariatric Surgery</li>
-                        <li class="f_bold"><span class="bold">11. </span>Obesity and Metabolic Syndrome in Children and
-                            Adolescents</li>
-                    </ul>
-                </div>
-            </div>
-            <!--Topic Categories end-->
+          
             <!--Instructions start-->
             <div>
                 <div class="section_title_wrap2">
@@ -208,35 +145,23 @@ $info = sql_fetch($sql_info);
                         <tr>
                             <th>Presentation Type </th>
                             <td>
-                                <p>1) Oral Presentation</p>
-                                <p>2) Poster Exhibition</p>
-                                <p>3) Guided Poster Presentation <br />
-                                    (*Scientific committee may change the presentation type by review.)
+                                <p>1) Poster oral</p>
+                                <p>2) Poster exhibitions only <br />
+                                (* Scientific committee may change your presentation type after reviewing it.)
                                 </p>
                             </td>
                         </tr>
                         <tr>
                             <th>Language</th>
-                            <td>English</td>
+                            <td>English only</td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <th>Length of Title</th>
                             <td>No longer than 30 words</td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <th>Method of Submission</th>
-                            <td>Online submission via the website.</td>
-                        </tr>
-                        <tr>
-                            <th>Format</th>
-                            <td>
-                                <p>Download and use the official abstract form. <br />Contain 4 sections: background,
-                                    methods & materials, results, and conclusions. <br />(keywords are optional)</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Length of body</th>
-                            <td>No longer than 300 words</td>
+                            <td>Online submission via the website only</td>
                         </tr>
                         <tr>
                             <th>Figure / Table</th>
@@ -244,55 +169,78 @@ $info = sql_fetch($sql_info);
                                 <p>- 1 figure in 1 abstract: Allowed</p>
                                 <p>- 1 table in 1 abstract: Allowed</p>
                                 <p>- 1 figure & 1 table in 1 abstract: Not allowed <br />
-                                    (*Each figure or table will be counted as 50 words.)
+                                 * A figure or table counts as 50 words.
                                 </p>
                             </td>
                         </tr>
+                        <!-- <tr>
+                            <th>Format</th>
+                            <td>
+                                <p>Download and use the official abstract form. <br />Contain 4 sections: background,
+                                    methods & materials, results, and conclusions. <br />(keywords are optional)</p>
+                            </td>
+                        </tr> -->
+                        <!-- <tr>
+                            <th>Length of body</th>
+                            <td>No longer than 300 words</td>
+                        </tr>
+                        -->
                         <tr>
                             <th>Modification</th>
-                            <td>Abstract review or modification will be available until the deadline.</td>
+                            <td>Abstract review or modification will be available until the abstract submission deadline.<br>
+                            (* Upon abstract submission, a confirmation email will be sent to your provided email address.)
+                        </td>
                         </tr>
                         <tr>
                             <th>Withdrawal</th>
-                            <td>Request to the secretariat via email (icomes_abstracts@into-on.com)</td>
+                            <td>Request to the secretariat via email <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a></td>
                         </tr>
                     </table>
                 </div>
             </div>
             <!--Instructions end-->
-			<!--Originality & Eligibility start-->
-            <div>
+              <!--Topic Categories start-->
+              <div>
                 <div class="section_title_wrap2">
-                    <h3 class="title">Originality & Eligibility</h3>
+                    <h3 class="title"><?= $locale("topic_categories") ?></h3>
                 </div>
-                <div class="text_box indent">
+                <div class="text_box">
                     <ul>
-                        <li>• If the submission does not comply with the prescribed format or deviates from the basic purpose of this congress, it may be rejected at the discretion of the scientific program committee.</li>
-                        <li>• The subject of the abstract is limited to unpublished research results, and editing of content previously presented at other conferences is not accepted for submission.</li>
-                        <li>• The submitted and accepted abstracts may be published on the website, application, abstract book, and other printed materials of the Korean Society for the Study of Obesity.</li>
-						<li>• If any related issue arises, please contact the congress secretariat at <a href="mailto:icomes@into-on.com" class="link">icomes@into-on.com.</a></li>
+                        <li class="f_bold"><span class="bold">1. </span>Diabetes & Obesity</li>
+                        <li class="f_bold"><span class="bold">2. </span>Women’s Heart Health</li>
+                        <li class="f_bold"><span class="bold">3. </span>Hyperlipidemia and CVD</li>
+                        <li class="f_bold"><span class="bold">4. </span>Epidemiology</li>
+                        <li class="f_bold"><span class="bold">5. </span>Precision medicine/ Digital healthcare</li>
+                        <!-- <li class="f_bold"><span class="bold">6. </span>Dyslipidemia, Hypertension and Obesity</li>
+                        <li class="f_bold"><span class="bold">7. </span>Other Comorbidities of Obesity and Metabolic
+                            Syndrome</li>
+                        <li class="f_bold"><span class="bold">8. </span>Pathophysiology of Obesity and Metabolic
+                            Syndrome</li>
+                        <li class="f_bold"><span class="bold">9. </span>Therapeutics of Obesity and Metabolic Syndrome
+                        </li>
+                        <li class="f_bold"><span class="bold">10. </span>Metabolic and Bariatric Surgery</li>
+                        <li class="f_bold"><span class="bold">11. </span>Obesity and Metabolic Syndrome in Children and
+                            Adolescents</li> -->
                     </ul>
                 </div>
             </div>
-            <!--Notification of Acceptance start-->
-            <div>
+            <!--Topic Categories end-->
+              <!--Notification of Acceptance start-->
+              <div>
                 <div class="section_title_wrap2">
                     <h3 class="title"><?= $locale("notification_of_acceptance") ?></h3>
                 </div>
                 <div class="text_box indent">
                     <ul>
-                        <li>• Following the evaluation of all abstract submissions by the scientific committee, the
-                            presenting author and the corresponding author will receive an email notification regarding
-                            the acceptance of their submission.</li>
-                        <li>• It is mandatory for all presenters to complete the registration process and pay the full
-                            registration fee by the registration deadline of <span class="bold">August 24, 2023</span>.
-                            The registration fee will be fully refunded after the conference.</li>
+                        <li>• All submitted abstracts will be reviewed by the Scientific Program Committee according to reviewing procedures.</li>
+                        <li>• It is mandatory for all presenters to complete the registration process and pay the full registration fee by the registration deadline of <span class="violet_t">November 3, 2024.</span> The registration fee will be fully refunded after the conference.</li>
                         <li>• If the submission deadline changes, the acceptance notification also changes. The
                             secretariat will be notified via ICOMES website or newsletter.</li>
                     </ul>
                 </div>
             </div>
             <!--Notification of Acceptance end-->
+
             <!--Withdrawal Policy start-->
             <div>
                 <div class="section_title_wrap2">
@@ -300,12 +248,29 @@ $info = sql_fetch($sql_info);
                 </div>
                 <div class="text_box indent">
                     <ul>
-                        <li>• Failure to register by the presenter registration deadline will result in the automatic withdrawal of the accepted abstract from the final program.</li>
-                        <li>• To request the withdrawal of an abstract, send an email to the ICOMES 2023 secretariat(<a href="mailto:icomes_abstracts@into-on.com" class="link font_inherit">icomes_abstracts@into-on.com</a>) at your earliest convenience.</li>
+                        <li>• If the presenting author of an accepted abstract does not register by 3 November 2024, the abstract will be automatically withdrawn from the final program.</li>
+                        <li>• If you would like to withdraw an abstract, please notify the IMCVP 2024 Secretariat(<a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>) as soon as possible.</li>
                     </ul>
                 </div>
             </div>
             <!--Withdrawal Policy end-->
+
+			<!--Originality & Eligibility start-->
+            <div>
+                <div class="section_title_wrap2">
+                    <h3 class="title">Originality & Eligibility</h3>
+                </div>
+                <div class="text_box indent">
+                    <ul>
+                        <li>• If the submission does not comply with the prescribed format or deviates from the basic purpose of this congress, it may be rejected at the discretion of the Scientific Committee.</li>
+                        <li>• The subject of the abstract is limited to unpublished research results, and editing of content previously presented at other conferences is not accepted for submission.</li>
+                        <li>• The submitted and accepted abstracts may be published on the website, application, abstract book(PDF), and other printed materials of the Korean Society of Cardiovascular Disease Prevention(KSCP).</li>
+						<li>• If any related issue arises, please contact the congress secretariat at <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>.</li>
+                    </ul>
+                </div>
+            </div>
+          
+            
             <!--Contact for Abstract start-->
             <!--
 			<div>
