@@ -86,14 +86,24 @@
 	}
 </style>
 <section class="mypage container">
-    <h1 class="page_title">Mypage</h1>
-    <div class="inner">
-		<div class="page_menu_box">
-				<div><a href="./mypage.php">Account</a></div>
-				<div class="on"><a href="./mypage_registration.php">Registration</a></div>
-				<div><a href="./mypage_abstract.php">Abstract</a></div>
-				<div class="menu_line"></div>
+    <div class="sub_background_box">
+		<div class="sub_inner">
+			<div>
+				<h2>My page</h2>
+				<ul>
+					<li>Home</li>
+					<li>Mypage</li>
+					<li>Registration</li>
+				</ul>
 			</div>
+		</div>
+	</div>
+    <div class="inner">
+		<div class="sub_menu_box">
+			<div><a href="./mypage.php">Account</a></div>
+			<div class="on"><a href="./mypage_registration.php">Registration</a></div>
+			<div><a href="./mypage_abstract.php">Abstract</a></div>
+		</div>
 
 		<!-- <ul class="tab_green">
 			<li><a href="./mypage.php">Account</a></li>
@@ -144,18 +154,23 @@
 				<?php
 
 					foreach($registration_list as $list) {
-						$register_no = $list["idx"] ? "ICOMES2023-".$list["idx"] : "-";
-						$payment_url = "./registration2.php?idx={$list['idx']}";
+						//$register_no = $list["idx"] ? "IMCVP2024-".$list["idx"] : "-";
+
+						$register_no = $list["idx"] ? "IMCVP2024-".$list["idx"] : "-";
+
+						if(!empty($list["idx"])){
+							$code_number = $list["idx"];
+			
+							while (strlen("" . $code_number) < 4) {
+								$code_number = "0" . $code_number;
+							}
+			
+							$register_no = "IMCVP2024". "-" . $code_number;
+						}
+
+						$payment_url = "./registration2.php?idx=".$list['idx'];
 						$popup_class = "revise_pop_btn";
 						$price = $list["total_price_kr"] != "" ? "￦ ".number_format($list["total_price_kr"]) : ($list["total_price_us"] != "" ? "$ ".number_format($list["total_price_us"]) : "-");
-
-						// if($list["status"] != ""){
-						// }else{
-						//     $status_type = $language == "en" ? "holding" : "결제대기";
-						//     $payment_url = "./registration2.php?idx=".$list["idx"];
-						//     $popup_class = "";
-						//     $disabled = "";
-						// }
 
 						// 2023 Registeration 페이지 추가정보
 						// Type of Participation
@@ -205,36 +220,25 @@
 
 						if($welcome_reception_yn === "Y"){
 							$other_html .= "
-											<input type='checkbox' class='checkbox' id='other1' disabled>
-											<label for='other1'><i></i>Welcome Reception – September 7(Thu)</label>
+											<label for='other1'><i></i>• Welcome Reception – November 29 (Fri)</label>
 										   ";
 						}
 						if($day2_breakfast_yn === "Y"){
 							$other_html .= $other_html != "" ? "<br/>" : "";
 							$other_html .= "
-											<input type='checkbox' class='checkbox' id='other2' disabled>
-											<label for='other2'><i></i>Day 2 Breakfast Symposium – September 8(Fri)</label>
+											<label for='other2'><i></i>• Day 1 Luncheon Symposium – November 29 (Fri)</label>
 										   ";
 						}
 						if($day2_luncheon_yn === "Y"){
 							$other_html .= $other_html != "" ? "<br/>" : "";
 							$other_html .= "
-											<input type='checkbox' class='checkbox' id='other3' disabled>
-											<label for='other3'><i></i>Day 2 Luncheon Symposium – September 8(Fri)</label>
+											<label for='other3'><i></i>• Day 2 Breakfast Symposium – November 30 (Sat)</label>
 										   ";
 						}
 						if($day3_breakfast_yn === "Y"){
 							$other_html .= $other_html != "" ? "<br/>" : "";
 							$other_html .= "
-											<input type='checkbox' class='checkbox' id='other4' disabled>
-											<label for='other4'><i></i>Day 3 Breakfast Symposium – September 9(Sat)</label>
-										   ";
-						}
-						if($day3_luncheon_yn === "Y"){
-							$other_html .= $other_html != "" ? "<br/>" : "";
-							$other_html .= "
-											<input type='checkbox' class='checkbox' id='other5' disabled>
-											<label for='other5'><i></i>Day 3 Luncheon Symposium – September 9(Sat)</label>
+											<label for='other4'><i></i>• Day 2 Luncheon Symposium – November 30 (Sat)</label>
 										   ";
 						}
 
@@ -246,10 +250,10 @@
 
 						for($a = 0; $a < count($info); $a++){
 							if($info[$a]){
+								$info_index = $a+1;
 								$info_html .= $info_html != "" ? "<br/>" : "";
 								$info_html .= "
-												<input type='checkbox' class='checkbox' id='conference".$a."' disabled>
-												<label for='conference".$a."'><i></i>".$info[$a]."</label>
+												<label for='conference".$a."'><i></i>" . "$info_index. ".$info[$a] . "</label>
 											  ";
 							}
 						}
@@ -286,9 +290,9 @@
 								<td>
 									<?php if($list["payment_methods"] == 1){?>
 										<!--<a href="./online_registration.php" target="_blank" class="btn">Modify</a> 퍼블 ver-->
-<!--										<a href="./registration.php?idx=--><?php //=$list["idx"]?><!--" target="_blank" class="btn">Modify</a>-->
+									<a href="./registration.php?idx=<?php echo $list["idx"]?> " target="_blank" class="btn">Modify</a>
 									<?php }else{?>
-<!--										<button type="button" class="btn payment_btn" data-url="--><?php //=$payment_url?><!--">Payment</button>-->
+										<button type="button" class="btn payment_btn" data-url="<?php echo $payment_url?>">Payment</button>
 									<?php }?>
 									<button type="button" class="btn cancel_btn" data-idx="<?=$list["idx"]?>">Cancel</button>
 								</td>
@@ -383,7 +387,6 @@
 												<tr class="tr_bg">
 													<th>Payment Method</th>
 													<td>
-														<input type="checkbox" disabled class="checkbox">
 														<label for="">
 															<i></i>
 															<?=$payment_methods?>

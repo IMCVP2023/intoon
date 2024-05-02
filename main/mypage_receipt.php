@@ -43,6 +43,18 @@
 
 	// 변수 설정	
 	$register_no = !empty($registration_idx) ? "ICOMES2023-".$registration_idx : "-";
+
+	$register_no = $registration_idx ? "IMCVP2024-".$registration_idx : "-";
+
+	if(!empty($registration_idx)){
+		$code_number = $registration_idx;
+
+		while (strlen("" . $code_number) < 4) {
+			$code_number = "0" . $code_number;
+		}
+
+		$register_no = "IMCVP2024". "-" . $code_number;
+	}
 	$name = $data["first_name"]." ".$data["last_name"] ?? "-";
 	$nation = $data["nation_en"] ?? "-";
 	$total_price = ($data["nation_no"] == 25) ? "KRW ".$data["total_price_kr_text"] : "USD ".$data["total_price_us_text"];
@@ -82,7 +94,6 @@
 								</tr>
 								<tr>
 									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Registration Fee</th>
-<!--									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;">--><?php //= $total_price ?><!--</td>-->
 									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;"><?= number_format($data['price']) ?></td>
 								</tr>
 								<tr>
@@ -139,5 +150,24 @@
 		}
 	?>
 </div>
+<div class="btn_wrap" style="max-width:800px; text-align:center;">
+    <button type="button" class="btn update_btn pop_save_btn" onclick="CreatePDFfromHTML()">Save</button>
+</div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+<script>
+    function CreatePDFfromHTML() {
+        const buttonBox = document.querySelector(".btn_wrap");
+        const button = document.querySelector(".update_btn");
+
+        buttonBox.removeChild(button)
+        let doc = new jsPDF('p', 'mm', 'a4');
+
+        doc.addHTML(document.body, function() {
+            doc.save('receipt.pdf');
+        });
+    }
+</script>
 </html>

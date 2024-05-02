@@ -233,8 +233,8 @@
 
 		//논문 - 제출
 		"abstract_submit_tit1" => "Fill out personal information and autor's information",
-		"abstract_submit_tit2" => "Complete abstract",
-		"abstract_status_tit" => "Abstract Submission Status",
+		"abstract_submit_tit2" => "Fill our the abstract section",
+		"abstract_status_tit" => "Review",
 		"abstract_authors_tit" => "Authors",
 		"abstract_submit_msg" => "Abstract reception has been completed.<br>Please confirm that an e-mail will be sent to you regarding the completion of the reception.", //추가할 것
 		"abstract_item_position" => "Position",
@@ -734,7 +734,7 @@
 		"mypage_abstract" => "Abstract",
 
 		"cancellation_tit" => "Cancellation Policy",
-		"submit_completed_tit" => "Completed!",
+		"submit_completed_tit" => "Review",
 
 		//버튼
 		"save_btn" => "Save",

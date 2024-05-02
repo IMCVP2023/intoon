@@ -120,6 +120,8 @@ a.underline {text-decoration: underline !important;}
 .regi_fee {display:flex; align-items:center; margin-bottom: -1px;}
 .italic {font-style:italic;}
 .font_b {font-weight:bold !important;}
+.under{text-underline-position: under;}
+.violet_t{color: purple;}
 
 /* title */
 .sub_section_title{font-size:20px;display:inline-block;background:#ADF002;color:#000;padding:6px 28px;border-radius:20px;}

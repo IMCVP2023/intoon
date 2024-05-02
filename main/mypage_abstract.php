@@ -47,13 +47,29 @@ $end_row = $paging_admin['end_row'];
 ?>
 
 <section class="container mypage sub_page">
-<h1 class="page_title">Mypage</h1>
+<div class="sub_background_box">
+		<div class="sub_inner">
+			<div>
+				<h2>My page</h2>
+				<ul>
+					<li>Home</li>
+					<li>Mypage</li>
+					<li>Abstract</li>
+				</ul>
+			</div>
+		</div>
+	</div>
     <div class="inner bottom_short">
-        <ul class="tab_green">
+        <div class="sub_menu_box">
+			<div><a href="./mypage.php">Account</a></div>
+			<div><a href="./mypage_registration.php">Registration</a></div>
+			<div class="on"><a href="./mypage_abstract.php">Abstract</a></div>
+		</div>
+        <!-- <ul class="tab_green">
 			<li><a href="./mypage.php">Account</a></li>
 			<li><a href="./mypage_registration.php">Registration</a></li>
 			<li class="on"><a href="./mypage_abstract.php">Abstract</a></li>
-		</ul>
+		</ul> -->
         <!-- <div class="sub_banner"> -->
         <!-- 	<h1>Mypage</h1> -->
         <!-- </div> -->

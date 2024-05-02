@@ -309,18 +309,18 @@
 	<div class="sub_background_box">
 		<div class="sub_inner">
 			<div>
-				<h2>My page</h2>
+				<h2>Sign Up</h2>
 				<ul>
 					<li>Home</li>
-					<li>Mypage</li>
-					<li>Account</li>
+					<li>Sign Up</li>
+					<li>Sign Up</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="inner">
-		<div class="sub_background_box">
-		<div class="sub_inner">
+		<div class="">
+		<div class="">
 			<div>
 				<!-- 브래드스크럼
 				<ul>
@@ -334,7 +334,7 @@
 				<h3 class="title">Use of Personal Information</h3>
 				<div class="term_box">
 					<strong>Purpose</strong>
-					<p>Korean Society of Cardiovascular Disease Prevention (KSCP) provides online pre-registration services for IMCVP 2023. Based on your personal information, you can sign up for the conference and complete the payment for registration.</p>
+					<p>Korean Society of Cardiovascular Disease Prevention (KSCP) provides online pre-registration services for IMCVP 2024. Based on your personal information, you can sign up for the conference and complete the payment for registration.</p>
 					<strong>Collecting Personal Information</strong>
 					<p>IMCVP 2024 requires you to provide your personal information to complete pre-registration online. You will be asked to enter your name, ID (email), password, date of birth, institution/organization, department, mobile, and telephone number.</p>
 					<strong>Storing Personal Information</strong>

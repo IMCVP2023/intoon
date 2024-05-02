@@ -36,7 +36,7 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
             <li class="on"><a href="./abstract_submission.php">
                     <!--<?= $locale("abstract_menu2") ?>-->Online Submission
                 </a></li>
-            <!--<li><a href="./award.php"><!--<?= $locale("abstract_menu3") ?>Awards & Grants</a></li>-->
+            <!--<li><a href="./award.php"><?= $locale("abstract_menu3") ?>Awards & Grants</a></li>-->
         </ul>
         <section class="coming">
             <div class="container">
@@ -58,11 +58,12 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
 
     // 사전 등록이 된 유저인지 확인
     // 사전 등록 안 해도 제출 가능 하게 바뀌었음으로 주석처리
-    //$registration_idx = check_registration($user_info["idx"]);
-    //if(!$registration_idx) {
-    //	echo "<script>alert(locale(language.value)('check_registration')); location.href=PATH+'registration_guidelines.php'</script>";
-    //	exit;
-    //}
+    $registration_idx = check_registration($_SESSION["USER"]["idx"]);
+    if(!$registration_idx) {
+    	echo "<script>alert(locale(language.value)('check_registration')); location.href=PATH+'registration_guidelines.php'</script>";
+    	exit;
+    }
+
 
     // detail
     $sql_detail = "
@@ -168,13 +169,13 @@ var g5_editor_url = "<?= $editor_url ?>",
                         <p>• Submitter is responsible for typing errors.</p>
                         <p>• If you click the 'Save and Next' button, the abstract will be temporarily
                             saved.</p>
-                        <p>• Temporarily saved contents can be modified & deleted on My page.</p>
+                        <p>• Temporarily saved contents can be modified & deleted on My IMCVP.</p>
                         <p>• Click the <span class="bold">'Submit'</span> button at the final step to complete the submission.</p>
-                        <p>• 'Abstract Submission No.' will be issued once you complete your submission.
+                        <p>• <span class="bold">'Abstract Submission No.'</span> will be issued once you complete your submission.
                         </p>
-                        <p class="red_txt bold" style="font-size:18px">• Please note: You can modify the
+                        <!-- <p class="red_txt bold" style="font-size:18px">• Please note: You can modify the
                             submitted abstract until the deadline.
-                        </p>
+                        </p> -->
                     </div>
                     <div class="x_scroll">
                         <table class="table green_table">
@@ -190,11 +191,12 @@ var g5_editor_url = "<?= $editor_url ?>",
                                         <input type="radio" class="radio" id="preferred_presentation_type_0"
                                             name="preferred_presentation_type" value="0"
                                             <?= ($detail['preferred_presentation_type'] == "0" ? "checked" : "") ?>>
-                                        <label for="preferred_presentation_type_0">Oral or Poster</label> 
+                                        <label for="preferred_presentation_type_0">Poster Oral</label> 
                                         <input checked type="radio" class="radio" id="preferred_presentation_type_1"
                                             name="preferred_presentation_type" value="1"
                                             <?= ($detail['preferred_presentation_type'] == "1" ? "checked" : "") ?>>
-                                        <label for="preferred_presentation_type_1">Poster</label>
+                                        <label for="preferred_presentation_type_1">Poster exhibitions only</label>
+                                        <input type="checkbox" class="checkbox" id="abstract_agree"/><label for="abstract_agree">I agree to change the presentation type if requested by the Scientific Program Committee. </label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -202,8 +204,7 @@ var g5_editor_url = "<?= $editor_url ?>",
                                     <td class="half">
                                         <select name="topic1"
                                             id=""><?= get_topic1_option_text($topic1_list, $detail['topic']) ?></select>
-                                        <select name="topic2"
-                                            id=""><?= get_topic2_option_text($topic2_list, $detail['topic_detail'], $detail['topic']) ?></select>
+                                       
                                     </td>
                                 </tr>
                                 <tr>
@@ -296,7 +297,7 @@ var g5_editor_url = "<?= $editor_url ?>",
                         <table class="table green_table file_table">
                             <tbody>
                                 <?php
-                                    for ($i = 1; $i <= 2; $i++) {
+                                    for ($i = 1; $i <= 5; $i++) {
                                         $idx = $detail['image' . $i . '_idx'];
                                         $file_name = $detail['image' . $i . '_original_name'];
                                         $caption = $detail['image' . $i . '_caption'];
@@ -325,10 +326,9 @@ var g5_editor_url = "<?= $editor_url ?>",
                                 <?php
                                     }
                                     ?>
-                                <tr style="display:none">
+                                <tr>
                                     <td colspan="2">
-                                        <p>Have you submitted this abstract or an abstract of a similar topic at another
-                                            conference?</p>
+                                        <p>Have you submitted this abstract or ab abstract of a similar topic at another conference?</p>
                                         <input type="radio" class="radio" name="similar_yn" id="similar_yn_y" value="Y"
                                             <?= $detail['similar_yn'] == "Y" ? "checked" : "" ?>>
                                         <label for="similar_yn_y">yes</label>
@@ -337,10 +337,9 @@ var g5_editor_url = "<?= $editor_url ?>",
                                         <label for="similar_yn_n">no</label>
                                     </td>
                                 </tr>
-                                <tr style="display:none">
+                                <tr>
                                     <td colspan="2">
-                                        <p>This research is supported by the grant of Korean Society of Lipid and
-                                            Atherosclerosis.</p>
+                                        <p>This research is supported by the grant of Korean Society of Cardiovascular Disease Prevention</p>
                                         <input checkd type="radio" class="radio" name="support_yn" id="support_yn_y"
                                             value="Y" <?= $detail['support_yn'] == "Y" ? "checked" : "" ?>>
                                         <label for="support_yn_y">yes</label>
@@ -349,7 +348,7 @@ var g5_editor_url = "<?= $editor_url ?>",
                                         <label for="support_yn_n">no</label>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="display:none">
                                     <td colspan="2">
                                         <?php
                                             $travel_grants_y_flag = ($detail['travel_grants_yn'] == "Y");
@@ -473,7 +472,7 @@ var g5_editor_url = "<?= $editor_url ?>",
 <!----------------------- 퍼블리싱 구분선 ----------------------->
 
 <script>
-// const submission_idx = '<?php echo $submission_idx; ?>';
+const submission_idx = '<?php echo $submission_idx; ?>';
 const editor_setting_seconds = 5000;
 
 $(document).ready(function() {
@@ -535,15 +534,15 @@ $(".green_open").click(function() {
 $('select[name=topic1]').change(function() {
     var selected_value = $('select[name=topic1] option:selected').val();
 
-    if (selected_value < 5) {
-        $('select[name=topic2]').show();
-    } else {
-        $('select[name=topic2]').hide();
-    }
+    // if (selected_value < 5) {
+    //     $('select[name=topic2]').show();
+    // } else {
+    //     $('select[name=topic2]').hide();
+    // }
 
-    $('select[name=topic2] option').eq(0).prop('selected', true);
-    $('select[name=topic2] option').prop('hidden', true);
-    $('select[name=topic2] option[data-parent=' + selected_value + ']').prop('hidden', false);
+    // $('select[name=topic2] option').eq(0).prop('selected', true);
+    // $('select[name=topic2] option').prop('hidden', true);
+    // $('select[name=topic2] option[data-parent=' + selected_value + ']').prop('hidden', false);
 });
 
 // word_limit - title
@@ -719,6 +718,15 @@ $('.submit_btn').click(function() {
         alert('Please select the Presentation Type.');
         return false;
     }
+    if($('#abstract_agree:checked').length <= 0){
+        alert('Please check your agreement to change the type of presentation.');
+        window.scrollTo({
+                top:50,
+                left:0,
+                behavior:"smooth"
+            })
+        return false;
+    }
 
     // topic
     var topic1 = $('select[name=topic1] option:selected').val();
@@ -763,9 +771,9 @@ $('.submit_btn').click(function() {
     // image
     var file_image1 = $("input[name=abstract_file1]")[0];
     var file_image2 = $("input[name=abstract_file2]")[0];
-    // var file_image3 = $("input[name=abstract_file3]")[0];
-    // var file_image4 = $("input[name=abstract_file4]")[0];
-    // var file_image5 = $("input[name=abstract_file5]")[0];
+    var file_image3 = $("input[name=abstract_file3]")[0];
+    var file_image4 = $("input[name=abstract_file4]")[0];
+    var file_image5 = $("input[name=abstract_file5]")[0];
     if (file_image1.files[0] && $('input[name=abstract_file_caption1]').val() == "") {
         alert("Please enter Image 1 Caption.");
         return false;
@@ -773,20 +781,19 @@ $('.submit_btn').click(function() {
     } else if (file_image2.files[0] && $('input[name=abstract_file_caption2]').val() == "") {
         alert("Please enter Image 2 Caption.");
         return false;
+    
+    } else if (file_image3.files[0] && $('input[name=abstract_file_caption3]').val() == "") {
+        alert("Please enter Image 3 Caption.");
+        return false;
+
+    } else if (file_image4.files[0] && $('input[name=abstract_file_caption4]').val() == "") {
+        alert("Please enter Image 4 Caption.");
+        return false;
+
+    } else if (file_image5.files[0] && $('input[name=abstract_file_caption5]').val() == "") {
+        alert("Please enter Image 5 Caption.");
+        return false;
     }
-
-    // } else if (file_image3.files[0] && $('input[name=abstract_file_caption3]').val() == "") {
-    //     alert("Please enter Image 3 Caption.");
-    //     return false;
-
-    // } else if (file_image4.files[0] && $('input[name=abstract_file_caption4]').val() == "") {
-    //     alert("Please enter Image 4 Caption.");
-    //     return false;
-
-    // } else if (file_image5.files[0] && $('input[name=abstract_file_caption5]').val() == "") {
-    //     alert("Please enter Image 5 Caption.");
-    //     return false;
-    // }
 
     // similar_yn
     var similar_yn_flag = $('input[name=similar_yn]:checked').length <= 0
@@ -797,8 +804,8 @@ $('.submit_btn').click(function() {
 
     // support_yn
     var support_yn_flag = $('input[name=support_yn]:checked').length <= 0
-    if (!support_yn_flag) {
-        // alert('This research is supported by the grant of Korean Society of Lipid and Atherosclerosis.');
+    if (support_yn_flag) {
+        alert('This research is supported by the grant of Korean Society of Cardiovascular Disease Prevention');
         return false;
     }
 
@@ -820,7 +827,9 @@ $('.submit_btn').click(function() {
         .val());
 
     formdata.append('topic1', topic1);
-    formdata.append('topic2', topic2);
+    //[240502] sujeong / 부주제 없음 / undefined 방지
+    formdata.append('topic2', "None");
+    // formdata.append('topic2', topic2);
 
     formdata.append('title', title_editor_data);
     formdata.append('objectives', objectives_editor_data);
@@ -863,24 +872,24 @@ $('.submit_btn').click(function() {
         formdata.append("abstract_file2", file_image2.files[0]);
         formdata.append("abstract_caption2", $('input[name=abstract_file_caption2]').val());
     }
-    // if (file_image3.files[0]) {
-    //     formdata.append("abstract_file3", file_image3.files[0]);
-    //     formdata.append("abstract_caption3", $('input[name=abstract_file_caption3]').val());
-    // }
-    // if (file_image4.files[0]) {
-    //     formdata.append("abstract_file4", file_image4.files[0]);
-    //     formdata.append("abstract_caption4", $('input[name=abstract_file_caption4]').val());
-    // }
-    // if (file_image5.files[0]) {
-    //     formdata.append("abstract_file5", file_image5.files[0]);
-    //     formdata.append("abstract_caption5", $('input[name=abstract_file_caption5]').val());
-    // }
+    if (file_image3.files[0]) {
+        formdata.append("abstract_file3", file_image3.files[0]);
+        formdata.append("abstract_caption3", $('input[name=abstract_file_caption3]').val());
+    }
+    if (file_image4.files[0]) {
+        formdata.append("abstract_file4", file_image4.files[0]);
+        formdata.append("abstract_caption4", $('input[name=abstract_file_caption4]').val());
+    }
+    if (file_image5.files[0]) {
+        formdata.append("abstract_file5", file_image5.files[0]);
+        formdata.append("abstract_caption5", $('input[name=abstract_file_caption5]').val());
+    }
 
     formdata.append('similar_yn', $('input[name=similar_yn]:checked').val());
 
     //[240418] support_yn 사용 X -> N으로 들어가도록 수정(기존 - undefined의 u 입력)
-    // formdata.append('support_yn', $('input[name=support_yn]:checked').val());
-    formdata.append('support_yn', "N");
+    formdata.append('support_yn', $('input[name=support_yn]:checked').val());
+    // formdata.append('support_yn', "N");
     formdata.append('travel_grants_yn', ($('input[name=travel_grants_yn]').prop('checked') ? "Y" : "N"));
     formdata.append('awards_yn', ($('input[name=awards_yn]').prop('checked') ? "Y" : "N"));
     formdata.append('investigator_grants_yn', ($('input[name=investigator_grants_yn]').prop('checked') ?"Y" :"N"));

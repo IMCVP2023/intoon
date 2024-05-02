@@ -240,7 +240,7 @@ if ($flag == "step1") {
 
 	$sql_file = "";
 	//[240125] sujeong / 파일 수 2개로 제한
-	for ($i = 1; $i <= 2; $i++) {
+	for ($i = 1; $i <= 5; $i++) {
 		$key_idx = "abstract_file_idx" . $i;
 		$idx = $_POST[$key_idx];
 
@@ -413,7 +413,7 @@ else if($flag == "etc1"){
 			UPDATE request_submission
 			SET
 				etc1 = '" . $etc1 . "', 
-				modify_date = NOW()
+				etc1_date = NOW()
 			WHERE idx = '" . $submission_idx . "'
 		";
 	$sql_update_result = sql_query($sql_update);
@@ -424,7 +424,7 @@ else if($flag == "etc1"){
 	return_value(200, 'submission update success');
 }
 
-//[240418] sujeong / 초록 심사 코드 etc2 추가
+//[240418] sujeong / 초록 채택 코드 etc2 추가
 else if($flag == "etc2"){
 	$submission_idx = $_POST['idx'];
 	$etc2 =  $_POST['etc2'];
