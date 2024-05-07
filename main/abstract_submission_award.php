@@ -7,26 +7,30 @@
     <div class="inner">
         <ul class="tab_green long abstract_submission">
             <li><a href="./abstract_submission_guideline.php">Submission Guidelines</a></li>
-            <li><a href="./abstract_submission.php" class="online_submission_alert">Online Submission</a></li>
-            <!-- <li><a href="./abstract_submission_oral.php">Oral Presenters</a></li> -->
-            <!-- <li><a href="./abstract_submission_exhibition.php">Poster Exhibition</a></li> -->
+            <li><a href="./abstract_submission.php">Online Submission</a></li>
             <li class="on"><a href="./abstract_submission_award.php">Awards & Grants</a></li>
         </ul>
 		<div class="section section1">
-			<!-- <div>
+			<div>
 				<div class="text_box">
 					<ul>
-						<li>The organizing committee of ICOMES 2023 has made the decision to offer benefits to all researchers who have accepted abstracts and will be participating in the on-site congress.</li>
+						<li>The organizing committee of IMCVP 2024 has made the decision to offer benefits to all researchers who have accepted abstracts and will be participating in the on-site congress.
+The secretariat will contact awardees individually.</li>
 					</ul>
+                    <p class="red_t">** This award is given regardless of nationality</p>
 				</div>
-			</div> -->
+			</div>
 			<!--Travel Grants start-->
 			<div>
-				<div class="section_title_wrap2">
-					<h3 class="title">Travel grants (for international participants only)</h3>
+				<div class="section_title_wrap2 mb10">
+					<h3 class="title">Best Oral/Poster Presentation Awards</h3>
+                    <ul>
+						<li>• Outstanding oral and poster presentations will be recognized and awarded during the closing ceremony.</li>
+						<li>• The winners will be notified individually of the results during the congress, and their attendance at the ceremony is mandatory.</li>
+					</ul>
 				</div>
 				<!-- <h4 class="title">Overseas</h4> -->
-				<div class="table_wrap detail_table_common x_scroll">
+				<div class="table_wrap detail_table_common x_scroll mb20">
 					<table class="c_table detail_table">
 						<colgroup>
 							<col class="submission_col">
@@ -34,23 +38,41 @@
 						</colgroup>
 						<thead>
 							<tr>
-								<th class="text_center">Target</th>
-								<th class="text_center">Amount</th>
-								<th class="text_center">Remarks</th>
+								<th class="text_center">Awards</th>
+								<th class="text_center">For international</th>
+								<th class="text_center">For domestic</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td class="text_center">Travel grants</td>
-								<td class="text_center">USD 500.00</td>
-								<td class="text_center">To be notified individually before the congress</td>
+								<td class="text_center">1 oral winner</td>
+								<td class="text_center">USD 400.00</td>
+								<td class="text_center">KRW 400,000</td>
+							</tr>
+                            <tr>
+								<td class="text_center">2 oral winner</td>
+								<td class="text_center">USD 300.00</td>
+								<td class="text_center">KRW 300,000</td>
+							</tr>
+                            <tr>
+								<td class="text_center">2 poster winner</td>
+								<td class="text_center">USD 200,00</td>
+								<td class="text_center">KRW 200,000</td>
 							</tr>
 						</tbody>
 					</table>
                 </div>
-				<p class="mt10 p_indent">• IMCVP 2024 offers travel grants to international participants who have submitted an abstract.</p>
+                <div class="section_title_wrap2">
+					<h3 class="title">Registration Support for Accepted Abstracts</h3>
+                    <ul>
+						<li>• Free registration for one person is offered for accepted abstracts.</li>
+						<li>• Registration fees will be fully refunded after the congress.</li>
+						<li>• On-site attendace is required.</li>
+					</ul>
+				</div>
+				<!-- <p class="mt10 p_indent">• IMCVP 2024 offers travel grants to international participants who have submitted an abstract.</p>
 				<p class="mt10 p_indent">• The Scientific Organizing Committee will nominate the travel grant recipients.</p>
-				<p class="mt10 p_indent">• Recipients of travel grants must attend the congress on-site.</p>
+				<p class="mt10 p_indent">• Recipients of travel grants must attend the congress on-site.</p> -->
 			</div>
 			<!--Travel Grants end-->
 			<!--Contact for Abstract start-->
@@ -121,10 +143,6 @@
 							<p>Step 4</p>
 							<p class="sm_txt">Complete the travel<br>grant application form<br>and submit on-site.</p>
 						</li>
-						<!-- <li>
-							<p>Step 5</p>
-							<p class="sm_txt">Receive notification of <br>application results <br>(within seven days after the <br>application deadline).</p>
-						</li> -->
 					</ul>
                     <p class="red_t">** This award will be automatically canceled when the awardee do not attend on-site.</p>
 				</div>
@@ -163,7 +181,7 @@
             </div>
              <!-- Certification end -->
 			<!--Oral Presentation start-->
-			<div>
+			<!-- <div>
 				<div class="section_title_wrap2">
 					<h3 class="title">Awards</h3>
 				</div>
@@ -175,45 +193,35 @@
 				</div>	
 				<ul class="award_list">
 					<li>
-						<!-- <img src="./img/icons/icon_award01.svg" alt=""> -->
 						<img src="./img/icons/icon_award01.png" alt="">
 						<p class="award_title">Best Oral Presentation </p>
-						<!-- <p>4 persons</p> -->
 						<p class="point3_txt">Single-digit Number of Winners<br/>Free Registration for ICOMES 2024</p>
 					</li>
 					<li>
-						<!-- <img src="./img/icons/icon_award02.svg" alt="">-->
 						<img src="./img/icons/icon_award02.png" alt="">
 						<p class="award_title">Excellent Poster Presentation</p>
-						<!-- <p>2 persons</p> -->
 						<p class="point3_txt">Single-digit Number of Winners<br/>Free Registartion for ICOMES 2024</p>
 					</li>
 					<li>
-						<!-- <img src="./img/icons/icon_award01.svg" alt="">-->
 						<img src="./img/icons/icon_award01.png" alt="">
 						<p class="award_title">Best Poster Presentation</p>
-						<!-- <p>2 persons</p> -->
 						<p class="point3_txt">Single-digit Number of Winners<br/>Free Registartion for ICOMES 2024</p>
 					</li>
 					<li>
-						<!-- <img src="./img/icons/icon_award02.svg" alt="">-->
 						<img src="./img/icons/icon_award02.png" alt="">
 						<p class="award_title">Excellent Oral Presentation</p>
-						<!-- <p>4 persons</p> -->
 						<p class="point3_txt">Single-digit Number of Winners<br/>Free Registartion for ICOMES 2024</p>
 					</li>
 					<li>
-						<!-- <img src="./img/icons/icon_award01.svg" alt="">-->
 						<img src="./img/icons/icon_award01.png" alt="">
 						<p class="award_title">Best Poster Exhibition</p>
-						<!-- <p>2 persons</p> -->
 						<p class="point3_txt">Single-digit Number of Winners<br/>Free Registration for ICOMES 2024</p>
 					</li>
 				</ul>
-			</div>
+			</div> -->
 			
 			<!--Oral Presentation end-->
-			<div>
+			<!-- <div>
 				<h3 class="title">Registration Support for Accepted Abstracts</h3>
 				<div class="text_box indent">
 					<ul>
@@ -222,7 +230,7 @@
 						<li>• On-site attendance is required.</li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 			<!--keydate start-->
 			<!-- <div> -->
 			<!-- 	<div> -->
