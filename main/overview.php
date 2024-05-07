@@ -50,113 +50,96 @@ $floor = get_data($sql_floor);
 ?>
 
 <section class="container overview">
-	<!-- HUBDNCLHJ : app 메뉴 탭 -->
-<!-- 	<div class="app_title_box"> -->
-<!-- 		<h2 class="app_title">ICOMES 2023<button type="button" class="app_title_prev" onclick="javascript:window.location.href='./app_index.php';"><img src="/main/img/icons/icon_arrow_prev_wh.svg" alt="이전페이지로 이동"></button></h2> -->
-<!-- 		<ul class="app_menu_tab"> -->
-<!-- 			<li><a href="./welcome.php">Welcome Message</a></li> -->
-<!-- 			<li><a href="./organizing_committee.php">Organization</a></li> -->
-<!-- 			<li class="on"><a href="./overview.php">Overview</a></li> -->
-<!-- 			<li><a href="./venue.php">Venue</a></li> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
 	<h1 class="page_title">Overview</h1>
     <div class="table_wrap x_scroll inner">
+		<h3 class="title">Overview</h3>
          <table class="c_table2 detail_table">
              <colgroup>
-                 <col width="235px">
+                 <col width="280px">
                  <col width="*">
              </colgroup>
              <tr>
                  <th>Title</th>
                  <td>
-                     <!--<?= htmlspecialchars_decode($info['title']) ?>-->
-                     <b>ICOMES 2023</b>(2023 International Congress on Obesity and MEtabolic Syndrome)
+				 	2024 International Meeting of Cardio Vascular disease Prevention
+                 </td>
+             </tr>
+			 <tr>
+                 <th>Abbreviation of the title</th>
+                 <td>
+				 	IMCVP 2024
                  </td>
              </tr>
              <tr>
                  <th>Date</th>
                  <td>
-                     <!-- <?= date_format(date_create($info['period_event_start']), "M, j(D)") ?> ~
-                     <?= date_format(date_create($info['period_event_end']), "M, j(D)  Y") ?> -->
-                     September 7(Thu) ~ 9(Sat), 2023
+				 	Friday, November 29, 2024 ~ Saturday, November 30, 2024
                  </td>
              </tr>
              <tr>
                  <th>Venue</th>
                  <td>
-                     <!--<?= htmlspecialchars_decode($info['venue_name']) ?>-->
-                     Conrad Seoul Hotel, Republic of Korea
+				 	Grand Walkerhill Seoul, Republic of Korea
                  </td>
              </tr>
              <tr>
-                 <th>Organized By</th>
+                 <th>Hosted by</th>
                  <td>
-                     <?= htmlspecialchars_decode($info['overview_organized']) ?> (KSCP)
-                     <!--Korean Society for the Study of Obesity-->
+				 	Korean Society of Cardiovascular Disease Prevention(KSCP)
                  </td>
              </tr>
-             <tr>
+             <!-- <tr>
                  <th>Theme</th>
                  <td>
                      Now is the Time to Conquer Obesity
-
-                     <!-- <?= htmlspecialchars_decode($info['overview_theme']) ?> -->
-
-                     <!--The Next Normal: The Future of Obesity Care	-->
                  </td>
-             </tr>
+             </tr> -->
              <tr>
                  <th>Official Language</th>
                  <td>
-                     <?= htmlspecialchars_decode($info['overview_official_language']) ?>
-                     <!--English	-->
+                     English	
+                 </td>
+             </tr>
+			 <tr>
+                 <th>Official website</th>
+                 <td>
+                     <a href="http://imcvp.org" class="link under">http://imcvp.org</a>
                  </td>
              </tr>
              <tr>
-                 <th>Secretariat</th>
+                 <th>IMCVP 2024 Secretariat</th>
                  <td>
-                     <!--<?= htmlspecialchars_decode($info['overview_secretariat']) ?>-->
-                     A-Block Richensia 4F, 341 Baekbeom-ro, Yongsan-gu, Seoul 04315, Korea
-                     <br>Tel : +82-2-2285-2582 / Email : icomes@into-on.com
-
+                   <a href="mailto:info@imcvp.org" class="link under">info@imcvp.org</a>
                  </td>
              </tr>
          </table>
-    </div>
-	<!--
-       <div class="sub_banner">
-            <h1>Floor Plan </h1>
-       </div>
-	-->
-       <?php
-	/*$inner_li = "";
-
-	for ($i = 0; $i < count($floor); $i++) {
-		$inner_div = "";
-		$fl = $floor[$i];
-
-		$sql_urls =	"SELECT
-							GROUP_CONCAT(CONCAT(fi_igvfi.path, '/', fi_igvfi.save_name)) AS urls
-						FROM info_general_venue_floor_img AS igvfi
-						LEFT JOIN `file` AS fi_igvfi
-							ON fi_igvfi.idx = igvfi.img
-						WHERE igvfi.is_deleted = 'N'
-						AND igvfi.floor_idx = '" . $fl['idx'] . "'";
-		$urls = sql_fetch($sql_urls)['urls'];
-
-		$class_active = "";
-		$style_display = "";
-		if ($i == 0) {
-			$class_active = "active";
-			$style_display = "display: block;";
-		}
-
-		$inner_div .= '<div class="floor_cont_img"><img src="' . $fl['fi_url'] . '"></div>';
-		$inner_li .= '<li class="floor_cont"><p>' . $fl['name'] . '</p>' . $inner_div . '</li>';
-	}*/
-	?>
-       <!-- <ul><?= $inner_li ?></ul> -->
+		</div>
+		<div class="table_wrap x_scroll inner">
+			<h3 class="title">Important dates</h3>
+			<table class="c_table2 detail_table">
+				<colgroup>
+					<col width="280px">
+					<col width="*">
+				</colgroup>
+				<tr>
+					<th>Abstract submission deadline 1<sup class="font_small">st</sup></th>
+					<td>Sunday, August 18, 2024</td>
+				</tr>
+				<tr>
+					<th>Abstract submission deadline 2<sup class="font_small">nd</sup></th>
+					<td>Sunday, October 6, 2024</td>
+				</tr>
+				<tr>
+					<th>Notification of abstract acceptance</th>
+					<td>Wednesday, October 16, 2024</td>
+				</tr>
+				<tr>
+					<th>Pre-registration deadline</th>
+					<td>Sunday, September 1, 2024</td>
+				</tr>
+			</table>
+		</div>
+	
 </section>
 
 <?php include_once('./include/footer.php'); ?>

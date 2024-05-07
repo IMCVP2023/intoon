@@ -39,9 +39,9 @@
 						</ul>
 						<ul class="category">
 							<li><a href="#" class="click_sumbit">Plenary Lectures</a></li>
-							<li><a href="#" class="click_sumbit">Symposia</a></li>
-							<li><a href="#" class="click_sumbit">Workshops</a></li>
-							<li><a href="#" class="click_sumbit">Joint Symposia</a></li>
+							<li><a href="#" class="click_sumbit">Symposium</a></li>
+							<li><a href="#" class="click_sumbit">Sponsors session</a></li>
+							<!-- <li><a href="#" class="click_sumbit">Joint Symposia</a></li> -->
 						</ul>
 					</div>
 					<div class="bg">

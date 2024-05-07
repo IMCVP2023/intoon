@@ -51,9 +51,8 @@ $add_section_class = (!empty($session_user) && $session_app_type == 'Y') ? 'app_
             <div class="table_wrap">
                 <table class="c_table2 center_table fixed_table">
                     <colgroup>
-                        <col width="*">
+                        <col width="380px">
                         <col width="200px">
-                        <col width="*">
                         <col width="*">
                     </colgroup>
                     <thead>
@@ -61,384 +60,335 @@ $add_section_class = (!empty($session_user) && $session_app_type == 'Y') ? 'app_
                             <th>Title</th>
                             <th>Name</th>
                             <th>Affiliation</th>
-                            <th>Specialty</th>
                         </tr>
                     </thead>
                     <tbody class="cat1">
                         <!-- <img class="coming" src="./img/coming.png" /> -->
                         <tr>
-                            <th>Chairman</th>
-                            <td>Sung Soo Kim</td>
-                            <td>Chungnam National University</td>
-                            <td>Family Medicine</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Vice-chairman</th>
-                            <td>Kyoung-Kon Kim</td>
-                            <td>Gachon University</td>
-                            <td>Family Medicine</td>
-                        </tr>
-                        <tr>
-                            <td>Eun Mi Kim</td>
-                            <td>Kangbuk Samsung Hospital</td>
-                            <td>Nutrition Team</td>
-                        </tr>
-                        <tr>
-                            <td>Yun-A Shin</td>
-                            <td>Dankook University</td>
-                            <td>International Sports Studies</td>
-                        </tr>
-                        <tr>
                             <th>President</th>
-                            <td>Cheol-Young Park</td>
-                            <td>Sungkyunkwan University</td>
-                            <td>Endocrinology</td>
+                            <td>Won Young Lee</td>
+                            <td>Sungkyunkwan University, Korea</td>
                         </tr>
                         <tr>
-                            <th>General Affairs</th>
-                            <td>Sang Mo Hong</td>
-                            <td>Hanyang University</td>
-                            <td>Endocrinology</td>
+                            <th rowspan="4">Vice-president</th>
+                            <td>Kyung-Yul Lee</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <th rowspan="7">Vice-Secretary General</th>
-                            <td>Kyung-Soo Kim</td>
-                            <td>CHA University</td>
-                            <td>Internal Medicine</td>
+                            <td>Sang Hyun Ihm</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <td>Yun Kyung Cho</td>
-                            <td>University of Ulsan</td>
-                            <td>Endocrinology</td>
+                            <td>Dae-Jung Kim</td>
+                            <td>Ajou University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Young Sang Lyu</td>
-                            <td>Chosun University</td>
-                            <td>Endocrinology</td>
+                            <td>Hyuk Sang Kwon</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <td>Kye-Yeung Park</td>
-                            <td>Hanyang University</td>
-                            <td>Family Medicine</td>
+                            <th>Secretory General</th>
+                            <td>Eun-Jung Rhee</td>
+                            <td>Sungkyunkwan University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Jae Hyun Bae</td>
-                            <td>Korea University</td>
-                            <td>Endocrinology</td>
-                        </tr>
-                        <tr>
+                            <th rowspan="3">Vice Secretory General</th>
                             <td>Jun Hwa Hong</td>
-                            <td>Eulji University</td>
-                            <td>Endocrinology</td>
+                            <td>Eulji University Hospital, Korea</td>
                         </tr>
                         <tr>
-                            <td>Byoungduck Han</td>
-                            <td>Korea University</td>
-                            <td>Family Medicine</td>
+                            <td>Dae Young Cheon</td>
+                            <td>Hallym University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Academic Affairs</th>
-                            <td>Soo Lim</td>
-                            <td>Seoul National University</td>
-                            <td>Endocrinology</td>
-                        </tr>
-                        <tr>
-                            <th>Publications</th>
-                            <td>You-Cheol Hwang</td>
-                            <td>Kyung Hee University</td>
-                            <td>Endocrinology</td>
-                        </tr>
-                        <tr>
-                            <th>Training</th>
-                            <td>Jee-Hyun Kang</td>
-                            <td>Konyang University</td>
-                            <td>Family Medicine</td>
-                        </tr>
-                        <tr>
-                            <th>Research (Clinical)</th>
-                            <td>Jang Won Son</td>
-                            <td>Catholic University of Korea</td>
-                            <td>Endocrinology</td>
-                        </tr>
-                        <tr>
-                            <th>Research (Basic)</th>
-                            <td>Ki Woo Kim</td>
-                            <td>Yonsei University</td>
-                            <td>Dentistry</td>
-                        </tr>
-                        <tr>
-                            <th>Education</th>
-                            <td>Hae-Jin Ko</td>
-                            <td>Kyungpook National University</td>
-                            <td>Family Medicine</td>
-                        </tr>
-                        <tr>
-                            <th>Public Relations</th>
-                            <td>Yang-Im Hur</td>
-                            <td>CHA University</td>
-                            <td>Family Medicine</td>
-                        </tr>
-                        <tr>
-                            <th>Strategic Planning</th>
-                            <td>Sang-Yong Kim</td>
-                            <td>Chosun University</td>
-                            <td>Endocrinology</td>
-                        </tr>
-                        <tr>
-                            <th>External Affairs and Policy</th>
-                            <td>Jeong Hwan Park</td>
-                            <td>Hanyang University</td>
-                            <td>Endocrinology</td>
+                            <td>Kwon-Duk Seo</td>
+                            <td>National Health Insurance Service Ilsan Hospital, Korea</td>
                         </tr>
                         <tr>
                             <th>Treasurer</th>
-                            <td>Kiyoung Lee</td>
-                            <td>Gachon University</td>
-                            <td>Endocrinology</td>
+                            <td>Jae Hyuk Lee</td>
+                            <td>Hanyang University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Information</th>
-                            <td>Yoon Jeong Cho</td>
-                            <td>Daegu Catholic University</td>
-                            <td>Family Medicine</td>
+                            <th>Scientific Program Committee</th>
+                            <td>Seung-Hyun Ko</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <th>International Relations</th>
-                            <td>Chang Hee Jung</td>
-                            <td>University of Ulsan</td>
-                            <td>Endocrinology</td>
+                            <th>International Liaison Committee</th>
+                            <td>Hyeon Chang Kim</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Private Practice</th>
-                            <td>Changhyun Lee</td>
-                            <td>Seoul Happiness Clinic of Internal Medicine</td>
-                            <td>Gastroenterology</td>
+                            <th>Local Liaison Committee</th>
+                            <td>Jong-Chan Youn</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <th>Health Insurance and Legislation</th>
-                            <td>Ga Eun Nam</td>
-                            <td>Korea University</td>
-                            <td>Family Medicine</td>
+                            <th>Public Relation Committee</th>
+                            <td>Mee-Kyung Kim</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <th>IT Integrated Metabolic Syndrome</th>
-                            <td>Sang Youl Rhee</td>
-                            <td>Kyung Hee University</td>
-                            <td>Endocrinology</td>
+                            <th>Information Technology Committee</th>
+                            <td>Sungha Park</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Clinical Guidelines</th>
-                            <td>Hyuktae Kwon</td>
-                            <td>Seoul National University</td>
-                            <td>Family Medicine</td>
+                            <th>Registration Committee</th>
+                            <td>Yo-han Jeong</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Food and Nutrition</th>
-                            <td>Jeong Hyun Lim</td>
-                            <td>Seoul National University Hospital</td>
-                            <td>Food Service and Nutrition Care</td>
+                            <th>Accommodation & Transportation Committee</th>
+                            <td>Hun-Jun Park</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <th>Exercise</th>
-                            <td>Jong-Hee Kim</td>
-                            <td>Hanyang University</td>
-                            <td>Physical Education</td>
+                            <th>Sponsorship and Exhibition Committee</th>
+                            <td>Hae-Young Lee</td>
+                            <td>Seoul National University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Behavioral Therapy</th>
-                            <td>Chang Woo Han</td>
-                            <td>Hanyang University</td>
-                            <td>Psychiatry</td>
+                            <th>Protocol and Social Program Committee</th>
+                            <td>Sung-Hee Choi</td>
+                            <td>Seoul National University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Bariatric Surgery</th>
-                            <td>Sang-Moon Han</td>
-                            <td>Seoul Medical Center</td>
-                            <td>Surgery</td>
+                            <th>Publication Committee</th>
+                            <td>Junghyun Noh</td>
+                            <td>Inje University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Childhood and Adolescence</th>
-                            <td>Yong Hee Hong</td>
-                            <td>Soonchunhyang University</td>
-                            <td>Pediatrics</td>
+                            <th>Auditor</th>
+                            <td>Jeong-Min Lee</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <th>Committee of Big Data</th>
-                            <td>Kyung Do Han</td>
-                            <td>Soongsil University</td>
-                            <td>Statistics and Actuarial Science</td>
+                            <th rowspan="18">Domestic Faculty</th>
+                            <td>Seong-Hoon Choi</td>
+                            <td>Hallym University, Korea</td>
                         </tr>
                         <tr>
-                            <th>Handbook of Obesity TFT</th>
-                            <td>Hyuk-Sang Kwon</td>
-                            <td>Catholic University of Korea</td>
-                            <td>Endocrinology</td>
+                            <td>Sang-Ho Jo</td>
+                            <td>Hallym University, Korea</td>
                         </tr>
                         <tr>
-                            <th rowspan="2">Audit</th>
-                            <td>Jun Goo Kang</td>
-                            <td>Hallym University</td>
-                            <td>Endocrinology</td>
+                            <td>Sang Hak Lee</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <td>SoChung Chung</td>
-                            <td>Konkuk University</td>
-                            <td>Pediatrics</td>
+                            <td>Sang Won Han</td>
+                            <td>Inje University, Korea</td>
                         </tr>
+                        <tr>
+                            <td>Hyung-Min Kwon</td>
+                            <td>Seoul National University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Woo-Baek Chung</td>
+                            <td>The Catholic University of Korea, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Song Vogue Ahn</td>
+                            <td>Ewha Womans University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Jae-sun Eom</td>
+                            <td>Yonsei University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Min-ho Shin</td>
+                            <td>Chonnam National University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Kyung-Do Han</td>
+                            <td>Soongsil University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>JeongHyun Lim</td>
+                            <td>Seoul National University Hospital, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Kwang Joon Kim</td>
+                            <td>Yonsei University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Jong-Yun Lee</td>
+                            <td>National Medical Center, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Hun-Sung Kim</td>
+                            <td>The Catholic University of Korea, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Jong-Young Lee</td>
+                            <td>Sungkyunkwan University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Bum-Soon Choi</td>
+                            <td>The Catholic University of Korea, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Suk Chon</td>
+                            <td>Kyung Hee University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Jin Oh Na</td>
+                            <td>Korea University, Korea</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-			<h3 class="title">Scientific Program Committee</h3>
+
+            <!-- [240502] sujeong / 미확정 주석처리 -->
+			<!-- <h3 class="title">Scientific Program Committee</h3>
             <div class="table_wrap">
                 <table class="c_table2">
                     <colgroup>
-                        <col width="18%">
-                        <col width="20%">
-                        <col width="62%">
+                        <col width="380px">
+                        <col width="200px">
+                        <col width="*">
                     </colgroup>
 					<thead>
 						<tr>
 							<th>Title</th>
 							<th>Name</th>
 							<th>Affiliation</th>
-							<th>Specialty</th>
 						</tr>
 					</thead>
                     <tbody class="cat2">
-                        <!-- <img class="coming" src="./img/coming.png" /> -->
                         <tr>
-                            <th>Director</th>
-                            <td>Soo Lim</td>
-                            <td>Seoul National University</td>
-							<td>Endocrinology</td>
+                            <th>Scientific Program Committee</th>
+                            <td>Seung-Hyun Ko</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <th>Coordinator</th>
-                            <td>Jang Won Son</td>
-                            <td>The Catholic University of Korea</td>
-							<td>Endocrinology</td>
+                            <th>International Liaison Committee</th>
+                            <td>Hyeon Chang Kim</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <th rowspan="2">Assistant Coordinator</th>
-                            <td>Jun Hwa Hong</td>
-                            <td>Eulji University</td>
-                            <td>Endocrinology</td>
+                            <th>Local Liaison Committee</th>
+                            <td>Jong-Chan Youn</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <td>Jin-Wook Kim</td>
-                            <td>Hippocrata Clinic</td>
-                            <td>Family Medicine</td>
+                            <th>Public Relation Committee</th>
+                            <td>Mee-Kyung Kim</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <th rowspan="21">Members</th>
-                            <td>Jun Sung Moon</td>
-                            <td>Yeungnam University</td>
-							<td>Internal Medicine</td>
+                            <th>Information Technology Committee</th>
+                            <td>Sungha Park</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Seung-Hwan Lee</td>
-                            <td>The Catholic University of Korea</td>
-							<td>Endocrinology</td>
+                            <th>Registration Committee</th>
+                            <td>Yo-han Jeong</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Chang Hee Jung</td>
-                            <td>University of Ulsan</td>
-							<td>Endocrinology</td>
+                            <th>Accommodation & Transportation Committee</th>
+                            <td>Hun-Jun Park</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <td>Ji Won Yoon</td>
-                            <td>Seoul National University</td>
-							<td>Internal Medicine</td>
+                            <th>Sponsorship and Exhibition Committee</th>
+                            <td>Hae-Young Lee</td>
+                            <td>Seoul National University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Jae Hyun Bae</td>
-                            <td>Korea University</td>
-							<td>Endocrinology</td>
+                            <th>Protocol and Social Program Committee</th>
+                            <td>Sung-Hee Choi</td>
+                            <td>Seoul National University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Kyung Ae Lee</td>
-                            <td>Jeonbuk National University</td>
-							<td>Endocrinology</td>
+                            <th>Publication Committee</th>
+                            <td>Junghyun Noh</td>
+                            <td>Inje University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Kyung Hee Park</td>
-                            <td>Hallym University</td>
-							<td>Family Medicine</td>
+                            <th>Auditor</th>
+                            <td>Jeong-Min Lee</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <td>Ga Eun Nam</td>
-                            <td>Korea University</td>
-							<td>Family Medicine</td>
+                            <th rowspan="18">Domestic Faculty</th>
+                            <td>Seong-Hoon Choi</td>
+                            <td>Hallym University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Bumjo Oh</td>
-                            <td>Seoul National University</td>
-							<td>Family Medicine</td>
+                            <td>Sang-Ho Jo</td>
+                            <td>Hallym University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Yoon Jeong Cho</td>
-                            <td>Daegu Catholic University</td>
-							<td>Family Medicine</td>
+                            <td>Sang Hak Lee</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Hyuktae Kwon</td>
-                            <td>Seoul National University</td>
-							<td>Family Medicine</td>
+                            <td>Sang Won Han</td>
+                            <td>Inje University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Hye Yeon Koo</td>
-                            <td>Seoul National University</td>
-							<td>Family Medicine</td>
+                            <td>Hyung-Min Kwon</td>
+                            <td>Seoul National University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Hyung Jin Choi</td>
-                            <td>Seoul National University</td>
-							<td>Anatomy and Cell Biology</td>
+                            <td>Woo-Baek Chung</td>
+                            <td>The Catholic University of Korea, Korea</td>
                         </tr>
                         <tr>
-                            <td>Yun Hee Lee</td>
-                            <td>Seoul National University</td>
-							<td>Pharmacy</td>
+                            <td>Song Vogue Ahn</td>
+                            <td>Ewha Womans University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Hyunjung Lim</td>
-                            <td>Kyung Hee University</td>
-							<td>Medical Nutrition</td>
+                            <td>Jae-sun Eom</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Oh Yoen Kim</td>
-                            <td>Dong-A University</td>
-							<td>Food Science and Nutrition</td>
+                            <td>Min-ho Shin</td>
+                            <td>Chonnam National University, Korea</td>
                         </tr>
                         <tr>
-                            <td>SuJin Song</td>
-                            <td>Hannam University</td>
-							<td>Food And Nutrition</td>
+                            <td>Kyung-Do Han</td>
+                            <td>Soongsil University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Il-Young Kim</td>
-                            <td>Gachon University</td>
-							<td>Molecular Medicine</td>
+                            <td>JeongHyun Lim</td>
+                            <td>Seoul National University Hospital, Korea</td>
                         </tr>
                         <tr>
-                            <td>Jae Hyun Kim</td>
-                            <td>Seoul National University</td>
-							<td>Pediatrics</td>
+                            <td>Kwang Joon Kim</td>
+                            <td>Yonsei University, Korea</td>
                         </tr>
                         <tr>
-                            <td>Min Chul Lee</td>
-                            <td>CHA University</td>
-							<td>Sports Medicine</td>
+                            <td>Jong-Yun Lee</td>
+                            <td>National Medical Center, Korea</td>
                         </tr>
                         <tr>
-                            <td>Sewon Lee</td>
-                            <td>Incheon National University</td>
-							<td>Sport Science</td>
+                            <td>Hun-Sung Kim</td>
+                            <td>The Catholic University of Korea, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Jong-Young Lee</td>
+                            <td>Sungkyunkwan University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Bum-Soon Choi</td>
+                            <td>The Catholic University of Korea, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Suk Chon</td>
+                            <td>Kyung Hee University, Korea</td>
+                        </tr>
+                        <tr>
+                            <td>Jin Oh Na</td>
+                            <td>Korea University, Korea</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

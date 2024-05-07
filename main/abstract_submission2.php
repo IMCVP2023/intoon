@@ -70,7 +70,7 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
 			SELECT
 				preferred_presentation_type,
 				topic, topic_detail,
-				title,
+				title,similar_yn, support_yn, travel_grants_yn,
 				objectives, methods, results, conclusions, keywords,
 				rs.image1_file AS image1_idx, fi_image1.original_name AS image1_original_name, rs.image1_caption,
 				rs.image2_file AS image2_idx, fi_image2.original_name AS image2_original_name, rs.image2_caption,
@@ -332,23 +332,23 @@ var g5_editor_url = "<?= $editor_url ?>",
                                         <input type="radio" class="radio" name="similar_yn" id="similar_yn_y" value="Y"
                                             <?= $detail['similar_yn'] == "Y" ? "checked" : "" ?>>
                                         <label for="similar_yn_y">yes</label>
-                                        <input checked type="radio" class="radio" name="similar_yn" id="similar_yn_n"
-                                            value="N" <?= $detail['similar_yn'] == "N" ? "checked" : "" ?>>
+                                        <input  type="radio" class="radio" name="similar_yn" id="similar_yn_n"
+                                            value="N" <?= $detail['similar_yn'] != "Y" ? "checked" : "" ?>>
                                         <label for="similar_yn_n">no</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
                                         <p>This research is supported by the grant of Korean Society of Cardiovascular Disease Prevention</p>
-                                        <input checkd type="radio" class="radio" name="support_yn" id="support_yn_y"
-                                            value="Y" <?= $detail['support_yn'] == "Y" ? "checked" : "" ?>>
+                                        <input type="radio" class="radio" name="support_yn" id="support_yn_y"
+                                            value="Y" <?= $detail['support_yn'] != "N" ? "checked" : "" ?>>
                                         <label for="support_yn_y">yes</label>
                                         <input type="radio" class="radio" name="support_yn" id="support_yn_n" value="N"
                                             <?= $detail['support_yn'] == "N" ? "checked" : "" ?>>
                                         <label for="support_yn_n">no</label>
                                     </td>
                                 </tr>
-                                <tr style="display:none">
+                                <tr>
                                     <td colspan="2">
                                         <?php
                                             $travel_grants_y_flag = ($detail['travel_grants_yn'] == "Y");
@@ -363,11 +363,8 @@ var g5_editor_url = "<?= $editor_url ?>",
                                             style="transform:translateY(1px); font-size:18px">
                                             ⓘ Eligibility
                                             <div class="eligibility_pop">
-                                                <div class="pop_bg">
                                                     <div class="pop_bg"></div>
-                                                    <p class="balloon" style="font-size: 20px;">※ Only overseas
-                                                        participants</p>
-                                                </div>
+                                                    <p class="balloon" style="font-size: 20px;">※ Only overseas participants</p>
                                             </div>
                                         </span>
                                     </td>

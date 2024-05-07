@@ -292,5 +292,5 @@ $info = sql_fetch($sql_info);
     </div>
     <!-- <button type="button" class="fixed_btn" onclick="window.location.href='./abstract_submission.php';"><?= $locale("abstract_submission_btn") ?></button> -->
 </section>
-
+<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'"><span>Abstract<br/>Submission</span></button>
 <?php include_once('./include/footer.php'); ?>

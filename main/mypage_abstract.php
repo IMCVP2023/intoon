@@ -77,13 +77,13 @@ $end_row = $paging_admin['end_row'];
             <div class="x_scroll">
                 <table class="table_vertical registration_table">
                     <colgroup>
-                        <col width="5%">
+                        <col width="*">
                         <col width="10%">
                         <col width="5%">
-                        <col width="350px">
+                        <col width="40%">
                         <col width="5%">
                         <col width="5%">
-                        <col width="10%">
+                        <col width="*">
                     </colgroup>
                     <thead>
                         <tr>
@@ -135,7 +135,48 @@ $end_row = $paging_admin['end_row'];
                                     data-idx="<?= $sb['idx'] ?>">Delete</button>
                             </td>
                         </tr>
-
+                        <!-- <tr class="mb_only">
+                            <th>No.</th>
+                            <td><?= $i + 1 ?></td>
+                        </tr>
+                        <tr class="mb_only">
+                            <th>Submission No.</th>
+                            <td><?= $sb["submission_code"] ?></td>
+                        </tr>
+                        <tr class="mb_only">
+                            <th>Abstract of Accepted</th>
+                            <td><?php echo $sb["etc2"] == 'Y' ? 'Accepted' : 'Non-Accepted' ?></td>
+                        </tr>
+                        <tr class="mb_only">
+                            <th class="abstract_title_box">Title</th>
+                            <td class="abstract_title_box">  <?= strip_tags(htmlspecialchars_decode($sb["title"], ENT_QUOTES)) ?></td>
+                        </tr>
+                        <tr class="mb_only">
+                            <th>Status</th>
+                            <td><?= $sb["status_text"] ?></td>
+                        </tr>
+                        <tr class="mb_only">
+                            <th>Date of Submission</th>
+                            <td><?= $sb["register_ymd"] ?></td>
+                        </tr>
+                        <tr class="mb_only">
+                            <th>Modify / Delete</th>
+                            <td> <?php
+                                        if ($sb['status'] == 0) {
+                                        ?>
+                                <button type="button" class="btn modify_btn"
+                                    onclick="javascript:location.href='./abstract_submission.php?idx=<?= $sb["idx"] ?>'">Modify</button>
+                                <?php
+                                        } else {
+                                        ?>
+                                <button type="button" class="btn modify_btn"
+                                    onclick="javascript:location.href='./abstract_submission3.php?idx=<?= $sb["idx"] ?>'">Detail</button>
+                                <?php
+                                        }
+                                        ?>
+                                <button type="button" class="btn delete_btn"
+                                    data-idx="<?= $sb['idx'] ?>">Delete</button></td>
+                        </tr> -->
                         <?php
                             }
                         }

@@ -34,25 +34,28 @@ $price = get_data($sql_price);
     <div>
 		<h1 class="page_title">Registration Guidelines</h1>
         <div class="inner">
-            <!--1. important dates start-->
+            
+           <!--1. important dates start-->
             <h3 class="title">Key Dates</h3>
-            <div class="table_wrap detail_table_common details">
+            <p class="registration_txt">All participants are required to register through the IMCVP 2024 online registration system and are advised to register in advance (by November 3, 2024). 
+                <br/>Please read the following registration guidelines carefully.</p>
+            <div class="table_wrap detail_table_common details icomes_air">
                 <table class="c_table detail_table">
                     <colgroup>
                         <col class="submission_col">
                         <col>
                     </colgroup>
                     <tr>
-                        <th>Registration<br class="br_mb_only"> System Open</th>
-                        <td class="f_bold">Mid-May</td>
+                        <th>Registration<br class="br_mb_only">Open</th>
+                        <td class="f_bold">Monday, <span class="f_bold violet_t">June 3</span>, 2024</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <th class="close_th">Early-bird Registration<br class="br_mb_only"> Deadline</th>
                         <td class="f_bold">June 29 (Thu)</td>
-                    </tr>
+                    </tr> -->
                     <tr>
-                        <th class="close_th">Pre-registration<br class="br_mb_only"> Deadline</th>
-                        <td class="f_bold">August 24 (Thu)</td>
+                        <th>Pre-registration<br class="br_mb_only"> Deadline</th>
+                        <td class="f_bold">Sunday, <span class="f_bold violet_t">November 3</span>, 2024</td>
                     </tr>
                 </table>
             </div>
@@ -96,80 +99,81 @@ $price = get_data($sql_price);
                 }
             ?>
                 <!--2. icomes-Air Registration start-->
-                <h3 class="title">Registration Fee</h3>
+                <h3 class="title">Registration Fees for International </h3>
                 <div class="details icomes_air">
 					<div class="table_wrap x_scroll">
 						<!-- <img class="coming" src="./img/coming.png" /> -->
 						<table class="c_table2 detail_table center">
 							<thead>
 								<tr>
-									<th rowspan=" 2">Category</th>
-									<th colspan="2">Early-bird Registration</th>
-									<th colspan="2">Pre-registration</th>
-									<th colspan="2">On-site Registration</th>
-								</tr>
-								<tr>
-									<th><?= $locale("member") ?></th>
-									<th><?= $locale("non_member") ?></th>
-									<th><?= $locale("member") ?></th>
-									<th><?= $locale("non_member") ?></th>
-									<th><?= $locale("member") ?></th>
-									<th><?= $locale("non_member") ?></th>
+									<th>Classification</th>
+									<th>Early-bird Registration</th>
+									<th>Pre-registration</th>
+									<th>On-site Registration</th>
 								</tr>
 							</thead>
 							<tbody>
-								<?php
-									// foreach ($tb_arr as $tb) {
-								?>
-									<!-- <tr> -->
-										<!-- <td><?= implode(', ', $tb['type_arr']) ?></td> -->
-									<?php
-									//	if ($tb[$off_mb_col] + $tb[$off_gu_col] + $tb[$on_mb_col] + $tb[$on_gu_col] <= 0) {
-									?>
-										<!-- <td colspan="2">free</td> -->
-									<?php
-										//} else {
-									?>
-										<!-- <td><?= $unit_upper . " " . number_format($tb[$off_mb_col]) . " / " . $unit_upper . " " . number_format($tb[$off_gu_col]) ?></td> -->
-										<!-- <td><?= $unit_upper . " " . number_format($tb[$on_mb_col]) . " / " . $unit_upper . " " . number_format($tb[$on_gu_col]) ?></td> -->
-									<?php
-										//}
-									?>
-									<!-- </tr> -->
-								<?php
-									//}
-								?>
+                                <!-- <img src="./img/icons/icon_closed.png" alt=""> -->
 								<tr class="text_center">
-									<td>Certified M.D., Professor</td>
-									<td class="closed_td">USD 130<br/>KRW 130,000
+									<td>Specialist, Professor</td>
+									<td class="closed_td">200.00</td>
+									<td>200.00</td>
+									<td>300.00</td>
 
-										<!-- <img src="./img/icons/icon_closed.png" alt=""> -->
-									</td>
-									<td>USD 160<br>KRW 160,000</td>
-									<td>USD 160<br>KRW 160,000</td>
-									<td>USD 190<br>KRW 190,000</td>
-									<td>USD 200<br>KRW 200,000</td>
-									<td>USD 230<br>KRW 230,000</td>
 								</tr>
 								<tr class="text_center">
 									<td>
-										Fellow, Resident, Researcher,<br>
-										Nutritionist, Pharmacist, Nurse,<br>
-										Exercise Specialist, Military<br>
-										Surgeon(군의관),<br>
-										Public Health Doctor,<br>
-										Corporate Member, Others
+                                        Fellow, Resident,<br>
+										Researcher, Nurse, Nutritionists,<br>
+										Corporate member, Others<br>
 									</td>
-									<td>USD 65<br>KRW 65,000</td>
-									<td>USD 95<br>KRW 95,000</td>
-									<td>USD 85<br>KRW 85,000</td>
-									<td>USD 115<br>KRW 115,000</td>
-									<td>USD 120<br>KRW 120,000</td>
-									<td>USD 150<br>KRW 150,000</td>
+									<td>100.00</td>
+									<td>100.00</td>
+									<td>150.00</td>
+								</tr>
+								<!-- <tr class="text_center">
+									<td>Student</td>
+									<td colspan="6">Free<br/>*Student ID cards required</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+                </div>
+                <!--2. icomes-Air Registration start-->
+                <h3 class="title">Registration Fees for Korean</h3>
+                <div class="details icomes_air">
+					<div class="table_wrap x_scroll">
+						<!-- <img class="coming" src="./img/coming.png" /> -->
+						<table class="c_table2 detail_table center">
+							<thead>
+								<tr>
+									<th>Classification</th>
+									<th>Early-bird Registration</th>
+									<th>Pre-registration</th>
+									<th>On-site Registration</th>
+								</tr>
+							</thead>
+							<tbody>
+                                <!-- <img src="./img/icons/icon_closed.png" alt=""> -->
+								<tr class="text_center">
+									<td>전문의, 교수</td>
+									<td class="closed_td">200.00</td>
+									<td>200.00</td>
+									<td>300.00</td>
+
 								</tr>
 								<tr class="text_center">
-									<td>Student<!--, Surgeon (Military),<br>Public Health Doctor--></td>
-									<td colspan="6">Free<br/>*Student ID cards required</td>
+									<td>
+                                        약사, 간호사, <br>
+										영양사, 군의관<br>
+									</td>
+									<td>100.00</td>
+									<td>100.00</td>
+									<td>150.00</td>
+								</tr>
+								<tr class="text_center">
+									<td>전공의, 학생</td>
+									<td colspan="3">무료<br/>*학생증, ID card 등 증빙자료 제출 필수</td>
 								</tr>
 							</tbody>
 						</table>
@@ -177,10 +181,10 @@ $price = get_data($sql_price);
 					<div class="mt10">
 						<ul class="indent_ul">
 							<li>• A registration confirmation will be sent to your registered email address once you have completed your registration with full payment. If you have not received it, please contact the congress secretariat.</li>
-							<li>• For bank transfers, the automatically generated confirmation letter may indicate the payment status as 'unpaid.' If you need to confirm the payment completion, you can check the payment status on 'my page.' (Please be aware that it may take some time for the payment confirmation to be updated.)</li>
+							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as 'unpaid.' If you need to confirm the payment completion, you can check the payment status on 'my page.' (Please be aware that it may take some time for the payment confirmation to be updated.)</li>
 							<li>• Registration will not be considered complete until the full registration fee has been paid.</li>
 							<li>• The online registration page is optimized for Google Chrome and Microsoft Edge. If you encounter any issues with online registration, please reach out to the congress secretariat for assistance.</li>
-							<li>• If you would like to modify your registration information, please contact the congress secretariat at <a href="mailto:icomes@into-on.com" class="font_inherit link">icomes@into-on.com</a></li>
+							<li>• • If you would like to modify your registration information, please contact the congress secretariat at <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
 						</ul>
 					</div>
                 </div>
@@ -199,7 +203,7 @@ $price = get_data($sql_price);
 					 <div>
 						<ul class="indent_ul">
 							<li>• Credit Card : Master / VISA</li>
-							<li>• Bank Transfer</li>
+							<li>• Wire Transfer</li>
 						</ul>
 					</div>
 					<div class="table_wrap detail_table_common x_scroll">
@@ -210,29 +214,29 @@ $price = get_data($sql_price);
 							</colgroup>
 							<tbody>
 								<tr>
-									<th>Name of Bank</th>
-									<td>Hana Bank</td>
-								</tr>
-								<tr>
-									<th>Branch</th>
-									<td>HANA BANK, HEAD OFFICE</td>
-								</tr>
-								<tr>
-									<th>Bank Address</th>
-									<td>35, EULJI-RO, JUNG-GU, Seoul, Korea</td>
+									<th>Bank Name</th>
+									<td>WOORI BANK</td>
 								</tr>
 								<tr>
 									<th>Account Number</th>
-									<td>584-910003-16504</td>
-								</tr>
-								<tr>
-									<th>SWIFT CODE(BIC)</th>
-									<td>KOEXKRSE</td>
+									<td>1006-101-343333</td>
 								</tr>
 								<tr>
 									<th>Account Holder</th>
-									<td>대한비만학회 등록비 <br>(International Congress on Obesity and Metabolic Syndrome)</td>
+									<td>Korean Society of Cardiovascular Disease Prevention</td>
 								</tr>
+								<tr>
+									<th>Swift Code</th>
+									<td>HVBKKRSEXXX</td>
+								</tr>
+								<tr>
+									<th>Bank Address</th>
+									<td>17, WORLDCUP BUK RO 60 GIL, MAPOGU, SEOUL, 03921, SOUTH KOREA</td>
+								</tr>
+								<!-- <tr>
+									<th>Account Holder</th>
+									<td>대한비만학회 등록비 <br>(International Congress on Obesity and Metabolic Syndrome)</td>
+								</tr> -->
 								<!--
 								<tr>
 									<th>Address</th>
@@ -255,14 +259,16 @@ $price = get_data($sql_price);
 
             <!--3. Cancellation & Refund Policy start-->
             <h3 class="title">Cancellation & Refund Policy</h3>
-			<a href="./download/ICOMES_2023_Registration_Cancellation_Request_Form.docx" class="btn long_btn text_long" target="_blank"><img src="./img/icons/icon_download_white.svg" alt="">Cancellation & Refund  Form Download</a>
+			<a href="" class="btn long_btn text_long not_yet" target="_blank">
+			<!-- <a href="./download/ICOMES_2023_Registration_Cancellation_Request_Form.docx" class="btn long_btn text_long" target="_blank"> -->
+                <img src="./img/icons/icon_download_white.svg" alt="">Cancellation & Refund  Form Download</a>
             <div class="details payment_detail mt10">
                 <!-- <p class="pre"><?= $locale("registration_notice_txt") ?></p> -->
                 <div class="">
                     <ul class="indent_ul">
-                        <li>• The cancellation of full payment registration and reimbursement will only be accepted in written form and must be submitted via email to the secretariat.<br>(<a href="mailto:icomes@into-on.com" class="font_inherit link">icomes@into-on.com</a>)</li>
-                        <li>• Prior to making a payment, it is possible to cancel registration through "My page - Registration". However, payment has already been processed, it is necessary to contact the secretariat for further assistance.</li>
-                        <li>• Please note that refunds will be processed after the conference. (*By October 1, 2023)</li>
+                        <li>• The cancellation of full payment registration and reimbursement will only be accepted in written form and must be submitted via email to the secretariat.<br>(<a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a>)</li>
+                        <li>• Prior to making a payment, it is possible to cancel registration through "My IMCVP - Registration". However, payment has already been processed, it is necessary to contact the secretariat for further assistance.</li>
+                        <li>• Please note that refunds will be processed after the conference.</li>
                         <li>• All bank service charges and administration fees will be deducted from the refund.</li>
                     </ul>
                 </div>
@@ -540,7 +546,7 @@ $price = get_data($sql_price);
     <!-- 평점안내 팝업 / 끝 -->
 
 </section>
-
+<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'"><span><?=$locale("registration")?></span></button>
 <script>
     $('.show_pop').on('click', function() {
         //$('.pop_info').show();

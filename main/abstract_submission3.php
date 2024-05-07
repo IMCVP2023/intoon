@@ -420,6 +420,13 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                         </div>
                     </div>
                 </form>
+				<div class="text_box">
+					<ul>
+                        <li>Thank you for submitting abstract.</li>
+                        <li>Approval for your submission will be sent to the email address provided by you</li>
+                        <li>You can modify the submitted abstract on ‘My IMCVP’ up until the submission deadline</li>
+                    </ul>
+			</div>
                 <div class="pager_btn_wrap">
                     <!-- <button type="button" class="btn submit is_submit" onclick="javascript:window.location.href='./abstract_submission2.php';"><?= $locale("next_btn") ?></button> -->
                     <button type="button" class="btn"
@@ -433,6 +440,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
 						?>
                 </div>
             </div>
+			
         </div>
         <!--//section1-->
     </div>

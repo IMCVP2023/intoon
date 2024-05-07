@@ -215,10 +215,22 @@ $(document).ready(function(){
 
 				if(32 >= footer_top - fixed_bottom){
 					$(".fixed_btn_wrap").addClass("on");
-					$(".fixed_btn_wrap").css("bottom", footer_height+32+"px");
+					//$(".fixed_btn_wrap").css("bottom", footer_height+32+"px");
+
+					if($("section").hasClass("top_btn_move")){ // 우측하단에 register btn이 있는 경우
+						$(".btn_top").css("bottom", footer_height+110+"px");
+					}else{
+						$(".btn_top").css("bottom", footer_height+30+"px");
+					}
 				}else{
 					$(".fixed_btn_wrap").removeClass("on");
-					$(".fixed_btn_wrap").css("bottom", "32px");
+					//$(".fixed_btn_wrap").css("bottom", "32px");
+
+					if($("section").hasClass("top_btn_move")){
+						$(".btn_top").css("bottom", "110px");;
+					}else{
+						$(".btn_top").css("bottom", "95px");
+					}
 				}
 			}
 		});
@@ -229,6 +241,11 @@ $(document).ready(function(){
 	$(".btn_top").click(function(){
 		$("html, body").animate({scrollTop: 0}, 500)
 	})
+
+	/** eligibility pop up */
+	$(".eligibility_open").click(function(){
+		$(this).children(".eligibility_pop").toggleClass("on");
+	});
 
 	// 메인페이지 화살표(하단 이동) button 클릭이벤트
 	$(".main_section .btn_circle_arrow").click(function(){

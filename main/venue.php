@@ -76,24 +76,6 @@ $current_date->format('Y-m-d');
 $intvl = $current_date->diff($d_day);
 $d_days = $intvl->days + 1;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $sql_info =    "SELECT
 					CONCAT(fi_img.path, '/', fi_img.save_name) AS fi_img_url,
 					igv.name_" . $language . " AS `name`,
@@ -132,38 +114,73 @@ $info = sql_fetch($sql_info);
 	if (!empty($session_app_type) && $session_app_type == 'N') {
 		// Web일때
 ?>
-	<h1 class="page_title">Conrad Seoul</h1>
+	<h1 class="page_title">Grand Walkerhil Seoul</h1>
 <?php
 	} 
 ?>
     <div class="inner">
         <!-- 호텔 이름과 주소, 연락처 -->
         <div class="section section1">
-            <div>
-                <!-- <div class="img_wrap" style="background: center / cover no-repeat url('<?= $info['fi_img_url'] ?>')">
-						<img src="<?= $info['fi_img_url'] ?>" alt="hotel img">
-					 </div> -->
-                <div class="img_wrap">
-					<img src="./img/conrad_seoul.jpg" alt="conrad seoul">
+        <div class="useful_list">
+
+        <li>
+                <div>
+                    <div class="imgs"></div>
+                    <div class="btn_wrap">
+                    
+                         <!-- <button class="btn green_btn"
+                        onClick="javascript:window.open('https://www.hilton.com/en/hotels/selcici-conrad-seoul/')">Go to Website</button>
+                    <a href="./download/ICOMES_2023_Conrad_Seoul_Reservation_Form.doc" class="btn green_btn download_btn" target="_blank" download=""><img src="./img/icons/icon_download_white.svg" alt="">Reservation Form Download</a> -->
+                    <!-- onClick="javascript:alert('Reservation is closed.');" -->
+                    </div>
                 </div>
-				<ul class="app_overview_ul app_venue_info">
-					<li>
-						<p>Conrad Seoul</p>
-						<div class="flex_top">
-							<p>Address</p>
-							<p><?= $info['address'] ?></p>
-						</div>
-						<div class="flex_top">
-							<p>Tel</p>
-							<p><?= $info['tel'] ?></p>
-						</div>
-						<div class="flex_top">
-							<p>Website</p>
-							<p><a href="https://www.conradseoul.co.kr/hub/en/main.do" class="link" target="_blank">www.conradseoul.co.kr</a></p>
-						</div>
-					</li>
-				</ul>
-            </div>
+                <div>
+                    <p class="bold">Grand Walkerhill Seoul, Korea<span class="font_16 bold">(Congress Venue)</span></p>
+                    <div class="table_wrap x_scroll">
+                        <table class="c_table2 detail_table layout_fixed">
+                            <colgroup>
+                                <col class="col_th">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>Address</th>
+                                    <td>177 Walkerhill-ro, Gwangjin-gu, Seoul, Republic of Korea</td>
+                                </tr>
+                                <tr>
+                                    <th>Tel</th>
+                                    <td>+82-2-1670-5000</td>
+                                </tr>
+                                <tr>
+                                    <th>Fax</th>
+                                    <td>+82-2-452-6867</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>
+                                        <a href="mailto:contact@walkerhill.com" target="_blank"
+                                            class="underline link">contact@walkerhill.com </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Website</th>
+                                    <td>
+                                        <a href="https://www.walkerhill.com/grandwalkerhillseoul/en/" target="_blank"
+                                            class="venue_btn">Go to Website ></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                    Located in east Seoul, Grand Walkerhill Seoul stands as a beacon of luxury amidst the city's bustling landscape. Nestled amidst the serene beauty of Achasan Mountain and the tranquil Hangang River, it offers a haven of comfort and relaxation. Boasting 557 elegantly appointed guestrooms, diverse dining options, and 11 versatile convention spaces, including a grand banquet hall capable of hosting up to 1,000 guests, it caters to the discerning needs of both leisure and business travelers. With its strategic location, just 1.5 hours from Incheon International Airport, 1 hour from Gimpo International Airport, 40 minutes from Seoul Station, and 35 minutes from Suseo Station, Grand Walkerhill Seoul seamlessly combines convenience with sophistication, ensuring an unforgettable experience for every guest.
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+        </div>
         </div>
 		<!-- 지도 -->
 		<div class="section section2">
@@ -180,8 +197,8 @@ $info = sql_fetch($sql_info);
                     <div class="details_info_wrap">  
                         <div class="clearfix2">
                             <div class="info"> 
-                                <h3 class="title">Airport ▶ CONRAD Seoul Hotel, Korea</h3>
-                                <div class="airplane_cont">
+                                <!-- <h3 class="title">Airport ▶ Grand Walkerhil Seoul Hotel, Korea</h3> -->
+                                <!-- <div class="airplane_cont">
                                     <h5>By Bus <span>(No. 6019 / Airport Bus)</span></h5>
                                     <div class="table_wrap detail_table_common x_scroll">
                                         <table class="c_table">
@@ -218,10 +235,10 @@ $info = sql_fetch($sql_info);
                                             </tbody>
                                         </table>
                                     </div>
-                                </div> 
-                                <div class="airplane_cont">
-                                    <h5>By Subway</h5>
-                                    <p>
+                                </div>  -->
+                                <!-- <div class="airplane_cont">
+                                    <h5>By Subway</h5> -->
+                                    <!-- <p>
                                         The Airport Railroad Express (AREX) provides transportation services that connect Incheon International Airport and Gimpo Airport. Passengers arriving at Gimpo Airport have the option to transfer to Subway Line 9 for further transportation. You can take the AREX (Airport Railroad Express) at the Incheon Airport Transportation Center.
                                     </p>
                                     <div class="table_wrap detail_table_common x_scroll">
@@ -265,12 +282,12 @@ $info = sql_fetch($sql_info);
                                                         Hotel</td>
                                                 </tr>
                                             </tbody>
-                                        </table>
-                                    </div>
+                                        </table> -->
+                                    <!-- </div>
                                 </div> 
                                 <div class="airplane_cont">
-                                    <h5>By Taxi</h5>
-                                        <p>Taxi services are always available, and the fare from Incheon International Airport to the Venue (Conrad Seoul) is approximately KRW 55,000 for a standard taxi. The expressway fee (KRW 7,100 each way) will be added to the total fare. The rides take about 40-50 minutes. However, it may vary depending on traffic conditions. There is an additional fee for taxi rides taken between 22:00 pm and 4:00 am, resulting in an approximate 20%~ 40% increase in the fare.</p> 
+                                    <h5>By Taxi</h5> -->
+                                        <!-- <p>Taxi services are always available, and the fare from Incheon International Airport to the Venue (Conrad Seoul) is approximately KRW 55,000 for a standard taxi. The expressway fee (KRW 7,100 each way) will be added to the total fare. The rides take about 40-50 minutes. However, it may vary depending on traffic conditions. There is an additional fee for taxi rides taken between 22:00 pm and 4:00 am, resulting in an approximate 20%~ 40% increase in the fare.</p> 
                                     <div class="table_wrap detail_table_common x_scroll">
                                         <table class="c_table type2">
                                             <thead>
@@ -312,9 +329,9 @@ $info = sql_fetch($sql_info);
 													</td>
 												</tr>
                                             </tbody>
-                                        </table>
-                                    </div>  
-									<div class="taxi_text_area">
+                                        </table> -->
+                                    <!-- </div>   -->
+									<!-- <div class="taxi_text_area">
 										For more information on each mode of transportation and the related services, please visit the websites below.
 										<div>
 											-
@@ -322,7 +339,7 @@ $info = sql_fetch($sql_info);
 											/
 											<a href="https://www.airport.co.kr/gimpoeng/index.do" target="_blank" class="link">Gimpo International Airport(click!)</a>   
 										</div>
-									</div> 
+									</div>  -->
                                 </div>
                             </div>  
                         </div>  
@@ -341,7 +358,7 @@ $info = sql_fetch($sql_info);
 
 window.initMap = function () {
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 37.5253, lng: 126.9266 },
+    center: { lat: 37.555272, lng: 127.110912 },
     zoom: 15,
   });
 

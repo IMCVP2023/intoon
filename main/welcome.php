@@ -48,26 +48,15 @@
 <!-- 			</div> -->
 <!-- 		</div> -->
     <div>
-		<h1 class="page_title">Opening Address</h1>
+		<h1 class="page_title">Welcome Message</h1>
         <div class="inner">
             <div>
 				<!-- <h3 class="title icon_none">Respected colleagues,</h3> -->
 				<p class="welcome_txt">
-				It is my great honor to cordially invite all of you to upcoming IMCVP 2024 (International Meeting of Cardiovascular Disease Prevention) (IMCVP
-2024). <br/>This IMCVP will be held in Grand Walkerhill Hotel, Seoul, Republic of Korea from 29 November to 30 November 2024. IMCVP is hosted soley by
-KSCP and newly named as an official conference of KSCP (Korean Society of Cardiovascular Disease Prevention). It is 3rd international
-conference hosted by KSCP. KSCP was founded in 2010 to promote national health through active academic activities in the field of
-cardiovascular disease prevention.<br/>In 2023 November, KSCP co-hosted international conference of ISCP at Seoul, Korea and many participants from the world joined us and
-shared current scientific evidence. I would like to deeply thank to organizing committee and scientific committee members of last year’s
-successful conference for their sincere devotion.<br/>This year, organizing committee of KSCP has decided to hold IMCVP 2024 in-person meeting and would like to invite all of you.<br/>IMCP 2024 will present current edge of scientific evidence and educational contents, key insight, practice-changing updates with world-class
-experts. It will bring together key stakeholders in all areas of cardiovascular disease prevention and promote better patient care. Many field of
-cardiovascular disease including hypertension, dyslipidemia, diabetes, angina, stroke, heart failure, epidemiology, nutrition, guidelines and
-new treatment methods will be covered and excellent professors will share their research results. It is our pride and pleasure to share up-todate scientific information in this field through IMCVP 2024<br/>As a president of KSCP hosting IMCVP 2024, I hope that this meeting can be the one of greatest academic experience you’ve ever had. I would
-like to express my sincerest gratitude to all of your attendance and continued support. I look forward to seeing you all at IMCVP in November
-2024.<br/>Thank you so much.<br/><br/>With best regards,<br/>Won-Young Lee,<br/>President of KSCP (Korean Society of Cardiovascular Disease Prevention)
+				It is my great honor to cordially invite all of you to upcoming <span class="f_bold">IMCVP 2024 (International Meeting of Cardiovascular Disease Prevention)</span> (<a href="https://imcvp.org/" class="link under">IMCVP 2024</a>).  <br/><br/>The IMCVP will be held at Grand Walkerhill Hotel in Seoul, Republic of Korea, from November 29 to November 30 2024. <br/>IMCVP is hosted solely by KSCP and has been newly named as an official conference of KSCP (Korean Society of Cardiovascular Disease Prevention).<br/><br/>It is the 3<sup class="font_small">rd</sup> international conference hosted by KSCP. <br/><br/>KSCP was founded in 2010 to promote national health through active academic activities in the field of cardiovascular disease prevention. <br/><br/>In November 2023, KSCP co-hosted an international conference of ISCP in Seoul, Korea and many participants from around the world joined us to share current scientific evidence.<br/><br/>I would like to extend my heartfelt thanks to the organizing committee and scientific committee members of last year’s successful conference for their dedicated efforts<br/><br/>This year, the organizing committee of KSCP has decided to hold the IMCVP 2024 in-person meeting and would like to invite all of you.<br/><br/> IMCP 2024 will present current edge of scientific evidence and educational content, as well as key insights, practice-changing updates with world-class experts.<br/><br/>It will bring together key stakeholders in all areas of cardiovascular disease prevention and promote better patient care. Many fields of cardiovascular disease, including hypertension, dyslipidemia, diabetes, angina, stroke, heart failure, epidemiology, nutrition, guidelines, and new treatment methods, will be covered, and excellent professors will share their research results.<br/><br/>It is our pride and pleasure to share up-to-date scientific information in this field through IMCVP 2024.<br/><br/>As the President of KSCP hosting IMCVP 2024, I hope that this meeting can be one of the greatest academic experiences you’ve ever had. <br/><br/>I would like to express my sincerest gratitude to all of you for your attendance and continued support. I look forward to seeing all of you at IMCVP in November 2024.<br/><br/>Thank you so much.<br/><br/>With best regards,<br/><br/>Won-Young Lee,<br/><br/>President of KSCP (Korean Society of Cardiovascular Disease Prevention)
 				</p>
 			</div>
-			<img src="./img/headman_img.png" alt = ""/>
+			<img src="./img/2024_headman_img.png" alt = ""/>
             <div class="head_profile">
 				<div class="headman">
 				

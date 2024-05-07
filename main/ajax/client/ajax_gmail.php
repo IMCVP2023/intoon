@@ -221,7 +221,7 @@ if($language == "ko") {
 							//<img src='".$background_img_url."/img/mail_header_2023.png' style='width:calc(100% + 80px);margin-left:-40px;'>
 			// 23.05.15 HUBDNC_LJH 이메일 템플릿 변경 
 			$rawMessageString.= "
-								<table width='750' style='border:1px solid #000; border-radius:27px 27px 0 0; padding: 0;'>
+								<table width='750' style='border:1px solid #000; padding: 0;'>
 									<tbody>
 										<tr>
 											<td colspan='3'>
@@ -300,109 +300,12 @@ if($language == "ko") {
 								</table>
 
 			";
-			//$rawMessageString.= "
-			//			<div style='width:670px;background-color:#F8F8F8;border:1px solid #f2f2f2; padding: 0 40px;'>
-			//				<img src='{$background_img_url}/main/img/mail_header_2023.png' style='width:calc(100% + 80px);margin-left:-40px;'>
-			//				<div style='width:calc(100%);margin-left:-40px;margin-bottom:60px;background-color:#00666B;text-align:center;font-size: 21px; color: #FFF;padding: 10px 0;border-top:2px solid #707070;'>[ICOEMS 2023] Welcome to ICOMES 2023!</div>	
-			//				<div>
-			//					<div style='margin-bottom:10px; background-color:#F8F8F8; padding:17px 34px; box-sizing:border-box;'>
-			//						<div>
-			//							<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$title_input} {$first_name} {$last_name},</p>
-			//							<p style='font-size:14px;color:#170F00;margin-top:14px;'>Thank you for signing up for the ICOMES 2023.<br>Your profile has been successfully created.<br>Please review the information that you have entered as below.<br>If necessary, you can access ‘ICOMES 2023 website - MY PAGE’ to review,<br>modify or update your personal information.</p>
-			//							<table style='border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
-			//								<tbody>
-			//									<tr style='border-bottom:1px solid #000;'>
-			//										<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1; '>ID (Email Address)</th>
-			//										<td style='font-size:14px; padding:10px;'><a href='javascript:;' class='link'>{$email}</a></td>
-			//									</tr>
-			//									<tr style='border-bottom:1px solid #000;'>
-			//										<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1;'>Name</th>
-			//										<td style='font-size:14px; padding:10px; width:165px;'>{$first_name}</td>
-			//										<td style='font-size:14px; padding:10px; border-left:1px solid #000'>{$last_name}</td>
-			//									</tr>
-			//									{$name_kor_cont}
-			//									<tr style='border-bottom:1px solid #000;'>
-			//										<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1; '>Affiliation</th>
-			//										<td style='font-size:14px; padding:10px;'>{$affiliation}</td>
-			//									</tr>
-			//									{$affiliation_kor_cont}
-			//									<tr style='border-bottom:1px solid #000;'>
-			//										<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1; '>phone number</th>
-			//										<td style='font-size:14px; padding:10px;'>{$phone}</td>
-			//									</tr>
-			//								</tbody>	
-			//							</table>
-			//							<p>We express our gratitude to you for your interest in ICOMES 2023.</p>
-			//						</div>
-			//					</div>
-			//					<!-- 23.04.25 수정된 버튼 마크업 -->
-			//					<p style='margin: 0 0 5px 34px'>Warmest regards,</p>
-			//					<p style='margin: 0 0 34px 34px'>Secretariat of ICOMES 2023</p>
-			//					<div style='text-align: center;'>
-			//						<a href='{$background_img_url}/main/index.php' type='button' style='display:inline-block; padding:5px 20px 10px 20px; border-radius: 25px;border: 2px solid #174A77;outline: 2px solid #DFDFDF;background: linear-gradient(to top, #293380, #8CC5D1);font-size: 18px;font-weight: 500;color: #FFFFFF;cursor: pointer; text-decoration: none;'>Go to ICOMES 2023 Website</a>
-			//					</div>
-			//				</div>
-			//				<img src='{$background_img_url}/main/img/icomes_mail_bottom.png' style='width:calc(100% + 80px); margin-top:60px; margin-left:-40px;'>
-			//			</div>
-			//";
-
-//<div style='width:670px;background-color:#F8F8F8;border:1px solid #f2f2f2; padding: 0 40px;'>
-//							<img src='".$background_img_url."/img/mail_header_2023.png' style='width:calc(100% + 80px);margin-left:-40px;'>
-//							<div style='width:calc(100% + 80px);margin-left:-40px;margin-bottom:60px;background-color:#00666B;text-align:center;font-size: 21px; color: #FFF;padding: 10px 0;border-top:2px solid #707070;'>[ICOEMS 2023] Welcome to ICOMES 2023!</div>	
-//							<div>
-//								<div style='margin-bottom:10px; background-color:#F8F8F8; padding:17px 34px; box-sizing:border-box;'>
-//									<div>
-//										<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$title} {$first_name} {$last_name},</p>
-//										<p style='font-size:14px;color:#170F00;margin-top:14px;'>Thank you for signing up for the ICOMES 2023.<br>Your profile has been successfully created.<br>Please review the information that you have entered as below.<br>If necessary, you can access ‘ICOMES 2023 website - MY PAGE’ to review,<br>modify or update your personal information.</p>
-//										<table style='border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
-//											<tbody>
-//												<tr style='border-bottom:1px solid #000;'>
-//													<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1; '>ID (Email Address)</th>
-//													<td style='font-size:14px; padding:10px;'><a href='javascript:;' class='link'>{$email}</a></td>
-//												</tr>
-//												<tr style='border-bottom:1px solid #000;'>
-//													<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1;'>Name</th>
-//													<td style='font-size:14px; padding:10px; width:165px;'>{$first_name}</td>
-//													<td style='font-size:14px; padding:10px; border-left:1px solid #000'>{$last_name}</td>
-//												</tr>
-//												{$name_kor_cont}
-//			
-//												<tr style='border-bottom:1px solid #000;'>
-//													<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1;'>성명</th>
-//													<td style='font-size:14px; padding:10px; width:165px;'>{$first_name_kor}</td>
-//													<td style='font-size:14px; padding:10px; border-left:1px solid #000'>{$last_name_kor}</td>
-//												</tr>
-//												<tr style='border-bottom:1px solid #000;'>
-//													<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1; '>Affiliation</th>
-//													<td style='font-size:14px; padding:10px;'>{$affiliation}</td>
-//												</tr>
-//												<tr style='border-bottom:1px solid #000;'>
-//													<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1; '>소속</th>
-//													<td style='font-size:14px; padding:10px;'>{$affiliation_kor}</td>
-//												</tr>
-//												<tr style='border-bottom:1px solid #000;'>
-//													<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#f1f1f1; '>phone number</th>
-//													<td style='font-size:14px; padding:10px;'>{$phone}</td>
-//												</tr>
-//											</tbody>	
-//										</table>
-//										<p>We express our gratitude to you for your interest in ICOMES 2023.</p>
-//									</div>
-//								</div>
-//								<!-- 23.04.25 수정된 버튼 마크업 -->
-//								<p style='margin: 0 0 5px 34px'>Warmest regards,</p>
-//								<p style='margin: 0 0 34px 34px'>Secretariat of ICOMES 2023</p>
-//								<div style='text-align: center;'>
-//									<a href='http://43.200.170.254/main/index.php' type='button' style='display:inline-block; padding:5px 20px 10px 20px; border-radius: 25px;border: 2px solid #174A77;outline: 2px solid #DFDFDF;background: linear-gradient(to top, #293380, #8CC5D1);font-size: 18px;font-weight: 500;color: #FFFFFF;cursor: pointer; text-decoration: none;'>Go to ICOMES 2023 Website</a>
-//								</div>
-//							</div>
-//							<img src='".$background_img_url."/img/mail_footer_2023.png' style='width:calc(100% + 80px); margin-top:60px; margin-left:-40px;'>
-//						</div>
+		
 	}
 
 	if($mail_type == "find_password") {
 		 $rawMessageString .= "
-		 <table width='750' style='border:1px solid #000; border-radius:27px 27px 0 0; padding: 0;'>
+		 <table width='750' style='border:1px solid #000; padding: 0;'>
 		 <tbody>
 			 <tr>
 				 <td colspan='3'>
@@ -472,7 +375,6 @@ if($language == "ko") {
 		 </tbody>
 	 </table>
 		 ";
-		 //$rawMessageString .= "<div style='width:549px;background-color:#fff;border:1px solid #000;'><img src='{$background_img_url}/main/img/mail_header_2023.png' style='width:100%;margin-bottom:47px;'><h1 style='text-align:center; font-size:16px; font-weight:bold'>Temporary Password</h1><div style='width:calc(100% - 80px); margin:24px auto 50px; background-color:#f8f8f8; padding:17px 34px 78px 17px; border-top:2px solid #707070; box-sizing:border-box;'><div><p style='font-size:12px; font-weight:bold; color:#000; margin:0;'>Member of : <span>{$fname}</span></p><p style='font-size:12px; font-weight:bold; color:#000; margin:0;'>You requested a temporary password at : <span>{$time}</span></p><p style='font-size:10px; color:#707070; margin:10px 0 0 0;'>(If you have never requested a temporary password, please delete the email.)</p></div><p style='font-size:12px; color:#000 ;margin:25px 0 0 0;'>Since our site does not have your password even if you are an administrator, Instead of giving you your password, we’re creating a new one and guiding you.</p><p style='font-size:12px; font-weight:bold; color:#FF3333; margin:25px 0 0 0;'>Check the password below to change.<br/>Click the “<span style='font:inherit; color:inherit; text-decoration:underline;'>Change to temporary password</span>” button.</p><p style='font-size:12px; color:#000 ;margin:25px 0 0 0;'>When an authentication message is printed stating that the password has been changed,</p><p style='font-size:12px; color:#000 ;margin:25px 0 0 0;'>Please enter your member ID and changed password on the homepage and log in.</p><p style='font-size:10px; color:#707070;'>After logging in, please change to a new password from the Modify Information menu.</p><div style='padding:16px; border:1px solid #5DBC9B; border-radius:15px; margin-top:25px;'><ul style='padding:0; margin:0;'><li style='list-style:none;'><i style='display:inline-block; width:4px; height:4px; border-radius:50%; background-color:#10BF99; vertical-align:middle;'></i><span style='font-size:12px; font-weight:bold; vertical-align:middle;'>Member ID : {$to}</span><input type='text' style='vertical-align:middle; background:transparent; border:none; outline:none;'></li><li style='list-style:none;'><i style='display:inline-block; width:4px; height:4px; border-radius:50%; background-color:#10BF99; vertical-align:middle;'></i><span style='font-size:12px; font-weight:bold; vertical-align:middle;'>Temporary password :{$tmp_password}</span><input type='text' style='vertical-align:middle; background:transparent; border:none; outline:none;'></li></ul></div><p style='font-size:12px; line-height:22px; color:#000; margin-top:20px; margin-bottom:0;'>Regards,<br/>ICOMES</p><a href='{$callback_url}' style='text-decoration:none;'><button type='button' style='display:block; margin:70px auto 0; font-size:16px; font-weight:bold; color:#FFEB00; background-color:#23BF99; padding:10px 58px 34px 58px; border-radius:30px; border:none;'>Change to temporary password<span style='margin-left:10px; font:inherit;'>&gt;</span></button></a></div><img src='{$background_img_url}/main/img/icomes_mail_bottom.png' style='width:100%;'></div>";
 	}
 
 	if($mail_type == "payment") {
@@ -568,14 +470,6 @@ if($language == "ko") {
 									<th style='width:150px; text-align:left; font-size:14px; padding:10px;'>전문의 번호</th>
 									<td style='font-size:14px; padding:10px;border-left:1px solid #000;'>{$specialty_number}</td>
 								</tr>
-								<tr style='border-bottom:1px solid #000;'>
-									<th style='width:150px; text-align:left; font-size:14px; padding:10px;'>영양사 면허번호</th>
-									<td style='font-size:14px; padding:10px;border-left:1px solid #000;'>{$nutritionist_number}</td>
-								</tr>
-								<tr style='border-bottom:1px solid #000;'>
-									<th style='width:150px; text-align:left; font-size:14px; padding:10px;'>임상영양사 번호</th>
-									<td style='font-size:14px; padding:10px;border-left:1px solid #000;'>{$dietitian_number}</td>
-								</tr>
 							   ";
 			}
 
@@ -590,38 +484,34 @@ if($language == "ko") {
 
 			if($welcome_reception_yn == "Y"){
 				$other_html .= "
-								<input type='checkbox' class='checkbox' id='other1'>
-								<label for='other1'><i></i>Welcome Reception – September 7(Thu)</label>
+								<label for='other1'><i></i>Welcome Reception – November 29 (Fri)</label>
 							   ";
 			}
 			if($day2_breakfast_yn == "Y"){
 				$other_html .= $other_html != "" ? "<br/>" : "";
 				$other_html .= "
-								<input type='checkbox' class='checkbox' id='other2'>
-								<label for='other2'><i></i>Day 2 Breakfast Symposium – September 8(Fri)</label>
+								<label for='other2'><i></i>Day 1 Luncheon Symposium – November 29 (Fri)</label>
 							   ";
 			}
 			if($day2_luncheon_yn == "Y"){
 				$other_html .= $other_html != "" ? "<br/>" : "";
 				$other_html .= "
-								<input type='checkbox' class='checkbox' id='other3'>
-								<label for='other3'><i></i>Day 2 Luncheon Symposium – September 8(Fri)</label>
+								<label for='other3'><i></i>Day 2 Breakfast Symposium – November 30 (Sat)</label>
 							   ";
 			}
 			if($day3_breakfast_yn == "Y"){
 				$other_html .= $other_html != "" ? "<br/>" : "";
 				$other_html .= "
-								<input type='checkbox' class='checkbox' id='other4'>
-								<label for='other4'><i></i>Day 3 Breakfast Symposium – September 9(Sat)</label>
+								<label for='other4'><i></i>Day 2 Luncheon Symposium – November 30 (Sat)</label>
 							   ";
 			}
-			if($day3_luncheon_yn == "Y"){
-				$other_html .= $other_html != "" ? "<br/>" : "";
-				$other_html .= "
-								<input type='checkbox' class='checkbox' id='other5'>
-								<label for='other5'><i></i>Day 3 Luncheon Symposium – September 9(Sat)</label>
-							   ";
-			}
+			// if($day3_luncheon_yn == "Y"){
+			// 	$other_html .= $other_html != "" ? "<br/>" : "";
+			// 	$other_html .= "
+			// 					<input type='checkbox' class='checkbox' id='other5'>
+			// 					<label for='other5'><i></i>Day 3 Luncheon Symposium – September 9(Sat)</label>
+			// 				   ";
+			// }
 
 			if($other_html == "") $other_html = "-";
 
@@ -633,7 +523,6 @@ if($language == "ko") {
 				if($info[$a]){
 					$info_html .= $info_html != "" ? "<br/>" : "";
 					$info_html .= "
-									<input type='checkbox' class='checkbox' id='conference".$a."'>
 									<label for='conference".$a."'><i></i>".$info[$a]."</label>
 								  ";
 				}
@@ -680,7 +569,7 @@ if($language == "ko") {
 			}
 
 			$rawMessageString .= "
-									<table width='750' style='border:1px solid #000; border-radius:27px 27px 0 0; padding: 0;'>
+									<table width='750' style='border:1px solid #000; padding: 0;'>
 										<tbody>
 											<tr>
 												<td colspan='3'>
@@ -1072,7 +961,7 @@ if($language == "ko") {
 
 		$url = $_SERVER['HTTP_HOST'] ?? "www.icomes.or.kr";
 
-		$rawMessageString .= '<div><table width="750" style="border-radius:27px 27px 0 0; padding: 0;">
+		$rawMessageString .= '<div><table width="750" style=" padding: 0;">
 								<tr><td colspan="3"><img src="https://imcvp.org/main/img/2024_mail_header.png" width="750" style="width:100%; max-width:100%;"></td></tr>
 								<tr><td width="74" style="width:74px;"></td><td>
 								<div style="font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;">[IMCVP 2024] Completed Abstract Submission</div></td><td width="74" style="width:74px;"></td></tr>
@@ -1241,7 +1130,7 @@ if($language == "ko") {
 	}
 	else if($mail_type == "abstract") {
 		$rawMessageString .= "
-		<table width='750' style='border:1px solid #000; border-radius:27px 27px 0 0; padding: 0;'>
+		<table width='750' style='border:1px solid #000; padding: 0;'>
         <tbody>
             <tr>
                 <td colspan='3'>
@@ -1319,7 +1208,7 @@ if($language == "ko") {
 		$title = $data["title"] ?? [];
 		$topic = $data["topic"] ?? [];
 		$rawMessageString .= "
-		<table width='750' style='border:1px solid #000; border-radius:27px 27px 0 0; padding: 0;'>
+		<table width='750' style='border:1px solid #000; padding: 0;'>
         <tbody>
             <tr>
                 <td colspan='3'>
