@@ -2027,7 +2027,11 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	padding: 20px;
 	background-color: #fcfbf6;
 	margin-left: 0!important;
-	flex-shrink: 0;
+	/* flex-shrink: 0; */
+}
+
+.accommodation li:nth-child(2) .yellow_box, .accommodation li:nth-child(3) .yellow_box, .accommodation li:nth-child(4) .yellow_box, .accommodation li:nth-child(5) .yellow_box, .accommodation li:nth-child(6) .yellow_box, .accommodation li:nth-child(7) .yellow_box{
+	height:294px !important;
 }
 
 .accommodation .yellow_box .line{
@@ -2088,6 +2092,8 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* flex-wrap: wrap; */
+	flex-direction: row;
 }
 
 .accommodation .accomodation_box .imgs{
@@ -2111,6 +2117,17 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	}
 
 	.accommodation .accomodation_box{
-		flex-wrap: wrap;
+		display: flex;
+		flex-direction: column;
+		height: 600px !important;
 	}
+
+	.accommodation .yellow_box{
+		width: 90%;
+		margin-top: 20px;
+	}
+}
+
+.program_glance_table .day{
+	background-color: #00b0f0 !important;
 }
