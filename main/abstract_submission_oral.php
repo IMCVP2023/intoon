@@ -27,7 +27,7 @@ $info = sql_fetch($sql_info);
         <ul class="tab_green long presentation">
             <li class="on"><a href="./abstract_submission_oral.php">Poster Oral</a></li>
             <!-- <li><a href="./abstract_submission_poster.php">Guided Poster Presentation</a></li> -->
-            <li><a href="./abstract_submission_exhibition.php">Poster Exhibition only</a></li>
+            <li><a href="/main/comingsoon.php">Poster Exhibition only</a></li>
         </ul>
         <div class="section section1">
             <?php
