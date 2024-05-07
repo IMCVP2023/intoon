@@ -42,97 +42,73 @@
 <?php
     }
 ?>
-	<div class="app_contents_box">
+	<div class="inner">
+	<ul class="tab_green long abstract_submission">
+            <li class="on"><a href="./sponsor.php">Sponsors</a></li>
+            <li><a href="./sponsor_guidelines.php">Sponsor Guidelines</a></li>
+            <li><a href="./sponsor_exhibition.php">Exhibition & Social Event</a></li>
+    </ul>
 		<div class="sponsor_grade">
-			<p class="grade_title pink_bg">Diamond</p>
+			<p class="grade_title pink_bg">Supreme</p>
 			<ul class="grade_wrap length_1">
-				<li>
-					<a href="https://www.alvogen.com/" class="alvogen">Alvogen</a>
-				</li>
-			</ul>
-			<p class="grade_title green_bg05">Platinum</p>
-			<ul class="grade_wrap length_1">
-				<li>
-					<a href="https://www.novonordisk.com/" class="novo_nordisk">novo nordisk</a>
-				</li>
-			</ul> 
-			<p class="grade_title gold_bg">Gold</p>
-			<ul class="grade_wrap length_3">
-				<li>
-					<a href="https://www.handok.co.kr/eng/" class="handok">HANDOK</a>
-				</li>
-				<li class="small">
-					<a href="http://eng.yuhan.co.kr/Main/" class="yuhan">YUHAN</a>
-				</li>
-				<li>
-					<a href="http://en.donga-st.com/Main.da" class="dong_a">Dong-A ST</a>
-				</li>
-				<li class="small">
-					<a href="https://www.msd.com/" class="msd">MSD</a>
-				</li>
-				<li class="small">
-					<a href="https://www.inno-n.com/eng" class="inno_n">inno N</a>
-				</li>
-				<li>
-					<a href="https://www.hanmipharm.com/ehanmi/handler/Home-Start" class="hanmi_pharm">Hanmi Pharm</a>
-				</li>
-				<li>
-					<a href="http://www.ckdpharm.com/en/home" class="chong_kun_dang">Chong Kun Dang</a>
-				</li>
 				<li>
 					<a href="https://m.daewoong.co.kr/en/main/index" class="daewoong">DAEWOONG</a>
 				</li>
-				<li>
-					<a href="https://www.astrazeneca.com/" class="astra_zeneca">Astra Zeneca</a>
+				<li class="small">
+					<a href="https://daewoongbio.co.kr/daewoongbiokr/main/main.web" class="daewoong_bio">DAEWOONG</a>
 				</li>
 			</ul>
-			<p class="grade_title silver_bg">Silver</p>
-			<ul class="grade_wrap length_4">
+			<p class="grade_title green_bg05">Diamond</p>
+			<ul class="grade_wrap length_1">
 				<li>
-					<a href="https://www.lgchem.com/main/index" class="lg_chem">LG Chem</a>
+					<a href="https://www.daiichisankyo.com/" class="daiichi_sankyo">Daiichi Sankyo</a>
+				</li>
+			</ul> 
+			<p class="grade_title gold_bg">Platinum</p>
+			<ul class="grade_wrap length_3">
+				<li>
+					<a href="https://www.boryung.co.kr/en/" class="boryung">BORYUNG</a>
 				</li>
 				<li class="small">
 					<a href="https://www.celltrionph.com/en-us/home/index" class="celltrion">CELLTRION</a>
 				</li>
 				<li>
-					<a href="https://www.gccorp.com/eng/index" class="gc_biopharma">GC Niopharma</a>
+					<a href="https://www.hanmipharm.com/ehanmi/handler/Home-Start" class="hanmi_pharm">Hanmi Pharm</a>
 				</li>
-				<li class="small">
-					<a href="https://www.sanofi.com/en/our-company" class="sanofi">sanofi</a>
-				</li>
+			
 			</ul>
-			<p class="grade_title bronze_bg">Bronze</p>
+			<p class="grade_title silver_bg">Gold</p>
+			<ul class="grade_wrap length_3">
+				<li class="small">
+					<a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a>
+				</li>
+				<li>
+					<a href="http://www.ckdpharm.com/en/home" class="chong_kun_dang">Chong Kun Dang</a>
+				</li>
+				<li>
+					<a href="" class="bily">Chong Kun Dang</a>
+				</li>
+
+			</ul>
+			<p class="grade_title bronze_bg">Silver</p>
 			<ul class="grade_wrap length_5">
 				<li>
-					<a href="http://ajupharm.co.kr/en/index.html" class="aju_pharm">AJU PHARM</a>
+					<a href="https://www.novonordisk.com/" class="novo_nordisk">novo nordisk</a>
 				</li>
 				<li>
-					<a href="http://eng.ekdp.com/main/main.asp" class="kwangdong">Kwangdong</a>
+					<a href="https://www.bayer.com/en/" class="bayer">Bayer</a>
 				</li>
-				<li>
-					<a href="https://www.daiichisankyo.com/" class="daiichi_sankyo">Daiichi Sankyo</a>
-				</li>
-				<li>
-					<a href="https://www.organon.com/" class="organon">ORGANON</a>
-				</li>
-				<li>
-					<a href="https://www.boryung.co.kr/en/" class="boryung">BORYUNG</a>
-				</li>
-				<li>
-					<a href="https://www.boehringer-ingelheim.com/" class="boehringer">Boehringer INgelheim</a>
+
+				<li class="small">
+					<a href="https://www.sanofi.com/en/our-company" class="sanofi">sanofi</a>
 				</li>
 				<li>
 					<a href="http://www.dalimpharm.co.kr/en_index.html" class="dalimbiotech">dalimbiotech</a>
 				</li>
-				<li class="small">
-					<a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a>
-				</li>
-				<li class="small">
-					<a href="https://www.lilly.co.kr/" class="lilly">Lilly</a>
-				</li>
 				<li>
-					<a href="https://www.jw-pharma.co.kr/pharma/en/main.jsp" class="jw_pharm">jw Pharmaceutical</a>
+					<a href="https://www.organon.com/" class="organon">ORGANON</a>
 				</li>
+
 			</ul>
 		</div>
 	</div>

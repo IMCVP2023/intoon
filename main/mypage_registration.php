@@ -132,9 +132,9 @@
         <?php
         if ($currentDateTime >= $targetDateTime){
         ?>
-		<div class="rightT">
+		<!-- <div class="rightT">
 			<button class="btn green_btn long mb20 certificate_btn" type="button">Certificate of Attendance</button>
-		</div>
+		</div> -->
         <?php
         }
         ?>
@@ -393,75 +393,6 @@
 														</label>
 													</td>
 												</tr>
-												<!-- 이전 개발 -->
-												<!-- 
-												<tr class="tr_bg">
-													<th>Payment Date</th>
-													<td><?=$list["payment_register_date"] ?? "-"?></td>
-												</tr>
-												-->
-												<!-- Credit Card 선택 시 퍼블ver -->
-												<!--
-												<tr class="tr_bg">
-													<th>Registration fee</th>
-													<td>KRW 84,000</td>
-												</tr>
-												<tr class="tr_bg">
-													<th>Total Registration fee</th>
-													<td>KRW 84,000</td>
-												</tr>
-												<tr class="tr_bg">
-													<th>Payment Method</th>
-													<td>
-														<input type="checkbox" disabled class="checkbox">
-														<label for="">
-															<i></i>
-															Credit Card 
-														</label>
-													</td>
-												</tr>
-												-->
-												<!-- Bank transfer 선택 시 -->
-												<!--
-												<tr class="tr_bg">
-													<th>Registration fee</th>
-													<td>KRW 84,000</td>
-												</tr>
-												<tr class="tr_bg">
-													<th>Total Registration fee</th>
-													<td>KRW 84,000</td>
-												</tr>
-												<tr class="tr_bg">
-													<th>Payment Method</th>
-													<td>
-														<input type="checkbox" disabled class="checkbox">
-														<label for="">
-															<i></i>
-															Bank Transfer
-														</label>
-													</td>
-												</tr>
-												<tr>
-													<th>Name of Bank</th>
-													<td>KEB Hana Bank</td>
-												</tr>
-												<tr>
-													<th>Branch</th>
-													<td>HANA BANK, HEAD OFFICE (35, EULJI-RO, JUNG-GU, Seoul, Korea)</td>
-												</tr>
-												<tr>
-													<th>Account Number</th>
-													<td>584-910003-16504</td>
-												</tr>
-												<tr>
-													<th>SWIFT CODE(BIC)</th>
-													<td>KOEXKRSE</td>
-												</tr>
-												<tr>
-													<th>Account Holder</th>
-													<td>대한비만학회 등록비<br>(International Congress on Obesity and Metabolic Syndrome)</td>
-												</tr>
-												-->
 											</tbody>
 										</table>
 									</div>

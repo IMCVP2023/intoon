@@ -3,13 +3,13 @@
     <div class="fixed_btn_clone"></div>
     <div class="fixed_btn_wrap">
         <ul class="toolbar_wrap">
-            <li>
-                <!-- <a class="not_yet"> -->
-                <a href="/main/board_notice.php">
-                    <img src="/main/img/icons/footer_notice.png" alt="">
-                    <!-- <img src="/main/img/icons/tool_program.svg" alt=""> -->
+            <!-- <li>
+                <a class="not_yet">
+                <a href="/main/program_glance.php">
+                  <img src="/main/img/icons/footer_notice.png" alt="">
+                    <img src="/main/img/icons/tool_program.svg" alt="">
                 </a>
-            </li>
+            </li> -->
             <?php
             if ($_SESSION["USER"]["regi_status"] == 2 || $_SESSION["USER"]["regi_status"] == 5) {
             ?>
@@ -28,7 +28,7 @@
                     Program Book <br />Download
                 </a>
             </li> -->
-            <li>
+            <!-- <li>
                 <a class="not_yet">
                     <img src="/main/img/icons/footer_registration.png" alt="">
                 </a>
@@ -37,11 +37,11 @@
                 <a class="not_yet">
                     <img src="/main/img/icons/footer_abstract.png" alt="">
                 </a>
-            </li>
+            </li> -->
             <?php
             } else {
             ?>
-            <li>
+            <!-- <li>
                 <a class="not_yet">
                     <img src="/main/img/icons/footer_registration.png" alt="">
                 </a>
@@ -50,7 +50,7 @@
                 <a class="not_yet">
                     <img src="/main/img/icons/footer_abstract.png" alt="">
                 </a>
-            </li>
+            </li> -->
             <?php
             }
             ?>
@@ -61,20 +61,20 @@
                 <img src="/main/img/icons/footer_mypage.png" alt="">
                 <img src="/main/img/icons/tool_mypage.svg" alt="">
             </i></button></li> -->
-                <li>
+                <!-- <li>
                     <a href="/main/login.php" onClick="alert('Need to login.')">
                         <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
                     </a>
-                </li>
+                </li> -->
             <?php
             } else {
             ?>
             <!-- <li><button type="button" onClick="location.href='/main/mypage.php'"><i> -->
-                <li>
+                <!-- <li>
                     <a href="/main/mypage.php">
                         <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
                     </a>
-                </li>
+                </li> -->
                  
             <!-- </li> -->
             <?php
@@ -82,6 +82,13 @@
             ?>
 
         </ul>
+        <button type="button" class="btn_right">G<br>O<br><br>T<br>O</button>
+        <div class="footer_go_to_box">
+            <div><a href="/main/program_glance_icola.php">Program</a></div>
+            <div><a href="/main/registration.php">Registration</a></div>
+            <div><a href="/main/abstract_submission.php">Call for Abstract</a></div>
+            <div><a href="/main/mypage.php">My IMCVP</a></div>
+        </div>
         <!-- <button type="button" class="btn_plus"><img src="/main/img/icons/icon_plus_white.svg" alt=""></button> -->
         <button type="button" class="btn_top"><img src="/main/img/icons/icon_top_btn.svg" alt=""></button>
     </div>
@@ -114,35 +121,54 @@
             <li><img src="./img/sponsor/logo23.png" alt=""></li>
         </ul>
     </div> -->
-    <!-- <div class="sponsor_logo-wrap container">
+    <div class="sponsor_logo-wrap container">
         <ul class="s_logo_list">
-          <li><a href="https://www.alvogen.com/" class="alvogen">Alvogen</a></li>
-            <li><a href="https://www.novonordisk.com/" class="novo_nordisk">novo nordisk</a></li>
-            <li><a href="https://www.handok.co.kr/eng/" class="handok">HANDOK</a></li>
-            <li><a href="http://eng.yuhan.co.kr/Main/" class="yuhan">YUHAN</a></li>
-            <li><a href="http://en.donga-st.com/Main.da" class="dong_a">Dong-A ST</a></li>
-            <li><a href="https://www.msd.com/" class="msd">MSD</a></li>
-            <li><a href="https://www.inno-n.com/eng" class="inno_n">inno N</a></li>
-            <li><a href="https://www.hanmipharm.com/ehanmi/handler/Home-Start" class="hanmi_pharm">Hanmi Pharm</a></li>
-            <li><a href="http://www.ckdpharm.com/en/home" class="chong_kun_dang">Chong Kun Dang</a></li>
-            <li><a href="https://m.daewoong.co.kr/en/main/index" class="daewoong">DAEWOONG</a></li>
-            <li><a href="https://www.astrazeneca.com/" class="astra_zeneca">Astra Zeneca</a></li>
-            <li><a href="https://www.lgchem.com/main/index" class="lg_chem">LG Chem</a></li>
-            <li><a href="https://www.celltrionph.com/en-us/home/index" class="celltrion">CELLTRION</a></li>
-            <li><a href="https://www.gccorp.com/eng/index" class="gc_biopharma">GC Niopharma</a></li>
-            <li><a href="https://www.sanofi.com/en/our-company" class="sanofi">sanofi</a></li>
-            <li><a href="http://ajupharm.co.kr/en/index.html" class="aju_pharm">AJU PHARM</a></li>
-            <li><a href="http://eng.ekdp.com/main/main.asp" class="kwangdong">Kwangdong</a></li>
-            <li><a href="https://www.daiichisankyo.com/" class="daiichi_sankyo">Daiichi Sankyo</a></li>
-            <li><a href="https://www.organon.com/" class="organon">ORGANON</a></li>
-            <li><a href="https://www.boehringer-ingelheim.com/" class="boehringer">Boehringer INgelheim</a></li>
-            <li><a href="https://www.boryung.co.kr/en/" class="boryung">BORYUNG</a></li>
-            <li><a href="http://www.dalimpharm.co.kr/en_index.html" class="dalimbiotech">dalimbiotech</a></li>
-            <li><a href="https://www.jw-pharma.co.kr/pharma/en/main.jsp" class="jw_pharm">jw Pharmaceutical</a></li>
-            <li class="small"><a href="https://www.lilly.co.kr/" class="lilly">Lilly</a></li>
-            <li class="small"><a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a></li>
+        <li>
+					<a href="https://m.daewoong.co.kr/en/main/index" class="daewoong">DAEWOONG</a>
+				</li>
+				<li class="small">
+					<a href="https://daewoongbio.co.kr/daewoongbiokr/main/main.web" class="daewoong_bio">DAEWOONG</a>
+				</li>
+                <li>
+					<a href="https://www.daiichisankyo.com/" class="daiichi_sankyo">Daiichi Sankyo</a>
+				</li>
+                <li>
+					<a href="https://www.boryung.co.kr/en/" class="boryung">BORYUNG</a>
+				</li>
+				<li class="small">
+					<a href="https://www.celltrionph.com/en-us/home/index" class="celltrion">CELLTRION</a>
+				</li>
+				<li>
+					<a href="https://www.hanmipharm.com/ehanmi/handler/Home-Start" class="hanmi_pharm">Hanmi Pharm</a>
+				</li>
+                <li class="small">
+					<a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a>
+				</li>
+				<li>
+					<a href="http://www.ckdpharm.com/en/home" class="chong_kun_dang">Chong Kun Dang</a>
+				</li>
+				<li>
+					<a href="" class="bily">Chong Kun Dang</a>
+				</li>
+                <li>
+					<a href="https://www.novonordisk.com/" class="novo_nordisk">novo nordisk</a>
+				</li>
+				<li>
+					<a href="https://www.bayer.com/en/" class="bayer">Bayer</a>
+				</li>
+
+				<li class="small">
+					<a href="https://www.sanofi.com/en/our-company" class="sanofi">sanofi</a>
+				</li>
+				<li>
+					<a href="http://www.dalimpharm.co.kr/en_index.html" class="dalimbiotech">dalimbiotech</a>
+				</li>
+				<li>
+					<a href="https://www.organon.com/" class="organon">ORGANON</a>
+				</li>
+
         </ul>
-    </div> -->
+    </div>
     <footer class="footer">
         <div class="container">
             <br>
@@ -224,7 +250,7 @@
 // $('.btn_plus, .toolbar_wrap').hover(() => {
 //     $('.toolbar_wrap').css({
 //         opacity: 1,
-//         transform: 'translateY(0)' 
+//         transform: 'translateY(-10%)' 
 // })
 // },()=>{
 //     $('.toolbar_wrap').css({
@@ -232,5 +258,33 @@
 //         transform: 'translateY(100%)'
 // })
 // });
+
+//[240502] sujeong / right btn
+$('.footer_go_to_box').css({
+    opacity: 0,
+    transform: 'translateX(100%)', 
+    transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out' 
+})
+$('.btn_right, .footer_go_to_box').hover(() => {
+    $('.footer_go_to_box').css({
+        opacity: 1,
+        transform: 'translateX(0%)' 
+})
+$('.btn_right').css({
+        opacity: 1,
+        transform: 'translateX(-150px)',
+        transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out'  
+})
+},()=>{
+    $('.footer_go_to_box').css({
+        opacity: 0,
+        transform: 'translateX(100%)'
+})
+$('.btn_right').css({
+        opacity: 1,
+        transform: 'translateX(0px)',
+        transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out'  
+})
+});
 
 </script>

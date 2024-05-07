@@ -10,7 +10,7 @@
 .pBot_10{padding-bottom: 10px;}
 .btn_center{text-align: center;}
 
-.loading{position:fixed; top:0; left:0; background-color:rgba(221, 221, 221, 0.1); width:100%; height:100%; z-index:999; display:none;}
+.loading{position:fixed; top:0; left:0; background-color: rgba(0, 0, 0, 0.4); width:100%; height:100%; z-index:999; display:none;}
 .loading img{width:50px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
 
 /*coming*/
@@ -255,6 +255,7 @@ section.container.organizing {padding-bottom: 190px;}
 .registration .payment_wrap img{width: 100%;}
 /* 220406 HUBDNC LJH2 추가 */
 .registration .title + .details {margin-bottom: 100px;}
+.registration .title + p + .details {margin-bottom: 100px;}
 .registration .title + .details.icomes_air th, .registration .title + .details.icomes_air td {font-size:12px;}
 .registration .btn_wrap {text-align: center; margin-top: 40px;}
 .rating_guide_pop .btn {font-size: 20px; padding: 0 30px; border-radius: 0;}
@@ -329,7 +330,7 @@ section.container.organizing {padding-bottom: 190px;}
 .useful_list > li:after {content:''; display:block; clear:both;}
 .useful_list li {font-size:16px; line-height:26px;}
 .useful_list > li:not(:first-child) {margin-top:50px;}
-.useful_list > li > div {float:left; height:200px; width:300px;}
+.useful_list > li > div {/*float:left; height:200px; width:300px;)*/}
 .useful_list > li > div:last-child {width:calc(100% - 328px); height:auto; margin-left:28px;}
 /*.useful_list li .imgs {background-color:#e7e7e7;}*/
 .useful_list li .imgs {background:url("../img/img_useful01.jpg") no-repeat center /cover;}
@@ -1825,8 +1826,8 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 }
 
 .abstract_title_box{
-	width: 350px;
-	max-width: 350px;
+	width: 300px;
+	max-width: 300px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -1908,4 +1909,208 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 	.program_glance .tab_pager li a, .scientific_program .tab_pager li a, .scientific_tab_pager li a {font-size:16px;}
 	.scientific_program .room_tab {/*min-width: 520px;*/ margin-top:0;}
 	.scientific_program .room_tab li a {font-size:14px;}
+}
+
+.btn_right{
+	width: 50px;
+	height: 150px;
+	position: fixed;
+	bottom: 400px;
+	right: 0;
+	background-color: #000066;
+	border-radius: 12px 0 0 12px;
+	color: #FFF;
+	font-weight: 700;
+}
+
+.footer_go_to_box{
+	width: 150px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #DDDAEE;
+	position: fixed;
+	bottom: 400px;
+	right: 0;
+}
+
+
+/** CSS - 밑줄 애니메이션 */
+
+.footer_go_to_box > div > a{
+	display: block;
+	position: relative;
+	padding: 0.2em 0;
+	font-size: 16px;
+}
+
+.footer_go_to_box > div > a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.12em;
+	background-color: #000;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+  }
+
+  .footer_go_to_box > div > a::after {
+	opacity : 1;
+	transform: scale(0);
+	transform-origin: center;
+  }
+  
+  .footer_go_to_box > div > a:hover::after,
+  .footer_go_to_box > div > a:focus::after{
+	transform: scale(1);
+  }
+ 
+/*  eligibility pop up */
+span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
+.eligibility_pop {visibility:hidden; opacity:0; transition: opacity 0.4s;}
+.eligibility_pop.on {visibility:visible; opacity:1;}
+.eligibility_pop .pop_bg {z-index:1; background-color:transparent;}
+.eligibility_pop .balloon {width: 200px; padding: 10px 10px 10px 20px; background-color: #191919; border-radius: 17px; position:absolute; bottom:32px; left:0; z-index:10;}
+.eligibility_pop .balloon:after {content:''; display:block; width:10px; height:10px; background-color:#191919; position:absolute; bottom:-5px; left:20px; transform: rotate(-45deg);}
+.eligibility_pop p {font-size:13px !important; color:#fff;}
+
+
+.registration .registration_txt{line-height: 2.0;}
+
+.flex_table {display: flex; justify-content: space-between; }
+.flex_table table {width: 48%;}
+
+.venue .useful_list > li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.venue .useful_list > li:nth-of-type(1) .imgs{
+	background: url("../img/2024_wakerhill.jpg") no-repeat center / cover !important;
+	width: 500px;
+	height: 500px;
+}
+
+.venue .useful_list > li > div {
+	width: 490px;
+}
+
+.venue .useful_list > li > div:last-child{
+	width: calc(80% - 328px);
+}
+
+
+.venue .venue_btn{
+	width: 150px;
+	height: 40px;
+	color: #FFF;
+	background-color: #44484a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-underline-position: under;
+}
+
+.accommodation .yellow_box{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	width: calc(100% - 400px);
+	height: 367px !important;
+	padding: 20px;
+	background-color: #fcfbf6;
+	margin-left: 0!important;
+	flex-shrink: 0;
+}
+
+.accommodation .yellow_box .line{
+	width: 100%;
+	height: 1px;
+	background-color: #c8d1dd;
+	margin: 12px 0;
+}
+
+.accommodation .yellow_box .booked_box{
+	width: 100%;
+	height: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.accommodation .yellow_box h5 {
+	font-size: 20px;
+	font-weight: 600;
+	color: purple;
+	line-height: 1.8;
+}
+
+.accommodation .yellow_box h6 span{
+	color: rgb(123, 98, 221);
+}
+
+.accommodation .yellow_box h6 {
+	line-height: 1.4;
+}
+
+.accommodation .yellow_box .booked_box button {
+	width: 200px;
+	height: 35px;
+	border-radius: 4px;
+	color: #FFF;
+	font-size: 12px;
+}
+.accommodation .yellow_box .booked_box button:nth-child(1){
+	background-color: plum;
+}
+
+.accommodation .yellow_box .booked_box button:nth-child(2){
+	background-color: violet;
+}
+
+.accommodation .yellow_box .booked_box .buttons_box {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.accommodation .accomodation_box{
+	width: 100% !important;
+	height: 400px !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.accommodation .accomodation_box .imgs{
+	width: 400px !important;
+}
+
+
+@media screen and (max-width:1100px){
+
+	.venue .useful_list li .imgs{
+		float: none !important;
+		margin: 0 auto !important;
+	}
+	
+	.venue .useful_list li div:last-child{
+		width: 100%;
+		margin-top: 50px;
+	}
+	.venue .useful_list li div:last-child.x_scroll{
+		margin-top: 20px!important;
+	}
+
+	.accommodation .accomodation_box{
+		flex-wrap: wrap;
+	}
 }

@@ -61,94 +61,51 @@
 	$payment_method = $data["payment_method_txt"] ?? "-";
 	$payment_date = $data["payment_date_text"] ?? "-";
 ?>
+<!-- 구글 폰트 불러오기 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
 
 <div style="max-width:800px;">
-	<!-- 영수증 (PC) -->
-	<?php
-		if (!$is_check_mobile) {
-	?>
-			<div style="max-width:100%; border:5px solid #004793">
-				<div style="padding-top:100px; position:relative;">
-					<div>
-						<img src="./img/receipt_logo.svg" alt="" style="width:180px; max-width:100%; max-height:80px; position:absolute; top:20px; left:15px;">
-						<h1 style="font-size:66px; font-weight:900; color:#000000; text-align:center;">RECEIPT</h1>	
-					</div>
-					<div style="padding:0 50px; margin-top:30px;">
-						<table style="border-collapse:collapse; border-spacing:0; width:100%;">
-							<tbody>
-								<tr>
-									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-top:3px solid #000066; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Payment Date</th>
-									<td style="padding:16px 20px; font-size:16px; color:#000000; border-top:3px solid #000066; border-bottom:1px solid #000066;"><?= $payment_date ?></td>
-								</tr>
-								<tr>
-									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Registration No.</th>
-									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;"><?= $register_no ?></td>
-								</tr>
-								<tr>
-									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Name</th>
-									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;"><?= $name ?></td>
-								</tr>
-								<tr>
-									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Country</th>
-									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;"><?= $nation ?></td>
-								</tr>
-								<tr>
-									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Registration Fee</th>
-									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:1px solid #000066;"><?= number_format($data['price']) ?></td>
-								</tr>
-								<tr>
-									<th width="180" style="width:180px; padding:16px 20px; font-size:16px; font-weight:800; color:#000000; background-color:#DEEAF6; border-right:1px solid #000066; border-bottom:3px solid #000066; text-align:left;">Payment Method</th>
-									<td style="padding:16px 20px; font-size:16px; color:#000000; border-bottom:3px solid #000066;"><?= $payment_method ?></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<img src="./img/receipt_bottom.png" alt="" style="width:100%; max-width:100%;">
-				</div>
-			</div>
-	<?php
-		} else {
-	?>
 	<!-- 영수증 (MB) -->
 			<div style="max-width:100%;">
 				<div>
-					<img src="./img/receipt_top_mb.png" alt="" style="width:100%; max-width:100%;">
+					<img src="./img/2024_receipt_top.png" alt="" style="width:100%; max-width:100%;">
 					<div style="padding:0 24px; margin-top:30px;">
-						<table style="border-collapse:collapse; border-spacing:0; width:100%;">
+						<h1 style="font-size:60px; text-align:center; margin-bottom:20px; font-family: 'Sedan SC', serif; font-weight:500">RECEIPT</h1>
+						<table style="border-collapse:collapse; border-spacing:0; width:100%; margin-bottom:50px;">
 							<tbody>
 								<tr>
-									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-top:3px solid #000066; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Payment Date</th>
-									<td style="padding:12px; font-size:14px; color:#000000; border-top:3px solid #000066; border-bottom:1px solid #000066;"><?= $payment_date ?></td>
+									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:rgba(255,207,185,0.3); border-top:1px solid #000; border-right:1px solid #ffcfb9; border-bottom:1px solid #000; text-align:left;">Payment Date</th>
+									<td style="padding:12px; font-size:14px; color:#000000; border-top:1px solid #000; border-bottom:1px solid #000;"><?= $payment_date ?></td>
 								</tr>
 								<tr>
-									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Registration No.</th>
-									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000066;"><?= $register_no ?></td>
+									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:rgba(255,207,185,0.3); border-right:1px solid #ffcfb9; border-bottom:1px solid #000; text-align:left;">Registration No.</th>
+									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000;"><?= $register_no ?></td>
 								</tr>
 								<tr>
-									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Name</th>
-									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000066;"><?= $name ?></td>
+									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:rgba(255,207,185,0.3); border-right:1px solid #ffcfb9; border-bottom:1px solid #000; text-align:left;">Name</th>
+									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000;"><?= $name ?></td>
 								</tr>
 								<tr>
-									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Country</th>
-									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000066;"><?= $nation ?></td>
+									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:rgba(255,207,185,0.3); border-right:1px solid #ffcfb9; border-bottom:1px solid #000; text-align:left;">Country</th>
+									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000;"><?= $nation ?></td>
 								</tr>
 								<tr>
-									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:1px solid #000066; text-align:left;">Registration Fee</th>
-									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000066;"><?= $total_price ?></td>
+									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:rgba(255,207,185,0.3); border-right:1px solid #ffcfb9; border-bottom:1px solid #000; text-align:left;">Registration Fee</th>
+									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000;"><?= $total_price ?></td>
 								</tr>
 								<tr>
-									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:#F6F6F6; border-right:1px solid #000066; border-bottom:3px solid #000066; text-align:left;">Payment Method</th>
-									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:3px solid #000066;"><?= $payment_method ?></td>
+									<th width="135" style="width:135px; padding:12px; font-size:14px; font-weight:800; color:#000000; background-color:rgba(255,207,185,0.3); border-right:1px solid #ffcfb9; border-bottom:1px solid #000; text-align:left;">Payment Method</th>
+									<td style="padding:12px; font-size:14px; color:#000000; border-bottom:1px solid #000;"><?= $payment_method ?></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<img src="./img/receipt_bottom_mb.png" alt="" style="width:100%; max-width:100%;">
+					<img src="./img/2024_receipt_bottom.png" alt="" style="width:100%; max-width:100%;">
 				</div>
 			</div>
-	<?php
-		}
-	?>
+
 </div>
 <div class="btn_wrap" style="max-width:800px; text-align:center;">
     <button type="button" class="btn update_btn pop_save_btn" onclick="CreatePDFfromHTML()">Save</button>

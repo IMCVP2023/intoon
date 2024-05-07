@@ -34,18 +34,21 @@
 						<col class="grogram_time">
 						<col/>
 						<col/>
+						<col width="10%"/>
 					</colgroup>	
 					<thead>
 						<tr>
 							<th>Room</th>
-							<th>1</th>
-							<th>2</th>
+							<th>Room A</th>
+							<th>Room B</th>
+							<th>Room C</th>
 						</tr>
 					</thead>
 					<tbody name="day" class="day_1">
 						<tr>
 							<td class="">08:50~09:00</td>
 							<td colspan="2">Registration and Opening Remark</td>
+							<td rowspan="11">TBD</td>
 						</tr>
 						<tr>
 							<td class="">09:00~10:40</td>
@@ -145,13 +148,14 @@
 						<col class="grogram_time">
 						<col/>
 						<col/>
-
+						<col width="10%"/>
 					</colgroup>	
 					<thead>
 						<tr>
 							<th>Room</th>
-							<th>1</th>
-							<th>2</th>
+							<th>Room A</th>
+							<th>Room B</th>
+							<th>Room C</th>
 						</tr>
 					</thead>
 					<tbody name="day" class="day_2">
@@ -165,6 +169,7 @@
 								Breakfast Symposium 2<br/>
 								<input type="hidden" name="e" value="room2">
 							</td>
+							<td rowspan="12">TBD</td>
 						</tr>
 						<tr>
 							<td class="">08:00~08:30</td>

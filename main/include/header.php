@@ -77,7 +77,7 @@ $locale = locale($language);
                             <li><a href="/main/comingsoon.php">Welcome Message</a></li>
                             <li><a href="/main/comingsoon.php">Organization</a></li>
                             <li><a href="/main/comingsoon.php">Overview</a></li>
-                            <li><a href="/main/comingsoon.php">Photo Gallery</a></li>
+                            <!-- <li><a href="/main/comingsoon.php">Photo Gallery</a></li> -->
                             <!-- <li><a href="/main/welcome.php">Welcome Message</a></li>
                             <li><a href="/main/organizing_committee.php">Organization</a></li>
                             <li><a href="/main/overview.php">Overview</a></li>
@@ -97,11 +97,10 @@ $locale = locale($language);
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">Abstracts</a>
+                        <a href="/main/comingsoon.php">Call for Abstract</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Submission Guidelines</a></li>
-                            <li><a href="/main/comingsoon.php">Online
-                                    Submission</a></li>
+                            <li><a href="/main/comingsoon.php">Abstract Submission Guidelines</a></li>
+                            <li><a href="/main/comingsoon.php">Go to Abstract Submission</a></li>
                             <li><a href="/main/comingsoon.php">Presentation Guidelines</a></li>
                             <li><a href="/main/comingsoon.php">Awards & Grants</a></li>
 
@@ -115,9 +114,8 @@ $locale = locale($language);
                     <li>
                         <a href="/main/comingsoon.php">Registration</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Registration Guidelines
-                                </a></li>
-                            <li><a href="/main/comingsoon.php">Online Registration</a></li>
+                            <li><a href="/main/comingsoon.php">Guidelines</a></li>
+                            <li><a href="/main/comingsoon.php">Go to Registration</a></li>
                             <li><a href="/main/comingsoon.php">평점 안내</a></li>
 
                             <!-- <li><a href="/main/registration_guidelines.php">Registration Guidelines
@@ -131,6 +129,7 @@ $locale = locale($language);
                         <ul class="sub_nav">
                             <li><a href="/main/comingsoon.php">Sponsorship</a></li>
                             <li><a href="/main/comingsoon.php">Exhibition</a></li>
+                            <li><a href="/main/comingsoon.php">Exhibition & Social Event</a></li>
 
                             <!-- <li><a href="/main/sponsor.php">Sponsorship</a></li>
                             <li><a href="/main/sponsor_exhibition.php">Exhibition</a></li> -->
@@ -149,12 +148,12 @@ $locale = locale($language);
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">Information</a>
+                        <a href="/main/comingsoon.php">News & Information</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Notice</a></li>
-                            <li><a href="/main/comingsoon.php">Newsletter</a></li>
+                            <li><a href="/main/comingsoon.php">News</a></li>
+                            <!-- <li><a href="/main/comingsoon.php">Newsletter</a></li> -->
+                            <li><a href="/main/comingsoon.php">VISA</a></li>
                             <li><a href="/main/comingsoon.php">Useful Information</a></li>
-                            <li><a href="/main/comingsoon.php">VISA & K-ETA</a></li>
 
                             <!-- <li><a href="/main/board_notice.php">Notice</a></li>
                             <li><a href="/main/board_newsletter.php">Newsletter</a></li>
@@ -251,7 +250,7 @@ $(document).ready(function() {
                     <li><a href="/main/comingsoon.php">Welcome Message</a></li>
                     <li><a href="/main/comingsoon.php">Organization</a></li>
                     <li><a href="/main/comingsoon.php">Overview</a></li>
-                    <li><a href="/main/comingsoon.php">Photo Gallery</a></li>
+                    <!-- <li><a href="/main/comingsoon.php">Photo Gallery</a></li> -->
 
                     <!-- <li><a href="/main/welcome.php">Welcome Message</a></li>
                     <li><a href="/main/organizing_committee.php">Organization</a></li>
@@ -274,11 +273,11 @@ $(document).ready(function() {
             </li>
             <li class="m_nav_li">
                 <a href="javascript:;"
-                    class="<?= (in_array($_page, $_page_config["m3"]) ? "show" : "") ?>"><span>Abstracts</span></a>
+                    class="<?= (in_array($_page, $_page_config["m3"]) ? "show" : "") ?>"><span>Call for Abstract</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m3"]) ? "block" : "none") ?>">
 
-                    <li><a href="/main/comingsoon.php">Submission Guidelines</a></li>
-                    <li><a href="/main/comingsoon.php">Online Submission</a></li>
+                    <li><a href="/main/comingsoon.php">Abstract Submission Guidelines</a></li>
+                    <li><a href="/main/comingsoon.php">Go to Abstract Submission</a></li>
                     <li><a href="/main/comingsoon.php">Presentation Guidelines</a></li>
                     <li><a href="/main/comingsoon.php">Awards & Grants</a></li>
 
@@ -291,8 +290,8 @@ $(document).ready(function() {
             <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m4"]) ? "show" : "") ?>">
                 <a href="javascript:;"><span>Registration</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m4"]) ? "block" : "none") ?>">
-                    <li><a href="/main/comingsoon.php">Registration Guidelines</a></li>
-                    <li><a href="/main/comingsoon.php">Online Registration</a></li>
+                    <li><a href="/main/comingsoon.php">Guidelines</a></li>
+                    <li><a href="/main/comingsoon.php">Go to Registration</a></li>
                     <li><a href="/main/comingsoon.php">평점 안내</a></li>
 
                     <!-- <li><a href="/main/registration_guidelines.php">Registration Guidelines</a></li>
@@ -305,6 +304,7 @@ $(document).ready(function() {
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m5"]) ? "block" : "none") ?>">
                     <li><a href="/main/comingsoon.php">Sponsorship</a></li>
                     <li><a href="/main/comingsoon.php">Exhibition</a></li>
+                    <li><a href="/main/comingsoon.php">Exhibition & Social Event</a></li>
                     
                     <!-- <li><a href="/main/sponsor.php">Sponsorship</a></li>
                     <li><a href="/main/sponsor_exhibition.php">Exhibition</a></li> -->
@@ -323,13 +323,13 @@ $(document).ready(function() {
                 </ul>
             </li>
             <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m6"]) ? "show" : "") ?>">
-                <a href="javascript:;"><span>Information</span></a>
+                <a href="javascript:;"><span>News & Information</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m6"]) ? "block" : "none") ?>">
 
-                    <li><a href="/main/comingsoon.php">Notice</a></li>
-                    <li><a href="/main/comingsoon.php">Newsletter</a></li>
+                    <li><a href="/main/comingsoon.php">News</a></li>
+                    <!-- <li><a href="/main/comingsoon.php">Newsletter</a></li> -->
+                    <li><a href="/main/comingsoon.php">VISA</a></li>
                     <li><a href="/main/comingsoon.php">Useful Information</a></li>
-                    <li><a href="/main/comingsoon.php">VISA & K-ETA</a></li>
 
                     <!-- <li><a href="/main/board_notice.php">Notice</a></li>
                     <li><a href="/main/board_newsletter.php">Newsletter</a></li>

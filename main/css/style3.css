@@ -101,7 +101,7 @@ input[type="file"].file_input + .file_label {display: inline-block; line-height:
 .dday_bot span {font-size: 15px; font-weight: 900; color: inherit;}
 
 /* index */
-.btn_fixed_triangle {position: fixed; bottom: 0; right: 0; width: 300px; height: 300px; clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%); background-color: rgba(0,102,107,0.85);}
+.btn_fixed_triangle {position: fixed; bottom: 0; right: 0; width: 300px; height: 300px; clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%); background-color: rgba(0,102,107,0.85);z-index: 1;}
 .btn_fixed_triangle span {position: absolute; right: 19px; bottom: 11px; font-size: 33px; font-weight: bold; line-height: 1.1; font-family: 'Montserrat', sans-serif; color: #fff; text-align: right; line-height: 1.2}
 
 /* submission_guideline.php */
@@ -152,7 +152,7 @@ input[type="file"].file_input + .file_label {display: inline-block; line-height:
 
 /*abstract_submission_guideline.php*/
 .steps_area.five_steps {max-width:100%;}
-.steps_area.five_steps li {width:20%;}
+.steps_area.five_steps li {width:25%;}
 .steps_area.five_steps li p:first-of-type {width:100px; height:100px; line-height:100px; font-size:18px; /*background-color:rgba(255,235,0,0.06);*/ background-color:rgba(0,102,204,0.06); color:#000;}
 .steps_area.five_steps li p:first-of-type:after {width:20px; height:20px; top:40px;}
 .steps_area.five_steps li:nth-child(2) p:first-of-type {background-color:rgba(0,102,204,0.15);}
@@ -194,9 +194,9 @@ section.visa .circle_title + .details {margin-bottom: 72px;}
 .accommodation .step_text {padding: 0 30px;}
 .accommodation .useful_list .table_wrap {white-space: nowrap;}
 .accommodation .useful_list > li > div {width: 400px; height: 267px;}
-.accommodation .useful_list > li > div:last-child {width: calc(100% - 428px);}
+.accommodation .useful_list > li > div:last-child {width: 90%;}
 /*.accommodation .useful_list > li:last-child > div {height: 288.6px;}*/
-.accommodation .useful_list > li:nth-of-type(1) .imgs {background-image: url("../img/hotel_img1.jpg");}
+.accommodation .useful_list > li:nth-of-type(1) .imgs {background-image: url("../img/2024_wakerhill.jpg");}
 .accommodation .useful_list > li:nth-of-type(2) .imgs {background-image: url("../img/hotel_img8.jpg");}
 .accommodation .useful_list > li:nth-of-type(3) .imgs {background-image: url("../img/hotel_img9.jpg");}
 .accommodation .useful_list > li:nth-of-type(4) .imgs {background-image: url("../img/hotel_img6.jpg");}
@@ -330,7 +330,7 @@ ul.sort li a{display: block;  width: auto;  border: 1px solid #e1e1e1; backgroun
 ul.sort li.on a{border-color: #475562; background-color: #475562; color:#fff;}
 ul.category{margin: 6px 0 0; padding: 0; list-style: none;}
 ul.category:after{clear: both; content:''; display: block;}
-ul.category li{float: left; width:calc(25% - 4px); margin-left: 5px;}
+ul.category li{float: left; /*width:calc(25% - 4px);*/width: calc(33% - 2px); margin-left: 5px;}
 ul.category li:first-child{margin-left: 0;}
 ul.category li a{display: block; width: auto; padding:0 9px; border: 1px solid #386188; color : #386188; text-align: center; text-decoration: none; font-size:16px;  border-radius:6px; line-height: 30px;}
 ul.category li.on a{border-color: #386188; background-color: #386188; color:#fff;}

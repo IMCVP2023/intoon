@@ -35,7 +35,12 @@
 ?>
     <h1 class="page_title">Exhibition</h1>
 	
-	<div class="container_inner">
+	<div class="inner">
+		<ul class="tab_green long abstract_submission">
+				<li><a href="./sponsor.php">Sponsors</a></li>
+				<li><a href="./sponsor_guidelines.php">Sponsor Guidelines</a></li>
+				<li class="on"><a href="./sponsor_exhibition.php">Exhibition & Social Event</a></li>
+		</ul>
 		<div class="contents_box exhibition">
 			<div class="clearfix2">
 				<img src="/main/img/img_exhibition_web_floor_3.png" alt="">

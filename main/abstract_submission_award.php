@@ -13,19 +13,19 @@
             <li class="on"><a href="./abstract_submission_award.php">Awards & Grants</a></li>
         </ul>
 		<div class="section section1">
-			<div>
+			<!-- <div>
 				<div class="text_box">
 					<ul>
 						<li>The organizing committee of ICOMES 2023 has made the decision to offer benefits to all researchers who have accepted abstracts and will be participating in the on-site congress.</li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 			<!--Travel Grants start-->
 			<div>
 				<div class="section_title_wrap2">
-					<h3 class="title">Travel Grants</h3>
+					<h3 class="title">Travel grants (for international participants only)</h3>
 				</div>
-				<h4 class="title">Overseas</h4>
+				<!-- <h4 class="title">Overseas</h4> -->
 				<div class="table_wrap detail_table_common x_scroll">
 					<table class="c_table detail_table">
 						<colgroup>
@@ -41,38 +41,20 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td class="text_center">Oral Presenter</td>
-								<td class="text_center">USD 700</td>
-								<td rowspan="2" class="text_center">On-site attendance and presentation are required.</td>
+								<td class="text_center">Travel grants</td>
+								<td class="text_center">USD 500.00</td>
+								<td class="text_center">To be notified individually before the congress</td>
 							</tr>
-							<tr>
-								<td class="text_center">Guided Poster Presenter<br>Poster Exhibitior</td>
-								<td class="text_center border_r">USD 500</td>
-							</tr>
-							<!--<tr>
-								<td class="text_center">Oral Presenter</td>
-								<td class="text_center">USD 500</td>
-								<td class="text_center"></td>
-							</tr>
-							<tr>
-								<td class="text_center">Special Travel Grant</td>
-								<td class="text_center">USD 1,000</td>
-								<td class="text_center">Up to 10 persons<br/>*Selected by the organizing committee.</td>
-							</tr>
-							<tr>
-								<th>Sep 7(Thu) ~ 9 (Sat), 2023</th>
-								<td>ICOMES 2023</td>
-							</tr>-->
 						</tbody>
 					</table>
                 </div>
-				<p class="mt10 p_indent">• Only the presenter is eligible to apply for the travel grant (duplicate applications are not allowed).</p>
-				<p class="mt10 p_indent">• The Secretariat will notify you of the results via email after the evaluation process.</p>
-				<p class="mt10 p_indent">• Please ensure accurate information is provided in the application form. <br>The Secretariat may request additional documents if any missing information or errors are found.</p>
+				<p class="mt10 p_indent">• IMCVP 2024 offers travel grants to international participants who have submitted an abstract.</p>
+				<p class="mt10 p_indent">• The Scientific Organizing Committee will nominate the travel grant recipients.</p>
+				<p class="mt10 p_indent">• Recipients of travel grants must attend the congress on-site.</p>
 			</div>
 			<!--Travel Grants end-->
 			<!--Contact for Abstract start-->
-			<div>
+			<!-- <div>
 				<div class="section_title_wrap2">
 					<h4 class="title">지방 참석자 여비 보조금 지원 (Domestic Only) <span>ICOMES 2023은 서울/인천/경기 제외 지방 소속 초록 발표자들을 위하여 여비 보조금을 지원합니다.</span></h4>
 				</div>
@@ -112,9 +94,9 @@
 							</tr>
 						</tbody>
 					</table>
-                </div>
+                </div> -->
 				<!-- <p class="mt10 p_indent">• 지원금 신청과 기타 필요한 정보에 대한 안내는 초록 채택자에 한하여 별도로 사무국에서 이메일을 통해 연락드릴 예정입니다.</p> -->
-			</div>
+			<!-- </div> -->
 			<!--Contact for Abstract end-->
 			<!--step start-->
 			<div>
@@ -125,25 +107,26 @@
 					<ul class="clearfix">
 						<li>
 							<p>Step 1</p>
-							<p class="sm_txt">Submit the abstract <br>through the website.</p>
+							<p class="sm_txt">Join the abstract <br>submission</p>
 						</li>
 						<li>
 							<p>Step 2</p>
-							<p class="sm_txt">Receive notification <br>of abstract selection.</p>
+							<p class="sm_txt">Receive notification<br>of abstract selection.</p>
 						</li>
 						<li>
 							<p>Step 3</p>
-							<p class="sm_txt">Attend and present at <br>ICOMES 2023 on-site.</p>
+							<p class="sm_txt">Participate in IMCVP 2024 <br>On-site (Payment for travel <br>grants will be processed on-site.)</p>
 						</li>
 						<li>
 							<p>Step 4</p>
-							<p class="sm_txt">Complete the travel <br>grant application form <br>and apply via email <br><span class="red_t font_inherit">(Application period: <br>Sep 10th ~ Sep 16th)</span></p>
+							<p class="sm_txt">Complete the travel<br>grant application form<br>and submit on-site.</p>
 						</li>
-						<li>
+						<!-- <li>
 							<p>Step 5</p>
 							<p class="sm_txt">Receive notification of <br>application results <br>(within seven days after the <br>application deadline).</p>
-						</li>
+						</li> -->
 					</ul>
+                    <p class="red_t">** This award will be automatically canceled when the awardee do not attend on-site.</p>
 				</div>
 			</div>
 			<!--step end-->
@@ -153,16 +136,32 @@
 					<h4 class="title">Download Application Form</h4>
 				</div>
 				<div class="download_wrap">
-					<a href="./download/ICOMES_2023_Travel_Grant_Application_Form.docx" class="btn long_btn type2 text_long" target="_blank">
+					<a href="" class="btn long_btn type2 text_long not_yet" target="_blank">
+					<!-- <a href="./download/ICOMES_2023_Travel_Grant_Application_Form.docx" class="btn long_btn type2 text_long" target="_blank"> -->
 						<img src="./img/icons/icon_download_white.svg" alt="">Travel Grant Application Form Download (Overseas)
 					</a>
-					<a href="./download/ICOMES_2023_Application_for_travel_subsidy(Non-MD).docx" class="btn long_btn type2 text_long" target="_blank">
+					<!-- <a href="./download/ICOMES_2023_Application_for_travel_subsidy(Non-MD).docx" class="btn long_btn type2 text_long" target="_blank">
 						<img src="./img/icons/icon_download_white.svg" alt="">Non-MD 지방 참석자 여비 보조금 지원 양식 다운로드 (Domestic)
-					</a>
+					</a> -->
 				</div>
-				<p class="mt10 p_indent">• MD 지방 참석자: 지원 양식 별도 없음. 초록채택자 공지 후 대한비만학회 개별 공지 예정</p>
+				<!-- <p class="mt10 p_indent">• MD 지방 참석자: 지원 양식 별도 없음. 초록채택자 공지 후 대한비만학회 개별 공지 예정</p> -->
 			</div>
 			<!-- download end -->
+            <!-- Certification start -->
+            <div>
+				<div class="section_title_wrap2">
+					<h3 class="title">Certification</h3>
+				</div>
+				<div class="mb20 text_box indent">
+					<ul>
+						<li>• Certificates will be available online via the attendee’s My IMCVP account after the IMCVP 2024. It will be mandatory to complete the congress evaluation survey to receive certification.</li>
+						<li>• In person attendance will be checked. This data will be the basis for certification.</li>
+						<li>• IMCVP does not share the attendee's certificate with any third party, not even the sponsor of the registration.</li>
+						<li>• More detailed information will follow once available.</li>
+					</ul>
+				</div>
+            </div>
+             <!-- Certification end -->
 			<!--Oral Presentation start-->
 			<div>
 				<div class="section_title_wrap2">
@@ -538,7 +537,7 @@
         </div>
     </div>
 </div>
-
+<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'"><span>Abstract<br/>Submission</span></button>
 <script>
 $(document).ready(function() {
     $(".overse_open").click(function() {
@@ -548,8 +547,9 @@ $(document).ready(function() {
         $(".domestic_pop").show();
     });
 
+    //[240503] sujeong / 임시주석
 	$(".download_wrap .btn").click(function(){
-		alert("[ Note!! Application period: Sep 10th ~ Sep 20th ]")
+		//alert("[ Note!! Application period: Sep 10th ~ Sep 20th ]")
 	});
 });
 </script>

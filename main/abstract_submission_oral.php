@@ -25,9 +25,9 @@ $info = sql_fetch($sql_info);
     <h1 class="page_title">Presentation Guidelines</h1>
     <div class="inner">
         <ul class="tab_green long presentation">
-            <li class="on"><a href="./abstract_submission_oral.php">Oral Presentation</a></li>
-            <li><a href="./abstract_submission_poster.php">Guided Poster Presentation</a></li>
-            <li><a href="./abstract_submission_exhibition.php">Poster Exhibition</a></li>
+            <li class="on"><a href="./abstract_submission_oral.php">Poster Oral</a></li>
+            <!-- <li><a href="./abstract_submission_poster.php">Guided Poster Presentation</a></li> -->
+            <li><a href="./abstract_submission_exhibition.php">Poster Exhibition only</a></li>
         </ul>
         <div class="section section1">
             <?php
@@ -35,7 +35,7 @@ $info = sql_fetch($sql_info);
                 $weekday = ["일", "월", "화", "수", "목", "금", "토"];
             ?>
             <!--List of Accepted Abstract-->
-            <div>
+            <!-- <div>
                 <div class="section_title_wrap2">
                     <h3 class="title">List of Accepted Abstract</h3>
                 </div>
@@ -44,9 +44,9 @@ $info = sql_fetch($sql_info);
 					<button type="button" onClick="javascript:window.open('./download/Guided Poster Presentation_0824.pdf')"><img src="./img/icons/download_w.svg" />Guided Poster Presentation</button>
 					<button type="button" onClick="javascript:window.open('./download/Poster Exhibition_0824.pdf')"><img src="./img/icons/download_w.svg" />Poster Exhibition</button>
                 </div>
-            </div>
+            </div> -->
             <!--keydate-->
-            <div>
+            <!-- <div>
                 <div class="section_title_wrap2">
                     <h3 class="title">Key Dates</h3>
                 </div>
@@ -74,9 +74,9 @@ $info = sql_fetch($sql_info);
                         </tr>
                     </table>
                 </div>
-            </div>
+            </div> -->
 			<!--session information-->
-            <div>
+            <!-- <div>
                 <div class="section_title_wrap2">
                     <h3 class="title">Session Information</h3>
                 </div>
@@ -109,28 +109,44 @@ $info = sql_fetch($sql_info);
 						</tr>
                     </table>
                 </div>
-            </div>
-			<!--Language & Length of Presentation-->
+            </div> -->
+			<!--Length of Presentation-->
 			<div>
 				<div class="section_title_wrap2">
-					<h3 class="title">Language & Length of Presentation</h3>
+					<h3 class="title">Presentation Length</h3>
 				</div>
 				<div class="text_box indent">
 					<ul>
-						<li>• Language: English</li>
-						<li>• Each presenter will be given 10 minutes. (7 minutes talk / 3 minutes Q&A)</li>
+						<li>• Each presenter will be given 10 minutes.</li>
+						<li>• When the 7-minute presentation ends, a Question and Answer session for participants with the panel and the presenter will follow for 3 minutes.</li>
+						<li class="red_t">※ Each individual presenter should take no more than 10 minutes to present. The slide show will end after passing the designated time.</li>
 					</ul>
 				</div>
 			</div>
+
+            <!-- Language  -->
+
+            <div>
+				<div class="section_title_wrap2">
+					<h3 class="title">Language</h3>
+				</div>
+				<div class="text_box indent">
+					<ul>
+						<li>• The presentation should be in English, which is the official language of the IMCVP 2024.</li>
+					</ul>
+				</div>
+			</div>
+
+
 			<!--Preview Room-->
 			<div>
 				<div class="section_title_wrap2">
 					<h3 class="title">Preview Room</h3>
 					<p>
-						Prior to their session, it is mandatory for all presenters to visit the preview room to verify and upload their presentation files.
+                    All speakers must visit the Preview Room to check and upload their presentation files ahead of their session.
 					</p>
 				</div>
-				<div class="table_wrap detail_table_common">
+				<!-- <div class="table_wrap detail_table_common">
                        <table class="c_table detail_table">
                            <colgroup>
                                <col>
@@ -139,41 +155,32 @@ $info = sql_fetch($sql_info);
                            </colgroup>
                            <tr>
                                <th></th>
-<!--                                <th class="f_bold text_center">Sep. 7 (Thu)</th> -->
                                <th class="f_bold text_center">Sep. 8 (Fri)</th>
                                <th class="f_bold text_center">Sep. 9 (Sat)</th>
                            </tr>
 						<tr>
-							<td class="text_center">Location</td>
-<!-- 							<td class="text_center">Dressing Room, 3F</td> -->
 							<td class="text_center">Park Studio, 5F</td>
 							<td class="text_center">Park Studio, 5F</td>
 						</tr>
 						<tr>
 							<td class="text_center">Operating Hour</td>
-<!-- 							<td class="text_center">14:00 - 19:00</td> -->
 							<td class="text_center">07:30 - 18:00</td>
 							<td class="text_center">07:30 - 17:00</td>
 						</tr>
                        </table>
-                   </div>
+                   </div> -->
 			</div>
-			<!--Presentation Material-->
+			<!--Presentation File-->
 			<div>
 				<div class="section_title_wrap2">
-					<h3 class="title">Presentation Material</h3>
+					<h3 class="title">Presentation File</h3>
 				</div>
 				<div class="text_box indent">
 					<ul>
-						<li>• Please use MS Office PowerPoint.</li>
-						<li>• We recommend the slide ratio to be 16:9.</li>
-						<li>• Pre-submission of presentation materials is not necessary. You can check and edit the material in the preview room.</li>
-						<li>• Pre-submitted materials should also be checked in the preview room before your presentation.</li>
-						<li>• Save the presentation materials on a USB and submit them in the preview room one hour before your session.</li>
-						<li>• If you have videos or voice files in your materials, please bring each file additionally in case it does not work.</li>
-						<li>• If you use fonts that are not offered by MS, please save the font file in the file.</li>
-						<li>• If you are a MacBook user, please bring Apple adapters (connecting cables).</li>
-						<li>• Operating staff will be assigned to each room to assist you with any technical issues.</li>
+						<li>• Authors should bring the presentation file in a USB memory stick to the preview room to upload onto the common storage device.</li>
+						<li>• Lectures should prepare the presentation file in MS PowerPoint in English. And please use only basic fonts for your presentation (e.g. Arial, Times New Roman), as usage of unusual fonts may not be displayed properly. If you must have special fonts on your slide files, please bring the font file as well.</li>
+						<li>• Technical staff will be available to assist you in uploading and testing your presentation file. No one other than the presenters will have access to the presentation file once it is loaded into the preview system.</li>
+						<li>• If you do not visit the preview room before your presentation for any urgent reason, you will be responsible for loading your file onto the PC in the session room directly.</li>
 					</ul>
 				</div>
 			</div>

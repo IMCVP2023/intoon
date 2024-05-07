@@ -156,7 +156,7 @@
 <div class="sub_background_box">
 		<div class="sub_inner">
 			<div>
-				<h2>My page</h2>
+				<h2>My IMCVP</h2>
 				<ul>
 					<li>Home</li>
 					<li>Mypage</li>
