@@ -20,21 +20,21 @@
     <div class="inner">
     <div>
 			<!--1-->
-			<h3 class="title">Ministry of Foreign Affairs</h3>
-			<div class="details">
-				<p><a href="https://www.mofa.go.kr/eng/index.do" class="s_bold underline">Link</a></p>
+			<h3 class="title mt10">Ministry of Foreign Affairs</h3>
+			<div class="details mb20">
+				<button class="visa_btn"><a href="https://www.mofa.go.kr/eng/index.do" class="s_bold underline">Link</a></button>
 			</div>
 			<!--2-->
-			<h3 class="title">Immigration Bureau</h3>
-			<div class="details">
-				<p><a href="https://www.immigration.go.kr/immigration_eng/index.do" class="s_bold underline break_all">Link</a></p>
+			<h3 class="title mt10">Immigration Bureau</h3>
+			<div class="details mb20">
+				<button class="visa_btn"><a href="https://www.immigration.go.kr/immigration_eng/index.do" class="s_bold break_all underline">Link</a></button>
 				<p>
 					All visitors to Korea must have a valid passport and visa before coming. Visitors from countries that have a special agreement with Korea are exempt from the visa requirement and allowed to stay in Korea without a visa for 30 days or up to 90 days, depending on agreements. For more information, please contact the local Korean consulate or embassy, or visit the official website of the Korean Ministry of Foreign Affairs and Trade.
 				</p>
 			</div>
 			<!--3-->
-			<h3 class="title">Countries under visa exemption agreements</h3>
-			<div class="table_wrap detail_table_common x_scroll">
+			<h3 class="title mt10">Countries under visa exemption agreements</h3>
+			<div class="table_wrap detail_table_common x_scroll mb20">
 				<table class="c_table detail_table">
 					<thead>
 						<tr>
@@ -85,7 +85,64 @@
 				</table>
 			</div>
 
-
+            <h3 class="title mt10">Nationals of countries or regions allowed for visa-free entry (30/90) days unless noticed other</h3>
+			<div class="table_wrap detail_table_common x_scroll">
+				<table class="c_table detail_table">
+					<thead>
+						<tr>
+							<th>Continents</th>
+							<th>Countries or Regions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+                                Asia or regions<br>
+                                (6 countries)
+                            </td>
+                            <td>
+                                Brunei (30 days), Hong Kong (90 days), Indonesia (diplomatic and official 30 days), Japan (90 days), Macau (90 days), Taiwan (90 days)
+                            </td>
+						</tr>
+                        <tr>
+							<td>
+                                America<br>
+                                (7 countries)
+                            </td>
+                            <td>
+                                Argentina (30 days), Canada (90 days), Ecuador (90 days), Guyana (30 days), Honduras (30 days), Paraguay (30 days), United States (90 days)
+                            </td>
+						</tr>
+                        <tr>
+							<td>
+                                Europe<br>
+                                (11 countries)
+                            </td>
+                            <td>
+                                Albania (30 days), Italy (30 days), Bosnia-Herzegovina (30 days), Croatia (90 days), Cyprus (30 days), Monaco (30 days), Montenegro (30 days), San Marino (30 days), Serbia (90 days), Slovenia (90 days), Vatican (30 days)
+                            </td>
+						</tr>
+                        <tr>
+							<td>
+                                Oceania or regions<br>
+                                (13 countries)
+                            </td>
+                            <td>
+                                Australia (90 days), Fiji (30 days), Guam (30 days), Kiribati (30 days), Marshall Islands (30 days), Micronesia (30 days), Nauru (30 days), New Caledonia (30 days), Palau (30 days), Samoa (30 days), Solomon Islands (30 days), Tonga (30 days), Tuvalu (30 days)
+                            </td>
+						</tr>
+                        <tr>
+							<td>
+                                Middle East ans Africa<br>
+                                (12 countries)
+                            </td>
+                            <td>
+                                Bahrain (90 days), Egypt (30 days), Kuwait (30 days), Lebanon (diplomatic and official 30 days), Mauritius (30 days), Oman (30 days), Qatar (30 days), Saudi Arabia (30 days), Seychelles (30 days), South Africa (30 days), Swaziland (30 days), United Arab Emirates (30 days)
+                            </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
     </div>
 </section>
