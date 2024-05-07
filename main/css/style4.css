@@ -2131,3 +2131,26 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 .program_glance_table .day{
 	background-color: #00b0f0 !important;
 }
+
+.visa .visa_btn {
+	width: 80px;
+	height: 35px;
+	background-color: #626262;
+	border-radius: 4px;
+}
+
+.visa .visa_btn:hover{
+	background-color: #ddd;
+}
+
+.visa .visa_btn a {
+	color: #FFF;
+	font-weight: 600;
+	text-underline-position: under;
+}
+
+.visa table th, .visa table td{
+	white-space: wrap;
+	font-size: 14px;
+	padding: 8px;
+}
