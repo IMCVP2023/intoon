@@ -189,17 +189,17 @@
                         <!-- <li>F. 82-2-364-0883</li> -->
                         <li>E. <a href="mailto:kscpmd@kscpmd.or.kr"
                                 class="font_inherit link">kscpmd@kscpmd.or.kr </a></li>
-                        <li>W. <a href="https://koreascp.or.kr:459/" class="font_inherit link">https://koreascp.or.kr</a>
-                        </li>
+                        <li>W. <a href="https://koreascp.or.kr:459/" class="font_inherit link">https://koreascp.or.kr</a></li>
                     </ul>
                 </div>
                 <div class="footer_r">
-                    <p>Secretariat of IMCVP 2024</p>
+                    <p>Secretariat of IMCVP 2024 | INTO-ON, Inc.</p>
                     <ul>
-                        <li>A-Block Richensia 4F, 341 Baekbeom-ro, Yongsan-gu, Seoul 04315, Korea</li>
-                        <li>T. 82-2-2285-2592</li>
-                        <li>F. 82-2-2039-7804</li>
-                        <!--li>E. <a href="mailto:imcvp@into-on.com" class="font_inherit link">imcvp@into-on.com</a></li-->
+                        <li>2F, Wonhyo-ro, #204, Yongsan-gu, Seoul, Korea</li>
+                        <li>T. 82-2-2039-7804</li>
+                        <li>F. 82-2-3275-3044</li>
+                        <li>E. <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
+                        <li>W. <a href="http://into-on.com/" class="font_inherit link">into-on.com</a></li>
                     </ul>
                 </div>
             </div>

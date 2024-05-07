@@ -665,7 +665,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 .tab_pager {display:table; table-layout:fixed; width:100%; margin-bottom:50px;}
 .tab_pager li {display:table-cell; height:80px; border:1px solid #707070; border-left:none; text-align:center; vertical-align: middle;}
 .tab_pager li:first-child {border-left:1px solid #707070;}
-.tab_pager li a {font-size:26px; font-weight:700; color:#000; }
+.tab_pager li a {font-size:26px; font-weight:700; color:#000;width: 100%; height: 100%; line-height: 3; }
 .tab_pager li.on {background-color:#00666B;}
 .tab_pager li.on a {color:#fff;}
 /*교육이수내역(사후생성) > content*/
