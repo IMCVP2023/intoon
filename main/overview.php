@@ -103,7 +103,7 @@ $floor = get_data($sql_floor);
 			 <tr>
                  <th>Official website</th>
                  <td>
-                     <a href="http://imcvp.org" class="link under">http://imcvp.org</a>
+                     <a href="https://imcvp.org" class="link under">imcvp.org</a>
                  </td>
              </tr>
              <tr>

@@ -163,6 +163,15 @@ $(document).ready(function(){
 		console.log($(this).parent("ul").next(".tab_wrap").children(".tab_cont"))
 	});
 
+	$(".tab_pager li, .tab_li li").click(function() {
+		var i = $(this).index();
+		$(this).parent("ul").next(".tab_wrap").children(".tab_cont").removeClass("on");
+		$(this).parent("ul").next(".tab_wrap").children(".tab_cont").eq(i).addClass("on");
+		$(this).siblings("li").removeClass("on");
+		$(this).addClass("on");
+		console.log($(this).parent("ul").next(".tab_wrap").children(".tab_cont"))
+	});
+
 	// 탭 li 텍스트 두줄 이상일 경우
 	tabMax();
 

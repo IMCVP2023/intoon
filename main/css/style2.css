@@ -558,7 +558,7 @@ section.terms .details p {text-align: justify;}
 .accommodation .useful_list > li:after {content:''; display:block; clear:both;}
 .accommodation .useful_list li {font-size:16px; line-height:26px;}
 .accommodation .useful_list > li:not(:first-child) {margin-top:60px;}
-.accommodation .useful_list > li > div {/*float:left; width:auto; height:auto;*/}
+/* .accommodation .useful_list > li > div {float:left; width:auto; height:auto;} */
 .accommodation .useful_list > li > div:last-child {width:calc(100% - 378px); height:auto; margin-left:28px;}
 .accommodation .useful_list li .green_btn {width:100%; margin-top:14px;}
 .accommodation .useful_list li .btn_wrap {margin-top:14px;}

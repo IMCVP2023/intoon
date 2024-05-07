@@ -18,10 +18,10 @@
 		</div>
 	</div>
 	<div class="inner">
-		<ul class="tab_pager">
-			<li class="on"><a href="javascript:;">November 29 <i></i>(Fri)</a></li>
+		<ul class="tab_pager program_glance">
+			<li class="on"><a href="javascript:;">All<i></i> Days</a></li>
+			<li><a href="javascript:;">November 29 <i></i>(Fri)</a></li>
 			<li><a href="javascript:;">November 30 <i></i>(Sat)</a></li>
-			<!-- <li><a href="javascript:;">September 17 <i></i>(Sat)</a></li> -->
 		</ul>
 		<ul	class="program_color_txt">
 			<li><i></i>&nbsp;:&nbsp;Korean</li>
@@ -43,8 +43,13 @@
 							<th>Room B</th>
 							<th>Room C</th>
 						</tr>
+						<tr class="day">
+								<th colspan="4" class="font_big day_tbody day_1">
+									<div class="dots_div">Day 1 - November 29 (Fri)
+								</th>
+							</tr>
 					</thead>
-					<tbody name="day" class="day_1">
+					<tbody name="day" class="day_1 day_tbody">
 						<tr>
 							<td class="">08:50~09:00</td>
 							<td colspan="2">Registration and Opening Remark</td>
@@ -140,10 +145,10 @@
 							</td>
 						</tr>
 					</tbody>
-				</table>
-			</div>
-			<div class="tab_cont">
-				<table class="table program_glance_table" name="2">
+				<!-- </table>
+			</div> -->
+			<!-- <div class="tab_cont">
+				<table class="table program_glance_table day_tbody day_2" name="2">
 					<colgroup>
 						<col class="grogram_time">
 						<col/>
@@ -157,8 +162,15 @@
 							<th>Room B</th>
 							<th>Room C</th>
 						</tr>
+					</thead> -->
+					<thead>
+							<tr class="day">
+								<th colspan="4" class="font_big day_tbody day_2">
+									<div class="dots_div">Day 2 - November 30 (Sat)
+								</th>
+							</tr>
 					</thead>
-					<tbody name="day" class="day_2">
+					<tbody name="day" class="day_tbody day_2">
 						<tr>
 							<td class="">07:00~08:00</td>
 							<td class="pink_bg pointer" name="breakfast_symposium_1">
@@ -283,16 +295,30 @@
 $(document).ready(function() {
 
 		  //탭
-	 $(".tab_pager li").click(function(){
-		if (!$(this).parent("ul").hasClass("location")){
-			var i = $(this).index();
-			$(".tab_pager li").removeClass("on");
-			$(this).addClass("on");
-			$(".tab_cont").removeClass("on");
-			$(".tab_cont").eq(i).addClass("on");
-		}
+	//  $(".tab_pager li").click(function(){
+	// 	if (!$(this).parent("ul").hasClass("location")){
+	// 		var i = $(this).index();
+	// 		console.log(i)
+	// 		$(".tab_pager li").removeClass("on");
+	// 		$(this).addClass("on");
+	// 		$(".tab_cont").removeClass("on");
+	// 		$(".tab_cont").eq(i).addClass("on");
+	// 	}
 		
+	// });
+
+		/* tab 클릭 시 랜더링 변경 */
+		$(".tab_pager li").click(function(){
+		var this_index = $(this).index();
+		if (!this_index == 1){
+			$(".day_tbody").show();
+		}else {
+			$(".day_tbody").hide();
+			$(".day_tbody.day_"+this_index+"").show();
+		}
+
 	});
+
 
 	$('.program_table').each(function(){
 		var parents_div = $(this).parents('.program_table_wrap');
