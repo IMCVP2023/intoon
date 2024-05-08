@@ -54,10 +54,10 @@
 				<li>
 					<a href="https://m.daewoong.co.kr/en/main/index" class="daewoong">DAEWOONG</a>
 				</li>
-				<li class="small">
+				<li>
 					<a href="https://daewoongbio.co.kr/daewoongbiokr/main/main.web" class="daewoong_bio">DAEWOONG</a>
 				</li>
-			</ul>
+			</ul>	
 			<p class="grade_title green_bg05">Diamond</p>
 			<ul class="grade_wrap length_1">
 				<li>
