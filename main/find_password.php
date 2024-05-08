@@ -2,7 +2,7 @@
 <?php include_once('./include/header.php'); ?>
 <section class="container login_form form_layout find_password login bg style_2023">
 	<!-- <a href="./index.php" class="logo"><img src="./img/logo.png"></a> -->
-	<h1 class="page_title">Find Password
+	<h1 class="title center_t">Find Password
 		<p class="red_txt">Please enter your email.</p>
 	</h1>
 	<div>

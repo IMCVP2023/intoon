@@ -330,7 +330,7 @@ section.container.organizing {padding-bottom: 190px;}
 .useful_list > li:after {content:''; display:block; clear:both;}
 .useful_list li {font-size:16px; line-height:26px;}
 .useful_list > li:not(:first-child) {margin-top:50px;}
-.useful_list > li > div {/*float:left; height:200px; width:300px;)*/}
+.useful_list > li > div {float:left; height:200px; width:300px;)}
 .useful_list > li > div:last-child {width:calc(100% - 328px); height:auto; margin-left:28px;}
 /*.useful_list li .imgs {background-color:#e7e7e7;}*/
 .useful_list li .imgs {background:url("../img/img_useful01.jpg") no-repeat center /cover;}
