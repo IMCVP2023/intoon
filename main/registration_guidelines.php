@@ -184,7 +184,7 @@ $price = get_data($sql_price);
 							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as 'unpaid.' If you need to confirm the payment completion, you can check the payment status on 'my page.' (Please be aware that it may take some time for the payment confirmation to be updated.)</li>
 							<li>• Registration will not be considered complete until the full registration fee has been paid.</li>
 							<li>• The online registration page is optimized for Google Chrome and Microsoft Edge. If you encounter any issues with online registration, please reach out to the congress secretariat for assistance.</li>
-							<li>• • If you would like to modify your registration information, please contact the congress secretariat at <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
+							<li>• If you would like to modify your registration information, please contact the congress secretariat at <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
 						</ul>
 					</div>
                 </div>

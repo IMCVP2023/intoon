@@ -77,5 +77,5 @@ include_once('./include/header.php');
     </div>
     <!-- <button type="button" class="fixed_btn" onclick="window.location.href='./abstract_submission.php';"><?= $locale("abstract_submission_btn") ?></button> -->
 </section>
-
+<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./sponsor_exhibition.php'"><span>Go to<br/>Exhibition<Br>Plan</span></button>
 <?php include_once('./include/footer.php'); ?>

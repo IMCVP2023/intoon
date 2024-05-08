@@ -150,40 +150,6 @@
                 </div>
                 </div>
             </li>
-                <!-- 3 -->
-            <li>
-                <h3 class="title">Hotel Peyto Samseong</h3>
-                <div class="accomodation_box">
-                <!-- <div> -->
-                    <div class="imgs"></div>
-                    <!-- <div class="btn_wrap">
-                         <button class="btn green_btn"
-                        onClick="javascript:window.open('https://www.hilton.com/en/hotels/selcici-conrad-seoul/')">Go to Website</button>
-                    <a href="./download/ICOMES_2023_Conrad_Seoul_Reservation_Form.doc" class="btn green_btn download_btn" target="_blank" download=""><img src="./img/icons/icon_download_white.svg" alt="">Reservation Form Download</a>
-                
-                    </div> -->
-                <!-- </div> -->
-                <div class="yellow_box">
-                    <div>
-                        <ul>
-                            <li>9, Teheran-ro 87 gil, Gangnam-gu, Seoul, Republic of Korea</li>
-                            <li>Tel. +82-2-6936-8100</li>
-                            <li>Distance from venue: 9.9Km</li>
-                        </ul>
-                    </div>
-                    <div class="line"></div>
-                    <div class="booked_box">
-                        <div>
-                            <h6>By car - About 25 min</h6>
-                            <h6>By Subway to Shuttle Bus Stop - About 23 min (Gangbyeon Station Subway Line #2)</h6>
-                        </div>
-                        <div class="buttons_box">
-                            <button class="violet_btn">Go to Homepage</button>
-                        </div>
-                    </div>                    
-                </div>
-                </div>
-            </li>
                <!-- 4 -->
                <li>
                 <h3 class="title">Shila Stay Samsung</h3>

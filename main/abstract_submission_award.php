@@ -26,7 +26,7 @@ The secretariat will contact awardees individually.</li>
 					<h3 class="title">Best Oral/Poster Presentation Awards</h3>
                     <ul>
 						<li>• Outstanding oral and poster presentations will be recognized and awarded during the closing ceremony.</li>
-						<li>• The winners will be notified individually of the results during the congress, and their attendance at the ceremony is mandatory.</li>
+						<li class="mt10">• The winners will be notified individually of the results during the congress, and their attendance at the ceremony is mandatory.</li>
 					</ul>
 				</div>
 				<!-- <h4 class="title">Overseas</h4> -->
@@ -66,16 +66,40 @@ The secretariat will contact awardees individually.</li>
 					<h3 class="title">Registration Support for Accepted Abstracts</h3>
                     <ul>
 						<li>• Free registration for one person is offered for accepted abstracts.</li>
-						<li>• Registration fees will be fully refunded after the congress.</li>
-						<li>• On-site attendace is required.</li>
+						<li class="mt10">• Registration fees will be fully refunded after the congress.</li>
+						<li class="mt10">• On-site attendace is required.</li>
 					</ul>
 				</div>
-				<!-- <p class="mt10 p_indent">• IMCVP 2024 offers travel grants to international participants who have submitted an abstract.</p>
-				<p class="mt10 p_indent">• The Scientific Organizing Committee will nominate the travel grant recipients.</p>
-				<p class="mt10 p_indent">• Recipients of travel grants must attend the congress on-site.</p> -->
 			</div>
 			<!--Travel Grants end-->
 			<!--Contact for Abstract start-->
+            <div>
+				<div class="section_title_wrap2 mb10">
+					<h3 class="title">Travel grants (for international participants only)</h3>
+				</div>
+				<!-- <h4 class="title">Overseas</h4> -->
+				<div class="table_wrap detail_table_common x_scroll mb20">
+					<table class="c_table detail_table">
+						<thead>
+							<tr>
+								<th class="text_center">Target</th>
+								<th class="text_center">Amount</th>
+								<th class="text_center">Remarks</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text_center">Travel grants</td>
+								<td class="text_center">USD 500.00</td>
+								<td class="text_center">To be notified individually before the congress</td>
+							</tr>
+						</tbody>
+					</table>
+                </div>
+				<p class="mt10 p_indent">• IMCVP 2024 offers travel grants to international participants who have submitted an abstract.</p>
+				<p class="mt10 p_indent">• The Scientific Organizing Committee will nominate the travel grant recipients.</p>
+				<p class="mt10 p_indent">• Recipients of travel grants must attend the congress on-site.</p>
+			</div>
 			<!-- <div>
 				<div class="section_title_wrap2">
 					<h4 class="title">지방 참석자 여비 보조금 지원 (Domestic Only) <span>ICOMES 2023은 서울/인천/경기 제외 지방 소속 초록 발표자들을 위하여 여비 보조금을 지원합니다.</span></h4>
@@ -172,7 +196,7 @@ The secretariat will contact awardees individually.</li>
 				</div>
 				<div class="mb20 text_box indent">
 					<ul>
-						<li>• Certificates will be available online via the attendee’s My IMCVP account after the IMCVP 2024. It will be mandatory to complete the congress evaluation survey to receive certification.</li>
+						<li>• Certificates will be available online via the attendee’s <a class="mypage_btn" href="./mypage_abstract.php">My IMCVP</a> account after the IMCVP 2024. It will be mandatory to complete the congress evaluation survey to receive certification.</li>
 						<li>• In person attendance will be checked. This data will be the basis for certification.</li>
 						<li>• IMCVP does not share the attendee's certificate with any third party, not even the sponsor of the registration.</li>
 						<li>• More detailed information will follow once available.</li>

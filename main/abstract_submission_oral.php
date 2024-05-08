@@ -184,6 +184,18 @@ $info = sql_fetch($sql_info);
 					</ul>
 				</div>
 			</div>
+			<!--Audio/Visual Guidelines -->
+            <div>
+				<div class="section_title_wrap2">
+					<h3 class="title">Audio/Visual Guidelines</h3>
+				</div>
+				<div class="text_box indent">
+					<ul>
+						<li>• Each session room will be equipped with an LCD projector, and a computer running <span class="violet_t">Windows 10 and PowerPoint 2016</span> for your presentation. We recommend you to prepare the presentation slide with 16:9 aspect of ratio. If you must inevitably use your own laptop, you should bring it to the session room at least 60 minutes before the session begins 
+                        </li>
+					</ul>
+				</div>
+			</div>
             <?php
             }
             ?>
