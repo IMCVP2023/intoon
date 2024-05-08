@@ -35,7 +35,7 @@ $info = sql_fetch($sql_info);
             <div>
                 <div class="text_box">
                     <ul>
-                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="violet_t under_line bold">poster oral, poster exhibitions.</span></li>
+                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="violet_t underline under bold">poster oral, poster exhibitions.</span></li>
                         <li>All congress abstracts must be submitted online via the "Online Submission System."</li>
                         <li>Submitted abstracts will be reviewed by the Scientific Program Committee, and committee might request an oral presentation.</li>
                         <li>All presenters are required to register and pay the registration fee.</li>
@@ -58,7 +58,7 @@ $info = sql_fetch($sql_info);
                 <!--keydate start-->
                 <div>
                     <div class="section_title_wrap2">
-                        <h3 class="title"><!--<?= $locale("keydate") ?>-->Key Dates</h3>
+                        <h3 class="title"><!--<?= $locale("keydate") ?>-->Key Dates<span>&nbsp;&nbsp;&nbsp; *KST (UTC+9)</span></h3>
                     </div>
                     <div class="table_wrap detail_table_common x_scroll">
 						<table class="c_table detail_table td_nowrap_table">
@@ -92,6 +92,17 @@ $info = sql_fetch($sql_info);
                 </div>
             </div>
             <!--keydate end-->
+            <div>
+                    <div class="section_title_wrap2">
+                        <h3 class="title">Abstract Submission Type</h3>
+                    </div>
+                    <div class="text_box">
+                    <ul>
+                        <li>• <a href="./abstract_submission_oral.php" class="link under">Poster oral</a></li>
+                        <li>• <a href="./comingsoon.php" class="link under">Poster exhibitions</a></li>
+                    </ul>
+                </div>
+            </div>
             <?php
             }
             ?>
@@ -134,7 +145,7 @@ $info = sql_fetch($sql_info);
             <!--Instructions start-->
             <div>
                 <div class="section_title_wrap2">
-                    <h3 class="title"><?= $locale("instructions") ?></h3>
+                    <h3 class="title">General guidelines</h3>
                 </div>
                 <div class="table_wrap detail_table_common x_scroll">
                     <table class="c_table detail_table">
@@ -145,9 +156,9 @@ $info = sql_fetch($sql_info);
                         <tr>
                             <th>Presentation Type </th>
                             <td>
-                                <p>1) Poster oral</p>
-                                <p>2) Poster exhibitions only <br />
-                                (* Scientific committee may change your presentation type after reviewing it.)
+                                <p class="red_t">Poster oral</p>
+                                <p class="red_t">Poster exhibitions only <br />
+                                <span>(* Scientific committee may change your presentation type after reviewing it.)</span>
                                 </p>
                             </td>
                         </tr>
@@ -166,9 +177,9 @@ $info = sql_fetch($sql_info);
                         <tr>
                             <th>Figure / Table</th>
                             <td>
-                                <p>- 1 figure in 1 abstract: Allowed</p>
-                                <p>- 1 table in 1 abstract: Allowed</p>
-                                <p>- 1 figure & 1 table in 1 abstract: Not allowed <br />
+                                <p>- 1 figure in 1 abstract: <span class="red_t">Allowed</span></p>
+                                <p>- 1 table in 1 abstract: <span class="red_t">Allowed</span></p>
+                                <p>- 1 figure & 1 table in 1 abstract: <span class="red_t">Not allowed</span> <br />
                                  * A figure or table counts as 50 words.
                                 </p>
                             </td>

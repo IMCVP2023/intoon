@@ -2154,3 +2154,16 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	font-size: 14px;
 	padding: 8px;
 }
+
+.abstract_form .mypage_btn {
+	width: 91px;
+	height: 30px;
+	color: #FFF;
+	background-color: #3C3C3B;
+	padding: 4px 8px;
+}
+
+
+select[name="topic1"] option:disabled {
+    background-color: #dddddd; 
+}

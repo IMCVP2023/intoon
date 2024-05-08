@@ -130,7 +130,7 @@
 					<a href="https://daewoongbio.co.kr/daewoongbiokr/main/main.web" class="daewoong_bio">DAEWOONG</a>
 				</li>
                 <li>
-					<a href="https://www.daiichisankyo.com/" class="daiichi_sankyo">Daiichi Sankyo</a>
+					<a href="" class="daiichi_sankyo">Daiichi Sankyo & DAEWOONG</a>
 				</li>
                 <li>
 					<a href="https://www.boryung.co.kr/en/" class="boryung">BORYUNG</a>
@@ -148,7 +148,7 @@
 					<a href="http://www.ckdpharm.com/en/home" class="chong_kun_dang">Chong Kun Dang</a>
 				</li>
 				<li>
-					<a href="" class="bily">Chong Kun Dang</a>
+					<a href="" class="bily">bily</a>
 				</li>
                 <li>
 					<a href="https://www.novonordisk.com/" class="novo_nordisk">novo nordisk</a>
