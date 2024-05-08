@@ -11,6 +11,18 @@ $during_yn = sql_fetch($sql_during)['yn'];
 
 //업데이트 시 abstract 인덱스
 $submission_idx = $_GET["idx"];
+$member_idx = $_SESSION["USER"]["idx"];
+
+$category_query = "
+            SELECT topic, register, is_deleted
+            FROM request_submission
+            WHERE is_deleted = 'N' AND register = '" . $member_idx . "'
+            ";
+$categoryList = get_data($category_query);
+$jsonCategoryList = json_encode($categoryList);
+// print_r($categoryList);
+
+
 
 if ($during_yn !== "Y" && empty($submission_idx)) {
 ?>
@@ -169,7 +181,7 @@ var g5_editor_url = "<?= $editor_url ?>",
                         <p>• Submitter is responsible for typing errors.</p>
                         <p>• If you click the 'Save and Next' button, the abstract will be temporarily
                             saved.</p>
-                        <p>• Temporarily saved contents can be modified & deleted on My IMCVP.</p>
+                        <p>• Temporarily saved contents can be modified & deleted on <a class="mypage_btn" href="./mypage_abstract.php">My IMCVP</a></p>
                         <p>• Click the <span class="bold">'Submit'</span> button at the final step to complete the submission.</p>
                         <p>• <span class="bold">'Abstract Submission No.'</span> will be issued once you complete your submission.
                         </p>
@@ -202,7 +214,7 @@ var g5_editor_url = "<?= $editor_url ?>",
                                 <tr>
                                     <th class="leftT">Topic <span class="red_txt">*</span></th>
                                     <td class="half">
-                                        <select name="topic1"
+                                        <select name="topic1" 
                                             id=""><?= get_topic1_option_text($topic1_list, $detail['topic']) ?></select>
                                        
                                     </td>
@@ -476,6 +488,7 @@ $(document).ready(function() {
     // editor에 글자를 쳤을 때 글자 수 표출되는 이벤트 
     // setTimeout 을 안하면 iframe이 만들어지기 전에 이벤트가 등록되어 영역을 찾지 못한다 
     pending_on();
+    select_category()
     setTimeout(function() {
 
         var textarea1 = document.querySelector("#title").nextSibling.contentWindow.document
@@ -520,6 +533,22 @@ $(document).ready(function() {
         pending_off();
     }, editor_setting_seconds);
 });
+
+//이미 선택한 카테고리 disabled로 변경
+function select_category(){
+    const categoryList = <?php echo $jsonCategoryList; ?>;
+    const topicList = [1, 2, 3, 4, 5];
+    categoryList.forEach((category)=>{
+        topicList.map((topic)=>{
+            if(category.topic ===  $(`#topic${topic}`).val()){
+                $(`#topic${topic}`).attr("disabled", true);
+            }
+        })
+    })
+}
+
+
+
 
 $(".green_open").click(function() {
     $(".green_pop p").hide();

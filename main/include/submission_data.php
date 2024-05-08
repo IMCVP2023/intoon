@@ -74,9 +74,9 @@ $topic1_list = array(
 // );
 function get_topic1_option_text($topic_list, $selected)
 {
-	$topic_option_text = '<option value="" hidden>select</option>';
+	$topic_option_text = '<option value="0" hidden>select</option>';
 	foreach ($topic_list as $tp) {
-		$topic_option_text .= '<option value="' . $tp['idx'] . '" ' . ($tp['idx'] == $selected ? 'selected' : '') . '>' . $tp['order'] . '. ' . $tp['name_en'] . '</option>';
+		$topic_option_text .= '<option name="topic" id="topic' . $tp['idx'] . '" value="' . $tp['idx'] . '" ' . ($tp['idx'] == $selected ? 'selected' : '') . '>' . $tp['order'] . '. ' . $tp['name_en'] . '</option>';
 	}
 	return $topic_option_text;
 }
