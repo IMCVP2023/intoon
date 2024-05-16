@@ -345,19 +345,29 @@ $(document).ready(function() {
 <script>
 	$(document).ready(function(){
 		$("td.pointer").click(function(){
-			var e = $(this).find("input[name=e]").val();
-			var day = $(this).parents("tbody[name=day]").attr("class");
-			var target = $(this)
-			var this_name = $(this).attr("name");
-			var table_num = $(this).parents("table").attr("name")
+		var e = $(this).find("input[name=e]").val();
+        var day = $(this).parents("tbody[name=day]").attr("class");
+        var target = $(this)
+        var this_name = $(this).attr("name");
 
-			table_location(event, target, e, day, this_name, table_num);
+        	table_location(event, target, e, day, this_name);
+
 		});
 	});
 
-	function table_location(event, _this, e, day, this_name, table_num){
-		window.location.href="./scientific_program"+table_num+".php?&e="+e+"&name="+this_name;
+	//[240514] sujoeng / day -> day_1 or day_2 => 1, 2로 변환
+	function table_location(event, _this, e, day, this_name){
+		//console.log(day)
+		let date = "";
+		if(day.includes("_1")){
+			date = 1
+		}else if (day.includes("_2")){
+			date = 2
+		}
+		window.location.href="./scientific_program"+date+".php?&e="+e+"&name="+this_name;
 	}
+
+
 </script>
 
 <?php include_once('./include/footer.php');?>

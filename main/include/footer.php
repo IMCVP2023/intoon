@@ -2,14 +2,14 @@
     <!-- 220323 HUBDNC LJH 추가 -->
     <div class="fixed_btn_clone"></div>
     <div class="fixed_btn_wrap">
-        <ul class="toolbar_wrap">
-            <!-- <li>
+        <ul class="toolbar_wrap" style="opacity: 0;">
+             <li>
                 <a class="not_yet">
-                <a href="/main/program_glance.php">
-                  <img src="/main/img/icons/footer_notice.png" alt="">
+                <!-- <a href="/main/program_glance.php"> -->
+                  <!-- <img src="/main/img/icons/footer_notice.png" alt=""> -->
                     <img src="/main/img/icons/tool_program.svg" alt="">
                 </a>
-            </li> -->
+            </li> 
             <?php
             if ($_SESSION["USER"]["regi_status"] == 2 || $_SESSION["USER"]["regi_status"] == 5) {
             ?>
@@ -41,7 +41,7 @@
             <?php
             } else {
             ?>
-            <!-- <li>
+           <li>
                 <a class="not_yet">
                     <img src="/main/img/icons/footer_registration.png" alt="">
                 </a>
@@ -50,17 +50,17 @@
                 <a class="not_yet">
                     <img src="/main/img/icons/footer_abstract.png" alt="">
                 </a>
-            </li> -->
+            </li>
             <?php
             }
             ?>
             <?php
             if ($_SESSION["USER"]["idx"] == "") {
             ?>
-            <!-- <li><button type="button" onClick="alert('Need to login.')"><i>
+           <li><button type="button" onClick="alert('Need to login.')"><i>
                 <img src="/main/img/icons/footer_mypage.png" alt="">
                 <img src="/main/img/icons/tool_mypage.svg" alt="">
-            </i></button></li> -->
+            </i></button></li>
                 <!-- <li>
                     <a href="/main/login.php" onClick="alert('Need to login.')">
                         <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
@@ -89,8 +89,8 @@
             <div><a href="/main/abstract_submission.php">Call for Abstract</a></div>
             <div><a href="/main/mypage.php">My IMCVP</a></div>
         </div>
-        <!-- <button type="button" class="btn_plus"><img src="/main/img/icons/icon_plus_white.svg" alt=""></button> -->
         <button type="button" class="btn_top"><img src="/main/img/icons/icon_top_btn.svg" alt=""></button>
+        <!-- <button type="button" class="btn_plus"><img src="/main/img/icons/icon_plus_white.svg" alt=""></button> -->
     </div>
     <!-- 220323 HUBDNC LJH 추가 : 끝 -->
     <!--
