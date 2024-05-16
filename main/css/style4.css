@@ -1729,6 +1729,16 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 }
 
 /** modal */
+.speaker_list > li{
+	cursor: pointer;
+}
+
+.speaker_list > li:hover{
+	background-color: #fffefe;
+	transform: scale(1.04);
+	transform-origin : 50% 50%;
+}
+
 .modal_background{
 	width: 100%;
 	height: 100%;
@@ -1767,6 +1777,13 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 .modal::-webkit-scrollbar-track {
     background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
 }
+
+.modal .modal_colsed{
+	float: right;
+	width: 15px;
+	height: 15px;
+}
+
 
 
 .modal > .modal_img_box{

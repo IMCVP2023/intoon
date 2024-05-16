@@ -30,7 +30,7 @@ $sql_price =    "SELECT
 $price = get_data($sql_price);
 ?>
 
-<section class="container registration">
+<section class="container registration top_btn_move">
     <div>
 		<h1 class="page_title">Registration Guidelines</h1>
         <div class="inner">
@@ -100,41 +100,70 @@ $price = get_data($sql_price);
             ?>
                 <!--2. icomes-Air Registration start-->
                 <h3 class="title">Registration Fees for International </h3>
-                <div class="details icomes_air">
+                    <div class="details icomes_air">
 					<div class="table_wrap x_scroll">
-						<!-- <img class="coming" src="./img/coming.png" /> -->
 						<table class="c_table2 detail_table center">
+                            <colgroup>
+                            <col>
+                            <col width="13.5%">
+                            <col width="13.5%">
+                            <col width="13.5%">
+                            <col width="13.5%">
+                            <col width="13.5%">
+                            <col width="13.5%">
+                            </colgroup>
 							<thead>
 								<tr>
-									<th>Classification</th>
-									<th>Early-bird Registration</th>
-									<th>Pre-registration</th>
-									<th>On-site Registration</th>
+									<th rowspan="2">Classification</th>
+									<th colspan="2">Early-bird Registration</th>
+									<th colspan="2">Pre-registration</th>
+									<th colspan="2">On-site Registration</th>
 								</tr>
+                                <tr>
+                                    <th>Member</th>
+                                    <th>Non-Member</th>
+                                    <th>Member</th>
+                                    <th>Non-Member</th>
+                                    <th>Member</th>
+                                    <th>Non-Member</th>
+                                </tr>
 							</thead>
 							<tbody>
-                                <!-- <img src="./img/icons/icon_closed.png" alt=""> -->
 								<tr class="text_center">
-									<td>Specialist, Professor</td>
-									<td class="closed_td">200.00</td>
-									<td>200.00</td>
-									<td>300.00</td>
-
+									<td>MD,Professor</td>
+									<td>USD 100</td>
+									<td>USD 150</td>
+									<td>USD 150</td>
+									<td>USD 200</td>
+									<td>USD 200</td>
+									<td>USD 300</td>
+								</tr>
+                                <tr class="text_center">
+									<td>
+                                        Trainee,<br>
+										students
+									</td>
+									<td>USD 50</td>
+									<td>USD 75</td>
+									<td>USD 75</td>
+									<td>USD 80</td>
+									<td>USD 80</td>
+									<td>USD 100</td>
 								</tr>
 								<tr class="text_center">
 									<td>
-                                        Fellow, Resident,<br>
-										Researcher, Nurse, Nutritionists,<br>
-										Corporate member, Others<br>
+                                        Pharmacist,<br>
+										 Nurse, exercisetherapist,<br>
+                                         Nutritionists,Researchers<br>
+										<!-- Corporate member, Others<br> -->
 									</td>
-									<td>100.00</td>
-									<td>100.00</td>
-									<td>150.00</td>
+									<td>USD 75</td>
+									<td>USD 100</td>
+									<td>USD 100</td>
+									<td>USD 125</td>
+									<td>USD 125</td>
+									<td>USD 150</td>
 								</tr>
-								<!-- <tr class="text_center">
-									<td>Student</td>
-									<td colspan="6">Free<br/>*Student ID cards required</td>
-								</tr> -->
 							</tbody>
 						</table>
 					</div>
@@ -143,41 +172,63 @@ $price = get_data($sql_price);
                 <h3 class="title">Registration Fees for Korean</h3>
                 <div class="details icomes_air">
 					<div class="table_wrap x_scroll">
-						<!-- <img class="coming" src="./img/coming.png" /> -->
 						<table class="c_table2 detail_table center">
 							<thead>
 								<tr>
-									<th>Classification</th>
-									<th>Early-bird Registration</th>
-									<th>Pre-registration</th>
-									<th>On-site Registration</th>
+									<th rowspan="2">Classification</th>
+									<th colspan="2">Early-bird Registration</th>
+									<th colspan="2">Pre-registration</th>
+									<th colspan="2">On-site Registration</th>
 								</tr>
+                                <tr>
+                                    <th>Member</th>
+                                    <th>Non-Member</th>
+                                    <th>Member</th>
+                                    <th>Non-Member</th>
+                                    <th>Member</th>
+                                    <th>Non-Member</th>
+                                </tr>
 							</thead>
 							<tbody>
-                                <!-- <img src="./img/icons/icon_closed.png" alt=""> -->
 								<tr class="text_center">
-									<td>전문의, 교수</td>
-									<td class="closed_td">200.00</td>
-									<td>200.00</td>
-									<td>300.00</td>
-
+									<td>MD(봉직의),Professor</td>
+									<td>KRW 100,000</td>
+									<td>KRW 150,000</td>
+									<td>KRW 150,000</td>
+									<td>KRW 200,000</td>
+									<td>KRW 200,000</td>
+									<td>KRW 300,000</td>
+								</tr>
+                                <tr class="text_center">
+									<td>
+                                    Trainee(전임의, 전공의),<br>
+										students
+									</td>
+                                    <td>KRW 50,000</td>
+									<td>KRW 75,000</td>
+									<td>KRW 75,000</td>
+									<td>KRW 80,000</td>
+									<td>KRW 80,000</td>
+									<td>KRW 100,000</td>
 								</tr>
 								<tr class="text_center">
 									<td>
-                                        약사, 간호사, <br>
-										영양사, 군의관<br>
+                                        Pharmacist,<br>
+										 Nurse, exercisetherapist,<br>
+                                         Nutritionists,Researchers<br>
+										<!-- Corporate member, Others<br> -->
 									</td>
-									<td>100.00</td>
-									<td>100.00</td>
-									<td>150.00</td>
-								</tr>
-								<tr class="text_center">
-									<td>전공의, 학생</td>
-									<td colspan="3">무료<br/>*학생증, ID card 등 증빙자료 제출 필수</td>
+									<td>KRW 75,000</td>
+									<td>KRW 100,000</td>
+									<td>KRW 100,000</td>
+									<td>KRW 125,000</td>
+									<td>KRW 125,000</td>
+									<td>KRW 150,000</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
+                    
 					<div class="mt10">
 						<ul class="indent_ul">
 							<li>• A registration confirmation will be sent to your registered email address once you have completed your registration with full payment. If you have not received it, please contact the congress secretariat.</li>

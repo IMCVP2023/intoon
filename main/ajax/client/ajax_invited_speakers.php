@@ -277,12 +277,42 @@ else if($_POST["flag"] === "invited_speaker_modal"){
     $modal_idx = $_POST["idx"];
 
     $select_keywords_query = "
-                            SELECT DISTINCT LEFT(first_name, 1) AS initial, isp.idx, last_name, first_name, nation, affiliation, isp.image_path, isp.cv_path, pr.program_category_idx,pr.program_name,pr.program_place_idx,pr.program_date, DATE_FORMAT(pr.start_time, '%H:%i')AS start_time, DATE_FORMAT(pr.end_time, '%H:%i')AS end_time
+                            SELECT DISTINCT LEFT(first_name, 1) AS initial, isp.idx, last_name, first_name, nation, affiliation, isp.image_path, isp.cv_path, pr.program_category_idx,pr.program_name,pr.program_place_idx,pr.program_date, DATE_FORMAT(pr.start_time, '%H:%i')AS start_time, DATE_FORMAT(pr.end_time, '%H:%i')AS end_time, pc.idx AS program_contents_idx
                             FROM invited_speaker isp
                             LEFT JOIN program_contents pc ON pc.speaker_idx = isp.idx AND pc.is_deleted = 'N'
                             LEFT JOIN program pr ON pc.program_idx = pr.idx
                             WHERE isp.is_deleted = 'N' AND isp.idx = '{$modal_idx}'
                             ORDER BY first_name
+                            ";
+    $keywords_list = get_data($select_keywords_query);
+
+    if(isset($keywords_list)){
+        $res = [
+            "code" => 200,
+            "msg" => "success",
+            "result" => $keywords_list
+        ];
+        echo json_encode($res);
+        exit;
+    } else {
+        $res = [
+            "code" => 400,
+            "msg" => "select keywords error"
+        ];
+        echo json_encode($res);
+        exit;
+    }
+}
+
+else if($_POST["flag"] === "invited_speaker_program"){
+    $modal_idx = $_POST["idx"];
+
+    $select_keywords_query = "
+                            SELECT pc.is_deleted, pc.program_idx, p.program_tag_name, p.program_date, pp.program_place_name
+                            FROM program_contents pc
+                            LEFT JOIN program p ON pc.program_idx = p.idx
+                            LEFT JOIN program_place pp ON p.program_place_idx = pp.idx
+                            WHERE pc.is_deleted = 'N' AND pc.idx '{$modal_idx}'
                             ";
     $keywords_list = get_data($select_keywords_query);
 

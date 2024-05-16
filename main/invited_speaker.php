@@ -60,6 +60,7 @@
 
 <div class="modal_background" onclick="hideModal()" style="display: none;"></div>
 <div class="modal" style="display:none;">
+<img src="./img/icons/icon_x.png" alt="modal_close" class="modal_colsed" onclick="hideModal()"/>
 	<div class="modal_img_box">
 		<img class="modal_img" src="/main/img/invited_speaker/Alice_Pik_Shan_Kong/SYM16-1_Alice_PS_Kong.jpg" alt="speaker_img"/>
 		<div>
@@ -243,6 +244,7 @@
 		});
 	}
 
+	//invited_speakr modal
 	function drawModal(list){
 		const speakerImg = document.querySelector(".modal_img");
 		const speakerName = document.querySelector(".modal_name");
@@ -254,7 +256,7 @@
 		let contentsHtml = "";
 		let roomText = "";
 		list.map((li)=>{
-
+			console.log(li)
 			speakerImg.src = li.image_path;
 			speakerName.innerText = li.first_name + " " + li.last_name;
 			speakerOrg.innerText = li.affiliation;
@@ -272,7 +274,7 @@
 			}
 
 			contentsHtml += `
-						<div class="content">
+						<div class="content" data-id=${li.program_contents_idx}>
 							<div>
 								<p>• ${li.program_date?.split("-")[1]}월 ${li.program_date?.split("-")[2]}일</p>
 								<p>• ${li.start_time}~${li.end_time}</p>
@@ -283,10 +285,51 @@
 							</div>
 						</div>
 			`
-
 		})
 		contents.innerHTML = contentsHtml;
+		const contentList = document.querySelectorAll(".content");
+		contentList.forEach((contents)=>{
+			contents.addEventListener("click", (event)=>{
+				onClickContnets(event)
+			})
+		})
 	}
+
+	
+
+	function onClickContnets(e){
+		if(e.target.classList.contains("content")){
+			getProgramDetail(e.target.dataset.id)
+		}else if(e.target.parentNode.classList.contains("content")){
+			getProgramDetail(e.target.parentNode.dataset.id)
+		}else if(e.target.parentNode.parentNode.classList.contains("content")){
+			getProgramDetail(e.target.parentNode.parentNode.dataset.id)
+		}
+	}
+
+	function getProgramDetail(idx){
+		var data = {
+			"flag": "invited_speaker_program",
+			"idx" : idx
+		};
+		
+		$.ajax({
+			url : PATH+"ajax/client/ajax_invited_speakers.php",
+			type : "POST",
+			data : data,
+			dataType : "JSON",
+			success : function(res){
+				if(res.code == 200) {
+					console.log(res.result)
+					//window.location.href="./scientific_program"+date+".php?&e="+e+"&name="+this_name;
+				} else if(res.code == 400){
+					alert(res.msg);
+					return;
+				}
+			}
+		});
+	}
+
 
 	/** modal 없애는 함수 */
 	function hideModal(){
