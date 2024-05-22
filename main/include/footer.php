@@ -2,12 +2,12 @@
     <!-- 220323 HUBDNC LJH 추가 -->
     <div class="fixed_btn_clone"></div>
     <div class="fixed_btn_wrap">
-        <ul class="toolbar_wrap" style="opacity: 0;">
+        <ul class="toolbar_wrap">
              <li>
                 <a class="not_yet">
                 <!-- <a href="/main/program_glance.php"> -->
                   <!-- <img src="/main/img/icons/footer_notice.png" alt=""> -->
-                    <img src="/main/img/icons/tool_program.svg" alt="">
+                    <img src="/main/img/icons/2024_tool_program.svg" alt="" class="program_icon">
                 </a>
             </li> 
             <?php
@@ -43,12 +43,12 @@
             ?>
            <li>
                 <a class="not_yet">
-                    <img src="/main/img/icons/footer_registration.png" alt="">
+                    <img src="/main/img/icons/2024_footer_registration.svg" alt="" class="regi_icon">
                 </a>
             </li>
             <li>
                 <a class="not_yet">
-                    <img src="/main/img/icons/footer_abstract.png" alt="">
+                    <img src="/main/img/icons/2024_footer_abstract.svg" alt="" class="abstract_icon">
                 </a>
             </li>
             <?php
@@ -57,10 +57,11 @@
             <?php
             if ($_SESSION["USER"]["idx"] == "") {
             ?>
-           <li><button type="button" onClick="alert('Need to login.')"><i>
-                <img src="/main/img/icons/footer_mypage.png" alt="">
-                <img src="/main/img/icons/tool_mypage.svg" alt="">
-            </i></button></li>
+           <li>
+            <button type="button" onClick="alert('Need to login.')">
+                <img src="/main/img/icons/2024_tool_mypage.svg" alt="" class="mypage_icon">
+            </button>
+            </li>
                 <!-- <li>
                     <a href="/main/login.php" onClick="alert('Need to login.')">
                         <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
@@ -265,5 +266,28 @@ $('.btn_right').css({
         transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out'  
 })
 });
+
+window.onload = ()=>{
+    changeIcon();
+    function changeIcon(){
+        const icons = [
+        { element: document.querySelector(".program_icon"), hoverSrc: "/main/img/icons/2024_tool_program-1.svg", defaultSrc: "/main/img/icons/2024_tool_program.svg" },
+        { element: document.querySelector(".regi_icon"), hoverSrc: "/main/img/icons/2024_footer_registration-1.svg", defaultSrc: "/main/img/icons/2024_footer_registration.svg" },
+        { element: document.querySelector(".abstract_icon"), hoverSrc: "/main/img/icons/2024_footer_abstract-1.svg", defaultSrc: "/main/img/icons/2024_footer_abstract.svg" },
+        { element: document.querySelector(".mypage_icon"), hoverSrc: "/main/img/icons/2024_tool_mypage-1.svg", defaultSrc: "/main/img/icons/2024_tool_mypage.svg" }
+    ];
+
+    icons.forEach(icon => {
+        icon.element.addEventListener("mouseenter", () => {
+            icon.element.src = icon.hoverSrc;
+        });
+
+        icon.element.addEventListener("mouseleave", () => {
+            icon.element.src = icon.defaultSrc;
+        });
+    });
+    }
+}
+
 
 </script>

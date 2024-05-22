@@ -222,8 +222,6 @@ $(document).ready(function(){
 			if(!$("section").hasClass("index_test")){
 				// console.log(footer_top - fixed_bottom)
 				if(32 >= footer_top - fixed_bottom){
-					// console.log("hi")
-
 					$(".fixed_btn_wrap").addClass("on");
 					// $(".btn_top").css("bottom", footer_height+32+"px");
 					if($("section").hasClass("top_btn_move")){ // 우측하단에 register btn이 있는 경우
@@ -232,7 +230,6 @@ $(document).ready(function(){
 						$(".fixed_top").css("bottom", footer_height+30+"px");
 					}
 				}else{
-					//  console.log("hello~~~")
 					$(".fixed_btn_wrap").removeClass("on");
 					//$(".btn_top").css("bottom", "32px");
 					if($("section").hasClass("top_btn_move")){ // 우측하단에 register btn이 있는 경우

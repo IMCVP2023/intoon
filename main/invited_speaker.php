@@ -2,7 +2,13 @@
 <?php include_once('./include/header.php');?>
 
 <section class="invited invited2 container">
-    <h1 class="page_title">Invited Speakers</h1>
+		<h1 class="page_title">Program
+			<div class="sub_btn_box">
+				<a href="/main/program_glance.php">Program at a Glance</a>
+				<a href="/main/scientific_program1.php">Scientific Program</a>
+				<a href="/main/invited_speaker.php" class="on">Invited Speakers</a>
+			</div>
+		</h1>
 	<div class="inner">
 		<div>
 			<div class="searchArea">

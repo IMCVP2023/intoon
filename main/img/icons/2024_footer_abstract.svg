@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="그룹_1329" data-name="그룹 1329" transform="translate(-1580 -386)">
+    <rect id="사각형_1483" data-name="사각형 1483" width="70" height="70" rx="22" transform="translate(1580 386)" fill="#ada9bb"/>
+    <g id="그룹_1322" data-name="그룹 1322" transform="translate(1598 393)">
+      <path id="패스_2816" data-name="패스 2816" d="M23.911,216.7a7.868,7.868,0,1,0-7.868-7.868,7.877,7.877,0,0,0,7.868,7.868m0-13.892a6.024,6.024,0,1,1-6.024,6.024,6.031,6.031,0,0,1,6.024-6.024" transform="translate(-8.847 -196.503)" fill="#f6f6fa"/>
+      <path id="패스_2817" data-name="패스 2817" d="M46.217,230.932h.2l.036-.029.067.029h10.1v-1.946H47.912a8.815,8.815,0,0,1-1.7,1.946" transform="translate(-25.486 -211.957)" fill="#f6f6fa"/>
+      <path id="패스_2818" data-name="패스 2818" d="M63.3,242.783v-1.946H58.332a16.017,16.017,0,0,1,1.7,1.946Z" transform="translate(-32.167 -218.492)" fill="#f6f6fa"/>
+      <path id="패스_2819" data-name="패스 2819" d="M53.071,197.826l-6.518-6.518a.969.969,0,0,0-.689-.285H33.479a1.8,1.8,0,0,0-1.8,1.8v1.828c.281-.027.565-.043.853-.043a8.7,8.7,0,0,1,1.093.076v-1.711H44.481v5.956a.974.974,0,0,0,.973.973H51.41v20.44H47.834a15.784,15.784,0,0,1,.434,1.942h5.088V198.514a.967.967,0,0,0-.285-.688m-6.644.126v-4.019l4.019,4.019Z" transform="translate(-17.471 -191.023)" fill="#f6f6fa"/>
+      <path id="패스_2820" data-name="패스 2820" d="M60.264,219.082v-1.946H52.911c.014.2.031.406.031.613a8.711,8.711,0,0,1-.113,1.333Z" transform="translate(-29.133 -205.423)" fill="#f6f6fa"/>
+      <path id="패스_2821" data-name="패스 2821" d="M21.1,235.533a9.545,9.545,0,0,1-1.928,1.234,13.24,13.24,0,0,1,9.106,12.39H1.848a13.24,13.24,0,0,1,9.106-12.39,9.545,9.545,0,0,1-1.928-1.234A15.084,15.084,0,0,0,0,249.158H0V251H30.129v-1.84h0A15.084,15.084,0,0,0,21.1,235.533" transform="translate(0 -215.568)" fill="#f6f6fa"/>
+    </g>
+    <text id="Call_for_Abstract" data-name="Call for
+Abstract" transform="translate(1615 440)" fill="#f6f6fa" font-size="10" font-family="Barlow-SemiBold, Barlow" font-weight="600"><tspan x="-15.38" y="0">Call for</tspan><tspan x="-19.355" y="10">Abstract</tspan></text>
+  </g>
+</svg>

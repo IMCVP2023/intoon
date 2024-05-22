@@ -592,7 +592,7 @@ section.container.organizing {padding-bottom: 190px;}
 /* section.container .page_title {background: #f2f2f2; width:100%; height: 135px; position: absolute; left: 0;top: 0; padding: 40px 0 48px;} */
 section.container .page_title {background: url("../img/2024_img_sub01.png") no-repeat center /cover; width:100%; height: 240px; position: absolute; left: 0;top: 0; padding: 70px 0 48px; text-align: center;}
 .inner {padding-top:50px;}
-h3.title:before {content:'';display: inline-block;  width: 9px;height: 9px; background: transparent; border:6px solid #4267C5; margin-bottom: 2px; border-radius:50%; margin-right: 10px; vertical-align: middle;}
+h3.title:before {content:'';display: inline-block;  width: 9px;height: 9px; background: transparent; border:6px solid #23509F; margin-bottom: 2px; border-radius:50%; margin-right: 10px; vertical-align: middle;}
 h3.title.icon_none {padding-left:0;}
 h3.title.icon_none:before {display:none;}
 section.container.login .page_title {color:#fff; text-align:center; margin-bottom:52px; position: relative; line-height:1; background: transparent;}
@@ -1754,9 +1754,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 }
 
 .speaker_list > li:hover{
-	background-color: #fffefe;
-	transform: scale(1.04);
-	transform-origin : 50% 50%;
+	border: 1px solid #cbcbd1;
 }
 
 .modal_background{
@@ -2460,12 +2458,16 @@ select[name="topic1"] option:disabled {
     line-height: 3;
 }
 
+.program_detail_tab li a:hover{
+	color: #FFB84A  !important;
+}
 
 .program_detail_tab li.on a{ 
 	color: #BE322B !important;
 }
 
-.program_detail_tab li a:hover{
+
+.program_detail_tab.day2 li a:hover{
 	color: #BE322B !important;
 }
 
@@ -2473,9 +2475,6 @@ select[name="topic1"] option:disabled {
 	color: #FFB84A !important;
 }
 
-.program_detail_tab.day2 li a:hover{
-	color: #FFB84A !important;
-}
 
 
 @media screen and (max-width:1024px) {
@@ -2644,6 +2643,88 @@ select[name="topic1"] option:disabled {
 	border-bottom: 2px solid #D1B9FF !important;
 }
 
+.login_title{
+	font-size: 40px;
+	color: #484554;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 55px;
+}
 
+.login_input{
+	border: none !important;
+	border-bottom: 1px solid #999999 !important;
+	height: 40px !important;
+	padding: 0px 4px !important;
+}
+
+.login_input.email {
+	margin-bottom: 32px;
+}
+
+.login_btn_box{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.login_btn_box > button, .login_btn_box > p {
+	color: #666666;
+	font-size: 16px;
+}
+
+.login_btn_box > button:hover{
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+.find_pw_txt_box > h3{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 12px;
+	color: #484554;
+}
+
+.find_pw_txt_box > p{
+	font-size: 16px;
+	color: #484554;
+	line-height: 1.4;
+}
+.find_pw_txt_box > p:last-child {
+	margin-bottom: 30px;
+}
+
+.find_email{
+	height: 46px !important;
+	background-color: #F6F6FA !important;
+	border: none !important;
+	border-radius: 12px !important;
+}
+
+.find_email::placeholder{
+	text-align: center;
+}
+
+.find_password_form > button {
+	height: 46px !important;
+	border-radius: 12px !important;
+	background-color: #484554 !important;
+	color: #FFF !important;
+	font-weight: bold !important;
+	margin-bottom: 24px;
+}
+
+.find_password_form > button:hover{
+	background-color:#23509F !important;
+}
+.find_password_form > p{
+	line-height: 1.4;
+}
+
+.find_password_form > p:first-of-type{
+	color: #BE322B;
+}
 
 /* .day_tbody tr, .day_tbody tr td {border: 1px solid #ADA9BB !important;} */
