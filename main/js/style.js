@@ -51,7 +51,7 @@ $(document).ready(function(){
 	$('.s_logo_list').slick({
 		dots: false,
 		infinite: true,
-		slidesToShow: 8,
+		slidesToShow: 6,
 		arrows : true,
         autoplay: true,
         autoplaySpeed: 2000,
@@ -59,19 +59,19 @@ $(document).ready(function(){
 		{
 		  breakpoint: 1100,
 		  settings: {
-			slidesToShow: 6
+			slidesToShow: 4
 		  }
 		},
 		{
 		  breakpoint: 780,
 		 settings: {
-			slidesToShow: 4
+			slidesToShow: 3
 		  }
 		},
 		{
 		  breakpoint: 480,
 		  settings: {
-			slidesToShow: 3
+			slidesToShow: 2
 		  }
 		}
 	  ]
@@ -232,7 +232,7 @@ $(document).ready(function(){
 						$(".fixed_top").css("bottom", footer_height+30+"px");
 					}
 				}else{
-					 console.log("hello~~~")
+					//  console.log("hello~~~")
 					$(".fixed_btn_wrap").removeClass("on");
 					//$(".btn_top").css("bottom", "32px");
 					if($("section").hasClass("top_btn_move")){ // 우측하단에 register btn이 있는 경우

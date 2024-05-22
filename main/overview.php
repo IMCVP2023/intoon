@@ -50,7 +50,13 @@ $floor = get_data($sql_floor);
 ?>
 
 <section class="container overview">
-	<h1 class="page_title">Overview</h1>
+	<h1 class="page_title">IMCVP 2024
+		<div class="sub_btn_box">
+				<a href="/main/welcome.php">Welcome Message</a>
+				<a href="/main/organizing_committee.php">Organization</a>
+				<a href="/main/overview.php" class="on">Overview</a>
+			</div>
+	</h1>
     <div class="table_wrap x_scroll inner">
 		<h3 class="title">Overview</h3>
          <table class="c_table2 detail_table">

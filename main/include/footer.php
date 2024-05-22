@@ -82,45 +82,18 @@
             ?>
 
         </ul>
-        <button type="button" class="btn_right">G<br>O<br><br>T<br>O</button>
+        <!-- <button type="button" class="btn_right">G<br>O<br><br>T<br>O</button>
         <div class="footer_go_to_box">
             <div><a href="/main/program_glance_icola.php">Program</a></div>
             <div><a href="/main/registration.php">Registration</a></div>
             <div><a href="/main/abstract_submission.php">Call for Abstract</a></div>
             <div><a href="/main/mypage.php">My IMCVP</a></div>
-        </div>
+        </div> -->
         <button type="button" class="btn_top"><img src="/main/img/icons/icon_top_btn.svg" alt=""></button>
         <!-- <button type="button" class="btn_plus"><img src="/main/img/icons/icon_plus_white.svg" alt=""></button> -->
     </div>
     <!-- 220323 HUBDNC LJH 추가 : 끝 -->
-    <!--
-    <div class="sponsor_logo-wrap container">
-        <ul class="s_logo_list">
-            <li><img src="./img/sponsor/logo01.png" alt=""></li>
-            <li><img src="./img/sponsor/logo02.png" alt=""></li>
-            <li><img src="./img/sponsor/logo03.png" alt=""></li>
-            <li><img src="./img/sponsor/logo04.png" alt=""></li>
-            <li><img src="./img/sponsor/logo05.png" alt=""></li>
-            <li><img src="./img/sponsor/logo06.png" alt=""></li>
-            <li><img src="./img/sponsor/logo07.png" alt=""></li>
-            <li><img src="./img/sponsor/logo08.png" alt=""></li>
-            <li><img src="./img/sponsor/logo09.png" alt=""></li>
-            <li><img src="./img/sponsor/logo10.png" alt=""></li>
-            <li><img src="./img/sponsor/logo11.png" alt=""></li>
-            <li><img src="./img/sponsor/logo12.png" alt=""></li>
-            <li><img src="./img/sponsor/logo13.png" alt=""></li>
-            <li><img src="./img/sponsor/logo14_1.png" style="max-height:20px;" alt=""></li>
-            <li><img src="./img/sponsor/logo15.png" alt=""></li>
-            <li><img src="./img/sponsor/logo16.png" alt=""></li>
-            <li><img src="./img/sponsor/logo17.png" alt=""></li>
-            <li><img src="./img/sponsor/logo18.png" alt=""></li>
-            <li><img src="./img/sponsor/logo19.png" alt=""></li>
-            <li><img src="./img/sponsor/logo20.png" alt=""></li>
-            <li><img src="./img/sponsor/logo21.png" alt=""></li>
-            <li><img src="./img/sponsor/logo22.png" alt=""></li>
-            <li><img src="./img/sponsor/logo23.png" alt=""></li>
-        </ul>
-    </div> -->
+   
     <div class="sponsor_logo-wrap container">
         <ul class="s_logo_list">
         <li>
@@ -177,30 +150,36 @@
                 <div class="footer_l">
                     <div class="clearfix">
                         <a href="https://koreascp.or.kr:459/" target="_blank">
-                            <img src="/main/img/icons/KSCP_logo.png" alt="">
+                            <img src="/main/img/icons/2024_kscp_white.svg" alt="">
+                        </a>
+                        <a href="https://koreascp.or.kr:459/" target="_blank">
+                            <img src="/main/img/icons/2024_imcvp_white.svg" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="footer_c">
-                    <p>Korean Society of Cardiovascular Disease Prevention (KSCP)</p>
+                    <p class="footer_pink_t">Korean Society of Cardiovascular Disease Prevention</p>
                     <ul>
-                        <li>#805, 99, Seongsuil-ro, Seongdong-gu, Seoul Korea(Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
-                        <li>T. 82-2-6408-1505</li>
-                        <!-- <li>F. 82-2-364-0883</li> -->
-                        <li>E. <a href="mailto:kscpmd@kscpmd.or.kr"
-                                class="font_inherit link">kscpmd@kscpmd.or.kr </a></li>
-                        <li>W. <a href="https://koreascp.or.kr:459/" class="font_inherit link">https://koreascp.or.kr</a></li>
+                        <li>805, 99, Seongsuil-ro, Seongdong-gu, Seoul 04790, Republic of Korea</li>
+                        <li>(Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
+                        <li>+82-2-6408-1505&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:kscpmd@kscpmd.or.kr">kscpmd@kscpmd.or.kr</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="www.koreascp.or.kr" target="_blank">www.koreascp.or.kr</a></li>
+                    </ul>
+                    <p class="footer_blue_t">Secretariat of IMCVP 2024</p>
+                    <ul>
+                        <li>4F, A-Block, Richensia, 341, Baekbeom-ro, Yongsan-gu,</li>
+                        <li>Seoul 04315, Republic of Korea</li>
+                        <li>+82-2-2039- 7804&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:info@imcvp.org">info@imcvp.org</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://imcvp.org/">www.imcvp.org</a></li>
                     </ul>
                 </div>
                 <div class="footer_r">
-                    <p>Secretariat of IMCVP 2024 | INTO-ON, Inc.</p>
+                    <!-- <p class="footer_blue_t">Secretariat of IMCVP 2024</p>
                     <ul>
                         <li>2F, Wonhyo-ro, #204, Yongsan-gu, Seoul, Korea</li>
                         <li>T. 82-2-2039-7804</li>
                         <li>F. 82-2-3275-3044</li>
                         <li>E. <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
                         <li>W. <a href="http://into-on.com/" class="font_inherit link">into-on.com</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>

@@ -75,88 +75,70 @@
 ?>
 
 <section class="container scientific_program sub_page">
-	<div class="sub_background_box">
-		<div class="sub_inner">
-			<div>
-				<h2>Scientific Program</h2>
-				<ul>
-					<li>Home</li>
-					<li>Program</li>
-					<li>Scientific Program</li>
-				</ul>
-			</div>	
-		</div>
-	</div>
+<h1 class="page_title">Program
+			<div class="sub_btn_box">
+				<a href="/main/program_glance.php">Program at a Glance</a>
+				<a href="/main/scientific_program1.php" class="on">Scientific Program</a>
+				<a href="/main/invited_speaker.php">Invited Speakers</a>
+			</div>
+		</h1>
 	<div class="inner">
-		<ul class="tab_pager">
-			<li class="on"><a href="/main/scientific_program1.php">November 29 <i></i>(Fri)</a></li>
-			<li><a href="/main/scientific_program2.php">November 30 <i></i>(Sat)</a></li>
+		<ul class="program_detail_tab">
+			<li class="on"><a href="/main/scientific_program1.php">DAY 1 <br class="mb_only"/>(November 29, Fri)</a></li>
+			<li><a href="/main/scientific_program2.php">DAY 2 <br class="mb_only"/>(November 30, Sat)</a></li>
 		</ul>
-		<ul class="program_color_txt">
+		<!-- <ul class="program_color_txt">
 			<li><i></i>&nbsp;:&nbsp;Korean</li>
 			<li><i></i>&nbsp;:&nbsp;English</li>
-		</ul>
-		<p class="rightT lecture_alert">※Some lectures will be pre-recorded.</p>
+		</ul> -->
+		<!-- <p class="rightT lecture_alert">※Some lectures will be pre-recorded.</p> -->
 		<div class="tab_wrap">
 			<!----- Day 01 ----->
 			<div>
 				<ul class="room_tab">
-					<li class="on"><a href="javascript:;">Room 1</a></li>
-					<li><a href="javascript:;">Room 2</a></li>
-					<!-- <li><a href="javascript:;">Room 3</a></li>
-					<li><a href="javascript:;">Room 4</a></li> -->
-					<!-- <li><a href="javascript:;">Meeting Room</a></li> -->
+					<li class="on"><a href="javascript:;">Room A</a></li>
+					<li><a href="javascript:;">Room B</a></li>
 				</ul>
 				<div class="tab_wrap">
 					<!-- Room 1-->
 					<div class="tab_cont2 on">
 						<!-- Symposium 1  -->
 						<div>
-							<table class="table color_table" name="symposium_1">
+							<table class="table color_table yellow_table" name="symposium_1">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>09:00 - 10:40</th>
-										<td class="pink_bg">Symposium 1 <br/>
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
+									<tr class="yellow_bg">
+										<th class="dark_yellow_bg">09:00 - 10:40</th>
+										<td class="yellow_bg">Symposium 1 <br/></td>
 									</tr>
 								</tbody>
 							</table>
 							<table class="table color_table mobile" name="symposium_1_mb">
 								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 09:00 - 10:40</th>
+									<tr class="dark_yellow_bg">
+										<th class="dark_yellow_bg">09:00 - 10:40</th>
 									</tr>
-									<tr class="pink_bg">
-										<td>Symposium 1 <br/>
+									<tr class="yellow_bg non_border_b">
+										<td class="yellow_bg">Symposium 1 <br/>
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<table class="table detail_table2">
+							<table class="detail_table2">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="panel_tr">
+									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD) <br/>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr>
@@ -187,26 +169,34 @@
 											<p>TBD (TBD)</p>
 										</td>
 									</tr>
-									<tr class="discussion">
+									<tr class="discussion yellow_panel_tr">
 										<th>10:20 - 10:40</th>
 										<td>
-											<p class="s_bold">Discussion</p>
+											<p class="s_bold">Panel discussion</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>10:40 - 11:00</th>
+										<td>
+											<p>Coffee break</p>
 										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
-						<!-- plenary 1  -->
+						<!-- Opening address  -->
 						<div>
-							<table class="table color_table" name="plenary_lecture_1">
+							<table class="table color_table gray_table">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>11:10 - 11:50</th>
-										<td class="pink_bg">Plenary Lecture 1<br/>								
+										<th class="dark_gray_bg">11:10 - 11:50</th>
+										<td class="gray_bg">Opening address<br/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -214,11 +204,11 @@
 							</table>
 							<table class="table color_table mobile" name="plenary_lecture_1_mb">
 								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 15:30 - 17:00</th>
+									<tr class="dark_gray_bg">
+										<th class="dark_gray_bg">15:30 - 17:00</th>
 									</tr>
-									<tr class="pink_bg">
-										<td>Plenary Lecture 1<br/>
+									<tr class="gray_bg non_border_b">
+										<td class="gray_bg">Opening address<br/>
 										</td>
 									</tr>
 								</tbody>
@@ -229,23 +219,58 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="panel_tr">
+									<tr class="non_border_b">
+										<th></th>
+										<td>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- plenary 1  -->
+						<div>
+							<table class="table color_table green_table" name="plenary_lecture_1">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_green_bg">11:10 - 11:50</th>
+										<td class="green_bg">Plenary Lecture 1<br/>								
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="plenary_lecture_1_mb">
+								<tbody>
+									<tr class="dark_green_bg">
+										<th class="dark_green_bg">15:30 - 17:00</th>
+									</tr>
+									<tr class="green_bg non_border_b">
+										<td class="green_bg">Plenary Lecture 1<br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD(TBD), TBD (TBD)</p>
+											<p>TBD (TBD)<br> TBD (TBD)</p>
 										</td>
 									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
+									<tr class="non_border_b">
 										<th>11:10 - 11:50</th>
 										<td>
 											<p class="s_bold">TBD</p>
@@ -255,313 +280,16 @@
 								</tbody>
 							</table>
 						</div>
-
-						<!-- Symposium 3  -->
-						<div>
-							<table class="table color_table" name="symposium_3">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>13:00 - 14:40</th>
-										<td class="pink_bg">Symposium 3 <br/>
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="symposium_3_mb">
-								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 13:00 - 14:40</th>
-									</tr>
-									<tr class="pink_bg">
-										<td>Symposium 3 <br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>13:00 - 13:20</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>13:20 - 13:40</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>13:40 - 14:00</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>14:00 - 14:20</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="discussion">
-										<th>14:20 - 14:40</th>
-										<td>
-											<p class="s_bold">Discussion</p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-					<!-- plenary 2  -->
-						<div>
-							<table class="table color_table" name="plenary_lecture_2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>15:00 - 15:40</th>
-										<td class="pink_bg">Plenary Lecture 2<br/>								
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="plenary_lecture_2_mb">
-								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 15:00 - 15:40</th>
-									</tr>
-									<tr class="pink_bg">
-										<td>Plenary Lecture 2<br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<p>TBD(TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>15:00 - 15:40</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- Symposium 5  -->
-						<div>
-							<table class="table color_table" name="symposium_5">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>15:40 - 17:20</th>
-										<td class="pink_bg">Symposium 5 <br/>
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="symposium_5_mb">
-								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 15:40 - 17:20</th>
-									</tr>
-									<tr class="pink_bg">
-										<td>Symposium 5 <br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>15:40 - 16:00</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>16:00 - 16:20</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>16:20 - 16:40</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>16:40 - 17:00</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="discussion">
-										<th>17:00 - 17:20</th>
-										<td>
-											<p class="s_bold">Discussion</p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- Satellite Symposium 1  -->
-						<div>
-							<table class="table color_table" name="satellite_symposium_1">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>17:20 - 18:00</th>
-										<td class="pink_bg">Satellite Symposium 1  <br/>
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="satellite_symposium_1_mb">
-								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 17:20 - 18:00</th>
-									</tr>
-									<tr class="pink_bg">
-										<td>Satellite Symposium 1 <br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>17:20 - 18:00</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-
-								</tbody>
-							</table>
-						</div>
-
-						<div class="circle_title">Breakfast &amp; Luncheon Symposium</div>
 						<!-- Luncheon Symposium 1 (K) [Daewoong]  -->
 						<div>
-							<table class="table color_table" name="luncheon_symposium_1">
+							<table class="table color_table pink_table" name="luncheon_symposium_1">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>11:50 - 13:00</th>
+										<th class="dark_pink_bg">11:50 - 13:00</th>
 										<td class="pink_bg">Luncheon Symposium 1 
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -571,9 +299,9 @@
 							<table class="table color_table mobile" name="luncheon_symposium_1_mb">
 								<tbody>
 									<tr>
-										<th class="gray_bg">November 29 (Fri) 11:50 - 13:00</th>
+										<th class="dark_pink_bg">11:50 - 13:00</th>
 									</tr>
-									<tr>
+									<tr class="non_border_b">
 										<td class="pink_bg">Luncheon Symposium 1 </td>
 									</tr>
 									<!-- <tr>
@@ -587,7 +315,7 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="panel_tr">
+									<tr class="pink_panel_tr">
 										<th class="leftT">
 											<p>Chairperson</p>
 										</th>
@@ -595,15 +323,8 @@
 											<p>TBD (TBD)</p>
 										</td>
 									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
+									
+									<tr class="non_border_b">
 										<th>11:50 - 13:00</th>
 										<td>
 											<p class="s_bold">TBD</p>
@@ -613,118 +334,30 @@
 								</tbody>
 							</table>
 						</div>
-					</div>
-					<!-- Room 2-->
-					<div class="tab_cont2">
-					<div>
-							<table class="table color_table" name="symposium_2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>09:00 - 10:40</th>
-										<td class="pink_bg">Symposium 2 <br/>
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="symposium_2_mb">
-								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 09:00 - 10:40</th>
-									</tr>
-									<tr class="pink_bg">
-										<td>Symposium 2 <br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>09:00 - 09:20</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>09:20 - 09:40</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>09:40 - 10:00</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>10:00 - 10:20</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="discussion">
-										<th>10:20 - 10:40</th>
-										<td>
-											<p class="s_bold">Discussion</p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<!-- plenary 1  -->
+					
+						<!-- Symposium 3  -->
 						<div>
-							<table class="table color_table" name="plenary_lecture_1_2">
+							<table class="table color_table yellow_table" name="symposium_3">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>11:10 - 11:50</th>
-										<td class="pink_bg">Plenary Lecture 1<br/>								
+										<th class="dark_yellow_bg">13:00 - 14:40</th>
+										<td class="yellow_bg">Symposium 3 <br/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<table class="table color_table mobile" name="plenary_lecture_1_2_mb">
+							<table class="table color_table mobile" name="symposium_3_mb">
 								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 15:30 - 17:00</th>
+									<tr class="dark_yellow_bg">
+										<th class="dark_yellow_bg">13:00 - 14:40</th>
 									</tr>
-									<tr class="pink_bg">
-										<td>Plenary Lecture 1<br/>
-										</td>
+									<tr class="yellow_bg non_border_b">
+										<td class="yellow_bg">Symposium 3 <br/></td>
 									</tr>
 								</tbody>
 							</table>
@@ -734,80 +367,12 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="panel_tr">
+									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD(TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
-										<th>11:10 - 11:50</th>
-										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- Symposium 4  -->
-						<div>
-							<table class="table color_table" name="symposium_4">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>13:00 - 14:40</th>
-										<td class="pink_bg">Symposium 4 <br/>
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="symposium_4_mb">
-								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 13:00 - 14:40</th>
-									</tr>
-									<tr class="pink_bg">
-										<td>Symposium 4 <br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD)<br>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr>
@@ -838,10 +403,18 @@
 											<p>TBD (TBD)</p>
 										</td>
 									</tr>
-									<tr class="discussion">
+									<tr class="discussion yellow_panel_tr">
 										<th>14:20 - 14:40</th>
 										<td>
-											<p class="s_bold">Discussion</p>
+											<p class="s_bold">Panel discussion</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>14:40 - 15:00</th>
+										<td>
+											<p>Coffee break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -850,27 +423,27 @@
 
 					<!-- plenary 2  -->
 						<div>
-							<table class="table color_table" name="plenary_lecture_2_2">
+							<table class="table color_table green_table" name="plenary_lecture_2">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>15:00 - 15:40</th>
-										<td class="pink_bg">Plenary Lecture 2<br/>								
+										<th class="dark_green_bg">15:00 - 15:40</th>
+										<td class="green_bg">Plenary Lecture 2<br/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<table class="table color_table mobile" name="plenary_lecture_2_2_mb">
+							<table class="table color_table mobile" name="plenary_lecture_2_mb">
 								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 15:00 - 15:40</th>
+									<tr class="dark_green_bg">
+										<th class="dark_green_bg">15:00 - 15:40</th>
 									</tr>
-									<tr class="pink_bg">
-										<td>Plenary Lecture 2<br/>
+									<tr class="green_bg non_border_b">
+										<td class="green_bg">Plenary Lecture 2<br/>
 										</td>
 									</tr>
 								</tbody>
@@ -881,23 +454,15 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="panel_tr">
+									<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD(TBD), TBD (TBD)</p>
+											<p>TBD(TBD)<br/>TBD (TBD)</p>
 										</td>
 									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
+									<tr class="non_border_b">
 										<th>15:00 - 15:40</th>
 										<td>
 											<p class="s_bold">TBD</p>
@@ -908,29 +473,29 @@
 							</table>
 						</div>
 
-						<!-- Symposium 6  -->
+						<!-- Symposium 5  -->
 						<div>
-							<table class="table color_table" name="symposium_6">
+							<table class="table color_table yellow_table" name="symposium_5">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>15:40 - 17:20</th>
-										<td class="pink_bg">Symposium 6 <br/>
+										<th class="dark_yellow_bg">15:40 - 17:20</th>
+										<td class="yellow_bg">Symposium 5 <br/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<table class="table color_table mobile" name="symposium_6_mb">
+							<table class="table color_table mobile" name="symposium_5_mb">
 								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 15:40 - 17:20</th>
+									<tr class="dark_yellow_bg">
+										<th class="dark_yellow_bg"> 15:40 - 17:20</th>
 									</tr>
-									<tr class="pink_bg">
-										<td>Symposium 6 <br/>
+									<tr class="yellow_bg non_border_b">
+										<td class="yellow_bg">Symposium 5 <br/>
 										</td>
 									</tr>
 								</tbody>
@@ -941,20 +506,12 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="panel_tr">
+									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD)<br>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr>
@@ -985,10 +542,12 @@
 											<p>TBD (TBD)</p>
 										</td>
 									</tr>
-									<tr class="discussion">
+									<tr class="discussion non_border_b">
 										<th>17:00 - 17:20</th>
 										<td>
-											<p class="s_bold">Discussion</p>
+											<p class="s_bold">Panel discussion</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p>
 										</td>
 									</tr>
 								</tbody>
@@ -997,27 +556,27 @@
 
 						<!-- Satellite Symposium 1  -->
 						<div>
-							<table class="table color_table" name="satellite_symposium_2">
+							<table class="table color_table violet_table" name="satellite_symposium_1">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>17:20 - 18:00</th>
-										<td class="pink_bg">Satellite Symposium 2  <br/>
+										<th class="dark_violet_bg">17:20 - 18:00</th>
+										<td class="violet_bg">Satellite Symposium 1  <br/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<table class="table color_table mobile" name="satellite_symposium_2_mb">
+							<table class="table color_table mobile" name="satellite_symposium_1_mb">
 								<tbody>
-									<tr class="gray_bg">
-										<th class="gray_bg">November 29 (Fri) 17:20 - 18:00</th>
+									<tr class="dark_violet_bg">
+										<th class="dark_violet_bg">17:20 - 18:00</th>
 									</tr>
-									<tr class="pink_bg">
-										<td>Satellite Symposium 2 <br/>
+									<tr class="violet_bg non_border_b">
+										<td class="violet_bg">Satellite Symposium 1 <br/>
 										</td>
 									</tr>
 								</tbody>
@@ -1028,23 +587,15 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="panel_tr">
+									<tr class="violet_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD)<br/>TBD (TBD)</p>
 										</td>
 									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
+									<tr class="non_border_b">
 										<th>17:20 - 18:00</th>
 										<td>
 											<p class="s_bold">TBD</p>
@@ -1055,18 +606,229 @@
 								</tbody>
 							</table>
 						</div>
-
-						<div class="circle_title">Breakfast &amp; Luncheon Symposium</div>
-						<!-- Luncheon Symposium 1 (K) [Daewoong]  -->
+						<!-- Gala Dinner  -->
 						<div>
-							<table class="table color_table" name="luncheon_symposium_2">
+							<table class="table color_table gray_table">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="gray_bg">November 29 (Fri)<br/>11:50 - 13:00</th>
+										<th class="dark_gray_bg">18:00 ~</th>
+										<td class="gray_bg">Gala Dinner<br/>								
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile">
+								<tbody>
+									<tr class="dark_gray_bg">
+										<th class="dark_gray_bg">18:00 ~</th>
+									</tr>
+									<tr class="gray_bg non_border_b">
+										<td class="gray_bg">Gala Dinner<br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+						<!-- <div class="circle_title">Breakfast &amp; Luncheon Symposium</div> -->
+						<!-- Luncheon Symposium 1 (K) [Daewoong]  -->
+					
+					<!-- !!! Room 2 !!!-->
+					<div class="tab_cont2">
+						<div>
+							<table class="table color_table yellow_table" name="symposium_2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_yellow_bg">09:00 - 10:40</th>
+										<td class="yellow_bg">Symposium 2 <br/>
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="symposium_2_mb">
+								<tbody>
+									<tr class="dark_yellow_bg">
+										<th class="dark_yellow_bg">09:00 - 10:40</th>
+									</tr>
+									<tr class="yellow_bg non_border_b">
+										<td class="yellow_bg">Symposium 2 <br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="yellow_panel_tr">
+										<th class="leftT">
+											<p>Chairpersons</p>
+										</th>
+										<td>
+											<p>TBD (TBD)<br>TBD (TBD)</p>
+										</td>
+									</tr>
+									
+									<tr>
+										<th>09:00 - 09:20</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>09:20 - 09:40</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>09:40 - 10:00</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>10:00 - 10:20</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="discussion yellow_panel_tr">
+										<th>10:20 - 10:40</th>
+										<td>
+											<p class="s_bold">Panel discussion</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>10:40 - 11:00</th>
+										<td>
+											<p>Coffee break</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- Opening address  -->
+						<div>
+							<table class="table color_table gray_table">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_gray_bg">11:10 - 11:50</th>
+										<td class="gray_bg">Opening address<br/>								
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="plenary_lecture_1_mb">
+								<tbody>
+									<tr class="dark_gray_bg">
+										<th class="dark_gray_bg">15:30 - 17:00</th>
+									</tr>
+									<tr class="gray_bg non_border_b">
+										<td class="gray_bg">Opening address<br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="non_border_b">
+										<th></th>
+										<td>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- plenary 1  -->
+						<div>
+							<table class="table color_table green_table" name="plenary_lecture_1">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_green_bg">11:10 - 11:50</th>
+										<td class="green_bg">Plenary Lecture 1<br/>								
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="plenary_lecture_1_mb">
+								<tbody>
+									<tr class="dark_green_bg">
+										<th class="dark_green_bg">15:30 - 17:00</th>
+									</tr>
+									<tr class="green_bg non_border_b">
+										<td class="green_bg">Plenary Lecture 1<br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="green_panel_tr">
+										<th class="leftT">
+											<p>Chairpersons</p>
+										</th>
+										<td>
+											<p>TBD (TBD)<br> TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>11:10 - 11:50</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div>
+							<table class="table color_table pink_table" name="luncheon_symposium_2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_pink_bg">11:50 - 13:00</th>
 										<td class="pink_bg">Luncheon Symposium 2 
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -1075,11 +837,11 @@
 							</table>
 							<table class="table color_table mobile" name="luncheon_symposium_2_mb">
 								<tbody>
-									<tr>
-										<th class="gray_bg">November 29 (Fri) 11:50 - 13:00</th>
+									<tr class="dark_pink_bg">
+										<th class="dark_pink_bg">11:50 - 13:00</th>
 									</tr>
-									<tr>
-										<td class="pink_bg">Luncheon Symposium 2 </td>
+									<tr class="pink_bg non_border_b">
+										<td class="pink_bg ">Luncheon Symposium 2 </td>
 									</tr>
 									<!-- <tr>
 										<td><button type="button" class="favorite_btn centerT">My Favorite</button></td>
@@ -1092,7 +854,7 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="panel_tr">
+									<tr class="pink_panel_tr">
 										<th class="leftT">
 											<p>Chairperson</p>
 										</th>
@@ -1100,15 +862,7 @@
 											<p>TBD (TBD)</p>
 										</td>
 									</tr>
-									<tr class="panel_tr">
-										<th class="leftT">
-											<p>Panels</p>
-										</th>
-										<td>
-											<p>TBD (TBD), TBD (TBD)</p>
-										</td>
-									</tr>
-									<tr>
+									<tr class="non_border_b">
 										<th>11:50 - 13:00</th>
 										<td>
 											<p class="s_bold">TBD</p>
@@ -1118,6 +872,285 @@
 								</tbody>
 							</table>
 						</div>
+
+						<!-- Symposium 4  -->
+						<div>
+							<table class="table color_table yellow_table" name="symposium_4">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_yellow_bg">13:00 - 14:40</th>
+										<td class="yellow_bg">Symposium 4 <br/>
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="symposium_4_mb">
+								<tbody>
+									<tr class="dark_yellow_bg">
+										<th class="dark_yellow_bg">13:00 - 14:40</th>
+									</tr>
+									<tr class="yellow_bg non_border_b">
+										<td class="yellow_bg">Symposium 4 <br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="yellow_panel_tr">
+										<th class="leftT">
+											<p>Chairpersons</p>
+										</th>
+										<td>
+											<p>TBD (TBD)<br/>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>13:00 - 13:20</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>13:20 - 13:40</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>13:40 - 14:00</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>14:00 - 14:20</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="discussion yellow_panel_tr">
+										<th>14:40 - 11:00</th>
+										<td>
+											<p class="s_bold">Panel discussion</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>10:40 - 11:00</th>
+										<td>
+											<p>Coffee break</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					<!-- plenary 2  -->
+						<div>
+							<table class="table color_table green_table" name="plenary_lecture_2_2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_green_bg">15:00 - 15:40</th>
+										<td class="green_bg">Plenary Lecture 2<br/>								
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="plenary_lecture_2_2_mb">
+								<tbody>
+									<tr class="dark_green_bg">
+										<th class="dark_green_bg">15:00 - 15:40</th>
+									</tr>
+									<tr class="green_bg non_border_b">
+										<td class="green_bg">Plenary Lecture 2<br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="green_panel_tr">
+										<th class="leftT">
+											<p>Chairpersons</p>
+										</th>
+										<td>
+											<p>TBD(TBD)<br/>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>15:00 - 15:40</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- Symposium 6  -->
+						<div>
+							<table class="table color_table yellow_table" name="symposium_6">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_yellow_bg">15:40 - 17:20</th>
+										<td class="yellow_bg">Symposium 6 <br/>
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="symposium_6_mb">
+								<tbody>
+									<tr class="dark_yellow_bg">
+										<th class="dark_yellow_bg">15:40 - 17:20</th>
+									</tr>
+									<tr class="yellow_bg non_border_b">
+										<td class="yellow_bg">Symposium 6 <br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="yellow_panel_tr">
+										<th class="leftT">
+											<p>Chairpersons</p>
+										</th>
+										<td>
+											<p>TBD (TBD)<br/>TBD (TBD)</p>
+										</td>
+									</tr>
+									
+									<tr>
+										<th>15:40 - 16:00</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>16:00 - 16:20</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>16:20 - 16:40</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr>
+										<th>16:40 - 17:00</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+									<tr class="discussion non_border_b">
+										<th>17:00 - 17:20</th>
+										<td>
+											<p class="s_bold">Panel discussion</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- Satellite Symposium 2  -->
+						<div>
+							<table class="table color_table violet_table" name="satellite_symposium_2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_violet_bg">17:20 - 18:00</th>
+										<td class="violet_bg">Satellite Symposium 2  <br/>
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="satellite_symposium_2_mb">
+								<tbody>
+									<tr class="dark_violet_bg">
+										<th class="dark_violet_bg">17:20 - 18:00</th>
+									</tr>
+									<tr class="violet_bg non_border_b">
+										<td class="violet_bg ">Satellite Symposium 2 <br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="violet_panel_tr">
+										<th class="leftT">
+											<p>Chairpersons</p>
+										</th>
+										<td>
+											<p>TBD (TBD)<br>TBD (TBD)</p>
+										</td>
+									</tr>
+									
+									<tr>
+										<th>17:20 - 18:00</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+						<!-- <div class="circle_title">Breakfast &amp; Luncheon Symposium</div> -->
+						<!-- Luncheon Symposium 1 (K) [Daewoong]  -->
+						
 					</div>
 				</div>	
 			</div>

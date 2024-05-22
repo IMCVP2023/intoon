@@ -7,13 +7,10 @@ $locale = locale($language);
 <header class="blue_header">
     <div class="g_h_top">
         <div class="container">
-            <div class="dday_wrap">
-                <div class="dday_top"><span>D-<?= number_format($d_days); ?></span></div>
-                <div class="dday_bot">Today is <span><?= $today; ?></span></div>
-            </div>
+          
             <!-- <div class="text_center g_h_logo"><img src="/main/img/icon_logo2.svg" alt="" class="pointer" onClick="javascript:location.href='/main/index.php'"></div> -->
             <!-- [240123]sujeong / header logo -->
-            <div class="g_h_logo"><img src="/main/img/icons/site_title.png" alt="" class="pointer"
+            <div class="g_h_logo"><img src="/main/img/2024_imcvp_logo.svg" alt="" class="pointer"
                     onClick="javascript:location.href='/main/index.php'"></div>
             <ul class="g_h_tool">
                 <!-- <li><a href="/main/index.php">Home</a></li> -->
@@ -32,9 +29,12 @@ $locale = locale($language);
                 <?php
                 }
                 ?>
-                <!-- <li><a href="https://www.lipid.or.kr/">Go to KSoLA</a></li> -->
-                <li><a href="https://koreascp.or.kr:459/">KSCP</a></li>
+                <!-- <li><a href="https://koreascp.or.kr:459/">KSCP</a></li> -->
+                <li><a class="contact">Contact Us</a></li>
             </ul>
+            <div class="dday_wrap">
+                    <div class="dday_top"><span>D-<?= number_format($d_days); ?></span> <div class="header_bar"></div><span>Today is &nbsp;<?= $today; ?></span></div>
+            </div>
             <div class="mb_g_h_tool">
                 <ul>
                     <?php
@@ -51,20 +51,13 @@ $locale = locale($language);
                     <?php
                     }
                     ?>
-                    <li><a href="https://koreascp.or.kr:459/">KSCP</a></li>
+                <!-- <li><a href="https://koreascp.or.kr:459/">KSCP</a></li> -->
+                    <li><a class="contact">Contact Us</a></li>
                 </ul>
                 <div>
                     <button type="button" class="m_nav_btn"><img src="/main/img/icons/m_nav.png"></button>
-                </div>
+                </div>  
             </div>
-            <!-- <div class="mb_g_h_tool tablet_show">
-				<ul>
-					<li><a href="/main/login.php">Log in</a></li>
-					<li><a href="/main/signup.php">Sign up</a></li>
-					<li><a href="https://www.kosso.or.kr/eng/">KSSO</a></li>
-				</ul>
-				<button type="button" class="m_nav_btn"><img src="/main/img/icons/m_nav.png"></button>
-			</div> -->
         </div>
     </div>
     <div class="g_h_bottom">
@@ -99,9 +92,9 @@ $locale = locale($language);
                     <li>
                         <a href="/main/comingsoon.php">Call for Abstract</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Abstract Submission Guidelines</a></li>
-                            <li><a href="/main/comingsoon.php">Go to Abstract Submission</a></li>
-                            <li><a href="/main/comingsoon.php">Presentation Guidelines</a></li>
+                            <li><a href="/main/comingsoon.php">Abstract<br>Submission<br>Guidelines</a></li>
+                            <li><a href="/main/comingsoon.php">Go to Abstract<br>Submission</a></li>
+                            <li><a href="/main/comingsoon.php">Presentation<br>Guidelines</a></li>
                             <li><a href="/main/comingsoon.php">Awards & Grants</a></li>
 
                             <!-- <li><a href="/main/abstract_submission_guideline.php">Submission Guidelines</a></li>
@@ -129,7 +122,7 @@ $locale = locale($language);
                         <ul class="sub_nav">
                             <li><a href="/main/comingsoon.php">Sponsorship</a></li>
                             <li><a href="/main/comingsoon.php">Exhibition</a></li>
-                            <li><a href="/main/comingsoon.php">Exhibition & Social Event</a></li>
+                            <li><a href="/main/comingsoon.php">Exhibition &<br>Social Event</a></li>
 
                             <!-- <li><a href="/main/sponsor.php">Sponsorship</a></li>
                             <li><a href="/main/sponsor_exhibition.php">Exhibition</a></li> -->
@@ -138,7 +131,7 @@ $locale = locale($language);
                     <li>
                         <a href="/main/comingsoon.php">Venue</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Grand Walkerhill Seoul</a></li>
+                            <li><a href="/main/comingsoon.php">Grand Walkerhill<br>Seoul</a></li>
                             <li><a href="/main/comingsoon.php">Accommodation</a></li>
                             <li><a href="/main/comingsoon.php">Floor Plan</a></li>
 
@@ -170,11 +163,40 @@ $locale = locale($language);
 
 <div class="nav_dim"></div>
 <!-- 220308 HUBDNC LJH 추가 : 끝-->
+<div class="contact_shadow" style="display: none;"></div>
+<div class="contact_box" style="display: none;">
+    <h1>Contact Us</h1>
+    <button class="contact_close_btn"><img src="/main/img/icons/icon_x.png"/></button>
+    <div>
+        <h6>Secretariatof IMCVP 2024│INTO-ON,Inc.</h6>
+        <div>
+            <p>Tel:+82-2-2039-7804</p>
+            <p>Fax:+82-2-3275-3044</p>
+        </div>
+        <p>E-mail:<a href="mailto:info@imcvp.org" class="link under">info@imcvp.org</a></p>
+        <p>2F, Wonhyo-ro,#204,Yongsan-gu,Seoul,Korea</p>
+    </div>
+</div>
 
 <script>
 $(document).ready(function() {
     $(".not_yet").click(function() {
         alert("Coming soon.")
+    });
+
+    $(".contact").click(function() {
+        $(".contact_box").css("display", "block");
+        $(".contact_shadow").css("display", "block");
+    });
+    
+    $(".contact_close_btn").click(function() {
+        $(".contact_box").css("display", "none");
+        $(".contact_shadow").css("display", "none");
+    });
+
+    $(".contact_shadow").click(function() {
+        $(".contact_box").css("display", "none");
+        $(".contact_shadow").css("display", "none");
     });
 
     let lastScroll = 0;
@@ -339,78 +361,7 @@ $(document).ready(function() {
             </li>
         </ul>
     </div>
-    <!--
-    <div class="m_nav">
-        <ul class="m_nav_ul">
-            <li class="m_nav_li">
-                <a href="javascript:;" class="<?= (in_array($_page, $_page_config["m1"]) ? "show" : "") ?>"><span>General
-                        Information</span></a>
-                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m1"]) ? "block" : "none") ?>">
-                    <li><a href="/main/welcome.php">Welcome Message</a></li>
-                    <li><a href="/main/organizing_committee.php">Organization</a></li>
-                    <li><a href="/main/overview.php">Overview</a></li>
-                     <li><a href="/main/venue.php">Venue</a></li>
-                    <li><a href="/main/photo.php">Photo Gallery</a></li>
-                </ul>
-            </li>
-            <li class="m_nav_li">
-                <a href="javascript:;" class="<?= (in_array($_page, $_page_config["m2"]) ? "show" : "") ?>"><span>Program</span></a>
-                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m2"]) ? "block" : "none") ?>">
-                    <li><a href="/main/program_glance.php">Program at a Glance</a></li>
-                   <li><a href="/main/program_detail.php">Program in Detail</a></li>
-                    <li><a href="/main/program_detail.php">Scientific Program</a></li>
-                    <li><a href="/main/invited_speaker.php">Invited Speakers</a></li>
-                </ul>
-            </li>
-            <li class="m_nav_li">
-                <a href="javascript:;" class="<?= (in_array($_page, $_page_config["m3"]) ? "show" : "") ?>"><span>Abstracts</span></a>
-                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m3"]) ? "block" : "none") ?>">
-                     <li><a href="poster_abstract_submission.php">Submission Guideline</a></li> -->
-    <!-- <li><a href="lecture_note_submission.php">Lecture Abstract Guideline</a></li> 
-                    <li><a href="/main/abstract_submission_guideline.php">Submission Guidelines</a></li>
-                     <li><a href="/main/lecture_note_submission.php">Lecture Note Submission</a></li>
-					<li><a href="/main/abstract_submission.php" class="online_submission_alert">Online Submission</a></li>
-					<li><a href="/main/abstract_submission_oral.php">Presentation Guidelines</a></li>
-					<li><a href="/main/abstract_submission_award.php">Awards & Grants</a></li>
-                </ul>
-            </li>
-            <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m4"]) ? "show" : "") ?>">
-                <a href="javascript:;"><span>Registration</span></a>
-                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m4"]) ? "block" : "none") ?>">
-                    <li><a href="/main/registration_guidelines.php">Registration Guidelines</a></li>
-                    <li><a href="/main/registration.php">Online Registration</a></li>
-					<li><a href="/main/registration_rating_guides.php">평점 안내</a></li>
-                </ul>
-            </li>
-            <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m5"]) ? "show" : "") ?>">
-                <a href="javascript:;"><span>Sponsorship</span></a>
-                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m5"]) ? "block" : "none") ?>">
-                    <li><a href="/main/sponsor.php">Sponsorship</a></li>
-                    <li><a href="/main/sponsor_exhibition.php">Exhibition</a></li>
-                  <li><a href="application.php">Application</a></li>
-                </ul>
-            </li>
-			<li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m7"]) ? "show" : "") ?>">
-                <a href="javascript:;"><span>Venue</span></a>
-                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m7"]) ? "block" : "none") ?>">
-                    <li><a href="/main/venue.php">Conrad Seoul</a></li>
-                    <li><a href="/main/accommodation.php">Accommodation</a></li>
-					<li><a href="/main/floor_plan.php">Floor Plan</a></li>
-                </ul>
-            </li>
-            <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m6"]) ? "show" : "") ?>">
-                <a href="javascript:;"><span>Information</span></a>
-                <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m6"]) ? "block" : "none") ?>">
-                     <li><a href="/main/accommodation.php">Accommodation</a></li> -->
-    <!-- <li><a href="/main/attraction_historic.php">Attractions in Seoul</a></li>
-					<li><a href="/main/board_notice.php">Notice</a></li>
-					<li><a href="/main/board_newsletter.php">Newsletter</a></li>
-                    <li><a href="/main/useful_information.php">Useful Information</a></li>
-                    <li><a href="/main/visa.php">VISA & K-ETA</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div> -->
+   
 </div>
 <input type="hidden" value="<?= $during_yn ?>" name="during_yn">
 <script>

@@ -24,23 +24,9 @@
 ?>
 
 <!-- app일때 section에 app_version 클래스 추가 -->
-<section class="container welcome <?= $add_section_class; ?>">
+<section class="container welcome">
 	<!-- HUBDNCLHJ : app 메뉴 탭 주석 해제 -->
-<?php
-	if(!empty($session_user) && $session_app_type == 'Y') {
-?>
-		<div class="app_title_box">
-			<h2 class="app_title">ICOMES 2024<button type="button" class="app_title_prev" onclick="javascript:window.location.href='./app_index.php';"><img src="/main/img/icons/icon_arrow_prev_wh.svg" alt="이전페이지로 이동"></button></h2>
-			<ul class="app_menu_tab">
-				<li class="on"><a href="./welcome.php">Welcome Message</a></li>
-				<li><a href="./organizing_committee.php">Organization</a></li>
-				<li><a href="./app_overview.php">Overview</a></li>
-				<li><a href="./venue.php">Venue</a></li>
-			</ul>
-		</div>
-<?php
-	} 
-?>
+
 <!-- 		<div class="contents_wrap"> -->
 <!-- 			<h1 class="page_title">Welcome Message</h1> -->
 <!-- 			<div class="inner"> -->
@@ -48,15 +34,22 @@
 <!-- 			</div> -->
 <!-- 		</div> -->
     <div>
-		<h1 class="page_title">Welcome Message</h1>
+		<h1 class="page_title">IMCVP 2024
+			<div class="sub_btn_box">
+				<a href="/main/welcome.php" class="on">Welcome Message</a>
+				<a href="/main/organizing_committee.php">Organization</a>
+				<a href="/main/overview.php">Overview</a>
+			</div>
+		</h1>
         <div class="inner">
+			<h3 class="sub_title">Welcome Message</h3>
             <div>
 				<h3 class="title icon_none">Dear distinguished guests, esteemed colleagues, and valued participants,</h3>
 				<p class="welcome_txt">
 				It is my great honor to cordially invite all of you to upcoming <span class="f_bold">IMCVP 2024 (International Meeting of Cardiovascular Disease Prevention)</span> (<a href="https://imcvp.org/" class="link under">IMCVP 2024</a>).  <br/><br/>The IMCVP will be held at Grand Walkerhill Hotel in Seoul, Republic of Korea, from November 29 to November 30 2024. <br/>IMCVP is hosted solely by KSCP and has been newly named as an official conference of KSCP (Korean Society of Cardiovascular Disease Prevention).<br/><br/>It is the 3<sup class="font_small">rd</sup> international conference hosted by KSCP. <br/><br/>KSCP was founded in 2010 to promote national health through active academic activities in the field of cardiovascular disease prevention. <br/><br/>In November 2023, KSCP co-hosted an international conference of ISCP in Seoul, Korea and many participants from around the world joined us to share current scientific evidence.<br/><br/>I would like to extend my heartfelt thanks to the organizing committee and scientific committee members of last year’s successful conference for their dedicated efforts<br/><br/>This year, the organizing committee of KSCP has decided to hold the IMCVP 2024 in-person meeting and would like to invite all of you.<br/><br/> IMCP 2024 will present current edge of scientific evidence and educational content, as well as key insights, practice-changing updates with world-class experts.<br/><br/>It will bring together key stakeholders in all areas of cardiovascular disease prevention and promote better patient care. Many fields of cardiovascular disease, including hypertension, dyslipidemia, diabetes, angina, stroke, heart failure, epidemiology, nutrition, guidelines, and new treatment methods, will be covered, and excellent professors will share their research results.<br/><br/>It is our pride and pleasure to share up-to-date scientific information in this field through IMCVP 2024.<br/><br/>As the President of KSCP hosting IMCVP 2024, I hope that this meeting can be one of the greatest academic experiences you’ve ever had. <br/><br/>I would like to express my sincerest gratitude to all of you for your attendance and continued support. I look forward to seeing all of you at IMCVP in November 2024.<br/><br/>Thank you so much.<br/><br/>With best regards,<br/><br/>Won-Young Lee,<br/><br/>President of KSCP (Korean Society of Cardiovascular Disease Prevention)
 				</p>
 			</div>
-			<img src="./img/2024_headman_img.png" alt = ""/>
+			<img src="./img/2024_headman_img-1.png" alt = ""/>
             <div class="head_profile">
 				<div class="headman">
 				

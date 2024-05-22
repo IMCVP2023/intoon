@@ -42,15 +42,23 @@
 /*.room_tab {display: flex; flex-wrap: wrap; margin-top: 20px;}*/
 .recording_icon {/*width: 40px;*/ margin-top: -4px;}
 .room_tab {white-space:nowrap; font-size:0; overflow-x:auto;}
-.room_tab li {display:inline-block; width: 25%; min-width:85px; border: 1px solid #707070; border-right: 0;}
+.room_tab li {display:inline-block; width: 25%; min-width:85px; border: 1px solid #ADA9BB; border-right: 0; border-radius: 24px;height: 40px;}
 .room_tab.add_poster li {width: 20%;}
-.room_tab li:last-of-type {border-right: 1px solid #707070;}
-.room_tab li a {width: 100%; font-size: 20px; font-weight: 600; color: #000000; line-height: 40px; text-align: center;}
-.room_tab li.on {background-color: #7B6A58;}
-.room_tab li.on a {color: #FFFFFF;}
+.room_tab li:last-of-type {border-right: 1px solid #ADA9BB;}
+.room_tab li a {width: 100%; font-size: 22px; font-weight: 600; color: #484554; line-height: 36px; text-align: center;}
 .tab_cont2 {display: none;}
 .tab_cont2.on {display: block;}
 
+.room_tab li.on {background-color: #BE322B; border: 1px solid #BE322B;}
+.room_tab li.on a {color: #FFFFFF;}
+.room_tab li:hover {background-color: #BE322B; border: 1px solid #BE322B;}
+.room_tab li:hover a {color: #FFFFFF;}
+
+
+.room_tab.day2 li.on {background-color: #FFB84A; border: 1px solid #FFB84A;}
+.room_tab.day2 li.on a {color: #FFFFFF;}
+.room_tab.day2 li:hover {background-color: #FFB84A; border: 1px solid #FFB84A;}
+.room_tab.day2 li:hover a {color: #FFFFFF;}
 /* 220321 HUBDNC LJH2 */
 /* Online Registration */
 .apply_invitaion {display: none;}
@@ -93,10 +101,11 @@ input[type="file"].file_input + .file_label {display: inline-block; line-height:
 
 /* 220329 HUBDNC LJH2 */
 /* header > fixed_btn */
-.dday_wrap {position: absolute; left: 13px; top: -11px;}
+/* .dday_wrap {position: absolute; left: 13px; top: -11px;} */
+.dday_wrap {position: absolute; right: -5px; top: 36px;width: 32%;height: 40px;}
 /*.dday_top {padding: 0 26px; border-radius: 0 0 29px 29px; background-color: #00666B; text-align: center;}*/
-.dday_top {padding: 2px 26px; border-radius: 0 0 29px 29px; background-color: #0066CC; text-align: center; font-size: 34px;  box-shadow: 0 3px 3px rgb(0, 0, 0, 0.16);}
-.dday_top span {font-size: 35px; font-weight: 900; color: #FFF;line-height: 1;}
+.dday_top {padding: 2px 26px; border-radius: 29px; background: linear-gradient(180deg, rgba(45,105,242,1) 0%, rgba(14,43,167,1) 100%); text-align: center; font-size: 32px;}
+.dday_top span {font-size: 32px; font-weight: 900; color: #FFF;line-height: 1;}
 .dday_bot {margin-top: 7px; font-size: 14px; font-weight: 600; color: #000;}
 .dday_bot span {font-size: 15px; font-weight: 900; color: inherit;}
 
@@ -621,6 +630,7 @@ div.bg input[type=button]{background-color: #383d5b; border-color: #383d5b; colo
 
 	/* footer */
 	.footer .container > div {flex-direction: column; align-items: flex-start;}
+	.footer_l div a:nth-child(2) {margin-top:0px; margin-left: 20px;}
 	.footer_left {align-items: flex-start;}
 	.footer_center {width: 100%; padding: 0; margin: 20px 0;}
 	.footer_center .f_title br {display: none;}
