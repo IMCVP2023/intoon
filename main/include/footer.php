@@ -4,8 +4,8 @@
     <div class="fixed_btn_wrap">
         <ul class="toolbar_wrap">
              <li>
-                <a class="not_yet">
-                <!-- <a href="/main/program_glance.php"> -->
+                <!-- <a class="not_yet"> -->
+                <a href="/main/program_glance.php">
                   <!-- <img src="/main/img/icons/footer_notice.png" alt=""> -->
                     <img src="/main/img/icons/2024_tool_program.svg" alt="" class="program_icon">
                 </a>
@@ -42,12 +42,12 @@
             } else {
             ?>
            <li>
-                <a class="not_yet">
+                <a href="/main/registration_guidelines.php">
                     <img src="/main/img/icons/2024_footer_registration.svg" alt="" class="regi_icon">
                 </a>
             </li>
             <li>
-                <a class="not_yet">
+                <a href="/main/abstract_submission_guideline.php">
                     <img src="/main/img/icons/2024_footer_abstract.svg" alt="" class="abstract_icon">
                 </a>
             </li>
@@ -57,30 +57,34 @@
             <?php
             if ($_SESSION["USER"]["idx"] == "") {
             ?>
-           <li>
+           <!-- <li>
             <button type="button" onClick="alert('Need to login.')">
                 <img src="/main/img/icons/2024_tool_mypage.svg" alt="" class="mypage_icon">
             </button>
-            </li>
-                <!-- <li>
+            </li> -->
+                <li>
                     <a href="/main/login.php" onClick="alert('Need to login.')">
-                        <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
+                        <img src="/main/img/icons/2024_tool_mypage.svg" alt=""></i></button>
                     </a>
-                </li> -->
+                </li>
             <?php
             } else {
             ?>
-              <li>
+             <li>
+                    <a href="/main/mypage.php">
+                        <img src="/main/img/icons/2024_tool_mypage.svg" alt=""></i></button>
+                    </a>
+                </li>
+              <!-- <li>
             <button type="button" onClick="alert('Need to login.')">
                 <img src="/main/img/icons/2024_tool_mypage.svg" alt="" class="mypage_icon">
             </button>
             </li>
-            <!-- <li><button type="button" onClick="location.href='/main/mypage.php'"><i> -->
-                <!-- <li>
+             <li><button type="button" onClick="location.href='/main/mypage.php'"><i>
                     <a href="/main/mypage.php">
-                        <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
+                        <img src="/main/img/icons/2024_tool_mypage.svg" alt=""></i></button>
                     </a>
-                </li> -->
+                </li>  -->
                  
             <!-- </li> -->
             <?php

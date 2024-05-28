@@ -36,7 +36,7 @@ $info = sql_fetch($sql_info);
     <div class="inner">
         <div class="type_btn_box">
             <div class="oral">Poster oral</div>
-            <div>Poster exhibitions</div>
+            <div class="not_yet">Poster exhibitions</div>
         </div>
        
         <div class="section section1">
@@ -212,7 +212,7 @@ $info = sql_fetch($sql_info);
         </div>
     </div>
 </section>
-<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'">
+<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./abstract_submission.php'">
     <img src="/main/img/icons/2024_abstract_icon.svg"/>
 </button>
 

@@ -17,7 +17,7 @@ $locale = locale($language);
                 <?php
                 if ($_SESSION["USER"]["idx"] == "") {
                 ?>
-                <li><a href="/main/comingsoon.php">Log in</a></li>
+                <li><a href="/main/login.php">Log in</a></li>
                 <!-- <li><a href="/main/login.php">Log in</a></li> -->
                 <li><a href="/main/comingsoon.php">Sign up</a></li>
                 <!-- <li><a href="/main/signup.php">Sign up</a></li> -->
@@ -65,11 +65,11 @@ $locale = locale($language);
             <div class="nav_wrap pc_only">
                 <ul class="depth01 clearfix">
                     <li>
-                        <a href="/main/comingsoon.php">IMCVP 2024</a>
+                        <a href="/main/welcome.php">IMCVP 2024</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Welcome Message</a></li>
-                            <li><a href="/main/comingsoon.php">Organization</a></li>
-                            <li><a href="/main/comingsoon.php">Overview</a></li>
+                            <li><a href="/main/welcome.php">Welcome Message</a></li>
+                            <li><a href="/main/organizing_committee.php">Organization</a></li>
+                            <li><a href="/main/overview.php">Overview</a></li>
                             <!-- <li><a href="/main/comingsoon.php">Photo Gallery</a></li> -->
                             <!-- <li><a href="/main/welcome.php">Welcome Message</a></li>
                             <li><a href="/main/organizing_committee.php">Organization</a></li>
@@ -78,11 +78,11 @@ $locale = locale($language);
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">Program</a>
+                        <a href="/main/program_glance.php">Program</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Program at a Glance</a></li>
-                            <li><a href="/main/comingsoon.php">Scientific Program</a></li>
-                            <li><a href="/main/comingsoon.php">Invited Speakers</a></li>
+                            <li><a href="/main/program_glance.php">Program at a Glance</a></li>
+                            <li><a href="/main/scientific_program1.php">Scientific Program</a></li>
+                            <li><a href="/main/invited_speaker.php">Invited Speakers</a></li>
 
                             <!-- <li><a href="/main/program_glance.php">Program at a Glance</a></li>
                             <li><a href="/main/program_detail.php">Scientific Program</a></li>
@@ -90,10 +90,10 @@ $locale = locale($language);
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">Call for Abstract</a>
+                        <a href="/main/abstract_submission_guideline.php">Call for Abstract</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Abstract<br>Submission<br>Guidelines</a></li>
-                            <li><a href="/main/comingsoon.php">Go to Abstract<br>Submission</a></li>
+                            <li><a href="/main/abstract_submission_guideline.php">Abstract<br>Submission<br>Guidelines</a></li>
+                            <li><a href="/main/abstract_submission.php">Go to Abstract<br>Submission</a></li>
                             <li><a href="/main/comingsoon.php">Presentation<br>Guidelines</a></li>
                             <li><a href="/main/comingsoon.php">Awards & Grants</a></li>
 
@@ -105,11 +105,11 @@ $locale = locale($language);
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">Registration</a>
+                        <a href="/main/registration_guidelines.php">Registration</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Guidelines</a></li>
-                            <li><a href="/main/comingsoon.php">Go to Registration</a></li>
-                            <li><a href="/main/comingsoon.php">평점 안내</a></li>
+                            <li><a href="/main/registration_guidelines.php">Guidelines</a></li>
+                            <li><a href="/main/registration.php">Go to Registration</a></li>
+                            <li><a href="/main/registration_rating_guides.php">평점 안내</a></li>
 
                             <!-- <li><a href="/main/registration_guidelines.php">Registration Guidelines
                                 </a></li>
@@ -118,9 +118,9 @@ $locale = locale($language);
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">Sponsorship</a>
+                        <a href="/main/sponsor.php">Sponsorship</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Sponsorship</a></li>
+                            <li><a href="/main/sponsor.php">Sponsorship</a></li>
                             <li><a href="/main/comingsoon.php">Exhibition</a></li>
                             <li><a href="/main/comingsoon.php">Exhibition &<br>Social Event</a></li>
 
@@ -129,9 +129,9 @@ $locale = locale($language);
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">Venue</a>
+                        <a href="/main/venue.php">Venue</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Grand Walkerhill<br>Seoul</a></li>
+                            <li><a href="/main/venue.php">Grand Walkerhill<br>Seoul</a></li>
                             <li><a href="/main/comingsoon.php">Accommodation</a></li>
                             <li><a href="/main/comingsoon.php">Floor Plan</a></li>
 
@@ -272,9 +272,9 @@ $(document).ready(function() {
                 <a href="javascript:;" class="<?= (in_array($_page, $_page_config["m1"]) ? "show" : "") ?>"><span>IMCVP
                         2024</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m1"]) ? "block" : "none") ?>">
-                    <li><a href="/main/comingsoon.php">Welcome Message</a></li>
-                    <li><a href="/main/comingsoon.php">Organization</a></li>
-                    <li><a href="/main/comingsoon.php">Overview</a></li>
+                    <li><a href="/main/welcome.php">Welcome Message</a></li>
+                    <li><a href="/main/organizing_committee.php">Organization</a></li>
+                    <li><a href="/main/overview.php">Overview</a></li>
                     <!-- <li><a href="/main/comingsoon.php">Photo Gallery</a></li> -->
 
                     <!-- <li><a href="/main/welcome.php">Welcome Message</a></li>
@@ -287,9 +287,9 @@ $(document).ready(function() {
                 <a href="javascript:;"
                     class="<?= (in_array($_page, $_page_config["m2"]) ? "show" : "") ?>"><span>Program</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m2"]) ? "block" : "none") ?>">
-                    <li><a href="/main/comingsoon.php">Program at a Glance</a></li>
-                    <li><a href="/main/comingsoon.php">Scientific Program</a></li>
-                    <li><a href="/main/comingsoon.php">Invited Speakers</a></li>
+                    <li><a href="/main/program_glance.php">Program at a Glance</a></li>
+                    <li><a href="/main/scientific_program1.php">Scientific Program</a></li>
+                    <li><a href="/main/invited_speaker.php">Invited Speakers</a></li>
 
                     <!-- <li><a href="/main/program_glance.php">Program at a Glance</a></li>
                     <li><a href="/main/program_detail.php">Scientific Program</a></li>
@@ -301,8 +301,8 @@ $(document).ready(function() {
                     class="<?= (in_array($_page, $_page_config["m3"]) ? "show" : "") ?>"><span>Call for Abstract</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m3"]) ? "block" : "none") ?>">
 
-                    <li><a href="/main/comingsoon.php">Abstract Submission Guidelines</a></li>
-                    <li><a href="/main/comingsoon.php">Go to Abstract Submission</a></li>
+                    <li><a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a></li>
+                    <li><a href="/main/abstract_submission.php">Go to Abstract Submission</a></li>
                     <li><a href="/main/comingsoon.php">Presentation Guidelines</a></li>
                     <li><a href="/main/comingsoon.php">Awards & Grants</a></li>
 
@@ -315,9 +315,9 @@ $(document).ready(function() {
             <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m4"]) ? "show" : "") ?>">
                 <a href="javascript:;"><span>Registration</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m4"]) ? "block" : "none") ?>">
-                    <li><a href="/main/comingsoon.php">Guidelines</a></li>
-                    <li><a href="/main/comingsoon.php">Go to Registration</a></li>
-                    <li><a href="/main/comingsoon.php">평점 안내</a></li>
+                    <li><a href="/main/registration_guidelines.php">Guidelines</a></li>
+                    <li><a href="/main/registration.php">Go to Registration</a></li>
+                    <li><a href="/main/registration_rating_guides.php">평점 안내</a></li>
 
                     <!-- <li><a href="/main/registration_guidelines.php">Registration Guidelines</a></li>
                     <li><a href="/main/registration.php">Online Registration</a></li>
@@ -338,7 +338,7 @@ $(document).ready(function() {
             <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m6"]) ? "show" : "") ?>">
                 <a href="javascript:;"><span>Venue</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m6"]) ? "block" : "none") ?>">
-                    <li><a href="/main/comingsoon.php">Conrad Seoul</a></li>
+                    <li><a href="/main/venue.php">Conrad Seoul</a></li>
                     <li><a href="/main/comingsoon.php">Accommodation</a></li>
                     <li><a href="/main/comingsoon.php">Floor Plan</a></li>
 
