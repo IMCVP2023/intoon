@@ -21,21 +21,22 @@ $sql_info = "SELECT
 $info = sql_fetch($sql_info);
 
 ?>
-<section class="abstract_submission_guideline container">
-    <h1 class="page_title">Submission Guidelines</h1>
+<section class="abstract_submission_guideline container top_btn_move">
+        <h1 class="page_title">Call for Abstract
+			<div class="sub_btn_box">
+				<a href="/main/abstract_submission_guideline.php" class="on">Abstract Submission Guidelines</a>
+				<a href="/main/abstract_submission.php">Online submission</a>
+				<a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
+			</div>
+		</h1>
+    <!-- <h1 class="page_title">Submission Guidelines</h1> -->
     <div class="inner">
-        <ul class="tab_green long abstract_submission">
-            <li class="on"><a href="./abstract_submission_guideline.php">Submission Guidelines</a></li>
-            <li><a href="./abstract_submission.php" class="online_submission_alert">Online Submission</a></li>
-            <!-- <li><a href="./abstract_submission_oral.php">Oral Presenters</a></li> -->
-            <!-- <li><a href="./abstract_submission_exhibition.php">Poster Exhibition</a></li> -->
-            <li><a href="./abstract_submission_award.php">Awards & Grants</a></li>
-        </ul>
         <div class="section section1">
             <div>
                 <div class="text_box">
                     <ul>
-                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="violet_t underline under bold">poster oral, poster exhibitions.</span></li>
+                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="dark_blue_t bold">poster oral,&nbsp;</span><span class="light_blue_t bold">poster exhibitions.</span></li>
                         <li>All congress abstracts must be submitted online via the "Online Submission System."</li>
                         <li>Submitted abstracts will be reviewed by the Scientific Program Committee, and committee might request an oral presentation.</li>
                         <li>All presenters are required to register and pay the registration fee.</li>
@@ -60,7 +61,12 @@ $info = sql_fetch($sql_info);
                     <div class="section_title_wrap2">
                         <h3 class="title"><!--<?= $locale("keydate") ?>-->Key Dates<span>&nbsp;&nbsp;&nbsp; *KST (UTC+9)</span></h3>
                     </div>
-                    <div class="table_wrap detail_table_common x_scroll">
+                    <div class="abstract_key_date_box">
+                        <img src="/main/img/icons/key_date-1.png" alt="key_dates-1"/>
+                        <img src="/main/img/icons/key_date-2.png" alt="key_dates-2"/>
+                        <img src="/main/img/icons/key_date-3.png" alt="key_dates-3"/>
+                    </div>
+                    <!-- <div class="table_wrap detail_table_common x_scroll">
 						<table class="c_table detail_table td_nowrap_table">
 							<colgroup>
 								<col class="submission_col">
@@ -68,7 +74,6 @@ $info = sql_fetch($sql_info);
 							</colgroup>
 							<tr>
 								<th>Abstract Submission<br class="br_mb_only"> System Open</th>
-								<!-- <th class="close_th">Abstract Submission<br class="br_mb_only"> System Open</th> -->
 								<td class="f_bold">Monday, <span class="f_bold violet_t">June 3</span>, 2024</td>
 							</tr>
 							<tr>
@@ -89,7 +94,7 @@ $info = sql_fetch($sql_info);
 							</tr>
 						</table>
 					
-                </div>
+                </div> -->
             </div>
             <!--keydate end-->
             <div>
@@ -97,9 +102,9 @@ $info = sql_fetch($sql_info);
                         <h3 class="title">Abstract Submission Type</h3>
                     </div>
                     <div class="text_box">
-                    <ul>
-                        <li>• <a href="./abstract_submission_oral.php" class="link under">Poster oral</a></li>
-                        <li>• <a href="./comingsoon.php" class="link under">Poster exhibitions</a></li>
+                    <ul class="abstract_type">
+                        <li><a href="./abstract_submission_oral.php">Poster oral</a></li>
+                        <li><a href="./comingsoon.php">Poster exhibitions</a></li>
                     </ul>
                 </div>
             </div>
@@ -117,28 +122,24 @@ $info = sql_fetch($sql_info);
 				<div class="steps_area five_steps">
 					<ul class="clearfix">
 						<li>
-							<p>Step 1</p>
-							<p class="sm_txt">All presenters must complete their registration before the registration deadline.</p>
+							<p></p>
+							<p class="">All presenters must complete their registration before the registration deadline.</p>
 						</li>
 						<li>
-							<p>Step 2</p>
-							<p class="sm_txt">Upon submitting your abstract, a confirmation letter will be emailed to you.</p>
+							<p></p>
+							<p class="">Upon submitting your abstract, a confirmation letter will be emailed to you.</p>
 						</li>
 						<li>
-							<p>Step 3</p>
-							<p class="sm_txt">To review or make changes to your submitted abstracts, please visit ‘My IMCVP’.</p>
+							<p></p>
+							<p class="">To review or make changes to your submitted abstracts, please visit ‘My IMCVP’.</p>
 						</li>
 						<li>
-							<p>Step 4</p>
-							<p class="sm_txt">You will receive an acceptance notification via email.</p>
+							<p></p>
+							<p class="">You will receive an acceptance notification via email.</p>
 						</li>
-						<!-- <li>
-							<p>Step 5</p>
-							<p class="sm_txt">Complete and confirm submission.</p>
-						</li> -->
 					</ul>
+                    <p class="red_t bold text_center font20">* Note: Accepted abstracts qualify for free registration for <span class="bold dark_blue_t font20">the presenting author only per abstract.</span></p>
 				</div>
-                <p class="red_t bold mt10">* Note: Accepted abstracts qualify for free registration for <span class="bold violet_t">the presenting author only per abstract.</span></p>
             </div>
             <!--Steps for Abstract Submission end-->
           
@@ -148,7 +149,7 @@ $info = sql_fetch($sql_info);
                     <h3 class="title">General guidelines</h3>
                 </div>
                 <div class="table_wrap detail_table_common x_scroll">
-                    <table class="c_table detail_table">
+                    <table class="c_table detail_table type2">
                         <colgroup>
                             <col class="submission_col type2">
                             <col>
@@ -156,8 +157,8 @@ $info = sql_fetch($sql_info);
                         <tr>
                             <th>Presentation Type </th>
                             <td>
-                                <p class="red_t">Poster oral</p>
-                                <p class="red_t">Poster exhibitions only <br />
+                                <p class="dark_blue_t bold">Poster oral</p>
+                                <p class="light_blue_t bold">Poster exhibitions only <br />
                                 <span>(* Scientific committee may change your presentation type after reviewing it.)</span>
                                 </p>
                             </td>
@@ -303,5 +304,7 @@ $info = sql_fetch($sql_info);
     </div>
     <!-- <button type="button" class="fixed_btn" onclick="window.location.href='./abstract_submission.php';"><?= $locale("abstract_submission_btn") ?></button> -->
 </section>
-<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'"><span>Abstract<br/>Submission</span></button>
+<button type="button" class="btn_fixed_triangle fixed_btn_pc pc_only" onClick="location.href='./registration.php'">
+    <img src="/main/img/icons/2024_abstract_icon.svg"/>
+</button>
 <?php include_once('./include/footer.php'); ?>

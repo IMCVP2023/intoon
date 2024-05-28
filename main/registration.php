@@ -117,8 +117,14 @@ if ($during_yn !== "Y") {
 </style>
 
 <!-- <section class="container online_register submit_application"> -->
-<section class="container online_register abstract_online_submission">
-	<h1 class="page_title">Online Registration</h1>
+<section class="container online_register abstract_online_submission top_btn_move">
+		<h1 class="page_title">Registration
+			<div class="sub_btn_box">
+				<a href="/main/registration_guidelines.php">Guidelines</a>
+				<a href="/main/registration.php" class="on">Go to Registration</a>
+				<a href="/main/registration_rating_guides.php" class="kor">평점안내</a>
+			</div>
+		</h1>
     <div class="inner">
         <!-- <div class="sub_banner"> -->
         <!--     <h1>Online Registration</h1> -->
@@ -129,7 +135,7 @@ if ($during_yn !== "Y") {
 				<p class="mt10"><span class="red_txt">*</span> In the "My Page - Account" section, users have the ability to edit their personal information.</p>
 			</h3>
 			<div class="table_wrap detail_table_common x_scroll">
-				<table class="c_table detail_table">
+				<table class="c_table detail_table type2">
 					<colgroup>
 						<col class="submission_col">
 						<col>
@@ -337,7 +343,7 @@ if ($during_yn !== "Y") {
                         <p class="label type2"><?=$locale("register_online_question5_2023")?> <span class="red_txt">*</span></p>
 						<p class="mb10">Please confirm your attendance for all of the following events. </p>
                         <div class="table_wrap detail_table_common x_scroll">
-							<table class="c_table detail_table" id=" othersList_table" name=" othersList_table">
+							<table class="c_table detail_table type2" id=" othersList_table" name=" othersList_table">
 								<colgroup>
 									<col class="submission_col">
 									<col>
@@ -474,7 +480,7 @@ if ($during_yn !== "Y") {
 						<li>
 							<p class="label type2"><?=$locale("register_online_question7_2023")?></p>
 							<div class="table_wrap detail_table_common x_scroll">
-								<table class="c_table detail_table">
+								<table class="c_table detail_table type2">
 									<colgroup>
 										<col class="col_th_s">
 										<col>

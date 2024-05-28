@@ -55,7 +55,7 @@ $add_section_class = (!empty($session_user) && $session_app_type == 'Y') ? 'app_
         <div class="inner">
             <h3 class="title">Organizing Committee</h3>
             <div class="table_wrap">
-                <table class="c_table2 center_table fixed_table">
+                <table class="c_table2 center_table fixed_table type1">
                     <colgroup>
                         <col width="380px">
                         <col width="200px">

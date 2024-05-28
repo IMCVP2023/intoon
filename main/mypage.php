@@ -152,44 +152,15 @@
 </style>
 
 <section class="container form_section mypage">
-<!-- <h1 class="page_title">Mypage</h1> -->
-<div class="sub_background_box">
-		<div class="sub_inner">
-			<div>
-				<h2>My IMCVP</h2>
-				<ul>
-					<li>Home</li>
-					<li>Mypage</li>
-					<li>Account</li>
-				</ul>
+<h1 class="page_title">My IMCVP
+			<div class="sub_btn_box">
+				<a href="/main/mypage.php" class="on">Account</a>
+				<a href="/main/mypage_registration.php">Registration</a>
+				<a href="/main/mypage_abstract.php">Abstract</a>
 			</div>
-		</div>
-	</div>
-	<!-- <div class="sub_menu_box_2">
-		<div class="sub_menu">
-			<div class="on"><a href="./mypage.php">Account</a></div>
-			<div><a href="./mypage_registration.php">Registration</a></div>
-			<div><a href="./mypage_abstract.php">Abstract</a></div>
-		</div>
-	</div> -->
+		</h1>
 	<div class="inner">
-			<!-- <div class="page_menu_box">
-				<div class="on"><a href="./mypage.php">Account</a></div>
-				<div><a href="./mypage_registration.php">Registration</a></div>
-				<div><a href="./mypage_abstract.php">Abstract</a></div>
-				<div class="menu_line"></div>
-			</div> -->
-		<!-- <ul class="tab_green">
-			<li class="on"><a href="./mypage.php">Account</a></li>
-			<li><a href="./mypage_registration.php">Registration</a></li>
-			<li><a href="./mypage_abstract.php">Abstract</a></li>
-		</ul> -->
-		<div class="sub_menu_box">
-			<div class="on"><a href="./mypage.php">Account</a></div>
-			<div><a href="./mypage_registration.php">Registration</a></div>
-			<div><a href="./mypage_abstract.php">Abstract</a></div>
-		</div>
-		
+	
 		<div>
 			<!-- 230824 다운로드 버튼 추가 -->
             <?php
@@ -208,7 +179,7 @@
             ?>
 			<form class="table_wrap" name="modify_form">
 			<div class="pc_only">
-				<table class="table detail_table">
+				<table class="table detail_table type2">
 					<colgroup>
 						<col class="col_th">
 						<col width="*">

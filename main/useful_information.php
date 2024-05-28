@@ -2,7 +2,13 @@
 <?php include_once('./include/header.php');?>
 
 <section class="useful_information container">
-	<h1 class="page_title">Useful Information</h1>
+<h1 class="page_title">News & Information
+			<div class="sub_btn_box">
+				<a href="/main/board_notice.php">News</a>
+				<a href="/main/visa.php">VISA</a>
+				<a href="/main/useful_information.php" class="on">Useful Information</a>
+			</div>
+		</h1>
 	<div class="inner">
 		<div>
 			<ul class="useful_list">

@@ -212,28 +212,37 @@ $(document).ready(function(){
 		$(window).on('scroll', function(){
 			var scroll_top = $(window).scrollTop();
 			if(scroll_top > 50){
-				$(".btn_top").fadeIn(300);
+				//$(".btn_top").fadeIn(300);
+				$(".btn_top").css("opacity",1);
 			}else{
-				$(".btn_top").fadeOut(300);
+				//$(".btn_top").fadeOut(300);
+				$(".btn_top").css("opacity",0);
 			}
 
 			var footer_top = $(".footer_wrap").offset().top;
 			var fixed_bottom = $(".fixed_btn_clone").offset().top + $(".fixed_btn_clone").outerHeight();
 			if(!$("section").hasClass("index_test")){
-				// console.log(footer_top - fixed_bottom)
-				if(32 >= footer_top - fixed_bottom){
+				//console.log(footer_top - fixed_bottom)
+				if(170 >= footer_top - fixed_bottom ){
 					$(".fixed_btn_wrap").addClass("on");
 					// $(".btn_top").css("bottom", footer_height+32+"px");
 					if($("section").hasClass("top_btn_move")){ // 우측하단에 register btn이 있는 경우
-						$(".fixed_top").css("bottom", "145px");
+						$(".fixed_btn_wrap").css("bottom", "570px");
+						$(".btn_top").css("bottom", "420px");
+						$(".btn_fixed_triangle").css("position", "absolute");
+						$(".btn_fixed_triangle").css("bottom", "485px");
 					}else{
 						$(".fixed_top").css("bottom", footer_height+30+"px");
 					}
-				}else{
+				}
+				else{
 					$(".fixed_btn_wrap").removeClass("on");
 					//$(".btn_top").css("bottom", "32px");
 					if($("section").hasClass("top_btn_move")){ // 우측하단에 register btn이 있는 경우
-						$(".fixed_top").css("bottom", "145px");
+						$(".fixed_btn_wrap").css("bottom", "170px");
+						$(".btn_top").css("bottom", "185px");
+						$(".btn_fixed_triangle").css("position", "fixed");
+						$(".btn_fixed_triangle").css("bottom", "85px");
 					}else{
 						$(".btn_top").css("bottom", "32px");
 					}

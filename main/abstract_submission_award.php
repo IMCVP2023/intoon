@@ -2,14 +2,16 @@
 	include_once('./include/head.php');
 	include_once('./include/header.php');
 ?>
-<section class="abstract_submission_award container">
-    <h1 class="page_title">Awards & Grants</h1>
+<section class="abstract_submission_award container top_btn_move">
+        <h1 class="page_title">Call for Abstract
+			<div class="sub_btn_box">
+				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
+				<a href="/main/abstract_submission.php">Online submission</a>
+				<a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php" class="on">Awards & Grants</a>
+			</div>
+		</h1>
     <div class="inner">
-        <ul class="tab_green long abstract_submission">
-            <li><a href="./abstract_submission_guideline.php">Submission Guidelines</a></li>
-            <li><a href="./abstract_submission.php">Online Submission</a></li>
-            <li class="on"><a href="./abstract_submission_award.php">Awards & Grants</a></li>
-        </ul>
 		<div class="section section1">
 			<div>
 				<div class="text_box">
@@ -31,7 +33,7 @@ The secretariat will contact awardees individually.</li>
 				</div>
 				<!-- <h4 class="title">Overseas</h4> -->
 				<div class="table_wrap detail_table_common x_scroll mb20">
-					<table class="c_table detail_table">
+					<table class="c_table2 center_table fixed_table type1">
 						<colgroup>
 							<col class="submission_col">
 							<col>
@@ -45,17 +47,17 @@ The secretariat will contact awardees individually.</li>
 						</thead>
 						<tbody>
 							<tr>
-								<td class="text_center">1 oral winner</td>
+								<td class="text_center"><img src="/main/img/icons/2024_awards1.svg"/>&nbsp;1 oral winner</td>
 								<td class="text_center">USD 400.00</td>
 								<td class="text_center">KRW 400,000</td>
 							</tr>
                             <tr>
-								<td class="text_center">2 oral winner</td>
+								<td class="text_center"><img src="/main/img/icons/2024_awards2.svg"/>&nbsp;2 oral winner</td>
 								<td class="text_center">USD 300.00</td>
 								<td class="text_center">KRW 300,000</td>
 							</tr>
                             <tr>
-								<td class="text_center">2 poster winner</td>
+								<td class="text_center"><img src="/main/img/icons/2024_awards3.svg"/>&nbsp;2 poster winner</td>
 								<td class="text_center">USD 200,00</td>
 								<td class="text_center">KRW 200,000</td>
 							</tr>
@@ -79,7 +81,7 @@ The secretariat will contact awardees individually.</li>
 				</div>
 				<!-- <h4 class="title">Overseas</h4> -->
 				<div class="table_wrap detail_table_common x_scroll mb20">
-					<table class="c_table detail_table">
+					<table class="c_table2 center_table fixed_table type1">
 						<thead>
 							<tr>
 								<th class="text_center">Target</th>
@@ -149,26 +151,26 @@ The secretariat will contact awardees individually.</li>
 				<div class="section_title_wrap2">
 					<h4 class="title">Steps to Apply for Travel Grants</h4>
 				</div>
-				<div class="steps_area five_steps">
+				<div class="steps_area five_steps travel">
 					<ul class="clearfix">
 						<li>
-							<p>Step 1</p>
-							<p class="sm_txt">Join the abstract <br>submission</p>
+							<p></p>
+							<p class="">Join the abstract <br>submission</p>
 						</li>
 						<li>
-							<p>Step 2</p>
-							<p class="sm_txt">Receive notification<br>of abstract selection.</p>
+							<p></p>
+							<p class="">Receive notification<br>of abstract selection.</p>
 						</li>
 						<li>
-							<p>Step 3</p>
-							<p class="sm_txt">Participate in IMCVP 2024 <br>On-site (Payment for travel <br>grants will be processed on-site.)</p>
+							<p></p>
+							<p class="">Participate in IMCVP 2024 <br>On-site (Payment for travel <br>grants will be processed on-site.)</p>
 						</li>
 						<li>
-							<p>Step 4</p>
-							<p class="sm_txt">Complete the travel<br>grant application form<br>and submit on-site.</p>
+							<p></p>
+							<p class="">Complete the travel<br>grant application form<br>and submit on-site.</p>
 						</li>
 					</ul>
-                    <p class="red_t">** This award will be automatically canceled when the awardee do not attend on-site.</p>
+                    <p class="red_t bold text_center font20">** This award will be automatically canceled when the awardee do not attend on-site.</p>
 				</div>
 			</div>
 			<!--step end-->
@@ -281,7 +283,7 @@ The secretariat will contact awardees individually.</li>
             <div>
                 <p class="alert red_t">* The amount includes accommodation costs.</p>
                 <div class="x_scroll">
-                    <table class="c_table2">
+                    <table class="c_table2 center_table fixed_table">
                         <thead>
                             <tr>
                                 <th colspan="3" class="green_bg02 pop_font_24">Travel grant benefits</th>
@@ -569,7 +571,9 @@ The secretariat will contact awardees individually.</li>
         </div>
     </div>
 </div>
-<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'"><span>Abstract<br/>Submission</span></button>
+<button type="button" class="btn_fixed_triangle fixed_btn_pc pc_only" onClick="location.href='./registration.php'">
+    <img src="/main/img/icons/2024_abstract_icon.svg"/>
+</button>
 <script>
 $(document).ready(function() {
     $(".overse_open").click(function() {

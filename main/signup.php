@@ -306,18 +306,7 @@
 
 <section class="container form_page sign_up">
 	<!-- <h1 class="page_title">Sign Up</h1> -->
-	<div class="sub_background_box">
-		<div class="sub_inner">
-			<div>
-				<h2>Sign Up</h2>
-				<ul>
-					<li>Home</li>
-					<li>Sign Up</li>
-					<li>Sign Up</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<h1 class="page_title non_box">Sign Up</h1>
 	<div class="inner">
 		<div class="">
 		<div class="">
@@ -352,7 +341,7 @@
 		<h3 class="title">Personal Information <span class="mini_alert"><span class="red_txt">*</span> All requested field (<span class="red_txt">*</span>) should be completed.</span></h3>
 		<form class="table_wrap">
 			<div class="pc_only">
-				<table class="table detail_table">
+				<table class="table detail_table type2">
 					<colgroup>
 						<col class="col_th"/>
 						<col width="*"/>

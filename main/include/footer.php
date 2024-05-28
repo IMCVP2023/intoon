@@ -70,6 +70,11 @@
             <?php
             } else {
             ?>
+              <li>
+            <button type="button" onClick="alert('Need to login.')">
+                <img src="/main/img/icons/2024_tool_mypage.svg" alt="" class="mypage_icon">
+            </button>
+            </li>
             <!-- <li><button type="button" onClick="location.href='/main/mypage.php'"><i> -->
                 <!-- <li>
                     <a href="/main/mypage.php">
@@ -82,7 +87,8 @@
             }
             ?>
 
-        </ul>
+</ul>
+<button type="button" class="btn_top"><img src="/main/img/icons/2024_icon_top_btn.svg" alt=""></button>
         <!-- <button type="button" class="btn_right">G<br>O<br><br>T<br>O</button>
         <div class="footer_go_to_box">
             <div><a href="/main/program_glance_icola.php">Program</a></div>
@@ -90,7 +96,6 @@
             <div><a href="/main/abstract_submission.php">Call for Abstract</a></div>
             <div><a href="/main/mypage.php">My IMCVP</a></div>
         </div> -->
-        <button type="button" class="btn_top"><img src="/main/img/icons/icon_top_btn.svg" alt=""></button>
         <!-- <button type="button" class="btn_plus"><img src="/main/img/icons/icon_plus_white.svg" alt=""></button> -->
     </div>
     <!-- 220323 HUBDNC LJH 추가 : 끝 -->

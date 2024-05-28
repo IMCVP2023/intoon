@@ -31,16 +31,49 @@ $price = get_data($sql_price);
 ?>
 
 <section class="container registration top_btn_move">
-    <div>
-		<h1 class="page_title">Registration Guidelines</h1>
+    <h1 class="page_title">Registration
+			<div class="sub_btn_box">
+				<a href="/main/registration_guidelines.php" class="on">Guidelines</a>
+				<a href="/main/registration.php">Go to Registration</a>
+				<a href="/main/registration_rating_guides.php" class="kor">평점안내</a>
+			</div>
+		</h1>
         <div class="inner">
-            
+            <div>
+                <div class="section_title_wrap2">
+                    <h3 class="title">Registration process</h3>
+                </div>
+                <div class="steps_area five_steps registration">
+                        <ul class="clearfix">
+                            <li>
+                                <p></p>
+                                <p class="">Click the “go to online registration” button</p>
+                            </li>
+                            <li>
+                                <p></p>
+                                <p class="">Sign up or log into the registration system</p>
+                            </li>
+                            <li>
+                                <p></p>
+                                <p class="">Fill out personal information and choose a registration category</p>
+                            </li>
+                            <li>
+                                <p></p>
+                                <p class="">Choose a payment method and make a payment</p>
+                            </li>
+                            <li>
+                                <p></p>
+                                <p class="">Check your e-mail for a payment confirmation(Successfully completed)</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
            <!--1. important dates start-->
             <h3 class="title">Key Dates</h3>
             <p class="registration_txt">All participants are required to register through the IMCVP 2024 online registration system and are advised to register in advance (by November 3, 2024). 
                 <br/>Please read the following registration guidelines carefully.</p>
             <div class="table_wrap detail_table_common details icomes_air">
-                <table class="c_table detail_table">
+                <table class="c_table detail_table type2">
                     <colgroup>
                         <col class="submission_col">
                         <col>
@@ -102,7 +135,7 @@ $price = get_data($sql_price);
                 <h3 class="title">Registration Fees for International </h3>
                     <div class="details icomes_air">
 					<div class="table_wrap x_scroll">
-						<table class="c_table2 detail_table center">
+						<table class="c_table2 detail_table center type1">
                             <colgroup>
                             <col>
                             <col width="13.5%">
@@ -172,7 +205,7 @@ $price = get_data($sql_price);
                 <h3 class="title">Registration Fees for Korean</h3>
                 <div class="details icomes_air">
 					<div class="table_wrap x_scroll">
-						<table class="c_table2 detail_table center">
+						<table class="c_table2 detail_table center type1">
 							<thead>
 								<tr>
 									<th rowspan="2">Classification</th>
@@ -258,7 +291,7 @@ $price = get_data($sql_price);
 						</ul>
 					</div>
 					<div class="table_wrap detail_table_common x_scroll">
-						<table class="c_table detail_table">
+						<table class="c_table detail_table type2">
 							<colgroup>
 								<col>
 								<col>
@@ -324,7 +357,7 @@ $price = get_data($sql_price);
                     </ul>
                 </div>
                 <div class="table_wrap detail_table_common x_scroll">
-					<table class="c_table detail_table">
+					<table class="c_table detail_table type2">
 						<colgroup>
 							<col class="submission_col type2">
 							<col>
@@ -597,7 +630,9 @@ $price = get_data($sql_price);
     <!-- 평점안내 팝업 / 끝 -->
 
 </section>
-<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'"><span><?=$locale("registration")?></span></button>
+<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'">
+    <img src="/main/img/icons/2024_regi_icon.svg"/>
+</button>
 <script>
     $('.show_pop').on('click', function() {
         //$('.pop_info').show();

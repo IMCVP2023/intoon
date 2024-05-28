@@ -15,13 +15,13 @@
 ?>
 
 <!-- app일 시 app_version 클래스 추가 -->
-<section class="container registration registration_rating_guides <?= $add_section_class; ?>">
+<section class="container registration registration_rating_guides top_btn_move <?= $add_section_class; ?>">
 	<!-- HUBDNCLHJ : app 메뉴 탭 -->
 <?php
 	if(!empty($session_user) && $session_app_type == 'Y') {
 ?>
 	<div class="app_title_box">
-		<h2 class="app_title">평점 안내<button type="button" class="app_title_prev" onclick="javascript:window.location.href='./app_index.php';"><img src="/main/img/icons/icon_arrow_prev_wh.svg" alt="이전페이지로 이동"></button></h2>
+		<h2 class="app_title kor">평점 안내<button type="button" class="app_title_prev" onclick="javascript:window.location.href='./app_index.php';"><img src="/main/img/icons/icon_arrow_prev_wh.svg" alt="이전페이지로 이동"></button></h2>
 	</div>
 <?php
 	} 
@@ -32,7 +32,13 @@
 	if (!empty($session_app_type) && $session_app_type == 'N') {
 		// Web일때
 ?>
-	<h1 class="page_title">평점 안내</h1>
+    <h1 class="page_title">Registration
+			<div class="sub_btn_box">
+				<a href="/main/registration_guidelines.php">Guidelines</a>
+				<a href="/main/registration.php">Go to Registration</a>
+				<a href="/main/registration_rating_guides.php" class="on kor">평점안내</a>
+			</div>
+		</h1>
 <?php
 	}
 ?>
@@ -41,7 +47,7 @@
 	<!-- </div> -->
 	<div class="inner">
 		<!-- 1. 연수 평점 안내 start -->
-		<h3 class="title">CME Credits (Korean Only)<span class="red_t bold">&nbsp;&nbsp;** 11월 29일(금)부터 30일(토) 내에 이수한 강의만 평점 인정됩니다.</span></h3>
+		<h3 class="title">CME Credits (Korean Only)<span class="red_t bold kor">&nbsp;&nbsp;** 11월 29일(금)부터 30일(토) 내에 이수한 강의만 평점 인정됩니다.</span></h3>
 		<div class="details">
 			<!-- <ul class="indent_ul">
 				<li>• 'ICOMES 2023' 참가에 따른 평점을 아래와 같이 안내해 드립니다.</li>
@@ -53,36 +59,36 @@
 	    <!-- 1. 연수 평점 안내 end -->
 
 		<!-- 2. 제공 평점 start -->
-		<h3 class="title">제공 평점 <!--<span class="red_txt font_inherit">(예정)</span>--></h3>
+		<h3 class="title kor">제공 평점 <!--<span class="red_txt font_inherit">(예정)</span>--></h3>
 		<div class="details">
 			<div class="table_wrap x_scroll">
-				<table class="c_table2 detail_table center">
+				<table class="c_table2 detail_table center type1 kor">
 					<thead>
 						<tr>
-							<th>구분</th>
-							<th>11/29(금)</th>
-							<th>11/30(토)</th>
-							<th>합계</th>
+							<th class="kor">구분</th>
+							<th class="kor">11/29(금)</th>
+							<th class="kor">11/30(토)</th>
+							<th class="kor">합계</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>대한의사협회</td>
-							<td>최대 6평점</td>
-							<td>최대 6평점</td>
-							<td>최대 12평점</td>
+							<td class="kor">대한의사협회</td>
+							<td class="kor">최대 6평점</td>
+							<td class="kor">최대 6평점</td>
+							<td class="kor">최대 12평점</td>
 						</tr>
 						<tr>
-							<td>내과전공의 외부학술회의(학술대회)</td>
-							<td>최대 2평점</td>
-							<td>최대 2평점</td>
-							<td>최대 4평점</td>
+							<td class="kor">내과전공의 외부학술회의(학술대회)</td>
+							<td class="kor">최대 2평점</td>
+							<td class="kor">최대 2평점</td>
+							<td class="kor">최대 4평점</td>
 						</tr>
 						<tr>
-							<td>기타</td>
-							<td>해당 없음</td>
-							<td>해당 없음</td>
-							<td>해당 없음</td>
+							<td class="kor">기타</td>
+							<td class="kor">해당 없음</td>
+							<td class="kor">해당 없음</td>
+							<td class="kor">해당 없음</td>
 						</tr>
 						<!-- <tr>
 							<td>한국영양교육평가원 임상영양사 <br/>전문연수교육(CPD)</td>
@@ -166,20 +172,20 @@
 			</div>
 		</div> -->
 		<!-- 3. 이수 시간에 따른 부분 평점 및 주의사항 안내 end -->
-		 <h3 class="title">평점인정기준<span class="red_t bold">&nbsp;&nbsp;** 수강 시간의 총합으로 평점 발급</span></h3>
+		 <h3 class="title kor">평점인정기준<span class="red_t bold kor">&nbsp;&nbsp;** 수강 시간의 총합으로 평점 발급</span></h3>
 		<div class="details">
 			<div class="table_wrap x_scroll flex_table">
-				<table class="c_table2 detail_table center">
+				<table class="c_table2 detail_table center type1 ">
 					<thead>
 						<tr>
-							<th>구분</th>
-							<th>기준</th>
+							<th class="kor">구분</th>
+							<th class="kor">기준</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>의사협회</td>
-							<td>
+							<td class="kor">의사협회</td>
+							<td class="kor line6">
 							1시간 이상 2시간 미만: 1평점<br/>
 							2시간 이상 3시간 미만: 2평점<br/>
 							3시간 이상 4시간 미만: 3평점<br/>
@@ -190,24 +196,24 @@
 						</tr>
 					</tbody>
 				</table>
-				<table class="c_table2 detail_table center">
+				<table class="c_table2 detail_table center type1">
 					<thead>
 						<tr>
-							<th colspan="2">구분</th>
+							<th colspan="2" class="kor">구분</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>내과전공의 외부학술회의</td>
-							<td>
+							<td class="kor">내과전공의 외부학술회의</td>
+							<td class="kor line6">
 							본인 참석(대리 출석 불가),<br/>
 							일별 2회 이상 출결체크(입장, 퇴장) <br/>
 							완료한 내과 전공의만 해당
 							</td>
 						</tr>
 						<tr>
-							<td>기타</td>
-							<td>해당 없음</td>
+							<td class="kor">기타</td>
+							<td class="kor">해당 없음</td>
 						</tr>
 					</tbody>
 				</table>
@@ -224,17 +230,19 @@
 				</ul>
 			</div> -->
 		</div>
-		<h3 class="title">출결방법(오프라인 참석)<span class="red_t bold">&nbsp;&nbsp;** 현장 1일 최소 2회의 QR코드 미 태그 시, 평점 인정이 불가합니다.</span></h3>
+		<h3 class="title kor">출결방법(오프라인 참석)<span class="red_t bold kor">&nbsp;&nbsp;** 현장 1일 최소 2회의 QR코드 미 태그 시, 평점 인정이 불가합니다.</span></h3>
 		<div class="text_box">
 			<ul>
-				<li>• 현장 1일 최소 2회의 QR 태그 필수</li>
-				<li>• 출결 시간은 최초 입장 시간과 최종 퇴장시간으로 산출합니다.</li>
-				<li>• 출결 시간 산출은 의협 평점 이수 시간 기준으로 운영됩니다.</li>
+				<li class="kor">• 현장 1일 최소 2회의 QR 태그 필수</li>
+				<li class="kor">• 출결 시간은 최초 입장 시간과 최종 퇴장시간으로 산출합니다.</li>
+				<li class="kor">• 출결 시간 산출은 의협 평점 이수 시간 기준으로 운영됩니다.</li>
 			</ul>
         </div>
    </div>
 </section>
-<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'"><span><?=$locale("registration")?></span></button>
+<button type="button" class="btn_fixed_triangle fixed_btn_pc pc_only" onClick="location.href='./registration.php'">
+    <img src="/main/img/icons/2024_regi_icon.svg"/>
+</button>
 
 <?php 
     if (!empty($session_app_type) && $session_app_type == 'Y') {

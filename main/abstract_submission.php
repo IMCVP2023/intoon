@@ -61,11 +61,11 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
     //[240502] sujeong / 기획팀 요청 추가 / 등록 유무 확인
     // 사전 등록이 된 유저인지 확인
     // 사전 등록 안 해도 제출 가능 하게 바뀌었음으로 주석처리
-    $registration_idx = check_registration($_SESSION["USER"]["idx"]);
-    if(!$registration_idx) {
-    	echo "<script>alert(locale(language.value)('check_registration')); location.href=PATH+'registration_guidelines.php'</script>";
-    	exit;
-    }
+    // $registration_idx = check_registration($_SESSION["USER"]["idx"]);
+    // if(!$registration_idx) {
+    // 	echo "<script>alert(locale(language.value)('check_registration')); location.href=PATH+'registration_guidelines.php'</script>";
+    // 	exit;
+    // }
 
     // country
     $nation_query = "SELECT
@@ -134,7 +134,14 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
 <!----------------------- 퍼블리싱 구분선 ----------------------->
 
 <section class="submit_application abstract_online_submission container">
-    <h1 class="page_title">Online Submission</h1>        
+<h1 class="page_title">Call for Abstract
+			<div class="sub_btn_box">
+				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
+				<a href="/main/abstract_submission.php" class="on">Online submission</a>
+				<a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
+			</div>
+		</h1>    
     <div class="inner">
         <!-- <ul class="tab_pager location tab_pager_small">
             <li><a href="./submission_guideline.php">
@@ -149,7 +156,8 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
 
             <!-- 제목 시작 -->
             <div class="steps_area">
-                <ul class="clearfix">
+                <img src="/main/img/2024_abstract_step1.png"/>
+                <!-- <ul class="clearfix">
                     <li class="on">
                         <p>STEP 01</p>
                         <p class="sm_txt"><?= $locale("abstract_submit_tit1") ?></p>
@@ -162,7 +170,7 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
                         <p>STEP 03</p>
                         <p class="sm_txt"><?= $locale("submit_completed_tit") ?></p>
                     </li>
-                </ul>
+                </ul> -->
             </div>
             <!-- //제목 끝 -->
 

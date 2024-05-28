@@ -59,7 +59,7 @@ $floor = get_data($sql_floor);
 	</h1>
     <div class="table_wrap x_scroll inner">
 		<h3 class="title">Overview</h3>
-         <table class="c_table2 detail_table">
+         <table class="c_table2 detail_table type2">
              <colgroup>
                  <col width="280px">
                  <col width="*">

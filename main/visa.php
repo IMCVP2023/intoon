@@ -16,18 +16,24 @@
 ?>
 
 <section class="container visa">
-    <h1 class="page_title">VISA</h1>
+<h1 class="page_title">News & Information
+			<div class="sub_btn_box">
+				<a href="/main/board_notice.php">News</a>
+				<a href="/main/visa.php" class="on">VISA</a>
+				<a href="/main/useful_information.php">Useful Information</a>
+			</div>
+		</h1>
     <div class="inner">
     <div>
 			<!--1-->
 			<h3 class="title mt10">Ministry of Foreign Affairs</h3>
 			<div class="details mb20">
-				<button class="visa_btn"><a href="https://www.mofa.go.kr/eng/index.do" class="s_bold underline">Link</a></button>
+				<button class="long_btn p4"><a href="https://www.mofa.go.kr/eng/index.do" class="s_bold">Link</a></button>
 			</div>
 			<!--2-->
 			<h3 class="title mt10">Immigration Bureau</h3>
 			<div class="details mb20">
-				<button class="visa_btn"><a href="https://www.immigration.go.kr/immigration_eng/index.do" class="s_bold break_all underline">Link</a></button>
+				<button class="long_btn p4"><a href="https://www.immigration.go.kr/immigration_eng/index.do" class="s_bold">Link</a></button>
 				<p>
 					All visitors to Korea must have a valid passport and visa before coming. Visitors from countries that have a special agreement with Korea are exempt from the visa requirement and allowed to stay in Korea without a visa for 30 days or up to 90 days, depending on agreements. For more information, please contact the local Korean consulate or embassy, or visit the official website of the Korean Ministry of Foreign Affairs and Trade.
 				</p>
@@ -35,7 +41,7 @@
 			<!--3-->
 			<h3 class="title mt10">Countries under visa exemption agreements</h3>
 			<div class="table_wrap detail_table_common x_scroll mb20">
-				<table class="c_table detail_table">
+				<table class="c_table detail_table type1">
 					<thead>
 						<tr>
 							<th>Total</th>
@@ -87,7 +93,7 @@
 
             <h3 class="title mt10">Nationals of countries or regions allowed for visa-free entry (30/90) days unless noticed other</h3>
 			<div class="table_wrap detail_table_common x_scroll">
-				<table class="c_table detail_table">
+				<table class="c_table detail_table type1">
 					<thead>
 						<tr>
 							<th>Continents</th>

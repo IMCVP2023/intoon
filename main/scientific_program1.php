@@ -110,7 +110,7 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="yellow_bg">
+									<tr class="yellow_bg non_border_b">
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
 										<td class="yellow_bg">Symposium 1 <br/></td>
 									</tr>
@@ -118,7 +118,7 @@
 							</table>
 							<table class="table color_table mobile" name="symposium_1_mb">
 								<tbody>
-									<tr class="dark_yellow_bg">
+									<tr class="dark_yellow_bg non_border_b">
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
