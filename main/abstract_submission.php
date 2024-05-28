@@ -61,11 +61,11 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
     //[240502] sujeong / 기획팀 요청 추가 / 등록 유무 확인
     // 사전 등록이 된 유저인지 확인
     // 사전 등록 안 해도 제출 가능 하게 바뀌었음으로 주석처리
-    $registration_idx = check_registration($_SESSION["USER"]["idx"]);
-    if(!$registration_idx) {
-    	echo "<script>alert(locale(language.value)('check_registration')); location.href=PATH+'registration_guidelines.php'</script>";
-    	exit;
-    }
+    // $registration_idx = check_registration($_SESSION["USER"]["idx"]);
+    // if(!$registration_idx) {
+    // 	echo "<script>alert(locale(language.value)('check_registration')); location.href=PATH+'registration_guidelines.php'</script>";
+    // 	exit;
+    // }
 
     // country
     $nation_query = "SELECT
