@@ -55,6 +55,7 @@ header.blue_header {background-color: #484554; position: fixed;}
 .g_h_top {padding: 10px 0; background-color: #fff; height: 100px;}
 .g_h_top .container {position: relative; }
 .g_h_logo {text-align:center;transform: translate(-410px, 10px);}
+.g_h_logo img {width: 330px;}
 /* .g_h_logo {position: absolute; left: 13px; top: -11px;} */
 .g_h_tool {display: flex; padding-top: 6px; position: absolute; right: 0; top: 0;}
 .g_h_tool li {line-height: 1;}
@@ -396,7 +397,8 @@ div.phone input:last-child {width:calc(100% - 102px); margin-left:6px;}
 .file_input {padding:0;}
 .file_input > * {vertical-align:middle;}
 .file_input label {display:inline-block; height:60px; line-height:58px; width:calc(100% - 235px); border:1px solid #707070; padding-left:20px; border-radius:30px; overflow:hidden;}
-.file_input .btn {display:inline-block; width:230px; height:60px; line-height:60px; padding:0; text-align:center; background-color:#23509F; border-color:#23509F; color:#fff; font-size:20px;}
+.file_input .btn {display:inline-block; width:230px; height:60px; line-height:60px; padding:0; text-align:center; background-color:#FFF; border-color:#ADA9BB; color:#484554 !important; font-size:20px; border: 1px solid #ADA9BB;}
+.file_input .btn:hover {background-color:#23509F; border-color:#23509F; color:#fff !important; border: 1px solid #23509F;}
 .file_input .btn img {width:30px; margin-right:16px;}
 
 .pl60 {padding-left:60px;}
@@ -816,7 +818,7 @@ br.br_530_only {display: none;}
 	
 @media screen and (max-width: 1200px){
 	.welcome_txt {text-align: left;}
-	.g_h_top {padding:18px 0;}
+	.g_h_top {padding:18px 0;height: auto;}
 	.m_nav_wrap {display: block; overflow: hidden;}
 	.nav_wrap, .dday_wrap, .g_h_tool {display:none;}
 	.g_h_logo img {height:40px;}

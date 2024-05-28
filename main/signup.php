@@ -661,7 +661,7 @@
 						</tr>
 						<!--2022-05-09 추가사항-->
 						<tr>
-							<th rowspan = "2"><span class="red_txt"></span>Telephone Number</th>
+							<th rowspan = "2"><span class="red_txt"></span>Emergency Number</th>
 							<td>
 								<!-- <input class="tel_number tel_phone" name="tel_country_tel" type="hidden"> -->
 								<input class="tel_number tel_phone" name="tel_nation_tel" type="text" maxlength="60" readonly>

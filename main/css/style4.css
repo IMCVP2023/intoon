@@ -82,7 +82,7 @@ section.container.organizing {padding-bottom: 190px;}
 .organizing .cat2 th{background-color: #f2f2f2; border-right: 1px solid #ADA9BB;}
 /*.organizing .cat2 th{background-color: rgba(255,235,0,0.4);}*/
 .c_table2 th, .c_table2 td {padding: 9px 28px; text-align:center; color: #484554;}
-.c_table2 th, .c_table2 td:first-of-type {font-weight: bold;}
+.c_table2 th, .c_table2 td:first-of-type {font-weight: 600;}
 .organizing .section_title_wrap2:nth-of-type(3) {padding-top: 83px;}
 .c_table2 thead tr:nth-child(1) th{border-right: 1px solid #FFF; color: #FFF;}
 
@@ -588,8 +588,8 @@ section.container.organizing {padding-bottom: 190px;}
 .coauthor_wrap p {line-height:41px;}
 
 /* 230511 HUBDNCLHJ ******* 작업 */
-.long_btn {font-size: 22px; color: #FFF; border: 0; border-radius: 25px; background-color: #23509F; width: 100%; max-width: 400px;}
-.long_btn:hover{text-decoration: underline; text-underline-position: under;}
+.long_btn {font-size: 22px; color: #FFF; border: 0; border-radius: 25px; background-color:#ADA9BB; width: 100%; max-width: 400px;}
+.long_btn:hover{text-decoration: underline; text-underline-position: under; background-color: #23509F;}
 .long_btn.type2 {font-size: 18px; border-radius: 99px; height: auto; }
 /* section.container .page_title {background: #f2f2f2; width:100%; height: 135px; position: absolute; left: 0;top: 0; padding: 40px 0 48px;} */
 section.container .page_title {background: url("../img/2024_img_sub01.png") no-repeat center /cover; width:100%; height: 240px; position: absolute; left: 0;top: 0; padding: 70px 0 48px; text-align: center;}
@@ -1561,8 +1561,8 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 .down_travel{
 	width: 550px;
 	height: 50px;
-	background-color: #23509F;
-	color: #fff;
+	background-color: #ADA9BB;
+	color: #FFF;
 	border-radius: 99px;
 	display: flex;
 	align-items: center;
@@ -1571,6 +1571,11 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 	font-size: 18px;
 	padding: 0 40px;
 	margin-bottom: 10px;
+	border: 1px solid #ADA9BB;
+  }
+
+  .down_travel:hover{
+	background-color:#23509F; border-color:#23509F; color:#fff; border: 1px solid #23509F;
   }
 
   .submit_application .file_input input[type="file"]{
@@ -2048,11 +2053,16 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	width: 150px;
 	height: 40px;
 	color: #FFF;
-	background-color: #44484a;
+	background-color: #ADA9BB;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-underline-position: under;
+	border-radius: 20px;
+}
+
+.venue .venue_btn:hover{
+	background-color: #23509F;
 }
 
 .accommodation .yellow_box{
@@ -2225,6 +2235,12 @@ select[name="topic1"] option:disabled {
 	border: 4px solid #a5a5a5;
 }
 
+@media screen and (max-width:480px) {
+	.contact_box{
+		width: 300px;
+	}
+}
+
 .contact_box > h1{
 	font-size: 20px;
 	text-decoration: underline;
@@ -2281,7 +2297,7 @@ select[name="topic1"] option:disabled {
 	background-size: cover;
 	position: absolute;
 	right: 0;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 .main_dday{
@@ -2855,6 +2871,10 @@ table.type1 thead th {
 	text-align: center;
 }
 
+table.type1 thead th:first-child{
+	border-right: none;
+}
+
 table.type1 tbody th {
 	background-color: #F6F6FA !important;
 	border-right: 1px solid #ADA9BB !important;
@@ -2886,5 +2906,13 @@ table.type2 th{
 
 
 .scientific_program .table tr:nth-child(1){border-top: none;}
+
+.main_day_popup_img > a {
+	width: 400px;
+    height: 400px;
+    transform: translate(48px, -84px);
+	border-radius: 50%;
+	/* background-color: yellow; */
+}
 
 /* .day_tbody tr, .day_tbody tr td {border: 1px solid #ADA9BB !important;} */

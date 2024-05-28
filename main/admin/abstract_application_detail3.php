@@ -399,7 +399,16 @@ function get_auther_affiliation($author_idx)
                         <tr>
                             <th>Preferred presentation type</th>
                             <td colspan="3">
-                                <?= ($detail["preferred_presentation_type"] == 0) ? "Poster Oral" : "Poster Exhibition only"; ?></td>
+                            <?php
+                                if ($detail["preferred_presentation_type"] == 0) {
+                                    echo "Poster Oral";
+                                } else if ($detail["preferred_presentation_type"] == 1) {
+                                    echo "Poster Exhibition only";
+                                } else if ($detail["preferred_presentation_type"] == 2) {
+                                    echo "Either";
+                                }
+                            ?>
+                            </td>
                         </tr>
                         <tr>
                             <th>Topic</th>

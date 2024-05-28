@@ -159,8 +159,11 @@ var g5_editor_url = "<?= $editor_url ?>",
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
 				<a href="/main/abstract_submission.php" class="on">Online submission</a>
-				<a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
-				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
+                <a href="/main/comingsoon.php">Presentation Guidelines</a>
+				<a href="/main/comingsoon.php">Awards & Grants</a>
+
+				<!-- <a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->
 			</div>
 		</h1>
     <div class="inner">
@@ -189,7 +192,8 @@ var g5_editor_url = "<?= $editor_url ?>",
                         <p>• Submitter is responsible for typing errors.</p>
                         <p>• If you click the 'Save and Next' button, the abstract will be temporarily
                             saved.</p>
-                        <p>• Temporarily saved contents can be modified & deleted on <a class="mypage_btn" href="./mypage_abstract.php">My IMCVP</a></p>
+                        <p>• Temporarily saved contents can be modified & deleted on My IMCVP</p>
+                        <!-- <p>• Temporarily saved contents can be modified & deleted on <a class="mypage_btn" href="./mypage_abstract.php">My IMCVP</a></p> -->
                         <p>• Click the <span class="bold">'Submit'</span> button at the final step to complete the submission.</p>
                         <p>• <span class="bold">'Abstract Submission No.'</span> will be issued once you complete your submission.
                         </p>
@@ -208,14 +212,18 @@ var g5_editor_url = "<?= $editor_url ?>",
                                     <th class="leftT">Preferred Presentation Type <span class="red_txt">*</span>
                                     </th>
                                     <td>
-                                        <input type="radio" class="radio" id="preferred_presentation_type_0"
+                                        <input checked type="radio" class="radio" id="preferred_presentation_type_0"
                                             name="preferred_presentation_type" value="0"
                                             <?= ($detail['preferred_presentation_type'] == "0" ? "checked" : "") ?>>
                                         <label for="preferred_presentation_type_0">Poster Oral</label> 
-                                        <input checked type="radio" class="radio" id="preferred_presentation_type_1"
+                                        <input type="radio" class="radio" id="preferred_presentation_type_1"
                                             name="preferred_presentation_type" value="1"
                                             <?= ($detail['preferred_presentation_type'] == "1" ? "checked" : "") ?>>
-                                        <label for="preferred_presentation_type_1">Poster exhibitions only</label>
+                                        <label for="preferred_presentation_type_1">Poster Exhibition only</label>
+                                        <input type="radio" class="radio" id="preferred_presentation_type_2"
+                                            name="preferred_presentation_type" value="2"
+                                            <?= ($detail['preferred_presentation_type'] == "2" ? "checked" : "") ?>>
+                                        <label for="preferred_presentation_type_2">Either</label>
                                         <input type="checkbox" class="checkbox" id="abstract_agree"/><label for="abstract_agree">I agree to change the presentation type if requested by the Scientific Program Committee. </label>
                                     </td>
                                 </tr>

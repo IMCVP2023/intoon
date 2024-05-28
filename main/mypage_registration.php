@@ -130,7 +130,7 @@
         }
         ?>
 		<div class="table_wrap x_scroll">
-			<table class="table_vertical registration_table">
+			<table class="table_vertical registration_table type1">
 				<thead>
 					<tr class="centerT">
 						<th>Registration No.</th>

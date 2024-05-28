@@ -65,7 +65,7 @@ $end_row = $paging_admin['end_row'];
         <!-- </div> -->
         <div>
             <div class="x_scroll">
-                <table class="table_vertical registration_table">
+                <table class="table_vertical registration_table type1">
                     <colgroup>
                         <col width="*">
                         <col width="10%">

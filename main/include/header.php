@@ -10,7 +10,7 @@ $locale = locale($language);
           
             <!-- <div class="text_center g_h_logo"><img src="/main/img/icon_logo2.svg" alt="" class="pointer" onClick="javascript:location.href='/main/index.php'"></div> -->
             <!-- [240123]sujeong / header logo -->
-            <div class="g_h_logo"><img src="/main/img/2024_imcvp_logo.svg" alt="" class="pointer"
+            <div class="g_h_logo"><img src="/main/img/2024_imcvp_logo.png" alt="" class="pointer"
                     onClick="javascript:location.href='/main/index.php'"></div>
             <ul class="g_h_tool">
                 <!-- <li><a href="/main/index.php">Home</a></li> -->
@@ -261,6 +261,9 @@ $(document).ready(function() {
     <div class="m_nav_top">
         <img src="/main/img/2024_imcvp_logo.svg" alt="" class="pointer logo"
             onclick="javascript:location.href='/main/index.php'">
+
+            <!-- <img src="/main/img/2024_imcvp_logo.svg" alt="" class="pointer logo"
+            onclick="javascript:location.href='/main/index.php'"> -->
         <button type="button" class="n_nav_close"><img src="/main/img/icons/m_nav_close.svg"></button>
     </div>
     <div class="m_nav">

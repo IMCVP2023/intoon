@@ -63,7 +63,7 @@ $price = get_data($sql_price);
                             </li>
                             <li>
                                 <p></p>
-                                <p class="">Check your e-mail for a payment confirmation(Successfully completed)</p>
+                                <p class="">Check your e-mail for a payment confirmation (Successfully completed)</p>
                             </li>
                         </ul>
                     </div>
@@ -79,7 +79,7 @@ $price = get_data($sql_price);
                         <col>
                     </colgroup>
                     <tr>
-                        <th>Registration<br class="br_mb_only">Open</th>
+                        <th>Registration<br class="br_mb_only"> Open</th>
                         <td class="f_bold">Monday, <span class="f_bold violet_t">June 3</span>, 2024</td>
                     </tr>
                     <!-- <tr>

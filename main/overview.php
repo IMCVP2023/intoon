@@ -67,7 +67,7 @@ $floor = get_data($sql_floor);
              <tr>
                  <th>Title</th>
                  <td>
-				 	2024 International Meeting of Cardio Vascular disease Prevention
+				 	2024 International Meeting of CardioVascular disease Prevention
                  </td>
              </tr>
 			 <tr>
@@ -91,7 +91,7 @@ $floor = get_data($sql_floor);
              <tr>
                  <th>Hosted by</th>
                  <td>
-				 	Korean Society of Cardiovascular Disease Prevention(KSCP)
+				 	Korean Society of Cardiovascular Disease Prevention (KSCP)
                  </td>
              </tr>
              <!-- <tr>

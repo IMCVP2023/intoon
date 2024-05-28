@@ -26,8 +26,11 @@ $info = sql_fetch($sql_info);
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
 				<a href="/main/abstract_submission.php">Online submission</a>
-				<a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
-				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
+				<a href="/main/comingsoon.php" class="on">Presentation Guidelines</a>
+				<a href="/main/comingsoon.php">Awards & Grants</a>
+				
+				<!-- <a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->
 			</div>
 		</h1>
     <div class="inner">
@@ -125,7 +128,7 @@ $info = sql_fetch($sql_info);
 				<div class="text_box indent">
 					<ul>
 						<li>• Each presenter will be given 10 minutes.</li>
-						<li>• When the 7-minute presentation ends, a Question and Answer session for participants with the panel and the presenter will follow for 3 minutes.</li>
+						<li>• When the 7minute presentation ends, a Question and Answer session for participants with the panel and the presenter will follow for 3 minutes.</li>
 						<li class="red_t">※ Each individual presenter should take no more than 10 minutes to present. The slide show will end after passing the designated time.</li>
 					</ul>
 				</div>

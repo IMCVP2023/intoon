@@ -197,7 +197,8 @@ p.sub_section_title.main_theme{color: #000;font-weight: 600;letter-spacing: -0.5
 .steps_area li.past p:first-of-type{border-color:#ADF000;background:#ADF000;}
 
 /*btn*/
-.btn{font-size:20px; font-weight:bold; height:50px; cursor:pointer; background:transparent; color:#585858; border-radius:30px; padding:0 30px; border:1px solid #585859;}
+.btn{font-size:20px; font-weight:bold; height:50px; cursor:pointer; background:transparent; color:#484554 !important; border-radius:30px; padding:0 30px; border:1px solid #ADA9BB;}
+.btn:hover {background:#23509F; color:#FFF !important; border:1px solid #23509F;}
 a.btn{line-height:50px; text-align: center;}
 .accommodation .download_btn {font-size: 20px !important; text-decoration:none !important; font-weight:bold !important;}
 /*.btn.white_border{border-color:#fff;color:#fff;}*/
@@ -206,7 +207,8 @@ a.btn{line-height:50px; text-align: center;}
 .fixed_btn:hover{background:#ADF000;}
 .fixed_btn:after{content:'';display:block;z-index:-1;position:absolute;top:-5px;right:5px;width:110px;height:110px;border:1px solid #000;color:#000;border-radius:50%;}
 /* .green_btn {background-color:#10BF99; border-color:#10BF99; color:#fff;} */
-.green_btn {background-color:#23509F; border-color:#23509F; color:#fff; border-radius: 30px;}
+.green_btn {background-color:#FFF; border-color:#ADA9BB; color:#484554; border-radius: 30px;border: 1px solid #ADA9BB;}
+.green_btn:hover {background-color:#23509F; border-color:#23509F; color:#fff; border-radius: 30px; border: 1px solid #23509F;}
 .blue_btn {background-color:#23509F !important; border-color:#23509F !important; color:#fff !important;}
 .yellow_btn {background-color:#FFEB00; border-color:#FFEB00; color:#000;}
 .gray_btn {background-color:#999999; border-color: #999999; color: #fff;}
