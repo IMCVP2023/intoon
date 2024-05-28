@@ -193,18 +193,16 @@
 				<h3 class="noti_wrap_title title">Key dates</h3>
 				<ul>
 					<li>
-						<a class="not_yet">
-						<!-- <a href="/main/abstract_submission_guideline.php"> -->
+						<a href="/main/registration_guidelines.php">
 							<h2>Early bird<br/>registration<br/>Deadline</h2>
 							<div>
-								<p>TBD</p>
-								<p>00</p>
+								<p>September</p>
+								<p>1</p>
 							</div>
 						</a>
 					</li>
 					<li>
-						<a class="not_yet">
-						<!-- <a href="/main/abstract_submission_guideline.php"> -->
+						<a href="/main/abstract_submission_guideline.php">
 						<h2>Abstract<br/>submission<br/>Deadline</h2>
 							<div>
 								<p>August</p>
@@ -213,8 +211,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="not_yet">
-						<!-- <a href="/main/registration_guidelines.php"> -->
+						<a href="/main/registration_guidelines.php">
 						<h2>Notification of<br/>acceptance</h2>
 							<div>
 								<p>October</p>
@@ -223,8 +220,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="not_yet">
-						<!-- <a href="/main/registration_guidelines.php"> -->
+						<a href="/main/registration_guidelines.php">
 							<h2>Pre-registration<br/>Deadline</h2>
 							<div>
 								<p>November</p>
