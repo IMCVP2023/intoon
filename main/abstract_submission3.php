@@ -189,11 +189,23 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
 <!----------------------- 퍼블리싱 구분선 ----------------------->
 
 <section class="container submit_application">
-	<h1 class="page_title">Online Submission</h1>     
+		<h1 class="page_title">Call for Abstract
+			<div class="sub_btn_box">
+				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
+				<a href="/main/abstract_submission.php" class="on">Online submission</a>
+
+				<a href="/main/comingsoon.php">Presentation Guidelines</a>
+				<a href="/main/comingsoon.php">Awards & Grants</a>
+
+				<!-- <a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->
+			</div>
+		</h1>    
     <div class="inner">
         <div class="section section1">
             <div class="steps_area">
-                <ul class="clearfix">
+			<img src="/main/img/2024_abstract_step3.png"/>
+                <!-- <ul class="clearfix">
                     <li>
                         <p>STEP 01</p>
                         <p class="sm_txt"><?= $locale("abstract_submit_tit1") ?></p>
@@ -206,7 +218,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                         <p>STEP 03</p>
                         <p class="sm_txt"><?= $locale("submit_completed_tit") ?></p>
                     </li>
-                </ul>
+                </ul> -->
             </div>
             <div class="input_area">
                 <form name="abstract_form" class="abstract_form">

@@ -48,6 +48,7 @@ $abstract_list_query = "SELECT
 								CASE
 									WHEN preferred_presentation_type = 0 THEN 'Poster Oral'
 									WHEN preferred_presentation_type = 1 THEN 'Poster Exhibition only' 
+									WHEN preferred_presentation_type = 2 THEN 'Either' 
 								END AS pre_type,
 								rs.topic,
 								rs.topic_detail,

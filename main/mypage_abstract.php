@@ -47,24 +47,14 @@ $end_row = $paging_admin['end_row'];
 ?>
 
 <section class="container mypage sub_page">
-<div class="sub_background_box">
-		<div class="sub_inner">
-			<div>
-				<h2>My page</h2>
-				<ul>
-					<li>Home</li>
-					<li>Mypage</li>
-					<li>Abstract</li>
-				</ul>
+<h1 class="page_title">My IMCVP
+			<div class="sub_btn_box">
+				<a href="/main/mypage.php">Account</a>
+				<a href="/main/mypage_registration.php">Registration</a>
+				<a href="/main/mypage_abstract.php" class="on">Abstract</a>
 			</div>
-		</div>
-	</div>
+		</h1>
     <div class="inner bottom_short">
-        <div class="sub_menu_box">
-			<div><a href="./mypage.php">Account</a></div>
-			<div><a href="./mypage_registration.php">Registration</a></div>
-			<div class="on"><a href="./mypage_abstract.php">Abstract</a></div>
-		</div>
         <!-- <ul class="tab_green">
 			<li><a href="./mypage.php">Account</a></li>
 			<li><a href="./mypage_registration.php">Registration</a></li>
@@ -75,7 +65,7 @@ $end_row = $paging_admin['end_row'];
         <!-- </div> -->
         <div>
             <div class="x_scroll">
-                <table class="table_vertical registration_table">
+                <table class="table_vertical registration_table type1">
                     <colgroup>
                         <col width="*">
                         <col width="10%">

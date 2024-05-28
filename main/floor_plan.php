@@ -8,7 +8,13 @@
 	<!-- <div class="app_title_box">
 	 	<h2 class="app_title">Floor Plan</h2>
 	</div> -->
-	<h1 class="page_title">Floor Plan</h1>
+    <h1 class="page_title">Venue
+			<div class="sub_btn_box">
+				<a href="/main/venue.php">Grand Walkerhil Seoul</a>
+				<a href="/main/accommodation.php">Accommodation</a>
+				<a href="/main/floor_plan.php" class="on">Floor Plan</a>
+			</div>
+		</h1>
     <div class="inner type2">
 		<!--
         <div class="sub_banner">

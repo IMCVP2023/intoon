@@ -76,9 +76,16 @@
 	<div class="section_bg">
 		<div class="container">
 			<!-- 상단 타이틀 -->
-			<img src="/main/img/img_vsl_text_3.png" class="pc_only img_vsl_text" alt="">
+			<img src="/main/img/2024_imcvp_main_logo.png" class="pc_only img_vsl_text" alt="">
+			<!-- <img src="/main/img/2024_imcvp_main_logo-1.svg" class="pc_only img_vsl_text" alt=""> -->
+			<!-- <img src="/main/img/2024_main_day_popup.png" alt=""/> -->
+			<div class="pc_only main_day_popup_img">
+				<p class="main_dday">D-<?php echo number_format($d_days); ?></p>
+				<a href="/main/registration_guidelines.php"></a>
+			</div>
 			<div class="mb_only img_vsl_text" style="">
-				<img src="/main/img/img_vsl_text_mb_2.png" alt="">
+				<img src="/main/img/2024_imcvp_main_logo.png" alt="">
+				<!-- <img src="/main/img/2024_imcvp_main_logo-1.svg" alt=""> -->
 				<!-- <p>Sep. 7(Thu) ~ Sep. 9(Sat)</p>
 				<p>CONRAD Seoul Hotel, Korea</p> -->
 			</div>
@@ -116,16 +123,16 @@
 					
 				</p>
 				<p class="event_msg">* This congress will be an on-site event in Seoul, Republic of Korea.</p> -->
-				<!-- 
-				<p class="sub_section_title main_theme"><?=$locale("theme_txt")?></p>
+				
+				<!-- <p class="sub_section_title main_theme"><?=$locale("theme_txt")?></p>
 				<div class="clearfix2">
 					<div class="live_btn">
 						<p class="live_tit">Connecting to Live Platform</p>
 						<p class="onair_btn w1024"> ON-AIR <span>Technical Support - Tel. +82-2-2039-7802,  +82-2-6959-4868, +82-2-3275-3028</span></p>
 						<p class="sub_section_title main_theme liveenter_btn">Enter</p>
 					</div>
-				</div>
-				-->
+				</div> -->
+				
 				<!-- <div class="main_btn_wrap">
 				<button type="button" class="btn_register_now" onClick="javascript:alert('Coming soon.');">Register Now</button>
 					<button type="button" class="btn_circle_arrow"></button>
@@ -141,7 +148,7 @@
 <!-- Plenary Speakers -->
 <div class="speakers_wrap">
 	<div class="container">
-		<h1 class="speakers_wrap_title">Plenary Speakers</h1>
+		<h1 class="speakers_wrap_title">Invited Speakers</h1>
 		<div class="speakers_slick">
 			<ul class="main_speaker2 slick-slider">
 				<li class="index_speaker1">
@@ -179,7 +186,7 @@
 	</div>
 </div>
 <!-- Key dates & News,Notice -->
-<section>
+<section class="key_date_section">
 	<div class="container">
 		<div class="noti_wrap">
 			<div class="dates_area">
@@ -188,39 +195,47 @@
 					<li>
 						<a class="not_yet">
 						<!-- <a href="/main/abstract_submission_guideline.php"> -->
-							<h2>TBD</h2>
-							<i><img src="/main/img/icons/icon_report.svg" alt=""></i>
-							<p>Abstract Submission<br/>Deadline</p>
+							<h2>Early bird<br/>registration<br/>Deadline</h2>
+							<div>
+								<p>TBD</p>
+								<p>00</p>
+							</div>
 						</a>
 					</li>
 					<li>
 						<a class="not_yet">
 						<!-- <a href="/main/abstract_submission_guideline.php"> -->
-							<h2>TBD</h2>
-							<i><img src="/main/img/icons/icon_letter.svg" alt=""></i>
-							<p>Notification of<br/>Acceptance</p>
+						<h2>Abstract<br/>submission<br/>Deadline</h2>
+							<div>
+								<p>August</p>
+								<p>18</p>
+							</div>
 						</a>
 					</li>
 					<li>
 						<a class="not_yet">
 						<!-- <a href="/main/registration_guidelines.php"> -->
-							<h2>TBD</h2>
-							<i><img src="/main/img/icons/icon_calendar.svg" alt=""></i>
-							<p>Early-Registration<br/>Deadline</p>
+						<h2>Notification of<br/>acceptance</h2>
+							<div>
+								<p>October</p>
+								<p>16</p>
+							</div>
 						</a>
 					</li>
 					<li>
 						<a class="not_yet">
 						<!-- <a href="/main/registration_guidelines.php"> -->
-							<h2>TBD</h2>
-							<i><img src="/main/img/icons/icon_paper.svg" alt=""></i>
-							<p>Pre-Registration<br/>Deadline</p>
+							<h2>Pre-registration<br/>Deadline</h2>
+							<div>
+								<p>November</p>
+								<p>3</p>
+							</div>
 						</a>
 					</li>
 				</ul>
 			</div>
 			<div class="noti_area">
-				<h3 class="noti_wrap_title title">News & Notice</h3>
+				<h3 class="noti_wrap_title title">News & Information</h3>
 				<ul>					
 				<?php if(count($notice_list) > 0) { ?>
 						<?php 
@@ -284,6 +299,10 @@
 			$(this).parents('.popup').hide();
 		});
 		$('body').addClass('main');
+
+		// $('.main_day_popup_img').click(function(){
+		// 	window.location.href = "/main/registration_guidelines.php"
+		// });
 		
 		$('.main_speaker2').slick({
 			dots: false,

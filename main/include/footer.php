@@ -2,12 +2,12 @@
     <!-- 220323 HUBDNC LJH 추가 -->
     <div class="fixed_btn_clone"></div>
     <div class="fixed_btn_wrap">
-        <ul class="toolbar_wrap" style="opacity: 0;">
+        <ul class="toolbar_wrap">
              <li>
                 <a class="not_yet">
                 <!-- <a href="/main/program_glance.php"> -->
                   <!-- <img src="/main/img/icons/footer_notice.png" alt=""> -->
-                    <img src="/main/img/icons/tool_program.svg" alt="">
+                    <img src="/main/img/icons/2024_tool_program.svg" alt="" class="program_icon">
                 </a>
             </li> 
             <?php
@@ -43,12 +43,12 @@
             ?>
            <li>
                 <a class="not_yet">
-                    <img src="/main/img/icons/footer_registration.png" alt="">
+                    <img src="/main/img/icons/2024_footer_registration.svg" alt="" class="regi_icon">
                 </a>
             </li>
             <li>
                 <a class="not_yet">
-                    <img src="/main/img/icons/footer_abstract.png" alt="">
+                    <img src="/main/img/icons/2024_footer_abstract.svg" alt="" class="abstract_icon">
                 </a>
             </li>
             <?php
@@ -57,10 +57,11 @@
             <?php
             if ($_SESSION["USER"]["idx"] == "") {
             ?>
-           <li><button type="button" onClick="alert('Need to login.')"><i>
-                <img src="/main/img/icons/footer_mypage.png" alt="">
-                <img src="/main/img/icons/tool_mypage.svg" alt="">
-            </i></button></li>
+           <li>
+            <button type="button" onClick="alert('Need to login.')">
+                <img src="/main/img/icons/2024_tool_mypage.svg" alt="" class="mypage_icon">
+            </button>
+            </li>
                 <!-- <li>
                     <a href="/main/login.php" onClick="alert('Need to login.')">
                         <img src="/main/img/icons/footer_mypage.png" alt=""></i></button>
@@ -69,6 +70,11 @@
             <?php
             } else {
             ?>
+              <li>
+            <button type="button" onClick="alert('Need to login.')">
+                <img src="/main/img/icons/2024_tool_mypage.svg" alt="" class="mypage_icon">
+            </button>
+            </li>
             <!-- <li><button type="button" onClick="location.href='/main/mypage.php'"><i> -->
                 <!-- <li>
                     <a href="/main/mypage.php">
@@ -81,46 +87,19 @@
             }
             ?>
 
-        </ul>
-        <button type="button" class="btn_right">G<br>O<br><br>T<br>O</button>
+</ul>
+<button type="button" class="btn_top"><img src="/main/img/icons/2024_icon_top_btn.svg" alt=""></button>
+        <!-- <button type="button" class="btn_right">G<br>O<br><br>T<br>O</button>
         <div class="footer_go_to_box">
             <div><a href="/main/program_glance_icola.php">Program</a></div>
             <div><a href="/main/registration.php">Registration</a></div>
             <div><a href="/main/abstract_submission.php">Call for Abstract</a></div>
             <div><a href="/main/mypage.php">My IMCVP</a></div>
-        </div>
-        <button type="button" class="btn_top"><img src="/main/img/icons/icon_top_btn.svg" alt=""></button>
+        </div> -->
         <!-- <button type="button" class="btn_plus"><img src="/main/img/icons/icon_plus_white.svg" alt=""></button> -->
     </div>
     <!-- 220323 HUBDNC LJH 추가 : 끝 -->
-    <!--
-    <div class="sponsor_logo-wrap container">
-        <ul class="s_logo_list">
-            <li><img src="./img/sponsor/logo01.png" alt=""></li>
-            <li><img src="./img/sponsor/logo02.png" alt=""></li>
-            <li><img src="./img/sponsor/logo03.png" alt=""></li>
-            <li><img src="./img/sponsor/logo04.png" alt=""></li>
-            <li><img src="./img/sponsor/logo05.png" alt=""></li>
-            <li><img src="./img/sponsor/logo06.png" alt=""></li>
-            <li><img src="./img/sponsor/logo07.png" alt=""></li>
-            <li><img src="./img/sponsor/logo08.png" alt=""></li>
-            <li><img src="./img/sponsor/logo09.png" alt=""></li>
-            <li><img src="./img/sponsor/logo10.png" alt=""></li>
-            <li><img src="./img/sponsor/logo11.png" alt=""></li>
-            <li><img src="./img/sponsor/logo12.png" alt=""></li>
-            <li><img src="./img/sponsor/logo13.png" alt=""></li>
-            <li><img src="./img/sponsor/logo14_1.png" style="max-height:20px;" alt=""></li>
-            <li><img src="./img/sponsor/logo15.png" alt=""></li>
-            <li><img src="./img/sponsor/logo16.png" alt=""></li>
-            <li><img src="./img/sponsor/logo17.png" alt=""></li>
-            <li><img src="./img/sponsor/logo18.png" alt=""></li>
-            <li><img src="./img/sponsor/logo19.png" alt=""></li>
-            <li><img src="./img/sponsor/logo20.png" alt=""></li>
-            <li><img src="./img/sponsor/logo21.png" alt=""></li>
-            <li><img src="./img/sponsor/logo22.png" alt=""></li>
-            <li><img src="./img/sponsor/logo23.png" alt=""></li>
-        </ul>
-    </div> -->
+   
     <div class="sponsor_logo-wrap container">
         <ul class="s_logo_list">
         <li>
@@ -177,30 +156,36 @@
                 <div class="footer_l">
                     <div class="clearfix">
                         <a href="https://koreascp.or.kr:459/" target="_blank">
-                            <img src="/main/img/icons/KSCP_logo.png" alt="">
+                            <img src="/main/img/icons/2024_kscp_white.svg" alt="">
+                        </a>
+                        <a href="https://koreascp.or.kr:459/" target="_blank">
+                            <img src="/main/img/icons/2024_imcvp_white.svg" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="footer_c">
-                    <p>Korean Society of Cardiovascular Disease Prevention (KSCP)</p>
+                    <p class="footer_pink_t">Korean Society of Cardiovascular Disease Prevention</p>
                     <ul>
-                        <li>#805, 99, Seongsuil-ro, Seongdong-gu, Seoul Korea(Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
-                        <li>T. 82-2-6408-1505</li>
-                        <!-- <li>F. 82-2-364-0883</li> -->
-                        <li>E. <a href="mailto:kscpmd@kscpmd.or.kr"
-                                class="font_inherit link">kscpmd@kscpmd.or.kr </a></li>
-                        <li>W. <a href="https://koreascp.or.kr:459/" class="font_inherit link">https://koreascp.or.kr</a></li>
+                        <li>805, 99, Seongsuil-ro, Seongdong-gu, Seoul 04790, Republic of Korea</li>
+                        <li>(Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
+                        <li>+82-2-6408-1505&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:kscpmd@kscpmd.or.kr">kscpmd@kscpmd.or.kr</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="www.koreascp.or.kr" target="_blank">www.koreascp.or.kr</a></li>
+                    </ul>
+                    <p class="footer_blue_t">Secretariat of IMCVP 2024</p>
+                    <ul>
+                        <li>4F, A-Block, Richensia, 341, Baekbeom-ro, Yongsan-gu,</li>
+                        <li>Seoul 04315, Republic of Korea</li>
+                        <li>+82-2-2039- 7804&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:info@imcvp.org">info@imcvp.org</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://imcvp.org/">www.imcvp.org</a></li>
                     </ul>
                 </div>
                 <div class="footer_r">
-                    <p>Secretariat of IMCVP 2024 | INTO-ON, Inc.</p>
+                    <!-- <p class="footer_blue_t">Secretariat of IMCVP 2024</p>
                     <ul>
                         <li>2F, Wonhyo-ro, #204, Yongsan-gu, Seoul, Korea</li>
                         <li>T. 82-2-2039-7804</li>
                         <li>F. 82-2-3275-3044</li>
                         <li>E. <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
                         <li>W. <a href="http://into-on.com/" class="font_inherit link">into-on.com</a></li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -286,5 +271,28 @@ $('.btn_right').css({
         transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out'  
 })
 });
+
+window.onload = ()=>{
+    changeIcon();
+    function changeIcon(){
+        const icons = [
+        { element: document.querySelector(".program_icon"), hoverSrc: "/main/img/icons/2024_tool_program-1.svg", defaultSrc: "/main/img/icons/2024_tool_program.svg" },
+        { element: document.querySelector(".regi_icon"), hoverSrc: "/main/img/icons/2024_footer_registration-1.svg", defaultSrc: "/main/img/icons/2024_footer_registration.svg" },
+        { element: document.querySelector(".abstract_icon"), hoverSrc: "/main/img/icons/2024_footer_abstract-1.svg", defaultSrc: "/main/img/icons/2024_footer_abstract.svg" },
+        { element: document.querySelector(".mypage_icon"), hoverSrc: "/main/img/icons/2024_tool_mypage-1.svg", defaultSrc: "/main/img/icons/2024_tool_mypage.svg" }
+    ];
+
+    icons.forEach(icon => {
+        icon.element.addEventListener("mouseenter", () => {
+            icon.element.src = icon.hoverSrc;
+        });
+
+        icon.element.addEventListener("mouseleave", () => {
+            icon.element.src = icon.defaultSrc;
+        });
+    });
+    }
+}
+
 
 </script>

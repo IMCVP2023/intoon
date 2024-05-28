@@ -21,21 +21,25 @@ $sql_info = "SELECT
 $info = sql_fetch($sql_info);
 
 ?>
-<section class="abstract_submission_guideline container">
-    <h1 class="page_title">Submission Guidelines</h1>
+<section class="abstract_submission_guideline container top_btn_move">
+        <h1 class="page_title">Call for Abstract
+			<div class="sub_btn_box">
+				<a href="/main/abstract_submission_guideline.php" class="on">Abstract Submission Guidelines</a>
+				<a href="/main/abstract_submission.php">Online submission</a>
+                <a href="/main/comingsoon.php">Presentation Guidelines</a>
+				<a href="/main/comingsoon.php">Awards & Grants</a>
+
+				<!-- <a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->
+			</div>
+		</h1>
+    <!-- <h1 class="page_title">Submission Guidelines</h1> -->
     <div class="inner">
-        <ul class="tab_green long abstract_submission">
-            <li class="on"><a href="./abstract_submission_guideline.php">Submission Guidelines</a></li>
-            <li><a href="./abstract_submission.php" class="online_submission_alert">Online Submission</a></li>
-            <!-- <li><a href="./abstract_submission_oral.php">Oral Presenters</a></li> -->
-            <!-- <li><a href="./abstract_submission_exhibition.php">Poster Exhibition</a></li> -->
-            <li><a href="./abstract_submission_award.php">Awards & Grants</a></li>
-        </ul>
         <div class="section section1">
             <div>
                 <div class="text_box">
                     <ul>
-                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="violet_t underline under bold">poster oral, poster exhibitions.</span></li>
+                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="dark_blue_t bold">poster oral,&nbsp;</span><span class="light_blue_t bold">poster exhibitions.</span></li>
                         <li>All congress abstracts must be submitted online via the "Online Submission System."</li>
                         <li>Submitted abstracts will be reviewed by the Scientific Program Committee, and committee might request an oral presentation.</li>
                         <li>All presenters are required to register and pay the registration fee.</li>
@@ -60,7 +64,12 @@ $info = sql_fetch($sql_info);
                     <div class="section_title_wrap2">
                         <h3 class="title"><!--<?= $locale("keydate") ?>-->Key Dates<span>&nbsp;&nbsp;&nbsp; *KST (UTC+9)</span></h3>
                     </div>
-                    <div class="table_wrap detail_table_common x_scroll">
+                    <div class="abstract_key_date_box">
+                        <img src="/main/img/icons/key_date-1.png" alt="key_dates-1"/>
+                        <img src="/main/img/icons/key_date-2.png" alt="key_dates-2"/>
+                        <img src="/main/img/icons/key_date-3.png" alt="key_dates-3"/>
+                    </div>
+                    <!-- <div class="table_wrap detail_table_common x_scroll">
 						<table class="c_table detail_table td_nowrap_table">
 							<colgroup>
 								<col class="submission_col">
@@ -68,7 +77,6 @@ $info = sql_fetch($sql_info);
 							</colgroup>
 							<tr>
 								<th>Abstract Submission<br class="br_mb_only"> System Open</th>
-								<!-- <th class="close_th">Abstract Submission<br class="br_mb_only"> System Open</th> -->
 								<td class="f_bold">Monday, <span class="f_bold violet_t">June 3</span>, 2024</td>
 							</tr>
 							<tr>
@@ -89,7 +97,7 @@ $info = sql_fetch($sql_info);
 							</tr>
 						</table>
 					
-                </div>
+                </div> -->
             </div>
             <!--keydate end-->
             <div>
@@ -97,9 +105,9 @@ $info = sql_fetch($sql_info);
                         <h3 class="title">Abstract Submission Type</h3>
                     </div>
                     <div class="text_box">
-                    <ul>
-                        <li>• <a href="./abstract_submission_oral.php" class="link under">Poster oral</a></li>
-                        <li>• <a href="./comingsoon.php" class="link under">Poster exhibitions</a></li>
+                    <ul class="abstract_type">
+                        <li><a href="./abstract_submission_oral.php">Poster oral</a></li>
+                        <li><a href="./comingsoon.php">Poster exhibitions</a></li>
                     </ul>
                 </div>
             </div>
@@ -117,28 +125,24 @@ $info = sql_fetch($sql_info);
 				<div class="steps_area five_steps">
 					<ul class="clearfix">
 						<li>
-							<p>Step 1</p>
-							<p class="sm_txt">All presenters must complete their registration before the registration deadline.</p>
+							<p></p>
+							<p class="">All presenters must complete their registration before the registration deadline.</p>
 						</li>
 						<li>
-							<p>Step 2</p>
-							<p class="sm_txt">Upon submitting your abstract, a confirmation letter will be emailed to you.</p>
+							<p></p>
+							<p class="">Upon submitting your abstract, a confirmation letter will be emailed to you.</p>
 						</li>
 						<li>
-							<p>Step 3</p>
-							<p class="sm_txt">To review or make changes to your submitted abstracts, please visit ‘My IMCVP’.</p>
+							<p></p>
+							<p class="">To review or make changes to your submitted abstracts, please visit ‘My IMCVP’.</p>
 						</li>
 						<li>
-							<p>Step 4</p>
-							<p class="sm_txt">You will receive an acceptance notification via email.</p>
+							<p></p>
+							<p class="">You will receive an acceptance notification via email.</p>
 						</li>
-						<!-- <li>
-							<p>Step 5</p>
-							<p class="sm_txt">Complete and confirm submission.</p>
-						</li> -->
 					</ul>
+                    <p class="red_t bold text_center font20">* Note: Accepted abstracts qualify for free registration for <span class="bold dark_blue_t font20">the presenting author only per abstract.</span></p>
 				</div>
-                <p class="red_t bold mt10">* Note: Accepted abstracts qualify for free registration for <span class="bold violet_t">the presenting author only per abstract.</span></p>
             </div>
             <!--Steps for Abstract Submission end-->
           
@@ -148,7 +152,7 @@ $info = sql_fetch($sql_info);
                     <h3 class="title">General guidelines</h3>
                 </div>
                 <div class="table_wrap detail_table_common x_scroll">
-                    <table class="c_table detail_table">
+                    <table class="c_table detail_table type2">
                         <colgroup>
                             <col class="submission_col type2">
                             <col>
@@ -156,20 +160,20 @@ $info = sql_fetch($sql_info);
                         <tr>
                             <th>Presentation Type </th>
                             <td>
-                                <p class="red_t">Poster oral</p>
-                                <p class="red_t">Poster exhibitions only <br />
-                                <span>(* Scientific committee may change your presentation type after reviewing it.)</span>
-                                </p>
+                                <p class="dark_blue_t bold">Poster oral</p>
+                                <p class="light_blue_t bold">Poster exhibitions only</p>
+                                <p class="bold">Either</p>
+                                <p>(* Scientific committee may change your presentation type after reviewing it.)</p>
                             </td>
                         </tr>
                         <tr>
                             <th>Language</th>
                             <td>English only</td>
                         </tr>
-                        <!-- <tr>
-                            <th>Length of Title</th>
-                            <td>No longer than 30 words</td>
-                        </tr> -->
+                        <tr>
+                            <th>Length of body</th>
+                            <td>No longer than 300 words</td>
+                        </tr>
                         <tr>
                             <th>Method of Submission</th>
                             <td>Online submission via the website only</td>
@@ -184,13 +188,17 @@ $info = sql_fetch($sql_info);
                                 </p>
                             </td>
                         </tr>
-                        <!-- <tr>
-                            <th>Format</th>
+                        <tr>
+                            <th>Title</th>
                             <td>
-                                <p>Download and use the official abstract form. <br />Contain 4 sections: background,
-                                    methods & materials, results, and conclusions. <br />(keywords are optional)</p>
+                                <p class="red_t bold">Do not use capital letters except for the first letter when writing a title. </p>
+                                <p>Example: This is a properly formatted abstract title. </p>
                             </td>
-                        </tr> -->
+                        </tr>
+                        <tr>
+                            <th>Structure of research abstract</th>
+                            <td>Objectives / Methods / Results / Conclusions</td>
+                        </tr>
                         <!-- <tr>
                             <th>Length of body</th>
                             <td>No longer than 300 words</td>
@@ -200,6 +208,7 @@ $info = sql_fetch($sql_info);
                             <th>Modification</th>
                             <td>Abstract review or modification will be available until the abstract submission deadline.<br>
                             (* Upon abstract submission, a confirmation email will be sent to your provided email address.)
+                            
                         </td>
                         </tr>
                         <tr>
@@ -217,21 +226,20 @@ $info = sql_fetch($sql_info);
                 </div>
                 <div class="text_box">
                     <ul>
-                        <li class="f_bold"><span class="bold">1. </span>Diabetes & Obesity</li>
-                        <li class="f_bold"><span class="bold">2. </span>Women’s Heart Health</li>
-                        <li class="f_bold"><span class="bold">3. </span>Hyperlipidemia and CVD</li>
-                        <li class="f_bold"><span class="bold">4. </span>Epidemiology</li>
-                        <li class="f_bold"><span class="bold">5. </span>Precision medicine/ Digital healthcare</li>
-                        <!-- <li class="f_bold"><span class="bold">6. </span>Dyslipidemia, Hypertension and Obesity</li>
-                        <li class="f_bold"><span class="bold">7. </span>Other Comorbidities of Obesity and Metabolic
-                            Syndrome</li>
-                        <li class="f_bold"><span class="bold">8. </span>Pathophysiology of Obesity and Metabolic
-                            Syndrome</li>
-                        <li class="f_bold"><span class="bold">9. </span>Therapeutics of Obesity and Metabolic Syndrome
-                        </li>
-                        <li class="f_bold"><span class="bold">10. </span>Metabolic and Bariatric Surgery</li>
-                        <li class="f_bold"><span class="bold">11. </span>Obesity and Metabolic Syndrome in Children and
-                            Adolescents</li> -->
+                        <li class="f_bold"><span class="bold">1. </span>Ischemic heart disease/coronary artery disease</li>
+                        <li class="f_bold"><span class="bold">2. </span>Heart failure with reduced ejection fraction and preserved ejection fraction</li>
+                        <li class="f_bold"><span class="bold">3. </span>Cardiomyopathies</li>
+                        <li class="f_bold"><span class="bold">4. </span>Chronic Kidney Disease (CKD) and Cardiovascular Disease</li>
+                        <li class="f_bold"><span class="bold">5. </span>Preventive Cardiology</li>
+                        <li class="f_bold"><span class="bold">6. </span>Cardiac arrhythmias</li>
+                        <li class="f_bold"><span class="bold">7. </span>Peripheral arterial disease</li>
+                        <li class="f_bold"><span class="bold">8. </span>Basic science and genetics</li>
+                        <li class="f_bold"><span class="bold">9. </span>COVID-19 related cardio-pharmacotherapy</li>
+                        <li class="f_bold"><span class="bold">10. </span>Diabetes & Obesity</li>
+                        <li class="f_bold"><span class="bold">11. </span>Hyperlipidemia and CVD</li>
+                        <li class="f_bold"><span class="bold">12. </span>Epidemiology</li>
+                        <li class="f_bold"><span class="bold">13. </span>Precision medicine/ Digital healthcare</li>
+                        <li class="f_bold"><span class="bold">14. </span>Others</li>
                     </ul>
                 </div>
             </div>
@@ -277,6 +285,7 @@ $info = sql_fetch($sql_info);
                         <li>• The subject of the abstract is limited to unpublished research results, and editing of content previously presented at other conferences is not accepted for submission.</li>
                         <li>• The submitted and accepted abstracts may be published on the website, application, abstract book(PDF), and other printed materials of the Korean Society of Cardiovascular Disease Prevention(KSCP).</li>
 						<li>• If any related issue arises, please contact the congress secretariat at <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>.</li>
+						<li>• Submitted abstracts may be considered for online or offline publications and presentations, but they should not have been previously announced, publicized, or distributed online and offline in full article form before the abstract submission deadline.</li>
                     </ul>
                 </div>
             </div>
@@ -303,5 +312,7 @@ $info = sql_fetch($sql_info);
     </div>
     <!-- <button type="button" class="fixed_btn" onclick="window.location.href='./abstract_submission.php';"><?= $locale("abstract_submission_btn") ?></button> -->
 </section>
-<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'"><span>Abstract<br/>Submission</span></button>
+<button type="button" class="btn_fixed_triangle fixed_btn_pc pc_only" onClick="location.href='./abstract_submission.php'">
+    <img src="/main/img/icons/2024_abstract_icon.svg"/>
+</button>
 <?php include_once('./include/footer.php'); ?>

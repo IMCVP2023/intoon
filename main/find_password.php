@@ -1,19 +1,27 @@
 <?php include_once('./include/head.php'); ?>
 <?php include_once('./include/header.php'); ?>
-<section class="container login_form form_layout find_password login bg style_2023">
+<section class="container login_form form_layout find_password login bg style_2023 find_pw">
 	<!-- <a href="./index.php" class="logo"><img src="./img/logo.png"></a> -->
-	<h1 class="title center_t">Find Password
-		<p class="red_txt">Please enter your email.</p>
-	</h1>
+	<h1 class="login_title">Find Password</h1>
+		<div class="find_pw_txt_box">
+			<h3>Forgotten your password?</h3>
+			<p>If you do not remember your password, please enter your ID(Email).</p>
+			<p>Temporary password will be sent out to your e-mail.</p>
+			<p>After you login with the temporary password,</p>
+			<p>you may change to a new password at personal information.</p>
+		</div>
+	
 	<div>
-		<form name="find_password_form" onsubmit="return false;">
+		<form name="find_password_form" onsubmit="return false;" class="find_password_form">
 			<ul>
 				<li>
-					<input type="text" name="email" placeholder="<?= $locale("id") ?>">
+					<input type="text" name="email" class="find_email" placeholder="ID (email)">
 				</li>
 			</ul>
-			<button type="button" class="btn submit_btn gray_line_btn"><?= $locale("get_temporary_password_btn") ?></button>
-			<button type="button" class="btn login_btn main_btn" onclick="javascript:window.location.href='./login.php';"><?= $locale("login") ?></button>
+			<button type="button" class="btn submit_btn gray_line_btn">Find Password</button>
+			<!-- <button type="button" class="btn login_btn main_btn" onclick="javascript:window.location.href='./login.php';"><?= $locale("login") ?></button> -->
+			<p>If you don’t remember your e-mail address, please contact the Secretariat.</p>
+			<p>E-mail : <a href="mailto:info@imcvp.org">info@imcvp.org</a></p>
 		</form>
 	</div>
 </section>

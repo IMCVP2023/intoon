@@ -114,7 +114,13 @@ $info = sql_fetch($sql_info);
 	if (!empty($session_app_type) && $session_app_type == 'N') {
 		// Web일때
 ?>
-	<h1 class="page_title">Grand Walkerhil Seoul</h1>
+    <h1 class="page_title">Venue
+			<div class="sub_btn_box">
+				<a href="/main/venue.php" class="on">Grand Walkerhil Seoul</a>
+				<a href="/main/accommodation.php">Accommodation</a>
+				<a href="/main/floor_plan.php">Floor Plan</a>
+			</div>
+		</h1>
 <?php
 	} 
 ?>
@@ -137,7 +143,7 @@ $info = sql_fetch($sql_info);
                 <div>
                     <p class="bold">Grand Walkerhill Seoul, Korea<span class="font_16 bold">(Congress Venue)</span></p>
                     <div class="table_wrap x_scroll">
-                        <table class="c_table2 detail_table layout_fixed">
+                        <table class="c_table2 detail_table layout_fixed type2">
                             <colgroup>
                                 <col class="col_th">
                                 <col width="*">

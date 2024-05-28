@@ -33,14 +33,19 @@
 	if (!empty($session_app_type) && $session_app_type == 'N') {
 		// Web일때
 ?>
-    <h1 class="page_title">Exhibition</h1>
-	
+ <h1 class="page_title">Sponsorship
+			<div class="sub_btn_box">
+				<a href="/main/sponsor.php">Sponsors</a>
+				<a href="/main/sponsor_guidelines.php">Sponsor Guidelines</a>
+				<a href="/main/sponsor_exhibition.php" class="on">Exhibition & Social Event</a>
+			</div>
+		</h1>
 	<div class="inner">
-		<ul class="tab_green long abstract_submission">
+		<!-- <ul class="tab_green long abstract_submission">
 				<li><a href="./sponsor.php">Sponsors</a></li>
 				<li><a href="./sponsor_guidelines.php">Sponsor Guidelines</a></li>
 				<li class="on"><a href="./sponsor_exhibition.php">Exhibition & Social Event</a></li>
-		</ul>
+		</ul> -->
 		<div class="contents_box exhibition">
 			<div class="clearfix2">
 				<img src="/main/img/img_exhibition_web_floor_3.png" alt="">

@@ -13,23 +13,24 @@
 	<!-- 백그라운드 이미지 slick -->
 	<!--container -->
 	<div>
-		<a href="./index.php" class="logo"><img src="/main/img/img_vsl_text_2.png"></a>
+		<h2 class="login_title">Login</h2>
 		<form>
 			<ul>
 				<li>
-					<input type="text" name="email" placeholder="<?=$locale("id")?>">
+					<input type="text" name="email" placeholder="User ID (email)" class="login_input email">
 				</li>
 				<li>
-					<input type="password" name="password" placeholder="<?=$locale("password")?>">
+					<input type="password" name="password" placeholder="Password" class="login_input">
 				</li>
 			</ul>
 			<!-- <div class="text_r"> -->
 			<!-- 	<a href="./find_password.php"><?=$locale("find_password")?> ></a> -->
 			<!-- </div> -->
-			<button type="button" class="btn login_btn main_btn"><?=$locale("login")?></button>
-			<div class="btn_wrap clearfix2">
-				<button type="button" class="btn gray_line_btn" onclick="window.location.href='./find_password.php';"><?=$locale("find_password")?></button>
-				<button type="button" class="btn gray_line_btn" onclick="window.location.href='./signup.php';"><?=$locale("signup")?></button>
+			<button type="button" class="btn login_btn main_btn">Sign In</button>
+			<div class="login_btn_box">
+				<button type="button" onclick="window.location.href='./find_password.php';"><?=$locale("find_password")?></button>
+				<p>|</p>
+				<button type="button" onclick="window.location.href='./signup.php';"><?=$locale("signup")?></button>
 			</div>
 		</form>
 	</div>

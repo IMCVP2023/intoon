@@ -12,7 +12,13 @@
 
 
 <section class="container accommodation">
-    <h1 class="page_title">Accommodation</h1>
+<h1 class="page_title">Venue
+			<div class="sub_btn_box">
+				<a href="/main/venue.php">Grand Walkerhil Seoul</a>
+				<a href="/main/accommodation.php" class="on">Accommodation</a>
+				<a href="/main/floor_plan.php">Floor Plan</a>
+			</div>
+		</h1>
     <div class="inner">
         <!-- content4 -->
         <h1 class="title">Room info & reservation</h1>
@@ -54,14 +60,14 @@
                 </div>
                 <div>
                     <p class="red_t">** The rates above include room only. (VAT included)</p>
-                    <table class="c_table detail_tabl">
+                    <table class="c_table detail_table type2">
+                        <!-- <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr> -->
                         <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">Grand Walkerhill<br>(Deluxe room)</td>
+                            <th rowspan="2">Grand Walkerhill<br>(Deluxe room)</th>
                             <td>
                                 Double (1 Bed)
                             </td>

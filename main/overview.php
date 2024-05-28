@@ -50,10 +50,16 @@ $floor = get_data($sql_floor);
 ?>
 
 <section class="container overview">
-	<h1 class="page_title">Overview</h1>
+	<h1 class="page_title">IMCVP 2024
+		<div class="sub_btn_box">
+				<a href="/main/welcome.php">Welcome Message</a>
+				<a href="/main/organizing_committee.php">Organization</a>
+				<a href="/main/overview.php" class="on">Overview</a>
+			</div>
+	</h1>
     <div class="table_wrap x_scroll inner">
 		<h3 class="title">Overview</h3>
-         <table class="c_table2 detail_table">
+         <table class="c_table2 detail_table type2">
              <colgroup>
                  <col width="280px">
                  <col width="*">
@@ -61,7 +67,7 @@ $floor = get_data($sql_floor);
              <tr>
                  <th>Title</th>
                  <td>
-				 	2024 International Meeting of Cardio Vascular disease Prevention
+				 	2024 International Meeting of CardioVascular disease Prevention
                  </td>
              </tr>
 			 <tr>
@@ -85,7 +91,7 @@ $floor = get_data($sql_floor);
              <tr>
                  <th>Hosted by</th>
                  <td>
-				 	Korean Society of Cardiovascular Disease Prevention(KSCP)
+				 	Korean Society of Cardiovascular Disease Prevention (KSCP)
                  </td>
              </tr>
              <!-- <tr>

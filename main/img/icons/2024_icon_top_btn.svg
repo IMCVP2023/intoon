@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="78" viewBox="0 0 78 78">
+  <defs>
+    <filter id="타원_118" x="0" y="0" width="78" height="78" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_1368" data-name="그룹 1368" transform="translate(-1621 -1727)">
+    <g id="그룹_1326" data-name="그룹 1326" transform="translate(60 1116)">
+      <g transform="matrix(1, 0, 0, 1, 1561, 611)" filter="url(#타원_118)">
+        <circle id="타원_118-2" data-name="타원 118" cx="30" cy="30" r="30" transform="translate(9 9)" fill="#fff"/>
+      </g>
+      <path id="패스_2830" data-name="패스 2830" d="M20.867,8.832l-8.7-8.7a.454.454,0,0,0-.641,0l-.99.988a.454.454,0,0,0,0,.642L16.776,8H.454A.453.453,0,0,0,0,8.454v1.4a.453.453,0,0,0,.454.453H16.776l-6.239,6.239a.453.453,0,0,0,0,.641l.99.989a.454.454,0,0,0,.641,0l8.7-8.7a.453.453,0,0,0,0-.641" transform="translate(1591.048 653.448) rotate(-90)" fill="#ada9bb"/>
+      <text id="Top" transform="translate(1600 668)" fill="#ada9bb" font-size="14" font-family="Barlow-SemiBold, Barlow" font-weight="600"><tspan x="-11.333" y="0">Top</tspan></text>
+    </g>
+  </g>
+</svg>

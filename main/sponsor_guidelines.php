@@ -5,13 +5,19 @@ include_once('./include/header.php');
 
 ?>
 <section class="abstract_submission_guideline container">
-    <h1 class="page_title">Sponsor Guidelines</h1>
+<h1 class="page_title">Sponsorship
+			<div class="sub_btn_box">
+				<a href="/main/sponsor.php">Sponsors</a>
+				<a href="/main/sponsor_guidelines.php" class="on">Sponsor Guidelines</a>
+				<a href="/main/sponsor_exhibition.php">Exhibition & Social Event</a>
+			</div>
+		</h1>
     <div class="inner">
-    <ul class="tab_green long abstract_submission">
+    <!-- <ul class="tab_green long abstract_submission">
             <li><a href="./sponsor.php">Sponsors</a></li>
             <li class="on"><a href="./sponsor_guidelines.php">Sponsor Guidelines</a></li>
             <li><a href="./sponsor_exhibition.php">Exhibition & Social Event</a></li>
-    </ul>
+    </ul> -->
         <div class="section section1">
             <div>
                 <div class="text_box">
@@ -33,16 +39,19 @@ include_once('./include/header.php');
                         <h3 class="title">＊Additional Other Sponsorship Items</h3>
                     </div>
                     <div class="table_wrap detail_table_common x_scroll">
-						<table class="c_table detail_table td_nowrap_table">
+						<table class="c_table detail_table td_nowrap_table type1">
 							<colgroup>
 								<col class="submission_col">
 								<col>
 							</colgroup>
-							<tr>
+                            <thead>
+                            <tr>
 								<th>Item</th>
                                 <th>Benefits</th>
                                 <th>Price (KRW)</th>
 							</tr>
+                            </thead>
+							<tbody>
 							<tr>
 								<td>Conference bag insert</td>
 								<td>- 1 company brochure to be inserted in the conference bag</td>
@@ -66,6 +75,7 @@ include_once('./include/header.php');
                                 </td>
 								<td>1,000,000</td>
 							</tr>
+                            </tbody>
 						</table>
 					
                 </div>
@@ -77,5 +87,5 @@ include_once('./include/header.php');
     </div>
     <!-- <button type="button" class="fixed_btn" onclick="window.location.href='./abstract_submission.php';"><?= $locale("abstract_submission_btn") ?></button> -->
 </section>
-<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./sponsor_exhibition.php'"><span>Go to<br/>Exhibition<Br>Plan</span></button>
+<!-- <button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./sponsor_exhibition.php'"><span>Go to<br/>Exhibition<Br>Plan</span></button> -->
 <?php include_once('./include/footer.php'); ?>

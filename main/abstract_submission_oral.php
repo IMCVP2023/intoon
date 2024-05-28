@@ -21,14 +21,24 @@ $sql_info = "SELECT
 $info = sql_fetch($sql_info);
 
 ?>
-<section class="abstract_submission_guideline container abstract_presentation_guideline">
-    <h1 class="page_title">Presentation Guidelines</h1>
+<section class="abstract_submission_guideline container abstract_presentation_guideline top_btn_move">
+        <h1 class="page_title">Call for Abstract
+			<div class="sub_btn_box">
+				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
+				<a href="/main/abstract_submission.php">Online submission</a>
+				<a href="/main/comingsoon.php" class="on">Presentation Guidelines</a>
+				<a href="/main/comingsoon.php">Awards & Grants</a>
+				
+				<!-- <a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->
+			</div>
+		</h1>
     <div class="inner">
-        <ul class="tab_green long presentation">
-            <li class="on"><a href="./abstract_submission_oral.php">Poster Oral</a></li>
-            <!-- <li><a href="./abstract_submission_poster.php">Guided Poster Presentation</a></li> -->
-            <li><a href="/main/comingsoon.php">Poster Exhibition only</a></li>
-        </ul>
+        <div class="type_btn_box">
+            <div class="oral">Poster oral</div>
+            <div>Poster exhibitions</div>
+        </div>
+       
         <div class="section section1">
             <?php
             if (count($key_date) > 0) {
@@ -118,7 +128,7 @@ $info = sql_fetch($sql_info);
 				<div class="text_box indent">
 					<ul>
 						<li>• Each presenter will be given 10 minutes.</li>
-						<li>• When the 7-minute presentation ends, a Question and Answer session for participants with the panel and the presenter will follow for 3 minutes.</li>
+						<li>• When the 7minute presentation ends, a Question and Answer session for participants with the panel and the presenter will follow for 3 minutes.</li>
 						<li class="red_t">※ Each individual presenter should take no more than 10 minutes to present. The slide show will end after passing the designated time.</li>
 					</ul>
 				</div>
@@ -202,7 +212,9 @@ $info = sql_fetch($sql_info);
         </div>
     </div>
 </section>
-
+<button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./registration.php'">
+    <img src="/main/img/icons/2024_abstract_icon.svg"/>
+</button>
 
 
 <?php include_once('./include/footer.php'); ?>

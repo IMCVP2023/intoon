@@ -29,20 +29,20 @@ function get_department_option_text($department_list, $selected)
 
 // topic
 $topic1_list = array(
-	array("idx" => 1, "order" => 1, "name_en" => "Diabetes & Obesity"),
-	array("idx" => 2, "order" => 2, "name_en" => "Women’s Heart Health"),
-	array("idx" => 3, "order" => 3, "name_en" => "Hyperlipidemia and CVD"),
-	array("idx" => 4, "order" => 4, "name_en" => "Epidemiology"),
-	array("idx" => 5, "order" => 5, "name_en" => "Precision medicine/ Digital healthcare"),
-	// array("idx" => 6, "order" => 6, "name_en" => "Preventive Cardiology"),
-	// array("idx" => 7, "order" => 7, "name_en" => "Cardiac arrhythmias"),
-	// array("idx" => 8, "order" => 8, "name_en" => "Peripheral arterial disease"),
-	// array("idx" => 9, "order" => 9, "name_en" => "Pulmonary hypertension"),
-	// array("idx" => 10, "order" => 10, "name_en" => "Geriatric pharmacology"),
-	// array("idx" => 11, "order" => 11, "name_en" => "Women’s heart health"),
-	// array("idx" => 12, "order" => 12, "name_en" => "Basic science and genetics"),
-	// array("idx" => 13, "order" => 13, "name_en" => "COVID-19 related cardio-pharmacotherapy"),
-	// array("idx" => 14, "order" => 14, "name_en" => "Diabetes & Obesity"),
+	array("idx" => 1, "order" => 1, "name_en" => "Ischemic heart disease/coronary artery disease"),
+	array("idx" => 2, "order" => 2, "name_en" => "Heart failure with reduced ejection fraction and preserved ejection fraction"),
+	array("idx" => 3, "order" => 3, "name_en" => "Cardiomyopathies"),
+	array("idx" => 4, "order" => 4, "name_en" => "Chronic Kidney Disease (CKD) and Cardiovascular Disease"),
+	array("idx" => 5, "order" => 5, "name_en" => "Preventive Cardiology"),
+	array("idx" => 6, "order" => 6, "name_en" => "Cardiac arrhythmias"),
+	array("idx" => 7, "order" => 7, "name_en" => "Peripheral arterial disease"),
+	array("idx" => 8, "order" => 8, "name_en" => "Basic science and genetics"),
+	array("idx" => 9, "order" => 9, "name_en" => "COVID-19 related cardio-pharmacotherapy"),
+	array("idx" => 10, "order" => 10, "name_en" => "Diabetes & Obesity"),
+	array("idx" => 11, "order" => 11, "name_en" => "Hyperlipidemia and CVD"),
+	array("idx" => 12, "order" => 12, "name_en" => "Epidemiology"),
+	array("idx" => 13, "order" => 13, "name_en" => "Precision medicine/ Digital healthcare"),
+	array("idx" => 14, "order" => 14, "name_en" => "Others"),
 	// array("idx" => 15, "order" => 15, "name_en" => "Hyperlipidemia and CVD"),
 	// array("idx" => 16, "order" => 16, "name_en" => "Epidemiology"),
 	// array("idx" => 17, "order" => 17, "name_en" => "Precision medicine/ Digital healthcare  ")
@@ -72,14 +72,24 @@ $topic1_list = array(
 // 	array("idx" => 19, "parent" => 4, "order" => 5, "name_en" => "Clinical vascular disease & prevention: others"),
 // 	//array("idx"=> 20, "parent"=> 5, "order"=> 5, "name_en"=>"Others")
 // );
-function get_topic1_option_text($topic_list, $selected)
-{
-	$topic_option_text = '<option value="0" hidden>select</option>';
-	foreach ($topic_list as $tp) {
-		$topic_option_text .= '<option name="topic" id="topic' . $tp['idx'] . '" value="' . $tp['idx'] . '" ' . ($tp['idx'] == $selected ? 'selected' : '') . '>' . $tp['order'] . '. ' . $tp['name_en'] . '</option>';
+
+function get_topic1_option_text($topic_list, $selected){
+	$topic_option_text = '<option value="" hidden>select</option>';
+	foreach($topic_list as $tp){
+		$topic_option_text .= '<option value="'.$tp['idx'].'" '.($tp['idx'] == $selected ? 'selected' : '').'>'.$tp['order'].'. '.$tp['name_en'].'</option>';
 	}
 	return $topic_option_text;
 }
+
+
+// function get_topic1_option_text($topic_list, $selected)
+// {
+// 	$topic_option_text = '<option value="0" hidden>select</option>';
+// 	foreach ($topic_list as $tp) {
+// 		$topic_option_text .= '<option name="topic" id="topic' . $tp['idx'] . '" value="' . $tp['idx'] . '" ' . ($tp['idx'] == $selected ? 'selected' : '') . '>' . $tp['order'] . '. ' . $tp['name_en'] . '</option>';
+// 	}
+// 	return $topic_option_text;
+// }
 // function get_topic2_option_text($topic_list, $selected, $parent)
 // {
 // 	$topic_option_text = '<option value="" hidden>select</option>';

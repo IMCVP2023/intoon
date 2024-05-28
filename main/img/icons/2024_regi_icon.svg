@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <g id="그룹_1420" data-name="그룹 1420" transform="translate(-1616 -2237)">
+    <g id="타원_129" data-name="타원 129" transform="translate(1616 2237)" fill="#257fe6" stroke="#e3edfd" stroke-width="10">
+      <circle cx="80" cy="80" r="80" stroke="none"/>
+      <circle cx="80" cy="80" r="75" fill="none"/>
+    </g>
+    <g id="그룹_1399" data-name="그룹 1399" transform="translate(1680 2327.445)">
+      <path id="패스_2837" data-name="패스 2837" d="M35.233,49.6a1.157,1.157,0,0,1-.8-.319,1.057,1.057,0,0,1,0-1.54L46.972,35.716,34.43,23.693a1.056,1.056,0,0,1,0-1.539,1.17,1.17,0,0,1,1.606,0L49.381,34.947a1.056,1.056,0,0,1,0,1.539L36.036,49.279a1.159,1.159,0,0,1-.8.319" transform="translate(-34.097 -21.835)" fill="none" stroke="#f6f6fa" stroke-width="3"/>
+      <path id="패스_2838" data-name="패스 2838" d="M35.233,49.6a1.157,1.157,0,0,1-.8-.319,1.057,1.057,0,0,1,0-1.54L46.972,35.716,34.43,23.693a1.056,1.056,0,0,1,0-1.539,1.17,1.17,0,0,1,1.606,0L49.381,34.947a1.056,1.056,0,0,1,0,1.539L36.036,49.279a1.159,1.159,0,0,1-.8.319" transform="translate(-18.519 -21.835)" fill="none" stroke="#f6f6fa" stroke-width="3"/>
+    </g>
+    <text id="Registration" transform="translate(1696 2309)" fill="#f6f6fa" font-size="22" font-family="Barlow-Bold, Barlow" font-weight="700" letter-spacing="-0.02em"><tspan x="-57.838" y="0">Registration</tspan></text>
+  </g>
+</svg>

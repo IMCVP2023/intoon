@@ -21,10 +21,15 @@
 	<!-- [240502] sujeong / theme 넣을 경우 css 깨짐 -->
     <!-- <link rel="stylesheet" type="text/css" href="/main/js/slick/slick/slick-theme.css" />-->
 
+	<!-- Google font -->
     <link rel="stylesheet" href="https://use.typekit.net/uwj4our.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/main/css/common.css?ver=<?= time() ?>">
     <link rel="stylesheet" href="/main/css/style.css?ver=<?= time() ?>">
     <link rel="stylesheet" href="/main/css/style2.css?ver=<?= time() ?>">

@@ -588,7 +588,7 @@ if($language == "ko") {
 												<td>
 													<div>
 														<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$name_title} {$fname},</p>
-														<p style='font-size:14px;color:#170F00;margin-top:14px;'>We express our gratitude for your registration for the International Meeting Cardio Vascular disease Prevention (IMCVP) 2024.	The registration details are presented below.<br/>Should you have any inquiries regarding your registration, kindly reach out to the IMCVP 2024 Secretariat for assistance.(<a href='mailto:secretariat@imcvp.org'>secretariat@imcvp.org</a>)</p>
+														<p style='font-size:14px;color:#170F00;margin-top:14px;'>We express our gratitude for your registration for the International Meeting CardioVascular disease Prevention (IMCVP) 2024.	The registration details are presented below.<br/>Should you have any inquiries regarding your registration, kindly reach out to the IMCVP 2024 Secretariat for assistance.(<a href='mailto:secretariat@imcvp.org'>secretariat@imcvp.org</a>)</p>
 														<table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 															<tbody>
 																<tr style='border-bottom:1px solid #000;'>

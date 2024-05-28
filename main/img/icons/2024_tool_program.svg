@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+  <g id="그룹_1327" data-name="그룹 1327" transform="translate(-1580 -226)">
+    <rect id="사각형_1481" data-name="사각형 1481" width="70" height="70" rx="22" transform="translate(1580 226)" fill="#ada9bb"/>
+    <g id="그룹_1320" data-name="그룹 1320" transform="translate(1601 239)">
+      <rect id="사각형_1474" data-name="사각형 1474" width="13.946" height="1.958" transform="translate(9.129 6.38)" fill="#f6f6fa"/>
+      <rect id="사각형_1475" data-name="사각형 1475" width="13.946" height="1.958" transform="translate(9.129 11.913)" fill="#f6f6fa"/>
+      <rect id="사각형_1476" data-name="사각형 1476" width="13.946" height="1.958" transform="translate(9.129 17.445)" fill="#f6f6fa"/>
+      <rect id="사각형_1477" data-name="사각형 1477" width="1.945" height="1.958" transform="translate(4.858 6.38)" fill="#f6f6fa"/>
+      <rect id="사각형_1478" data-name="사각형 1478" width="1.945" height="1.958" transform="translate(4.858 11.913)" fill="#f6f6fa"/>
+      <rect id="사각형_1479" data-name="사각형 1479" width="1.945" height="1.958" transform="translate(4.858 17.445)" fill="#f6f6fa"/>
+      <path id="패스_2815" data-name="패스 2815" d="M5,0v31.22a1.822,1.822,0,0,0,1.82,1.82H25.292a.97.97,0,0,0,.692-.287l6.663-6.663a.973.973,0,0,0,.287-.692V0ZM25.85,30.12V25.958h4.162ZM30.976,24h-6.1a.98.98,0,0,0-.979.979v6.1H6.958V1.954H30.976Z" transform="translate(-5 -0.001)" fill="#f6f6fa"/>
+    </g>
+    <text id="Program" transform="translate(1615 285)" fill="#f6f6fa" font-size="10" font-family="Barlow-SemiBold, Barlow" font-weight="600"><tspan x="-18.94" y="0">Program</tspan></text>
+  </g>
+</svg>
