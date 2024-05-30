@@ -35,7 +35,8 @@ $price = get_data($sql_price);
 			<div class="sub_btn_box">
 				<a href="/main/registration_guidelines.php" class="on">Guidelines</a>
 				<a href="/main/registration.php">Go to Registration</a>
-				<a href="/main/registration_rating_guides.php" class="kor">평점안내</a>
+				<a href="/main/comingsoon.php" class="kor">평점안내</a>
+				<!-- <a href="/main/registration_rating_guides.php" class="kor">평점안내</a> -->
 			</div>
 		</h1>
         <div class="inner">
@@ -47,7 +48,7 @@ $price = get_data($sql_price);
                         <ul class="clearfix">
                             <li>
                                 <p></p>
-                                <p class="">Click the “go to online registration” button</p>
+                                <p class="">Click the <span class="point4_txt">“go to online registration”</span> button</p>
                             </li>
                             <li>
                                 <p></p>
@@ -69,7 +70,7 @@ $price = get_data($sql_price);
                     </div>
                 </div>
            <!--1. important dates start-->
-            <h3 class="title">Key Dates</h3>
+            <h3 class="title">Key Dates<span>&nbsp;&nbsp;&nbsp; *KST (UTC+9)</span></h3>
             <p class="registration_txt">All participants are required to register through the IMCVP 2024 online registration system and are advised to register in advance (by November 3, 2024). 
                 <br/>Please read the following registration guidelines carefully.</p>
             <div class="table_wrap detail_table_common details icomes_air">
@@ -80,11 +81,11 @@ $price = get_data($sql_price);
                     </colgroup>
                     <tr>
                         <th>Registration<br class="br_mb_only"> Open</th>
-                        <td class="f_bold">Monday, <span class="f_bold violet_t">June 3</span>, 2024</td>
+                        <td class="f_bold">Monday, <span class="f_bold point4_txt">June 3</span>, 2024</td>
                     </tr>
                     <tr>
                         <th>Early-bird Registration<br class="br_mb_only"> Deadline</th>
-                        <td class="f_bold">Sunday, <span class="f_bold violet_t">September 1</span>, 2024</td>
+                        <td class="f_bold">Sunday, <span class="f_bold point4_txt">September 1</span>, 2024</td>
                     </tr>
                     <!-- <tr>
                         <th class="close_th">Early-bird Registration<br class="br_mb_only"> Deadline</th>
@@ -92,7 +93,7 @@ $price = get_data($sql_price);
                     </tr> -->
                     <tr>
                         <th>Pre-registration<br class="br_mb_only"> Deadline</th>
-                        <td class="f_bold">Sunday, <span class="f_bold violet_t">November 3</span>, 2024</td>
+                        <td class="f_bold">Sunday, <span class="f_bold point4_txt">November 3</span>, 2024</td>
                     </tr>
                 </table>
             </div>
@@ -152,24 +153,24 @@ $price = get_data($sql_price);
 							<thead>
 								<tr>
 									<th rowspan="2">Classification</th>
-									<th colspan="2">Early-bird Registration</th>
-									<th colspan="2">Pre-registration</th>
-									<th colspan="2">On-site Registration</th>
+									<th colspan="2" class="dark_blue_th">Early-bird Registration</th>
+									<th colspan="2" class="light_blue_th pre_txt">Pre-registration</th>
+									<th colspan="2" class="light_gray_th pre_txt">On-site Registration</th>
 								</tr>
                                 <tr>
-                                    <th>Member</th>
-                                    <th>Non-Member</th>
-                                    <th>Member</th>
-                                    <th>Non-Member</th>
-                                    <th>Member</th>
-                                    <th>Non-Member</th>
+                                    <th class="dark_blue_th_1">Member</th>
+                                    <th class="dark_blue_th_1">Non-Member</th>
+                                    <th class="light_blue_th_1 pre_txt">Member</th>
+                                    <th class="light_blue_th_1 pre_txt">Non-Member</th>
+                                    <th class="light_gray_th_1 pre_txt">Member</th>
+                                    <th class="light_gray_th_1 pre_txt light_gray_th_2">Non-Member</th>
                                 </tr>
 							</thead>
 							<tbody>
 								<tr class="text_center">
 									<td>MD,Professor</td>
-									<td>USD 100</td>
-									<td>USD 150</td>
+									<td class="point4_txt bold">USD 100</td>
+									<td class="point4_txt bold">USD 150</td>
 									<td>USD 150</td>
 									<td>USD 200</td>
 									<td>USD 200</td>
@@ -180,8 +181,8 @@ $price = get_data($sql_price);
                                         Trainee,<br>
 										students
 									</td>
-									<td>USD 50</td>
-									<td>USD 75</td>
+									<td class="point4_txt bold">USD 50</td>
+									<td class="point4_txt bold">USD 75</td>
 									<td>USD 75</td>
 									<td>USD 80</td>
 									<td>USD 80</td>
@@ -194,8 +195,8 @@ $price = get_data($sql_price);
                                          Nutritionists,Researchers<br>
 										<!-- Corporate member, Others<br> -->
 									</td>
-									<td>USD 75</td>
-									<td>USD 100</td>
+									<td class="point4_txt bold">USD 75</td>
+									<td class="point4_txt bold">USD 100</td>
 									<td>USD 100</td>
 									<td>USD 125</td>
 									<td>USD 125</td>
@@ -213,24 +214,24 @@ $price = get_data($sql_price);
 							<thead>
 								<tr>
 									<th rowspan="2">Classification</th>
-									<th colspan="2">Early-bird Registration</th>
-									<th colspan="2">Pre-registration</th>
-									<th colspan="2">On-site Registration</th>
+									<th colspan="2" class="dark_blue_th">Early-bird Registration</th>
+									<th colspan="2" class="light_blue_th pre_txt">Pre-registration</th>
+									<th colspan="2" class="light_gray_th pre_txt">On-site Registration</th>
 								</tr>
                                 <tr>
-                                    <th>Member</th>
-                                    <th>Non-Member</th>
-                                    <th>Member</th>
-                                    <th>Non-Member</th>
-                                    <th>Member</th>
-                                    <th>Non-Member</th>
+                                    <th class="dark_blue_th_1">Member</th>
+                                    <th class="dark_blue_th_1">Non-Member</th>
+                                    <th class="light_blue_th_1 pre_txt">Member</th>
+                                    <th class="light_blue_th_1 pre_txt">Non-Member</th>
+                                    <th class="light_gray_th_1 pre_txt">Member</th>
+                                    <th class="light_gray_th_1 pre_txt light_gray_th_2">Non-Member</th>
                                 </tr>
 							</thead>
 							<tbody>
 								<tr class="text_center">
-									<td>MD(봉직의),Professor</td>
-									<td>KRW 100,000</td>
-									<td>KRW 150,000</td>
+									<td>MD (봉직의),Professor</td>
+									<td class="point4_txt bold">KRW 100,000</td>
+									<td class="point4_txt bold">KRW 150,000</td>
 									<td>KRW 150,000</td>
 									<td>KRW 200,000</td>
 									<td>KRW 200,000</td>
@@ -238,11 +239,11 @@ $price = get_data($sql_price);
 								</tr>
                                 <tr class="text_center">
 									<td>
-                                    Trainee(전임의, 전공의),<br>
+                                    Trainee (전임의, 전공의),<br>
 										students
 									</td>
-                                    <td>KRW 50,000</td>
-									<td>KRW 75,000</td>
+                                    <td class="point4_txt bold">KRW 50,000</td>
+									<td class="point4_txt bold">KRW 75,000</td>
 									<td>KRW 75,000</td>
 									<td>KRW 80,000</td>
 									<td>KRW 80,000</td>
@@ -255,8 +256,8 @@ $price = get_data($sql_price);
                                          Nutritionists,Researchers<br>
 										<!-- Corporate member, Others<br> -->
 									</td>
-									<td>KRW 75,000</td>
-									<td>KRW 100,000</td>
+									<td class="point4_txt bold">KRW 75,000</td>
+									<td class="point4_txt bold">KRW 100,000</td>
 									<td>KRW 100,000</td>
 									<td>KRW 125,000</td>
 									<td>KRW 125,000</td>
@@ -268,10 +269,10 @@ $price = get_data($sql_price);
                     
 					<div class="mt10">
 						<ul class="indent_ul">
-							<li>• A registration confirmation will be sent to your registered email address once you have completed your registration with full payment. If you have not received it, please contact the congress secretariat.</li>
-							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as 'unpaid.' If you need to confirm the payment completion, you can check the payment status on 'my page.' (Please be aware that it may take some time for the payment confirmation to be updated.)</li>
+							<li>• A registration confirmation will be sent to your registered email address once you have completed your registration with full payment.<br/>If you have not received it, please contact the congress secretariat.</li>
+							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as <span class="bold point4_txt">'unpaid.'</span><br/>If you need to confirm the payment completion, you can check the payment status on <span class="bold point4_txt">'my page.'</span> (Please be aware that it may take some time for the payment confirmation to be updated.)</li>
 							<li>• Registration will not be considered complete until the full registration fee has been paid.</li>
-							<li>• The online registration page is optimized for Google Chrome and Microsoft Edge. If you encounter any issues with online registration, please reach out to the congress secretariat for assistance.</li>
+							<li>• The online registration page is optimized for <span class="bold point4_txt">Google Chrome</span> and <span class="bold point4_txt">Microsoft Edge</span>.<br/>If you encounter any issues with online registration, please reach out to the congress secretariat for assistance.</li>
 							<li>• If you would like to modify your registration information, please contact the congress secretariat at <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
 						</ul>
 					</div>
@@ -307,7 +308,7 @@ $price = get_data($sql_price);
 								</tr>
 								<tr>
 									<th>Account Number</th>
-									<td>1006-101-343333</td>
+									<td>1005-403-423214</td>
 								</tr>
 								<tr>
 									<th>Account Holder</th>
@@ -347,7 +348,7 @@ $price = get_data($sql_price);
 
             <!--3. Cancellation & Refund Policy start-->
             <h3 class="title">Cancellation & Refund Policy</h3>
-			<a href="" class="btn long_btn text_long not_yet" target="_blank">
+			<a href="" class="btn long_btn text_long not_yet" target="_blank" style="color:#FFF !important">
 			<!-- <a href="./download/ICOMES_2023_Registration_Cancellation_Request_Form.docx" class="btn long_btn text_long" target="_blank"> -->
                 <img src="./img/icons/icon_download_white.svg" alt="">Cancellation & Refund  Form Download</a>
             <div class="details payment_detail mt10">
@@ -355,7 +356,7 @@ $price = get_data($sql_price);
                 <div class="">
                     <ul class="indent_ul">
                         <li>• The cancellation of full payment registration and reimbursement will only be accepted in written form and must be submitted via email to the secretariat.<br>(<a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a>)</li>
-                        <li>• Prior to making a payment, it is possible to cancel registration through "My IMCVP - Registration". However, payment has already been processed, it is necessary to contact the secretariat for further assistance.</li>
+                        <li>• Prior to making a payment, it is possible to cancel registration through <span class="point4_txt bold">"My IMCVP - Registration"</span>. <br/>However, payment has already been processed, it is necessary to contact the secretariat for further assistance.</li>
                         <li>• Please note that refunds will be processed after the conference.</li>
                         <li>• All bank service charges and administration fees will be deducted from the refund.</li>
                     </ul>
@@ -391,115 +392,14 @@ $price = get_data($sql_price);
                       <img src="./img/sample/credit_card.jpg" alt="credit_card_img"> -->
         </div>
     </div>
-    <!-- <div class="info_wrap"> -->
-    <!-- <p class="details_title">* <?= $locale("payment_bank_tit") ?></p>
-                    <ul>
-                        <li>- <?= $locale("payment_bank_txt1") ?></li>
-                        <li>- <?= $locale("payment_bank_txt2") ?></li>
-                        <li>- <?= $locale("payment_bank_txt3") ?></li>
-                    </ul> -->
-    <!-- <div class="table_wrap"> -->
-    <!-- <table class="c_table2 detail_table">
-                            <colgroup>
-                                <col width="200px">
-                                <col>
-                            </colgroup>
-                            <tr>
-                                <th><?= $locale("payment_bank_name_tit") ?></th>
-                                <td>
-                                    <?= $registration['bank_name'] ?>-->
-    <!-- Hana Bank -->
-    <!-- </td>
-                        </tr>
-                        <tr>
-                            <th><?= $locale("payment_account_number_tit") ?></th>
-                            <td> -->
-    <!--<?= $registration['account_number'] ?>-->
-    <!-- 584-910003-16504 -->
-    <!-- </td>
-                        </tr>
-                        <tr>
-                            <th><?= $locale("payment_account_holder_tit") ?></th>
-                            <td> -->
-    <!-- <?= $registration['account_holder'] ?> -->
-    <!-- 대한비만학회 등록비<br>(International Congress
-    on obesity and<br>Metabolic Syndrome) -->
-    <!-- </td>
-                            </tr>
-                            <tr>
-                                <th><?= $locale("address") ?></th>
-                                <td> -->
-    <!-- <?= $registration['address'] ?> -->
-    <!-- Seoul, Mapo Gu, manrijaero 14<br>Renaissance
-    Tower 1010 -->
-    <!-- </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div> -->
-    <!--4. Payment Method end-->
-
-    <!--5. Cancellation start-->
-    <!-- <h3 class="title"><?= $locale("cancellation_tit") ?></h3> -->
-    <!-- <div class="details cancel_details"> -->
-    <!--     <p class="pre"><?= $locale("cancellation_txt") ?></p> -->
-    <!--     <div class="table_wrap"> -->
-    <!--         <table class="c_table2 detail_table"> -->
-    <!--             <thead> -->
-    <!--                 <tr> -->
-    <!--                     <th><?= $locale("date") ?></th> -->
-    <!--                     <th><?= $locale("cancellation_table_category2") ?></th> -->
-    <!--                 </tr> -->
-    <!--             </thead> -->
-    <!--             <tbody> -->
-    <!--                 <tr> -->
-    <!--                     <td> -->
-    <!--                         <!-- <?= $locale("cancellation_table_data1") ?> -->
-    <!--                         Received before Aug 10(Thu), -->
-    <!--                         2023(24:00 KST) -->
-    <!--                     </td> -->
-    <!--                     <td> -->
-    <!--                         <!-- <?= $locale("cancellation_table_data1_1") ?> -->
-    <!--                         100% Refund -->
-    <!--                     </td> -->
-    <!--                 </tr> -->
-    <!--                 <tr> -->
-    <!--                     <td> -->
-    <!--                         <!-- <?= $locale("cancellation_table_data2") ?> -->
-    <!--                         Received after Aug 10(Thu), -->
-    <!--                         2023(24:00 KST) -->
-    <!--                     </td> -->
-    <!--                     <td> -->
-    <!--                         <!-- <?= $locale("cancellation_table_data2_1") ?> -->
-    <!--                         Non-Refund -->
-    <!--                     </td> -->
-    <!--                 </tr> -->
-    <!--             </tbody> -->
-    <!--         </table> -->
-    <!--     </div> -->
-    <!-- </div> -->
-    <!--Cancellation end-->
-
-    <!--Contact for Registration start-->
-    <!-- <h3 class="title"> -->
-    <!--     <?= $locale("registration_contact_tit") ?> -->
-    <!--     Contact for Registration -->
-    <!-- </h3> -->
-    <!-- <div class="details details_bg"> -->
-    <!--     <p class="pre"><b class="point_txt">TEL : </b><a href="tel:82-2-2285-2582"> +82-2-2285-2582</a> | <b class="point_txt">E-mail : </b><a href="mailto:icomes_registration@into-on.com">: icomes@into-on.com</a> -->
-    <!--     </p> -->
-    <!-- </div> -->
-    <!-- Contact for Registration end -->
-    <!-- </div> -->
-    <!--//section1-->
+   
     </div>
 
     <!-- <button type="button" class="fixed_btn" onclick="window.location.href='./registration.php';"> -->
     <!-- 	<?= $locale("registration") ?> -->
     <!-- </button> -->
-	<div class="centerT">
-		<a href="./registration.php" class="btn long_btn text_long online_registration_alert">Go to Online Registration</a>
+	<div class="centerT" >
+		<a href="./registration.php" class="btn long_btn text_long" style="color:#FFF !important">Go to Online Registration</a>
 	</div>
 
     <!-- 평점안내 팝업 / 시작 -->

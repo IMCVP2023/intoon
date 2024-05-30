@@ -563,7 +563,7 @@ if($language == "ko") {
 								</tr>
 								<tr style='border-bottom:1px solid #000;'>
 									<th style='width:150px; text-align:left; font-size:14px; padding:10px; background-color:#DBF5F0; '>Bank Information</th>
-									<td style='font-size:14px; padding:10px;'>584-910003-16504, Hana Bank (하나은행)</td>
+									<td style='font-size:14px; padding:10px;'>1005-403-423214, 	WOORI BANK (우리은행)</td>
 								</tr> 
 							";
 			}

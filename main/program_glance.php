@@ -6,7 +6,8 @@
 			<div class="sub_btn_box">
 				<a href="/main/program_glance.php" class="on">Program at a Glance</a>
 				<a href="/main/scientific_program1.php">Scientific Program</a>
-				<a href="/main/invited_speaker.php">Invited Speakers</a>
+				<a href="/main/comingsoon.php">Invited Speakers</a>
+				<!-- <a href="/main/invited_speaker.php">Invited Speakers</a> -->
 			</div>
 		</h1>
 	<div class="inner">
@@ -24,34 +25,34 @@
 				<table class="table program_glance_table" name="1">
 					<colgroup>
 						<col width="120px">
-						<col width="40%"/>
-						<col width="40%"/>
-						<col width="10%"/>
+						<col width="45%"/>
+						<col width="45%"/>
+						<!-- <col width="10%"/> -->
 					</colgroup>	
 					<thead>
 						<tr class="day" style="border:none">
-							<th colspan="4" class="program_day_div">
+							<th colspan="3" class="program_day_div">
 								<div class="program_day_div">DAY 1 (November 29, Fri)</div>
 							</th>
 						</tr>
 						<tr class="program_blank_div">
-							<th colspan="4" class="program_blank_div"></th>
+							<th colspan="3" class="program_blank_div"></th>
 						</tr>
 						<tr class="program_head_div">
 							<th>Time</th>
 							<th>Room A</th>
 							<th>Room B</th>
-							<th>Room C</th>
+							<!-- <th>Room C</th> -->
 						</tr>
 						<tr class="program_blank_div">
-							<th colspan="4" class="program_blank_div"></th>
+							<th colspan="3" class="program_blank_div"></th>
 						</tr>
 					</thead>
 					<tbody name="day" class="day_1 day_tbody">
 						<tr>
 							<td class="">08:50~09:00</td>
 							<td colspan="2">Registration and Opening Remark</td>
-							<td rowspan="11">TBD</td>
+							<!-- <td rowspan="11">TBD</td> -->
 						</tr>
 						<tr>
 							<td class="">09:00~10:40</td>
@@ -137,27 +138,27 @@
 					</tbody>
 					<thead>
 						<tr class="program_blank_div">
-							<th colspan="4" class="program_blank_div"></th>
+							<th colspan="3" class="program_blank_div"></th>
 						</tr>
 						<tr class="program_blank_div">
-							<th colspan="4" class="program_blank_div"></th>
+							<th colspan="3" class="program_blank_div"></th>
 						</tr>
 						<tr class="day" style="border:none">
-							<th colspan="4" class="program_day_div day_2">
+							<th colspan="3" class="program_day_div day_2">
 								<div class="program_day_div day_2">DAY 2 (November 30, Sat)</div>
 							</th>
 						</tr>
 						<tr class="program_blank_div">
-							<th colspan="4" class="program_blank_div"></th>
+							<th colspan="3" class="program_blank_div"></th>
 						</tr>
 						<tr class="program_head_div">
 							<th>Time</th>
 							<th>Room A</th>
 							<th>Room B</th>
-							<th>Room C</th>
+							<!-- <th>Room C</th> -->
 						</tr>
 						<tr class="program_blank_div">
-							<th colspan="4" class="program_blank_div"></th>
+							<th colspan="3" class="program_blank_div"></th>
 						</tr>
 					</thead>
 					<tbody name="day" class="day_tbody day_2">
@@ -171,7 +172,7 @@
 								Breakfast Symposium 2<br/>
 								<input type="hidden" name="e" value="room2">
 							</td>
-							<td rowspan="12">TBD</td>
+							<!-- <td rowspan="12">TBD</td> -->
 						</tr>
 						<tr>
 							<td class="">08:00~08:30</td>
@@ -228,8 +229,8 @@
 								Symposium 11
 								<input type="hidden" name="e" value="room1">
 							</td>
-							<td class="yellow_bg pointer" name="hot_topics">
-								Hot topics in CPP<br/>
+							<td class="yellow_bg pointer" name="symposium_12">
+								Symposium 12<br/>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -246,12 +247,12 @@
 						</tr>
 						<tr>
 							<td class="">16:00~17:40</td>
-							<td class="violet_bg pointer" name="satellite_symposium_3">
-								Satellite Symposium 3
+							<td class="yellow_bg pointer" name="symposium_13">
+								Symposium 13
 								<input type="hidden" name="e" value="room1">
 							</td>
-							<td class="violet_bg pointer" name="satellite_symposium_4">
-								Satellite Symposium 4
+							<td class="yellow_bg pointer" name="symposium_14">
+								Symposium 14
 								<input type="hidden" name="e" value="room2">
 							</td>
 							

@@ -39,7 +39,7 @@ $info = sql_fetch($sql_info);
             <div>
                 <div class="text_box">
                     <ul>
-                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="dark_blue_t bold">poster oral,&nbsp;</span><span class="light_blue_t bold">poster exhibitions.</span></li>
+                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="dark_blue_t bold">poster oral,&nbsp;</span><span class="light_blue_t bold">poster exhibitions,&nbsp;</span><span class="dark_gray_txt bold">Either.</span></li>
                         <li>All congress abstracts must be submitted online via the "Online Submission System."</li>
                         <li>Submitted abstracts will be reviewed by the Scientific Program Committee, and committee might request an oral presentation.</li>
                         <li>All presenters are required to register and pay the registration fee.</li>
@@ -106,8 +106,10 @@ $info = sql_fetch($sql_info);
                     </div>
                     <div class="text_box">
                     <ul class="abstract_type">
-                        <li><a href="./abstract_submission_oral.php">Poster oral</a></li>
+                        <li><a href="./comingsoon.php">Poster oral</a></li>
+                        <!-- <li><a href="./abstract_submission_oral.php">Poster oral</a></li> -->
                         <li><a href="./comingsoon.php">Poster exhibitions</a></li>
+                        <li><a href="./comingsoon.php">Either</a></li>
                     </ul>
                 </div>
             </div>
@@ -134,7 +136,7 @@ $info = sql_fetch($sql_info);
 						</li>
 						<li>
 							<p></p>
-							<p class="">To review or make changes to your submitted abstracts, please visit ‘My IMCVP’.</p>
+							<p class="">To review or make changes to your submitted abstracts, please visit <span class="bold point4_txt">‘My IMCVP’</span>.</p>
 						</li>
 						<li>
 							<p></p>
@@ -162,7 +164,7 @@ $info = sql_fetch($sql_info);
                             <td>
                                 <p class="dark_blue_t bold">Poster oral</p>
                                 <p class="light_blue_t bold">Poster exhibitions only</p>
-                                <p class="bold">Either</p>
+                                <p class="dark_gray_txt bold">Either</p>
                                 <p>(* Scientific committee may change your presentation type after reviewing it.)</p>
                             </td>
                         </tr>
@@ -250,11 +252,11 @@ $info = sql_fetch($sql_info);
                     <h3 class="title"><?= $locale("notification_of_acceptance") ?></h3>
                 </div>
                 <div class="text_box indent">
-                    <ul>
+                    <ul class="indent_ul">
                         <li>• All submitted abstracts will be reviewed by the Scientific Program Committee according to reviewing procedures.</li>
-                        <li>• It is mandatory for all presenters to complete the registration process and pay the full registration fee by the registration deadline of <span class="violet_t">November 3, 2024.</span> The registration fee will be fully refunded after the conference.</li>
+                        <li>• It is mandatory for all presenters to complete the registration process and pay the full registration fee by the registration deadline of <span class="point4_txt bold">November 3, 2024.</span> The registration fee will be fully refunded after the conference.</li>
                         <li>• If the submission deadline changes, the acceptance notification also changes. The
-                            secretariat will be notified via ICOMES website or newsletter.</li>
+                            secretariat will be notified via IMCVP website or newsletter.</li>
                     </ul>
                 </div>
             </div>
@@ -266,7 +268,7 @@ $info = sql_fetch($sql_info);
                     <h3 class="title"><?= $locale("withdrawal_policy") ?></h3>
                 </div>
                 <div class="text_box indent">
-                    <ul>
+                    <ul class="indent_ul">
                         <li>• If the presenting author of an accepted abstract does not register by 3 November 2024, the abstract will be automatically withdrawn from the final program.</li>
                         <li>• If you would like to withdraw an abstract, please notify the IMCVP 2024 Secretariat(<a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>) as soon as possible.</li>
                     </ul>
@@ -280,7 +282,7 @@ $info = sql_fetch($sql_info);
                     <h3 class="title">Originality & Eligibility</h3>
                 </div>
                 <div class="text_box indent">
-                    <ul>
+                    <ul class="indent_ul">
                         <li>• If the submission does not comply with the prescribed format or deviates from the basic purpose of this congress, it may be rejected at the discretion of the Scientific Committee.</li>
                         <li>• The subject of the abstract is limited to unpublished research results, and editing of content previously presented at other conferences is not accepted for submission.</li>
                         <li>• The submitted and accepted abstracts may be published on the website, application, abstract book(PDF), and other printed materials of the Korean Society of Cardiovascular Disease Prevention(KSCP).</li>
@@ -313,6 +315,23 @@ $info = sql_fetch($sql_info);
     <!-- <button type="button" class="fixed_btn" onclick="window.location.href='./abstract_submission.php';"><?= $locale("abstract_submission_btn") ?></button> -->
 </section>
 <button type="button" class="btn_fixed_triangle fixed_btn_pc pc_only" onClick="location.href='./abstract_submission.php'">
-    <img src="/main/img/icons/2024_abstract_icon.svg"/>
+    <img src="/main/img/icons/2024_abstract_icon.svg" class="go_abstract_icon" style="width: 100%;"/>
+    <!-- <img src="/main/img/icons/2024_abstract_icon.svg" class="go_abstract_icon"/> -->
 </button>
+
+<script>
+    
+        // const abstractImg = document.querySelector(".go_abstract_icon");
+
+        // abstractImg.addEventListener("mouseover", ()=>{
+        //     console.log("hi")
+        //     abstractImg.src = "/main/img/icons/2024_abstract_icon-1.svg"
+        // })
+
+        // abstractImg.addEventListener("mouseleave", ()=>{
+        //     console.log("hi")
+        //     abstractImg.src = "/main/img/icons/2024_abstract_icon.svg"
+        // })
+ 
+</script>
 <?php include_once('./include/footer.php'); ?>

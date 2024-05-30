@@ -166,14 +166,14 @@
             <?php
                 if($_SESSION["USER"]["regi_status"]==2 || $_SESSION["USER"]["regi_status"]==5){
             ?>
-			<div class="down_btns">
+			<!-- <div class="down_btns">
 				<button class="btn blue_btn nowrap book"><img src="./img/icons/icon_download_white.svg" alt="">
                     <a href="http://184a8b4a1a076d93.kinxzone.com/Abstractbook.pdf" target="_blank">Abstract Book Download</a>
                 </button>
 				<button class="btn blue_btn nowrap book"><img src="./img/icons/icon_download_white.svg" alt="">
                     <a href="http://184a8b4a1a076d93.kinxzone.com/Programbook.pdf" target="_blank">Program Book Download</a>
                 </button>
-			</div>
+			</div> -->
             <?php
                 }
             ?>

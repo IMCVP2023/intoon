@@ -26,11 +26,12 @@
 			<!-- <div class="text_r"> -->
 			<!-- 	<a href="./find_password.php"><?=$locale("find_password")?> ></a> -->
 			<!-- </div> -->
-			<button type="button" class="btn login_btn main_btn">Sign In</button>
+			<button type="button" class="btn login_btn main_btn" style="color:#FFF !important">Sign In</button>
 			<div class="login_btn_box">
 				<button type="button" onclick="window.location.href='./find_password.php';"><?=$locale("find_password")?></button>
 				<p>|</p>
-				<button type="button" onclick="window.location.href='./signup.php';"><?=$locale("signup")?></button>
+				<button type="button" class="not_yet"><?=$locale("signup")?></button>
+				<!-- <button type="button" onclick="window.location.href='./signup.php';"><?=$locale("signup")?></button> -->
 			</div>
 		</form>
 	</div>

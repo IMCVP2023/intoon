@@ -396,7 +396,7 @@
 										<input class="passwords" name="kor_pw" type="password" maxlength="60">
 									</li>
 									<li>
-										<button onclick="kor_api()" type="button" class="btn">회원인증</button>
+										<button onclick="kor_api()" type="button" class="btn"  style="color:#FFF !important">회원인증</button>
 									</li>
 								</ul>
 								<div class="clearfix2">
@@ -422,7 +422,7 @@
 									<input type="text" name="email" class="required" maxlength="50">
 									<!-- <span class="mini_alert red_txt red_alert"></span> -->
 								</div>
-								<span class="mini_alert brown_txt">Please make sure you have entered your ID correctly as you can't modify it later.</span>
+								<span class="mini_alert brown_txt"><br/>Please make sure you have entered your ID correctly as you can't modify it later.</span>
 							</td>
 						</tr>
 						<tr>

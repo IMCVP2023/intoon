@@ -79,12 +79,13 @@
 			<div class="sub_btn_box">
 				<a href="/main/program_glance.php">Program at a Glance</a>
 				<a href="/main/scientific_program1.php" class="on">Scientific Program</a>
-				<a href="/main/invited_speaker.php">Invited Speakers</a>
+				<a href="/main/comingsoon.php">Invited Speakers</a>
+				<!-- <a href="/main/invited_speaker.php">Invited Speakers</a> -->
 			</div>
 		</h1>
 	<div class="inner">
 		<ul class="program_detail_tab">
-			<li class="on"><a href="/main/scientific_program1.php">DAY 1 <br class="mb_only"/>(November 29, Fri)</a></li>
+			<li class="on"><a href="/main/scientific_program.php">DAY 1 <br class="mb_only"/>(November 29, Fri)</a></li>
 			<li><a href="/main/scientific_program2.php">DAY 2 <br class="mb_only"/>(November 30, Sat)</a></li>
 		</ul>
 		<!-- <ul class="program_color_txt">
@@ -459,7 +460,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD(TBD)<br/>TBD (TBD)</p>
+											<p>TBD (TBD)<br/>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -998,7 +999,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD(TBD)<br/>TBD (TBD)</p>
+											<p>TBD (TBD)<br/>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">

@@ -42,7 +42,9 @@
 			<div class="sub_btn_box">
 				<a href="/main/sponsor.php" class="on">Sponsors</a>
 				<a href="/main/sponsor_guidelines.php">Sponsor Guidelines</a>
-				<a href="/main/sponsor_exhibition.php">Exhibition & Social Event</a>
+				<a href="/main/comingsoon.php">Exhibition & Social Event</a>
+
+				<!-- <a href="/main/sponsor_exhibition.php">Exhibition & Social Event</a> -->
 			</div>
 		</h1>
 <?php

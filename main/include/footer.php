@@ -10,6 +10,16 @@
                     <img src="/main/img/icons/2024_tool_program.svg" alt="" class="program_icon">
                 </a>
             </li> 
+            <li>
+                <a href="/main/registration_guidelines.php">
+                    <img src="/main/img/icons/2024_footer_registration.svg" alt="" class="regi_icon">
+                </a>
+            </li>
+            <li>
+                <a href="/main/abstract_submission_guideline.php">
+                    <img src="/main/img/icons/2024_footer_abstract.svg" alt="" class="abstract_icon">
+                </a>
+            </li>
             <?php
             if ($_SESSION["USER"]["regi_status"] == 2 || $_SESSION["USER"]["regi_status"] == 5) {
             ?>
@@ -38,10 +48,11 @@
                     <img src="/main/img/icons/footer_abstract.png" alt="">
                 </a>
             </li> -->
+            
             <?php
             } else {
             ?>
-           <li>
+           <!-- <li>
                 <a href="/main/registration_guidelines.php">
                     <img src="/main/img/icons/2024_footer_registration.svg" alt="" class="regi_icon">
                 </a>
@@ -50,7 +61,7 @@
                 <a href="/main/abstract_submission_guideline.php">
                     <img src="/main/img/icons/2024_footer_abstract.svg" alt="" class="abstract_icon">
                 </a>
-            </li>
+            </li> -->
             <?php
             }
             ?>
@@ -64,7 +75,7 @@
             </li> -->
                 <li>
                     <a href="/main/login.php" onClick="alert('Need to login.')">
-                        <img src="/main/img/icons/2024_tool_mypage.svg" alt=""></i></button>
+                        <img src="/main/img/icons/2024_tool_mypage.svg" alt="" class="mypage_icon"></i></button>
                     </a>
                 </li>
             <?php
@@ -72,7 +83,7 @@
             ?>
              <li>
                     <a href="/main/mypage.php">
-                        <img src="/main/img/icons/2024_tool_mypage.svg" alt=""></i></button>
+                        <img src="/main/img/icons/2024_tool_mypage.svg" alt=""class="mypage_icon"></i></button>
                     </a>
                 </li>
               <!-- <li>
@@ -162,8 +173,8 @@
                         <a href="https://koreascp.or.kr:459/" target="_blank">
                             <img src="/main/img/icons/2024_kscp_white.svg" alt="">
                         </a>
-                        <a href="https://koreascp.or.kr:459/" target="_blank">
-                            <img src="/main/img/icons/2024_imcvp_white.svg" alt="">
+                        <a href="https://imcvp.org/" target="_blank">
+                            <img src="/main/img/icons/2024_imcvp_main_logo-1.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -172,13 +183,13 @@
                     <ul>
                         <li>805, 99, Seongsuil-ro, Seongdong-gu, Seoul 04790, Republic of Korea</li>
                         <li>(Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
-                        <li>+82-2-6408-1505&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:kscpmd@kscpmd.or.kr">kscpmd@kscpmd.or.kr</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="www.koreascp.or.kr" target="_blank">www.koreascp.or.kr</a></li>
+                        <li>+82-2-6408-1505&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:kscpmd@kscpmd.or.kr">kscpmd@kscpmd.or.kr</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://koreascp.or.kr:459/index.htm" target="_blank">www.koreascp.or.kr</a></li>
                     </ul>
                     <p class="footer_blue_t">Secretariat of IMCVP 2024</p>
                     <ul>
                         <li>4F, A-Block, Richensia, 341, Baekbeom-ro, Yongsan-gu,</li>
                         <li>Seoul 04315, Republic of Korea</li>
-                        <li>+82-2-2039- 7804&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:info@imcvp.org">info@imcvp.org</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://imcvp.org/">www.imcvp.org</a></li>
+                        <li>+82-2-2039- 7804&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:info@imcvp.org">info@imcvp.org</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://imcvp.org/">www.imcvp.org</a></li>
                     </ul>
                 </div>
                 <div class="footer_r">
