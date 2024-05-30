@@ -183,13 +183,13 @@
                     <ul>
                         <li>805, 99, Seongsuil-ro, Seongdong-gu, Seoul 04790, Republic of Korea</li>
                         <li>(Seongsu-dong 1-ga, Seoul Forest AK Valley Knowledge Industry Center)</li>
-                        <li>+82-2-6408-1505&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:kscpmd@kscpmd.or.kr">kscpmd@kscpmd.or.kr</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://koreascp.or.kr:459/index.htm" target="_blank">www.koreascp.or.kr</a></li>
+                        <li>+82-2-6408-1505&nbsp;&nbsp;|&nbsp;&nbsp;<a class="font14" href="mailto:kscpmd@kscpmd.or.kr">kscpmd@kscpmd.or.kr</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://koreascp.or.kr:459/index.htm" target="_blank" class="font14" >www.koreascp.or.kr</a></li>
                     </ul>
                     <p class="footer_blue_t">Secretariat of IMCVP 2024</p>
                     <ul>
                         <li>4F, A-Block, Richensia, 341, Baekbeom-ro, Yongsan-gu,</li>
                         <li>Seoul 04315, Republic of Korea</li>
-                        <li>+82-2-2039- 7804&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:info@imcvp.org">info@imcvp.org</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://imcvp.org/">www.imcvp.org</a></li>
+                        <li>+82-2-2039- 7804&nbsp;&nbsp;|&nbsp;&nbsp;<a class="font14"  href="mailto:info@imcvp.org">info@imcvp.org</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="font14"  href="https://imcvp.org/">www.imcvp.org</a></li>
                     </ul>
                 </div>
                 <div class="footer_r">

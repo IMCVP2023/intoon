@@ -1884,7 +1884,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 .program_glance_sj .program_glance_table thead tr:first-child th {background-color:rgba(0,102,107,0.15);}
 .program_glance_sj .program_glance_table th:not(:first-child) {border-left:1px solid #707070;}
 .program_glance_sj .program_glance_table tr:first-child th:not(:first-child) {border-color: #FFFFFF;}
-.program_glance_sj .program_glance_table td:not(:first-child) {padding:11px 9px; border-left:1px solid #000; font-weight:bold;}
+.program_glance_sj .program_glance_table td:not(:first-child) {padding:1px 9px; border-left:1px solid #000; font-weight:bold;}
 .program_glance_sj .program_glance_table td p {font-weight:400; margin-top:8px;}
 .program_glance_sj .tab_pager {margin-bottom:0;}
 .program_glance_sj .tab_cont thead tr:first-child {background-color: #00666B;}
@@ -2529,9 +2529,15 @@ select[name="topic1"] option:disabled {
 	}
 }
 
-.program_glance_sj .program_glance_table td:hover{
+.program_glance_sj td.pointer:hover{
 	font-size: 17px;
+	text-decoration: underline;
+	text-underline-position: under;
 }
+
+/* .program_glance_sj td{
+	height: 50px;
+} */
 
 /* program detail */
 
