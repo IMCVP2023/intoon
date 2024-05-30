@@ -135,7 +135,7 @@ function createMessage($language, $mail_type, $fname, $to, $subject, $time, $tmp
 if($language == "ko") {
 	if($mail_type == "find_password") {
 		 $rawMessageString.= "<div style='width:670px;background-color:#fff;'>
-								<img src='https://imcvp.org/main/img/2024_mail_header.png' style='width:100%;margin-bottom:60px;'>
+								<img src='https://imcvp.org/main/img/2024_mail_header-1.png' style='width:100%;margin-bottom:60px;'>
 								<div style='margin-left:60px;margin-bottom:40px;'>
 									<p style='text-align:left;font-size:15px;color:#170F00;line-height:1.8;'>{$fname} 회원님은<br>{$time} 에 임시 비밀번호 요청을 하셨습니다.</p>
 									<p style='text-align:left;font-size:12px;color:#AAAAAA;margin-top:22px;'>(만약 임시 비밀번호를 요청하신 적이 없다면 해당 메일을 삭제해 주십시오.)</p>
@@ -150,7 +150,7 @@ if($language == "ko") {
 									<p style='text-align:left;font-size:14px;color:#170F00;margin-top:51px;'>ICOMES 드림</p>
 								</div>
 								<a href='{$callback_url}' style='display:block;text-decoration:none;text-align:center;width:180px;max-width:180px;background:#fff;margin-left:60px;border:1px solid #585859;border-radius:30px;padding:14px 50px;background:#fff;cursor:pointer;color:#000;'>임시 비밀번호로 변경</a>
-								<img src='https://imcvp.org/main/img/2024_mail_footer.png' style='width:100%;margin-top:60px;'>
+								<img src='https://imcvp.org/main/img/2024_mail_footer-1.png' style='width:100%;margin-top:60px;'>
 							</div>";
 	}
 } else {
@@ -225,7 +225,7 @@ if($language == "ko") {
 									<tbody>
 										<tr>
 											<td colspan='3'>
-												<img src='https://imcvp.org/main/img/2024_mail_header.png' width='750' style='width:750px;'>
+												<img src='https://imcvp.org/main/img/2024_mail_header-1.png' width='750' style='width:750px;'>
 											</td>
 										</tr>
 										<tr>
@@ -293,7 +293,7 @@ if($language == "ko") {
 										</tr>
 										<tr>
 											<td colspan='3' style='padding-top:50px;'>
-												<img src='https://imcvp.org/main/img/2024_mail_footer.png' width='750' style='width:750px;'>
+												<img src='https://imcvp.org/main/img/2024_mail_footer-1.png' width='750' style='width:750px;'>
 											</td>
 										</tr>
 									</tbody>
@@ -309,7 +309,7 @@ if($language == "ko") {
 		 <tbody>
 			 <tr>
 				 <td colspan='3'>
-					 <img src='https://imcvp.org/main/img/2024_mail_header.png' width='750' style='width:100%; max-width:100%;'>
+					 <img src='https://imcvp.org/main/img/2024_mail_header-1.png' width='750' style='width:100%; max-width:100%;'>
 				 </td>
 			 </tr>
 			 <tr>
@@ -369,7 +369,7 @@ if($language == "ko") {
 			 </tr>
 			 <tr>
 				 <td colspan='3' style='padding-top:50px;'>
-					 <img src='https://imcvp.org/main/img/2024_mail_footer.png' width='750' style='width:100%; max-width:100%;'>
+					 <img src='https://imcvp.org/main/img/2024_mail_footer-1.png' width='750' style='width:100%; max-width:100%;'>
 				 </td>
 			 </tr>
 		 </tbody>
@@ -573,7 +573,7 @@ if($language == "ko") {
 										<tbody>
 											<tr>
 												<td colspan='3'>
-													<img src='https://imcvp.org/main/img/2024_mail_header.png' width='750' style='width:100%; max-width:100%;'>
+													<img src='https://imcvp.org/main/img/2024_mail_header-1.png' width='750' style='width:100%; max-width:100%;'>
 												</td>
 											</tr>
 											<tr>
@@ -714,7 +714,7 @@ if($language == "ko") {
 											</tr>
 											<tr>
 												<td colspan='3' style='padding-top:50px;'>
-													<img src='https://imcvp.org/main/img/2024_mail_footer.png' width='750' style='width:100%; max-width:100%;'>
+													<img src='https://imcvp.org/main/img/2024_mail_footer-1.png' width='750' style='width:100%; max-width:100%;'>
 												</td>
 											</tr>
 										</tbody>
@@ -962,7 +962,7 @@ if($language == "ko") {
 		$url = $_SERVER['HTTP_HOST'] ?? "www.icomes.or.kr";
 
 		$rawMessageString .= '<div><table width="750" style=" padding: 0;">
-								<tr><td colspan="3"><img src="https://imcvp.org/main/img/2024_mail_header.png" width="750" style="width:100%; max-width:100%;"></td></tr>
+								<tr><td colspan="3"><img src="https://imcvp.org/main/img/2024_mail_header-1.png" width="750" style="width:100%; max-width:100%;"></td></tr>
 								<tr><td width="74" style="width:74px;"></td><td>
 								<div style="font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;">[IMCVP 2024] Completed Abstract Submission</div></td><td width="74" style="width:74px;"></td></tr>
 								<tr><td width="74" style="width:74px;"></td><td><div><p style="font-size:15px; font-weight:bold; color:#000; margin:0;">Dear '.$first_name.' '.$last_name.',</p><p style="font-size:14px;color:#170F00;margin-top:14px;">Thank you for the online submission of your abstract to IMCVP 2024.<br>Your abstract has been successfully submitted as follows.</p>
@@ -1122,7 +1122,7 @@ if($language == "ko") {
 								</tr>
 								<tr>
 									<td style="padding-top:50px;" colspan="3">
-										<img src="https://imcvp.org/main/img/2024_mail_footer.png" width="750" style="width:100%; max-width:100%;">
+										<img src="https://imcvp.org/main/img/2024_mail_footer-1.png" width="750" style="width:100%; max-width:100%;">
 									</td>
 								</tr>
 								</table>
@@ -1134,7 +1134,7 @@ if($language == "ko") {
         <tbody>
             <tr>
                 <td colspan='3'>
-                    <img src='https://imcvp.org/main/img/2024_mail_header.png' width='750' style='width:100%; max-width:100%;'>
+                    <img src='https://imcvp.org/main/img/2024_mail_header-1.png' width='750' style='width:100%; max-width:100%;'>
                 </td>
             </tr>
             <tr>
@@ -1195,7 +1195,7 @@ if($language == "ko") {
             </tr>
             <tr>
                 <td colspan='3' style='padding-top:50px;'>
-                    <img src='https://imcvp.org/main/img/2024_mail_footer.png' width='750' style='width:100%; max-width:100%;'>
+                    <img src='https://imcvp.org/main/img/2024_mail_footer-1.png' width='750' style='width:100%; max-width:100%;'>
                 </td>
             </tr>
         </tbody>
@@ -1212,7 +1212,7 @@ if($language == "ko") {
         <tbody>
             <tr>
                 <td colspan='3'>
-                    <img src='https://imcvp.org/main/img/2024_mail_header.png' width='750' style='width:100%; max-width:100%;'>
+                    <img src='https://imcvp.org/main/img/2024_mail_header-1.png' width='750' style='width:100%; max-width:100%;'>
                 </td>
             </tr>
             <tr>
@@ -1273,7 +1273,7 @@ if($language == "ko") {
             </tr>
             <tr>
                 <td colspan='3' style='padding-top:50px;'>
-                    <img src='https://imcvp.org/main/img/2024_mail_footer.png' width='750' style='width:100%; max-width:100%;'>
+                    <img src='https://imcvp.org/main/img/2024_mail_footer-1.png' width='750' style='width:100%; max-width:100%;'>
                 </td>
             </tr>
         </tbody>

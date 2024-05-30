@@ -42,7 +42,7 @@
 	}
 
 	// 변수 설정	
-	$register_no = !empty($registration_idx) ? "ICOMES2023-".$registration_idx : "-";
+	$register_no = !empty($registration_idx) ? "IMCVP2024-".$registration_idx : "-";
 
 	$register_no = $registration_idx ? "IMCVP2024-".$registration_idx : "-";
 
@@ -70,7 +70,7 @@
 	<!-- 영수증 (MB) -->
 			<div style="max-width:100%;">
 				<div>
-					<img src="./img/2024_receipt_top.png" alt="" style="width:100%; max-width:100%;">
+					<img src="./img/2024_receipt_top-1.png" alt="" style="width:100%; max-width:100%;">
 					<div style="padding:0 24px; margin-top:30px;">
 						<h1 style="font-size:60px; text-align:center; margin-bottom:20px; font-family: 'Sedan SC', serif; font-weight:500">RECEIPT</h1>
 						<table style="border-collapse:collapse; border-spacing:0; width:100%; margin-bottom:50px;">
@@ -102,7 +102,7 @@
 							</tbody>
 						</table>
 					</div>
-					<img src="./img/2024_receipt_bottom.png" alt="" style="width:100%; max-width:100%;">
+					<img src="./img/2024_receipt_bottom-1.png" alt="" style="width:100%; max-width:100%;">
 				</div>
 			</div>
 
