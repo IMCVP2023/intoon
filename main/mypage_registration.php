@@ -412,7 +412,7 @@
             <input type="hidden" name="registration_idx" value="">
             <h3 class="pop_title">Online Registration</h3>
             <div class="table_wrap detail_table_common x_scroll">
-				<table class="c_table detail_table fixed_table">
+				<table class="c_table detail_table fixed_table type2">
 					<colgroup>
 						<col width="150px">
 						<col>
@@ -438,7 +438,7 @@
 				</table>
 			</div>
             <div class="table_wrap detail_table_common x_scroll mt10">
-				<table class="c_table detail_table fixed_table">
+				<table class="c_table detail_table fixed_table type2">
 					<colgroup>
 						<col width="150px">
 						<col>
@@ -475,7 +475,7 @@
 				<p>Registration Information</p>			
 			</div>
             <div class="table_wrap detail_table_common x_scroll mt10">
-				<table class="c_table detail_table fixed_table" style="min-width:400px;">
+				<table class="c_table detail_table fixed_table type2" style="min-width:400px;">
 					<colgroup>
 						<col width="190px">
 						<col>

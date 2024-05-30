@@ -57,7 +57,9 @@ html {-webkit-touch-callout:none; -webkit-user-select:text; -webkit-tap-highligh
 /*reset end*/
 
 /*font_size & color & family*/
-*{/*font-family: 'Nanum Gothic', sans-serif;*/font-family: "Barlow", sans-serif; font-size:16px; box-sizing:border-box; color:#585858; /*IOS 폰트사이즈*/-webkit-text-size-adjust : none;  /* 크롬, 사파리, 오페라 신버전 */ -ms-text-size-adjust : none;  /* IE */ -moz-text-size-adjust : none;  /* 파이어폭스 */ -o-text-size-adjust : none;  /* 오페라 구버전 */}
+*{/*font-family: 'Nanum Gothic', sans-serif;*/font-family: "Barlow", sans-serif; font-size:18px; box-sizing:border-box; color:#484554; /*IOS 폰트사이즈*/-webkit-text-size-adjust : none;  /* 크롬, 사파리, 오페라 신버전 */ -ms-text-size-adjust : none;  /* IE */ -moz-text-size-adjust : none;  /* 파이어폭스 */ -o-text-size-adjust : none;  /* 오페라 구버전 */}
+
+table tr td span, table tr td a {font-size: 16px !important;}
 
 .kor{ font-family: "Noto Sans KR", sans-serif;}
 .point_txt{color:#000066 !important;} /*초록색*/
@@ -65,8 +67,9 @@ html {-webkit-touch-callout:none; -webkit-user-select:text; -webkit-tap-highligh
 .point3_txt{color:#3366CC !important;} /*파란색*/
 .yellow_txt{color:#fff475 !important;} /*노랑색*/
 .gray_txt{color:#787679 !important;}
+.dark_gray_txt{color: #484554 !important;}
 /*.red_txt{color:#ff0000 !important;}*/
-.red_txt{color:#FF3333 !important;}
+.red_txt{color:#FF6200 !important;}
 .brown_txt{color:#921004 !important;}
 .blue_txt{color:#00666B !important;}
 .font_small{font-size:13px !important;}
@@ -74,7 +77,7 @@ html {-webkit-touch-callout:none; -webkit-user-select:text; -webkit-tap-highligh
 .f_bold{font-weight: bold !important;}
 .pre{white-space:pre-line;}
 .initial{white-space:initial !important;}
-
+.point4_txt{color: #257FE6 !important;}
 
 /*common class*/
 .flex_hide {display: flex !important; gap:8px;}
@@ -509,7 +512,7 @@ td.pc_only {display:table-cell;}
 .alert_new {color: #FF3333; margin-right: 39px; position: relative;}
 .alert_new:after {content: ""; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #FF3333; position: absolute; right: 0; top: 0; transform: translateX(100%);}
 
-.registration_table th, .registration_table td, .registration_table button {font-size:14px;}
+.registration_table th, .registration_table td, .registration_table button {font-size:16px; padding: 0 4px;}
 .registration_table button, .registration_table a.btn {height:34px; line-height:32px; width:auto;}
 .registration_table button + *, .registration_table a.btn + * {margin-left:8px;}
 .registration_table a.btn {font-size:14px; color:#585858; text-align:center;}

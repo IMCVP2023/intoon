@@ -122,26 +122,30 @@ $floor = get_data($sql_floor);
 		</div>
 		<div class="table_wrap x_scroll inner">
 			<h3 class="title">Important dates</h3>
-			<table class="c_table2 detail_table">
+			<table class="c_table2 detail_table type2">
 				<colgroup>
 					<col width="280px">
 					<col width="*">
 				</colgroup>
 				<tr>
 					<th>Abstract submission deadline 1<sup class="font_small">st</sup></th>
-					<td>Sunday, August 18, 2024</td>
+					<td>Sunday, <span class="bold point4_txt">August 18</span>, 2024</td>
 				</tr>
 				<tr>
 					<th>Abstract submission deadline 2<sup class="font_small">nd</sup></th>
-					<td>Sunday, October 6, 2024</td>
+					<td>Sunday, <span class="bold point4_txt">October 6</span>, 2024</td>
 				</tr>
 				<tr>
 					<th>Notification of abstract acceptance</th>
-					<td>Wednesday, October 16, 2024</td>
+					<td>Wednesday, <span class="bold point4_txt">October 16</span>, 2024</td>
+				</tr>
+				<tr>
+					<th>Early-bird Registration deadline</th>
+					<td>Sunday, <span class="bold point4_txt">September 1</span>, 2024</td>
 				</tr>
 				<tr>
 					<th>Pre-registration deadline</th>
-					<td>Sunday, September 1, 2024</td>
+					<td>Sunday, <span class="bold point4_txt">November 3</span>, 2024</td>
 				</tr>
 			</table>
 		</div>

@@ -117,8 +117,11 @@ $info = sql_fetch($sql_info);
     <h1 class="page_title">Venue
 			<div class="sub_btn_box">
 				<a href="/main/venue.php" class="on">Grand Walkerhil Seoul</a>
-				<a href="/main/accommodation.php">Accommodation</a>
-				<a href="/main/floor_plan.php">Floor Plan</a>
+				<a href="/main/comingsoon.php">Accommodation</a>
+				<a href="/main/comingsoon.php">Floor Plan</a>
+
+                <!-- <a href="/main/accommodation.php">Accommodation</a>
+				<a href="/main/floor_plan.php">Floor Plan</a> -->
 			</div>
 		</h1>
 <?php
@@ -172,12 +175,12 @@ $info = sql_fetch($sql_info);
                                     <th>Website</th>
                                     <td>
                                         <a href="https://www.walkerhill.com/grandwalkerhillseoul/en/" target="_blank"
-                                            class="venue_btn">Go to Website ></a>
+                                            class="venue_btn text_center">Go to Website ></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                    Located in east Seoul, Grand Walkerhill Seoul stands as a beacon of luxury amidst the city's bustling landscape. Nestled amidst the serene beauty of Achasan Mountain and the tranquil Hangang River, it offers a haven of comfort and relaxation. Boasting 557 elegantly appointed guestrooms, diverse dining options, and 11 versatile convention spaces, including a grand banquet hall capable of hosting up to 1,000 guests, it caters to the discerning needs of both leisure and business travelers. With its strategic location, just 1.5 hours from Incheon International Airport, 1 hour from Gimpo International Airport, 40 minutes from Seoul Station, and 35 minutes from Suseo Station, Grand Walkerhill Seoul seamlessly combines convenience with sophistication, ensuring an unforgettable experience for every guest.
+                                    <td colspan="2" class="text_l">
+                                    Located in east Seoul, Grand Walkerhill Seoul stands as a beacon of luxury amidst the city's bustling landscape.<br/>Nestled amidst the serene beauty of Achasan Mountain and the tranquil Hangang River, it offers a haven of comfort and relaxation.<br/>Boasting 557 elegantly appointed guestrooms, diverse dining options, and 11 versatile convention spaces, including a grand banquet hall capable of hosting up to 1,000 guests, it caters to the discerning needs of both leisure and business travelers.<br/>With its strategic location, just 1.5 hours from Incheon International Airport, 1 hour from Gimpo International Airport, 40 minutes from Seoul Station, and 35 minutes from Suseo Station, Grand Walkerhill Seoul seamlessly combines convenience with sophistication, ensuring an unforgettable experience for every guest.
 
                                     </td>
                                 </tr>

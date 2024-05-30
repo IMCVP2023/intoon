@@ -153,13 +153,17 @@
 			<ul class="main_speaker2 slick-slider">
 				<li class="index_speaker1">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">TBD</h5>
-					<div class="career">TBD,<br>TBD</div>
+					<h5 class="title">Brian Tomlinson</h5>
+					<div class="career">Macau University of Science and Technology Faculty of Medicine
+						<!-- ,<br>TBD -->
+					</div>
 				</li>
 				<li class="index_speaker2">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">TBD</h5>
-					<div class="career">TBD,<br>TBD</div>
+					<h5 class="title">Takayoshi Ohkubo</h5>
+					<div class="career">Department of Hygiene and Public Health, Teikyo University School of Medicine
+						<!-- <br>TBD -->
+					</div>
 				</li>
 				<li class="index_speaker3">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
@@ -171,7 +175,7 @@
 					<h5 class="title">TBD</h5>
 					<div class="career">TBD,<br>TBD</div>
 				</li>
-				<li class="index_speaker5">
+				<!-- <li class="index_speaker5">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
 					<h5 class="title">TBD</h5>
 					<div class="career">TBD,<br>TBD</div>
@@ -180,7 +184,7 @@
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
 					<h5 class="title">TBD</h5>
 					<div class="career">TBD,<br>TBD</div>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</div>

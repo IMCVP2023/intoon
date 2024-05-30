@@ -9,7 +9,9 @@ include_once('./include/header.php');
 			<div class="sub_btn_box">
 				<a href="/main/sponsor.php">Sponsors</a>
 				<a href="/main/sponsor_guidelines.php" class="on">Sponsor Guidelines</a>
-				<a href="/main/sponsor_exhibition.php">Exhibition & Social Event</a>
+				<a href="/main/comingsoon.php">Exhibition & Social Event</a>
+
+                <!-- <a href="/main/sponsor_exhibition.php">Exhibition & Social Event</a> -->
 			</div>
 		</h1>
     <div class="inner">

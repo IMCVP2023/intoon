@@ -258,7 +258,7 @@ section.container.organizing {padding-bottom: 190px;}
 /* 220406 HUBDNC LJH2 추가 */
 .registration .title + .details {margin-bottom: 100px;}
 .registration .title + p + .details {margin-bottom: 100px;}
-.registration .title + .details.icomes_air th, .registration .title + .details.icomes_air td {font-size:12px;}
+.registration .title + .details.icomes_air th, .registration .title + .details.icomes_air td {font-size:18px; padding: 8px 16px !important;}
 .registration .btn_wrap {text-align: center; margin-top: 40px;}
 .rating_guide_pop .btn {font-size: 20px; padding: 0 30px; border-radius: 0;}
 .details_bg {border-top: 2px solid #707070; background-color: #F4F4F4; padding: 30px;}
@@ -2059,6 +2059,7 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	justify-content: center;
 	text-underline-position: under;
 	border-radius: 20px;
+	margin: 0 auto;
 }
 
 .venue .venue_btn:hover{
@@ -2800,6 +2801,10 @@ select[name="topic1"] option:disabled {
 	background-color: #009DDC;
 }
 
+.abstract_type li:nth-child(3) a{
+	background-color: #484554;
+}
+
 .abstract_submission_guideline .steps_area, .abstract_submission_award .steps_area, .registration .steps_area{
 	border: 1px solid #ADA9BB;
 	border-radius: 20px;
@@ -2810,6 +2815,12 @@ select[name="topic1"] option:disabled {
 	font-size: 18px;
 	color: #484554;
 	padding: 0 28px;
+}
+
+.registration .steps_area ul li p:nth-child(2) span{
+	font-size: 18px;
+	color: #484554;
+	font-weight: bold;
 }
 
 .abstract_submission_guideline .steps_area ul, .abstract_submission_award .steps_area ul {
@@ -2871,7 +2882,7 @@ table.type1 thead th {
 	text-align: center;
 }
 
-table.type1 thead th:first-child{
+table.type1 thead th:not(:last-child){
 	border-right: none;
 }
 
@@ -2916,3 +2927,20 @@ table.type2 th{
 }
 
 /* .day_tbody tr, .day_tbody tr td {border: 1px solid #ADA9BB !important;} */
+
+#right_arrow_btn:hover > path{
+	transform: translateX(20px);
+}
+
+.registration .dark_blue_th{background-color: #257FE6 !important; color: #FFF !important;}
+.registration .dark_blue_th_1{background-color: #7CB2F0 !important; color: #FFF !important; font-weight: 400;}
+
+.registration .light_blue_th{background-color: #C8DFF9 !important; border-color: #ADA9BB !important;}
+.registration .light_blue_th_1{background-color: #EFF6FE !important;border-color: #ADA9BB !important; font-weight: 400;}
+
+.registration .light_gray_th{background-color: #F6F6FA !important;border-color: #ADA9BB !important; border-right: #FFF !important;}
+.registration .light_gray_th_1{background-color: #FFFFFF !important;border-color: #ADA9BB !important; font-weight: 400;}
+
+.registration .light_gray_th_2{ border-right: #FFF !important;}
+
+.registration .pre_txt{color: #484554 !important;}
