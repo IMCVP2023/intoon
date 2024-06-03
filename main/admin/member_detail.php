@@ -197,7 +197,7 @@ $is_hide = ($nation_no == 25) ? '' : 'hidden';
                             <td><input type="text" name="department_kor" value="<?=$department_kor?>" placeholder=""></td>
                         </tr>
                         <tr>
-                            <th>대한비만학회 회원 여부</th>
+                            <th>KSCP 회원 여부</th>
                             <td>
                                 <div id="ksola_member_status" class="<?= $is_hide ?>">
                                     <input <?= (!$ksola_member_status ? "" : "checked") ?> type="radio" class="new_radio" name="user" id="user1" value="1">

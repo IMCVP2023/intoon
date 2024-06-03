@@ -402,7 +402,7 @@
 						if($user_info["nation_no"] == "25"){
 					?>
 							<li id="ksola_li">
-								<p class="label">대한비만학회 회원 여부</p>
+								<p class="label">KSCP 회원 여부</p>
 								<div>
 									<input type="checkbox" class="checkbox" id="mo_membership_status1" disabled <?=$mem_chk ?>>
 									<label for="membership_status1"><i></i>회원</label>
@@ -985,7 +985,7 @@ function country_chk(obj){
 		$("#name_tr").after(html);
 
 		html = '<tr id="ksola_tr" name="ksola_tr">';
-		html += '<th class="nowrap">대한비만학회 회원 여부</th>';
+		html += '<th class="nowrap">KSCP 회원 여부</th>';
 		html += '<td>';
 		html += '<div class="max_normal">';
 		html += '<input type="checkbox" class="checkbox" id="membership_status1" disabled <?=$mem_chk ?>> ';

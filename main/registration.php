@@ -195,7 +195,7 @@ if ($during_yn !== "Y") {
                         <select id="participation_type" name="participation_type" onChange="calc_fee(this)" <?=$prev["status"] == 2 || $prev["status"] == 3 ? "readonly disabled" : ""?>>
 							<option value="" selected hidden>Choose</option>
 							<?php
-								$participation_arr = array("Committee", "Speaker", "Chairperson", "Panel", "Participants", "Sponsor");
+								$participation_arr = array("Participants", "Committee", "Speaker", "Chairperson", "Panel", "Sponsor");
 
 								foreach($participation_arr as $a_arr) {
                                     $attendance_type = "";
@@ -309,7 +309,7 @@ if ($during_yn !== "Y") {
 							</p>
 							<input type="text" name="licence_number" id="licence_number" class="under_50 input_license" value="<?=$prev["is_score"] == 1 ? $prev["licence_number"] ?? "" : ""?>">
 						</li>
-						<li class="review_sub_list <?=($prev["is_score"] == 1 ? "" : "hidden")?>">
+						<li class="review_sub_list <?=($prev["is_score"] == 1 ? "hidden" : "hidden")?>">
 							<p class="label">
 								전문의 번호 <span class="red_txt">*</span>
 								<input type="checkbox" id="app2" class="checkbox" <?=$prev["is_score"] == 1  && ! $prev["specialty_number"] ? "checked" : ""?>>
@@ -319,7 +319,7 @@ if ($during_yn !== "Y") {
 							</p>
 							<input type="text" name="specialty_number" id="specialty_number" class="under_50 input_license" value="<?=$prev["is_score"] == 1 ? $prev["specialty_number"] ?? "" : ""?>">
 						</li>
-						<li class="review_sub_list <?=($prev["is_score"] == 1 ? "" : "hidden")?>">
+						<li class="review_sub_list <?=($prev["is_score"] == 1 ? "hidden" : "hidden")?>">
 							<p class="label">
 								영양사 면허번호  <span class="red_txt">*</span>
 								<input type="checkbox" id="app3" class="checkbox" <?=$prev["is_score"] == 1  && ! $prev["nutritionist_number"] ? "checked" : ""?>>
@@ -329,7 +329,7 @@ if ($during_yn !== "Y") {
 							</p>	
 							<input type="text" name="nutritionist_number" id="nutritionist_number" class="under_50 input_license" value="<?=$prev["is_score"] == 1 ? $prev["nutritionist_number"] ?? "" : ""?>">
 						</li>
-                        <li class="review_sub_list <?=($prev["is_score"] == 1 ? "" : "hidden")?>">
+                        <li class="review_sub_list <?=($prev["is_score"] == 1 ? "hidden" : "hidden")?>">
                             <p class="label">
                                 임상영양사 자격번호  <span class="red_txt">*</span>
                                 <input type="checkbox" id="app4" class="checkbox" <?=$prev["is_score"] == 1  && ! $prev["dietitian_number"] ? "checked" : ""?>>

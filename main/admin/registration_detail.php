@@ -384,14 +384,15 @@
 						</tr>
                         <tr>
                             <th>Attendance type</th>
-                            <td colspan="3"><?=$attendance_type_text?></td>
+                            <td><?=$attendance_type_text?></td><th>Member Type</th>
+							<td><?=$member_type?></td>
                         </tr>
-						<tr>
-							<th>Occupation type</th>
-							<td><?=$occupation_type?></td>
+						<!--<tr>
+							 <th>Occupation type</th>
+							<td><?=$occupation_type?></td> 
 							<th>Member Type</th>
 							<td><?=$member_type?></td>
-						</tr>
+						</tr>-->
 						<tr>
 							<th>Affiliation</th>
 							<td><?=$affiliation?></td>
@@ -400,16 +401,16 @@
 						</tr>
 						<tr>
 							<th>Doctor's Licence Number</th>
-							<td><?=$licence_number?></td>
-							<th>Specialist's Licence Number</th>
-							<td><?=$specialty_number?></td>
+							<td colspan="3"><?=$licence_number?></td>
+							<!-- <th>Specialist's Licence Number</th>
+							<td><?=$specialty_number?></td> -->
 						</tr>
-						<tr>
+						<!-- <tr>
 							<th>Nutritionist's licence number</th>
 							<td><?=$nutritionist_number?></td>
 							<th>dietitian_number</th>
 							<td><?=$dietitian_number?></td>
-						</tr>
+						</tr> -->
                         <tr>
                             <th>Congress Banquet Ceremony</th>
                             <td colspan="3"><?= $banquet_yn=="Y" ? "Attend" : "Absent"; ?></td>
