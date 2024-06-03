@@ -117,7 +117,7 @@ $info = sql_fetch($sql_info);
     <h1 class="page_title">Venue
 			<div class="sub_btn_box">
 				<a href="/main/venue.php" class="on">Grand Walkerhil Seoul</a>
-				<a href="/main/comingsoon.php">Accommodation</a>
+				<a href="/main/accommodation.php">Accommodation</a>
 				<a href="/main/comingsoon.php">Floor Plan</a>
 
                 <!-- <a href="/main/accommodation.php">Accommodation</a>
@@ -370,6 +370,34 @@ window.initMap = function () {
     center: { lat: 37.555272, lng: 127.110912 },
     zoom: 15,
   });
+
+  const tourStops = [
+    [{ lat: 37.555272, lng: 127.110912 }, "Grand Walkerhill Seoul"]
+  ];
+  // Create an info window to share between markers.
+  const infoWindow = new google.maps.InfoWindow();
+
+  // Create the markers.
+  tourStops.forEach(([position, title], i) => {
+    const marker = new google.maps.Marker({
+      position,
+      map,
+      title: `${title}`,
+      label: ``,
+      optimized: false,
+    });
+
+    // Add a click listener for each marker, and set up the info window.
+    marker.addListener("click", () => {
+      infoWindow.close();
+      infoWindow.setContent(marker.getTitle());
+      infoWindow.open(marker.getMap(), marker);
+    });
+  });
+
+
+window.initMap = initMap;
+
 
   /*const malls = [
     { label: "C", name: "코엑스몰", lat: 37.5115557, lng: 127.0595261 },

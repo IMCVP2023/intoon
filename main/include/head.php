@@ -54,7 +54,7 @@
     <script src="/main/js/locale.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y16N5RM5E5"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFWND9W0F8"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -63,7 +63,7 @@
     }
     gtag('js', new Date());
 
-    gtag('config', 'G-Y16N5RM5E5');
+    gtag('config', 'G-KFWND9W0F8');
     </script>
 </head>
 

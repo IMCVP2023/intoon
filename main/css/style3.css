@@ -110,8 +110,9 @@ input[type="file"].file_input + .file_label {display: inline-block; line-height:
 .dday_bot span {font-size: 15px; font-weight: 900; color: inherit;}
 
 /* index */
-.btn_fixed_triangle {position: fixed; bottom: 85px; right: 35px; width: 140px; height: 140px; /*clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%); background-color: rgba(0,102,107,0.85);*/z-index: 1;}
+.btn_fixed_triangle {position: fixed; bottom: 85px; right: 27px; width: 140px; height: 140px; /*clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%); background-color: rgba(0,102,107,0.85);*/z-index: 1;}
 .btn_fixed_triangle span {position: absolute; right: 19px; bottom: 11px; font-size: 33px; font-weight: bold; line-height: 1.1; font-family: 'Montserrat', sans-serif; color: #fff; text-align: right; line-height: 1.2}
+.btn_fixed_triangle img {width: 100%;}
 
 /* submission_guideline.php */
 .btn_oval_line {padding: 11px 75px; border: 1px solid #0B666B; border-radius: 25px; font-size: 24px; font-weight: bold; color: #00666B;}
@@ -224,10 +225,11 @@ section.visa .circle_title + .details {margin-bottom: 72px;}
 .accommodation .useful_list > li > div:last-child {width: 90%;}
 /*.accommodation .useful_list > li:last-child > div {height: 288.6px;}*/
 .accommodation .useful_list > li:nth-of-type(1) .imgs {background-image: url("../img/2024_wakerhill.jpg");}
-.accommodation .useful_list > li:nth-of-type(2) .imgs {background-image: url("../img/hotel_img8.jpg");}
-.accommodation .useful_list > li:nth-of-type(3) .imgs {background-image: url("../img/hotel_img9.jpg");}
-.accommodation .useful_list > li:nth-of-type(4) .imgs {background-image: url("../img/hotel_img6.jpg");}
-.accommodation .useful_list > li:nth-of-type(5) .imgs {background-image: url("../img/hotel_img7.jpg");}
+.accommodation .useful_list > li:nth-of-type(2) .imgs {background-image: url("../img/2024_hotel_img1.jpg");}
+.accommodation .useful_list > li:nth-of-type(3) .imgs {background-image: url("../img/2024_hotel_img2.jpg");}
+.accommodation .useful_list > li:nth-of-type(4) .imgs {background-image: url("../img/2024_hotel_img3.jpg");}
+.accommodation .useful_list > li:nth-of-type(5) .imgs {background-image: url("../img/2024_hotel_img4.jpg");}
+.accommodation .useful_list > li:nth-of-type(6) .imgs {background-image: url("../img/2024_hotel_img5.jpg");}
 
 /* 220407 HUBDNC LJH2 */
 /* program_at_glance */

@@ -371,13 +371,13 @@
 							</td>
 						</tr>
 						<tr class="korea_radio">
-							<th class="nowrap"><span class="red_txt">*</span>대한심뇌혈관질환예방학회(KSCP) 회원 여부</th>
+							<th class="nowrap kor"><span class="red_txt">*</span>대한심뇌혈관질환예방학회(KSCP) 회원 여부</th>
 							<td>
 								<div class="label_wrap">
 									<input type="radio" class="new_radio" name="user" id="user1">
-									<label for="user1"><i></i>회원</label>	
+									<label for="user1" class="kor"><i></i>회원</label>	
 									<input checked type="radio" class="new_radio" name="user" id="user2">
-									<label for="user2"><i></i>비회원</label>	
+									<label for="user2" class="kor"><i></i>비회원</label>	
 								</div>
 							</td>
 						</tr>
@@ -385,29 +385,29 @@
 							<th style="background-color:transparent"></th>
 							<td>
 								<!-- <button type="button" class="btn green_btn long_btn" onclick="javascript:window.open('https://www.lipid.or.kr/member/member_confirm.php')">한국지질동맥경화학회 회원정보로 간편 가입</button> -->
-								<p>대한심뇌혈관질환예방학회 회원 정보로 간편 가입</p>
+								<p class="kor">대한심뇌혈관질환예방학회 회원 정보로 간편 가입</p>
 								<ul class="simple_join clearfix">
 									<li>
 										<label for="">KSCP ID<span class="red_txt">*</span></label>
 										<input class="email_id" name="kor_id" type="text" maxlength="60">
 									</li>
 									<li>
-										<label for="">KSCP PW<span class="red_txt">*</span></label>
-										<input class="passwords" name="kor_pw" type="password" maxlength="60">
+										<label for="" class="kor">성함<span class="red_txt">*</span></label>
+										<input class="passwords" name="kor_name" type="text" maxlength="60">
 									</li>
 									<li>
-										<button onclick="kor_api()" type="button" class="btn"  style="color:#FFF !important">회원인증</button>
+										<button onclick="kor_api()" type="button" class="btn kor"  style="color:#FFF !important">회원인증</button>
 									</li>
 								</ul>
 								<div class="clearfix2">
 									<div>
 										<input type="checkbox" class="checkbox" id="privacy">
-										<label for="privacy">
+										<label for="privacy" class="kor">
 											제 3자 개인정보 수집에 동의합니다.
 											<!-- <a href="javascript:;" class="term2_btn red_txt"> Details ></a> -->
 										</label>
 									</div>
-									<a href="https://koreascp.or.kr:459/member/findid.htm" target="_blank" class="id_pw_find">KSCP 회원 ID/PW 찾기</a>
+									<a href="https://koreascp.or.kr:459/member/findid.htm" target="_blank" class="id_pw_find kor">KSCP 회원 ID/PW 찾기</a>
 								</div>
 								
 								<!-- <div> -->
@@ -772,34 +772,34 @@
 					 	</div>
 					</li>
 					<li class="korea_radio mo_korea_radio">
-						<p class="label"><span class="red_txt">*</span>대한심뇌혈관질환예방학회(KSCP) 회원 여부</p>
+						<p class="label" class="kor"><span class="red_txt">*</span>대한심뇌혈관질환예방학회(KSCP) 회원 여부</p>
 						<div class="label_wrap">
 							<input type="radio" class="new_radio" name="mo_user" id="mo_user1">
-							<label for="mo_user1"><i></i>회원</label>	
+							<label for="mo_user1" class="kor"><i></i>회원</label>	
 							<input checked type="radio" class="new_radio" name="mo_user" id="mo_user2">
-							<label for="mo_user2"><i></i>비회원</label>	
+							<label for="mo_user2" class="kor"><i></i>비회원</label>	
 						</div>
 					</li>
 					<li class="mo_ksola_signup">
 						<!-- <button type="button" class="btn green_btn long_btn" onclick="javascript:window.open('https://www.lipid.or.kr/member/member_confirm.php')">한국지질동맥경화학회 회원정보로 간편 가입</button> -->
-						<p class="mb10">대한심뇌혈관질환예방학회 회원 정보로 간편 가입</p>
+						<p class="mb10 kor">대한심뇌혈관질환예방학회 회원 정보로 간편 가입</p>
 						<ul class="simple_signup mb10">
 							<li>
 								<label for="" class="bold">KSCP ID<span class="red_txt">*</span></label>
 								<input class="email_id passwords" name="mo_kor_id" type="text" maxlength="60">
 							</li>
 							<li>
-								<label for="" class="bold">KSCP PW<span class="red_txt">*</span></label>
-								<input class="passwords" name="mo_kor_pw" type="password" maxlength="60">
+								<label for="" class="bold kor">성함<span class="red_txt">*</span></label>
+								<input class="passwords" name="mo_kor_name" type="text" maxlength="60">
 							</li>
 							<li>
-								<button onclick="mo_kor_api()" type="button" class="btn btn_small">회원인증</button>
+								<button onclick="mo_kor_api()" type="button" class="btn btn_small kor" style="color:#FFF !important">회원인증</button>
 							</li>
 						</ul>
 						<div class="clearfix2">
 							<div>
 								<input type="checkbox" class="checkbox" id="mo_privacy">
-								<label for="mo_privacy">
+								<label for="mo_privacy" class="kor">
 									제 3자 개인정보 수집에 동의합니다.
 									<!-- <a href="javascript:;" class="red_txt"> Details ></a> -->
 								</label>
@@ -1808,13 +1808,19 @@ $(document).on("click", "#mo_submit", function(){
 	var ksola_member_type = $("input[name=ksola_member_type]").val();
 	var ksola_member_status = 0;
 
-	if(ksola_member_type == "인터넷회원"){
-		ksola_member_status = 3;
-	}else if(ksola_member_type == "평생회원"){
-		ksola_member_status = 2;
-	}else if(ksola_member_type == "정회원"){
+	// if(ksola_member_type == "인터넷회원"){
+	// 	ksola_member_status = 3;
+	// }else if(ksola_member_type == "평생회원"){
+	// 	ksola_member_status = 2;
+	// }else if(ksola_member_type == "정회원"){
+	// 	ksola_member_status = 1;
+	// }else {
+	// 	ksola_member_status = 0;
+	// }
+
+	if(ksola_member_check !== ""){
 		ksola_member_status = 1;
-	}else {
+	}else{
 		ksola_member_status = 0;
 	}
 
@@ -1858,7 +1864,7 @@ $(document).on("click", "#mo_submit", function(){
 		"telephone1"			: telephone1,
 		"telephone2"			: telephone2
 	};
-
+	//mo
 	save(data);
 });
 
@@ -2132,15 +2138,21 @@ $(document).on("click", "#submit", function(){
 	var ksola_member_type = $("input[name=ksola_member_type]").val();
 	var ksola_member_status = 0;
 
-	if(ksola_member_type == "인터넷회원"){
-		ksola_member_status = 3;
-	}else if(ksola_member_type == "평생회원"){
-		ksola_member_status = 2;
-	}else if(ksola_member_type == "정회원"){
+	if(ksola_member_check !== ""){
 		ksola_member_status = 1;
-	}else {
+	}else{
 		ksola_member_status = 0;
 	}
+
+	// if(ksola_member_type == "인터넷회원"){
+	// 	ksola_member_status = 3;
+	// }else if(ksola_member_type == "평생회원"){
+	// 	ksola_member_status = 2;
+	// }else if(ksola_member_type == "정회원"){
+	// 	ksola_member_status = 1;
+	// }else {
+	// 	ksola_member_status = 0;
+	// }
 
 	var data = {
 		"flag"					: "signup",
@@ -2184,6 +2196,7 @@ $(document).on("click", "#submit", function(){
 	};
 
 	//console.log('data: %o', data);
+	//pc
 	save(data)
 
 });
@@ -2204,15 +2217,19 @@ function save(data) {
 	});
 
 	function success(res) {	
+		//console.log("1",res)
 		gmailMail(data);
 		alert("Your Sign-up is complete.");
 		window.location.replace("login.php");
 	}
 	function fail(res) {
+		//console.log("2",res)
 		alert("Failed.\nPlease try again later.");
 		return false;
 	}
 	function error(res) {
+		//console.log("3",res)
+
 		alert("An error has occurred. \nPlease try again later.");
 		return false;
 	}
@@ -2279,7 +2296,7 @@ function kor_api_check(name, value, mo) {
 //한국 회원 인증시 api호출
 function mo_kor_api() {
 	var kor_id = $("input[name=mo_kor_id]").val().trim();
-	var kor_pw = $("input[name=mo_kor_pw]").val().trim();
+	var kor_name = $("input[name=mo_kor_name]").val().trim();
 	//제 3자 개인정보 수집에 동의 여부
 	var privacy = $("#mo_privacy").is(":checked");
 
@@ -2288,7 +2305,7 @@ function mo_kor_api() {
 		alert("Invalid id");
 		return;
 	}
-	if(!kor_pw) {
+	if(!kor_name) {
 		//$(".mo_red_api").eq(0).html("Invalid_password");
 		alert("Invalid password");
 		return;
@@ -2300,117 +2317,40 @@ function mo_kor_api() {
 		return;
 	}
 
-	var data = {
-		'id' : kor_id,
-		'password' : kor_pw 
-	};
-
 	$.ajax({
-		url			: "signup_api.php",
-		type		: "POST",
-		data		: data,
-		dataType	: "JSON",
-		success		: success,
-		fail		: fail,
-		error		: error
-	});
+        url: PATH + "ajax/client/ajax_member.php",
+        type: "POST",
+        data: {
+            flag: "kscp_memeber_check",
+            id: kor_id,
+            nick_name: kor_name
+        },
+        dataType: "JSON",
+        success: function(res) {
+            console.log("1",res);
+            if (res.code == 200) {  
+				if(res.result.is_used === "1"){
+					alert("이미 사용된 ID입니다.")
+					return false;
+				}else if(res.result.is_used === "0"){
+					alert("회원이 인증되었습니다."); 
+					setInfo(res.result, "PC");           
+				}        
+            }
+             else if(res.code == 401) {
 
-	function success(res) {
-		//console.dir(res); return; // null
-		var kor_sign = JSON.parse(res.value);
-		var user_row = kor_sign.user_row;
-
-		if(kor_sign.code == "N1") {
-			alert("아이디를 입력해주세요.");
-			//$(".mo_red_api").eq(0).html("아이디를 입력해주세요.");
-		} else if(kor_sign.code == "N2") {
-			alert("비밀번호를 입력해주세요.");
-			//$(".mo_red_api").eq(0).html("비밀번호를 입력해주세요.");
-		} else if(kor_sign.code == "N3") {
-			alert("가입되지 않은 아이디입니다.");
-			//$(".mo_red_api").eq(0).html("가입되지 않은 아이디입니다.");
-		} else if(kor_sign.code == "N4") {
-			alert("잘못된 비밀번호 입니다.");
-			//$(".mo_red_api").eq(0).html("잘못된 비밀번호 입니다.");
-		} else if(kor_sign.code == "N5") {
-			alert("탈퇴된 아이디 입니다.");
-			//$(".mo_red_api").eq(0).html("탈퇴된 아이디 입니다.");
-		} else if(kor_sign.code == "N7") {
-			alert("이미 인증된 계정입니다.");
-			$("[name=kor_id]").val("");
-			$("[name=kor_pw]").val("");
-			$("#privacy").prop("checked", false);
-			$("[name=kor_id]").focus();
-		} else if(kor_sign.code == "N6") {
-			//$(".mo_red_api").eq(0).html("");
-			alert("회원님은 대한비만학회 " + user_row.user_type + " 입니다");
-
-			//이거 실행했을 때도 이메일 중복체크
-			var check_email= email_check(kor_sign.email);
-			if(check_email == false) {
-				return;
+				alert("ID와 성함을 확인해주세요.")
 			}
-
-			$("input[name=ksola_member_type]").val(user_row.user_type);
-			$("input[name=ksola_member_check]").val(user_row.id);
-
-			
-			//if(user_row.user_type == "평w회원" || user_row.user_type == "정회원"){
-			//	$("input[name=ksola_member_check]").val("Y");
-			//}else {
-			//	$("input[name=ksola_member_check]").val("N");
-			//}
-
-
-			/* 2023-05-10 HUBDNC  고객사 요청으로 주석처리 */
-			//$("input[name=mo_email]").val(kor_sign.email);
-			//$("input[name=mo_name_kor]").val(kor_sign.name);
-			//$("input[name=mo_first_name]").val(name_eng_arr[0]);
-			//$("input[name=mo_last_name]").val(name_eng_arr[1]);
-			//$("input[name=mo_phone]").val(kor_sign.phone);
-			//$("input[name=mo_nation_tel]").val("82");
-			
-
-
-			//select option에 비교해서 selected 처리
-			var options = $('#mo_department').find('option').map(function() {
-				  return $(this).val();
-			}).get()
-			for(var i=0; i<options.length; i++) {
-				if(options[i] == kor_sign.depart && options[i] !== '') {
-					$("#mo_department option:eq("+i+")").attr("selected", "selected");
-				}
-			}
-
-			//var birthday_arr = kor_sign.birthday.split("-");
-
-			//$("input[name=mo_date_of_birth]").val(birthday_arr[2]+"-"+birthday_arr[1]+"-"+birthday_arr[0]);
-			$("input[name=mo_licence_number]").val(kor_sign.license_number);
-			$("input[name=mo_affiliation_kor]").val(kor_sign.office_name);
-
-			//for(var i=0; i<$(".mo_red_alert").length; i++) {
-			//	//한국 아이디 입력했을 때 입력 안 되는 값들은 제외
-			//	if(i==1 || i==2 || i==6) {
-			//		continue;
-			//	}
-			//	$(".mo_red_alert").eq(i).html("good");
-			//	$(".mo_red_alert").eq(i).css('display', 'none');
-			//}
-		}
-
-	}
-	function fail(res) {
-		alert("Failed.\nPlease try again later.");
-		return false;
-	}
-	function error(res) {
-		alert("An error has occurred. \nPlease try again later.");
-		return false;
-	}
+        },
+        complete: function(res) {
+            console.log("2",res)
+        }
+    });
 }
+
 function kor_api() {
 	var kor_id = $("input[name=kor_id]").val().trim();
-	var kor_pw = $("input[name=kor_pw]").val().trim();
+	var kor_name = $("input[name=kor_name]").val().trim();
 	//제 3자 개인정보 수집에 동의 여부
 	var privacy = $("#privacy").is(":checked");
 
@@ -2419,8 +2359,8 @@ function kor_api() {
 		//$(".red_api").eq(0).html("format_id");
 		return;
 	}
-	if(!kor_pw) {
-		alert("Invalid password");
+	if(!kor_name) {
+		alert("Invalid Name");
 		//$(".red_api").eq(0).html("format_password");
 		return;
 	}
@@ -2431,116 +2371,62 @@ function kor_api() {
 		return;
 	}
 
-	var data = {
-		'id' : kor_id,
-		'password' : kor_pw 
-	};
-
 	$.ajax({
-		url			: "signup_api.php",
-		type		: "POST",
-		data		: data,
-		dataType	: "JSON",
-		success		: success,
-		fail		: fail,
-		error		: error
-	});
-
-	function success(res) {
-		var kor_sign = JSON.parse(res.value);
-		console.log(kor_sign); 
-		var user_row = kor_sign.user_row;
-		//alert(user_row.user_type); return;
-
-		if(kor_sign.code == "N1") {
-			alert("아이디를 입력해주세요.");
-		} else if(kor_sign.code == "N2") {
-			alert("비밀번호를 입력해주세요.");
-		} else if(kor_sign.code == "N3") {
-			alert("가입되지 않은 아이디입니다.");
-		} else if(kor_sign.code == "N4") {
-			alert("잘못된 비밀번호 입니다.");
-		} else if(kor_sign.code == "N5") {
-			alert("탈퇴된 아이디 입니다.");
-		} else if(kor_sign.code == "N7") {
-			alert("이미 인증된 계정입니다.");
-			$("[name=kor_id]").val("");
-			$("[name=kor_pw]").val("");
-			$("#privacy").prop("checked", false);
-			$("[name=kor_id]").focus();
-		} else if(kor_sign.code == "N6") {
-			
-			alert("회원님은 대한비만학회 " + user_row.user_type + " 입니다");
-			//이거 실행했을 때도 이메일 중복체크
-			var check_email= email_check(user_row.email);
-			if(check_email == false) {
-				return;
+        url: PATH + "ajax/client/ajax_member.php",
+        type: "POST",
+        data: {
+            flag: "kscp_memeber_check",
+            id: kor_id,
+            nick_name: kor_name
+        },
+        dataType: "JSON",
+        success: function(res) {
+            //console.log("1",res);
+            if (res.code == 200) { 
+				if(res.result.is_used === "1"){
+					alert("이미 사용된 ID입니다.")
+					return false;
+				}else if(res.result.is_used === "0"){
+					alert("회원이 인증되었습니다."); 
+					setInfo(res.result, "PC");           
+				}
+            }
+             else if(res.code == 401) {
+				alert("ID와 성함을 확인해주세요.")
 			}
+        },
+        complete: function(res) {
+            //console.log("2",res)
+        }
+    });
+}
 
-			$("input[name=ksola_member_type]").val(user_row.user_type);			
-			$("input[name=ksola_member_check]").val(user_row.id);
 
-			//if(user_row.user_type == "평생회원"){
-			//	$("input[name=ksola_member_check]").val("Y");
-			//}else if(user_row.user_type == "정회원"){
+function setInfo(result, device){
+	const email = result.email;
+	const nickname = result.nick_name;
+	const org = result.org;
+	const department = result.department;
+	const userId = result.id;
 
-			//}else {
+	$('input[name=ksola_member_check]').val(userId);
 
-			//}
-
-			//$("input[name=ksola_member_type]").val(user_row.user_type);
-			//if(user_row.user_type == "평생회원" || user_row.user_type == "정회원"){
-			//	$("input[name=ksola_member_check]").val("Y");
-			//}else {
-			//	$("input[name=ksola_member_check]").val("N");
-			//}
-			
-			//alert($("input[name=ksola_member_check]").val()); 
-			//alert($("input[name=ksola_member_type]").val()); 
-
-			/* 2023-05-10 HUBDNC  고객사 요청으로 주석처리 */
-			//$("input[name=email]").val(kor_sign.email);
-			//$("input[name=name_kor]").val(kor_sign.name);
-			//$("input[name=first_name]").val(name_eng_arr[0]);
-			//$("input[name=last_name]").val(name_eng_arr[1]);
-			//$("input[name=phone]").val(kor_sign.phone);
-			//$("input[name=nation_tel]").val("82");
-
-			//select option에 비교해서 selected 처리
-			//var options = $('#department').find('option').map(function() {
-			//	  return $(this).val();
-			//}).get()
-			//for(var i=0; i<options.length; i++) {
-			//	if(options[i] == kor_sign.depart && options[i] !== '') {
-			//		$("#department option:eq("+i+")").attr("selected", "selected");
-			//	}
-			//}
-
-			//var birthday_arr = kor_sign.birthday.split("-");
-
-			//$("input[name=date_of_birth]").val(birthday_arr[2]+"-"+birthday_arr[1]+"-"+birthday_arr[0]);
-			$("input[name=licence_number]").val(kor_sign.license_number);
-			$("input[name=affiliation_kor]").val(kor_sign.office_name);
-
-			//for(var i=0; i<$(".red_alert").length; i++) {
-			//	//한국 아이디 입력했을 때 입력 안 되는 값들은 제외
-			//	if(i==1 || i==2 || i==6) {
-			//		continue;
-			//	}
-			//	$(".red_alert").eq(i).html("good");
-			//	$(".red_alert").eq(i).css('display', 'none');
-			//}
-		}
-
+	if(device === "PC"){
+		$('input[name=email]').val(email);
+		$('input[name=first_name_kor]').val(nickname.slice(1));
+		$('input[name=last_name_kor]').val(nickname.slice(0,1));
+		$('input[name=affiliation_kor]').val(org);
+		$('input[name=department_kor]').val(department);
 	}
-	function fail(res) {
-		alert("Failed.\nPlease try again later.");
-		return false;
+	else if(device === "mo"){
+		$('input[name=mo_email]').val(email);
+		$('input[name=mo_first_name_kor]').val(nickname.slice(1));
+		$('input[name=mo_last_name_kor]').val(nickname.slice(0,1));
+		$('input[name=mo_affiliation_kor]').val(org);
+		$('input[name=mo_department_kor]').val(department);
 	}
-	function error(res) {
-		alert("An error has occurred. \nPlease try again later.");
-		return false;
-	}
+
+
 }
 
 //이메일 중복 체크 한국으로 체크시
@@ -2555,21 +2441,12 @@ function email_check(email) {
 		dataType : "JSON", 
 		success : function(res){
 			if(res.code == 200) {
-				//$(".red_alert").eq(0).html("good");
-				//$(".red_alert").eq(0).css('display', 'none');
-				//$(".mo_red_alert").eq(0).html("good");
-				//$(".mo_red_alert").eq(0).css('display', 'none');
 			} else if(res.code == 400) {
 				alert("used_email_msg");
 				$("input[name=email]").val("");
 				$("input[name=mo_email]").val("");
-				//$(".mo_red_alert").eq(0).html("used_email_msg");
-				//$(".mo_red_alert").eq(0).css('display', 'block');
 				return false;
 			} else {
-				//alert("reject_msg");
-				//$(".mo_red_alert").eq(0).html("reject_msg");
-				//$(".mo_red_alert").eq(0).css('display', 'block');
 				return false;
 			}
 		}

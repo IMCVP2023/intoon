@@ -464,7 +464,7 @@ td.pc_only {display:table-cell;}
 .detail_table2 {border-top:1px solid #ADA9BB;}
 .detail_table2 tr {border-bottom:1px solid #ADA9BB;}
 .detail_table2 th, .detail_table2 td {padding:13px 24px 16px; font-size:18px;}
-.detail_table2 p {line-height:22px; font-size:18px;}
+.detail_table2 p {line-height:28px; font-size:18px;}
 .max_normal {display:inline-block; width:100%; max-width:336px;}
 .max_long {display:inline-block; width:100%; max-width:442px;}
 .min800 {min-width: 800px;}
@@ -945,7 +945,7 @@ section.container.sponsor {padding-top: 164px;}
 	.select_icon img {width: 100%;}
 
 	/* btn - 220406 HUBDNC LJH2 */
-	.long_btn {font-size: 14px; height: 30px;}
+	.long_btn, 	.long_btn a{font-size: 14px !important; height: 30px;}
 	a.long_btn {line-height: 30px; padding: 0 15px;}
 	.btn {min-width: 120px; height: 52px; font-size: 18px; padding: 0 20px;}
 	.pager_btn_wrap {margin-top: 100px;}

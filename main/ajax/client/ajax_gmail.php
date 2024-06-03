@@ -230,7 +230,7 @@ if($language == "ko") {
 										</tr>
 										<tr>
 											<td colspan='3'>
-												<div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[IMCVP 2024] Welcome to IMCVP 2024!</div>
+												<div style='font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;'>[IMCVP 2024] Welcome to IMCVP 2024!</div>
 											</td>
 										</tr>
 										<tr>
@@ -238,7 +238,7 @@ if($language == "ko") {
 											<td>
 												<div>
 													<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$first_name} {$last_name},</p>
-													<p style='font-size:14px;color:#170F00;margin-top:14px;'>Thank you for signing up for the IMCVP 2024.<br>Your profile has been successfully created.<br>Please review the information that you have entered as below.<br>If necessary, you can access ‘IMCVP 2024 website - MY PAGE’ to review, modify or update your personal information.</p>
+													<p style='font-size:14px;color:#170F00;margin-top:14px;'>Thank you for signing up for the IMCVP 2024.<br>Your profile has been successfully created.<br>Please review the information that you have entered as below.<br>If necessary, you can access ‘IMCVP 2024 website - MY IMCVP’ to review, modify or update your personal information.</p>
 													<table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 														<tbody>
 															<tr>
@@ -314,7 +314,7 @@ if($language == "ko") {
 			 </tr>
 			 <tr>
 				 <td colspan='3'>
-					 <div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[IMCVP 2024] Temporary Password</div>
+					 <div style='font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;'>[IMCVP 2024] Temporary Password</div>
 				 </td>
 			 </tr>
 			 <tr>
@@ -325,7 +325,7 @@ if($language == "ko") {
 							 <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Member of : {$fname}<br><span style='font-size:14px;color:#170F00;font-weight:normal;'>You requested a temporary password at : {$time}</span></p>
 						 </div>
 						 <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname},</p>
-						 <p style='font-size:14px;color:#170F00;margin-top:14px;'>You can log in to the IMCVP 2024 website using the ID & Temporary Password below and modify your password on the personal information on my page.</p>
+						 <p style='font-size:14px;color:#170F00;margin-top:14px;'>You can log in to the IMCVP 2024 website using the ID & Temporary Password below and modify your password on the personal information on MY IMCVP.</p>
 						 <table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 							 <tbody>
 								 <tr>
@@ -535,7 +535,7 @@ if($language == "ko") {
 			$pay_name = "-";
 
 			if($pay_type == "card") $pay_name = "Credit Card";
-			else if($pay_type == "bank") $pay_name = "Bank Transfer";
+			else if($pay_type == "bank") $pay_name = "Wire Transfer";
 			else if($pay_type == "free") $pay_name = "Free";
 			else $pay_name = "ETC";
 
@@ -579,7 +579,7 @@ if($language == "ko") {
 											<tr>
 												<td width='74' style='width:74px;'></td>
 												<td>
-													<div style='font-weight:bold; text-align:center; font-size: 21px; color: #00666B; padding: 20px 0;'>[IMCVP 2024] Completed Registration</div>
+													<div style='font-weight:bold; text-align:center; font-size: 21px; color: #257FE6; padding: 20px 0;'>[IMCVP 2024] Completed Registration</div>
 												</td>
 												<td width='74' style='width:74px;'></td>
 											</tr>
@@ -588,7 +588,7 @@ if($language == "ko") {
 												<td>
 													<div>
 														<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$name_title} {$fname},</p>
-														<p style='font-size:14px;color:#170F00;margin-top:14px;'>We express our gratitude for your registration for the International Meeting CardioVascular disease Prevention (IMCVP) 2024.	The registration details are presented below.<br/>Should you have any inquiries regarding your registration, kindly reach out to the IMCVP 2024 Secretariat for assistance.(<a href='mailto:secretariat@imcvp.org'>secretariat@imcvp.org</a>)</p>
+														<p style='font-size:14px;color:#170F00;margin-top:14px;'>We express our gratitude for your registration for the International Meeting CardioVascular Disease Prevention (IMCVP) 2024.	The registration details are presented below.<br/>Should you have any inquiries regarding your registration, kindly reach out to the IMCVP 2024 Secretariat for assistance.(<a href='mailto:secretariat@imcvp.org'>secretariat@imcvp.org</a>)</p>
 														<table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 															<tbody>
 																<tr style='border-bottom:1px solid #000;'>
@@ -964,7 +964,7 @@ if($language == "ko") {
 		$rawMessageString .= '<div><table width="750" style=" padding: 0;">
 								<tr><td colspan="3"><img src="https://imcvp.org/main/img/2024_mail_header-1.png" width="750" style="width:100%; max-width:100%;"></td></tr>
 								<tr><td width="74" style="width:74px;"></td><td>
-								<div style="font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;">[IMCVP 2024] Completed Abstract Submission</div></td><td width="74" style="width:74px;"></td></tr>
+								<div style="font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;">[IMCVP 2024] Completed Abstract Submission</div></td><td width="74" style="width:74px;"></td></tr>
 								<tr><td width="74" style="width:74px;"></td><td><div><p style="font-size:15px; font-weight:bold; color:#000; margin:0;">Dear '.$first_name.' '.$last_name.',</p><p style="font-size:14px;color:#170F00;margin-top:14px;">Thank you for the online submission of your abstract to IMCVP 2024.<br>Your abstract has been successfully submitted as follows.</p>
 								<!-- Abstract Submission Status -->
 								<p style="font-size:17px; font-weight:bold; color:#000;  margin: 30px 0 0;">Abstract Submission Status</p>
@@ -1139,7 +1139,7 @@ if($language == "ko") {
             </tr>
             <tr>
                 <td colspan='3'>
-                    <div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[IMCVP 2024] Completed Abstract Submission</div>
+                    <div style='font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;'>[IMCVP 2024] Completed Abstract Submission</div>
                 </td>
             </tr>
             <tr>
@@ -1217,7 +1217,7 @@ if($language == "ko") {
             </tr>
             <tr>
                 <td colspan='3'>
-                    <div style='font-weight:bold; text-align:center;font-size: 21px; color: #00666B;padding: 20px 0;'>[IMCVP 2024] Completed Abstract Submission</div>
+                    <div style='font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;'>[IMCVP 2024] Completed Abstract Submission</div>
                 </td>
             </tr>
             <tr>

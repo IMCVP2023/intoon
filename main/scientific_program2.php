@@ -144,14 +144,14 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<p>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="pink_panel_tr">
 										<th>07:00 - 08:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -174,7 +174,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
-										<td class="yellow_bg">Symposium 7 <br/>
+										<td class="yellow_bg">Symposium 7 <br/>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives 
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -186,7 +186,7 @@
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 7 <br/>
+										<td class="yellow_bg">Symposium 7 <br/>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives 
 										</td>
 									</tr>
 								</tbody>
@@ -202,44 +202,44 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<p>Seung-Hyun Ko (The Catholic University of Korea, Korea)<br>Lee, Hae-Young (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									
 									<tr>
 										<th>08:30 - 08:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">The known and unknonw mechanisms of SGLT2 inhibitors </p>
+											<p>Lee, Yong Ho (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>08:50 - 09:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">What SGLT2 inhibitors have changed in our field - Diabetologist's Perspectives</p>
+											<p>Eun Young Lee (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:10 - 09:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">What SGLT2 inhibitors have changed in our field - Cardiologist's Perspectives</p>
+											<p>Cho, Dong Hyuk (Korea University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:30 - 09:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">What SGLT2 inhibitors have changed in our field - Nephrologist's Perspectives</p>
+											<p>Eun Hui Bae (Chonnam National University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>09:50 - 10:10</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<p>Lee, Chan Joo (Yonsei University, Korea), Jin Hwa Kim (Chosun University, Korea)</p>
+											<p>Sang-Eun Lee (Ewha Womans University, Korea), Seon Ha Baek (Hallym University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -290,15 +290,15 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br/>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								 
 									<tr class="non_border_b">
 										<th>10:30 - 11:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -315,7 +315,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">11:10 - 12:50</th>
-										<td class="yellow_bg">Symposium 9 <br/>
+										<td class="yellow_bg">Symposium 9 <br/>Obesity and Cardiovascular Disease 
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -327,7 +327,7 @@
 										<th class="dark_yellow_bg">11:10 - 12:50</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 9 <br/>
+										<td class="yellow_bg">Symposium 9 <br/>Obesity and Cardiovascular Disease 
 										</td>
 									</tr>
 								</tbody>
@@ -343,43 +343,44 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br/>TBD (TBD)</p>
+											<p>Eun-Jung Rhee (Sungkyunkwan University, Korea)<br/>Sang Hak Lee (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>11:10 - 11:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Obesity: Definition and Clinical Implications </p>
+											<p>Sang Woo Oh (Dongguk University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>11:30 - 11:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Obesity Paradox in Cardiovascular Disease </p>
+											<p>Darae Kim (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>11:50 - 12:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Bariatric Surgery for Obese Patients with Cardiovascular Disease</p>
+											<p>Moon-Won Yoo (Ulsan University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>12:10 - 12:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Novel Pharmacotherapy for Obese Patients with Cardiovascular Disease</p>
+											<p>Soo Lim (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>12:30 - 12:50</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<p>Dae Young Cheon (Hallym University, Korea), Junho Hyun (Ulsan University, Korea)</p>
+											<p>Yeoree Yang (The Catholic University of Korea, Korea), Mihae Seo (Soonchunhyang University, Korea
+)</p>
 										</td>
 									</tr>
 									
@@ -427,14 +428,14 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<p>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>12:50 - 13:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -479,36 +480,36 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>13:50 - 14:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>14:10 - 14:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>14:30 - 14:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>14:50 - 15:00</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -559,14 +560,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>15:20 - 16:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -611,43 +612,43 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>16:00 - 16:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>16:20 - 16:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>16:40 - 17:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>17:00 - 17:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>17:20 - 17:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -735,14 +736,14 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<p>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="pink_panel_tr">
 										<th>07:00 - 08:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -792,43 +793,43 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>08:30 - 08:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>08:50 - 09:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>09:10 - 09:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>09:30 - 09:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>09:50 - 10:10</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -879,14 +880,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br/>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>10:30 - 11:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -931,43 +932,43 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>11:10 - 11:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>11:30 - 11:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>11:50 - 12:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>12:10 - 12:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>12:30 - 12:50</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -1015,15 +1016,15 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<p>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
 									<tr class="non_border_b">
 										<th>12:50 - 13:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -1067,36 +1068,36 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>13:50 - 14:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>14:10 - 14:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>14:30 - 14:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>14:50 - 15:00</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -1147,15 +1148,15 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
 									<tr>
 										<th>15:20 - 16:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -1200,43 +1201,43 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>16:00 - 16:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>16:20 - 16:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>16:40 - 17:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>17:00 - 17:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>17:20 - 17:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">

@@ -33,7 +33,7 @@
 							<li>Summer (June ~ August)</li>
 							<li>Autumn (September ~ November)</li>
 							<li>Winter (December ~ February)</li>
-							<li>The temperature in Seoul in September is around 15-25℃ degrees.</li>
+							<li>The temperature in Seoul in November is around 1-11℃ degrees.</li>
 						</ul>
 					</div>
 				</li>

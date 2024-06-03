@@ -132,7 +132,7 @@ $locale = locale($language);
                         <a href="/main/venue.php">Venue</a>
                         <ul class="sub_nav">
                             <li><a href="/main/venue.php">Grand Walkerhill<br>Seoul</a></li>
-                            <li><a href="/main/comingsoon.php">Accommodation</a></li>
+                            <li><a href="/main/accommodation.php">Accommodation</a></li>
                             <li><a href="/main/comingsoon.php">Floor Plan</a></li>
 
                            <!--  <li><a href="/main/venue.php">Conrad Seoul</a></li>
@@ -141,12 +141,12 @@ $locale = locale($language);
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">News & Information</a>
+                        <a href="/main/board_notice.php">News & Information</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">News</a></li>
+                            <li><a href="/main/board_notice.php">News</a></li>
                             <!-- <li><a href="/main/comingsoon.php">Newsletter</a></li> -->
-                            <li><a href="/main/comingsoon.php">VISA</a></li>
-                            <li><a href="/main/comingsoon.php">Useful Information</a></li>
+                            <li><a href="/main/visa.php">VISA</a></li>
+                            <li><a href="/main/useful_information.php">Useful Information</a></li>
 
                             <!-- <li><a href="/main/board_notice.php">Notice</a></li>
                             <li><a href="/main/board_newsletter.php">Newsletter</a></li>
@@ -317,7 +317,7 @@ $(document).ready(function() {
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m4"]) ? "block" : "none") ?>">
                     <li><a href="/main/registration_guidelines.php">Guidelines</a></li>
                     <li><a href="/main/registration.php">Go to Registration</a></li>
-                    <li><a href="/main/registration_rating_guides.php">평점 안내</a></li>
+                    <li><a href="/main/comingsoon.php">평점 안내</a></li>
 
                     <!-- <li><a href="/main/registration_guidelines.php">Registration Guidelines</a></li>
                     <li><a href="/main/registration.php">Online Registration</a></li>
@@ -339,7 +339,7 @@ $(document).ready(function() {
                 <a href="javascript:;"><span>Venue</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m6"]) ? "block" : "none") ?>">
                     <li><a href="/main/venue.php">Conrad Seoul</a></li>
-                    <li><a href="/main/comingsoon.php">Accommodation</a></li>
+                    <li><a href="/main/accommodation.php">Accommodation</a></li>
                     <li><a href="/main/comingsoon.php">Floor Plan</a></li>
 
                     <!-- <li><a href="/main/venue.php">Conrad Seoul</a></li>
@@ -348,13 +348,13 @@ $(document).ready(function() {
                 </ul>
             </li>
             <li class="m_nav_li" class="<?= (in_array($_page, $_page_config["m6"]) ? "show" : "") ?>">
-                <a href="javascript:;"><span>News & Information</span></a>
+                <a href="javascript:;"><span>News & <br/>Information</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m6"]) ? "block" : "none") ?>">
 
-                    <li><a href="/main/comingsoon.php">News</a></li>
+                    <li><a href="/main/board_notice.php">News</a></li>
                     <!-- <li><a href="/main/comingsoon.php">Newsletter</a></li> -->
-                    <li><a href="/main/comingsoon.php">VISA</a></li>
-                    <li><a href="/main/comingsoon.php">Useful Information</a></li>
+                    <li><a href="/main/visa.php">VISA</a></li>
+                    <li><a href="/main/useful_information.php">Useful Information</a></li>
 
                     <!-- <li><a href="/main/board_notice.php">Notice</a></li>
                     <li><a href="/main/board_newsletter.php">Newsletter</a></li>

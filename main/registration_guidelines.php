@@ -229,7 +229,7 @@ $price = get_data($sql_price);
 							</thead>
 							<tbody>
 								<tr class="text_center">
-									<td>MD (봉직의),Professor</td>
+									<td>MD (<span class="kor bold">봉직의</span>),Professor</td>
 									<td class="point4_txt bold">KRW 100,000</td>
 									<td class="point4_txt bold">KRW 150,000</td>
 									<td>KRW 150,000</td>
@@ -239,7 +239,7 @@ $price = get_data($sql_price);
 								</tr>
                                 <tr class="text_center">
 									<td>
-                                    Trainee (전임의, 전공의),<br>
+                                    Trainee (<span class="kor bold">전임의, 전공의</span>),<br>
 										students
 									</td>
                                     <td class="point4_txt bold">KRW 50,000</td>
