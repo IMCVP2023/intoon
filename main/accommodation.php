@@ -16,7 +16,8 @@
 			<div class="sub_btn_box">
 				<a href="/main/venue.php">Grand Walkerhil Seoul</a>
 				<a href="/main/accommodation.php" class="on">Accommodation</a>
-				<a href="/main/floor_plan.php">Floor Plan</a>
+				<a href="/main/comingsoon.php">Floor Plan</a>
+				<!-- <a href="/main/floor_plan.php">Floor Plan</a> -->
 			</div>
 		</h1>
     <div class="inner">
@@ -52,8 +53,8 @@
                             <h6><span>Step 2. </span>Fill out the form and send it by E-mail or Fax</h6>
                         </div>
                         <div class="buttons_box">
-                            <button class="pink_btn">Download the reservation form(English)</button>
-                            <button class="violet_btn">Go to Homepage</button>
+                            <button class="pink_btn" onClick="javascript:window.open('https://imcvp.org/main/upload/file/Walkerhill_Reservation_Form.pdf')">Download the reservation form(English)</button>
+                            <button class="violet_btn" onClick="javascript:window.open('https://www.walkerhill.com/grandwalkerhillseoul/')">Go to Homepage</button>
                         </div>
                     </div>                    
                 </div>
@@ -68,16 +69,12 @@
                         </tr> -->
                         <tr>
                             <th rowspan="2">Grand Walkerhill<br>(Deluxe room)</th>
-                            <td>
-                                Double (1 Bed)
-                            </td>
-                            <td>
-                                TBD
-                            </td>
+                            <td>Mountain View</td>
+                            <td>KRW290,400</td>
                         </tr>
                         <tr>
-                            <td>Twin (2 single)</td>
-                            <td>TBD</td>
+                            <td>River View</td>
+                            <td>KRW326,700</td>
                         </tr>
                     </table>
                     <ul>
@@ -116,7 +113,7 @@
                             <h6>By Subway to Shuttle Bus Stop - About 20 min (Gwangnaru Station Subway Line #5)</h6>
                         </div>
                         <div class="buttons_box">
-                            <button class="violet_btn">Go to Homepage</button>
+                            <button class="violet_btn" onClick="javascript:window.open('http://designers-1lleven.com/')">Go to Homepage</button>
                         </div>
                     </div>                    
                 </div>
@@ -150,7 +147,7 @@
                             <h6>By Subway to Shuttle Bus Stop - About 23 min (Gangbyeon Station Subway Line #2)</h6>
                         </div>
                         <div class="buttons_box">
-                            <button class="violet_btn">Go to Homepage</button>
+                            <button class="violet_btn" onClick="javascript:window.open('https://www.onlinereservations.ai/property/hotel-peyto-samseong/BC-1502223?gad_source=1&gclid=Cj0KCQjwsPCyBhD4ARIsAPaaRf188WyFRaCijZpqN_EOjO4mVGKQOPpWX7CbpTCcYkBYXNQv320FMuwaAuwuEALw_wcB')">Go to Homepage</button>
                         </div>
                     </div>                    
                 </div>
@@ -184,7 +181,7 @@
                             <h6>By Subway to Shuttle Bus Stop - About 20 min (Gangbyeon Station Subway Line #2)</h6>
                         </div>
                         <div class="buttons_box">
-                            <button class="violet_btn">Go to Homepage</button>
+                            <button class="violet_btn" onClick="javascript:window.open('https://www.shillastay.com/samsung/index.do')">Go to Homepage</button>
                         </div>
                     </div>                    
                 </div>
@@ -218,7 +215,7 @@
                             <h6>By Bus - About 12 min (including walk)</h6>
                         </div>
                         <div class="buttons_box">
-                            <button class="violet_btn">Go to Homepage</button>
+                            <button class="violet_btn" onClick="javascript:window.open('https://www.namuhotel.com/')">Go to Homepage</button>
                         </div>
                     </div>                    
                 </div>
@@ -246,7 +243,7 @@
                             <h6>You need to select and make reservations on WEHOME, A certified accommodation platform by the Republic of Korea government, for your quarantine.</h6>
                         </div>
                         <div class="buttons_box">
-                            <button class="violet_btn">Go to Homepage</button>
+                            <button class="violet_btn" onClick="javascript:window.open('https://www.wehome.me/en')">Go to Homepage</button>
                         </div>
                     </div>                    
                 </div>

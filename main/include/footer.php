@@ -189,7 +189,7 @@
                     <ul>
                         <li>4F, A-Block, Richensia, 341, Baekbeom-ro, Yongsan-gu,</li>
                         <li>Seoul 04315, Republic of Korea</li>
-                        <li>+82-2-2039- 7804&nbsp;&nbsp;|&nbsp;&nbsp;<a class="font14"  href="mailto:info@imcvp.org">info@imcvp.org</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="font14"  href="https://imcvp.org/">www.imcvp.org</a></li>
+                        <li>+82-2-2285-2578&nbsp;&nbsp;|&nbsp;&nbsp;<a class="font14"  href="mailto:info@imcvp.org">info@imcvp.org</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="font14"  href="https://imcvp.org/">www.imcvp.org</a></li>
                     </ul>
                 </div>
                 <div class="footer_r">

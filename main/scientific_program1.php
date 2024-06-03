@@ -113,7 +113,7 @@
 								<tbody>
 									<tr class="yellow_bg non_border_b">
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
-										<td class="yellow_bg">Symposium 1 <br/></td>
+										<td class="yellow_bg">Symposium 1 <br/>2024 Guideline Update for Cardiometabolic Disease</td>
 									</tr>
 								</tbody>
 							</table>
@@ -123,7 +123,7 @@
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 1 <br/>
+										<td class="yellow_bg">Symposium 1 <br/>2024 Guideline Update for Cardiometabolic Disease 
 										</td>
 									</tr>
 								</tbody>
@@ -139,43 +139,43 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD) <br/>TBD (TBD)</p>
+											<p>Won-Young Lee (Sungkyunkwan University, Korea) <br/>Sang Hyun Ihm (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:00 - 09:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Current Guidelines for Hypertension </p>
+											<p>Sungha Park (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:20 - 09:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Current Guidelines for Dyslipidemia</p>
+											<p>Kim, Sin Gon (Korea University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:40 - 10:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Current Guidelines for Diabetes </p>
+											<p>Choi, SungHee (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>10:00 - 10:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Current Guidelines for Heart Failure </p>
+											<p>Byung-Soo Yoo (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>10:20 - 10:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<p>Jong-Chan Youn (The Catholic University of Korea, Korea), Minjae Yoon (Seoul National University, Korea)</p>
+											<p>Jun Hwa Hong (Eulji university, Korea), Suk Chon (Kyung Hee University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -223,7 +223,7 @@
 									<tr class="non_border_b">
 										<th></th>
 										<td>
-											<p>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -268,14 +268,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br> TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br> TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>11:10 - 11:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -321,15 +321,15 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<p>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
 									<tr class="non_border_b">
 										<th>11:50 - 13:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -346,7 +346,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">13:00 - 14:40</th>
-										<td class="yellow_bg">Symposium 3 <br/>
+										<td class="yellow_bg">Symposium 3 <br/>non-atherosclerotic, non-cardioembolic cerebral infarction
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -358,7 +358,7 @@
 										<th class="dark_yellow_bg">13:00 - 14:40</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 3 <br/></td>
+										<td class="yellow_bg">Symposium 3 <br/>non-atherosclerotic, non-cardioembolic cerebral infarction</td>
 									</tr>
 								</tbody>
 							</table>
@@ -373,43 +373,43 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>13:00 - 13:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Dissection</p>
+											<p>Seong-Joon Lee (Ajou University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>13:20 - 13:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Cervical and cerebral artery dissection</p>
+											<p>Wookjin Yang (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>13:40 - 14:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Cancer-related stroke </p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>14:00 - 14:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">PFO-paradoxilcal embolic cause of stroke?</p>
+											<p>Hyung Jun Kim (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>14:20 - 14:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -460,14 +460,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br/>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>15:00 - 15:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -484,7 +484,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">15:40 - 17:20</th>
-										<td class="yellow_bg">Symposium 5 <br/>
+										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC joint session: Comprehensive Cardiovascular Health: Risks and Prevention Strategies
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -496,7 +496,7 @@
 										<th class="dark_yellow_bg"> 15:40 - 17:20</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 5 <br/>
+										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC joint session: Comprehensive Cardiovascular Health: Risks and Prevention Strategies
 										</td>
 									</tr>
 								</tbody>
@@ -512,43 +512,45 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<p>Won-Young Lee (Sungkyunkwan University, Korea)
+												<!-- <br>TBD (TBD) -->
+											</p>
 										</td>
 									</tr>
 									<tr>
 										<th>15:40 - 16:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Adverse Pregnancy Outcomes and Cardiovascular Disease Risk; Autoimmune Conditions and CVD</p>
+											<p>Heather M. Johnson (Florida Atlantic University, USA)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:00 - 16:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Prevention of Cardiovascular Disease among Cancer Survivors</p>
+											<p>Jung Mi-hyang (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:20 - 16:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Measurement of Physical Activity for Cardiovascular Disease Risk Assessment</p>
+											<p>Charles German (University of Chicago, USA)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:40 - 17:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Measurement of Socioeconomic Factors for Cardiovascular Disease Risk Assessment</p>
+											<p>Hyeon Chang Kim (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>17:00 - 17:20</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -593,14 +595,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br/>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>17:20 - 18:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 
@@ -678,44 +680,44 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
 									<tr>
 										<th>09:00 - 09:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>09:20 - 09:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>09:40 - 10:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>10:00 - 10:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>10:20 - 10:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -763,7 +765,7 @@
 									<tr class="non_border_b">
 										<th></th>
 										<td>
-											<p>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -808,14 +810,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br> TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br> TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>11:10 - 11:50</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -860,14 +862,14 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<p>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>11:50 - 13:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -912,43 +914,43 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br/>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>13:00 - 13:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>13:20 - 13:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>13:40 - 14:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>14:00 - 14:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>14:40 - 11:00</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -999,14 +1001,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br/>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>15:00 - 15:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -1023,7 +1025,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">15:40 - 17:20</th>
-										<td class="yellow_bg">Symposium 6 <br/>
+										<td class="yellow_bg">Symposium 6 <br/>Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -1035,7 +1037,7 @@
 										<th class="dark_yellow_bg">15:40 - 17:20</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 6 <br/>
+										<td class="yellow_bg">Symposium 6 <br/>Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes
 										</td>
 									</tr>
 								</tbody>
@@ -1051,44 +1053,44 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br/>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
 									<tr>
 										<th>15:40 - 16:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Innovative Therapeutic Strategies in CKD with Hypertension: update in HTN guideline in CKD</p>
+											<p>Jeonghwan Lee (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:00 - 16:20</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Latest Guidelines for Dyslipidemia Management in CKD: update in dyslipidemia guideline in CKD</p>
+											<p>Ban Tae Hyun (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:20 - 16:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Prevention and Early Intervention in Diabetic Kidney Disease: update guideline in DKD</p>
+											<p>Song, Soo Hyun (Chonnam National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:40 - 17:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Leveraging AI for Hypertension Research Advances</p>
+											<p>Yeom, Jae-Beom (Inje University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>17:00 - 17:20</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p>
+											<p>Eun Hui Bae (Chonnam National University, Korea), Dae Eun Choi (Chungnam National University)</p>
+											<p>Soo Hyun Kim (Chung-Ang University, Korea), Won Min Hwang (Konyang University, Korea)</p>
 										</td>
 									</tr>
 								</tbody>
@@ -1133,15 +1135,15 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>TBD (TBD)<br>TBD (TBD)</p>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
 									<tr>
 										<th>17:20 - 18:00</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 
@@ -1150,7 +1152,6 @@
 						</div>
 
 						<!-- <div class="circle_title">Breakfast &amp; Luncheon Symposium</div> -->
-						<!-- Luncheon Symposium 1 (K) [Daewoong]  -->
 						
 					</div>
 				</div>	

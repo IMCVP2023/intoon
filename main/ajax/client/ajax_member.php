@@ -78,7 +78,7 @@
 		//비회원 회원가입 및 인증
 		$auto = isset($data["auto"]) ? $data["auto"] : "";
 		$ksola_member_check  = isset($data["ksola_member_check"]) ? $data["ksola_member_check"] : "";
-		//$ksola_member_status = $ksola_member_check == "Y" ? 1 : 0;
+		//$ksola_member_status = !empty($ksola_member_check) ? 1 : 0;
 		$ksola_member_status = isset($data["ksola_member_status"]) ? $data["ksola_member_status"] : "";
 
         if($register_type == "admin") {
@@ -86,7 +86,7 @@
             $nation_tel = $arr_phone[0];
             $phone = implode("-", array_splice($arr_phone,1));
         }
-		
+
 		$insert_member_query =	"
 									INSERT member
 									SET
@@ -209,6 +209,18 @@
 			//	}
 			//}
         }
+
+		if(!empty($ksola_member_check)){
+			//[240531] sujeong / kscp_memeber is_used update
+			$update_kscp_member_query =	"
+			UPDATE kscp_member
+			SET
+				is_used = 1
+			WHERE id = '{$ksola_member_check}'
+			";
+		sql_query($update_kscp_member_query);
+	}
+
 		$res = [
 			code => 200,
 			msg => "success",
@@ -700,6 +712,39 @@
 			'code' => 200,
 			'msg' => "로그아웃 성공"
 		));
+	}
+	//[240531] sujeong / kscp member check
+	else if($_POST["flag"] === "kscp_memeber_check"){
+		$id = $_POST["id"] ?? "";
+		$nick_name = $_POST["nick_name"] ?? "";
+
+
+		
+		$find_kscp_query =	"
+							SELECT *
+							FROM kscp_member
+							WHERE id = '{$id}' AND nick_name = '{$nick_name}' AND is_deleted = 'N'
+						";
+		
+		$kscp_member_check = sql_fetch($find_kscp_query);
+		
+        if($kscp_member_check) {
+            $res = [
+                code => 200,
+                msg => "success",
+				result => $kscp_member_check
+            ];
+            echo json_encode($res);
+            exit;
+        } else {
+            $res = [
+                code => 401,
+                msg => "error"
+            ];
+            echo json_encode($res);
+            exit;
+        }
+
 	}
 
 	function generator_token(){

@@ -1605,7 +1605,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 		width: 130px;
 		height: 130px;
 		background-size: 150px;
-		background-position: center top -10px;
+		/* background-position: center top -10px; */
 	}
 
 	.main_speaker2 .title {font-size:18px; margin: 20px 0 10px;}
@@ -2072,16 +2072,19 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	align-items: flex-start;
 	justify-content: space-around;
 	width: calc(100% - 400px);
-	height: 367px !important;
+	/* min-height: 367px !important; */
+	height: 292px;
 	padding: 20px;
 	background-color: #fcfbf6;
 	margin-left: 0!important;
-	/* flex-shrink: 0; */
+	flex-shrink: 0; 
 }
-
-.accommodation li:nth-child(2) .yellow_box, .accommodation li:nth-child(3) .yellow_box, .accommodation li:nth-child(4) .yellow_box, .accommodation li:nth-child(5) .yellow_box, .accommodation li:nth-child(6) .yellow_box, .accommodation li:nth-child(7) .yellow_box{
+.accommodation li:nth-child(1) .yellow_box{
+	height: 367px;	
+}
+/* .accommodation li:nth-child(2) .yellow_box, .accommodation li:nth-child(3) .yellow_box, .accommodation li:nth-child(4) .yellow_box, .accommodation li:nth-child(5) .yellow_box, .accommodation li:nth-child(6) .yellow_box, .accommodation li:nth-child(7) .yellow_box{
 	height:294px !important;
-}
+} */
 
 .accommodation .yellow_box .line{
 	width: 100%;
@@ -2094,9 +2097,15 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	width: 100%;
 	height: 25%;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
+
+.accommodation .yellow_box div ul li {
+	font-size: 18px;
+}
+
 .accommodation .yellow_box h5 {
 	font-size: 20px;
 	font-weight: 600;
@@ -2113,22 +2122,32 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 }
 
 .accommodation .yellow_box .booked_box button {
-	width: 200px;
+	width: 230px;
 	height: 35px;
-	border-radius: 4px;
-	color: #FFF;
+	border-radius: 20px;
+    color: #484554; 
 	font-size: 12px;
+	border: 1px solid #ADA9BB;
+	background-color: #FFF;
+	padding:8px;
 }
+
+.accommodation .yellow_box .booked_box button:hover{
+	color: #FFF;
+	background-color: #23509F;
+	border-color: #23509F;
+}
+
 .accommodation .yellow_box .booked_box button:nth-child(1){
-	background-color: plum;
+	/* background-color: plum; */
 }
 
 .accommodation .yellow_box .booked_box button:nth-child(2){
-	background-color: violet;
+	/* background-color: violet; */
 }
 
 .accommodation .yellow_box .booked_box .buttons_box {
-	height: 100%;
+	height: 80px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -2153,13 +2172,15 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 @media screen and (max-width:1100px){
 
 	.venue .useful_list li .imgs{
-		float: none !important;
-		margin: 0 auto !important;
+		/* float: none !important;
+		margin: 0 auto !important; */
+		width: 100% !important;
+		height: 160% !important;
 	}
 	
 	.venue .useful_list li div:last-child{
 		width: 100%;
-		margin-top: 50px;
+		margin-top: 150px;
 	}
 	.venue .useful_list li div:last-child.x_scroll{
 		margin-top: 20px!important;
@@ -2168,11 +2189,27 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	.accommodation .accomodation_box{
 		display: flex;
 		flex-direction: column;
-		height: 600px !important;
+		height: 720px !important;
 	}
 
 	.accommodation .yellow_box{
 		width: 90%;
+		margin-top: 20px;
+		height: 450px;
+		justify-content: flex-start;
+	}
+
+	.accommodation li:nth-child(1) .yellow_box{
+		height: 450px;	
+	}
+}
+
+@media screen and (max-width:780px) {
+	.accommodation .yellow_box .booked_box{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.accommodation .yellow_box .booked_box .buttons_box{
 		margin-top: 20px;
 	}
 }

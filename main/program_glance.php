@@ -213,7 +213,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="pointer">12:50~13:50</td>
+							<td class="">12:50~13:50</td>
 							<td class="pink_bg pointer" name="luncheon_symposium_3">
 								Luncheon Symposium 3<br/>
 								<input type="hidden" name="e" value="room1">
