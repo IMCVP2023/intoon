@@ -1,3 +1,4 @@
+
 <?php
 $language = isset($_SESSION["language"]) ? $_SESSION["language"] : "en";
 $locale = locale($language);
@@ -10,7 +11,7 @@ $locale = locale($language);
           
             <!-- <div class="text_center g_h_logo"><img src="/main/img/icon_logo2.svg" alt="" class="pointer" onClick="javascript:location.href='/main/index.php'"></div> -->
             <!-- [240123]sujeong / header logo -->
-            <div class="g_h_logo"><img src="/main/img/2024_imcvp_logo.png" alt="" class="pointer"
+            <div class="g_h_logo"><img src="/main/img/2024_imcvp_logo-1.png" alt="" class="pointer"
                     onClick="javascript:location.href='/main/index.php'"></div>
             <ul class="g_h_tool">
                 <!-- <li><a href="/main/index.php">Home</a></li> -->
@@ -425,4 +426,5 @@ $(".gnb > li, .depth2").hover(function() {
 //         return false;
 //     }
 // });
+
 </script>

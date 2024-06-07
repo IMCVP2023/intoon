@@ -174,7 +174,7 @@
                             <img src="/main/img/icons/2024_kscp_white.svg" alt="">
                         </a>
                         <a href="https://imcvp.org/" target="_blank">
-                            <img src="/main/img/icons/2024_imcvp_main_logo-1.png" alt="">
+                            <img src="/main/img/icons/2024_imcvp_footer_logo.png" alt="">
                         </a>
                     </div>
                 </div>
