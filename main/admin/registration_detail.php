@@ -23,7 +23,7 @@
 											rr.member_type,
 											rr.occupation_type,
 											rr.ksso_member_status,
-											m.member_idx, m.member_email, m.member_name, m.member_nation,
+											m.member_idx, m.member_email, m.member_name, m.member_nation, m.ksola_member_check,
 											DATE(rr.register_date) AS register_date, rr.email AS registration_email, CONCAT(rr.first_name,' ',rr.last_name) AS registration_name, rr.phone,
 											rr.affiliation, rr.department, rr.licence_number, rr.specialty_number, rr.nutritionist_number, rr.dietitian_number,rr.academy_number, 
 											rr.welcome_reception_yn,
@@ -90,7 +90,7 @@
 										FROM request_registration rr
 										LEFT JOIN (
 											SELECT
-												m.idx AS member_idx, m.email AS member_email, CONCAT(m.first_name,' ',m.last_name) AS member_name, n.nation_ko AS member_nation
+												m.idx AS member_idx, m.email AS member_email, CONCAT(m.first_name,' ',m.last_name) AS member_name, n.nation_ko AS member_nation, m.ksola_member_check
 											FROM member m
 											JOIN nation n
 												ON m.nation_no = n.idx
@@ -367,8 +367,8 @@
 						<tr>
 							<th>KSCP Member Status</th>
 							<td><?=$member_status_text?></td>
-							<th>KSCP Academy number</th>
-							<td><?=$academy_number?></td>
+							<th>KSCP ID</th>
+							<td><?=$registration_detail["ksola_member_check"]?></td>
 						</tr>
 						<tr>
 							<th>ID(Email)</th>
@@ -411,19 +411,19 @@
 							<th>dietitian_number</th>
 							<td><?=$dietitian_number?></td>
 						</tr> -->
-                        <tr>
+                        <!-- <tr>
                             <th>Congress Banquet Ceremony</th>
                             <td colspan="3"><?= $banquet_yn=="Y" ? "Attend" : "Absent"; ?></td>
-                        </tr>
+                        </tr> -->
 						<tr>
 							<th>Others</th>
 							<td colspan="3">
 								<div>
 									Welcome Reception : <?=$registration_detail["welcome_reception_yn"] == "Y" ? "Yes" : "No"?><br/>
-									Day 2 Breakfast Symposium : <?=$registration_detail["day2_breakfast_yn"] == "Y" ? "Yes" : "No"?><br/>
-									Day 2 Luncheon Symposium : <?=$registration_detail["day2_luncheon_yn"] == "Y" ? "Yes" : "No"?><br/>
-									Day 3 Breakfast Symposium : <?=$registration_detail["day3_breakfast_yn"] == "Y" ? "Yes" : "No"?><br/>
-									Day 3 Luncheon Symposium : <?=$registration_detail["day3_luncheon_yn"] == "Y" ? "Yes" : "No"?><br/>
+									Day 1 Luncheon Symposium : <?=$registration_detail["day2_breakfast_yn"] == "Y" ? "Yes" : "No"?><br/>
+									Day 2 Breakfast Symposium : <?=$registration_detail["day2_luncheon_yn"] == "Y" ? "Yes" : "No"?><br/>
+									Day 2 Luncheon Symposium : <?=$registration_detail["day3_breakfast_yn"] == "Y" ? "Yes" : "No"?><br/>
+									<!-- Day 3 Luncheon Symposium : <?=$registration_detail["day3_luncheon_yn"] == "Y" ? "Yes" : "No"?><br/> -->
 								</div>
 							</td>
 						</tr>

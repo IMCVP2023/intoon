@@ -76,7 +76,7 @@
 	<div class="section_bg">
 		<div class="container">
 			<!-- 상단 타이틀 -->
-			<img src="/main/img/2024_imcvp_main_logo.png" class="pc_only img_vsl_text" alt="">
+			<img src="/main/img/2024_imcvp_main_logo-3.png" class="pc_only img_vsl_text" alt="">
 			<!-- <img src="/main/img/2024_imcvp_main_logo-1.svg" class="pc_only img_vsl_text" alt=""> -->
 			<!-- <img src="/main/img/2024_main_day_popup.png" alt=""/> -->
 			<div class="pc_only main_day_popup_img">
@@ -84,7 +84,7 @@
 				<a href="/main/registration_guidelines.php"></a>
 			</div>
 			<div class="mb_only img_vsl_text" style="">
-				<img src="/main/img/2024_imcvp_main_logo.png" alt="">
+				<img src="/main/img/2024_imcvp_main_logo-3.png" alt="">
 				<!-- <img src="/main/img/2024_imcvp_main_logo-1.svg" alt=""> -->
 				<!-- <p>Sep. 7(Thu) ~ Sep. 9(Sat)</p>
 				<p>CONRAD Seoul Hotel, Korea</p> -->
