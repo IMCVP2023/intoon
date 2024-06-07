@@ -20,7 +20,7 @@
         SELECT
             reg.idx, reg.banquet_yn, reg.email, reg.nation_no, reg.first_name, reg.last_name, reg.affiliation, reg.phone, reg.department, reg.member_type, DATE(reg.register_date) AS register_date, DATE_FORMAT(reg.register_date, '%m-%d-%Y %H:%i:%s') AS register_date2, reg.status,
 			reg.attendance_type, reg.licence_number, reg.specialty_number, reg.nutritionist_number, 
-			reg.conference_info, reg.welcome_reception_yn, reg.day2_breakfast_yn, reg.day2_luncheon_yn, reg.day3_breakfast_yn, reg.day3_luncheon_yn, 
+			reg.conference_info, reg.day1_luncheon_yn, reg.day1_satellite_yn, reg.day2_breakfast_yn, reg.day2_luncheon_yn, reg.day2_satellite_yn, 
 			reg.payment_methods, reg.price, nation.nation_en, IF(nation.nation_tel = 82, 1, 0) AS is_korea,
             p.idx AS payment_idx, p.`type` AS payment_type, p.total_price_kr, p.total_price_us,
             p.etc2, DATE_FORMAT(p.register_date, '%Y-%m-%d %H:%i:%s') AS payment_register_date

@@ -388,7 +388,7 @@
 								<p class="kor">대한심뇌혈관질환예방학회 회원 정보로 간편 가입</p>
 								<ul class="simple_join clearfix">
 									<li>
-										<label for="">KSCP ID<span class="red_txt">*</span></label>
+										<label for="">KSCP Email<span class="red_txt">*</span></label>
 										<input class="email_id" name="kor_id" type="text" maxlength="60">
 									</li>
 									<li>
@@ -785,7 +785,7 @@
 						<p class="mb10 kor">대한심뇌혈관질환예방학회 회원 정보로 간편 가입</p>
 						<ul class="simple_signup mb10">
 							<li>
-								<label for="" class="bold">KSCP ID<span class="red_txt">*</span></label>
+								<label for="" class="bold">KSCP Email<span class="red_txt">*</span></label>
 								<input class="email_id passwords" name="mo_kor_id" type="text" maxlength="60">
 							</li>
 							<li>
@@ -2322,7 +2322,7 @@ function mo_kor_api() {
         type: "POST",
         data: {
             flag: "kscp_memeber_check",
-            id: kor_id,
+            email: kor_id,
             nick_name: kor_name
         },
         dataType: "JSON",
@@ -2376,7 +2376,7 @@ function kor_api() {
         type: "POST",
         data: {
             flag: "kscp_memeber_check",
-            id: kor_id,
+            email: kor_id,
             nick_name: kor_name
         },
         dataType: "JSON",

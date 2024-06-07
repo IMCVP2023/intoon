@@ -167,22 +167,20 @@
 	$registration_list_query = "
 				SELECT
 					rr.idx AS registration_idx,
-					MAX(rr.email) AS email,
-					MAX(rr.phone) AS phone,
-					CONCAT(MAX(rr.first_name), ' ', MAX(rr.last_name)) AS `name`,
-					DATE_FORMAT(MAX(rr.register_date), '%y-%m-%d') AS register_date,
-					MAX(rr.etc2) AS etc2,
-					MAX(rr.member_type) AS member_type,
-					MAX(rr.member_other_type) AS member_other_type,
-					MAX(rr.occupation_type) AS occupation_type,
-					MAX(rr.occupation_other_type) AS occupation_other_type,
-					CONCAT(MAX(m.last_name_kor), '', MAX(m.first_name_kor)) AS kor_name,
-					CASE MAX(rr.registration_type)
+					rr.email,
+					rr.phone,
+					CONCAT(rr.first_name,' ',rr.last_name) AS `name`,
+					DATE_FORMAT(rr.register_date, '%y-%m-%d') AS register_date,
+					rr.etc2,
+					rr.member_type,
+					rr.member_other_type,
+					CONCAT(m.last_name_kor, '', m.first_name_kor) AS kor_name,
+					CASE rr.registration_type
 						WHEN '1' THEN 'Online'
 						WHEN '0' THEN 'On-site'
 						ELSE '-'
 					END AS registration_type_text,
-					CASE MAX(rr.attendance_type)
+					CASE rr.attendance_type
 						WHEN '0' THEN 'Committee'
 						WHEN '1' THEN 'Speaker'
 						WHEN '2' THEN 'Chairperson'
@@ -191,12 +189,12 @@
 						WHEN '5' THEN 'Sponsor'
 						ELSE '-'
 					END AS attendance_type_text,
-					CASE MAX(rr.is_score)
+					CASE rr.is_score
 						WHEN '1' THEN 'Applied'
 						WHEN '0' THEN 'Not applied'
 						ELSE '-'
 					END AS is_score_text,
-					CASE MAX(rr.status)
+					CASE rr.status
 						WHEN '0' THEN '등록취소'
 						WHEN '1' THEN '결제대기'
 						WHEN '2' THEN '결제완료'
@@ -205,46 +203,46 @@
 						WHEN '5' THEN '현장결제'
 						ELSE '-'
 					END AS payment_status,
-					CASE MAX(rr.payment_methods)
+					CASE rr.payment_methods
 						WHEN '0' THEN 'Credit card'
 						WHEN '1' THEN 'Bank transfer'
 						WHEN '2' THEN 'Onsite payment'
 					END AS payment_methods,
-					MAX(rr.etc1) AS etc1,
-					MAX(rr.licence_number) AS licence_number,
-					MAX(rr.specialty_number) AS specialty_number,
-					MAX(rr.nutritionist_number) AS nutritionist_number,
-					MAX(rr.dietitian_number) AS dietitian_number,
-					MAX(rr.welcome_reception_yn) AS welcome_reception_yn,
-					MAX(rr.day2_breakfast_yn) AS day2_breakfast_yn,
-					MAX(rr.day2_luncheon_yn) AS day2_luncheon_yn,
-					MAX(rr.day3_breakfast_yn) AS day3_breakfast_yn,
-					MAX(rr.day3_luncheon_yn) AS day3_luncheon_yn,
-					MAX(rr.special_request_food) AS special_request_food,
-					IFNULL(MAX(rr.promotion_code), '-') AS promotion_code,
-					IFNULL(MAX(rr.recommended_by), '-') AS recommended_by,
-					CASE MAX(rr.promotion_code)
+				    rr.etc1,
+					rr.licence_number,
+					rr.specialty_number,
+					rr.nutritionist_number,
+					rr.dietitian_number,
+					rr.day1_luncheon_yn,
+					rr.day1_satellite_yn,
+					rr.day2_breakfast_yn,
+					rr.day2_luncheon_yn,
+					rr.day2_satellite_yn,
+					rr.special_request_food,
+					IFNULL(rr.promotion_code, '-') AS promotion_code,
+					IFNULL(rr.recommended_by, '-') AS recommended_by,
+					CASE rr.promotion_code
 						WHEN 0 THEN '100%'
 						WHEN 1 THEN '50%'
 						WHEN 2 THEN '30%'
 					END AS discount_rate,
-					MAX(rr.promotion_code_number) AS promotion_code_number,
-					MAX(n.nation_ko) AS nation_ko,
-					MAX(n.nation_en) AS nation_en,
-					MAX(m.idx) AS member_idx,
-					MAX(m.affiliation) AS affiliation,
-					MAX(m.department) AS department,
-					MAX(m.affiliation_kor) AS affiliation_kor,
-					MAX(m.department_kor) AS department_kor,
-					MAX(m.nation_no) AS nation_no,
-					MAX(m.date_of_birth) AS date_of_birth,
-					MAX(rr.banquet_yn) AS banquet_yn,
-					MAX(total_price_kr) AS total_price_kr,
-					MAX(total_price_us) AS total_price_us,
-					MAX(member_status) AS member_status,
-					IFNULL(MAX(rr.register_path), '-') AS register_path,
-					IFNULL(MAX(rr.conference_info), '-') AS conference_info,
-					MAX(m.ksola_member_status) AS ksola_member_status,
+					rr.promotion_code_number,
+					n.nation_ko,
+					n.nation_en,
+					m.idx,
+					m.affiliation,
+					m.department,
+					m.affiliation_kor,
+					m.department_kor,
+					m.nation_no,
+					m.date_of_birth,
+					rr.banquet_yn,
+					total_price_kr,
+					total_price_us,
+					member_status,
+					IFNULL(rr.register_path, '-') AS register_path,
+					IFNULL(rr.conference_info, '-') AS conference_info,
+					m.ksola_member_status AS ksola_member_status,
 					GROUP_CONCAT(
 						CASE rs.topic
 							WHEN 1 THEN 'Ischemic heart disease/ coronary artery disease'
@@ -330,11 +328,11 @@
 	$html .= '<tr class="tr_center">';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="3">Registration</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan='.($star_count*4).'>Abstract Inforatmion</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="17">Participants Inforatmion</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="7">평점신청(Korean Only)</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="7">Payment Information</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="4">Others</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;"></th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="15">Participants Inforatmion</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="4">평점신청(Korean Only)</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="6">Payment Information</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="7">Others</th>';
+	// $html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;"></th>';
 	$html .= '</tr>';
 	$html .= '<tr class="tr_center">';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">No</th>';
@@ -356,16 +354,16 @@
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">부서</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Phone Number</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Type of Participation</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Occupation</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Occupation (Others)</th>';
+	// $html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Occupation</th>';
+	// $html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Occupation (Others)</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Category</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Category (Others)</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Date of Birth</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">의사면허번호</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">전문의번호</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">영양사자격번호</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">임상영양사자격번호</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">운동사 신청(Y/N)</th>';
+	// $html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">영양사자격번호</th>';
+	// $html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">임상영양사자격번호</th>';
+	// $html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">운동사 신청(Y/N)</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">결제상태</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">등록비</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">결제일</th>';
@@ -374,11 +372,11 @@
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">할인율</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Promotion Code</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">추천인</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Welcome Reception</th>';
-	// $html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 1 Breakfast</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 1 Luncheon</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 1 Satellite</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 2 Breakfast</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 2 Luncheon</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Day 2 Satellite</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Special Request for Food</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Where did you get the information about the conference?</th>';
 	$html .= '</tr>';
@@ -533,16 +531,16 @@
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["department_kor"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["phone"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["attendance_type_text"].'</td>';
-		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["occupation_type"].'</td>';
-		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["occupation_other_type"].'</td>';
+		// $html .= '<td style="border-style: solid; border-width:thin;">'.$rl["occupation_type"].'</td>';
+		// $html .= '<td style="border-style: solid; border-width:thin;">'.$rl["occupation_other_type"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["member_type"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["member_other_type"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["date_of_birth"].'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin; mso-number-format:\@">'. $licence_number.'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin; mso-number-format:\@">'. $specialty_number .'</td>';
-		$html .= '<td style="text-align:center; border-style: solid; border-width:thin; mso-number-format:\@">'. $nutritionist_number .'</td>';
-		$html .= '<td style="text-align:center; border-style: solid; border-width:thin; mso-number-format:\@">'. $dietitian_number.'</td>';
-		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$is_exercise.'</td>';
+		// $html .= '<td style="text-align:center; border-style: solid; border-width:thin; mso-number-format:\@">'. $nutritionist_number .'</td>';
+		// $html .= '<td style="text-align:center; border-style: solid; border-width:thin; mso-number-format:\@">'. $dietitian_number.'</td>';
+		// $html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$is_exercise.'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["payment_status"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$price.'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["register_date"].'</td>';
@@ -551,11 +549,11 @@
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["discount_rate"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["promotion_code_number"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["recommended_by"].'</td>';
-		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["welcome_reception_yn"].'</td>';
+		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day1_luncheon_yn"].'</td>';
+		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day1_satellite_yn"].'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day2_breakfast_yn"].'</td>';
-		// $html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day2_luncheon_yn"].'</td>';
-		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day3_breakfast_yn"].'</td>';
-		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day3_luncheon_yn"].'</td>';
+		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day2_luncheon_yn"].'</td>';
+		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$rl["day2_satellite_yn"].'</td>';
 		$html .= '<td style="text-align:center; border-style: solid; border-width:thin;">'.$special_request_food.'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$conference_info.'</td>';
 		$html .= '</tr>';

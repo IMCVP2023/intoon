@@ -22,7 +22,7 @@
         SELECT
             reg.idx, reg.banquet_yn, reg.email, reg.nation_no, reg.first_name, reg.last_name, reg.affiliation, reg.phone, reg.department, reg.member_type, DATE(reg.register_date) AS register_date, DATE_FORMAT(reg.register_date, '%m-%d-%Y %H:%i:%s') AS register_date2, reg.status, reg.is_score,
 			reg.attendance_type, reg.licence_number, reg.specialty_number, reg.nutritionist_number, reg.dietitian_number,
-			reg.conference_info, reg.welcome_reception_yn, reg.day2_breakfast_yn, reg.day2_luncheon_yn, reg.day3_breakfast_yn, reg.day3_luncheon_yn, reg.special_request_food,
+			reg.conference_info, reg.day1_luncheon_yn, reg.day1_satellite_yn, reg.day2_breakfast_yn, reg.day2_luncheon_yn, reg.day2_satellite_yn, reg.special_request_food,
 			reg.payment_methods, reg.price, nation.nation_en, IF(nation.nation_tel = 82, 1, 0) AS is_korea,
 			(
 				CASE
@@ -188,11 +188,11 @@
 						}
 
 						// Others
-						$welcome_reception_yn = $list["welcome_reception_yn"] ?? "N";
+						$day1_luncheon_yn = $list["day1_luncheon_yn"] ?? "N";
+						$day1_satellite_yn = $list["day1_satellite_yn"] ?? "N";
 						$day2_breakfast_yn = $list["day2_breakfast_yn"] ?? "N";
 						$day2_luncheon_yn = $list["day2_luncheon_yn"] ?? "N";
-						$day3_breakfast_yn = $list["day3_breakfast_yn"] ?? "N";
-						$day3_luncheon_yn = $list["day3_luncheon_yn"] ?? "N";
+						$day2_satellite_yn = $list["day2_satellite_yn"] ?? "N";
 
                         // Special Requset for Food
                         $special_request = $list["special_request_food"] ?? "";
@@ -209,27 +209,34 @@
 
 						$other_html = "";
 
-						if($welcome_reception_yn === "Y"){
+						if($day1_luncheon_yn === "Y"){
 							$other_html .= "
-											<label for='other1'><i></i>• Welcome Reception – November 29 (Fri)</label>
+											<label for='other1'><i></i>• Day 1 Luncheon Symposium – November 29 (Fri)</label>
 										   ";
 						}
+
+						if($day1_satellite_yn === "Y"){
+							$other_html .= "
+											<label for='other1'><i></i>• Day 1 Satellite Symposium – November 29 (Fri)</label>
+										   ";
+						}
+
 						if($day2_breakfast_yn === "Y"){
 							$other_html .= $other_html != "" ? "<br/>" : "";
 							$other_html .= "
-											<label for='other2'><i></i>• Day 1 Luncheon Symposium – November 29 (Fri)</label>
+											<label for='other2'><i></i>• Day 2 Breakfast Symposium – November 29 (Fri)</label>
 										   ";
 						}
 						if($day2_luncheon_yn === "Y"){
 							$other_html .= $other_html != "" ? "<br/>" : "";
 							$other_html .= "
-											<label for='other3'><i></i>• Day 2 Breakfast Symposium – November 30 (Sat)</label>
+											<label for='other3'><i></i>• Day 2 Luncheon Symposium – November 30 (Sat)</label>
 										   ";
 						}
-						if($day3_breakfast_yn === "Y"){
+						if($day2_satellite_yn === "Y"){
 							$other_html .= $other_html != "" ? "<br/>" : "";
 							$other_html .= "
-											<label for='other4'><i></i>• Day 2 Luncheon Symposium – November 30 (Sat)</label>
+											<label for='other4'><i></i>• Day 2 Satellite Symposium – November 30 (Sat)</label>
 										   ";
 						}
 

@@ -86,13 +86,12 @@
 		$department  = htmlspecialchars($department);
 		$ksso_member_status = isset($user["ksola_member_status"]) || $user["ksola_member_status"] == 0 ? $user["ksola_member_status"] : "";
 		
-		$welcome_reception_yn = $data["others1"] != "no" ? "Y" : "N";
-		$day2_breakfast_yn    = $data["others2"] != "no" ? "Y" : "N";
-		$day2_luncheon_yn     = $data["others3"] != "no" ? "Y" : "N";
-		$day3_breakfast_yn    = $data["others4"] != "no" ? "Y" : "N";
+		$day1_luncheon_yn = $data["others1"] != "no" ? "Y" : "N";
+		$day1_satellite_yn    = $data["others2"] != "no" ? "Y" : "N";
+		$day2_breakfast_yn     = $data["others3"] != "no" ? "Y" : "N";
+		$day2_luncheon_yn    = $data["others4"] != "no" ? "Y" : "N";
+		$day2_satellite_yn     = $data["others5"] != "no" ? "Y" : "N";
 
-		/**[240429] sujeong / day3 luncheon 삭제 모두 N이 들어가도록 */
-		$day3_luncheon_yn     = $data["others5"] != "no" ? "N" : "N";
         $promotion_code_number= isset($data["promotion_code"]) ? $data["promotion_code"] : "";                          // 프로모션코드 번호
 		$promotion_code       = isset($data["promotion_confirm_code"]) ? $data["promotion_confirm_code"] : "";			// 프로모션코드 할인율(0:100%, 1:50%, 2:30%)
 		$recommended_by       = isset($data["recommended_by"]) ? $data["recommended_by"] : "";							// 추천인
@@ -417,11 +416,11 @@
 					SET
 						modifier = '{$user_idx}',
 						modify_date = NOW(),
-						welcome_reception_yn = '{$welcome_reception_yn}',
+						day1_luncheon_yn = '{$day1_luncheon_yn}',
+						day1_satellite_yn = '{$day1_satellite_yn}',
 						day2_breakfast_yn = '{$day2_breakfast_yn}',
 						day2_luncheon_yn = '{$day2_luncheon_yn}',
-						day3_breakfast_yn = '{$day3_breakfast_yn}',
-						day3_luncheon_yn = '{$day3_luncheon_yn}'
+						day2_satellite_yn = '{$day2_satellite_yn}'
 						{$add_set}
 					WHERE idx = {$update_idx}
 					";
@@ -436,11 +435,11 @@
 						first_name = '{$first_name}',
 						phone = '{$phone}',
 						register = '{$user_idx}',
-						welcome_reception_yn = '{$welcome_reception_yn}',
+						day1_luncheon_yn = '{$day1_luncheon_yn}',
+						day1_satellite_yn = '{$day1_satellite_yn}',
 						day2_breakfast_yn = '{$day2_breakfast_yn}',
 						day2_luncheon_yn = '{$day2_luncheon_yn}',
-						day3_breakfast_yn = '{$day3_breakfast_yn}',
-						day3_luncheon_yn = '{$day3_luncheon_yn}',
+						day2_satellite_yn = '{$day2_satellite_yn}'
 						price = {$total_price}
 						{$add_set}
 					";
@@ -476,7 +475,7 @@
 										idx, attendance_type, is_score, nation_no, phone,
 										member_type, ksso_member_status, registration_type, affiliation, department,
 										licence_number, specialty_number, nutritionist_number, dietitian_number, academy_number, register_path,
-										welcome_reception_yn, day2_breakfast_yn, day2_luncheon_yn, day3_breakfast_yn, day3_luncheon_yn, 
+										day1_luncheon_yn, day1_satellite_yn, day2_breakfast_yn, day2_luncheon_yn, day2_satellite_yn, 
 										conference_info, price, payment_no,
 										DATE_FORMAT(register_date, '%m-%d-%Y %h:%i:%s') AS register_date
 									FROM request_registration

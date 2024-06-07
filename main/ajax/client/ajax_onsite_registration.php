@@ -56,11 +56,11 @@ if($_POST["flag"] === "onsite") {
     $nutritionist_number = $data["nutritionist_number"] ?? "";
     $dietitian_number = $data["dietitian_number"] ?? "";
 
-    $welcome_reception_yn = $data["welcome_reception_yn"] !== null ? "Y" : "N";
-    $day2_breakfast_yn    = $data["day2_breakfast_yn"] !== null ? "Y" : "N";
-    $day2_luncheon_yn     = $data["day2_luncheon_yn"] !== null ? "Y" : "N";
-    $day3_breakfast_yn    = $data["day3_breakfast_yn"] !== null ? "Y" : "N";
-    $day3_luncheon_yn     = $data["day3_luncheon_yn"] !== null ? "Y" : "N";
+    $day1_luncheon_yn = $data["day1_luncheon_yn"] !== null ? "Y" : "N";
+    $day1_satellite_yn    = $data["day1_satellite_yn"] !== null ? "Y" : "N";
+    $day2_breakfast_yn     = $data["day2_breakfast_yn"] !== null ? "Y" : "N";
+    $day2_luncheon_yn    = $data["day2_luncheon_yn"] !== null ? "Y" : "N";
+    $day2_satellite_yn     = $data["day2_satellite_yn"] !== null ? "Y" : "N";
 
     $special_request = $data["special_request"] ?? "";
 
@@ -124,11 +124,11 @@ if($_POST["flag"] === "onsite") {
                                             register_path = 'onsite',
                                             register = '{$member_idx}',
                                             conference_info = '{$conference_info}',
-                                            welcome_reception_yn = '{$welcome_reception_yn}',
+                                            day1_luncheon_yn = '{$day1_luncheon_yn}',
+                                            day1_satellite_yn = '{$day1_satellite_yn}',
                                             day2_breakfast_yn = '{$day2_breakfast_yn}',
                                             day2_luncheon_yn = '{$day2_luncheon_yn}',
-                                            day3_breakfast_yn = '{$day3_breakfast_yn}',
-                                            day3_luncheon_yn = '{$day3_luncheon_yn}',
+                                            day2_satellite_yn = '{$day2_satellite_yn}',
                                             special_request_food = {$special_request},
                                             payment_methods = 2,
                                             price = '{$fee}'
@@ -226,11 +226,11 @@ if($_POST["flag"] === "onsite") {
                             fee = '{$fee}',
                             is_score = '{$is_score_text}',
                             conference_info = '{$conference_info}',
-                            welcome_reception_yn = '{$welcome_reception_yn}',
+                            day1_luncheon_yn = '{$day1_luncheon_yn}',
+                            day1_satellite_yn = '{$day1_satellite_yn}',
                             day2_breakfast_yn = '{$day2_breakfast_yn}',
                             day2_luncheon_yn = '{$day2_luncheon_yn}',
-                            day3_breakfast_yn = '{$day3_breakfast_yn}',
-                            day3_luncheon_yn = '{$day3_luncheon_yn}',
+                            day2_satellite_yn = '{$day2_satellite_yn}',
                             special_request_food = '{$special_request_text}',
                             date_of_birth = '{$date_of_birth}'
                     ";

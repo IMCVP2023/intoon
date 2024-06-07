@@ -32,6 +32,10 @@
 	if (!empty($session_app_type) && $session_app_type == 'N') {
 		// Web일때
 ?>
+
+<?php
+	}
+?>
     <h1 class="page_title">Registration
 			<div class="sub_btn_box">
 				<a href="/main/registration_guidelines.php">Guidelines</a>
@@ -39,9 +43,6 @@
 				<a href="/main/registration_rating_guides.php" class="on kor">평점안내</a>
 			</div>
 		</h1>
-<?php
-	}
-?>
 	<!-- <div class="inner"> -->
 	<!-- 	<img class="coming" src="./img/coming.png"> -->
 	<!-- </div> -->
@@ -74,7 +75,7 @@
 					<tbody>
 						<tr>
 							<td class="kor">대한의사협회</td>
-							<td class="kor">최대 6평점<span class="red_t bold">&nbsp;(예상)</span></td>
+							<td class="kor">최대 6평점<span class="red_t bold">(예상)</span></td>
 							<td class="kor">최대 6평점<span class="red_t bold">&nbsp;(예상)</span></td>
 							<td class="kor">최대 12평점<span class="red_t bold">&nbsp;(예상)</span></td>
 						</tr>
