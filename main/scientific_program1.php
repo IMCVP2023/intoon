@@ -394,7 +394,7 @@
 										<th>13:40 - 14:00</th>
 										<td>
 											<p class="s_bold">Cancer-related stroke </p>
-											<!-- <p>TBD (TBD)</p> -->
+											<p>Han-Jin Cho (Pusan National University)</p>
 										</td>
 									</tr>
 									<tr>
@@ -512,8 +512,10 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Won-Young Lee (Sungkyunkwan University, Korea)
-												<!-- <br>TBD (TBD) -->
+											<p>
+												Heather M. Johnson (Florida Atlantic University, USA)
+												<br>Won-Young Lee (Sungkyunkwan University, Korea)
+								
 											</p>
 										</td>
 									</tr>

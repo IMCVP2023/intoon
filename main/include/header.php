@@ -121,7 +121,7 @@ $locale = locale($language);
                         <a href="/main/comingsoon.php">Sponsorship</a>
                         <ul class="sub_nav">
                             <li><a href="/main/comingsoon.php">Sponsorship</a></li>
-                            <li><a href="/main/comingsoon.php">Exhibition</a></li>
+                            <li><a href="/main/comingsoon.php">Sponsor Guidelines</a></li>
                             <li><a href="/main/comingsoon.php">Exhibition &<br>Social Event</a></li>
 
                             <!-- <li><a href="/main/sponsor.php">Sponsorship</a></li>
@@ -328,7 +328,7 @@ $(document).ready(function() {
                 <a href="javascript:;"><span>Sponsorship</span></a>
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m5"]) ? "block" : "none") ?>">
                     <li><a href="/main/comingsoon.php">Sponsorship</a></li>
-                    <li><a href="/main/comingsoon.php">Exhibition</a></li>
+                    <li><a href="/main/comingsoon.php">Sponsor Guidelines</a></li>
                     <li><a href="/main/comingsoon.php">Exhibition & Social Event</a></li>
                     
                     <!-- <li><a href="/main/sponsor.php">Sponsorship</a></li>

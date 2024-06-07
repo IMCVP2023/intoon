@@ -74,11 +74,11 @@
 					<tbody>
 						<tr>
 							<td class="kor">대한의사협회</td>
-							<td class="kor">최대 6평점</td>
-							<td class="kor">최대 6평점</td>
-							<td class="kor">최대 12평점</td>
+							<td class="kor">최대 6평점<span class="red_t bold">&nbsp;(예상)</span></td>
+							<td class="kor">최대 6평점<span class="red_t bold">&nbsp;(예상)</span></td>
+							<td class="kor">최대 12평점<span class="red_t bold">&nbsp;(예상)</span></td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td class="kor">내과전공의 외부학술회의(학술대회)</td>
 							<td class="kor">최대 2평점</td>
 							<td class="kor">최대 2평점</td>
@@ -89,7 +89,7 @@
 							<td class="kor">해당 없음</td>
 							<td class="kor">해당 없음</td>
 							<td class="kor">해당 없음</td>
-						</tr>
+						</tr> -->
 						<!-- <tr>
 							<td>한국영양교육평가원 임상영양사 <br/>전문연수교육(CPD)</td>
 							<td colspan="3">5평점 <br/><span class="font_small">* 5시간 이상 참석 필수</span></td>
@@ -179,7 +179,7 @@
 					<thead>
 						<tr>
 							<th class="kor">구분</th>
-							<th class="kor">기준</th>
+							<th class="kor">기준<span class="red_t bold">&nbsp;(예상)</span></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -196,7 +196,7 @@
 						</tr>
 					</tbody>
 				</table>
-				<table class="c_table2 detail_table center type1">
+				<!-- <table class="c_table2 detail_table center type1">
 					<thead>
 						<tr>
 							<th colspan="2" class="kor">구분</th>
@@ -216,7 +216,7 @@
 							<td class="kor">해당 없음</td>
 						</tr>
 					</tbody>
-				</table>
+				</table> -->
 			</div>
 
 			<!-- <div class="mt10">

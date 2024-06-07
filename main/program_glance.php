@@ -247,12 +247,12 @@
 						</tr>
 						<tr>
 							<td class="">16:00~17:40</td>
-							<td class="yellow_bg pointer" name="symposium_13">
-								Symposium 13
+							<td class="violet_bg pointer" name="satellite_symposium_3">
+							Satellite Symposium 3
 								<input type="hidden" name="e" value="room1">
 							</td>
-							<td class="yellow_bg pointer" name="symposium_14">
-								Symposium 14
+							<td class="violet_bg pointer" name="satellite_symposium_4">
+							Satellite Symposium 4
 								<input type="hidden" name="e" value="room2">
 							</td>
 							

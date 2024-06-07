@@ -2422,7 +2422,7 @@ select[name="topic1"] option:disabled {
 }
 
 .sub_btn_box > a:hover {
-	border: none;
+	border-color: #23509F;
 	background-color: #23509F;
 	color: #FFF;
 }

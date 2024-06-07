@@ -26,11 +26,11 @@ include_once('./include/header.php');
                     <ul>
                         <li>We wish to express our sincere appreciation for your generous support towards our upcoming conference. As a token of our gratitude, we invite you to download the Sponsor Operations Manual for your reference. This manual provides essential information to ensure a smooth sponsorship experience.</li>
                         <li><br>Thank you once again for your invaluable contribution to our event's success.</li>
-                        <li>more inquiry about sponsorship, please contact <span class="bold">Korean Society of Cardiovascular Disease Prevention(KSCP)</span> <a class="link" href="mailto:kscpmd@kscpmd.or.kr">kscpmd@kscpmd.or.kr</a></li>
+                        <li>more inquiry about sponsorship, please contact <span class="bold">Korean Society of Cardiovascular Disease Prevention (KSCP)</span> <a class="link" href="mailto:kscpmd@kscpmd.or.kr">kscpmd@kscpmd.or.kr</a></li>
                     </ul>
                 </div>
                 <div class="text_center btn_box mt25">
-                    <a href="" class="btn long_btn" target="_blank" download><img src="./img/icons/icon_download_white.svg" alt="">Download Sponsorship / Exhibition Prospectus</a>
+                    <a href="" class="btn long_btn" target="_blank" download style="color:#FFF !important"><img src="./img/icons/icon_download_white.svg" alt="">Download Sponsorship / Exhibition Prospectus</a>
                 </div>
             </div>
           
