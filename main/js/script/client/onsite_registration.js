@@ -246,11 +246,11 @@ function onsite_submit(){
     var nutritionist_number = $("input[name=nutritionist_number]").val();
     var dietitian_number = $("input[name=dietitian_number]").val();
 
-    var welcome_reception_yn = $("input:checkbox[id='others1']:checked").val()
-    var day2_breakfast_yn = $("input:checkbox[id='others2']:checked").val()
-    var day2_luncheon_yn = $("input:checkbox[id='others3']:checked").val()
-    var day3_breakfast_yn = $("input:checkbox[id='others4']:checked").val()
-    var day3_luncheon_yn = $("input:checkbox[id='others5']:checked").val()
+    var day1_luncheon_yn = $("input:checkbox[id='others1']:checked").val()
+    var day1_satellite_yn = $("input:checkbox[id='others2']:checked").val()
+    var day2_breakfast_yn = $("input:checkbox[id='others3']:checked").val()
+    var day2_luncheon_yn = $("input:checkbox[id='others4']:checked").val()
+    var day2_satellite_yn = $("input:checkbox[id='others5']:checked").val()
 
     var special_request = $("input[name='special_request']:checked").val()
 
@@ -301,11 +301,11 @@ function onsite_submit(){
         licence_number : licence_number,
         nutritionist_number : nutritionist_number,
         dietitian_number : dietitian_number,
-        welcome_reception_yn : welcome_reception_yn,
+        day1_luncheon_yn : day1_luncheon_yn,
+        day1_satellite_yn : day1_satellite_yn,
         day2_breakfast_yn : day2_breakfast_yn,
         day2_luncheon_yn : day2_luncheon_yn,
-        day3_breakfast_yn : day3_breakfast_yn,
-        day3_luncheon_yn : day3_luncheon_yn,
+        day2_satellite_yn : day2_satellite_yn,
         special_request : special_request,
         conference_info_arr : conference_info_arr,
         price : price

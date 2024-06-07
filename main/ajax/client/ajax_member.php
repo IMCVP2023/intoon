@@ -715,7 +715,7 @@
 	}
 	//[240531] sujeong / kscp member check
 	else if($_POST["flag"] === "kscp_memeber_check"){
-		$id = $_POST["id"] ?? "";
+		$email = $_POST["email"] ?? "";
 		$nick_name = $_POST["nick_name"] ?? "";
 
 
@@ -723,7 +723,7 @@
 		$find_kscp_query =	"
 							SELECT *
 							FROM kscp_member
-							WHERE id = '{$id}' AND nick_name = '{$nick_name}' AND is_deleted = 'N'
+							WHERE email = '{$email}' AND nick_name = '{$nick_name}' AND is_deleted = 'N'
 						";
 		
 		$kscp_member_check = sql_fetch($find_kscp_query);

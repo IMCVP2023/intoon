@@ -26,11 +26,11 @@
 											m.member_idx, m.member_email, m.member_name, m.member_nation, m.ksola_member_check,
 											DATE(rr.register_date) AS register_date, rr.email AS registration_email, CONCAT(rr.first_name,' ',rr.last_name) AS registration_name, rr.phone,
 											rr.affiliation, rr.department, rr.licence_number, rr.specialty_number, rr.nutritionist_number, rr.dietitian_number,rr.academy_number, 
-											rr.welcome_reception_yn,
+											rr.day1_luncheon_yn,
+											rr.day1_satellite_yn,
 											rr.day2_breakfast_yn,
 											rr.day2_luncheon_yn,
-											rr.day3_breakfast_yn,
-											rr.day3_luncheon_yn,
+											rr.day2_satellite_yn,
 											rr.special_request_food,
 											rr.price,
 											IFNULL(rr.status, '1') AS registration_status,
@@ -419,11 +419,11 @@
 							<th>Others</th>
 							<td colspan="3">
 								<div>
-									Welcome Reception : <?=$registration_detail["welcome_reception_yn"] == "Y" ? "Yes" : "No"?><br/>
-									Day 1 Luncheon Symposium : <?=$registration_detail["day2_breakfast_yn"] == "Y" ? "Yes" : "No"?><br/>
-									Day 2 Breakfast Symposium : <?=$registration_detail["day2_luncheon_yn"] == "Y" ? "Yes" : "No"?><br/>
-									Day 2 Luncheon Symposium : <?=$registration_detail["day3_breakfast_yn"] == "Y" ? "Yes" : "No"?><br/>
-									<!-- Day 3 Luncheon Symposium : <?=$registration_detail["day3_luncheon_yn"] == "Y" ? "Yes" : "No"?><br/> -->
+									Day 1 Luncheon Symposium : <?=$registration_detail["day1_luncheon_yn"] == "Y" ? "Yes" : "No"?><br/>
+									Day 1 Satellite Symposium : <?=$registration_detail["day1_satellite_yn"] == "Y" ? "Yes" : "No"?><br/>
+									Day 2 Breakfast Symposium : <?=$registration_detail["day2_breakfast_yn"] == "Y" ? "Yes" : "No"?><br/>
+									Day 2 Luncheon Symposium : <?=$registration_detail["day2_luncheon_yn"] == "Y" ? "Yes" : "No"?><br/>
+									Day 2 Satellite Symposium : <?=$registration_detail["day2_satellite_yn"] == "Y" ? "Yes" : "No"?><br/>
 								</div>
 							</td>
 						</tr>

@@ -309,7 +309,7 @@ if ($during_yn !== "Y") {
 							</p>
 							<input type="text" name="licence_number" id="licence_number" class="under_50 input_license" value="<?=$prev["is_score"] == 1 ? $prev["licence_number"] ?? "" : ""?>">
 						</li>
-						<li class="review_sub_list <?=($prev["is_score"] == 1 ? "hidden" : "hidden")?>">
+						<li class="review_sub_list <?=($prev["is_score"] == 1 ? "" : "hidden")?>">
 							<p class="label">
 								전문의 번호 <span class="red_txt">*</span>
 								<input type="checkbox" id="app2" class="checkbox" <?=$prev["is_score"] == 1  && ! $prev["specialty_number"] ? "checked" : ""?>>
@@ -319,7 +319,7 @@ if ($during_yn !== "Y") {
 							</p>
 							<input type="text" name="specialty_number" id="specialty_number" class="under_50 input_license" value="<?=$prev["is_score"] == 1 ? $prev["specialty_number"] ?? "" : ""?>">
 						</li>
-						<li class="review_sub_list <?=($prev["is_score"] == 1 ? "hidden" : "hidden")?>">
+						<!-- <li class="review_sub_list <?=($prev["is_score"] == 1 ? "hidden" : "hidden")?>">
 							<p class="label">
 								영양사 면허번호  <span class="red_txt">*</span>
 								<input type="checkbox" id="app3" class="checkbox" <?=$prev["is_score"] == 1  && ! $prev["nutritionist_number"] ? "checked" : ""?>>
@@ -338,7 +338,7 @@ if ($during_yn !== "Y") {
                                 </label>
                             </p>
                             <input type="text" name="dietitian_number" id="dietitian_number" class="under_50 input_license" value="<?=$prev["is_score"] == 1 ? $prev["dietitian_number"] ?? "" : ""?>">
-                        </li>
+                        </li> -->
 					<?php }?>
                     <li>
                         <p class="label type2"><?=$locale("register_online_question5_2023")?> <span class="red_txt">*</span></p>
@@ -352,32 +352,34 @@ if ($during_yn !== "Y") {
 								<tbody id="othersList">
 									<?php
 										$others_arr = array(
-												"Welcome Reception",
 												"Day 1 Luncheon Symposium",
+												"Day 1 Satellite Symposium",
 												"Day 2 Breakfast Symposium",
-												"Day 2 Luncheon Symposium"
+												"Day 2 Luncheon Symposium",
+												"Day 2 Satellite Symposium"
 										);
 										$other_date_arr = array(
 												"November 29 (Fri)",
 												"November 29 (Fri)",
 												"November 30 (Sat)",
+												"November 30 (Sat)",
 												"November 30 (Sat)"
 										);
 
 										$prev_data_arr = [];
-										if($prev["welcome_reception_yn"] == "Y"){
+										if($prev["day1_luncheon_yn"] == "Y"){
 											array_push($prev_data_arr ,1);
 										}
-										if($prev["day2_breakfast_yn"] == "Y"){
+										if($prev["day1_satellite_yn"] == "Y"){
 											array_push($prev_data_arr ,2);
 										}
-										if($prev["day2_luncheon_yn"] == "Y"){
+										if($prev["day2_breakfast_yn"] == "Y"){
 											array_push($prev_data_arr ,3);
 										}
-										if($prev["day3_breakfast_yn"] == "Y"){
+										if($prev["day2_luncheon_yn"] == "Y"){
 											array_push($prev_data_arr ,4);
 										}
-										if($prev["day3_luncheon_yn"] == "Y"){
+										if($prev["day2_satellite_yn"] == "Y"){
 											array_push($prev_data_arr ,5);
 										}
 										
@@ -474,7 +476,14 @@ if ($during_yn !== "Y") {
 									
 								}
 							?>
-
+<li>
+						<!-- [240607] sujeong / 기획팀 요청 수정   -->
+						<p class="label">Have you received the IMCVP 2024 invitation code?</p>
+						<input type="radio" class='checkbox' name="promotion_code" value="Y" id="promotion_y"/>
+						<label for="promotion_y" style="margin-right:14px;">Yes</label>
+						<input type="radio" class='checkbox' name="promotion_code" value="N" id="promotion_n" checked/>
+						<label for="promotion_n">No</label>
+					</li>
                         </ul>
                     </li>
 					<?php if($prev["status"] != 2 && $prev["status"] != 3){?>
@@ -507,22 +516,22 @@ if ($during_yn !== "Y") {
 												<input type="text" id="reg_fee" name="reg_fee" placeholder="0" readonly value="<?=$prev["calc_fee"] || $prev["calc_fee"] == 0 ? number_format($prev["calc_fee"]) : ""?>">
 											</td>
 										</tr>
-										<tr>
-											<th>Promotion Code</th>
+										<tr class="promotion_code_tr">
+											<th>Invitation Code</th>
 											<td>
 												<ul class="half_ul" style="min-width:300px;">
 													<li>
-														<input type="text" placeholder="Promotion code" name="promotion_code" value="<?=$prev["promotion_code_number"] ?? ""?>">
+														<input type="text" placeholder="Invitation Code" name="promotion_code" value="<?=$prev["promotion_code_number"] ?? ""?>">
 														<input type="hidden" name="promotion_confirm_code" value="<?=$prev["promotion_code"] ?? ""?>"/>
 													</li>
 													<li><input type="text" placeholder="Recommended by" name="recommended_by" value="<?=$prev["recommended_by"] ?? ""?>" maxlength="100" onkeyup="checkRegExp(this);" onchange="checkRegExp(this);"></li>
 													<li class="flex_none">
-														<button type="button" class="btn gray2_btn form_btn apply_btn">Apply</button>
+														<button type="button" class="btn gray2_btn form_btn apply_btn" style="color:#FFF!important">Apply</button>
 													</li>
 												</ul>
 											</td>
 										</tr>
-										<tr>
+										<tr class="total_fee_tr">
 											<th class="red_txt">Total Registration Fee</th>
 											<td><input type="text" id="total_reg_fee" name="total_reg_fee" placeholder="0" value="<?=$prev["price"] || $prev["price"] == 0 ? number_format($prev["price"]) : ""?>" readonly></td>
 										</tr>
@@ -584,6 +593,10 @@ if ($during_yn !== "Y") {
 
 		$('.etc1').hide();
 
+		//[240607] sujeong / 프로모션 코드, 총 금액 숨기기 
+		$('.promotion_code_tr').hide();
+		$('.total_fee_tr').hide();
+
 		$(document).on("click", "#license_checkbox", function() {
 			//console.log($(this).is(':checked'));
 			if ($(this).is(':checked') == true) {
@@ -629,6 +642,28 @@ if ($during_yn !== "Y") {
 			}
 			
 			$(this).val(v);
+		});
+
+
+			//[240607] sujeong / 함수 추가
+			function showPromotionCode(promotionValue){
+			//console.log(promotionValue);
+
+			if(promotionValue === 'Y'){
+				$('.promotion_code_tr').show();
+				$('.total_fee_tr').show();
+			}else{
+				$('.promotion_code_tr').hide();
+				$('.total_fee_tr').hide();
+			}
+		};
+
+		$("input[name=promotion_code]").on("click", function(){
+			if($("#promotion_y").is(":checked")){
+				showPromotionCode('Y')
+			}else if($("#promotion_n").is(":checked")){
+				showPromotionCode('N')
+			}
 		});
 
 		/*

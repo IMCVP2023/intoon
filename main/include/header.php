@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> f0c4e8f73ddf50711a3e6b5fd64ba5ca55460f9f
 <?php
 $language = isset($_SESSION["language"]) ? $_SESSION["language"] : "en";
 $locale = locale($language);
@@ -110,7 +113,7 @@ $locale = locale($language);
                         <ul class="sub_nav">
                             <li><a href="/main/registration_guidelines.php">Guidelines</a></li>
                             <li><a href="/main/registration.php">Go to Registration</a></li>
-                            <li><a href="/main/registration_rating_guides.php">평점 안내</a></li>
+                            <li><a href="/main/comingsoon.php">평점 안내</a></li>
 
                             <!-- <li><a href="/main/registration_guidelines.php">Registration Guidelines
                                 </a></li>
@@ -171,7 +174,7 @@ $locale = locale($language);
     <div>
         <h6>Secretariatof IMCVP 2024│INTO-ON,Inc.</h6>
         <div>
-            <p>Tel:+82-2-2039-7804</p>
+            <p>Tel:+82-2-2285-2578</p>
             <p>Fax:+82-2-3275-3044</p>
         </div>
         <p>E-mail:<a href="mailto:info@imcvp.org" class="link under">info@imcvp.org</a></p>

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> f0c4e8f73ddf50711a3e6b5fd64ba5ca55460f9f
 <?php
 include_once('./include/head.php');
 include_once('./include/header.php');
@@ -90,5 +94,4 @@ include_once('./include/header.php');
     <!-- <button type="button" class="fixed_btn" onclick="window.location.href='./abstract_submission.php';"><?= $locale("abstract_submission_btn") ?></button> -->
 </section>
 <!-- <button type="button" class="btn_fixed_triangle fixed_btn_pc" onClick="location.href='./sponsor_exhibition.php'"><span>Go to<br/>Exhibition<Br>Plan</span></button> -->
-
 <?php include_once('./include/footer.php'); ?>

@@ -73,175 +73,175 @@ $add_section_class = (!empty($session_user) && $session_app_type == 'Y') ? 'app_
                         <tr>
                             <th>President</th>
                             <td>Won Young Lee</td>
-                            <td>Sungkyunkwan University, Korea</td>
+                            <td>Sungkyunkwan University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th rowspan="4">Vice-president</th>
                             <td>Kyung-Yul Lee</td>
-                            <td>Yonsei University, Korea</td>
+                            <td>Yonsei University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Sang Hyun Ihm</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Dae-Jung Kim</td>
-                            <td>Ajou University, Korea</td>
+                            <td>Ajou University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Hyuk Sang Kwon</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Secretory General</th>
                             <td>Eun-Jung Rhee</td>
-                            <td>Sungkyunkwan University, Korea</td>
+                            <td>Sungkyunkwan University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th rowspan="3">Vice Secretory General</th>
                             <td>Jun Hwa Hong</td>
-                            <td>Eulji University Hospital, Korea</td>
+                            <td>Eulji University Hospital, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Dae Young Cheon</td>
-                            <td>Hallym University, Korea</td>
+                            <td>Hallym University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Kwon-Duk Seo</td>
-                            <td>National Health Insurance Service Ilsan Hospital, Korea</td>
+                            <td>National Health Insurance Service Ilsan Hospital, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Treasurer</th>
                             <td>Jae Hyuk Lee</td>
-                            <td>Hanyang University, Korea</td>
+                            <td>Hanyang University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Scientific Program Committee</th>
                             <td>Seung-Hyun Ko</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>International Liaison Committee</th>
                             <td>Hyeon Chang Kim</td>
-                            <td>Yonsei University, Korea</td>
+                            <td>Yonsei University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Local Liaison Committee</th>
                             <td>Jong-Chan Youn</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Public Relation Committee</th>
                             <td>Mee-Kyung Kim</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Information Technology Committee</th>
                             <td>Sungha Park</td>
-                            <td>Yonsei University, Korea</td>
+                            <td>Yonsei University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Registration Committee</th>
                             <td>Yo-han Jeong</td>
-                            <td>Yonsei University, Korea</td>
+                            <td>Yonsei University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Accommodation & Transportation Committee</th>
                             <td>Hun-Jun Park</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Sponsorship and Exhibition Committee</th>
                             <td>Hae-Young Lee</td>
-                            <td>Seoul National University, Korea</td>
+                            <td>Seoul National University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Protocol and Social Program Committee</th>
                             <td>Sung-Hee Choi</td>
-                            <td>Seoul National University, Korea</td>
+                            <td>Seoul National University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Publication Committee</th>
                             <td>Junghyun Noh</td>
-                            <td>Inje University, Korea</td>
+                            <td>Inje University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Auditor</th>
                             <td>Jeong-Min Lee</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th rowspan="18">Domestic Faculty</th>
                             <td>Seong-Hoon Choi</td>
-                            <td>Hallym University, Korea</td>
+                            <td>Hallym University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Sang-Ho Jo</td>
-                            <td>Hallym University, Korea</td>
+                            <td>Hallym University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Sang Hak Lee</td>
-                            <td>Yonsei University, Korea</td>
+                            <td>Yonsei University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Sang Won Han</td>
-                            <td>Inje University, Korea</td>
+                            <td>Inje University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Hyung-Min Kwon</td>
-                            <td>Seoul National University, Korea</td>
+                            <td>Seoul National University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Woo-Baek Chung</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Song Vogue Ahn</td>
-                            <td>Ewha Womans University, Korea</td>
+                            <td>Ewha Womans University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Jae-sun Eom</td>
-                            <td>Yonsei University, Korea</td>
+                            <td>Yonsei University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Min-ho Shin</td>
-                            <td>Chonnam National University, Korea</td>
+                            <td>Chonnam National University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Kyung-Do Han</td>
-                            <td>Soongsil University, Korea</td>
+                            <td>Soongsil University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>JeongHyun Lim</td>
-                            <td>Seoul National University Hospital, Korea</td>
+                            <td>Seoul National University Hospital, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Kwang Joon Kim</td>
-                            <td>Yonsei University, Korea</td>
+                            <td>Yonsei University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Jong-Yun Lee</td>
-                            <td>National Medical Center, Korea</td>
+                            <td>National Medical Center, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Hun-Sung Kim</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Jong-Young Lee</td>
-                            <td>Sungkyunkwan University, Korea</td>
+                            <td>Sungkyunkwan University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Bum-Soon Choi</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Suk Chon</td>
-                            <td>Kyung Hee University, Korea</td>
+                            <td>Kyung Hee University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Jin Oh Na</td>
-                            <td>Korea University, Korea</td>
+                            <td>Korea University, Republic of Korea</td>
                         </tr>
                     </tbody>
                 </table>
@@ -267,29 +267,29 @@ $add_section_class = (!empty($session_user) && $session_app_type == 'Y') ? 'app_
                         <tr>
                             <th>Scientific Program Committee</th>
                             <td>Seung-Hyun Ko</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th>Secretary</th>
                             <td>Jae-Seung Youn</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <th rowspan="4">Academic Fellow</th>
                             <td>Jong-Chan Youn</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Sang-Mi Noh</td>
-                            <td>The Catholic University of Korea, Korea</td>
+                            <td>The Catholic University of Korea, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Eun Hui Bae</td>
-                            <td>Chonnam National University, Korea</td>
+                            <td>Chonnam National University, Republic of Korea</td>
                         </tr>
                         <tr>
                             <td>Sang-Eun Lee</td>
-                            <td>Ewha University, Korea</td>
+                            <td>Ewha University, Republic of Korea</td>
                         </tr>
                     </tbody>
                 </table>
