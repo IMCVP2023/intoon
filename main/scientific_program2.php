@@ -574,29 +574,29 @@
 							</table>
 						</div>
 						
-						<!--  Symposium 13  -->
+						<!-- Satellite Symposium 3  -->
 						<div>
-							<table class="table color_table yellow_table" name="symposium_13">
+							<table class="table color_table violet_table" name="satellite_symposium_3">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_yellow_bg">16:00 - 17:40</th>
-										<td class="yellow_bg">Symposium 13 <br/>
+										<th class="dark_violet_bg">16:00 - 17:40</th>
+										<td class="violet_bg">Satellite Symposium 3 <br/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<table class="table color_table mobile" name="symposium_13_mb">
+							<table class="table color_table mobile" name="satellite_symposium_3_mb">
 								<tbody>
-									<tr class="dark_yellow_bg">
-										<th class="dark_yellow_bg">16:00 - 17:40</th>
+									<tr class="dark_violet_bg">
+										<th class="dark_violet_bg">16:00 - 17:40</th>
 									</tr>
-									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 13<br/>
+									<tr class="violet_bg non_border_b">
+										<td class="violet_bg">Satellite Symposium 3 <br/>
 										</td>
 									</tr>
 								</tbody>
@@ -607,7 +607,7 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="yellow_panel_tr">
+									<tr class="violet_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
@@ -643,7 +643,7 @@
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="discussion yellow_panel_tr">
+									<tr class="discussion non_border_b">
 										<th>17:20 - 17:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
@@ -651,12 +651,12 @@
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="non_border_b">
+									<!-- <tr class="non_border_b">
 										<th>15:00 - 15:20</th>
 										<td>
 											<p>Coffee break</p>
 										</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</table>
 						</div>
@@ -1163,29 +1163,29 @@
 							</table>
 						</div>
 						
-						<!-- Symposium 14  -->
+						<!-- Satellite Symposium 4  -->
 						<div>
-							<table class="table color_table yellow_table" name="symposium_14">
+							<table class="table color_table violet_table" name="satellite_symposium_4">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_yellow_bg">16:00 - 17:40</th>
-										<td class="yellow_bg">Symposium 14<br/>
+										<th class="dark_violet_bg">16:00 - 17:40</th>
+										<td class="violet_bg">Satellite Symposium 4<br/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<table class="table color_table mobile" name="symposium_14_mb">
+							<table class="table color_table mobile" name="satellite_symposium_4_mb">
 								<tbody>
-									<tr class="dark_yellow_bg">
-										<th class="dark_yellow_bg">16:00 - 17:40</th>
+									<tr class="dark_violet_bg">
+										<th class="dark_violet_bg">16:00 - 17:40</th>
 									</tr>
-									<tr class="yellow_bg non_border_b">
-										<td class ="yellow_bg">Symposium 14<br/>
+									<tr class="violet_bg non_border_b">
+										<td class ="violet_bg">Satellite Symposium 4<br/>
 										</td>
 									</tr>
 								</tbody>
@@ -1196,7 +1196,7 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-								<tr class="yellow_panel_tr">
+								<tr class="violet_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
@@ -1232,7 +1232,7 @@
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="discussion yellow_panel_tr">
+									<tr class="discussion non_border_b">
 										<th>17:20 - 17:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
@@ -1240,12 +1240,12 @@
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="non_border_b">
+									<!-- <tr class="non_border_b">
 										<th>15:00 - 15:20</th>
 										<td>
 											<p>Coffee break</p>
 										</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</table>
 						</div>

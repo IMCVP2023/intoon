@@ -2334,7 +2334,7 @@ function mo_kor_api() {
 					return false;
 				}else if(res.result.is_used === "0"){
 					alert("회원이 인증되었습니다."); 
-					setInfo(res.result, "PC");           
+					setInfo(res.result, "mo");           
 				}        
             }
              else if(res.code == 401) {
@@ -2402,6 +2402,7 @@ function kor_api() {
 }
 
 
+//kscp 정보 받아와서 넣어주기(email, name_kor, affiliation_kor, department_kor)
 function setInfo(result, device){
 	const email = result.email;
 	const nickname = result.nick_name;
@@ -2425,8 +2426,6 @@ function setInfo(result, device){
 		$('input[name=mo_affiliation_kor]').val(org);
 		$('input[name=mo_department_kor]').val(department);
 	}
-
-
 }
 
 //이메일 중복 체크 한국으로 체크시

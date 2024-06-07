@@ -1,3 +1,4 @@
+
 <?php
 $language = isset($_SESSION["language"]) ? $_SESSION["language"] : "en";
 $locale = locale($language);
@@ -425,4 +426,5 @@ $(".gnb > li, .depth2").hover(function() {
 //         return false;
 //     }
 // });
+
 </script>
