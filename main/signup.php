@@ -341,9 +341,9 @@
 		<h3 class="title">Personal Information <span class="mini_alert"><span class="red_txt">*</span> All requested field (<span class="red_txt">*</span>) should be completed.</span></h3>
 		<form class="table_wrap">
 			<div class="pc_only">
-				<table class="table detail_table type2">
+				<table class="table type2">
 					<colgroup>
-						<col class="col_th"/>
+						<col class="320px"/>
 						<col width="*"/>
 					</colgroup>
 					<tbody>
@@ -407,7 +407,7 @@
 											<!-- <a href="javascript:;" class="term2_btn red_txt"> Details ></a> -->
 										</label>
 									</div>
-									<a href="https://koreascp.or.kr:459/member/findid.htm" target="_blank" class="id_pw_find kor">KSCP 회원 ID/PW 찾기</a>
+									<a href="https://koreascp.or.kr:459/member/findid.htm" target="_blank" class="id_pw_find kor">KSCP 회원 Email 찾기</a>
 								</div>
 								
 								<!-- <div> -->
@@ -804,7 +804,7 @@
 									<!-- <a href="javascript:;" class="red_txt"> Details ></a> -->
 								</label>
 							</div>
-							<a href="https://koreascp.or.kr:459/member/findid.htm" target="_blank" class="id_pw_find">KSCP 회원 ID/PW 찾기</a>
+							<a href="https://koreascp.or.kr:459/member/findid.htm" target="_blank" class="id_pw_find">KSCP 회원 Email 찾기</a>
 						</div>
 						<div>
 						<!-- <span class="mini_alert red_txt mo_red_api"></span> -->
@@ -1806,7 +1806,7 @@ $(document).on("click", "#mo_submit", function(){
 
 	var ksola_member_check = $("input[name=ksola_member_check]").val();
 	var ksola_member_type = $("input[name=ksola_member_type]").val();
-	var ksola_member_status = 0;
+	//var ksola_member_status = 0;
 
 	// if(ksola_member_type == "인터넷회원"){
 	// 	ksola_member_status = 3;
@@ -2410,7 +2410,7 @@ function setInfo(result, device){
 	const department = result.department;
 	const userId = result.id;
 
-	$('input[name=ksola_member_check]').val(userId);
+	$('input[name=ksola_member_check]').val(email);
 
 	if(device === "PC"){
 		$('input[name=email]').val(email);
