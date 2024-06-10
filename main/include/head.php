@@ -11,6 +11,7 @@
     <meta property="og:image" content="/main/img/2024_imcvp_og_img.png" />
     <meta property="og:description" content="2024 IMCVP hosted by KSCP">
     <meta name="description" content="2024 IMCVP hosted by KSCP">
+	<link rel="icon" href="../../favicon.ico">
 
     <!-- datepicker -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
