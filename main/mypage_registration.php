@@ -352,14 +352,14 @@
 														<th>전문의 번호</th>
 														<td><?=$list["specialty_number"] ?? "Not applicable"?></td>
 													</tr>
-													<tr>
+													<!-- <tr>
 														<th>영양사 면허번호</th>
 														<td><?=$list["nutritionist_number"] ?? "Not applicable"?></td>
 													</tr>
                                                     <tr>
                                                         <th>임상영양사 면허번호</th>
                                                         <td><?=$list["dietitian_number"] ?? "Not applicable"?></td>
-                                                    </tr>
+                                                    </tr> -->
 												<?php }?>
 												<tr>
 													<th>Others</th>
@@ -384,12 +384,7 @@
 												</tr>
 												<tr class="tr_bg">
 													<th>Payment Method</th>
-													<td>
-														<label for="">
-															<i></i>
-															<?=$payment_methods?>
-														</label>
-													</td>
+													<td><?=$payment_methods?></td>
 												</tr>
 											</tbody>
 										</table>
