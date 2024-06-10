@@ -53,7 +53,7 @@
                             <h6><span>Step 2. </span>Fill out the form and send it by E-mail or Fax</h6>
                         </div>
                         <div class="buttons_box">
-                            <button class="pink_btn" onClick="javascript:window.open('https://imcvp.org/main/upload/file/Walkerhill_Reservation_Form.pdf')">Download the reservation form(English)</button>
+                            <button class="pink_btn" onClick="javascript:window.open('https://imcvp.org/main/upload/file/Walkerhill_Reservation_Form.pdf')">Download the reservation form (English)</button>
                             <button class="violet_btn" onClick="javascript:window.open('https://www.walkerhill.com/grandwalkerhillseoul/')">Go to Homepage</button>
                         </div>
                     </div>                    

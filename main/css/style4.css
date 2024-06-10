@@ -2126,7 +2126,7 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	height: 35px;
 	border-radius: 20px;
     color: #484554; 
-	font-size: 12px;
+	font-size: 13px;
 	border: 1px solid #ADA9BB;
 	background-color: #FFF;
 	padding:8px;
@@ -2195,7 +2195,7 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	.accommodation .yellow_box{
 		width: 90%;
 		margin-top: 20px;
-		height: 450px;
+		height: 350px;
 		justify-content: flex-start;
 	}
 
