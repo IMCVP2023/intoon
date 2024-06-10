@@ -64,6 +64,22 @@
 <input type="hidden" name="first_word">
 <input type="hidden" name="session_word">
 
+<div class="modal_background" onclick="hideModal()" style="display: none;"></div>
+<div class="modal" style="display:none;">
+<img src="./img/icons/icon_x.png" alt="modal_close" class="modal_colsed" onclick="hideModal()"/>
+	<div class="modal_img_box">
+		<img class="modal_img" src="/main/img/invited_speaker/Alice_Pik_Shan_Kong/SYM16-1_Alice_PS_Kong.jpg" alt="speaker_img"/>
+		<div>
+			<p class="modal_name">Alice Pik Shan Kong</p>
+			<p class="modal_org">The Chinese University of Hong Kong</p>
+			<p class="italic modal_nation">Hong Kong</p>
+		</div>
+	</div>
+	<div class="modal_content_box">
+		<div class="content">
+		</div>
+	</div>
+</div>
 <script>
 
 	var brian_height =''; 
@@ -113,13 +129,11 @@
 		var session_word_value = $(this).children().html();
 		if(session_word_value === "Plenary lectures") {
 			session_word_value = "Plenary";
-		} else if(session_word_value === "Symposia") {
+		} else if(session_word_value === "Symposium") {
 			session_word_value = "Symposium";
-		} else if(session_word_value === "Workshops") {
+		} else if(session_word_value === "Sponsors session") {
 			session_word_value = "Workshop";
-		} else if(session_word_value === "Joint Symposia") {
-			session_word_value = "joint";
-		}
+		} 
 
 		$("input[name=session_word]").val(session_word_value);
 
@@ -146,7 +160,7 @@
 		var category_bool = $(".category").children().hasClass("on");
 
 		var data = {
-			"flag"				: "invited_speaker",
+			"flag"				: "invited_speakers",
 			"first_word"		: first_word,
 			"session_word"		: session_word,
 			"search_word"		: search_word,
@@ -161,16 +175,14 @@
 			dataType : "JSON",
 			success : function(res){
 				if(res.code == 200) {
-
-					console.log(res);
-
+					//console.log(res);
 					var html = "";
 
 					$(".speaker_list").html(html);
 
-					var s_list = res["list"];
+					var s_list = res["result"];
 
-					for(var i=0; i < res["total_count"]; i++) {
+					for(var i=0; i < s_list.length; i++) {
 						
 						var list =s_list[i];
 						var logo_img = "";
@@ -178,23 +190,15 @@
 							logo_img= " logo_img";
 						}
 
-						html += "<li data-idx='"+list['idx']+"'>";
-						html +=		"<div class='clearfix2'>";
-						html +=			"<div class='speaker_img"+logo_img+"' style='background:url("+"\""+list["image"]+"\""+") no-repeat center /cover;'></div>";
-						html +=			"<div class='speaker_info'>";
-						html +=				"<p class='bold'>"+list['first_name']+" "+list['last_name']+"</p>";
-						html +=				"<p>"+list['affiliation']+"</p>";
-						html +=				"<p class='italic'>"+list['nation']+"</p>";
-						html +=			"</div>";
-						html +=		"</div>";
-						// html +=		"<div class='lecture_title'>";
-						// html +=			"<strong>"+list['session_type']+"</strong>";
-						// html +=			list['title'];
-						// if(list['session_type2']) {
-						// 	html +=			"<strong>"+list['session_type2']+"</strong>";
-						// 	html +=			list['title2'];
-						// }
-						// html +=		"</div>";
+						html += "<li data-idx='" + list['idx'] + "' onclick='showModal(\"" + list['idx'] + "\")'>";
+						html +=     "<div class='clearfix2'>";
+						html +=         "<div class='speaker_img" + logo_img + "' style='background:url(" + "\"" + list["image_path"] + "\"" + ") no-repeat center /cover;'></div>";
+						html +=         "<div class='speaker_info'>";
+						html +=             "<p class='bold'>" + list['first_name'] + " " + list['last_name'] + "</p>";
+						html +=             "<p>" + list['affiliation'] + "</p>";
+						html +=             "<p class='italic'>" + list['nation'] + "</p>";
+						html +=         "</div>";
+						html +=     "</div>";
 						html += "</li>";
 
 						$(".speaker_list").html(html);
@@ -203,21 +207,6 @@
 					var speaker_arr = [];
 					var max = '';
 					var text_height ='';
-					//$(window).resize(function(){
-					//	var first_height = $(".speaker_list li:first-child .lecture_title").height();
-					//	first_height = Math.ceil(first_height);
-					//	$(".speaker_list li").find(".lecture_title").height(first_height);
-					//	$(".speaker_list li:first-child .lecture_title, .speaker_list li.brian .lecture_title, .speaker_list li.edward .lecture_title").css("height","auto");
-					//	brian_height = $(".speaker_list li.brian .lecture_title").height();
-					//	brian_height = Math.ceil(brian_height);
-					//	edward_height = $(".speaker_list li.edward .lecture_title").height();
-					//	edward_height = Math.ceil(edward_height);
-
-					//	list_layout();
-					//	
-					//});
-					//$(window).trigger("resize")
-
 				} else if(res.code == 400){
 					alert(res.msg);
 					return;
@@ -226,63 +215,131 @@
 		});
 	}
 
-	//function list_layout(){
-	//	var li_1 = $(".speaker_list li:first-child").offset().left;
-	//	var li_2 = $(".speaker_list li:nth-child(2)").offset().left;
-	//	var li_3 = $(".speaker_list li:nth-child(3)").offset().left;
-	//	var brian_left = $(".speaker_list li.brian").offset().left;
-	//	var edward_left = $(".speaker_list li.edward").offset().left;
+	const modalBackground = document.querySelector(".modal_background");
+	const modal = document.querySelector(".modal");
 
-	//	if ($(window).width() >= 1024){
-	//		if (brian_left == li_1){
-	//			$(".speaker_list li.brian").next("li").find(".lecture_title").height(brian_height);
-	//			$(".speaker_list li.brian").next("li").next("li").find(".lecture_title").height(brian_height);
-	//		}
-	//		if (brian_left == li_2){
-	//			$(".speaker_list li.brian").prev("li").find(".lecture_title").height(brian_height);
-	//			$(".speaker_list li.brian").next("li").find(".lecture_title").height(brian_height);
-	//		}
-	//		if (brian_left == li_3){
-	//			$(".speaker_list li.brian").prev("li").find(".lecture_title").height(brian_height);
-	//			$(".speaker_list li.brian").prev("li").prev("li").find(".lecture_title").height(brian_height);
-	//		}
-	//	} else if ($(window).width() >= 769){
-	//		if (brian_left == li_1){
-	//			$(".speaker_list li.brian").next("li").find(".lecture_title").height(brian_height);
-	//			$(".speaker_list li.brian").prev("li").find(".lecture_title").height(first_height);
-	//		}
-	//		if (brian_left == li_2){
-	//			$(".speaker_list li.brian").prev("li").find(".lecture_title").height(brian_height);
-	//			$(".speaker_list li.brian").next("li").find(".lecture_title").height(first_height);
-	//		}
-	//	}
+	/** modal 띄우는 함수 */
+	function showModal(idx){
+		modalBackground.style.display = "";
+		modal.style.display = "";
+		getModalDetail(idx)
+	}
 
-	//	if ($(window).width() >= 1024){
-	//		if (edward_left == li_1){
-	//			$(".speaker_list li.edward").next("li").find(".lecture_title").height(edward_height);
-	//			$(".speaker_list li.edward").next("li").next("li").find(".lecture_title").height(edward_height);
-	//		}
-	//		if (edward_left == li_2){
-	//			$(".speaker_list li.edward").prev("li").find(".lecture_title").height(edward_height);
-	//			$(".speaker_list li.edward").next("li").find(".lecture_title").height(edward_height);
-	//		}
-	//		if (edward_left == li_3){
-	//			$(".speaker_list li.edward").prev("li").find(".lecture_title").height(edward_height);
-	//			$(".speaker_list li.edward").prev("li").prev("li").find(".lecture_title").height(edward_height);
-	//		}
-	//	} else if ($(window).width() >= 769){
-	//		if (edward_left == li_1){
-	//			$(".speaker_list li.edward").next("li").find(".lecture_title").height(edward_height);
-	//			$(".speaker_list li.edward").prev("li").find(".lecture_title").height(first_height);
-	//		}
-	//		if (edward_left == li_2){
-	//			$(".speaker_list li.edward").prev("li").css("background-color","red");
-	//			$(".speaker_list li.edward").prev("li").find(".lecture_title").height(edward_height);
-	//			$(".speaker_list li.edward").next("li").find(".lecture_title").height(first_height);
-	//		}
-	//	}
+	/** ajax 요청 */
+	function getModalDetail(idx){
+		var data = {
+			"flag": "invited_speaker_modal",
+			"idx" : idx
+		};
+		
+		$.ajax({
+			url : PATH+"ajax/client/ajax_invited_speakers.php",
+			type : "POST",
+			data : data,
+			dataType : "JSON",
+			success : function(res){
+				if(res.code == 200) {
+					drawModal(res.result)
+				} else if(res.code == 400){
+					alert(res.msg);
+					return;
+				}
+			}
+		});
+	}
 
-	//}
+	//invited_speakr modal
+	function drawModal(list){
+		const speakerImg = document.querySelector(".modal_img");
+		const speakerName = document.querySelector(".modal_name");
+		const speakerOrg = document.querySelector(".modal_org");
+		const speakerNation = document.querySelector(".modal_nation");
+		const contents = document.querySelector(".modal_content_box")
+		// console.log(list)
+
+		let contentsHtml = "";
+		let roomText = "";
+		list.map((li)=>{
+			console.log(li)
+			speakerImg.src = li.image_path;
+			speakerName.innerText = li.first_name + " " + li.last_name;
+			speakerOrg.innerText = li.affiliation;
+			speakerNation.innerText = li.nation;
+			
+			switch(Number(li.program_place_idx)){
+				case 1 : roomText = "Room1"; break;
+				case 2 : roomText = "Room2"; break;
+				case 3 : roomText = "Room3"; break;
+				case 4 : roomText = "Room4"; break;
+				case 5 : roomText = "Room5"; break;
+				case 6 : roomText = "Room6"; break;
+				case 7 : roomText = "Room7"; break;
+				case 8 : roomText = "Room1~3"; break;
+			}
+
+			contentsHtml += `
+						<div class="content" data-id=${li.program_contents_idx}>
+							<div>
+								<p>• ${li.program_date?.split("-")[1]}월 ${li.program_date?.split("-")[2]}일</p>
+								<p>• ${li.start_time}~${li.end_time}</p>
+								<p>• ${roomText}</p>
+							</div>
+							<div>
+								<p>${li.program_name}</p>
+							</div>
+						</div>
+			`
+		})
+		contents.innerHTML = contentsHtml;
+		const contentList = document.querySelectorAll(".content");
+		contentList.forEach((contents)=>{
+			contents.addEventListener("click", (event)=>{
+				onClickContnets(event)
+			})
+		})
+	}
+
+	
+
+	function onClickContnets(e){
+		if(e.target.classList.contains("content")){
+			getProgramDetail(e.target.dataset.id)
+		}else if(e.target.parentNode.classList.contains("content")){
+			getProgramDetail(e.target.parentNode.dataset.id)
+		}else if(e.target.parentNode.parentNode.classList.contains("content")){
+			getProgramDetail(e.target.parentNode.parentNode.dataset.id)
+		}
+	}
+
+	function getProgramDetail(idx){
+		var data = {
+			"flag": "invited_speaker_program",
+			"idx" : idx
+		};
+		
+		$.ajax({
+			url : PATH+"ajax/client/ajax_invited_speakers.php",
+			type : "POST",
+			data : data,
+			dataType : "JSON",
+			success : function(res){
+				if(res.code == 200) {
+					console.log(res.result)
+					//window.location.href="./scientific_program"+date+".php?&e="+e+"&name="+this_name;
+				} else if(res.code == 400){
+					alert(res.msg);
+					return;
+				}
+			}
+		});
+	}
+
+
+	/** modal 없애는 함수 */
+	function hideModal(){
+		modalBackground.style.display = "none";
+		modal.style.display = "none";
+	}
 </script>
 
 <?php include_once('./include/footer.php');?>

@@ -144,7 +144,7 @@ $info = sql_fetch($sql_info);
                     </div>
                 </div>
                 <div>
-                    <p class="bold">Grand Walkerhill Seoul, Korea<span class="font_16 bold">(Congress Venue)</span></p>
+                    <h3 class="bold title">Grand Walkerhill Seoul, Korea<span class=" bold"> (Congress Venue)</span></h3>
                     <div class="table_wrap x_scroll">
                         <table class="c_table2 detail_table layout_fixed type2">
                             <colgroup>
