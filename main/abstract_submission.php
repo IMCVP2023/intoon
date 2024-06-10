@@ -745,7 +745,7 @@ function make_author(order) {
     html += '<tr>';
     html += '<th class="border_left">Phone Number <span class="red_txt" name="mobile_required"></span></th>';
     html += '<td colspan="3" class="phone_2">';
-    html += '<input type="text" name="nation_tel" class="num_keyup" maxlength="5" placeholder="82"> ';
+    html += '<input type="text" name="nation_tel" class="num_keyup" maxlength="5"> ';
     html += '<input type="text" name="mobile" class="num_keyup" maxlength="60">';
     html += '</td>';
     html += '</tr>';
