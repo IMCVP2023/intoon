@@ -1523,7 +1523,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 /* main > News&Notice */
 .noti_area ul {height:247px; list-style: disc;/* border: 1px solid #707070;*/ padding: 37px 21px 24px;}
 .noti_area ul .nodata {text-align:center; line-height: 165px;}
-.noti_area li:not(:last-of-type) {border-bottom: 1px solid #707070; padding-bottom: 21px; margin-bottom: 27px;}
+/* .noti_area li:not(:last-of-type) {border-bottom: 1px solid #707070; padding-bottom: 21px; margin-bottom: 27px;} */
 .noti_area li a {width: 100%; display: flex; justify-content: space-between; align-items: center; position: relative; padding-left: 14px;}
 .noti_area li a:before {content: ""; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #000000; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
 .noti_area li a p {font-size: 16px; font-weight: 400; color: #000000; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: calc(100% - 130px);}
