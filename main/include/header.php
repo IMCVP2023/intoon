@@ -113,23 +113,21 @@ $locale = locale($language);
                         <ul class="sub_nav">
                             <li><a href="/main/registration_guidelines.php">Guidelines</a></li>
                             <li><a href="/main/registration.php">Go to Registration</a></li>
-                            <li><a href="/main/comingsoon.php">평점 안내</a></li>
-
                             <!-- <li><a href="/main/registration_guidelines.php">Registration Guidelines
                                 </a></li>
-                            <li><a href="/main/registration.php">Online Registration</a></li>
-                            <li><a href="/main/registration_rating_guides.php">평점 안내</a></li> -->
+                            <li><a href="/main/registration.php">Online Registration</a></li>-->
+                            <li><a href="/main/registration_rating_guides.php">평점 안내</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="/main/comingsoon.php">Sponsorship</a>
+                        <a href="/main/sponsor.php">Sponsorship</a>
                         <ul class="sub_nav">
-                            <li><a href="/main/comingsoon.php">Sponsorship</a></li>
-                            <li><a href="/main/comingsoon.php">Sponsor Guidelines</a></li>
+
+                            <li><a href="/main/sponsor.php">Sponsorship</a></li>
                             <li><a href="/main/comingsoon.php">Exhibition &<br>Social Event</a></li>
 
-                            <!-- <li><a href="/main/sponsor.php">Sponsorship</a></li>
-                            <li><a href="/main/sponsor_exhibition.php">Exhibition</a></li> -->
+                           
+                            <!--<li><a href="/main/sponsor_exhibition.php">Exhibition</a></li> -->
                         </ul>
                     </li>
                     <li>

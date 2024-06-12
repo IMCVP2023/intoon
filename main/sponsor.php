@@ -41,7 +41,7 @@
    <h1 class="page_title">Sponsorship
 			<div class="sub_btn_box">
 				<a href="/main/sponsor.php" class="on">Sponsors</a>
-				<a href="/main/sponsor_guidelines.php">Sponsor Guidelines</a>
+				<!-- <a href="/main/sponsor_guidelines.php">Sponsor Guidelines</a> -->
 				<a href="/main/comingsoon.php">Exhibition & Social Event</a>
 
 				<!-- <a href="/main/sponsor_exhibition.php">Exhibition & Social Event</a> -->
@@ -94,7 +94,7 @@
 					<a href="http://www.ckdpharm.com/en/home" class="chong_kun_dang">Chong Kun Dang</a>
 				</li>
 				<li>
-					<a href="" class="bily">Chong Kun Dang</a>
+					<a href="https://www.boehringer-ingelheim.com/" class="bily">bily</a>
 				</li>
 
 			</ul>
