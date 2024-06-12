@@ -365,7 +365,7 @@ var g5_editor_url = "<?= $editor_url ?>",
                                         <label for="similar_yn_n">no</label>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="display: none;">
                                     <td colspan="2">
                                         <p>This research is supported by the grant of Korean Society of Cardiovascular Disease Prevention</p>
                                         <input type="radio" class="radio" name="support_yn" id="support_yn_y"
@@ -397,56 +397,17 @@ var g5_editor_url = "<?= $editor_url ?>",
                                         </span>
                                     </td>
                                 </tr>
-                                <!-- <tr>
-                                    <td colspan="2">
-                                        <?php
-                                        $awards_y_flag = ($detail['awards_yn'] == "Y");
-                                        ?>
-                                        <input type="checkbox" class="checkbox check_age" id="awards_yn"
-                                            name="awards_yn" <?= $awards_y_flag ? "checked" : "" ?>>
-                                        <label for="awards_yn">Apply for APSAVD Young Investigator Awards</label>
-                                        <span class="eligibility_open pointer" style="transform:translateY(1px)">
-                                            ⓘ Eligibility
-                                            <div class="eligibility_pop">
-                                                <div class="pop_bg"></div>
-                                                <p class="balloon">※ To be eligible for this award, the candidate must
-                                                    be an early career scientist/clinician (under 40 years of age).</p>
-                                            </div>
-                                        </span>
-                                    </td>
-                                </tr> -->
-                                <!-- <tr>
-                                    <td colspan="2">
-                                        <?php
-                                        $investigator_grants_y_flag = ($detail['investigator_grants_yn'] == "Y");
-                                        ?>
-                                        <input type="checkbox" class="checkbox check_age" id="investigator_grants_yn"
-                                            name="investigator_grants_yn"
-                                            <?= $investigator_grants_y_flag ? "checked" : "" ?>>
-                                        <label for="investigator_grants_yn">Apply for IAS Asia-Pacific Federation Young
-                                            Investigator Grants</label>
-                                        <span class="eligibility_open pointer" style="transform:translateY(1px)"
-                                            data-type="tg">
-                                            ⓘ Eligibility
-                                            <div class="eligibility_pop">
-                                                <div class="pop_bg"></div>
-                                                <p class="balloon">※ Under 40 years of age<br />※ Not available to
-                                                    attendees from the country hosting the Congress</p>
-                                            </div>
-                                        </span>
-                                    </td>
-                                </tr> -->
                                 <tr name="check_age"
                                     style="<?= ($travel_grants_y_flag || $awards_y_flag || $investigator_grants_y_flag) ? "" : "display: none" ?>;">
                                     <td colspan="2">
-                                        <h1 style="font-size: 24px; font-weight:700; color:#003366; line-height: 2.4;">
-                                            Download Application Form</h1>
+                                        <!-- <h1 style="font-size: 24px; font-weight:700; color:#003366; line-height: 2.4;">
+                                            Download Application Form</h1> -->
                                         <div>
                                             <a class="not_yet">
                                             <!-- <a href="https://iscp2023.org/main/download/ISCP_2023_Travel_Grant_Application_Form.docx" download> -->
-                                                <div class="down_travel"><img src="./img/icons/icon_download_white.svg"
+                                                <!-- <div class="down_travel"><img src="./img/icons/icon_download_white.svg"
                                                         width="20" />Travel Grant Application Form
-                                                    Download(Overseas)</div>
+                                                    Download(Overseas)</div> -->
                                             </a>
                                         </div>
                                         <p>Please, a copy of documents(passport) that prove age should be attached</p>
@@ -816,26 +777,28 @@ $('.submit_btn').click(function() {
     var file_image3 = $("input[name=abstract_file3]")[0];
     var file_image4 = $("input[name=abstract_file4]")[0];
     var file_image5 = $("input[name=abstract_file5]")[0];
-    if (file_image1.files[0] && $('input[name=abstract_file_caption1]').val() == "") {
-        alert("Please enter Image 1 Caption.");
-        return false;
 
-    } else if (file_image2.files[0] && $('input[name=abstract_file_caption2]').val() == "") {
-        alert("Please enter Image 2 Caption.");
-        return false;
+    //[240612] sujeong / 학회팀 요청 주석 -> img caption 필수 X
+    // if (file_image1.files[0] && $('input[name=abstract_file_caption1]').val() == "") {
+    //     alert("Please enter Image 1 Caption.");
+    //     return false;
+
+    // } else if (file_image2.files[0] && $('input[name=abstract_file_caption2]').val() == "") {
+    //     alert("Please enter Image 2 Caption.");
+    //     return false;
     
-    } else if (file_image3.files[0] && $('input[name=abstract_file_caption3]').val() == "") {
-        alert("Please enter Image 3 Caption.");
-        return false;
+    // } else if (file_image3.files[0] && $('input[name=abstract_file_caption3]').val() == "") {
+    //     alert("Please enter Image 3 Caption.");
+    //     return false;
 
-    } else if (file_image4.files[0] && $('input[name=abstract_file_caption4]').val() == "") {
-        alert("Please enter Image 4 Caption.");
-        return false;
+    // } else if (file_image4.files[0] && $('input[name=abstract_file_caption4]').val() == "") {
+    //     alert("Please enter Image 4 Caption.");
+    //     return false;
 
-    } else if (file_image5.files[0] && $('input[name=abstract_file_caption5]').val() == "") {
-        alert("Please enter Image 5 Caption.");
-        return false;
-    }
+    // } else if (file_image5.files[0] && $('input[name=abstract_file_caption5]').val() == "") {
+    //     alert("Please enter Image 5 Caption.");
+    //     return false;
+    // }
 
     // similar_yn
     var similar_yn_flag = $('input[name=similar_yn]:checked').length <= 0
@@ -844,12 +807,12 @@ $('.submit_btn').click(function() {
         return false;
     }
 
-    // support_yn
-    var support_yn_flag = $('input[name=support_yn]:checked').length <= 0
-    if (support_yn_flag) {
-        alert('This research is supported by the grant of Korean Society of Cardiovascular Disease Prevention');
-        return false;
-    }
+    // support_yn -> [240612] 학회팀 요청 삭제
+    // var support_yn_flag = $('input[name=support_yn]:checked').length <= 0
+    // if (support_yn_flag) {
+    //     alert('This research is supported by the grant of Korean Society of Cardiovascular Disease Prevention');
+    //     return false;
+    // }
 
     // apply etc
     var check_age_flag = $('input.check_age:checked').length > 0

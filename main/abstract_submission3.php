@@ -434,7 +434,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                 </form>
 				<div class="text_box">
 					<ul>
-                        <li>Thank you for submitting abstract.</li>
+                        <li>Please click <span class="bold">'Submit'</span> button to complete submission.</li>
                         <li>Approval for your submission will be sent to the email address provided by you</li>
                         <li>You can modify the submitted abstract on ‘My IMCVP’ up until the submission deadline</li>
                     </ul>
@@ -446,7 +446,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                     <?php
 						if ($detail['status'] == 0) {
 						?>
-                    <button type="button" class="btn green_btn submit_btn">Submit</button>
+                    <button type="button" class="btn orange_btn submit_btn">Submit</button>
                     <?php
 						}
 						?>
