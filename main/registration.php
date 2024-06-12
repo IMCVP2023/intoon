@@ -122,8 +122,8 @@ if ($during_yn !== "Y") {
 			<div class="sub_btn_box">
 				<a href="/main/registration_guidelines.php">Guidelines</a>
 				<a href="/main/registration.php" class="on">Go to Registration</a>
-				<a href="/main/comingsoon.php" class="kor">평점안내</a>
-				<!-- <a href="/main/registration_rating_guides.php" class="kor">평점안내</a> -->
+				<!-- <a href="/main/comingsoon.php" class="kor">평점안내</a> -->
+				<a href="/main/registration_rating_guides.php" class="kor">평점안내</a>
 			</div>
 		</h1>
     <div class="inner">

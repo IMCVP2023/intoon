@@ -35,8 +35,8 @@ $price = get_data($sql_price);
 			<div class="sub_btn_box">
 				<a href="/main/registration_guidelines.php" class="on">Guidelines</a>
 				<a href="/main/registration.php">Go to Registration</a>
-				<a href="/main/comingsoon.php" class="kor">평점안내</a>
-				<!-- <a href="/main/registration_rating_guides.php" class="kor">평점안내</a> -->
+				<!-- <a href="/main/comingsoon.php" class="kor">평점안내</a> -->
+				<a href="/main/registration_rating_guides.php" class="kor">평점안내</a>
 			</div>
 		</h1>
         <div class="inner">

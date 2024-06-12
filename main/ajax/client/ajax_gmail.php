@@ -128,6 +128,7 @@ function createMessage($language, $mail_type, $fname, $to, $subject, $time, $tmp
  $rawMessageString .= 'Subject: =?utf-8?B?' . base64_encode($subject) . "?=\r\n";
  $rawMessageString .= "MIME-Version: 1.0\r\n";
  $rawMessageString .= "Content-Type: text/html; charset=utf-8\r\n";
+ $rawMessageString .= 'Reply-To: sci@imcvp.org' . "\r\n";
  //$rawMessageString .= "Content-Type: text/html; charset=iso-8859-1\r\n";
  //$rawMessageString .= 'Content-Transfer-Encoding: quoted-printable' . "\r\n\r\n";
  $rawMessageString .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n";
@@ -238,7 +239,7 @@ if($language == "ko") {
 											<td>
 												<div>
 													<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$first_name} {$last_name},</p>
-													<p style='font-size:14px;color:#170F00;margin-top:14px;'>Thank you for signing up for the IMCVP 2024.<br>Your profile has been successfully created.<br>Please review the information that you have entered as below.<br>If necessary, you can access ‘IMCVP 2024 website - MY IMCVP’ to review, modify or update your personal information.</p>
+													<p style='font-size:14px;color:#170F00;margin-top:14px;'>Thank you for signing up for the IMCVP 2024.<br>Your profile has been successfully created.<br>Please review the information that you have entered as below.<br>If necessary, you can access <b>‘IMCVP 2024 website - MY IMCVP’</b> to review, modify or update your personal information.</p>
 													<table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 														<tbody>
 															<tr>
@@ -588,7 +589,7 @@ if($language == "ko") {
 												<td>
 													<div>
 														<p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$name_title} {$fname},</p>
-														<p style='font-size:14px;color:#170F00;margin-top:14px;'>We express our gratitude for your registration for the International Meeting CardioVascular Disease Prevention (IMCVP) 2024.	The registration details are presented below.<br/>Should you have any inquiries regarding your registration, kindly reach out to the IMCVP 2024 Secretariat for assistance.(<a href='mailto:secretariat@imcvp.org'>secretariat@imcvp.org</a>)</p>
+														<p style='font-size:14px;color:#170F00;margin-top:14px;'>We express our gratitude for your registration for the International Meeting CardioVascular Disease Prevention (IMCVP) 2024.	The registration details are presented below.<br/>Should you have any inquiries regarding your registration, kindly reach out to the IMCVP 2024 Secretariat for assistance.(<a href='mailto:sci@imcvp.org'>sci@imcvp.org</a>)</p>
 														<table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
 															<tbody>
 																<tr style='border-bottom:1px solid #000;'>
@@ -1089,7 +1090,7 @@ if($language == "ko") {
 			}
 		}
 
-		$rawMessageString .=  '<p style="margin: 0 34px 10px 0">If you have any questions regarding abstract submission, please contact the secretariat.(<a href="mailto:secretariat@imcvp.org">secretariat@imcvp.org</a>) We look forward to seeing you in IMCVP 2024</p>
+		$rawMessageString .=  '<p style="margin: 0 34px 10px 0">If you have any questions regarding abstract submission, please contact the secretariat.(<a href="mailto:sci@imcvp.org">sci@imcvp.org</a>) We look forward to seeing you in IMCVP 2024</p>
 								</div>
 								</td>
 								<td width="74" style="width:74px;"></td>
@@ -1149,7 +1150,7 @@ if($language == "ko") {
                         <div style='margin-bottom:40px;'>
                             <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname}</p>
                             <p style='font-size:14px;color:#170F00;margin-top:14px;'>
-                                Attention Potential Presenting Author: Upon successful submission of your abstract, you will immediately see the following confirmation notice on your screen, followed by the same message via e&#45;mail. If you did not receive the following message, your abstract was not successfully submitted. Please try again, or contact (secretariat@imcvp.org) for assistance if you are having difficulty. 
+                                Attention Potential Presenting Author: Upon successful submission of your abstract, you will immediately see the following confirmation notice on your screen, followed by the same message via e&#45;mail. If you did not receive the following message, your abstract was not successfully submitted. Please try again, or contact (sci@imcvp.org) for assistance if you are having difficulty. 
                             </p>
         
                             <p style='font-size:15px; font-weight:bold; color:#000; margin-top:30px;'>Abstract Successfully Submitted</p>
@@ -1160,7 +1161,7 @@ if($language == "ko") {
                                 <li style='font-size:14px; font-weight:bold; color:#000'>Topic : <span style='font-size:14px; font-weight:400; color:#000;'>{$category}</span></li>
                                 <li style='font-size:14px; font-weight:bold; color:#000'>Abstract title : <span style='font-size:14px; font-weight:400; color:#000;'>{$title}</span></li>
                             </ul>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>If you have any questions regarding call for abstracts, please contact the secretariat (<a href='mailto:secretariat@imcvp.org)'>secretariat@imcvp.org</a>)</p>
+                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>If you have any questions regarding call for abstracts, please contact the secretariat (<a href='mailto:sci@imcvp.org)'>sci@imcvp.org</a>)</p>
                             <p style='font-size:14px;color:#170F00;margin-top:14px;'>We look forward to seeing you in IMCVP 2024.</p>
                             <p style='font-size:14px;color:#170F00;margin-top:14px;'>Warmest regards,</p>
                             <p style='font-size:14px;color:#170F00;margin-top:14px;'>IMCVP 2024 Secretariat. </p>
@@ -1227,7 +1228,7 @@ if($language == "ko") {
                         <div style='margin-bottom:40px;'>
                             <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname}</p>
                             <p style='font-size:14px;color:#170F00;margin-top:14px;'>
-                                Attention Potential Presenting Author: Upon successful submission of your abstract, you will immediately see the following confirmation notice on your screen, followed by the same message via e&#45;mail. If you did not receive the following message, your abstract was not successfully submitted. Please try again, or contact (secretariat@imcvp.org) for assistance if you are having difficulty. 
+                                Attention Potential Presenting Author: Upon successful submission of your abstract, you will immediately see the following confirmation notice on your screen, followed by the same message via e&#45;mail. If you did not receive the following message, your abstract was not successfully submitted. Please try again, or contact (sci@imcvp.org) for assistance if you are having difficulty. 
                             </p>
         
                             <p style='font-size:15px; font-weight:bold; color:#000; margin-top:30px;'>Abstract Successfully Submitted</p>
@@ -1238,7 +1239,7 @@ if($language == "ko") {
                                 <li style='font-size:14px; font-weight:bold; color:#000'>Topic : <span style='font-size:14px; font-weight:400; color:#000;'>{$topic}</span></li>
                                 <li style='font-size:14px; font-weight:bold; color:#000'>Abstract title : <span style='font-size:14px; font-weight:400; color:#000;'>{$title}</span></li>
                             </ul>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>If you have any questions regarding call for abstracts, please contact the secretariat (<a href='mailto:secretariat@imcvp.org)'>secretariat@imcvp.org</a>)</p>
+                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>If you have any questions regarding call for abstracts, please contact the secretariat (<a href='mailto:sci@imcvp.org)'>sci@imcvp.org</a>)</p>
                             <p style='font-size:14px;color:#170F00;margin-top:14px;'>We look forward to seeing you in IMCVP 2024.</p>
                             <p style='font-size:14px;color:#170F00;margin-top:14px;'>Warmest regards,</p>
                             <p style='font-size:14px;color:#170F00;margin-top:14px;'>IMCVP 2024 Secretariat. </p>
