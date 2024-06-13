@@ -332,7 +332,7 @@ section.container.organizing {padding-bottom: 190px;}
 .useful_list > li:after {content:''; display:block; clear:both;}
 .useful_list li {font-size:16px; line-height:26px;}
 .useful_list > li:not(:first-child) {margin-top:50px;}
-.useful_list > li > div {float:left; height:200px; width:300px;)}
+.useful_list > li > div {float:left; height:200px; width:300px;}
 .useful_list > li > div:last-child {width:calc(100% - 328px); height:auto; margin-left:28px;}
 /*.useful_list li .imgs {background-color:#e7e7e7;}*/
 .useful_list li .imgs {background:url("../img/img_useful01.jpg") no-repeat center /cover;}
@@ -1898,7 +1898,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 .color_table {display:table;/* margin-top:50px;*/}
 .color_table th, .color_table td {font-size:18px; font-weight:600; background-color:transparent;}
 .color_table th {padding:5px 0 5px; line-height: 24px;}
-.color_table td {padding:5px 230px 5px 30px; /*background-color:#F2F2F2;*/ position:relative;}
+.color_table td {padding:5px 30px 5px 30px; /*background-color:#F2F2F2;*/ position:relative;}
 .color_table td span {position:absolute; bottom:18px; right:248px; font-size:18px; font-weight:600;}
 .color_table .favorite_btn {width:230px; height:100%; position:absolute; top:0; right:0; background-color:#969695; /*background-color:rgba(60,60,59,0.5);*/ font-size:16px; font-weight:700; color:#fff;}
 .color_table .favorite_btn.on {background-color:#BD1847;}
@@ -2037,12 +2037,22 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 .venue .useful_list > li:nth-of-type(1) .imgs{
 	background: url("../img/2024_wakerhill.jpg") no-repeat center / cover !important;
 	width: 500px;
-	height: 500px;
+	height: 340px;
 }
 
 .venue .useful_list > li > div {
 	width: 490px;
 }
+.venue .useful_list > li > div > div{
+	width: 490px;
+	height: 400px;
+}
+
+/* 
+.venue .useful_list > li > div > div.table_wrap {
+	height: 570px;
+    overflow: overlay;
+} */
 
 .venue .useful_list > li > div:last-child{
 	width: calc(80% - 328px);
@@ -2050,21 +2060,26 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 
 
 .venue .venue_btn{
-	width: 150px;
-	height: 40px;
-	color: #FFF;
-	background-color: #ADA9BB;
+	width: 84px;
+	height: 30px;
+	color: #484554;
+	font-size: 14px;
+	background-color: #FFF;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-underline-position: under;
 	border-radius: 20px;
-	margin: 0 auto;
+	margin: 0;
+	border: 1px solid #ADA9BB;
+	text-decoration: none;
 }
 
 .venue .venue_btn:hover{
 	background-color: #23509F;
+	border-color: #23509F;
+	color: #FFF;
 }
+
 
 .accommodation .yellow_box{
 	display: flex;
@@ -2075,10 +2090,20 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	/* min-height: 367px !important; */
 	height: 292px;
 	padding: 20px;
-	background-color: #fcfbf6;
+	border: 1px solid #ADA9BB;
 	margin-left: 0!important;
 	flex-shrink: 0; 
+	border-radius: 0 20px 20px 0;
 }
+
+.accommodation .yellow_box .info_wrap, .accommodation .yellow_box .booked_box{
+	padding-left: 20px;
+}
+
+.accommodation .yellow_box a {
+	text-decoration: none !important;
+}
+
 .accommodation li:nth-child(1) .yellow_box{
 	height: 367px;	
 }
@@ -2093,6 +2118,29 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	margin: 12px 0;
 }
 
+.accommodation .yellow_box .title::before{
+	content: '';
+    display: inline-block;
+	width: 30px;
+	height: 10px;
+	background-color: #23509F;
+	border-radius: 0px 5px 5px 0px;
+	vertical-align: middle;
+	margin-bottom: 4px;
+	margin-right: 8px;
+}
+
+.accommodation .yellow_box .title{
+	transform: translateX(-21px);
+	width: 100%;
+	font-size: 26px;
+}
+
+.accommodation .yellow_box .title a{
+	font-size: 14px;
+	text-decoration: none;
+}
+
 .accommodation .yellow_box .booked_box{
 	width: 100%;
 	height: 25%;
@@ -2102,23 +2150,40 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	justify-content: space-between;
 }
 
-.accommodation .yellow_box div ul li {
-	font-size: 18px;
+.accommodation .yellow_box div ul li, .accommodation .yellow_box div ul li span {
+	font-size: 20px;
+	line-height: 1.6;
+}
+
+.accommodation .yellow_box div ul li span{
+	font-weight: 600;
 }
 
 .accommodation .yellow_box h5 {
+	width: 138px;
+	height: 30px;
 	font-size: 20px;
 	font-weight: 600;
-	color: purple;
+	background: #800080;
+	color: #FFF;
 	line-height: 1.8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	margin-bottom: 7px;
 }
 
 .accommodation .yellow_box h6 span{
-	color: rgb(123, 98, 221);
+	color: #800080;
+	font-weight: 600;
+	font-size: 20px;
 }
 
 .accommodation .yellow_box h6 {
-	line-height: 1.4;
+	line-height: 1.7;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .accommodation .yellow_box .booked_box button {
@@ -2126,10 +2191,19 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	height: 35px;
 	border-radius: 20px;
     color: #484554; 
-	font-size: 13px;
+	font-size: 14px;
 	border: 1px solid #ADA9BB;
 	background-color: #FFF;
 	padding:8px;
+	position: static;
+	font-weight: bold;
+	/* width: 84px;
+    height: 30px;
+    border: 1px solid #ADA9BB;
+    border-radius: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
 .accommodation .yellow_box .booked_box button:hover{
@@ -2169,19 +2243,49 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 }
 
 
+.accommodation .useful_list .go_website_btn{
+	width: 84px !important;
+	height: 30px !important;
+	border: 1px solid #ADA9BB;
+	border-radius: 23px;	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	position: absolute;
+	right: -12px;
+    bottom: 18px;
+}
+
+.accommodation .useful_list .go_website_btn:hover{
+	background-color: #23509F;
+	border-color: #23509F;
+	color: #FFF;
+}
+
+.accommodation .useful_list > li > div:last-child{
+	width: 100%;
+	margin-left: 0;
+}
+
 @media screen and (max-width:1100px){
 
 	.venue .useful_list li .imgs{
 		/* float: none !important;
 		margin: 0 auto !important; */
 		width: 100% !important;
-		height: 160% !important;
+		height: 80% !important;
 	}
 	
 	.venue .useful_list li div:last-child{
 		width: 100%;
-		margin-top: 150px;
+		/* margin-top: 150px; */
 	}
+
+	.venue .useful_list li div:nth-child(2) div table{
+		margin-top: 250px;
+	}
+
 	.venue .useful_list li div:last-child.x_scroll{
 		margin-top: 20px!important;
 	}
@@ -2211,6 +2315,15 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	}
 	.accommodation .yellow_box .booked_box .buttons_box{
 		margin-top: 20px;
+	}
+
+	.venue .useful_list li div:last-child.x_scroll{
+		margin-top: 80px!important;
+		height: 580px;
+	}
+
+	.venue .useful_list > li > div > div.table_wrap{
+		height: 500px;
 	}
 }
 
@@ -2989,3 +3102,47 @@ table.type2 th{
 .registration .pre_txt{color: #484554 !important;}
 
 .orange_btn{background-color:#921004;border-color: #921004; color: #FFF!important;}
+
+.program_plus_btn{
+    position: absolute;
+    right: 0;
+    top: -1px;
+}
+
+.venue_txt{
+	/* margin-top: 200px !important; */
+	font-size: 18px !important;
+	line-height: 22px !important;
+}
+
+@media screen and (max-width:1080px) {
+	.venue .useful_list > li > div > div.table_wrap{
+		height: 580px;
+	}
+}
+
+@media screen and (max-width : 600px) {
+
+	.venue .useful_list > li > div > div{
+		width: 100%;
+	}
+
+	.venue .useful_list > li:nth-of-type(1) .imgs{
+		width: 300px !important;
+		height: 300px !important;
+	}
+
+	.venue .useful_list li div:nth-child(2) div table{
+		margin-top: 150px;
+	}
+
+	.venue_txt{margin-top: 0 !important;}
+
+	.venue .useful_list > li > div > div.table_wrap{
+		height: 400px;
+	}
+
+	.venue .useful_list li div:last-child.x_scroll{
+		height: 490px;
+	}
+}

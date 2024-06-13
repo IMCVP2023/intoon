@@ -113,7 +113,10 @@
 								<tbody>
 									<tr class="yellow_bg non_border_b">
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
-										<td class="yellow_bg">Symposium 1 <br/>2024 Guideline Update for Cardiometabolic Disease</td>
+										<td class="yellow_bg">Symposium 1 
+											<br/>2024 Guideline Update for Cardiometabolic Disease
+											<!-- <img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/> -->
+										</td>
 									</tr>
 								</tbody>
 							</table>

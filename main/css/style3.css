@@ -224,6 +224,7 @@ section.visa .circle_title + .details {margin-bottom: 72px;}
 .accommodation .useful_list > li > div {width: 400px; height: 267px;}
 .accommodation .useful_list > li > div:last-child {width: 90%;}
 /*.accommodation .useful_list > li:last-child > div {height: 288.6px;}*/
+.accommodation .useful_list > li .imgs {border-radius: 20px 0px 0px 20px;}
 .accommodation .useful_list > li:nth-of-type(1) .imgs {background-image: url("../img/2024_wakerhill.jpg");}
 .accommodation .useful_list > li:nth-of-type(2) .imgs {background-image: url("../img/2024_hotel_img1.jpg");}
 .accommodation .useful_list > li:nth-of-type(3) .imgs {background-image: url("../img/2024_hotel_img2.jpg");}
