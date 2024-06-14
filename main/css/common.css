@@ -289,7 +289,7 @@ section.container.login .page_title p {/*font-size:22px; font-weight:bold;*/ mar
 
 /*layout*/
 /*안쪽 container*/
-.inner {max-width:1232px; padding:0 16px; margin:50px auto 90px;}
+.inner {max-width:1232px; padding:0 16px; margin:90px auto 70px;}
 .inner.find_password {max-width:950px;}
 .container{width:calc(100% - 34px);margin:0 auto;max-width:1200px;}
 section.container {min-height: calc(100vh - 403px); padding: 235px 0 50px; margin-top: 117px;}
@@ -303,7 +303,7 @@ section.container.window_open {margin-top: 50px; padding-top:0;}
 .sub_banner h5{width:100%;font-family: 'Sriracha', cursive;font-size:100px;font-weight:100;color:#F2F2F2;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:-1;}
 .sub_banner h1{display:inline-block;font-size:36px;font-weight:bold;margin:44px 0;position:relative;z-index:1;color:#000;}
 .sub_banner h1:after{content:'';display:block;width:100%;height:17px;background:rgba(169,239,0,0.6);position:absolute;left:0;bottom:0;z-index:-1;}
-section.sub_page{padding-top:222px;}
+section.sub_page{padding-top:270px;}
 /* 220324 HUBDNC LJH2 추가*/
 .registration_closed .sub_banner h5 {position: relative; top: auto; left: auto; transform: translate(0,0)}
 .mb_only {display: none;}

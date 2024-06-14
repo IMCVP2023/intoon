@@ -19,7 +19,7 @@
 .coming h5{color: #0281f0b5;}
 
 /* 220323 HUBDNC LJH2 수정 */
-section.container.overview {padding-bottom: 200px; /*326px;*/}
+section.container.overview {/*padding-bottom: 200px; 326px;*/}
 .detail_table th, .detail_table td, .overview td, .detail_table td label {padding: 12px 20px; /*20px 40px;*/ font-size: 16px; /*18px;*/}
 .detail_table th {background-color: #F6F6FA; font-weight: bold;}
 .detail_table td b {font-weight: 900; display: block; color:#000;}
@@ -77,7 +77,7 @@ section.container.overview {padding-bottom: 200px; /*326px;*/}
 
 /*organizing*/
 .organizing .fixed_table *{white-space: normal;}
-section.container.organizing {padding-bottom: 190px;}
+/* section.container.organizing {padding-bottom: 190px;} */
 .organizing .cat1 th{ /* background-color: rgba(16,191,153,0.4); */ background-color:#F6F6FA; /*text-align: center;*/ border-right: 1px solid #ADA9BB;}
 .organizing .cat2 th{background-color: #f2f2f2; border-right: 1px solid #ADA9BB;}
 /*.organizing .cat2 th{background-color: rgba(255,235,0,0.4);}*/
@@ -256,8 +256,8 @@ section.container.organizing {padding-bottom: 190px;}
 .registration .payment_wrap, .registration .info_wrap{width:50%;height:100%;}
 .registration .payment_wrap img{width: 100%;}
 /* 220406 HUBDNC LJH2 추가 */
-.registration .title + .details {margin-bottom: 100px;}
-.registration .title + p + .details {margin-bottom: 100px;}
+.registration .title + .details {margin-bottom: 70px;}
+.registration .title + p + .details {margin-bottom: 70px;}
 .registration .title + .details.icomes_air th, .registration .title + .details.icomes_air td {font-size:18px; padding: 8px 16px !important;}
 .registration .btn_wrap {text-align: center; margin-top: 40px;}
 .rating_guide_pop .btn {font-size: 20px; padding: 0 30px; border-radius: 0;}
@@ -358,6 +358,7 @@ section.container.organizing {padding-bottom: 190px;}
 .about_korea_wrap{width:580px;position:relative;height:0;padding-bottom:27.25%;}
 .about_korea_wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
 .img_wrap img{width:100%;}
+.venue .title{font-size: 28px;}
 
 /*mypage*/
 .mypage .c_table2 td{text-align:center;}
@@ -592,9 +593,9 @@ section.container.organizing {padding-bottom: 190px;}
 .long_btn:hover{text-decoration: underline; text-underline-position: under; background-color: #23509F;}
 .long_btn.type2 {font-size: 18px; border-radius: 99px; height: auto; }
 /* section.container .page_title {background: #f2f2f2; width:100%; height: 135px; position: absolute; left: 0;top: 0; padding: 40px 0 48px;} */
-section.container .page_title {background: url("../img/2024_img_sub01.png") no-repeat center /cover; width:100%; height: 240px; position: absolute; left: 0;top: 120px; padding: 70px 0 48px; text-align: center;}
+section.container .page_title {background: url("../img/2024_img_sub01.png") no-repeat center /cover; width:100%; height: 240px; position: absolute; left: 0;/*top: 120px;*/top:30px; padding: 70px 0 48px; text-align: center;}
 section.container .page_title.non_box{padding: 110px 0 48px;}
-.inner {padding-top:50px;}
+/* .inner {padding-top:50px;} */
 /* h3.title:before {content:'';display: inline-block;  width: 9px;height: 9px; background: transparent; border:6px solid #23509F; margin-bottom: 2px; border-radius:50%; margin-right: 10px; vertical-align: middle;} */
 h3.title.icon_none {padding-left:0;}
 h3.title.icon_none:before {display:none;}
@@ -854,7 +855,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 	.main_speaker .profile_wrap {width: 85%; padding-top: 83%}
 	
 	/*overview*/
-	section.container.overview {padding-bottom: 150px;}
+	/* section.container.overview {padding-bottom: 150px;} */
 	.overview .c_table2 th, .overview .c_table2 td {padding: 10px 15px; font-size: 16px;}
 	.overview .sub_banner:nth-of-type(3) {margin: 100px 0 0;}
 	.floor_cont:not(:last-of-type) {margin-bottom: 30px;}
@@ -1885,7 +1886,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 .program_glance_sj .program_glance_table th:not(:first-child) {border-left:1px solid #707070;}
 .program_glance_sj .program_glance_table tr:first-child th:not(:first-child) {border-color: #FFFFFF;}
 .program_glance_sj .program_glance_table td:not(:first-child) {padding:1px 9px; border-left:1px solid #000; font-weight:bold;}
-.program_glance_sj .program_glance_table td p {font-weight:400; margin-top:8px;}
+.program_glance_sj .program_glance_table td p {font-weight:400; /*margin-top:8px;*/font-size: 14px;}
 .program_glance_sj .tab_pager {margin-bottom:0;}
 .program_glance_sj .tab_cont thead tr:first-child {background-color: #00666B;}
 .program_glance_sj .tab_cont thead tr:first-child th {color: #fff;}
@@ -2268,6 +2269,10 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	margin-left: 0;
 }
 
+.accommodation .yellow_box .go_last_btn{
+	transform: translateY(-44px);
+}
+
 @media screen and (max-width:1100px){
 
 	.venue .useful_list li .imgs{
@@ -2304,7 +2309,16 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 	}
 
 	.accommodation li:nth-child(1) .yellow_box{
-		height: 450px;	
+		height: auto;	
+	}
+	.accommodation .yellow_box .title{
+		font-size: 20px;
+	}
+	.accommodation .yellow_box div ul li, .accommodation .yellow_box div ul li span, .accommodation .yellow_box h6, .accommodation .yellow_box h6 span{
+		font-size: 14px;
+	}
+	.accommodation .yellow_box .go_last_btn{
+		transform: translateY(0px);
 	}
 }
 
@@ -2350,7 +2364,7 @@ span.eligibility_open {position:relative; font-size:12px; font-weight:normal;}
 
 .visa table th, .visa table td{
 	white-space: wrap;
-	font-size: 14px;
+	font-size: 16px;
 	padding: 8px;
 }
 
@@ -2610,6 +2624,7 @@ select[name="topic1"] option:disabled {
 .day_tbody tr, .day_tbody th, .day_tbody td{
 	border-bottom: 1px solid #ADA9BB !important;
 	color: #484554 !important;
+	height: 50px;
 }
 
 .day_tbody .yellow_bg {background-color: #FFF8AA !important;}
@@ -2984,7 +2999,7 @@ select[name="topic1"] option:disabled {
 }
 
 .registration .steps_area{
-	margin-bottom: 100px;
+	margin-bottom: 70px;
 }
 
 .abstract_online_submission .submit_btn:hover {text-decoration: underline; text-underline-position: under;}
@@ -3106,7 +3121,40 @@ table.type2 th{
 .program_plus_btn{
     position: absolute;
     right: 0;
-    top: -1px;
+    top: 0px;
+	cursor: pointer;
+}
+
+.plus_tr{cursor: pointer;}
+
+@media screen and (max-width:1024px) {
+	.program_plus_btn{
+		top:7px;
+	}
+}
+
+.preview_tr, .preview_tr td{
+	border-bottom: 1px solid #ADA9BB;
+}
+
+.preview_tr td p {
+	font-weight: bold;
+}
+
+.preview_tr td ul li{
+	line-height: 1.6;
+}
+
+.preview_tr{
+	display: none;
+}
+
+.preview_tr.on{
+	display: table-row;
+}
+
+.preview_tr.yellow{
+	background-color: #FFFDEF;
 }
 
 .venue_txt{
@@ -3144,5 +3192,60 @@ table.type2 th{
 
 	.venue .useful_list li div:last-child.x_scroll{
 		height: 490px;
+	}
+}
+
+
+@media screen and (max-width:1024px) {
+	.col_th{
+		width: 70px;
+	}
+
+	.scientific_program .detail_table2 th{
+		padding: 8px 0 !important;
+		font-size: 14px;
+	}
+
+	.scientific_program .detail_table2 p{
+		font-size: 14px;
+	}
+
+	.scientific_program .preview_tr ul li{
+		font-size: 14px;
+	}
+
+	.scientific_program .inner {
+		padding-top: 190px;
+	}
+
+	.accommodation .useful_list > li:not(:first-child){
+		margin-top: 0px !important;
+	}
+}
+
+@media screen and (max-width:486px) {
+	.accommodation .useful_list > li:first-child > div:last-child, .accommodation .useful_list > li:nth-child(2) > div:last-child, .accommodation .useful_list > li:nth-child(3) > div:last-child{
+		margin-top: 0px !important;
+	}
+
+	.program_plus_btn{top:0}
+
+	.accommodation .useful_list .go_website_btn{
+		bottom: 0;
+	}
+
+	.accommodation .useful_list > li > div:first-child .imgs, .accommodation .useful_list > li:nth-of-type(6) .imgs{
+		width: 90% !important;
+	}
+
+	.accommodation .useful_list .go_website_btn{
+		position: relative;
+		top: 10px;
+		left: 40px;
+		bottom: 0;
+		right: 0;
+	}
+	.accommodation .yellow_box .info_wrap, .accommodation .yellow_box .booked_box{
+		padding-left: 0;
 	}
 }

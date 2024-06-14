@@ -105,7 +105,7 @@
                     </div> -->
                 <!-- </div> -->
                 <div class="yellow_box">
-                <h3 class="title"> Hotel The Designers Premier Kondae
+                <h3 class="title"> Hotel The Designers <br class="mb_only"/>Premier Kondae
                 <a href="http://designers-1lleven.com" target="_blank"
                     class="go_website_btn text_l"> <img src="./img/icons/2024_icon_home.svg">&nbsp; Go to >
                     </a>
@@ -246,7 +246,7 @@
                <li>
                 <h3 class="title">More Accommodation Option</h3>
                 <p>* Find more other suitable accommodation options</p>
-                <div class="accomodation_box">
+                <div class="accomodation_box" style="height:auto !important">
                 <!-- <div> -->
                     <div class="imgs"></div>
                     <!-- <div class="btn_wrap">
@@ -263,7 +263,7 @@
                             <h6>You need to select and make reservations on WEHOME, A certified accommodation platform by the Republic of Korea government, for your quarantine.</h6>
                         </div>
                         <div class="buttons_box">
-                            <button style="transform: translateY(-44px);" class="violet_btn go_website_btn" onClick="javascript:window.open('https://www.wehome.me/en')"> <img src="./img/icons/2024_icon_home.svg">&nbsp;Go to ></button>
+                            <button class="violet_btn go_website_btn go_last_btn" onClick="javascript:window.open('https://www.wehome.me/en')"> <img src="./img/icons/2024_icon_home.svg">&nbsp;Go to ></button>
                         </div>
                     </div>                    
                 </div>

@@ -172,9 +172,10 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr>
+									<tr class="plus_tr">
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
 										<td class="yellow_bg">Symposium 7 <br/>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives 
+										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -186,7 +187,7 @@
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 7 <br/>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives 
+										<td class="yellow_bg plus_tr">Symposium 7 <br/>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives 
 										</td>
 									</tr>
 								</tbody>
@@ -197,6 +198,17 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+									<tr class="preview_tr yellow">
+										<td colspan="2">
+											<p>Organizer : Jong-Chan Youn(The Catholic University of Korea, Korea)</p>
+											<ul>
+												<li>In this multidisciplinary session, we begin with an exploration of the known and unknown mechanisms of SGLT2 inhibitors, providing a foundational understanding of their function and impact.</li>
+												<li>Next, we will hear from leading experts in various fields: diabetologists will discuss the transformative effects of SGLT2 inhibitors on diabetes management, cardiologists will share insights into cardiovascular benefits, and nephrologists will examine the implications for kidney health.
+
+												</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -313,9 +325,10 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr>
+									<tr class="plus_tr">
 										<th class="dark_yellow_bg">11:10 - 12:50</th>
 										<td class="yellow_bg">Symposium 9 <br/>Obesity and Cardiovascular Disease 
+										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -326,7 +339,7 @@
 									<tr class="dark_yellow_bg">
 										<th class="dark_yellow_bg">11:10 - 12:50</th>
 									</tr>
-									<tr class="yellow_bg non_border_b">
+									<tr class="yellow_bg non_border_b plus_tr">
 										<td class="yellow_bg">Symposium 9 <br/>Obesity and Cardiovascular Disease 
 										</td>
 									</tr>
@@ -338,6 +351,14 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr yellow">
+										<td colspan="2">
+											<p>Organizer : Jong-Chan Youn(The Catholic University of Korea, Korea)</p>
+											<ul>
+												<li>In this session, we will explore the intricate link between these two critical health conditions. Our program begins with an overview of obesity, its definition, and clinical implications, setting the stage for understanding its impact on cardiovascular health. We'll then delve into the intriguing obesity paradox in cardiovascular disease, followed by insights into the role of bariatric surgery for obese patients with cardiovascular conditions. Finally, we will discuss the latest advancements in pharmacotherapy for these patients.</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -452,7 +473,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">13:50 - 15:00</th>
-										<td class="yellow_bg">Symposium 11 <br/>
+										<td class="yellow_bg">Symposium 11 <br/>Lifestyle modification for Prevention of CVD
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -765,7 +786,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
-										<td class="yellow_bg">Symposium 8 <br/>
+										<td class="yellow_bg">Symposium 8 <br/>Non-traditional risk risk factors of cardiovascular disease 
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -902,9 +923,10 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr>
+									<tr class="plus_tr">
 										<th class="dark_yellow_bg">11:10 - 12:50</th>
-										<td class="yellow_bg">Symposium 10 <br/>
+										<td class="yellow_bg">Symposium 10 <br/>Regional, Social disparities in CV and metabolic health outcomes
+										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -915,7 +937,7 @@
 									<tr class="dark_yellow_bg">
 										<th class="dark_yellow_bg">11:10 - 12:50</th>
 									</tr>
-									<tr class="yellow_bg non_border_b">
+									<tr class="yellow_bg non_border_b plus_tr">
 										<td class="yellow_bg">Symposium 10 <br/>
 										</td>
 									</tr>
@@ -927,6 +949,15 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr yellow">
+										<td colspan="2">
+											<p>Organizer : Seung-Hyun Ko(The Catholic University of Korea, Korea)</p>
+											<ul>
+												<li>Cardiometabolic diseases are major health issues all around the world, especially in Korea, and standard guidelines for the average person continue to evolve. However, health disparities in certain groups still exist, and efforts to resolve them are on-going. This session explores the uneven distribution of these conditions across different social and regional factors, examining how factors such as socioeconomic status, urbanization, and access to healthcare influence these disparities. By understanding the underlying causes and regional differences, we aim to develop targeted interventions and policies to alleviate these disparities, improve public health outcomes, and ensure equitable healthcare access for all Koreans.
+												</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -1040,7 +1071,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">13:50 - 15:00</th>
-										<td class="yellow_bg">Symposium 12<br/>
+										<td class="yellow_bg">Symposium 12<br/>Digital Healthcare
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -1326,6 +1357,55 @@
 			}
 		});
 		
+		const plusBtnList = document.querySelectorAll(".program_plus_btn");
+		const plusTrList = document.querySelectorAll(".plus_tr");
+		
+		
+		plusTrList.forEach((plusTr)=>{
+			plusTr.addEventListener("click", (e)=>{
+				showDetailTr(e)
+			})
+		})
+
+		plusBtnList.forEach((plusBtn)=>{
+			plusBtn.addEventListener("click", (e)=>{
+				e.stopPropagation();
+				showDetailTr(e)				
+			})
+		})
+
+		function showDetailTr(e){
+				const isMobile = e.target.closest('.color_table').classList.contains('mobile');
+				const isImg = e.target.tagName;
+				console.log(isImg)
+				let targetBtn = ""
+
+				if(isMobile && isImg === "IMG"){
+					clickTarget = e.target.closest('.color_table').nextSibling.nextSibling.querySelector('.preview_tr');
+					targetBtn = e.target;
+				}else if(!isMobile && isImg === "IMG"){
+					clickTarget = e.target.closest('.color_table').nextSibling.nextSibling.nextSibling.nextSibling.querySelector('.preview_tr');
+					targetBtn = e.target;
+				}else if(isMobile && isImg !== "IMG"){
+					clickTarget =  e.target.closest('.color_table').nextSibling.nextSibling.querySelector('.preview_tr');
+					targetBtn = e.target.querySelector('.program_plus_btn')
+				}else if(!isMobile && isImg !== "IMG"){
+					clickTarget = e.target.closest('.color_table').nextSibling.nextSibling.nextSibling.nextSibling.querySelector('.preview_tr');
+					targetBtn =  e.target.querySelector('.program_plus_btn')
+				}
+				console.log(targetBtn)
+				
+				const color = clickTarget.classList[1];
+				clickTarget.classList.toggle("on");
+
+				if(clickTarget.classList.contains("on")){
+					targetBtn.src = `./img/icons/${color}_cross_btn.svg`
+
+				}else if(!clickTarget.classList.contains("on")){
+					targetBtn.src = `./img/icons/${color}_plus_btn.svg`
+				}
+				
+		}
 	});
 </script>
 <?php

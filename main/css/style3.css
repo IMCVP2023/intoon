@@ -728,7 +728,7 @@ div.bg input[type=button]:hover{background-color: #23509F; border-color: #23509F
 	.index_sponsor_wrap > div > * {width:calc(100% - 10px);}
 	.index_sponsor_wrap > div > span {width:100%; margin-bottom:12px;}
 	.accommodation .useful_list > li > div:last-child {margin-top: 16px;}
-
+	.btn_fixed_triangle{display: none;}
 	/* main - invited speakers*/
 	/*.main_speaker2 .profile_circle {width: 175px; height: 175px;}*/
 	/*.main_speaker2 .profile_wrap {width: 155px; height: 155px;}*/

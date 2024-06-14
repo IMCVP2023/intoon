@@ -124,7 +124,7 @@
 					<a href="https://daewoongbio.co.kr/daewoongbiokr/main/main.web" class="daewoong_bio">DAEWOONG</a>
 				</li>
                 <li>
-					<a href="" class="daiichi_sankyo">Daiichi Sankyo & DAEWOONG</a>
+					<a href="https://www.daiichisankyo.com/" class="daiichi_sankyo">Daiichi Sankyo & DAEWOONG</a>
 				</li>
                 <li>
 					<a href="https://www.boryung.co.kr/en/" class="boryung">BORYUNG</a>
