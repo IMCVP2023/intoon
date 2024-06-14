@@ -28,18 +28,18 @@
 			<!--1-->
 			<h3 class="title mt10">Ministry of Foreign Affairs</h3>
 			<div class="details mb20">
-				<button class="long_btn p4"  onclick="location.href='https://www.mofa.go.kr/eng/index.do'"><a href="https://www.mofa.go.kr/eng/index.do" class="s_bold">Link</a></button>
+				<button class="long_btn p4"><a href="https://www.mofa.go.kr/eng/index.do" class="s_bold">Link</a></button>
 			</div>
 			<!--2-->
-			<h3 class="title mt10">Immigration Bureau</h3>
+			<h3 class="title mt50">Immigration Bureau</h3>
 			<div class="details mb20">
-            <button class="long_btn p4" onclick="location.href='https://www.immigration.go.kr/immigration_eng/index.do'"><a href="https://www.immigration.go.kr/immigration_eng/index.do" class="s_bold">Link</a></button>
+            <button class="long_btn p4"><a href="https://www.immigration.go.kr/immigration_eng/index.do" class="s_bold">Link</a></button>
 				<p>
 					All visitors to Korea must have a valid passport and visa before coming. Visitors from countries that have a special agreement with Korea are exempt from the visa requirement and allowed to stay in Korea without a visa for 30 days or up to 90 days, depending on agreements. For more information, please contact the local Korean consulate or embassy, or visit the official website of the Korean Ministry of Foreign Affairs and Trade.
 				</p>
 			</div>
 			<!--3-->
-			<h3 class="title mt10">Countries under visa exemption agreements</h3>
+			<h3 class="title mt50">Countries under visa exemption agreements</h3>
 			<div class="table_wrap detail_table_common x_scroll mb20">
 				<table class="c_table detail_table type1">
 					<thead>
@@ -91,7 +91,7 @@
 				</table>
 			</div>
 
-            <h3 class="title mt10">Nationals of countries or regions allowed for visa-free entry (30/90) days unless noticed other</h3>
+            <h3 class="title mt50">Nationals of countries or regions <br/>allowed for visa-free entry (30/90) days unless noticed other</h3>
 			<div class="table_wrap detail_table_common x_scroll">
 				<table class="c_table detail_table type1">
 					<thead>

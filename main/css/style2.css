@@ -4,7 +4,7 @@
 .not_ready {font-size: 32px; font-weight: 400; color: #666666; line-height: 316px; text-align: center; background-color: #F4F4F4; margin-bottom: 48px;}
 
 /* layout */
-section.container.welcome {padding-bottom: 90px;}
+/* section.container.welcome {padding-bottom: 90px;} */
 section.container.app_version.welcome {padding: 0 0 90px;}
 
 /* header*/
@@ -484,7 +484,7 @@ div.phone input:last-child {width:calc(100% - 102px); margin-left:6px;}
 .step_list > li.step4 > div:last-child {padding-top:20px;}
 .step_list > li > div p {font-size:16px; font-weight:400; line-height:26px;}
 .step_list > li > div p:first-of-type {margin-top:8px;}
-.text_box li, .text_box li span, .text_box li a {line-height:32px; font-size:18px;}
+.text_box li, .text_box li span, .text_box li a, .text_box li span, .text_box p {line-height:32px; font-size:20px;}
 .text_box.indent li {text-indent: -10px; padding-left: 20px;}
 .text_box li a.link {text-indent: 0px;}
 .abstract_submission_guideline .section1 > div:not(:first-of-type) {margin-top:60px;}
@@ -510,9 +510,10 @@ div.phone input:last-child {width:calc(100% - 102px); margin-left:6px;}
 /*Abstract Submission Award*/
 .abstract_submission_award .title {padding-bottom:30px;}
 .abstract_submission_award h4.title {padding-bottom:15px;}
+.abstract_submission_award .title{padding-top: 30px;}
 .abstract_submission_award .title span {display:block; margin-top:20px;}
 /*.abstract_submission_award .section1 > div:not(:first-of-type) {margin-top: 140px;}*/
-.abstract_submission_award .section1 > div:not(:first-of-type) {margin-top: 60px;}
+.abstract_submission_award .section1 > div:not(:first-of-type) {margin-top: 30px;}
 /*.abstract_submission_award .section1 > div:nth-of-type(2) {margin-top: 95px;}*/
 .award_list {max-width:100%; margin:0 auto;}
 .award_list:after {content:''; display:block; clear:both;}

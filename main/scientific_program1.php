@@ -111,9 +111,12 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="yellow_bg non_border_b">
+									<tr class="yellow_bg non_border_b plus_tr">
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
-										<td class="yellow_bg">Symposium 1 <br/>2024 Guideline Update for Cardiometabolic Disease</td>
+										<td class="yellow_bg">Symposium 1 
+											<br/>2024 Guideline Update for Cardiometabolic Disease 
+											<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -122,9 +125,10 @@
 									<tr class="dark_yellow_bg non_border_b">
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
 									</tr>
-									<tr class="yellow_bg non_border_b">
+									<tr class="yellow_bg non_border_b plus_tr">
 										<td class="yellow_bg">Symposium 1 <br/>2024 Guideline Update for Cardiometabolic Disease 
-										</td>
+										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>	
+									</td>
 									</tr>
 								</tbody>
 							</table>
@@ -134,6 +138,16 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+									<tr class="preview_tr yellow">
+										<td colspan="2">
+											<p>Organizer : Jong-Chan Youn(The Catholic University of Korea, Korea)</p>
+											<ul>
+												<li>In this session; we will provide a comprehensive review of the latest guidelines in key areas of cardiometabolic health from the national key opinion leaders. </li>
+												<li>We will start with the current guidelines for hypertension, followed by updates on the management of dyslipidaemia. We will then look at the latest recommendations for the management of diabetes and conclude with the current guidelines for the management of heart failure.
+												</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -344,9 +358,10 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr>
+									<tr class="plus_tr">
 										<th class="dark_yellow_bg">13:00 - 14:40</th>
-										<td class="yellow_bg">Symposium 3 <br/>non-atherosclerotic, non-cardioembolic cerebral infarction
+										<td class="yellow_bg">Symposium 3 <br/>Non-atherosclerotic, non-cardioembolic cerebral infarction
+										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -357,7 +372,7 @@
 									<tr class="dark_yellow_bg">
 										<th class="dark_yellow_bg">13:00 - 14:40</th>
 									</tr>
-									<tr class="yellow_bg non_border_b">
+									<tr class="yellow_bg non_border_b plus_tr">
 										<td class="yellow_bg">Symposium 3 <br/>non-atherosclerotic, non-cardioembolic cerebral infarction</td>
 									</tr>
 								</tbody>
@@ -368,6 +383,15 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+									<tr class="preview_tr yellow">
+										<td colspan="2">
+											<p>Organizer : Sang-Mi Noh(The Catholic University of Korea, Korea)</p>
+											<ul>
+												<li>Ischemic stroke is a disease with a variety of etiologies. Most of its cases are due to atherosclerosis which is influenced by traditional vascular risk factors such as diabetes and hypertension or, due to high-risk cardio-embolic sources such as atrial fibrillation.</li>
+												<li>There are well-established guidelines and extensive research concerning the causes and treatment of these types of strokes. In this session, we aim to share the latest research and clinical experiences on non-atherosclerotic, non-cardio-embolic stroke which are rare, yet require different therapeutic approaches.</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -482,10 +506,11 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr>
+									<tr class="plus_tr">
 										<th class="dark_yellow_bg">15:40 - 17:20</th>
-										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC joint session: Comprehensive Cardiovascular Health: Risks and Prevention Strategies
+										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC joint session
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+											<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 										</td>
 									</tr>
 								</tbody>
@@ -495,7 +520,7 @@
 									<tr class="dark_yellow_bg">
 										<th class="dark_yellow_bg"> 15:40 - 17:20</th>
 									</tr>
-									<tr class="yellow_bg non_border_b">
+									<tr class="yellow_bg non_border_b plus_tr">
 										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC joint session: Comprehensive Cardiovascular Health: Risks and Prevention Strategies
 										</td>
 									</tr>
@@ -507,6 +532,18 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr yellow">
+										<td colspan="2">
+											<p>Organizer : Hyeon Chang Kim(Yonsei University, Republic of Korea)</p>
+											<ul>
+												<li>Comprehensive Approach in Cardiovascular Prevention, a special event from the collaboration between the American Society for Preventive Cardiology (ASPC) and the Korean Society of Cardiovascular Disease Prevention (KSCP). </li>
+												<li>This session will highlight innovative strategies for preventing cardiovascular disease. Dr. Heather M. Johnson will discuss the link between adverse pregnancy outcomes and cardiovascular disease. </li>
+												<li>Dr. Jong Chan Yoon will explore prevention strategies for cardiovascular disease among cancer survivors. Dr. Charles German will highlight the role of physical activity measurement in risk assessment, 
+and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on cardiovascular health.</li>
+												<li>This joint session offers a unique opportunity to learn from leading experts and advance your knowledge of cardiovascular prevention. Don’t miss out on these valuable insights and discussions.</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -654,7 +691,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
-										<td class="yellow_bg">Symposium 2 <br/>
+										<td class="yellow_bg">Symposium 2 <br/>Updates on novel drugs in the field of diabetes and obesity
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -888,7 +925,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">13:00 - 14:40</th>
-										<td class="yellow_bg">Symposium 4 <br/>
+										<td class="yellow_bg">Symposium 4 <br/>Chronic Diseases/Cardiovascular Diseases in the Elderly
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -1025,10 +1062,11 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr>
+									<tr class="plus_tr">
 										<th class="dark_yellow_bg">15:40 - 17:20</th>
 										<td class="yellow_bg">Symposium 6 <br/>Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+											<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 										</td>
 									</tr>
 								</tbody>
@@ -1039,8 +1077,9 @@
 										<th class="dark_yellow_bg">15:40 - 17:20</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 6 <br/>Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes
-										</td>
+										<td class="yellow_bg plus_tr">Symposium 6 <br/>Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes
+										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>	
+									</td>
 									</tr>
 								</tbody>
 							</table>
@@ -1050,6 +1089,24 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr yellow">
+										<td colspan="2">
+											<p>Organizer : Eun Hui Bae(Chonnam National University, Republic of Korea)</p>
+											<ul>
+												<li>Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes,  must attend the session at our upcoming conference. </li>
+												<li>This session will cover innovative therapeutic strategies for managing CKD with hypertension, presenting the latest updates in hypertension guidelines. </li>
+												<li>It will also delve into the newest guidelines for dyslipidemia management in CKD, focusing on practical applications to optimize lipid control and reduce cardiovascular risk. 
+												</li>
+												<li>Additionally, the symposium will explore prevention and early intervention strategies in diabetic kidney disease, highlighting the latest guidelines which aimed at delaying disease progression. 
+												</li>
+												<li>Furthermore, the session will discuss how artificial intelligence is being leveraged to advance research in hypertension, showcasing AI-driven innovations that have the potential to revolutionize hypertension management. 
+												</li>
+												<li>Don’t miss this opportunity to enhance your knowledge and clinical practice in managing CKD and its associated conditions.
+												</li>
+												<li>We look forward to your participation!</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="yellow_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -1198,7 +1255,56 @@
 				$(this).parents(".color_table").siblings(".detail_table2").find(".panel_tr th p").css("color","#00666B")
 			}
 		});
+
+		const plusBtnList = document.querySelectorAll(".program_plus_btn");
+		const plusTrList = document.querySelectorAll(".plus_tr");
 		
+		
+		plusTrList.forEach((plusTr)=>{
+			plusTr.addEventListener("click", (e)=>{
+				showDetailTr(e)
+			})
+		})
+
+		plusBtnList.forEach((plusBtn)=>{
+			plusBtn.addEventListener("click", (e)=>{
+				e.stopPropagation();
+				showDetailTr(e)				
+			})
+		})
+
+		function showDetailTr(e){
+				const isMobile = e.target.closest('.color_table').classList.contains('mobile');
+				const isImg = e.target.tagName;
+				console.log(isImg)
+				let targetBtn = ""
+
+				if(isMobile && isImg === "IMG"){
+					clickTarget = e.target.closest('.color_table').nextSibling.nextSibling.querySelector('.preview_tr');
+					targetBtn = e.target;
+				}else if(!isMobile && isImg === "IMG"){
+					clickTarget = e.target.closest('.color_table').nextSibling.nextSibling.nextSibling.nextSibling.querySelector('.preview_tr');
+					targetBtn = e.target;
+				}else if(isMobile && isImg !== "IMG"){
+					clickTarget =  e.target.closest('.color_table').nextSibling.nextSibling.querySelector('.preview_tr');
+					targetBtn = e.target.querySelector('.program_plus_btn')
+				}else if(!isMobile && isImg !== "IMG"){
+					clickTarget = e.target.closest('.color_table').nextSibling.nextSibling.nextSibling.nextSibling.querySelector('.preview_tr');
+					targetBtn =  e.target.querySelector('.program_plus_btn')
+				}
+				console.log(targetBtn)
+				
+				const color = clickTarget.classList[1];
+				clickTarget.classList.toggle("on");
+
+				if(clickTarget.classList.contains("on")){
+					targetBtn.src = `./img/icons/${color}_cross_btn.svg`
+
+				}else if(!clickTarget.classList.contains("on")){
+					targetBtn.src = `./img/icons/${color}_plus_btn.svg`
+				}
+				
+		}
 	});
 </script>
 <?php
@@ -1221,7 +1327,10 @@
 			temp_idx = el.table_idx-1;
 			$(".tab_cont2>div").eq(temp_idx).find(".favorite_btn").addClass('on');
 		});
+
 	});
+
+	
 
 	$(".favorite_btn").click(function(){
 		var _this = $(this);

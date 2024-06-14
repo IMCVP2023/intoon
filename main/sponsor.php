@@ -57,7 +57,7 @@
             <li><a href="./sponsor_exhibition.php">Exhibition & Social Event</a></li>
     </ul> -->
 		<div class="sponsor_grade">
-			<p class="grade_title pink_bg">Supreme</p>
+			<p class="grade_title supreme_bg">Supreme</p>
 			<ul class="grade_wrap length_1">
 				<li>
 					<a href="https://m.daewoong.co.kr/en/main/index" class="daewoong">DAEWOONG</a>
@@ -66,13 +66,13 @@
 					<a href="https://daewoongbio.co.kr/daewoongbiokr/main/main.web" class="daewoong_bio">DAEWOONG</a>
 				</li>
 			</ul>	
-			<p class="grade_title green_bg05">Diamond</p>
+			<p class="grade_title diamond_bg">Diamond</p>
 			<ul class="grade_wrap length_1">
 				<li>
 					<a href="https://www.daiichisankyo.com/" class="daiichi_sankyo">Daiichi Sankyo</a>
 				</li>
 			</ul> 
-			<p class="grade_title gold_bg">Platinum</p>
+			<p class="grade_title platinum_bg">Platinum</p>
 			<ul class="grade_wrap length_3">
 				<li>
 					<a href="https://www.boryung.co.kr/en/" class="boryung">BORYUNG</a>
@@ -85,7 +85,7 @@
 				</li>
 			
 			</ul>
-			<p class="grade_title silver_bg">Gold</p>
+			<p class="grade_title gold_bg">Gold</p>
 			<ul class="grade_wrap length_3">
 				<li class="small">
 					<a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a>
@@ -98,7 +98,7 @@
 				</li>
 
 			</ul>
-			<p class="grade_title bronze_bg">Silver</p>
+			<p class="grade_title silver_bg">Silver</p>
 			<ul class="grade_wrap length_5">
 				<li>
 					<a href="https://www.novonordisk.com/" class="novo_nordisk">novo nordisk</a>

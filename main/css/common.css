@@ -87,6 +87,7 @@ table tr td span, table tr td a {font-size: 16px !important;}
 .border_bottom_70 {border-bottom:1px solid #707070;}
 .mt10 {margin-top:10px;}
 .mt20 {margin-top:20px;}
+.mt50 {margin-top:50px;}
 .mt4 {margin-top:4px;}
 .mb_0 {margin-bottom: 0 !important;}
 .mb10 {margin-bottom: 10px;}
@@ -142,7 +143,7 @@ p.sub_section_title.main_theme{color: #000;font-weight: 600;letter-spacing: -0.5
 .section_title_wrap {text-align:center;padding-bottom:40px;}
 /*.section_title_wrap2 {padding: 15px 20px;}*/
 .section_title_wrap2 + .basic_ul {margin-top:57px;}
-.title{font-size:26px;font-weight:bold;/*display:inline-block;*/padding-bottom: 15px;/*padding-left: 20px;*/}
+.title{font-size:32px;font-weight:bold;/*display:inline-block;*/padding-bottom: 15px;/*padding-left: 20px;*/}
 .visa .title{padding-left:0;}
 .visa .title + a{word-break: break-all;}
 /*.title:after{content:'';display:block;width:100%;height:12px;background:#C9F7FF;position:absolute;left:0;bottom:0;z-index:-1;}*/
@@ -288,7 +289,7 @@ section.container.login .page_title p {/*font-size:22px; font-weight:bold;*/ mar
 
 /*layout*/
 /*안쪽 container*/
-.inner {max-width:1232px; padding:0 16px; margin:50px auto 90px;}
+.inner {max-width:1232px; padding:0 16px; margin:90px auto 70px;}
 .inner.find_password {max-width:950px;}
 .container{width:calc(100% - 34px);margin:0 auto;max-width:1200px;}
 section.container {min-height: calc(100vh - 403px); padding: 235px 0 50px; margin-top: 117px;}
@@ -302,7 +303,7 @@ section.container.window_open {margin-top: 50px; padding-top:0;}
 .sub_banner h5{width:100%;font-family: 'Sriracha', cursive;font-size:100px;font-weight:100;color:#F2F2F2;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:-1;}
 .sub_banner h1{display:inline-block;font-size:36px;font-weight:bold;margin:44px 0;position:relative;z-index:1;color:#000;}
 .sub_banner h1:after{content:'';display:block;width:100%;height:17px;background:rgba(169,239,0,0.6);position:absolute;left:0;bottom:0;z-index:-1;}
-section.sub_page{padding-top:222px;}
+section.sub_page{padding-top:270px;}
 /* 220324 HUBDNC LJH2 추가*/
 .registration_closed .sub_banner h5 {position: relative; top: auto; left: auto; transform: translate(0,0)}
 .mb_only {display: none;}
@@ -641,7 +642,23 @@ table.center * {text-align:center;}
 
 /*sponsor*/
 section.container.sponsor {padding-top: 164px;}
-.sponsor_grade .grade_title {display:block; font-size: 32px; padding: 18px 0; color:#fff; text-align: center; font-weight: bold;}
+
+@media screen and (max-width:1200px){
+	section.container.sponsor {padding-top: 195px;}
+}
+
+@media screen and (max-width:1020px){
+	section.container.sponsor {padding-top: 195px;}
+}
+
+.sponsor_grade .grade_title {display:block; font-size: 32px; padding: 18px 0; color:#fff; text-align: center; font-weight: bold;border-radius: 0px 0px 35px 35px;}
+
+.sponsor_grade .grade_title.supreme_bg{background-color: #C90C7E;}
+.sponsor_grade .grade_title.diamond_bg{background-color: #0095E3;}
+.sponsor_grade .grade_title.platinum_bg{background-color: #85CB00;}
+.sponsor_grade .grade_title.gold_bg{background-color: #DDA50B;}
+.sponsor_grade .grade_title.silver_bg{background-color: #CDCDCD;}
+
 .grade_wrap {padding-left: 0 !important; padding-right:0 !important;}
 .grade_wrap li {height: 130px;}
 .grade_wrap.length_5 li {height: 103px;}
@@ -805,7 +822,7 @@ section.container.sponsor {padding-top: 164px;}
 	.mo_korea_only.on, .korea_radio.on {display: revert;}
 	.inner {padding:0;}
 	.visa .visa_desc p {font-size:16px;}
-	section.container.sponsor {padding-top: 144px;}
+	/* section.container.sponsor {padding-top: 144px;} */
 
 	/*sponsor*/
 	.grade_wrap.length_5 {gap:0.88rem 0 !important;}

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> f0c4e8f73ddf50711a3e6b5fd64ba5ca55460f9f
 <?php
 $language = isset($_SESSION["language"]) ? $_SESSION["language"] : "en";
 $locale = locale($language);

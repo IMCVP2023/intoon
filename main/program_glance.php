@@ -57,11 +57,11 @@
 						<tr>
 							<td class="">09:00~10:40</td>
 							<td class="yellow_bg pointer" name="symposium_1">
-								 Symposium 1<br/>
+								 Symposium 1<p>2024 Guideline Update for Cardiometabolic Disease</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_2">
-								Symposium 2<br/>
+								Symposium 2<p>Updates on novel drugs in the field of diabetes and obesity</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -94,11 +94,11 @@
 						<tr>
 							<td class="">13:00~14:40</td>
 							<td class="yellow_bg pointer" name="symposium_3">
-								Symposium 3
+								Symposium 3<p>Non-atherosclerotic, non-cardioembolic cerebral infarction</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_4">
-								Symposium 4
+								Symposium 4<p>Chronic Diseases/Cardiovascular Diseases in the Elderly</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -116,11 +116,11 @@
 						<tr>
 							<td class="">15:40~17:20</td>
 							<td class="yellow_bg pointer" name="symposium_5">
-								Symposium 5
+								Symposium 5<p>KSCP-ASPC joint session</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_6">
-								Symposium 6
+								Symposium 6<p style="font-size: 13px;">Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -182,11 +182,11 @@
 						<tr>
 							<td class="">08:30~10:10</td>
 							<td class="yellow_bg pointer" name="symposium_7">
-								Symposium 7
+								Symposium 7<p>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_8">
-								Symposium 8
+								Symposium 8<p>Non-traditional risk risk factors of cardiovascular disease</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -204,11 +204,11 @@
 						<tr>
 							<td class="">11:10~12:50</td>
 							<td class="yellow_bg pointer" name="symposium_9">
-								Symposium 9<br/>
+								Symposium 9<p>Obesity and Cardiovascular Disease</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_10">
-								Symposium 10
+								Symposium 10<p>Regional, Social disparities in CV and metabolic health outcomes</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -226,11 +226,11 @@
 						<tr>
 							<td class="">13:50~15:00</td>
 							<td class="yellow_bg pointer" name="symposium_11">
-								Symposium 11
+								Symposium 11<p>Lifestyle modification for Prevention of CVD</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_12">
-								Symposium 12<br/>
+								Symposium 12<p>Digital Healthcare</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>

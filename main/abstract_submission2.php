@@ -392,7 +392,7 @@ var g5_editor_url = "<?= $editor_url ?>",
                                             ⓘ Eligibility
                                             <div class="eligibility_pop">
                                                     <div class="pop_bg"></div>
-                                                    <p class="balloon" style="font-size: 20px;">※ Only overseas participants</p>
+                                                    <p class="balloon" style="font-size: 20px;">※ Only To be notified individually before the congress</p>
                                             </div>
                                         </span>
                                     </td>

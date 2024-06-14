@@ -133,20 +133,22 @@ $info = sql_fetch($sql_info);
         <div class="useful_list">
 
         <li>
-                <div>
-                    <div class="imgs"></div>
-                    <div class="btn_wrap">
+            <div>   
+                    <div>
+                        <h3 class="bold title">Grand Walkerhill Seoul, Korea<span class=" bold"><br class="mb_only"/> (Congress Venue)</span></h3>
+                        <div class="imgs"></div>
+                    </div>
+                    <!-- <div class="btn_wrap"> -->
                     
                          <!-- <button class="btn green_btn"
                         onClick="javascript:window.open('https://www.hilton.com/en/hotels/selcici-conrad-seoul/')">Go to Website</button>
                     <a href="./download/ICOMES_2023_Conrad_Seoul_Reservation_Form.doc" class="btn green_btn download_btn" target="_blank" download=""><img src="./img/icons/icon_download_white.svg" alt="">Reservation Form Download</a> -->
                     <!-- onClick="javascript:alert('Reservation is closed.');" -->
-                    </div>
+                    <!-- </div> -->
                 </div>
                 <div>
-                    <h3 class="bold title">Grand Walkerhill Seoul, Korea<span class=" bold"> (Congress Venue)</span></h3>
                     <div class="table_wrap x_scroll">
-                        <table class="c_table2 detail_table layout_fixed type2">
+                        <table class="c_table2 detail_table layout_fixed type2 mt50">
                             <colgroup>
                                 <col class="col_th">
                                 <col width="*">
@@ -154,40 +156,37 @@ $info = sql_fetch($sql_info);
                             <tbody>
                                 <tr>
                                     <th>Address</th>
-                                    <td>177 Walkerhill-ro, Gwangjin-gu, Seoul, Republic of Korea</td>
+                                    <td class="text_l">177 Walkerhill-ro, Gwangjin-gu, Seoul, Republic of Korea</td>
                                 </tr>
                                 <tr>
                                     <th>Tel</th>
-                                    <td>+82-2-1670-5000</td>
+                                    <td class="text_l">+82-2-1670-5000</td>
                                 </tr>
                                 <tr>
                                     <th>Fax</th>
-                                    <td>+82-2-452-6867</td>
+                                    <td class="text_l">+82-2-452-6867</td>
                                 </tr>
                                 <tr>
                                     <th>Email</th>
-                                    <td>
+                                    <td class="text_l">
                                         <a href="mailto:contact@walkerhill.com" target="_blank"
-                                            class="underline link">contact@walkerhill.com </a>
+                                            class="underline link text_l">contact@walkerhill.com </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Website</th>
-                                    <td>
+                                    <td class="text_l">
                                         <a href="https://www.walkerhill.com/grandwalkerhillseoul/en/" target="_blank"
-                                            class="venue_btn text_center">Go to Website ></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="text_l">
-                                    Located in east Seoul, Grand Walkerhill Seoul stands as a beacon of luxury amidst the city's bustling landscape.<br/>Nestled amidst the serene beauty of Achasan Mountain and the tranquil Hangang River, it offers a haven of comfort and relaxation.<br/>Boasting 557 elegantly appointed guestrooms, diverse dining options, and 11 versatile convention spaces, including a grand banquet hall capable of hosting up to 1,000 guests, it caters to the discerning needs of both leisure and business travelers.<br/>With its strategic location, just 1.5 hours from Incheon International Airport, 1 hour from Gimpo International Airport, 40 minutes from Seoul Station, and 35 minutes from Suseo Station, Grand Walkerhill Seoul seamlessly combines convenience with sophistication, ensuring an unforgettable experience for every guest.
-
+                                            class="venue_btn text_l"> <img src="https://image.webeon.net/icomes2024/logo/icon_home.svg"/>&nbsp; Go to ></a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
+            </li>
+            <li class="venue_txt">
+            Located in east Seoul, Grand Walkerhill Seoul stands as a beacon of luxury amidst the city's bustling landscape.<br/><br/>Nestled amidst the serene beauty of Achasan Mountain and the tranquil Hangang River, it offers a haven of comfort and relaxation.<br/><br/>Boasting 557 elegantly appointed guestrooms, diverse dining options, and 11 versatile convention spaces, including a grand banquet hall capable of hosting up to 1,000 guests, it caters to the discerning needs of both leisure and business travelers.<br/><br/>With its strategic location, just 1.5 hours from Incheon International Airport, 1 hour from Gimpo International Airport, 40 minutes from Seoul Station, and 35 minutes from Suseo Station, Grand Walkerhill Seoul seamlessly combines convenience with sophistication, ensuring an unforgettable experience for every guest.
             </li>
         </div>
         </div>
