@@ -2,8 +2,28 @@
 <?php include_once('./include/header.php');?>
 <?php 
 
+//sujeong / left-join query => email_speaker가 없으면 안 나옴
+//     $program_query = "
+//     SELECT p.idx, p.program_name, p.chairpersons, p.preview, p.program_place_idx, 
+// 			p.program_category_idx, p.program_date, p.start_time, p.end_time, p.is_deleted,
+// 			es.nick_name, es.org, es.email, es.cv_path, es.abstract_path, es.attendance_type, es.is_mailed
+// FROM program AS p
+// LEFT JOIN email_speaker AS es ON es.program_idx = p.idx
+// WHERE es.attendance_type = 0 AND p.is_deleted = 'N'
+//     ";
+
     $program_query = "	SELECT * 
                         FROM program";
+
+//     $program_query = "
+//         SELECT p.idx, p.program_name, p.chairpersons, p.preview, p.program_place_idx, 
+//     			p.program_category_idx, p.program_date, p.start_time, p.end_time, p.is_deleted,
+//     			es.nick_name, es.org, es.email, es.cv_path, es.abstract_path, es.attendance_type, es.is_mailed
+//     FROM program AS p
+//     LEFT JOIN email_speaker AS es ON es.program_idx = p.idx
+//     WHERE  p.is_deleted = 'N'
+//  ";
+
     $program_list = get_data($program_query);
 
 ?>
@@ -14,6 +34,10 @@
         overflow-y: scroll;
         margin-left : auto;
     }
+    input{
+        border: 1px solid #DDD;
+        padding: 8px;
+    }
 </style>
     <section class="list">
         <div class="container">
@@ -23,11 +47,11 @@
                 <div class="contwrap">
                     <table>
                         <colgroup>
-                            <col width="18%">
+                            <!-- <col width="18%">
                             <col width="26%">
                             <col width="26%">
                             <col width="10%">
-                            <col width="10%">
+                            <col width="10%"> -->
                             <col>
                         </colgroup>
                         <tr>
@@ -35,21 +59,18 @@
                             <th>좌장</th>
                             <th>시작시간</th>
                             <th>끝나는 시간</th>
-                            <th></th>
+                            <th>메일발송 유무</th>
                         </tr>
                         <?php 
                 foreach($program_list as $program){
+                  
                     ?>
                         <tr>
-                            <td style="cursor: pointer;" onclick="goDetail(<?php echo $program['idx']?>)"><?php echo $program['program_name']; ?></td>
+                            <td style="cursor: pointer;color:blue;" onclick="goDetail(<?php echo $program['idx']?>)"><?php echo $program['program_name']; ?></td>
                             <td><?php echo $program['chairpersons'] ?></td>
-
-                            <!-- <td><input type="text" name="chairpersons" value="<?php echo $program['chairpersons'] ?>"/></td>
-                            <td><input type="text" name="preview" value="<?php echo $program['preview'] ?>"/></td> -->
                             <td><?php echo $program['start_time'] ?></td>
                             <td><?php echo $program['end_time'] ?></td>
-                            <td><button class="btn save_btn" data-id="<?php echo $program['idx'] ?>">메일전송</button></td>
-                            <!-- <td><button class="btn save_btn" data-id="<?php echo $program['idx'] ?>">저장</button></td> -->
+                            <td><?php echo $program['is_mailed'] ?></td>
                         </tr>
                         <?php } ?>
                     </table>
@@ -58,47 +79,10 @@
             </div>    
         </div>
     </section>
-<script>
-    const saveBtnList = document.querySelectorAll(".save_btn");
-    
-    saveBtnList.forEach((saveBtn)=>{
-        saveBtn.addEventListener("click", (e)=>{
-             // 현재 버튼이 속한 행을 찾음
-             const row = e.target.closest('tr');
-    
-            // 행에서 input 요소들을 찾아서 값을 가져옴
-            const chairpersons = row.querySelector('input[name="chairpersons"]').value;
-            const preview = row.querySelector('input[name="preview"]').value;
-            const id = e.target.dataset.id;
-
-            if(chairpersons){
-                $.ajax({
-                    url:"../ajax/admin/ajax_update_program.php",
-                    type: "POST",
-                    data: {
-                        flag: "modify_program",
-                        idx:id, 
-                        chairpersons:chairpersons, 
-                        preview:preview
-                    },
-                    dataType: "JSON",
-                    success: function (res) {
-                        // console.log(res)
-                        if (res.code == 200) {
-                            alert('수정이 완료되었습니다.')
-                            return;
-                        } else {
-                            alert('수정에 실패했습니다.')
-                            return;
-                        }
-                    }
-                });
-            }
-        })
-    })
+ <script>
 
     function goDetail(id){
         window.location.href = `/main/admin/edit_program_detail.php?idx=${id}`;
     }
-</script>
+</script> 
 <?php include_once('./include/footer.php');?>

@@ -1204,7 +1204,7 @@ if($language == "ko") {
 					";
 	}
 
-	//[240419] sujoeng / 초록 채택 메일 추가
+	//[240419] sujoeng / 초록 채택 메일 추가 / 템플릿 변경 필요
 	else if($mail_type == "abstract_etc2") {
 		$title = $data["title"] ?? [];
 		$topic = $data["topic"] ?? [];
@@ -1279,6 +1279,178 @@ if($language == "ko") {
             </tr>
         </tbody>
     </table>
+					";
+	}
+
+	//[240617] sujoeng / 좌장, 연자, 패널 메일 추가 / 템플릿 변경 필요
+	else if($mail_type == "speaker") {
+		$title = $data["title"] ?? [];
+		
+		$attendance_type = isset($data[0]["attendance_type"]) ? $data[0]["attendance_type"] : "";
+		$program_place = isset($data[1]["program_place_idx"]) ? $data[1]["program_place_idx"] : "";
+
+		switch($attendance_type) {
+			case 0:
+				$attendance_type = "좌장";
+				break;
+			case 1:
+				$attendance_type = "패널";
+				break;
+			case 2:
+				$attendance_type = "연자";
+				break;
+		}
+
+		switch($program_place) {
+			case 1:
+				$program_place = "Room 1";
+				break;
+			case 2:
+				$program_place = "Room 2";
+				break;
+			case 3:
+				$program_place = "Room 3";
+				break;
+			case 4:
+				$program_place = "Room 4";
+				break;
+			case 5:
+				$program_place = "Room 5";
+				break;
+			case 6:
+				$program_place = "Room 6";
+				break;
+			case 7:
+				$program_place = "Room 7";
+				break;
+			case 8:
+				$program_place = "Room 1~3";
+				break;
+		}
+
+		$notice_time = $data[1]["start_time"] .  $data[5]["end_time"]; 
+
+		$dataTable = "";
+		$dataTable .= "
+			<table>
+				<tr>
+					<th>{$data[1]['start_time']}-{$data[5]['end_time']}</th>
+					<th>{$data[1]['program_name']}</th>
+					<th>{$data[1]['chairpersons']}</th>
+				</tr>
+				";
+
+				foreach(array_slice($data, 1)  as $item){
+					$dataTable .= "
+					<tr>
+						<th>{$item['start_time']}-{$item['end_time']}</th>
+						<td>{$item['contents_title']}</td>
+						<td>{$item['speaker']}</td>
+					</tr>
+					";}
+
+		$dataTable .= "</table>";
+	
+		
+		$rawMessageString .= "
+		<table width='750' style='border:1px solid #000; padding: 0;'>
+    <tbody>
+        <tr>
+            <td colspan='3'>
+                <img src='https://imcvp.org/main/img/2024_mail_header-2.png' width='750' style='width:100%; max-width:100%;'>
+            </td>
+        </tr>
+        <tr>
+            <td width='74' style='width:74px;'></td>
+            <td>
+                <div style='font-weight:bold; text-align:center; font-size: 21px; color: #257FE6; padding: 20px 0;'>[IMCVP 2024] 최종 안내문</div>
+            </td>
+            <td width='74' style='width:74px;'></td>
+        </tr>
+        <tr>
+            <td width='74' style='width:74px;'></td>
+            <td>
+                <div>
+                    <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>{$fname}교수님 안녕하십니까</p>
+                    <p style='font-size:14px; color:#000; margin:0;'>IMCVP 2024 운영사무국입니다.</p>
+                    <p style='font-size:14px; color:#000; margin:0;'>본 학술대회의 {$attendance_type}로 수고하여 주심에 다시 한번 감사드립니다.</p>
+                    <p style='font-size:14px;color:#170F00;margin-top:14px;'>아래와 같이 행사 참석 안내사항 및 담당 프로그램을 보내 드리오니, 확인하여 주시면 감사하겠습니다.</p>
+                    <p style='font-size:14px;color:#170F00;margin-top:14px;'>[IMCVP 2024 개요]</p>
+                    <table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
+                        <tbody>
+                            <tr style='border-bottom:1px solid #000;'>
+                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;'>날짜</th>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid #000;'>2024년 11월 29일(금) ~ 30일(토)</td>
+                            </tr>
+                            <tr style='border-bottom:1px solid #000;'>
+                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;'>장소</th>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; width:165px;'>그랜드워커힐 서울 호텔</td>
+                            </tr>
+                            <tr style='border-bottom:1px solid #000;'>
+                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;'>주제</th>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; width:165px;'>Aiming High for the State-of-the-Art Cardiovascular Disease Prevention</td>
+                            </tr>
+                            <tr style='border-bottom:1px solid #000;'>
+                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;'>홈페이지</th>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid blue; text-decoration: underline;'><a href='https://imcvp.org/' target='_blank'>imcvp.org</a></td>
+                            </tr>
+                           <tr>
+                                <td style='width:150px; text-align:left; font-size:14px; padding:10px;' colspan='2'>*전체 프로그램은 홈페이지를 참고해 주시면 감사하겠습니다.</td>
+                           </tr>
+                        </tbody>	
+                    </table>
+                    <p>[행사 참석 및 세션 진행 시 참고 사항]</p>
+                    <p style='font-size:14px; color:#000; margin:0;'>- 등록 및 명찰 수령을 위하여 등록데스크로 먼저 방문 부탁드립니다.</p>
+                    <p style='font-size:14px; color:#000; margin:0;'>- 세션 시작 1시간 전까지는 행사장에 도착하시어 준비해 주시면 감사하겠습니다.</p>
+                </div>
+            </td>
+            <td width='74' style='width:74px;'>
+            </td>
+        </tr>
+        <tr>
+            <td width='74' style='width:74px;'><p></p></td>
+            <td>
+                <p>[담당 세션 일정]</p>
+                    <p style='font-size:14px; color:#000; margin:0;'>- 일시: <span style='font-size:14px; color:red; margin:0;'>{$notice_time}</span></p>
+                    <p style='font-size:14px; color:#000; margin:0;'>- 장소: 그랜드 워커힐 서울 서울 호텔, <span style='font-size:14px; color:red; margin:0;'>{$program_place}</span></p>
+            </td>
+            <td width='74' style='width:74px;'></td>
+        </tr>
+        <tr>
+            <td width='74' style='width:74px;'><p></p></td>
+            <td>
+                <p>[세션 진행 시 참고사항]</p>
+                    <p style='font-size:14px; color:#000; margin:0;'>- 발표 및 진행: <span style='font-size:14px; color:red; margin:0;'>영어</span></p>
+                    <p style='font-size:14px; color:#000; margin:0;'>- Discussion 시간: <span style='font-size:14px; color:red; margin:0;'>20분</span></p>
+                    <p style='font-size:14px; color:#000; margin:0;'>- 모든 연사들의 발표가 끝난 후, 토의가 진행됩니다. 무대에 마련된 좌석에 착석하시어 활발한 토론을 부탁드립니다.</p>
+            </td>
+            <td width='74' style='width:74px;'></td>
+        </tr>
+        <tr>
+            <td width='74' style='width:74px;'><p></p></td>
+            <td>
+				{$dataTable}
+            </td>
+            <td width='74' style='width:74px;'></td>
+        </tr>
+        <tr>
+            <td width='74' style='width:74px;'></td>
+            <td>
+                <br/>
+                <p>여러 일정으로 바쁘신 가운데도 불구하고 애써 주심에 감사드리며,</p>
+                <p>검토하시면서 다른 궁금하신 사항이 있으시면 언제든지 운영사무국으로 연락 부탁드립니다.</p>
+                <br/>
+                <p>감사합니다.</p>
+            </td>
+            <td width='74' style='width:74px;'></td>
+        </tr>
+        <tr>
+            <td colspan='3' style='padding-top:50px;'>
+                <img src='https://imcvp.org/main/img/2024_mail_footer-2.png' width='750' style='width:100%; max-width:100%;'>
+            </td>
+        </tr>
+    </tbody>
+</table>
 					";
 	}
 }
@@ -1559,7 +1731,7 @@ if($_POST["flag"] == "abstract") {
 	exit;	
 }
 
-	//[240419] sujoeng / 초록 채택 메일 추가
+	//[240419] sujoeng / 초록 채택 메일 추가 / 템플릿 변경 필요
 else if($_POST["flag"] == "abstract_etc2"){
 	$name = $_POST["name"] ?? null;
 	$email = $_POST["email"] ?? null;
@@ -1590,6 +1762,47 @@ else if($_POST["flag"] == "abstract_etc2"){
 	}
 }
 
+
+	//[240419] sujoeng / 좌장/연자/패널 메일 발송
+	else if($_POST["flag"] == "speaker"){
+		$post_data = $_POST["data"];
+
+		$email = $data["email"] ?? null;
+		$name = $data["nickname"] ?? null;
+		$programIdx = $data["program_idx"] ?? null;
+
+		$select_user_query =	"
+						SELECT *
+						FROM program AS p
+						LEFT JOIN program_contents AS pc ON pc.program_idx = p.idx
+						WHERE p.idx = {$programIdx}
+		";
+
+		$user_data = get_data($select_user_query);
+	    array_unshift($user_data, $post_data);
+	
+		print_r($user_data); 
+
+		$message =createMessage("en", "speaker", $name , $email, "[IMCVP 2024] 최종 안내문", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $user_data);
+		createDraft($service, "secretariat@imcvp.org", $message);
+		sendMessage($service, "secretariat@imcvp.org", $message);
+	
+		if($message) {
+			$res = [
+				"code" => 200,
+				"msg" => "success"
+			];
+			echo json_encode($res);
+			exit;	
+		} else {
+			$res = [
+				"code" => 400,
+				"msg" => "update query error"
+			];
+			echo json_encode($res);
+			exit;
+		}
+	}
 
 
 function generator_token(){
