@@ -35,6 +35,22 @@
         border: 1px solid #DDD;
         padding: 8px;
     }
+    .loading_box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    .loading {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 50%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+    }
 </style>
     <section class="list">
         <div class="container">
@@ -87,13 +103,53 @@
                 </div>
             </div>    
         </div>
+        <div style="display: none;" class="loading_box" onclick="alert('진행중입니다.')">
+             <svg class="loading" version="1.1" id="L6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                    <rect fill="none" stroke="#fff" stroke-width="4" x="25" y="25" width="50px" height="50px">
+                    <animateTransform
+                        attributeName="transform"
+                        dur="0.5s"
+                        from="0 50 50"
+                        to="180 50 50"
+                        type="rotate"
+                        id="strokeBox"
+                        attributeType="XML"
+                        begin="rectBox.end"/>
+                    </rect>
+                    <rect x="27" y="27" fill="#fff" width="46" height="50">
+                    <animate
+                        attributeName="height"
+                        dur="1.3s"
+                        attributeType="XML"
+                        from="50" 
+                        to="0"
+                        id="rectBox" 
+                        fill="freeze"
+                        begin="0s;strokeBox.end"/>
+                    </rect>
+            </svg>
+        </div>
     </section>
 <script>
     const saveBtnList = document.querySelectorAll(".save_btn");
     const testBtnList = document.querySelectorAll(".test_save_btn");
-    
+
+    const loadingBox = document.querySelector(".loading_box");
+    const loading = document.querySelector(".loading");
+
+    function pending(){
+        loadingBox.style.display = "";
+        loading.style.display = "";
+    }
+
+    function pendingOff(){
+        loadingBox.style.display = "none";
+        loading.style.display = "none";
+    }
 
     function changeMailStatus(emailId){
+        pendingOff()
         //console.log(emailId)
         $.ajax({
                 url:"../ajax/client/ajax_member.php",
@@ -104,7 +160,7 @@
                 },
                 dataType: "JSON",
                 success: function (res) {
-                     console.log(res)
+                    console.log(res)
                     if (res.code == 200) {
                         window.location.reload();
                         return;
@@ -143,6 +199,7 @@
             //console.log(emailId)
     
             if(window.confirm(`${sendMail}로 발송하시겠습니까?`)){
+                pending()
                 $.ajax({
                     url:"../ajax/client/ajax_gmail.php",
                     type: "POST",

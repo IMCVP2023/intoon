@@ -1286,48 +1286,50 @@ if($language == "ko") {
 	else if($mail_type == "speaker") {
 		$title = $data["title"] ?? [];
 		
-		$attendance_type = isset($data[0]["attendance_type"]) ? $data[0]["attendance_type"] : "";
+		$attendance_type = isset($data[0]["attendace_type"]) ? $data[0]["attendace_type"] : "";
 		$program_place = isset($data[1]["program_place_idx"]) ? $data[1]["program_place_idx"] : "";
 		$program_tag_name = isset($data[1]["program_tag_name"]) ? $data[1]["program_tag_name"] : "";
 
+		$attendance_type_text = "";
+		$program_place_text = "";
 		$program_color = "";
 
 		switch($attendance_type) {
-			case 0:
-				$attendance_type = "좌장";
-				break;
 			case 1:
-				$attendance_type = "패널";
+				$attendance_type_text = "좌장";
 				break;
 			case 2:
-				$attendance_type = "연자";
+				$attendance_type_text = "패널";
+				break;
+			case 3:
+				$attendance_type_text = "연자";
 				break;
 		}
 
 		switch($program_place) {
 			case 1:
-				$program_place = "Room 1";
+				$program_place_text = "Room 1";
 				break;
 			case 2:
-				$program_place = "Room 2";
+				$program_place_text = "Room 2";
 				break;
 			case 3:
-				$program_place = "Room 3";
+				$program_place_text = "Room 3";
 				break;
 			case 4:
-				$program_place = "Room 4";
+				$program_place_text = "Room 4";
 				break;
 			case 5:
-				$program_place = "Room 5";
+				$program_place_text = "Room 5";
 				break;
 			case 6:
-				$program_place = "Room 6";
+				$program_place_text = "Room 6";
 				break;
 			case 7:
-				$program_place = "Room 7";
+				$program_place_text = "Room 7";
 				break;
 			case 8:
-				$program_place = "Room 1~3";
+				$program_place_text = "Room 1~3";
 				break;
 		}
 
@@ -1350,26 +1352,27 @@ if($language == "ko") {
 				break;
 		}
 
-		$end_time = explode(' ',  $data[5]["end_time"])[1];
+		$end_time = substr(explode(' ',  $data[5]["end_time"])[1],0, -3);
+		$start_time = substr($data[1]["start_time"],0, -3);
 
-		$notice_time = $data[1]["start_time"] .' ~ ' . $end_time ; 
+		$notice_time = $start_time .' ~ ' . $end_time; 
 
 		$dataTable = "";
 		$dataTable .= "
 			<table  width='586' style='width:586px; border-collapse:collapse; width:100%; margin:17px 0;'>
 				<tr>
-					<th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000; background-color:{$program_color}'>{$data[1]['start_time']}-{$end_time}</th>
+					<th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000; background-color:{$program_color}'>{$start_time} ~{$end_time}</th>
 					<th style='text-align:left; font-size:14px; padding:10px; border-left:1px solid #000; border-bottom:1px solid #000; background-color:{$program_color}'>{$data[1]['program_name']}</th>
 					<th style='text-align:left; font-size:12px; padding:10px; border-left:1px solid #000; border-bottom:1px solid #000; background-color:{$program_color}'>{$data[1]['chairpersons']}</th>
 				</tr>
 				";
 
 				foreach(array_slice($data, 1)  as $item){
-					$program_start_time = explode(' ', $item['start_time'])[1];
-					$program_end_time = explode(' ', $item['end_time'])[1];
+					$program_start_time = substr(explode(' ', $item['start_time'])[1] ,0, -3);
+					$program_end_time = substr(explode(' ', $item['end_time'])[1],0, -3);
 					$dataTable .= "
 					<tr>
-						<th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000;'>{$program_start_time}-{$program_end_time}</th>
+						<th style='width:150px; text-align:center; font-size:14px; padding:10px;border-bottom:1px solid #000;'>{$program_start_time}-{$program_end_time}</th>
 						<td style='text-align:left; font-size:14px; padding:10px; border-left:1px solid #000;border-bottom:1px solid #000;'>{$item['contents_title']}</td>
 						<td style='text-align:left; font-size:14px; padding:10px; border-left:1px solid #000; border-bottom:1px solid #000;'>{$item['speaker']}</td>
 					</tr>
@@ -1399,7 +1402,7 @@ if($language == "ko") {
                 <div>
                     <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>{$fname}교수님 안녕하십니까</p>
                     <p style='font-size:14px; color:#000; margin:0;'>IMCVP 2024 운영사무국입니다.</p>
-                    <p style='font-size:14px; color:#000; margin:0;'>본 학술대회의 {$attendance_type}로 수고하여 주심에 다시 한번 감사드립니다.</p>
+                    <p style='font-size:14px; color:#000; margin:0;'>본 학술대회의 {$attendance_type_text}로 수고하여 주심에 다시 한번 감사드립니다.</p>
                     <p style='font-size:14px;color:#170F00;margin-top:14px;'>아래와 같이 행사 참석 안내사항 및 담당 프로그램을 보내 드리오니, 확인하여 주시면 감사하겠습니다.</p>
                     <p style='font-size:14px;color:#170F00;margin-top:14px; font-weight: 700;color: purple;'>[IMCVP 2024 개요]</p>
                     <table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
@@ -1418,7 +1421,7 @@ if($language == "ko") {
                             </tr>
                             <tr style='border-bottom:1px solid #000;'>
                                 <th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000;'>홈페이지</th>
-                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; color: blue; text-decoration: underline;'border-bottom:1px solid #000;'><a href='https://imcvp.org/' target='_blank'>imcvp.org</a></td>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; color: blue; text-decoration: underline;border-bottom:1px solid #000;'><a href='https://imcvp.org/' target='_blank'>imcvp.org</a></td>
                             </tr>
                            <tr>
                                 <td style='width:150px; text-align:left; font-size:14px; padding:10px;' colspan='2'>*전체 프로그램은 홈페이지를 참고해 주시면 감사하겠습니다.</td>
@@ -1438,7 +1441,7 @@ if($language == "ko") {
             <td>
                 <p style='font-size:14px;color:#170F00;margin-top:14px; font-weight: 700;color: orangered;'>[담당 세션 일정]</p>
                     <p style='font-size:14px; color:#000; margin:0;'>- 일시: <span style='font-size:14px; color:red; margin:0;'>{$notice_time}</span></p>
-                    <p style='font-size:14px; color:#000; margin:0;'>- 장소: 그랜드 워커힐 서울 서울 호텔, <span style='font-size:14px; color:red; margin:0;'>{$program_place}</span></p>
+                    <p style='font-size:14px; color:#000; margin:0;'>- 장소: 그랜드 워커힐 서울 서울 호텔, <span style='font-size:14px; color:red; margin:0;'>{$program_place_text}</span></p>
             </td>
             <td width='74' style='width:74px;'></td>
         </tr>
