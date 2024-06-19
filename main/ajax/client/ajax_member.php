@@ -718,8 +718,6 @@
 		$email = $_POST["email"] ?? "";
 		$nick_name = $_POST["nick_name"] ?? "";
 
-
-		
 		$find_kscp_query =	"
 							SELECT *
 							FROM kscp_member
@@ -747,6 +745,38 @@
 
 	}
 
+
+		//[240531] sujeong / speaker email send
+		else if($_POST["flag"] === "speaker_email"){
+			$idx = $_POST["idx"] ?? "";
+
+			$update_speaker_email_query =	"
+									UPDATE email_speaker
+										SET is_mailed = 'Y'
+										WHERE idx = '{$idx}'
+							";
+			
+			$update_speaker_email_check = sql_fetch($update_speaker_email_query);
+			
+			if($update_speaker_email_check) {
+				$res = [
+					code => 200,
+					msg => "success",
+					result => $update_speaker_email_check
+				];
+				echo json_encode($res);
+				exit;
+			} else {
+				$res = [
+					code => 401,
+					msg => "error"
+				];
+				echo json_encode($res);
+				exit;
+			}
+	
+		}
+	
 	function generator_token(){
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$charactersLength = strlen($characters);

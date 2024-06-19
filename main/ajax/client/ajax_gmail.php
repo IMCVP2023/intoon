@@ -1779,9 +1779,7 @@ else if($_POST["flag"] == "abstract_etc2"){
 		";
 
 		$user_data = get_data($select_user_query);
-	    array_unshift($user_data, $post_data);
-	
-		print_r($user_data); 
+	    array_unshift($user_data, $post_data); 
 
 		$message =createMessage("en", "speaker", $name , $email, "[IMCVP 2024] 최종 안내문", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $user_data);
 		createDraft($service, "secretariat@imcvp.org", $message);
