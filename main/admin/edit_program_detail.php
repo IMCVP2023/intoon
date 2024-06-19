@@ -13,7 +13,7 @@
         // ";
 
         $program_query = "	
-            SELECT es.nick_name, es.org, es.email, es.attendance_type, es.cv_path, es.abstract_path, es.is_mailed,
+            SELECT es.nick_name, es.org, es.email, es.attendance_type, es.cv_path, es.abstract_path, es.is_mailed, es.idx AS email_idx,
 			p.program_name, p.contents_title, p.start_time, p.end_time, p.idx
             FROM program_contents AS p
             LEFT JOIN email_speaker AS es ON es.program_contents_idx = p.idx
@@ -74,8 +74,12 @@
                             <td><input name="org" value="<?php echo $program['org'] ?>" /></td>
                             <td><input name="email" value="<?php echo $program['email'] ?>" /></td>
                             <td><button class="btn test_save_btn" data-id="<?php echo $idx ?>" data-number="<?php echo $program['idx'] ?>"data-type="<?php echo $program['attendance_type'] ?>">테스트전송</button></td>
-                            <td><button class="btn save_btn" data-id="<?php echo $idx ?>" data-number="<?php echo $program['idx'] ?>" data-type="<?php echo $program['attendance_type'] ?>">메일전송</button></td>
-                            <td><?php echo $program['is_mailed'] ?></td>
+                            <td><button class="btn save_btn" data-id="<?php echo $idx ?>" data-number="<?php echo $program['idx'] ?>" data-type="<?php echo $program['attendance_type'] ?>" data-email="<?php echo $program['email_idx'] ?>">메일전송</button></td>
+                            <?php if($program['is_mailed'] == "N"){ ?>
+                             <td class="red_color bold centerT"><?php echo $program['is_mailed'] ?></td>
+                            <?php }else{ ?>
+                                <td class="blue_color bold centerT"><?php echo $program['is_mailed'] ?></td>
+                            <?php } ?>
                         </tr>
                         <?php } ?>
                     </table>
@@ -89,6 +93,30 @@
     const testBtnList = document.querySelectorAll(".test_save_btn");
     
 
+    function changeMailStatus(emailId){
+        //console.log(emailId)
+        $.ajax({
+                url:"../ajax/client/ajax_member.php",
+                type: "POST",
+                data: {
+                    flag: "speaker_email",
+                    idx : emailId
+                },
+                dataType: "JSON",
+                success: function (res) {
+                     console.log(res)
+                    if (res.code == 200) {
+                       
+                        return;
+                    } else {
+                       
+                        return;
+                    }
+                }
+            });
+    }
+
+    //메일전송 버튼 이벤트
     saveBtnList.forEach((saveBtn)=>{
         saveBtn.addEventListener("click", (e)=>{
              // 현재 버튼이 속한 행을 찾음
@@ -101,6 +129,7 @@
             const program_idx = e.target.dataset.id;
             const program_contents_idx = e.target.dataset.number;
             const attendace_type =  e.target.dataset.type;
+            const emailId = e.target.dataset.email;
             
             const data = {
                 nickname:nickname, 
@@ -110,6 +139,8 @@
                 program_contents_idx : program_contents_idx,
                 attendace_type: attendace_type
             }
+
+            //console.log(emailId)
     
             if(window.confirm(`${sendMail}로 발송하시겠습니까?`)){
                 $.ajax({
@@ -121,12 +152,13 @@
                     },
                     dataType: "JSON",
                     success: function (res) {
-                        // console.log(res)
+                        console.log(res)
                         if (res.code == 200) {
-                            alert('수정이 완료되었습니다.')
+                            alert('메일발송이 완료되었습니다.')
+                            changeMailStatus(emailId);
                             return;
                         } else {
-                            alert('수정에 실패했습니다.')
+                            alert('메일발송에 실패했습니다.')
                             return;
                         }
                     }
@@ -134,6 +166,8 @@
             }
         })
     })
+
+    
 
     //[240617] sujoeng / test 버튼
     testBtnList.forEach((testBtn)=>{
