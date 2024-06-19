@@ -751,12 +751,13 @@
 			$idx = $_POST["idx"] ?? "";
 
 			$update_speaker_email_query =	"
-									UPDATE email_speaker
-										SET is_mailed = 'Y'
-										WHERE idx = '{$idx}'
+										UPDATE email_speaker
+										SET 
+											is_mailed = 'Y'
+										WHERE idx = {$idx}
 							";
 			
-			$update_speaker_email_check = sql_fetch($update_speaker_email_query);
+			$update_speaker_email_check = sql_query($update_speaker_email_query);
 			
 			if($update_speaker_email_check) {
 				$res = [
