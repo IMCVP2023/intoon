@@ -106,7 +106,7 @@
                 success: function (res) {
                      console.log(res)
                     if (res.code == 200) {
-                       
+                        window.location.reload();
                         return;
                     } else {
                        

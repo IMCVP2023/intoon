@@ -1288,6 +1288,9 @@ if($language == "ko") {
 		
 		$attendance_type = isset($data[0]["attendance_type"]) ? $data[0]["attendance_type"] : "";
 		$program_place = isset($data[1]["program_place_idx"]) ? $data[1]["program_place_idx"] : "";
+		$program_tag_name = isset($data[1]["program_tag_name"]) ? $data[1]["program_tag_name"] : "";
+
+		$program_color = "";
 
 		switch($attendance_type) {
 			case 0:
@@ -1328,24 +1331,47 @@ if($language == "ko") {
 				break;
 		}
 
-		$notice_time = $data[1]["start_time"] .  $data[5]["end_time"]; 
+		
+		switch($program_tag_name) {
+			case "symposium":
+				$program_color = "#FFF8AA";
+				break;
+			case "plenary":
+				$program_color = "#D6F8B4";
+				break;
+			case "luncheon":
+				$program_color = "#FFE5E7";
+				break;
+			case "satellite":
+				$program_color = "#EDE2FF";
+				break;
+			case "breakfast":
+				$program_color = "#FFE5E7";
+				break;
+		}
+
+		$end_time = explode(' ',  $data[5]["end_time"])[1];
+
+		$notice_time = $data[1]["start_time"] .' ~ ' . $end_time ; 
 
 		$dataTable = "";
 		$dataTable .= "
-			<table>
+			<table  width='586' style='width:586px; border-collapse:collapse; width:100%; margin:17px 0;'>
 				<tr>
-					<th>{$data[1]['start_time']}-{$data[5]['end_time']}</th>
-					<th>{$data[1]['program_name']}</th>
-					<th>{$data[1]['chairpersons']}</th>
+					<th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000; background-color:{$program_color}'>{$data[1]['start_time']}-{$end_time}</th>
+					<th style='text-align:left; font-size:14px; padding:10px; border-left:1px solid #000; border-bottom:1px solid #000; background-color:{$program_color}'>{$data[1]['program_name']}</th>
+					<th style='text-align:left; font-size:12px; padding:10px; border-left:1px solid #000; border-bottom:1px solid #000; background-color:{$program_color}'>{$data[1]['chairpersons']}</th>
 				</tr>
 				";
 
 				foreach(array_slice($data, 1)  as $item){
+					$program_start_time = explode(' ', $item['start_time'])[1];
+					$program_end_time = explode(' ', $item['end_time'])[1];
 					$dataTable .= "
 					<tr>
-						<th>{$item['start_time']}-{$item['end_time']}</th>
-						<td>{$item['contents_title']}</td>
-						<td>{$item['speaker']}</td>
+						<th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000;'>{$program_start_time}-{$program_end_time}</th>
+						<td style='text-align:left; font-size:14px; padding:10px; border-left:1px solid #000;border-bottom:1px solid #000;'>{$item['contents_title']}</td>
+						<td style='text-align:left; font-size:14px; padding:10px; border-left:1px solid #000; border-bottom:1px solid #000;'>{$item['speaker']}</td>
 					</tr>
 					";}
 
@@ -1375,31 +1401,31 @@ if($language == "ko") {
                     <p style='font-size:14px; color:#000; margin:0;'>IMCVP 2024 운영사무국입니다.</p>
                     <p style='font-size:14px; color:#000; margin:0;'>본 학술대회의 {$attendance_type}로 수고하여 주심에 다시 한번 감사드립니다.</p>
                     <p style='font-size:14px;color:#170F00;margin-top:14px;'>아래와 같이 행사 참석 안내사항 및 담당 프로그램을 보내 드리오니, 확인하여 주시면 감사하겠습니다.</p>
-                    <p style='font-size:14px;color:#170F00;margin-top:14px;'>[IMCVP 2024 개요]</p>
+                    <p style='font-size:14px;color:#170F00;margin-top:14px; font-weight: 700;color: purple;'>[IMCVP 2024 개요]</p>
                     <table width='586' style='width:586px; border-collapse:collapse; border-top:2px solid #000; width:100%; margin:17px 0;'>
                         <tbody>
                             <tr style='border-bottom:1px solid #000;'>
-                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;'>날짜</th>
-                                <td style='font-size:14px; padding:10px;border-left:1px solid #000;'>2024년 11월 29일(금) ~ 30일(토)</td>
+                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000;'>날짜</th>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid #000;border-bottom:1px solid #000;'>2024년 11월 29일(금) ~ 30일(토)</td>
                             </tr>
                             <tr style='border-bottom:1px solid #000;'>
-                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;'>장소</th>
-                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; width:165px;'>그랜드워커힐 서울 호텔</td>
+                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000;'>장소</th>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; width:165px;border-bottom:1px solid #000;'>그랜드워커힐 서울 호텔</td>
                             </tr>
                             <tr style='border-bottom:1px solid #000;'>
-                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;'>주제</th>
-                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; width:165px;'>Aiming High for the State-of-the-Art Cardiovascular Disease Prevention</td>
+                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000;'>주제</th>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; width:165px;border-bottom:1px solid #000;'>Aiming High for the State-of-the-Art Cardiovascular Disease Prevention</td>
                             </tr>
                             <tr style='border-bottom:1px solid #000;'>
-                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;'>홈페이지</th>
-                                <td style='font-size:14px; padding:10px;border-left:1px solid blue; text-decoration: underline;'><a href='https://imcvp.org/' target='_blank'>imcvp.org</a></td>
+                                <th style='width:150px; text-align:left; font-size:14px; padding:10px;border-bottom:1px solid #000;'>홈페이지</th>
+                                <td style='font-size:14px; padding:10px;border-left:1px solid #000; color: blue; text-decoration: underline;'border-bottom:1px solid #000;'><a href='https://imcvp.org/' target='_blank'>imcvp.org</a></td>
                             </tr>
                            <tr>
                                 <td style='width:150px; text-align:left; font-size:14px; padding:10px;' colspan='2'>*전체 프로그램은 홈페이지를 참고해 주시면 감사하겠습니다.</td>
                            </tr>
                         </tbody>	
                     </table>
-                    <p>[행사 참석 및 세션 진행 시 참고 사항]</p>
+                    <p style='font-size:14px;color:#170F00;margin-top:14px; font-weight: 700;color: orangered;'>[행사 참석 및 세션 진행 시 참고 사항]</p>
                     <p style='font-size:14px; color:#000; margin:0;'>- 등록 및 명찰 수령을 위하여 등록데스크로 먼저 방문 부탁드립니다.</p>
                     <p style='font-size:14px; color:#000; margin:0;'>- 세션 시작 1시간 전까지는 행사장에 도착하시어 준비해 주시면 감사하겠습니다.</p>
                 </div>
@@ -1410,7 +1436,7 @@ if($language == "ko") {
         <tr>
             <td width='74' style='width:74px;'><p></p></td>
             <td>
-                <p>[담당 세션 일정]</p>
+                <p style='font-size:14px;color:#170F00;margin-top:14px; font-weight: 700;color: orangered;'>[담당 세션 일정]</p>
                     <p style='font-size:14px; color:#000; margin:0;'>- 일시: <span style='font-size:14px; color:red; margin:0;'>{$notice_time}</span></p>
                     <p style='font-size:14px; color:#000; margin:0;'>- 장소: 그랜드 워커힐 서울 서울 호텔, <span style='font-size:14px; color:red; margin:0;'>{$program_place}</span></p>
             </td>
@@ -1419,7 +1445,7 @@ if($language == "ko") {
         <tr>
             <td width='74' style='width:74px;'><p></p></td>
             <td>
-                <p>[세션 진행 시 참고사항]</p>
+                <p style='font-size:14px;color:#170F00;margin-top:14px; font-weight: 700;color: orangered;'>[세션 진행 시 참고사항]</p>
                     <p style='font-size:14px; color:#000; margin:0;'>- 발표 및 진행: <span style='font-size:14px; color:red; margin:0;'>영어</span></p>
                     <p style='font-size:14px; color:#000; margin:0;'>- Discussion 시간: <span style='font-size:14px; color:red; margin:0;'>20분</span></p>
                     <p style='font-size:14px; color:#000; margin:0;'>- 모든 연사들의 발표가 끝난 후, 토의가 진행됩니다. 무대에 마련된 좌석에 착석하시어 활발한 토론을 부탁드립니다.</p>
@@ -1429,7 +1455,9 @@ if($language == "ko") {
         <tr>
             <td width='74' style='width:74px;'><p></p></td>
             <td>
-				{$dataTable}
+				<div>
+					{$dataTable}
+				</div>
             </td>
             <td width='74' style='width:74px;'></td>
         </tr>
