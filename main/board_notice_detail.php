@@ -50,7 +50,13 @@
 ?>
 
 <section class="container board_detail">
-	<h1 class="page_title">Notice</h1>
+		<h1 class="page_title">News & Information
+			<div class="sub_btn_box">
+				<a href="/main/board_notice.php" class="on">News</a>
+				<a href="/main/visa.php">VISA</a>
+				<a href="/main/useful_information.php">Useful Information</a>
+			</div>
+		</h1>
 	<div class="inner">
 		<!-- 내용 -->
 		<table class="board_table">
