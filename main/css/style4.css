@@ -335,17 +335,17 @@ section.container.overview {/*padding-bottom: 200px; 326px;*/}
 .useful_list > li > div {float:left; height:200px; width:300px;}
 .useful_list > li > div:last-child {width:calc(100% - 328px); height:auto; margin-left:28px;}
 /*.useful_list li .imgs {background-color:#e7e7e7;}*/
-.useful_list li .imgs {background:url("../img/img_useful01.jpg") no-repeat center /cover;}
+.useful_list li .imgs {background:url("../img/2023_img_useful01.png") no-repeat center /cover;}
 /* .useful_list li:nth-child(2) .imgs {background-image:url("../img/img_useful02.jpg");} */
-.useful_list li:nth-child(2) .imgs {background-image:url("../img/climate.png");}
-.useful_list li:nth-child(3) .imgs {background-image:url("../img/img_useful03.jpg");}
-.useful_list li:nth-child(4) .imgs {background-image:url("../img/img_useful04.jpg");}
-.useful_list li:nth-child(5) .imgs {background-image:url("../img/img_useful05.jpg");}
+.useful_list li:nth-child(2) .imgs {background-image:url("../img/2023_img_useful02.png");}
+.useful_list li:nth-child(3) .imgs {background-image:url("../img/2023_img_useful03.png");}
+.useful_list li:nth-child(4) .imgs {background-image:url("../img/2023_img_useful04.png");}
+.useful_list li:nth-child(5) .imgs {background-image:url("../img/2023_img_useful05.png");}
 /* .useful_list li:nth-child(6) .imgs {background-image:url("../img/img_useful07.jpg");} */
-.useful_list li:nth-child(6) .imgs {background-image:url("../img/time_difference.png");}
-.useful_list li:nth-child(7) .imgs {background-image:url("../img/img_useful08.jpg");}
-.useful_list li:nth-child(8) .imgs {background-image:url("../img/img_useful09.jpg");}
-.useful_list li:nth-child(9) .imgs {background-image:url("../img/img_useful09.jpg");} 
+.useful_list li:nth-child(6) .imgs {background-image:url("../img/2023_img_useful07.png");}
+.useful_list li:nth-child(7) .imgs {background-image:url("../img/2023_img_useful08.png");}
+.useful_list li:nth-child(8) .imgs {background-image:url("../img/2023_img_useful09.png");}
+.useful_list li:nth-child(9) .imgs {background-image:url("../img2023_img_useful09.png");} 
 .useful_list p {font-size:18px; font-weight:bold; margin-bottom:12px; /*color:#00666B;*/}
 .useful_list a {font:inherit; text-decoration:underline;}
 
