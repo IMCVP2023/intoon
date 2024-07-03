@@ -68,8 +68,42 @@
 
 	var brian_height =''; 
 
+	function onClickTitle(event){
+		
+		const target = event.target;
+		const e = target.dataset.room;
+		const day = target.dataset.date;
+		const sessionName = target.dataset.name;
+
+		table_location(event, target, e, day, sessionName);
+	}
+	//e - room1, 2 / name = symposium_1
+	//[240627] sujoeng / day -> day_1 or day_2 => 1, 2로 변환
+	function table_location(event, _this, e, day, sessionName){
+
+		let date = "";
+		if(day.includes("_1")){
+			date = 1
+		}else if (day.includes("_2")){
+			date = 2
+		}
+		window.location.href="./scientific_program"+date+".php?&e="+e+"&name="+sessionName;
+	}
+
 	$(document).ready(function(){
 		search_list();
+
+	$(".session_title").click(function(){
+		console.log('hi')
+		var e = $(this).data('room')
+		var day = $(this).data('day')
+		var target = $(this)
+		var this_name = $(this).data('name')
+
+			table_location(event, target, e, day, this_name);
+
+		});
+	
 	});
 
 	function enterkey() {
@@ -119,6 +153,8 @@
 			session_word_value = "Workshop";
 		} else if(session_word_value === "Joint Symposia") {
 			session_word_value = "joint";
+		} else if(session_word_value === "Sponsors session") {
+			session_word_value = "Sponsors";
 		}
 
 		$("input[name=session_word]").val(session_word_value);
@@ -187,14 +223,14 @@
 						html +=				"<p class='italic'>"+list['nation']+"</p>";
 						html +=			"</div>";
 						html +=		"</div>";
-						// html +=		"<div class='lecture_title'>";
-						// html +=			"<strong>"+list['session_type']+"</strong>";
-						// html +=			list['title'];
-						// if(list['session_type2']) {
-						// 	html +=			"<strong>"+list['session_type2']+"</strong>";
-						// 	html +=			list['title2'];
-						// }
-						// html +=		"</div>";
+						html +=		"<div class='lecture_title'>";
+						html +=			"<strong class='session_title' data-room='"+list['session_room']+"' data-date='"+list['session_date']+"' data-name='"+list['session_name']+"' onclick='onClickTitle(event)'>"+list['session_type']+"</strong>";
+						html +=			list['title'];
+						if(list['session_type2']) {
+							html +=			"<strong>"+list['session_type2']+"</strong>";
+							html +=			list['title2'];
+						}
+						html +=		"</div>";
 						html += "</li>";
 
 						$(".speaker_list").html(html);
@@ -283,6 +319,7 @@
 	//	}
 
 	//}
+
 </script>
 
 <?php include_once('./include/footer.php');?>

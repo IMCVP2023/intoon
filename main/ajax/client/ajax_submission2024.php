@@ -445,11 +445,65 @@ else if($flag == "etc2"){
 	return_value(200, 'submission update success');
 }
 
+//[240702] suejong / 일괄 심사 완료 추가
+// else if ($flag == 'all_check'){
+// 	$submission_code_list = $_POST['idx_list'];
+// 	$sql_update_result = "";
+
+// 	foreach($submission_code_list as $sl){
+// 		$sql_update = "
+// 			UPDATE request_submission
+// 			SET
+// 				etc1 = 'Y', 
+// 				etc1_date = NOW()
+// 			WHERE submission_code = '" . $sl . "'
+// 		";
+// 	$sql_update_result += sql_query($sql_update);
+	
+// 	}
+
+// 	if (!$sql_update_result) {
+// 		return_value(500, 'submission update fail', array("sql" => $sql_update));
+// 	}
+
+// 	return_value(200, 'submission update success');
+// }
+else if ($flag == 'all_check') {
+    // idx_list가 배열로 전달되었는지 확인
+    $submission_code_list = isset($_POST['idx_list']) ? $_POST['idx_list'] : null;
+
+    if (is_array($submission_code_list)) {
+        print_r($submission_code_list); // 배열 출력 확인
+		
+		$in_list = empty($submission_code_list)?'NULL':"'".implode("','", $submission_code_list)."'";
+
+        $sql_update = "
+            UPDATE request_submission
+            SET
+                etc1 = 'Y', 
+                etc1_date = NOW()
+            WHERE submission_code IN ($in_list)
+        ";
+
+        // 쿼리 실행 및 결과 확인
+        $result = sql_query($sql_update);
+        if ($result) {
+            return_value(200, $sql_update);
+        } else {
+            error_log("SQL Error: " . mysqli_error($db));
+            error_log("SQL Query: " . $sql_update);
+            return_value(500, 'submission update fail', array("sql" => $sql_update));
+        }
+    } else {
+        return_value(400, 'Invalid submission code list');
+    }
+}
+
 
 function affiliationJson($affiliation)
 {
 	if ($affiliation != "") {
-		if (strpos($afflilation, ",")) {
+		if (strpos($affiliation, ",")) {
 			$affiliation =  substr($affiliation, -1, 1);
 		}
 

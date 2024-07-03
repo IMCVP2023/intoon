@@ -9,7 +9,10 @@ array
 		'last_name'=>'Abola', 
 		'affiliation'=>'University of the Philippines Manila', 
 		'nation'=>'Philippines', 
-		'session_type'=>'Plenary Lectures 6', 
+		'session_type'=>'Plenary Lectures 6', //프로그램 명
+		'session_date'=>'day_1', //날짜 
+		'session_room' =>'room1', //장소
+		'session_name'=>'symposium_1', //detail에 들어가는 name 
 		'title'=>'Up close & personal with vascular diseases: the role of precision medicine', 
 		'image'=>'./img/new_invited_speaker/77. Maria Teresa Abola.jpg'
 ), 
@@ -222,7 +225,7 @@ array
 		'last_name'=>'Jho', 
 		'affiliation'=>'University of Seoul', 
 		'nation'=>'Korea', 
-		'session_type'=>'Basic Research Workshop 1', 
+		'session_type'=>'Sponsors Session 1', 
 		'title'=>'Nutrient sensing mechanism for LDL receptor‐related protein LRP6', 
 		'image'=>'./img/new_invited_speaker/16. Eek-hoon Jho (BW1).jpg'
 ), 

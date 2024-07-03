@@ -29,7 +29,14 @@
 ?>
 
 <section class="container board">
-	<h1 class="page_title">Newsletter</h1>
+	<h1 class="page_title">News & Information
+			<div class="sub_btn_box">
+				<a href="/main/board_notice.php">News</a>
+				<a href="/main/board_newsletter.php" class="on">Newsletter</a>
+				<a href="/main/visa.php">VISA</a>
+				<a href="/main/useful_information.php">Useful Information</a>
+			</div>
+		</h1>
 	<div class="inner">
 		<?php
 			if(count($list) > 0){
@@ -55,34 +62,9 @@
 				<!-- <div class="not_ready">Will be updated soon</div> -->
 				<!-- <img class="coming" src="./img/coming.png"> -->
 			<!-- </div> -->
-			<div class="table_wrap x_scroll">
-				<table class="table_vertical notice_table">
-					<colgroup>
-						<col class="col_date" />
-						<col width="*" />
-						<col class="col_date" />
-						<col class="col_date" />
-					</colgroup>
-					<thead>
-						<tr>
-							<?php
-								$table_title_arr = ($language == "ko") ? ["번호", "제목", "작성일", "조회수"] : ["번호", "제목", "작성일", "조회수"];
-								foreach($table_title_arr as $th_text){
-							?>
-							<th><?=$th_text?></th>
-							<?php
-								}
-							?>
-
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td colspan="4"> 준비 중입니다. </td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			
+				<h5 class="coming">will be updated</h5>
+	
 		<?php
 			}
 		?>

@@ -520,9 +520,13 @@ $count = count($abstract_list);
 			</form>
 		</div>
 		<div class="contwrap">
-			<p class="total_num">총 <?= number_format($count) ?>개</p>
+			<div>
+				<p class="total_num">총 <?= number_format($count) ?>개 <button class="all_etc1_check btn">일괄심사등록</button></p>
+				
+			</div>
 			<table id="datatable" class="list_table table_fixed">
 				<colgroup>
+					<col width="3%">
 					<col width="10%">
 					<col width="5%">
 					<col width="5%">
@@ -536,6 +540,7 @@ $count = count($abstract_list);
 				</colgroup>
 				<thead>
 					<tr class="tr_center">
+						<th><input type="checkbox" id="all_check"/></th>
 						<th>논문번호</th>
 						<th>사전등록</th>
 						<th>심사유무</th>
@@ -544,10 +549,6 @@ $count = count($abstract_list);
 						<th>Country</th>
 						<th>Name</th>
 						<th>Title</th>
-						<!-- <th>파일명</th> -->
-						<!-- <th>카테고리</th> -->
-						<!-- <th>Oral</th> -->
-						<!-- <th>좋아요수 / 댓글수</th> -->
 						<th class="ellipsis">등록일</th>
 					</tr>
 				</thead>
@@ -572,6 +573,7 @@ $count = count($abstract_list);
 							}
 					?>
 							<tr class="tr_center">
+								<td class="ellipsis"><input type="checkbox" class="etc1_check" value="<?= $list["submission_code"] ?>"/></td>
 								<td class="ellipsis"><?= $list["submission_code"] ?></td>
 								<td><?= $regist_text ?></td>
 								<!-- <td><?= $list["registration_status"] == 2 ? 'Y' : 'N'?></td> -->
@@ -604,6 +606,62 @@ $count = count($abstract_list);
 </section>
 <script>
 	var html = '<?= $html ?>';
+
+	const allCheckBtn = document.querySelector('.all_etc1_check');
+	const checkList = document.querySelectorAll('.etc1_check');
+	const allCheck = document.querySelector("#all_check");
+	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+	allCheck.addEventListener("change", ()=>{
+		if(allCheck.checked){
+			checkboxes.forEach((ck) => {
+				ck.checked = true;
+    		});
+		}else{
+			checkboxes.forEach((ck) => {
+				ck.checked = false;
+    		});
+		}
+	
+	})
+
+	allCheckBtn.addEventListener("click", () => {
+    const checkList = [];
+    
+    // 모든 체크박스 요소를 선택합니다.
+
+    // 체크박스 요소를 반복하면서 체크된 항목을 checkList 배열에 추가합니다.
+    checkboxes.forEach((ck) => {
+        if (ck.checked) {
+            checkList.push(ck.value);
+        }
+    });
+
+    if (window.confirm('선택한 초록을 일괄 심사 업데이트 하시겠습니까?')) {
+        console.log(checkList);
+        $.ajax({
+            url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
+            type: "POST",
+            data: {
+                flag: "all_check",
+				'idx_list[]': checkList
+            },
+            dataType: "JSON",
+            success: function(res) {
+                if (res.code == 200) {
+                    alert("초록 심사가 업데이트 되었습니다.");
+                    window.location.reload(); 
+                } else if (res.code == 400) {
+                    alert("초록 심사 업데이트에 실패했습니다.");
+                    return false;
+                } else {
+                    alert("초록 심사 업데이트에 실패했습니다.");
+                    return false;
+                }
+            }
+        });
+    }
+});
 </script>
 <script src="./js/common.js?v=0.1"></script>
 <?php include_once('./include/footer.php'); ?>
