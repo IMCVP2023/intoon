@@ -199,6 +199,7 @@ if ($during_yn !== "Y") {
 
 								foreach($participation_arr as $a_arr) {
                                     $attendance_type = "";
+									if(!empty($prev["attendance_type"])){
                                     switch($prev["attendance_type"]) {
                                         case 0:
                                             $attendance_type = "Committee";
@@ -218,8 +219,12 @@ if ($during_yn !== "Y") {
                                         case 5:
                                             $attendance_type = "Sponsor";
                                             break;
+										default:
+											$attendance_type = "Participants";
                                     }
-
+								}else{
+									$attendance_type = "Participants";
+								}
 									$selected = $attendance_type === $a_arr ? "selected" : "";
 
 									echo '<option value="'.$a_arr.'" '.$selected.'>'.$a_arr.'</option>';

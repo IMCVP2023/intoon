@@ -439,12 +439,12 @@
 						day1_satellite_yn = '{$day1_satellite_yn}',
 						day2_breakfast_yn = '{$day2_breakfast_yn}',
 						day2_luncheon_yn = '{$day2_luncheon_yn}',
-						day2_satellite_yn = '{$day2_satellite_yn}'
+						day2_satellite_yn = '{$day2_satellite_yn}',
 						price = {$total_price}
 						{$add_set}
 					";
 		}
-
+		//print_r($sql);
 		$res = sql_query($sql);
 		if($res) {
 			//사전등록

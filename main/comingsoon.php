@@ -7,7 +7,6 @@
 			<h5>Will be updated</h5>
 		</div>
 	</div>
-
 </section>
 
 <?php include_once('./include/footer.php');?>

@@ -40,6 +40,7 @@
 	<h1 class="page_title">News & Information
 			<div class="sub_btn_box">
 				<a href="/main/board_notice.php" class="on">News</a>
+				<a href="/main/board_newsletter.php">Newsletter</a>
 				<a href="/main/visa.php">VISA</a>
 				<a href="/main/useful_information.php">Useful Information</a>
 			</div>

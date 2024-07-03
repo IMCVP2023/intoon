@@ -79,7 +79,7 @@
                     ?>
                         <tr>
                             <td><?php echo $program['program_name']; ?></td>
-                            <?php if($program['attendance_type'] == 0){ ?>
+                            <?php if($program['attendance_type'] == 1){ ?>
                                 <td>좌장</td>
                             <?php }else {?>
                             <td><?php echo $program['contents_title'] ?></td>

@@ -1760,12 +1760,17 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 }
 
 /** modal */
-.speaker_list > li{
+.speaker_list > li .lecture_title strong{
 	cursor: pointer;
 }
-
+/* 
 .speaker_list > li:hover{
 	border: 1px solid #cbcbd1;
+} */
+
+.speaker_list > li .lecture_title strong:hover{
+	text-decoration: underline;
+	text-underline-position: under;
 }
 
 .modal_background{
@@ -3250,4 +3255,16 @@ table.type2 th{
 	.accommodation .yellow_box .info_wrap, .accommodation .yellow_box .booked_box{
 		padding-left: 0;
 	}
+}
+
+.coming{
+	text-align: center;
+	color: #0281f0b5;
+	position: relative;
+    /* top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+	font-size: 80px;
+	font-family: 'Sriracha', cursive;
+	margin-bottom: 30px;
 }
