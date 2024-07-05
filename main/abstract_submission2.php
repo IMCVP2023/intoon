@@ -868,7 +868,7 @@ $('.submit_btn').click(function() {
 
         }
     }
-
+/*
     if (file_image1.files[0]) {
         formdata.append("abstract_file1", file_image1.files[0]);
         formdata.append("abstract_caption1", $('input[name=abstract_file_caption1]').val());
@@ -889,7 +889,7 @@ $('.submit_btn').click(function() {
         formdata.append("abstract_file5", file_image5.files[0]);
         formdata.append("abstract_caption5", $('input[name=abstract_file_caption5]').val());
     }
-
+*/
     formdata.append('similar_yn', $('input[name=similar_yn]:checked').val());
 
     //[240418] support_yn 사용 X -> N으로 들어가도록 수정(기존 - undefined의 u 입력)

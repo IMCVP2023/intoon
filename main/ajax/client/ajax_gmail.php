@@ -1131,155 +1131,74 @@ if($language == "ko") {
 	}
 	else if($mail_type == "abstract") {
 		$rawMessageString .= "
-		<table width='750' style='border:1px solid #000; padding: 0;'>
-        <tbody>
+<table width='750' style='border:1px solid #000; padding: 0;'>
+    <tbody>
+        <tr>
+            <td colspan='3'>
+                <img src='https://imcvp.org/main/img/2024_mail_header-2.png' width='750' style='width:100%; max-width:100%;'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='3'>
+                <div style='font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;'>[IMCVP 2024] Completed Abstract Submission</div>
+            </td>
+        </tr>
+        <tr>
+            <td width='74' style='width:74px;'></td>
+            <td>
+                <div style='margin-bottom:25px; padding:17px 34px; box-sizing:border-box;'>
+                        <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname}</p>
+                        <p style='font-size:14px;color:#170F00;margin-top:14px;'>
+                            Attention Potential Presenting Author: Upon successful submission of your abstract, you will immediately see the following confirmation notice on your screen, followed by the same message via e&#45;mail. If you did not receive the following message, your abstract was not successfully submitted. Please try again, or contact (sci@imcvp.org) for assistance if you are having difficulty. 
+                        </p>
+    
+                        <p style='font-size:15px; font-weight:bold; color:#000; margin-top:30px;'>Abstract Successfully Submitted</p>
+                        <p style='font-size:14px; color:#170F00; margin-top:14px;'>This is an automated message. Please do not reply</p>
+                        <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>ID (Email Address) : {$to} </div>
+                        <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>Submission date : {$date} </div>
+                        <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>Topic : {$category} </div>
+                        <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>Abstract title : {$title} </div>
+						<div style='font-size:14px; padding:10px; margin-top:10px;'>If you have any questions regarding call for abstracts, please contact the secretariat (sci@imcvp.org)</div>
+						<div style='font-size:14px; padding:10px; margin-top:10px;'>We look forward to seeing you in IMCVP 2024.</div>
+						<div style='font-size:14px; padding:10px; margin-top:10px;'>Warmest regards, 감사합니다.</div>
+						<div style='font-size:14px; padding:10px; margin-top:10px;'>IMCVP 2024 Secretariat.</div>
+                </div>
+					
+            </td>
+            <td width='74' style='width:74px;'></td>
+        </tr>
+        <tr>
+            <td width='74' style='width:74px;'></td>
+            <td>
+                <div style='text-align: center; padding-top:30px;'>
+        <table align='center' cellspacing='0' cellpadding='0' width='100%'>
             <tr>
-                <td colspan='3'>
-                    <img src='https://imcvp.org/main/img/2024_mail_header-2.png' width='750' style='width:100%; max-width:100%;'>
+                <td align='center'>
+                    <table border='0' cellspacing='0' cellpadding='0'>
+                        <tr>
+                            <td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
+                                <a href='https://imcvp.org/main' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
+                                    <span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>Go to IMCVP 2024 Website</span>
+                                </a><!--[if mso]>&nbsp;<![endif]-->
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
-            <tr>
-                <td colspan='3'>
-                    <div style='font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;'>[IMCVP 2024] Completed Abstract Submission</div>
-                </td>
-            </tr>
-            <tr>
-                <td width='74' style='width:74px;'></td>
-                <td>
-                    <div style='margin-bottom:25px; padding:17px 34px; box-sizing:border-box;'>
-                        <div style='margin-bottom:40px;'>
-                            <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname}</p>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>
-                                Attention Potential Presenting Author: Upon successful submission of your abstract, you will immediately see the following confirmation notice on your screen, followed by the same message via e&#45;mail. If you did not receive the following message, your abstract was not successfully submitted. Please try again, or contact (sci@imcvp.org) for assistance if you are having difficulty. 
-                            </p>
-        
-                            <p style='font-size:15px; font-weight:bold; color:#000; margin-top:30px;'>Abstract Successfully Submitted</p>
-                            <p style='font-size:14px; color:#170F00; margin-top:14px;'>This is an automated message. Please do not reply</p>
-                            <ul style='list-style:none; padding-left:10px;'>
-                                <li style='font-size:14px; font-weight:bold; color:#000'>ID : <span style='font-size:14px; font-weight:400; color:#000;'>[{$to}]</span></li>
-                                <li style='font-size:14px; font-weight:bold; color:#000'>Submission date : <span style='font-size:14px; font-weight:400; color:#000;'>{$date}</span></li>
-                                <li style='font-size:14px; font-weight:bold; color:#000'>Topic : <span style='font-size:14px; font-weight:400; color:#000;'>{$category}</span></li>
-                                <li style='font-size:14px; font-weight:bold; color:#000'>Abstract title : <span style='font-size:14px; font-weight:400; color:#000;'>{$title}</span></li>
-                            </ul>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>If you have any questions regarding call for abstracts, please contact the secretariat (<a href='mailto:sci@imcvp.org)'>sci@imcvp.org</a>)</p>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>We look forward to seeing you in IMCVP 2024.</p>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>Warmest regards,</p>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>IMCVP 2024 Secretariat. </p>
-                        </div>
-                    </div>
-                </td>
-                <td width='74' style='width:74px;'></td>
-            </tr>
-            <tr>
-                <td width='74' style='width:74px;'></td>
-                <td>
-                    <div style='text-align: center; padding-top:30px;'>
-            <table align='center' cellspacing='0' cellpadding='0' width='100%'>
-                <tr>
-                    <td align='center'>
-                        <table border='0' class='mobile-button' cellspacing='0' cellpadding='0'>
-                            <tr>
-                                <td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
-                                    <a href='https://imcvp.org/main' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
-                                        <span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>Go to IMCVP 2024 Website</span>
-                                    </a><!--[if mso]>&nbsp;<![endif]-->
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>
-                    
-                </td>
-                <td width='74' style='width:74px;'></td>
-            </tr>
-            <tr>
-                <td colspan='3' style='padding-top:50px;'>
-                    <img src='https://imcvp.org/main/img/2024_mail_footer-2.png' width='750' style='width:100%; max-width:100%;'>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-					";
-	}
-
-	//[240419] sujoeng / 초록 채택 메일 추가 / 템플릿 변경 필요
-	else if($mail_type == "abstract_etc2") {
-		$title = $data["title"] ?? [];
-		$topic = $data["topic"] ?? [];
-		$rawMessageString .= "
-		<table width='750' style='border:1px solid #000; padding: 0;'>
-        <tbody>
-            <tr>
-                <td colspan='3'>
-                    <img src='https://imcvp.org/main/img/2024_mail_header-2.png' width='750' style='width:100%; max-width:100%;'>
-                </td>
-            </tr>
-            <tr>
-                <td colspan='3'>
-                    <div style='font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;'>[IMCVP 2024] Completed Abstract Submission</div>
-                </td>
-            </tr>
-            <tr>
-                <td width='74' style='width:74px;'></td>
-                <td>
-                    <div style='margin-bottom:25px; padding:17px 34px; box-sizing:border-box;'>
-                        <div style='margin-bottom:40px;'>
-                            <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname}</p>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>
-                                Attention Potential Presenting Author: Upon successful submission of your abstract, you will immediately see the following confirmation notice on your screen, followed by the same message via e&#45;mail. If you did not receive the following message, your abstract was not successfully submitted. Please try again, or contact (sci@imcvp.org) for assistance if you are having difficulty. 
-                            </p>
-        
-                            <p style='font-size:15px; font-weight:bold; color:#000; margin-top:30px;'>Abstract Successfully Submitted</p>
-                            <p style='font-size:14px; color:#170F00; margin-top:14px;'>This is an automated message. Please do not reply</p>
-                            <ul style='list-style:none; padding-left:10px;'>
-                                <li style='font-size:14px; font-weight:bold; color:#000'>ID : <span style='font-size:14px; font-weight:400; color:#000;'>[{$to}]</span></li>
-                                <li style='font-size:14px; font-weight:bold; color:#000'>Submission date : <span style='font-size:14px; font-weight:400; color:#000;'>{$date}</span></li>
-                                <li style='font-size:14px; font-weight:bold; color:#000'>Topic : <span style='font-size:14px; font-weight:400; color:#000;'>{$topic}</span></li>
-                                <li style='font-size:14px; font-weight:bold; color:#000'>Abstract title : <span style='font-size:14px; font-weight:400; color:#000;'>{$title}</span></li>
-                            </ul>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>If you have any questions regarding call for abstracts, please contact the secretariat (<a href='mailto:sci@imcvp.org)'>sci@imcvp.org</a>)</p>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>We look forward to seeing you in IMCVP 2024.</p>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>Warmest regards,</p>
-                            <p style='font-size:14px;color:#170F00;margin-top:14px;'>IMCVP 2024 Secretariat. </p>
-                        </div>
-                    </div>
-                </td>
-                <td width='74' style='width:74px;'></td>
-            </tr>
-            <tr>
-                <td width='74' style='width:74px;'></td>
-                <td>
-                    <div style='text-align: center; padding-top:30px;'>
-            <table align='center' cellspacing='0' cellpadding='0' width='100%'>
-                <tr>
-                    <td align='center'>
-                        <table border='0' class='mobile-button' cellspacing='0' cellpadding='0'>
-                            <tr>
-                                <td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
-                                    <a href='https://imcvp.org/main' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
-                                        <span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>Go to IMCVP 2024 Website</span>
-                                    </a><!--[if mso]>&nbsp;<![endif]-->
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </div>
-                    
-                </td>
-                <td width='74' style='width:74px;'></td>
-            </tr>
-            <tr>
-                <td colspan='3' style='padding-top:50px;'>
-                    <img src='https://imcvp.org/main/img/2024_mail_footer-2.png' width='750' style='width:100%; max-width:100%;'>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-					";
+        </table>
+    </div>
+                
+            </td>
+            <td width='74' style='width:74px;'></td>
+        </tr>
+        <tr>
+            <td colspan='3' style='padding-top:50px;'>
+                <img src='https://imcvp.org/main/img/2024_mail_footer-2.png' width='750' style='width:100%; max-width:100%;'>
+            </td>
+        </tr>
+    </tbody>
+</table>
+		";
 	}
 
 	//[240617] sujoeng / 좌장, 연자, 패널 메일 추가 / 템플릿 변경 필요
@@ -1748,9 +1667,10 @@ if($_POST["flag"] == "abstract") {
 	$subject = $_POST["subject"];
 	$title = $_POST["title"];
 	$topic_text = $_POST["topic_text"];
+	$nation = $_POST["nation"];
 	$time = date("Y-m-d H:i:s");
 
-	$message =createMessage("en", "abstract", $name, $email, $subject, $time, "", "", 1, "", "", "", $email, $time, $topic_text, $title);
+	$message =createMessage("en", "abstract", $name, $email, "[IMCVP 2024] Abstract Successfully Submitted", $time, "", "", 1, "", "", "", $email, $time, $topic_text, $title);
 	createDraft($service, "secretariat@imcvp.org", $message);
 	sendMessage($service, "secretariat@imcvp.org", $message);
 

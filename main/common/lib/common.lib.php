@@ -2406,13 +2406,13 @@ function upload_file($file_obj, $file_directory_idx){
 
 	move_uploaded_file($file_tmp, $upload_path."/".$file_save_name);
 
-	if($thumb_yn == "Y" && preg_match("(jpg|png|gif)" , $file_extension) && $wish_height != 0){
-		$wish_width = $wish_width ? $wish_width : 70;
-		$wish_height = $wish_height ? $wish_height : 70;
+	// if($thumb_yn == "Y" && preg_match("(jpg|png|gif)" , $file_extension) && $wish_height != 0){
+	// 	$wish_width = $wish_width ? $wish_width : 70;
+	// 	$wish_height = $wish_height ? $wish_height : 70;
 
-		resize_image($save_path, $save_resize_path, $file_extension, $wish_width, $wish_height);
-		$file_save_name = "R".$file_save_name;
-	}
+	// 	resize_image($save_path, $save_resize_path, $file_extension, $wish_width, $wish_height);
+	// 	$file_save_name = "R".$file_save_name;
+	// }
 
 	$sql = "INSERT `file`
 			SET

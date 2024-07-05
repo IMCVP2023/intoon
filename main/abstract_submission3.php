@@ -482,7 +482,7 @@ $('.submit_btn').click(function() {
         success: function(res) {
             console.log(res);
             if (res.code == 200) {
-                abstract_gmail(res.email, res.name, res.subject, res.title, res.topic_text);
+                abstract_gmail(res.email, res.name, res.subject, res.title, res.topic_text, res.nation);
                 //location.href = './mypage_abstract.php';
                 //alert(locale(language.value)("send_mail_success"));
 
@@ -496,7 +496,7 @@ $('.submit_btn').click(function() {
 });
 
 
-function abstract_gmail(email, name, subject, title, topic_text) {
+function abstract_gmail(email, name, subject, title, topic_text,nation) {
     pending_on();
     $.ajax({
         url: PATH + "ajax/client/ajax_gmail.php",
@@ -507,7 +507,8 @@ function abstract_gmail(email, name, subject, title, topic_text) {
             name: name,
             subject: subject,
             title: title,
-            topic_text: topic_text
+            topic_text: topic_text,
+			nation:nation
         },
         dataType: "JSON",
         success: function(res) {
