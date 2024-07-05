@@ -612,6 +612,10 @@ $count = count($abstract_list);
 	const allCheck = document.querySelector("#all_check");
 	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
+	checkList.forEach((checkBox)=>{
+		checkBox.dataset.id = 
+	})
+
 	allCheck.addEventListener("change", ()=>{
 		if(allCheck.checked){
 			checkboxes.forEach((ck) => {

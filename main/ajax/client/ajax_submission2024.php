@@ -5,6 +5,7 @@ include_once('../../include/submission_data.php');
 //error_reporting( E_ALL );
 //ini_set( "display_errors", 1 );
 
+
 $language = isset($_SESSION["language"]) ? $_SESSION["language"] : "en";
 //$locale = locale($language);
 
@@ -378,6 +379,7 @@ if ($flag == "step1") {
 	$email = $member['email'];
 	$subject = "[IMCVP 2024] Abstract Successfully Submitted";
 	$time = date("Y-m-d H:i:s");
+	$nation = $member['nation_no'];
 
 	//0602 임시주석 에러로 페이지가 넘어가지 않는 현상
 	// $mail_result = mailer("en", "abstract", $name, $email, $subject, $time, "", "", 1, "", "", "", $email, $time, $rs_detail['topic_text'], $rs_detail['title']);
@@ -386,7 +388,7 @@ if ($flag == "step1") {
 	// 	return_value(401, 'send mail fail');
 	// }
 
-	return_value(200, 'submission update success', array("name" => $name, "email" => $email, "subject" => $subject, "topic_text" => $rs_detail['topic_text'], "title" => $rs_detail['title']));
+	return_value(200, 'submission update success', array("name" => $name, "email" => $email, "subject" => $subject, "topic_text" => $rs_detail['topic_text'], "title" => $rs_detail['title'], "nation" => $nation));
 } else if ($flag == "delete") {
 	$submission_idx = $_POST['idx'];
 

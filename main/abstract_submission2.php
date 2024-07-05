@@ -865,10 +865,12 @@ $('.submit_btn').click(function() {
 		if (temp_file_value || temp_idx_value > -1) {
 			formdata.append(temp_caption_name, temp_caption_value);
 
+
 		}
 	}
 
    /*
+
 
     if (file_image1.files[0]) {
         formdata.append("abstract_file1", file_image1.files[0]);
@@ -890,6 +892,7 @@ $('.submit_btn').click(function() {
         formdata.append("abstract_file5", file_image5.files[0]);
         formdata.append("abstract_caption5", $('input[name=abstract_file_caption5]').val());
     }
+
         */
 
     formdata.append('similar_yn', $('input[name=similar_yn]:checked').val());
