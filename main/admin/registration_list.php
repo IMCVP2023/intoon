@@ -229,7 +229,7 @@
 					rr.promotion_code_number,
 					n.nation_ko,
 					n.nation_en,
-					m.idx,
+					m.idx as member_idx,
 					m.affiliation,
 					m.department,
 					m.affiliation_kor,
