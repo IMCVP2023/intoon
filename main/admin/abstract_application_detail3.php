@@ -492,8 +492,8 @@ function get_auther_affiliation($author_idx)
                 </table>
             </div>
             <div class="btn_wrap">
-                <button type="button" class="border_btn" onclick="location.href='./abstract_application_list2.php'">목록</button>
-                <button type="button" class="border_btn" onclick="createPDFfromHTML()">다운로드</button>
+                <button type="button" class="border_btn" onclick="location.href='./abstract_application_list.php'">목록</button>
+                <!-- <button type="button" class="border_btn" onclick="createPDFfromHTML()">다운로드</button> -->
                 <button type="button" class="border_btn" onclick="deleteAbstract()">삭제</button>
             </div>
         </div>
