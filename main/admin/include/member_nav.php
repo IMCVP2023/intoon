@@ -26,7 +26,7 @@
 		<ul class="tab_wrap clearfix">
 			<li><a href="./member_detail.php?idx=<?=$member_idx?>">회원 정보</a></li>
 			<li><a href="./member_detail2.php?idx=<?=$member_idx?>">Poster</a></li>
-			<li><a href="./member_detail3.php?idx=<?=$member_idx?>">Lecture</a></li>
+			<!-- <li><a href="./member_detail3.php?idx=<?=$member_idx?>">Lecture</a></li> -->
 			<li><a href="./member_detail4.php?idx=<?=$member_idx?>">Registration</a></li>
 			<!-- <li><a href="./member_detail5.php?idx=<?=$member_idx?>">수강내역</a></li> -->
 			<!-- <li><a href="./member_detail6.php?idx=<?=$member_idx?>">Event Zone</a></li> -->

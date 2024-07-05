@@ -843,32 +843,35 @@ $('.submit_btn').click(function() {
     formdata.append('conclusions', conclusions_editor_data);
     // formdata.append('keywords', keywords_editor_data);
 
-    var file_input_array = ["", file_image1, file_image2, ];
-    var file_array = ["", file_image1.files[0], file_image2.files[0], ];
-    var temp_idx_name, temp_idx_value, temp_file_name, temp_file_value, temp_caption_name,
-        temp_caption_value;
-    for (var i = 1; i <= 5; i++) {
-        temp_idx_name = "abstract_file_idx" + i;
-        temp_idx_value = $('input[name=abstract_file' + i + ']').data('idx');
+	var file_input_array = ["", file_image1, file_image2, file_image3, file_image4, file_image5];
+	var file_array = ["", file_image1.files[0], file_image2.files[0], file_image3.files[0], file_image4.files[0], file_image5.files[0]];
+	var temp_idx_name, temp_idx_value, temp_file_name, temp_file_value, temp_caption_name, temp_caption_value;
+	for (var i=1; i<=5; i++) {
+		temp_idx_name = "abstract_file_idx"+i;
+		temp_idx_value = $('input[name=abstract_file' + i + ']').data('idx');
 
-        temp_file_name = "abstract_file" + i;
-        temp_file_value = file_array[i];
+		temp_file_name = "abstract_file"+i;
+		temp_file_value = file_array[i];
 
-        temp_caption_name = "abstract_caption" + i;
-        temp_caption_value = $(('input[name=abstract_file_caption' + i + ']')).val();
+		temp_caption_name = "abstract_caption"+i;
+		temp_caption_value = $(('input[name=abstract_file_caption' + i + ']')).val();
 
-        formdata.append(temp_idx_name, temp_idx_value);
+		formdata.append(temp_idx_name, temp_idx_value);
 
-        if (temp_file_value) {
-            formdata.append(temp_file_name, temp_file_value);
-        }
+		if(temp_file_value) {
+			formdata.append(temp_file_name, temp_file_value);
+		}
 
-        if (temp_file_value || temp_idx_value > -1) {
-            formdata.append(temp_caption_name, temp_caption_value);
+		if (temp_file_value || temp_idx_value > -1) {
+			formdata.append(temp_caption_name, temp_caption_value);
 
-        }
-    }
-/*
+
+		}
+	}
+
+   /*
+
+
     if (file_image1.files[0]) {
         formdata.append("abstract_file1", file_image1.files[0]);
         formdata.append("abstract_caption1", $('input[name=abstract_file_caption1]').val());
@@ -889,7 +892,9 @@ $('.submit_btn').click(function() {
         formdata.append("abstract_file5", file_image5.files[0]);
         formdata.append("abstract_caption5", $('input[name=abstract_file_caption5]').val());
     }
-*/
+
+        */
+
     formdata.append('similar_yn', $('input[name=similar_yn]:checked').val());
 
     //[240418] support_yn 사용 X -> N으로 들어가도록 수정(기존 - undefined의 u 입력)

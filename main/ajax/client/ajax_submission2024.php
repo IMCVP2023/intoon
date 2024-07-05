@@ -2,8 +2,9 @@
 include_once("../../common/common.php");
 include_once('../../include/submission_data.php');
 //[240125] sujeong / step 2 - file index가 없을 경우에도 돌아가는 코드... 에러로 돌아가는 코드라 수정 해야 함
-error_reporting( E_ALL );
-ini_set( "display_errors", 1 );
+//error_reporting( E_ALL );
+//ini_set( "display_errors", 1 );
+
 
 $language = isset($_SESSION["language"]) ? $_SESSION["language"] : "en";
 //$locale = locale($language);
