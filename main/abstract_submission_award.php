@@ -14,13 +14,13 @@
     <div class="inner">
 		<div class="section section1">
 			<div>
-				<div class="text_box">
+				<!-- <div class="text_box">
 					<ul>
 						<li>The organizing committee of IMCVP 2024 has made the decision to offer benefits to all researchers who have accepted abstracts and will be participating in the on-site congress.
 The secretariat will contact awardees individually.</li>
 					</ul>
                     <p class="red_t">** This award is given regardless of nationality</p>
-				</div>
+				</div> -->
 			</div>
 
 	<!--Contact for Abstract start-->
@@ -68,11 +68,18 @@ The secretariat will contact awardees individually.</li>
 						</li>
 						<li>
 							<p></p>
-							<p class=""><span class="bold">Participate in IMCVP 2024 <br>On-site</span> (Payment for travel <br>grants will be processed on-site.)</p>
+							<p class="">
+                            Apply for the Travel Grants upon abstract submission. 
+
+                                <!-- <span class="bold">Participate in IMCVP 2024 <br>On-site</span> (Payment for travel <br>grants will be processed on-site.) --></p>
 						</li>
 						<li>
 							<p></p>
-							<p class="">Complete the travel<br>grant application form<br>and submit on-site.</p>
+							<p class="">
+                            Participate in IMCVP2024 (Travel Grants will be provided On-Site)
+
+                            <!-- Complete the travel<br>grant application form<br>and submit on-site. -->
+                            </p>
 						</li>
 					</ul>
                     <p class="red_t bold text_center font20">** This award will be automatically canceled when the awardee do not attend on-site.</p>
@@ -80,21 +87,17 @@ The secretariat will contact awardees individually.</li>
 			</div>
 			<!--step end-->
 			<!-- download start -->
-			<div>
+			<!-- <div>
 				<div class="section_title_wrap2">
 					<h4 class="title">Download Application Form</h4>
 				</div>
 				<div class="download_wrap">
 					<a href="" class="btn long_btn type2 text_long" style="color:#FFF !important;">
-					<!-- <a href="./download/ICOMES_2023_Travel_Grant_Application_Form.docx" class="btn long_btn type2 text_long" target="_blank"> -->
 						<img src="./img/icons/icon_download_white.svg" alt="">Travel Grant Application Form Download (Overseas)
 					</a>
-					<!-- <a href="./download/ICOMES_2023_Application_for_travel_subsidy(Non-MD).docx" class="btn long_btn type2 text_long" target="_blank">
-						<img src="./img/icons/icon_download_white.svg" alt="">Non-MD 지방 참석자 여비 보조금 지원 양식 다운로드 (Domestic)
-					</a> -->
+					
 				</div>
-				<!-- <p class="mt10 p_indent">• MD 지방 참석자: 지원 양식 별도 없음. 초록채택자 공지 후 대한비만학회 개별 공지 예정</p> -->
-			</div>
+			</div> -->
 			<!-- download end -->
 
 			<!--Travel Grants start-->
