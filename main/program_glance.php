@@ -224,7 +224,18 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="">13:50~15:00</td>
+							<td class="">13:50~14:30</td>
+							<td class="green_bg pointer" colspan="2" name="plenary_lecture_4">
+								Plenary Lecture 4
+								<input type="hidden" name="e" value="room1">
+							</td>
+						</tr>
+						<tr>
+							<td class="">14:30~14:50</td>
+							<td colspan="2">Coffee Break</td>
+						</tr>
+						<tr>
+							<td class="">14:50~16:30</td>
 							<td class="yellow_bg pointer" name="symposium_11">
 								Symposium 11<p>Lifestyle modification for Prevention of CVD</p>
 								<input type="hidden" name="e" value="room1">
@@ -234,17 +245,11 @@
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td class="">15:00~15:20</td>
 							<td colspan="2">Coffee Break</td>
 						</tr>
-						<tr>
-							<td class="">15:20~16:00</td>
-							<td class="green_bg pointer" colspan="2" name="plenary_lecture_4">
-								Plenary Lecture 4
-								<input type="hidden" name="e" value="room1">
-							</td>
-						</tr>
+						
 						<tr>
 							<td class="">16:00~17:40</td>
 							<td class="violet_bg pointer" name="satellite_symposium_3">
@@ -256,9 +261,9 @@
 								<input type="hidden" name="e" value="room2">
 							</td>
 							
-						</tr>
+						</tr> -->
 						<tr>
-							<td class="">17:40~18:00</td>
+							<td class="">16:30~16:50</td>
 							<td colspan="2">Closing Ceremony</td>
 						</tr>
 						
