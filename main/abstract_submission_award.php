@@ -26,7 +26,7 @@ The secretariat will contact awardees individually.</li>
 	<!--Contact for Abstract start-->
     <div>
 				<div class="section_title_wrap2 mb10">
-					<h3 class="title">Travel grants (for international participants only)</h3>
+					<h3 class="title">Travel Grants (For International Participants Only)</h3>
 				</div>
 				<!-- <h4 class="title">Overseas</h4> -->
 				<div class="table_wrap detail_table_common x_scroll mb20">
@@ -40,7 +40,7 @@ The secretariat will contact awardees individually.</li>
 						</thead>
 						<tbody>
 							<tr>
-								<td class="text_center">Travel grants</td>
+								<td class="text_center">Travel Grants</td>
 								<td class="text_center">USD 500.00</td>
 								<td class="text_center">To be notified individually before the congress</td>
 							</tr>
@@ -204,10 +204,10 @@ The secretariat will contact awardees individually.</li>
 				</div>
 				<div class="mb20 text_box indent">
 					<ul>
-						<li>• Certificates will be available online via the attendee’s <a class="mypage_btn" href="./mypage_abstract.php">My IMCVP</a> account after the IMCVP 2024. <br/>It will be mandatory to complete the congress evaluation survey to receive certification.</li>
+						<li>• Certificates will be available at <a class="mypage_btn" href="./mypage_abstract.php">My IMCVP</a> after the congress. <br/>It is mandatory to complete the congress evaluation survey to receive certification.</li>
 						<li>• In person attendance will be checked. This data will be the basis for certification.</li>
-						<li>• IMCVP does not share the attendee's certificate with any third party, not even the sponsor of the registration.</li>
-						<li>• More detailed information will follow once available.</li>
+						<!-- <li>• IMCVP does not share the attendee's certificate with any third party, not even the sponsor of the registration.</li> -->
+						<li>• For more detail, please contact IMCVP2024 Secretariat at <a href="mailto:sci@imcvp.org">&nbsp;&nbsp;&nbsp;  sci@imcvp.org</a></li>
 					</ul>
 				</div>
             </div>

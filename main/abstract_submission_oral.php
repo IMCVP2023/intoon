@@ -27,7 +27,7 @@ $info = sql_fetch($sql_info);
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
 				<a href="/main/abstract_submission.php">Online submission</a>
 				<a href="/main/comingsoon.php" class="on">Presentation Guidelines</a>
-				<a href="/main/comingsoon.php">Awards & Grants</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
 				
 				<!-- <a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
 				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->

@@ -160,7 +160,7 @@ var g5_editor_url = "<?= $editor_url ?>",
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
 				<a href="/main/abstract_submission.php" class="on">Online submission</a>
                 <a href="/main/comingsoon.php">Presentation Guidelines</a>
-				<a href="/main/comingsoon.php">Awards & Grants</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
 
 				<!-- <a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
 				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->

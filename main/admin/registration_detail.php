@@ -358,12 +358,12 @@
 						<col width="40%">
 					</colgroup>
 					<tbody>
-						<tr>
+						<!-- <tr>
 							<th>Registration Type</th>
 							<td><?=$registration_type_text?></td>
 							<th>Applied Review</th>
 							<td><?=$is_score_text?></td>
-						</tr>
+						</tr> -->
 						<tr>
 							<th>KSCP Member Status</th>
 							<td><?=$member_status_text?></td>

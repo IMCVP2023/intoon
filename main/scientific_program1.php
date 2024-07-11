@@ -85,7 +85,7 @@
 		</h1>
 	<div class="inner">
 		<ul class="program_detail_tab">
-			<li class="on"><a href="/main/scientific_program.php">DAY 1 <br class="mb_only"/>(November 29, Fri)</a></li>
+			<li class="on"><a href="/main/scientific_program1.php">DAY 1 <br class="mb_only"/>(November 29, Fri)</a></li>
 			<li><a href="/main/scientific_program2.php">DAY 2 <br class="mb_only"/>(November 30, Sat)</a></li>
 		</ul>
 		<!-- <ul class="program_color_txt">
