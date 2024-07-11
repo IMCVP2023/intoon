@@ -140,7 +140,7 @@
 								<tbody>
 									<tr class="preview_tr yellow">
 										<td colspan="2">
-											<p>Organizer : Jong-Chan Youn(The Catholic University of Korea, Korea)</p>
+											<p>Organizer : Jong-Chan Youn (The Catholic University of Korea, Korea)</p>
 											<ul>
 												<li>In this session; we will provide a comprehensive review of the latest guidelines in key areas of cardiometabolic health from the national key opinion leaders. </li>
 												<li>We will start with the current guidelines for hypertension, followed by updates on the management of dyslipidaemia. We will then look at the latest recommendations for the management of diabetes and conclude with the current guidelines for the management of heart failure.
@@ -153,35 +153,41 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Won-Young Lee (Sungkyunkwan University, Korea) <br/>Sang Hyun Ihm (The Catholic University of Korea, Korea)</p>
+											<p>
+												<!-- Won-Young Lee (Sungkyunkwan University, Korea) <br/>Sang Hyun Ihm (The Catholic University of Korea, Korea) -->
+											</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:00 - 09:20</th>
 										<td>
 											<p class="s_bold">Current Guidelines for Hypertension </p>
-											<p>Sungha Park (Yonsei University, Korea)</p>
+											<p>Sung ha Park (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:20 - 09:40</th>
 										<td>
 											<p class="s_bold">Current Guidelines for Dyslipidemia</p>
-											<p>Kim, Sin Gon (Korea University, Korea)</p>
+											<p>Sin Gon Kim (Korea University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:40 - 10:00</th>
 										<td>
 											<p class="s_bold">Current Guidelines for Diabetes </p>
-											<p>Choi, SungHee (Seoul National University, Korea)</p>
+											<p>Sung Hee Choi (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>10:00 - 10:20</th>
 										<td>
-											<p class="s_bold">Current Guidelines for Heart Failure </p>
-											<p>Byung-Soo Yoo (Yonsei University, Korea)</p>
+											<p class="s_bold">
+												<!-- Current Guidelines for Heart Failure  -->
+											</p>
+											<p>
+												<!-- Byung-Soo Yoo (Yonsei University, Korea) -->
+											</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
@@ -189,7 +195,9 @@
 										<td>
 											<p class="s_bold">Panel discussion</p>
 											<p>Jong-Chan Youn (The Catholic University of Korea, Korea), Minjae Yoon (Seoul National University, Korea)</p>
-											<p>Jun Hwa Hong (Eulji university, Korea), Suk Chon (Kyung Hee University, Korea)</p>
+											<p>
+												<!-- Jun Hwa Hong (Eulji university, Korea),  -->
+												Suk Jeon (Kyung Hee University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -210,8 +218,8 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_gray_bg">11:10 - 11:50</th>
-										<td class="gray_bg">Opening address<br/>								
+										<th class="dark_gray_bg">11:00 - 11:10</th>
+										<td class="gray_bg">Opening Address<br/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -220,10 +228,10 @@
 							<table class="table color_table mobile" name="plenary_lecture_1_mb">
 								<tbody>
 									<tr class="dark_gray_bg">
-										<th class="dark_gray_bg">15:30 - 17:00</th>
+										<th class="dark_gray_bg">11:00 - 11:10</th>
 									</tr>
 									<tr class="gray_bg non_border_b">
-										<td class="gray_bg">Opening address<br/>
+										<td class="gray_bg">Opening Address<br/>
 										</td>
 									</tr>
 								</tbody>
@@ -263,7 +271,7 @@
 							<table class="table color_table mobile" name="plenary_lecture_1_mb">
 								<tbody>
 									<tr class="dark_green_bg">
-										<th class="dark_green_bg">15:30 - 17:00</th>
+										<th class="dark_green_bg">11:10 - 11:50</th>
 									</tr>
 									<tr class="green_bg non_border_b">
 										<td class="green_bg">Plenary Lecture 1<br/>
@@ -282,14 +290,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br> TBD (TBD)</p> -->
+											<p>Won-Young Lee (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>11:10 - 11:50</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Familial Hypercholesterolaemia, Diagnosis and Management</p>
+											<p>Brian Tomlinson (Macau University of Science and Technology, Hongkong)</p>
 										</td>
 									</tr>
 								</tbody>
@@ -340,7 +348,14 @@
 									</tr>
 									
 									<tr class="non_border_b">
-										<th>11:50 - 13:00</th>
+										<th>11:50 - 12:10</th>
+										<td>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>12:10 - 12:30</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
@@ -360,7 +375,7 @@
 								<tbody>
 									<tr class="plus_tr">
 										<th class="dark_yellow_bg">13:00 - 14:40</th>
-										<td class="yellow_bg">Symposium 3 <br/>Non-atherosclerotic, non-cardioembolic cerebral infarction
+										<td class="yellow_bg">Symposium 3 <br/>Non-Atherosclerotic, Non-Cardioembolic Cerebral Infarction
 										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -373,7 +388,7 @@
 										<th class="dark_yellow_bg">13:00 - 14:40</th>
 									</tr>
 									<tr class="yellow_bg non_border_b plus_tr">
-										<td class="yellow_bg">Symposium 3 <br/>non-atherosclerotic, non-cardioembolic cerebral infarction</td>
+										<td class="yellow_bg">Symposium 3 <br/>Non-Atherosclerotic, Non-Cardioembolic Cerebral Infarction</td>
 									</tr>
 								</tbody>
 							</table>
@@ -385,7 +400,7 @@
 								<tbody>
 									<tr class="preview_tr yellow">
 										<td colspan="2">
-											<p>Organizer : Sang-Mi Noh(The Catholic University of Korea, Korea)</p>
+											<p>Organizer : Sang-Mi Noh (The Catholic University of Korea, Korea)</p>
 											<ul>
 												<li>Ischemic stroke is a disease with a variety of etiologies. Most of its cases are due to atherosclerosis which is influenced by traditional vascular risk factors such as diabetes and hypertension or, due to high-risk cardio-embolic sources such as atrial fibrillation.</li>
 												<li>There are well-established guidelines and extensive research concerning the causes and treatment of these types of strokes. In this session, we aim to share the latest research and clinical experiences on non-atherosclerotic, non-cardio-embolic stroke which are rare, yet require different therapeutic approaches.</li>
@@ -404,27 +419,33 @@
 										<th>13:00 - 13:20</th>
 										<td>
 											<p class="s_bold">Dissection</p>
-											<p>Seong-Joon Lee (Ajou University, Korea)</p>
+											<p>Seong Joon Lee (Ajou University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>13:20 - 13:40</th>
 										<td>
-											<p class="s_bold">Cervical and cerebral artery dissection</p>
+											<p class="s_bold">Vasculitis</p>
 											<p>Wookjin Yang (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>13:40 - 14:00</th>
 										<td>
-											<p class="s_bold">Cancer-related stroke </p>
-											<p>Han-Jin Cho (Pusan National University)</p>
+											<p class="s_bold">
+												Cancer-related stroke 
+											</p>
+											<p>
+												Dongwhane Lee (Eulji University, Korea)
+											</p>
 										</td>
 									</tr>
 									<tr>
 										<th>14:00 - 14:20</th>
 										<td>
-											<p class="s_bold">PFO-paradoxilcal embolic cause of stroke?</p>
+											<p class="s_bold">
+												Characteristics of PFO-related Stroke and its Secondary Prevention
+											</p>
 											<p>Hyung Jun Kim (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
@@ -490,8 +511,8 @@
 									<tr class="non_border_b">
 										<th>15:00 - 15:40</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											 <p class="s_bold">TBD</p>
+											<p>Takayoshi Ohkubo </p> 
 										</td>
 									</tr>
 								</tbody>
@@ -508,7 +529,7 @@
 								<tbody>
 									<tr class="plus_tr">
 										<th class="dark_yellow_bg">15:40 - 17:20</th>
-										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC joint session
+										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC Joint Session: Comprehensive Cardiovascular Health: Risks and Prevention Strategies
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 											<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 										</td>
@@ -521,7 +542,7 @@
 										<th class="dark_yellow_bg"> 15:40 - 17:20</th>
 									</tr>
 									<tr class="yellow_bg non_border_b plus_tr">
-										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC joint session: Comprehensive Cardiovascular Health: Risks and Prevention Strategies
+										<td class="yellow_bg">Symposium 5 <br/>KSCP-ASPC Joint Session: Comprehensive Cardiovascular Health: Risks and Prevention Strategies
 										</td>
 									</tr>
 								</tbody>
@@ -534,7 +555,7 @@
 								<tbody>
 								<tr class="preview_tr yellow">
 										<td colspan="2">
-											<p>Organizer : Hyeon Chang Kim(Yonsei University, Republic of Korea)</p>
+											<p>Organizer : Hyeon Chang Kim (Yonsei University, Republic of Korea)</p>
 											<ul>
 												<li>Comprehensive Approach in Cardiovascular Prevention, a special event from the collaboration between the American Society for Preventive Cardiology (ASPC) and the Korean Society of Cardiovascular Disease Prevention (KSCP). </li>
 												<li>This session will highlight innovative strategies for preventing cardiovascular disease. Dr. Heather M. Johnson will discuss the link between adverse pregnancy outcomes and cardiovascular disease. </li>
@@ -550,16 +571,15 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										</th>
 										<td>
 											<p>
-												Heather M. Johnson (Florida Atlantic University, USA)
-												<br>Won-Young Lee (Sungkyunkwan University, Korea)
-								
+												 Heather M. Johnson (Florida Atlantic University, USA)
+												<!--<br>Won-Young Lee (Sungkyunkwan University, Korea) -->
 											</p>
 										</td>
 									</tr>
 									<tr>
 										<th>15:40 - 16:00</th>
 										<td>
-											<p class="s_bold">Adverse Pregnancy Outcomes and Cardiovascular Disease Risk; Autoimmune Conditions and CVD</p>
+											<p class="s_bold">Adverse Pregnancy Outcomes and Cardiovascular Disease Risk</p>
 											<p>Heather M. Johnson (Florida Atlantic University, USA)</p>
 										</td>
 									</tr>
@@ -567,7 +587,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>16:00 - 16:20</th>
 										<td>
 											<p class="s_bold">Prevention of Cardiovascular Disease among Cancer Survivors</p>
-											<p>Jung Mi-hyang (The Catholic University of Korea, Korea)</p>
+											<p>Mi-Hyang Jung (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -580,7 +600,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>16:40 - 17:00</th>
 										<td>
-											<p class="s_bold">Measurement of Socioeconomic Factors for Cardiovascular Disease Risk Assessment</p>
+											<p class="s_bold">Measurement of Socioeconomic Factors for Cardiovascular Disease Risk Assessmentt</p>
 											<p>Hyeon Chang Kim (Yonsei University, Korea)</p>
 										</td>
 									</tr>
@@ -691,7 +711,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
-										<td class="yellow_bg">Symposium 2 <br/>Updates on novel drugs in the field of diabetes and obesity
+										<td class="yellow_bg">Symposium 2 <br/>Updates on Novel Drugs in the Field of Diabetes and Obesity
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -703,7 +723,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th class="dark_yellow_bg">09:00 - 10:40</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 2 <br/>
+										<td class="yellow_bg">Symposium 2 <br/>Updates on Novel Drugs in the Field of Diabetes and Obesity
 										</td>
 									</tr>
 								</tbody>
@@ -726,37 +746,39 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>09:00 - 09:20</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">SGLT1/2 Dual Inhibitor</p>
+											<p>Eun-Jung Rhee (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:20 - 09:40</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">
+												Cardiovascular Effects of Tirzepatide 
+											</p>
+											<p>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:40 - 10:00</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Anti-Obesity Drugs</p>
+											<p>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>10:00 - 10:20</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Weekly Insulin: Pharmacokinetics/Dosing Strategy and Clinicaloutcome </p>
+											<p>Se Eun Park (Keimyung University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>10:20 - 10:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
+											 <p>Yoo Jin Han (Keimyung University, Korea)</p>
+											<!--<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -777,7 +799,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_gray_bg">11:10 - 11:50</th>
+										<th class="dark_gray_bg">11:00 - 11:10</th>
 										<td class="gray_bg">Opening address<br/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -787,7 +809,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 							<table class="table color_table mobile" name="plenary_lecture_1_mb">
 								<tbody>
 									<tr class="dark_gray_bg">
-										<th class="dark_gray_bg">15:30 - 17:00</th>
+										<th class="dark_gray_bg">11:00 - 11:10</th>
 									</tr>
 									<tr class="gray_bg non_border_b">
 										<td class="gray_bg">Opening address<br/>
@@ -849,14 +871,14 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br> TBD (TBD)</p> -->
+											<p>Won-Young Lee (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>11:10 - 11:50</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Familial Hypercholesterolaemia, Diagnosis and Management</p>
+											<p>Brian Tomlinson (Macau University of Science and Technology, Macao SAR)</p>
 										</td>
 									</tr>
 								</tbody>
@@ -904,8 +926,15 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
+									<tr>
+										<th>11:50 - 12:10</th>
+										<td>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
 									<tr class="non_border_b">
-										<th>11:50 - 13:00</th>
+										<th>12:10 - 12:30</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
@@ -959,29 +988,29 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>13:00 - 13:20</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Medical Problems and Costs in Korean Elderly</p>
+											<p>Seok-Jun Yoon (Korea University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>13:20 - 13:40</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Cardiovascular Diseases in the Elderly</p>
+											<p>Kwang-il Kim (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>13:40 - 14:00</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Diabetes in the Elderly</p>
+											<p>Jae Seung Yun (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>14:00 - 14:20</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Stroke in the Elderly</p>
+											<p>Chi Kyung Kim (Korea University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
@@ -1046,8 +1075,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr class="non_border_b">
 										<th>15:00 - 15:40</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">TBD</p>
+											<p>Takayoshi Ohkubo (Teikyo University School of Medicine, Japan)</p> 
 										</td>
 									</tr>
 								</tbody>
@@ -1077,7 +1106,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th class="dark_yellow_bg">15:40 - 17:20</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg plus_tr">Symposium 6 <br/>Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes
+										<td class="yellow_bg plus_tr">Symposium 6 <br/>ntegrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes
 										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>	
 									</td>
 									</tr>
@@ -1091,7 +1120,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 								<tr class="preview_tr yellow">
 										<td colspan="2">
-											<p>Organizer : Eun Hui Bae(Chonnam National University, Republic of Korea)</p>
+											<p>Organizer : Eun Hui Bae (Chonnam National University, Republic of Korea)</p>
 											<ul>
 												<li>Integrated Approach to CKD Management Including Hypertension, Dyslipidemia, and Diabetes,  must attend the session at our upcoming conference. </li>
 												<li>This session will cover innovative therapeutic strategies for managing CKD with hypertension, presenting the latest updates in hypertension guidelines. </li>
@@ -1119,37 +1148,43 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>15:40 - 16:00</th>
 										<td>
-											<p class="s_bold">Innovative Therapeutic Strategies in CKD with Hypertension: update in HTN guideline in CKD</p>
+											<p class="s_bold">
+												Innovative Therapeutic Strategies in CKD with Hypertension: Update in HTN Guideline in CKD
+											</p>
 											<p>Jeonghwan Lee (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:00 - 16:20</th>
 										<td>
-											<p class="s_bold">Latest Guidelines for Dyslipidemia Management in CKD: update in dyslipidemia guideline in CKD</p>
-											<p>Ban Tae Hyun (The Catholic University of Korea, Korea)</p>
+											<p class="s_bold">
+												Latest Guidelines for Dyslipidemia Management in CKD: Update in Dyslipidemia Guideline in CKD
+											</p>
+											<p>Tae Hyun Ban (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:20 - 16:40</th>
 										<td>
-											<p class="s_bold">Prevention and Early Intervention in Diabetic Kidney Disease: update guideline in DKD</p>
-											<p>Song, Soo Hyun (Chonnam National University, Korea)</p>
+											<p class="s_bold">
+												Prevention and Early Intervention in Diabetic Kidney Disease: Update Guideline in DKD
+											</p>
+											<p>Su Hyun Song (Chonnam National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:40 - 17:00</th>
 										<td>
 											<p class="s_bold">Leveraging AI for Hypertension Research Advances</p>
-											<p>Yeom, Jae-Beom (Inje University, Korea)</p>
+											<p>Jae Boum Youm (Inje University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>17:00 - 17:20</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>Eun Hui Bae (Chonnam National University, Korea), Dae Eun Choi (Chungnam National University)</p>
-											<p>Soo Hyun Kim (Chung-Ang University, Korea), Won Min Hwang (Konyang University, Korea)</p>
+											<p>Eun Hui Bae (Chonnam National University, Korea), Dae Eun Choi (Chungnam National University, Korea)</p>
+											<p>Su Hyun Kim (Chung-Ang University, Korea), Won Min Hwang (Konyang University, Korea)</p>
 										</td>
 									</tr>
 								</tbody>

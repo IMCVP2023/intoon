@@ -147,8 +147,15 @@
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
+									<tr class="">
+										<th>07:00 - 07:30</th>
+										<td>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
 									<tr class="pink_panel_tr">
-										<th>07:00 - 08:00</th>
+										<th>07:30 - 08:00</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
@@ -174,7 +181,7 @@
 								<tbody>
 									<tr class="plus_tr">
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
-										<td class="yellow_bg">Symposium 7 <br/>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives 
+										<td class="yellow_bg">Symposium 7 <br/>What SGLT2 Inhibitors have Changed in Our Field - Multidisciplinary Perspectives 
 										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -187,7 +194,7 @@
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg plus_tr">Symposium 7 <br/>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives 
+										<td class="yellow_bg plus_tr">Symposium 7 <br/>What SGLT2 Inhibitors have Changed in Our Field - Multidisciplinary Perspectives 
 										</td>
 									</tr>
 								</tbody>
@@ -200,7 +207,7 @@
 								<tbody>
 									<tr class="preview_tr yellow">
 										<td colspan="2">
-											<p>Organizer : Jong-Chan Youn(The Catholic University of Korea, Korea)</p>
+											<p>Organizer : Jong-Chan Youn (The Catholic University of Korea, Korea)</p>
 											<ul>
 												<li>In this multidisciplinary session, we begin with an exploration of the known and unknown mechanisms of SGLT2 inhibitors, providing a foundational understanding of their function and impact.</li>
 												<li>Next, we will hear from leading experts in various fields: diabetologists will discuss the transformative effects of SGLT2 inhibitors on diabetes management, cardiologists will share insights into cardiovascular benefits, and nephrologists will examine the implications for kidney health.
@@ -214,44 +221,54 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Seung-Hyun Ko (The Catholic University of Korea, Korea)<br>Lee, Hae-Young (Seoul National University, Korea)</p>
+											<!--
+										 <p>Seung-Hyun Ko (The Catholic University of Korea, Korea)<br>-->
+										 	Hye Young Lee (Seoul National University, Korea)</p> 
 										</td>
 									</tr>
 									
 									<tr>
 										<th>08:30 - 08:50</th>
 										<td>
-											<p class="s_bold">The known and unknonw mechanisms of SGLT2 inhibitors </p>
-											<p>Lee, Yong Ho (Yonsei University, Korea)</p>
+											<p class="s_bold">
+												The Known and Unknonw Mechanisms of SGLT2 Inhibitors 
+											</p>
+											<p>Yong-ho Lee (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>08:50 - 09:10</th>
 										<td>
-											<p class="s_bold">What SGLT2 inhibitors have changed in our field - Diabetologist's Perspectives</p>
+											<p class="s_bold">
+												What SGLT2 Inhibitors have Changed in Our Field - Diabetologist's Perspectives
+											</p>
 											<p>Eun Young Lee (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:10 - 09:30</th>
 										<td>
-											<p class="s_bold">What SGLT2 inhibitors have changed in our field - Cardiologist's Perspectives</p>
-											<p>Cho, Dong Hyuk (Korea University, Korea)</p>
+											<p class="s_bold">
+												What SGLT2 Inhibitors have Changed in Our Field - Cardiologist's Perspectives
+											</p>
+											<p>Dong-Hyuk Cho (Korea University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:30 - 09:50</th>
 										<td>
-											<p class="s_bold">What SGLT2 inhibitors have changed in our field - Nephrologist's Perspectives</p>
-											<p>Eun Hui Bae (Chonnam National University, Korea)</p>
+											<p class="s_bold">
+												What SGLT2 Inhibitors have Changed in Our Field - Nephrologist's Perspectives
+											</p>
+											<p>Hyung Deok Kim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>09:50 - 10:10</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>Lee, Chan Joo (Yonsei University, Korea), Jin Hwa Kim (Chosun University, Korea)</p>
-											<p>Sang-Eun Lee (Ewha Womans University, Korea), Seon Ha Baek (Hallym University, Korea)</p>
+											<p>Jinhwa Kim (Chosun University, Korea)</p>
+											<!-- <p>Sang-Eun Lee (Ewha Womans University, Korea), Seon Ha Baek (Hallym University, Korea)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -302,7 +319,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
+											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 								 
@@ -353,7 +370,7 @@
 								<tbody>
 								<tr class="preview_tr yellow">
 										<td colspan="2">
-											<p>Organizer : Jong-Chan Youn(The Catholic University of Korea, Korea)</p>
+											<p>Organizer : Jong-Chan Youn (The Catholic University of Korea, Korea)</p>
 											<ul>
 												<li>In this session, we will explore the intricate link between these two critical health conditions. Our program begins with an overview of obesity, its definition, and clinical implications, setting the stage for understanding its impact on cardiovascular health. We'll then delve into the intriguing obesity paradox in cardiovascular disease, followed by insights into the role of bariatric surgery for obese patients with cardiovascular conditions. Finally, we will discuss the latest advancements in pharmacotherapy for these patients.</li>
 											</ul>
@@ -364,7 +381,9 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Eun-Jung Rhee (Sungkyunkwan University, Korea)<br/>Sang Hak Lee (Yonsei University, Korea)</p>
+											<p>
+												<!-- Eun-Jung Rhee (Sungkyunkwan University, Korea)<br/>-->
+												 Sang Hak Lee (Yonsei University, Korea)</p> 
 										</td>
 									</tr>
 									<tr>
@@ -377,15 +396,15 @@
 									<tr>
 										<th>11:30 - 11:50</th>
 										<td>
-											<p class="s_bold">Obesity Paradox in Cardiovascular Disease </p>
-											<p>Darae Kim (Sungkyunkwan University, Korea)</p>
+											<p class="s_bold">Obesity Paradox in Cardiovascular Disease</p>
+											<p>Da Rae Kim (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>11:50 - 12:10</th>
 										<td>
 											<p class="s_bold">Bariatric Surgery for Obese Patients with Cardiovascular Disease</p>
-											<p>Moon-Won Yoo (Ulsan University, Korea)</p>
+											<p>Moon Won Yoo (University of Ulsan, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -399,9 +418,8 @@
 										<th>12:30 - 12:50</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<p>Dae Young Cheon (Hallym University, Korea), Junho Hyun (Ulsan University, Korea)</p>
-											<p>Yeoree Yang (The Catholic University of Korea, Korea), Mihae Seo (Soonchunhyang University, Korea
-)</p>
+											<p>Dae young Cheon (Hallym University, Korea), Joon Ho Hyun (University of Ulsan, Korea)</p>
+											<p>Yeoree Yang (The Catholic University of Korea, Korea), Mihae Seo (Soonchunhyang University, Korea)</p>
 										</td>
 									</tr>
 									
@@ -462,6 +480,65 @@
 								</tbody>
 							</table>
 						</div>
+
+							<!-- plenary 4  -->
+							<div>
+							<table class="table color_table green_table" name="plenary_lecture_4">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_green_bg">13:50 - 14:30</th>
+										<td class="green_bg">Plenary Lecture 4<br/>								
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="plenary_lecture_4_mb">
+								<tbody>
+									<tr class="dark_green_bg">
+										<th class="dark_green_bg">13:50 - 14:30</th>
+									</tr>
+									<tr class="green_bg non_border_b">
+										<td class="green_bg">Plenary Lecture 4<br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="green_panel_tr">
+										<th class="leftT">
+											<p>Chairpersons</p>
+										</th>
+										<td>
+											<p>Kyung Yeol Lee (Yonsei University, Korea)</p>
+										</td>
+									</tr>
+									<tr class="green_panel_tr">
+										<th>13:50 - 14:30</th>
+										<td>
+											<p class="s_bold">TBD</p>
+											<p>Yong Jae Kim</p>
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>14:30 - 16:30</th>
+										<td>
+											<p>Coffee break</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
 				
 							<!-- Symposium11 -->
 							<div>
@@ -472,8 +549,8 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_yellow_bg">13:50 - 15:00</th>
-										<td class="yellow_bg">Symposium 11 <br/>Lifestyle modification for Prevention of CVD
+										<th class="dark_yellow_bg">14:50 - 16:30</th>
+										<td class="yellow_bg">Symposium 11 <br/> Lifestyle Modification for Prevention of Cardiovascular Disease
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -485,7 +562,7 @@
 										<th class="dark_yellow_bg">13:50 - 15:00</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 11 <br/>
+										<td class="yellow_bg">Symposium 11 <br/> Lifestyle Modification for Prevention of Cardiovascular Disease
 										</td>
 									</tr>
 								</tbody>
@@ -505,90 +582,39 @@
 										</td>
 									</tr>
 									<tr>
-										<th>13:50 - 14:10</th>
+										<th>14:50 - 15:10</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
-										<th>14:10 - 14:30</th>
+										<th>15:10 - 15:30</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
-										<th>14:30 - 14:50</th>
+										<th>15:30 - 15:50</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="discussion yellow_panel_tr">
-										<th>14:50 - 15:00</th>
+									<tr>
+										<th>15:50 - 16:10</th>
+										<td>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
+									<tr class="discussion non_border_b">
+										<th>16:10 - 16:30</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
 											<p>TBD (TBD), TBD (TBD)</p> -->
-										</td>
-									</tr>
-									<tr class="non_border_b">
-										<th>15:00 - 15:20</th>
-										<td>
-											<p>Coffee break</p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						
-						<!-- plenary 4  -->
-						<div>
-							<table class="table color_table green_table" name="plenary_lecture_4">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="dark_green_bg">15:20 - 16:00</th>
-										<td class="green_bg">Plenary Lecture 4<br/>								
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="plenary_lecture_4_mb">
-								<tbody>
-									<tr class="dark_green_bg">
-										<th class="dark_green_bg">15:20 - 16:00</th>
-									</tr>
-									<tr class="green_bg non_border_b">
-										<td class="green_bg">Plenary Lecture 4<br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr class="green_panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
-										</td>
-									</tr>
-									<tr class="non_border_b">
-										<th>15:20 - 16:00</th>
-										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 								</tbody>
@@ -596,7 +622,7 @@
 						</div>
 						
 						<!-- Satellite Symposium 3  -->
-						<div>
+						<!-- <div>
 							<table class="table color_table violet_table" name="satellite_symposium_3">
 								<colgroup>
 									<col class="col_th">
@@ -606,7 +632,7 @@
 									<tr>
 										<th class="dark_violet_bg">16:00 - 17:40</th>
 										<td class="violet_bg">Satellite Symposium 3 <br/>
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										
 										</td>
 									</tr>
 								</tbody>
@@ -633,54 +659,54 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+											 <p>TBD (TBD)<br>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:00 - 16:20</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>16:20 - 16:40</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> 
 										</td>
 									</tr>
 									<tr>
 										<th>16:40 - 17:00</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											 <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> 
 										</td>
 									</tr>
 									<tr>
 										<th>17:00 - 17:20</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											 <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> 
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>17:20 - 17:40</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
+											 <p>TBD (TBD), TBD (TBD)</p>
+											<p>TBD (TBD), TBD (TBD)</p> 
 										</td>
 									</tr>
-									<!-- <tr class="non_border_b">
+									 <tr class="non_border_b">
 										<th>15:00 - 15:20</th>
 										<td>
 											<p>Coffee break</p>
 										</td>
-									</tr> -->
+									</tr> 
 								</tbody>
 							</table>
-						</div>
+						</div> -->
 
 						<!-- Closing Ceremony  -->
 						<div>
@@ -691,7 +717,7 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_gray_bg">17:40 - 18:00</th>
+										<th class="dark_gray_bg">16:30 - 16:50</th>
 										<td class="gray_bg">Closing Ceremony<br/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -701,7 +727,7 @@
 							<table class="table color_table mobile" name="plenary_lecture_1_mb">
 								<tbody>
 									<tr class="dark_gray_bg">
-										<th class="dark_gray_bg">17:40 - 18:00</th>
+										<th class="dark_gray_bg">16:30 - 16:50</th>
 									</tr>
 									<tr class="gray_bg non_border_b">
 										<td class="gray_bg">Closing Ceremony<br/>
@@ -760,8 +786,15 @@
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
+									<tr class="">
+										<th>07:00 - 07:30</th>
+										<td>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
 									<tr class="pink_panel_tr">
-										<th>07:00 - 08:00</th>
+										<th>07:30 - 08:00</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
@@ -786,7 +819,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
-										<td class="yellow_bg">Symposium 8 <br/>Non-traditional risk risk factors of cardiovascular disease 
+										<td class="yellow_bg">Symposium 8 <br/>Non-Traditional Risk Factors of Cardiovascular Disease 
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -798,7 +831,7 @@
 										<th class="dark_yellow_bg">08:30 - 10:10</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 8 <br/>
+										<td class="yellow_bg">Symposium 8 <br/>Non-Traditional Risk Factors of Cardiovascular Disease 
 										</td>
 									</tr>
 								</tbody>
@@ -820,8 +853,8 @@
 									<tr>
 										<th>08:30 - 08:50</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Cardiovascular Risk in Breast Cancer Survivorship: Latest Findings </p>
+											<p>Yong-Moon Mark Park (University of Arkansas for Medical Sciences, USA)</p>
 										</td>
 									</tr>
 									<tr>
@@ -834,8 +867,10 @@
 									<tr>
 										<th>09:10 - 09:30</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">
+												Synergistic Effect of Lipoprotein (a) and C-reactive Protein on Prognosis of Familial Hypercholesterolemia
+											</p>
+											<p>Hayato Tada (Kanazawa University, Japan)</p>
 										</td>
 									</tr>
 									<tr>
@@ -901,7 +936,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
+											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -925,7 +960,7 @@
 								<tbody>
 									<tr class="plus_tr">
 										<th class="dark_yellow_bg">11:10 - 12:50</th>
-										<td class="yellow_bg">Symposium 10 <br/>Regional, Social disparities in CV and metabolic health outcomes
+										<td class="yellow_bg">Symposium 10 <br/>Regional, Social Disparities in CV and Metabolic Health Outcomes
 										<img class="program_plus_btn" src="./img/icons/yellow_plus_btn.svg"/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -938,7 +973,7 @@
 										<th class="dark_yellow_bg">11:10 - 12:50</th>
 									</tr>
 									<tr class="yellow_bg non_border_b plus_tr">
-										<td class="yellow_bg">Symposium 10 <br/>
+										<td class="yellow_bg">Symposium 10 <br/>Regional, Social Disparities in CV and Metabolic Health Outcomes
 										</td>
 									</tr>
 								</tbody>
@@ -951,7 +986,7 @@
 								<tbody>
 								<tr class="preview_tr yellow">
 										<td colspan="2">
-											<p>Organizer : Seung-Hyun Ko(The Catholic University of Korea, Korea)</p>
+											<p>Organizer : Seung-Hyun Ko (The Catholic University of Korea, Korea)</p>
 											<ul>
 												<li>Cardiometabolic diseases are major health issues all around the world, especially in Korea, and standard guidelines for the average person continue to evolve. However, health disparities in certain groups still exist, and efforts to resolve them are on-going. This session explores the uneven distribution of these conditions across different social and regional factors, examining how factors such as socioeconomic status, urbanization, and access to healthcare influence these disparities. By understanding the underlying causes and regional differences, we aim to develop targeted interventions and policies to alleviate these disparities, improve public health outcomes, and ensure equitable healthcare access for all Koreans.
 												</li>
@@ -969,29 +1004,39 @@
 									<tr>
 										<th>11:10 - 11:30</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">
+												Cardiovascular and Renal Health Outcomes in Single-Person Households 
+											</p>
+											<p>Seung-Hwan Lee (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>11:30 - 11:50</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">
+												Regional Disparities in Prehospital Delay of Acute Ischemic Stroke 
+											</p>
+											<p>Keun-Hwa Jung (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>11:50 - 12:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">
+												Disparities in Mortality and Cardiovascular Events by Income and Blood Pressure Levels Among Patients with Hypertension in South Korea 
+											</p>
+											<p>Ki-Chul Sung (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>12:10 - 12:30</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">
+												Increasing Disparities in Diabetes Mellitus Prevalence Among People with Disabilities in South Korea
+											</p>
+											<p>
+												Jong Hyuk Park (Chungbuk National University Hospital, Korea)
+											</p> 
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
@@ -1061,6 +1106,66 @@
 								</tbody>
 							</table>
 						</div>
+						
+						<!-- plenary 4  -->
+						<div>
+							<table class="table color_table green_table" name="plenary_lecture_4_2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="dark_green_bg">13:50 - 14:30</th>
+										<td class="green_bg">Plenary Lecture 4<br/>								
+											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table color_table mobile" name="plenary_lecture_4_2_mb">
+								<tbody>
+									<tr class="dark_green_bg">
+										<th class="dark_green_bg">13:50 - 14:30</th>
+									</tr>
+									<tr class="green_bg non_border_b">
+										<td class="green_bg">Plenary Lecture 4<br/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table detail_table2">
+								<colgroup>
+									<col class="col_th">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr class="green_panel_tr">
+										<th class="leftT">
+											<p>Chairpersons</p>
+										</th>
+										<td>
+											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+										</td>
+									</tr>
+									
+									<tr class="green_panel_tr">
+										<th>13:50 - 14:30</th>
+										<td>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>14:30 - 14:50</th>
+										<td>
+											<p>Coffee break</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
 							<!--Symposium 12-->
 							<div>
 							<table class="table color_table yellow_table" name="symposium_12">
@@ -1070,7 +1175,7 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_yellow_bg">13:50 - 15:00</th>
+										<th class="dark_yellow_bg">14:50 - 16:30</th>
 										<td class="yellow_bg">Symposium 12<br/>Digital Healthcare
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -1080,7 +1185,7 @@
 							<table class="table color_table mobile" name="symposium_12_mb">
 								<tbody>
 									<tr class="dark_yellow_bg">
-										<th class="dark_yellow_bg">13:50 - 15:00</th>
+										<th class="dark_yellow_bg">14:50 - 16:30</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
 										<td class="yellow_bg">Symposium 12<br/>
@@ -1105,8 +1210,8 @@
 									<tr>
 										<th>13:50 - 14:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">TBD</p>
+											<p>Seonghoon Choi (Hallym University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -1123,7 +1228,7 @@
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="discussion yellow_panel_tr">
+									<tr class="discussion non_border_b">
 										<th>14:50 - 15:00</th>
 										<td>
 											<p class="s_bold">Panel discussion</p>
@@ -1131,155 +1236,11 @@
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="non_border_b">
-										<th>15:00 - 15:20</th>
-										<td>
-											<p>Coffee break</p>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						
-						<!-- plenary 4  -->
-						<div>
-							<table class="table color_table green_table" name="plenary_lecture_4_2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="dark_green_bg">15:20 - 16:00</th>
-										<td class="green_bg">Plenary Lecture 4<br/>								
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="plenary_lecture_4_2_mb">
-								<tbody>
-									<tr class="dark_green_bg">
-										<th class="dark_green_bg">15:20 - 16:00</th>
-									</tr>
-									<tr class="green_bg non_border_b">
-										<td class="green_bg">Plenary Lecture 4<br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr class="green_panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
-										</td>
-									</tr>
 									
-									<tr>
-										<th>15:20 - 16:00</th>
-										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
-										</td>
-									</tr>
 								</tbody>
 							</table>
 						</div>
-						
-						<!-- Satellite Symposium 4  -->
-						<div>
-							<table class="table color_table violet_table" name="satellite_symposium_4">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="dark_violet_bg">16:00 - 17:40</th>
-										<td class="violet_bg">Satellite Symposium 4<br/>
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table color_table mobile" name="satellite_symposium_4_mb">
-								<tbody>
-									<tr class="dark_violet_bg">
-										<th class="dark_violet_bg">16:00 - 17:40</th>
-									</tr>
-									<tr class="violet_bg non_border_b">
-										<td class ="violet_bg">Satellite Symposium 4<br/>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table class="table detail_table2">
-								<colgroup>
-									<col class="col_th">
-									<col width="*">
-								</colgroup>
-								<tbody>
-								<tr class="violet_panel_tr">
-										<th class="leftT">
-											<p>Chairpersons</p>
-										</th>
-										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
-										</td>
-									</tr>
-									<tr>
-										<th>16:00 - 16:20</th>
-										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
-										</td>
-									</tr>
-									<tr>
-										<th>16:20 - 16:40</th>
-										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
-										</td>
-									</tr>
-									<tr>
-										<th>16:40 - 17:00</th>
-										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
-										</td>
-									</tr>
-									<tr>
-										<th>17:00 - 17:20</th>
-										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
-										</td>
-									</tr>
-									<tr class="discussion non_border_b">
-										<th>17:20 - 17:40</th>
-										<td>
-											<p class="s_bold">Panel discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
-										</td>
-									</tr>
-									<!-- <tr class="non_border_b">
-										<th>15:00 - 15:20</th>
-										<td>
-											<p>Coffee break</p>
-										</td>
-									</tr> -->
-								</tbody>
-							</table>
-						</div>
+					
 						<!-- Closing Ceremony  -->
 						<div>
 							<table class="table color_table gray_table">
@@ -1289,7 +1250,7 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_gray_bg">17:40 - 18:00</th>
+										<th class="dark_gray_bg">16:30 - 16:50</th>
 										<td class="gray_bg">Closing Ceremony<br/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -1299,7 +1260,7 @@
 							<table class="table color_table mobile" name="plenary_lecture_1_mb">
 								<tbody>
 									<tr class="dark_gray_bg">
-										<th class="dark_gray_bg">17:40 - 18:00</th>
+										<th class="dark_gray_bg">16:30 - 16:50</th>
 									</tr>
 									<tr class="gray_bg non_border_b">
 										<td class="gray_bg">Closing Ceremony<br/>
