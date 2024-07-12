@@ -223,7 +223,7 @@
 										<td>
 											<!--
 										 <p>Seung-Hyun Ko (The Catholic University of Korea, Korea)<br>-->
-										 	Hye Young Lee (Seoul National University, Korea)</p> 
+										 	<!-- Hye Young Lee (Seoul National University, Korea)</p>  -->
 										</td>
 									</tr>
 									
@@ -233,7 +233,7 @@
 											<p class="s_bold">
 												The Known and Unknonw Mechanisms of SGLT2 Inhibitors 
 											</p>
-											<p>Yong-ho Lee (Yonsei University, Korea)</p>
+											<p>Yong-Ho Lee (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -266,7 +266,7 @@
 									<tr class="discussion yellow_panel_tr">
 										<th>09:50 - 10:10</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<p>Jinhwa Kim (Chosun University, Korea)</p>
 											<!-- <p>Sang-Eun Lee (Ewha Womans University, Korea), Seon Ha Baek (Hallym University, Korea)</p> -->
 										</td>
@@ -274,7 +274,7 @@
 									<tr class="non_border_b">
 										<th>10:10 - 10:30</th>
 										<td>
-											<p>Coffee break</p>
+											<p>Coffee Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -319,7 +319,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
+											<!-- <p>Sang Hong Baek (The Catholic University of Korea, Korea)</p> -->
 										</td>
 									</tr>
 								 
@@ -381,9 +381,9 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>
-												<!-- Eun-Jung Rhee (Sungkyunkwan University, Korea)<br/>-->
-												 Sang Hak Lee (Yonsei University, Korea)</p> 
+											
+												<!--<p> Eun-Jung Rhee (Sungkyunkwan University, Korea)<br/>-->
+                                                <!-- Sang Hak Lee (Yonsei University, Korea)</p>  -->
 										</td>
 									</tr>
 									<tr>
@@ -417,8 +417,8 @@
 									<tr class="discussion non_border_b">
 										<th>12:30 - 12:50</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
-											<p>Dae young Cheon (Hallym University, Korea), Joon Ho Hyun (University of Ulsan, Korea)</p>
+											<p class="s_bold">Panel Discussion</p>
+											<p>Dae Young Cheon (Hallym University, Korea), Joon Ho Hyun (University of Ulsan, Korea)</p>
 											<p>Yeoree Yang (The Catholic University of Korea, Korea), Mihae Seo (Soonchunhyang University, Korea)</p>
 										</td>
 									</tr>
@@ -519,7 +519,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Kyung Yeol Lee (Yonsei University, Korea)</p>
+											<!-- <p>Kyung Yeol Lee (Yonsei University, Korea)</p> -->
 										</td>
 									</tr>
 									<tr class="green_panel_tr">
@@ -530,9 +530,9 @@
 										</td>
 									</tr>
 									<tr class="non_border_b">
-										<th>14:30 - 16:30</th>
+										<th>14:30 - 14:50</th>
 										<td>
-											<p>Coffee break</p>
+											<p>Coffee Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -612,7 +612,7 @@
 									<tr class="discussion non_border_b">
 										<th>16:10 - 16:30</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
@@ -883,7 +883,7 @@
 									<tr class="discussion yellow_panel_tr">
 										<th>09:50 - 10:10</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
@@ -891,7 +891,7 @@
 									<tr class="non_border_b">
 										<th>10:10 - 10:30</th>
 										<td>
-											<p>Coffee break</p>
+											<p>Coffee Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -936,7 +936,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
+											<!-- <p>Sang Hong Baek (The Catholic University of Korea, Korea)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -1031,18 +1031,18 @@
 									<tr>
 										<th>12:10 - 12:30</th>
 										<td>
-											<p class="s_bold">
+											<!-- <p class="s_bold">
 												Increasing Disparities in Diabetes Mellitus Prevalence Among People with Disabilities in South Korea
 											</p>
 											<p>
 												Jong Hyuk Park (Chungbuk National University Hospital, Korea)
-											</p> 
+											</p>  -->
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>12:30 - 12:50</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
@@ -1159,7 +1159,7 @@
 									<tr class="non_border_b">
 										<th>14:30 - 14:50</th>
 										<td>
-											<p>Coffee break</p>
+											<p>Coffee Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -1208,30 +1208,37 @@
 										</td>
 									</tr>
 									<tr>
-										<th>13:50 - 14:10</th>
+										<th>14:50 - 15:10</th>
 										<td>
 											<p class="s_bold">TBD</p>
 											<p>Seonghoon Choi (Hallym University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
-										<th>14:10 - 14:30</th>
+										<th>15:10 - 15:30</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
-										<th>14:30 - 14:50</th>
+										<th>15:30 - 15:50</th>
+										<td>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
+                                    <tr>
+										<th>15:50 - 16:10</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
-										<th>14:50 - 15:00</th>
+										<th>16:10 - 16:30</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>

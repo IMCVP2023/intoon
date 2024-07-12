@@ -162,7 +162,7 @@
 										<th>09:00 - 09:20</th>
 										<td>
 											<p class="s_bold">Current Guidelines for Hypertension </p>
-											<p>Sung ha Park (Yonsei University, Korea)</p>
+											<p>Sung Ha Park (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -193,7 +193,7 @@
 									<tr class="discussion yellow_panel_tr">
 										<th>10:20 - 10:40</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<p>Jong-Chan Youn (The Catholic University of Korea, Korea), Minjae Yoon (Seoul National University, Korea)</p>
 											<p>
 												<!-- Jun Hwa Hong (Eulji university, Korea),  -->
@@ -203,7 +203,7 @@
 									<tr class="non_border_b">
 										<th>10:40 - 11:00</th>
 										<td>
-											<p>Coffee break</p>
+											<p>Coffee Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -290,14 +290,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Won-Young Lee (Sungkyunkwan University, Korea)</p>
+											<!-- <p>Won-Young Lee (Sungkyunkwan University, Korea)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>11:10 - 11:50</th>
 										<td>
 											<p class="s_bold">Familial Hypercholesterolaemia, Diagnosis and Management</p>
-											<p>Brian Tomlinson (Macau University of Science and Technology, Hongkong)</p>
+											<p>Brian Tomlinson (Macau University of Science and Technology, Macao SAR)</p>
 										</td>
 									</tr>
 								</tbody>
@@ -432,12 +432,12 @@
 									<tr>
 										<th>13:40 - 14:00</th>
 										<td>
-											<p class="s_bold">
+											<!-- <p class="s_bold">
 												Cancer-related stroke 
 											</p>
 											<p>
 												Dongwhane Lee (Eulji University, Korea)
-											</p>
+											</p> -->
 										</td>
 									</tr>
 									<tr>
@@ -452,7 +452,7 @@
 									<tr class="discussion yellow_panel_tr">
 										<th>14:20 - 14:40</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
@@ -460,7 +460,7 @@
 									<tr class="non_border_b">
 										<th>14:40 - 15:00</th>
 										<td>
-											<p>Coffee break</p>
+											<p>Coffee Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -512,7 +512,7 @@
 										<th>15:00 - 15:40</th>
 										<td>
 											 <p class="s_bold">TBD</p>
-											<p>Takayoshi Ohkubo </p> 
+											<p>Takayoshi Ohkubo (Teikyo University School of Medicine, Japan)</p> 
 										</td>
 									</tr>
 								</tbody>
@@ -571,7 +571,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										</th>
 										<td>
 											<p>
-												 Heather M. Johnson (Florida Atlantic University, USA)
+												 <!-- Heather M. Johnson (Florida Atlantic University, USA) -->
 												<!--<br>Won-Young Lee (Sungkyunkwan University, Korea) -->
 											</p>
 										</td>
@@ -607,7 +607,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr class="discussion non_border_b">
 										<th>17:00 - 17:20</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
@@ -770,13 +770,13 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>10:00 - 10:20</th>
 										<td>
 											<p class="s_bold">Weekly Insulin: Pharmacokinetics/Dosing Strategy and Clinicaloutcome </p>
-											<p>Se Eun Park (Keimyung University, Korea)</p>
+											<p>Se Eun Park (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>10:20 - 10:40</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											 <p>Yoo Jin Han (Keimyung University, Korea)</p>
 											<!--<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
@@ -784,7 +784,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr class="non_border_b">
 										<th>10:40 - 11:00</th>
 										<td>
-											<p>Coffee break</p>
+											<p>Coffee Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -812,7 +812,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th class="dark_gray_bg">11:00 - 11:10</th>
 									</tr>
 									<tr class="gray_bg non_border_b">
-										<td class="gray_bg">Opening address<br/>
+										<td class="gray_bg">Opening Address<br/>
 										</td>
 									</tr>
 								</tbody>
@@ -871,13 +871,13 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Won-Young Lee (Sungkyunkwan University, Korea)</p>
+											<!-- <p>Won-Young Lee (Sungkyunkwan University, Korea)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>11:10 - 11:50</th>
 										<td>
-											<p class="s_bold">Familial Hypercholesterolaemia, Diagnosis and Management</p>
+										    <p class="s_bold">Familial Hypercholesterolaemia, Diagnosis and Management</p>
 											<p>Brian Tomlinson (Macau University of Science and Technology, Macao SAR)</p>
 										</td>
 									</tr>
@@ -1016,7 +1016,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr class="discussion yellow_panel_tr">
 										<th>14:40 - 11:00</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
 											<p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
@@ -1024,7 +1024,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr class="non_border_b">
 										<th>10:40 - 11:00</th>
 										<td>
-											<p>Coffee break</p>
+											<p>Coffee Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -1182,7 +1182,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr class="discussion non_border_b">
 										<th>17:00 - 17:20</th>
 										<td>
-											<p class="s_bold">Panel discussion</p>
+											<p class="s_bold">Panel Discussion</p>
 											<p>Eun Hui Bae (Chonnam National University, Korea), Dae Eun Choi (Chungnam National University, Korea)</p>
 											<p>Su Hyun Kim (Chung-Ang University, Korea), Won Min Hwang (Konyang University, Korea)</p>
 										</td>
