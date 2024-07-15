@@ -1152,8 +1152,8 @@
 									<tr class="green_panel_tr">
 										<th>13:50 - 14:30</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">TBD</p>
+											<p>Yong Jae Kim</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">

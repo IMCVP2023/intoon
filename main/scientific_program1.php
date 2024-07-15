@@ -347,7 +347,7 @@
 										</td>
 									</tr>
 									
-									<tr class="non_border_b">
+									<tr class="">
 										<th>11:50 - 12:10</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
@@ -800,13 +800,13 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 									<tr>
 										<th class="dark_gray_bg">11:00 - 11:10</th>
-										<td class="gray_bg">Opening address<br/>								
+										<td class="gray_bg">Opening Address<br/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<table class="table color_table mobile" name="plenary_lecture_1_mb">
+							<table class="table color_table mobile" name="opening">
 								<tbody>
 									<tr class="dark_gray_bg">
 										<th class="dark_gray_bg">11:00 - 11:10</th>
@@ -835,7 +835,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 
 						<!-- plenary 1  -->
 						<div>
-							<table class="table color_table green_table" name="plenary_lecture_1">
+							<table class="table color_table green_table" name="plenary_lecture_1_2">
 								<colgroup>
 									<col class="col_th">
 									<col width="*">
@@ -849,10 +849,10 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									</tr>
 								</tbody>
 							</table>
-							<table class="table color_table mobile" name="plenary_lecture_1_mb">
+							<table class="table color_table mobile" name="plenary_lecture_1_2_mb">
 								<tbody>
 									<tr class="dark_green_bg">
-										<th class="dark_green_bg">15:30 - 17:00</th>
+										<th class="dark_green_bg">11:10 - 11:50</th>
 									</tr>
 									<tr class="green_bg non_border_b">
 										<td class="green_bg">Plenary Lecture 1<br/>
@@ -1014,7 +1014,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
-										<th>14:40 - 11:00</th>
+										<th>14:20 - 14:40</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
 											<!-- <p>TBD (TBD), TBD (TBD)</p>
@@ -1022,7 +1022,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										</td>
 									</tr>
 									<tr class="non_border_b">
-										<th>10:40 - 11:00</th>
+										<th>14:40 - 15:00</th>
 										<td>
 											<p>Coffee Break</p>
 										</td>
