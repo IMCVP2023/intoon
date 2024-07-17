@@ -52,7 +52,7 @@ $price = get_data($sql_price);
                             </li>
                             <li>
                                 <p></p>
-                                <p class="">Sign up or log into the registration system</p>
+                                <p class="">Sign up and log into the registration system</p>
                             </li>
                             <li>
                                 <p></p>
