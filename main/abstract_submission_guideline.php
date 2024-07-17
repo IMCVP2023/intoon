@@ -254,7 +254,7 @@ $info = sql_fetch($sql_info);
                 <div class="text_box indent">
                     <ul class="indent_ul">
                         <li>• All submitted abstracts will be reviewed by the Scientific Program Committee, following the reviewing procedures.</li>
-                        <li>• It is mandatory for all presenters to complete the registration process and pay the full registration fee by the registration deadline of <span class="point4_txt bold">November 3, 2024.</span> The registration fee will be fully refunded after the conference.</li>
+                        <li>• It is mandatory for all presenters to complete the registration process and pay the full registration fee by <span class="point4_txt bold">November 3, 2024.</span></li>
                         <li>• If the submission deadline changes, the acceptance notification date will also change. The
                             secretariat will announce via IMCVP website or newsletter.</li>
                     </ul>
@@ -288,7 +288,7 @@ $info = sql_fetch($sql_info);
                         <li>• The submitted and accepted abstracts may be published on the website, application, abstract book(PDF), and other printed materials of the Korean Society of Cardiovascular Disease Prevention(KSCP).</li>
 						<!-- <li>• If any related issue arises, please contact the congress secretariat at <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>.</li> -->
 						<li>• Submitted abstracts may be considered for online or offline publications and presentations, but they should not have been previously announced, publicized, or distributed online and offline in full article form before the abstract submission deadline.</li>
-                        <li>• For any further assistance, please contact the IMCVP2024 secretariat at <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>.</li>
+                        <li>• For any further assistance, please contact the IMCVP2024 Secretariat at <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>.</li>
                     </ul>
                 </div>
             </div>
