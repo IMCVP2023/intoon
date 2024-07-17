@@ -34,6 +34,7 @@
 	var alreadyProcess = false; // 더블 클릭 방지
 
 	$(document).ready(function() {
+		$("input[name=email]").focus()
 
 		// 비밀번호 찾기 Enter
 		$("input[name=email]").on("keyup", function(key) {

@@ -133,7 +133,7 @@ if ($during_yn !== "Y") {
         <div class="input_area">
             <h3 class="title">
 				<?= $locale("participant_tit") ?>
-				<p class="mt10"><span class="red_txt">*</span> In the "My Page - Account" section, users have the ability to edit their personal information.</p>
+				<p class="mt10"><span class="red_txt">*</span> In the "My Page - Account" section, you can change your personal information.</p>
 			</h3>
 			<div class="table_wrap detail_table_common x_scroll">
 				<table class="c_table detail_table type2">

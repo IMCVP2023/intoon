@@ -71,7 +71,7 @@ $floor = get_data($sql_floor);
                  </td>
              </tr>
 			 <tr>
-                 <th>Abbreviation of the title</th>
+                 <th>Abbreviation of the Title</th>
                  <td>
 				 	IMCVP 2024
                  </td>
@@ -107,7 +107,7 @@ $floor = get_data($sql_floor);
                  </td>
              </tr>
 			 <tr>
-                 <th>Official website</th>
+                 <th>Official Website</th>
                  <td>
                      <a href="https://imcvp.org" class="link under">imcvp.org</a>
                  </td>
@@ -121,30 +121,30 @@ $floor = get_data($sql_floor);
          </table>
 		</div>
 		<div class="table_wrap x_scroll inner">
-			<h3 class="title">Important dates</h3>
+			<h3 class="title">Important Dates</h3>
 			<table class="c_table2 detail_table type2">
 				<colgroup>
 					<col width="280px">
 					<col width="*">
 				</colgroup>
 				<tr>
-					<th>Abstract submission deadline 1<sup class="font_small">st</sup></th>
+					<th>Abstract Submission Deadline 1<sup class="font_small">st</sup></th>
 					<td>Sunday, <span class="bold point4_txt">August 18</span>, 2024</td>
 				</tr>
 				<tr>
-					<th>Abstract submission deadline 2<sup class="font_small">nd</sup></th>
+					<th>Abstract Submission Deadline 2<sup class="font_small">nd</sup></th>
 					<td>Sunday, <span class="bold point4_txt">October 6</span>, 2024</td>
 				</tr>
 				<tr>
-					<th>Notification of abstract acceptance</th>
+					<th>Notification of Abstract Acceptance</th>
 					<td>Wednesday, <span class="bold point4_txt">October 16</span>, 2024</td>
 				</tr>
 				<tr>
-					<th>Early-bird Registration deadline</th>
+					<th>Early-Bird Registration Deadline</th>
 					<td>Sunday, <span class="bold point4_txt">September 1</span>, 2024</td>
 				</tr>
 				<tr>
-					<th>Pre-registration deadline</th>
+					<th>Pre-Registration Deadline</th>
 					<td>Sunday, <span class="bold point4_txt">November 3</span>, 2024</td>
 				</tr>
 			</table>

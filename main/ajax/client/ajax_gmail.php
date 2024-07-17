@@ -3,8 +3,8 @@
 
 <?php
 //include_once('../../common/common.php');
-// error_reporting( E_ALL );
-// ini_set( "display_errors", 1 );
+error_reporting( E_ALL );
+ini_set( "display_errors", 1 );
 include_once('../../plugin/google-api-php-client-main/vendor/autoload.php');
 
 
@@ -1232,7 +1232,7 @@ if($language == "ko") {
                         <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>Abstract title : {$title} </div>
 						<div style='font-size:14px; padding:10px; margin-top:10px;'>If you have any questions regarding call for abstracts, please contact the secretariat (sci@imcvp.org)</div>
 						<div style='font-size:14px; padding:10px; margin-top:10px;'>We look forward to seeing you in IMCVP 2024.</div>
-						<div style='font-size:14px; padding:10px; margin-top:10px;'>Warmest regards, </div>
+						<div style='font-size:14px; padding:10px; margin-top:10px;'>Warmest regards, 감사합니다.</div>
 						<div style='font-size:14px; padding:10px; margin-top:10px;'>IMCVP 2024 Secretariat.</div>
                 </div>
 					
@@ -1269,8 +1269,8 @@ if($language == "ko") {
             </td>
         </tr>
     </tbody>
-</table>
-
+</table>";
+	}
 	//[240617] sujoeng / 좌장, 연자, 패널 메일 추가 / 템플릿 변경 필요
 	else if($mail_type == "speaker") {
 		$title = $data["title"] ?? [];

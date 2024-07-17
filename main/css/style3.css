@@ -173,7 +173,7 @@ input[type="file"].file_input + .file_label {display: inline-block; line-height:
 .steps_area.five_steps li:nth-child(1) p:first-of-type {background-image: url("/main/img/icons/step1.png");}
 .steps_area.five_steps li:nth-child(2) p:first-of-type {background-image: url("/main/img/icons/step2.png");}
 .steps_area.five_steps li:nth-child(3) p:first-of-type {background-image: url("/main/img/icons/step3.png");}
-.steps_area.five_steps li:nth-child(4) p:first-of-type {background-image: url("/main/img/icons/step4.png");}
+.steps_area.five_steps li:nth-child(4) p:first-of-type {background-image: url("/main/img/icons/step4-1.png");}
 
 .steps_area.five_steps.travel li:nth-child(1) p:first-of-type {background-image: url("/main/img/2024_travel_step1.png");}
 .steps_area.five_steps.travel li:nth-child(2) p:first-of-type {background-image: url("/main/img/2024_travel_step2.png");}
@@ -181,9 +181,9 @@ input[type="file"].file_input + .file_label {display: inline-block; line-height:
 .steps_area.five_steps.travel li:nth-child(4) p:first-of-type {background-image: url("/main/img/2024_travel_step4.png");}
 
 .steps_area.five_steps.registration li{width: 20%;}
-.steps_area.five_steps.registration li:nth-child(1) p:first-of-type {background-image: url("/main/img/2024_registration_step1.png");}
-.steps_area.five_steps.registration li:nth-child(2) p:first-of-type {background-image: url("/main/img/2024_registration_step2.png");}
-.steps_area.five_steps.registration li:nth-child(3) p:first-of-type {background-image: url("/main/img/2024_registration_step3.png");}
+.steps_area.five_steps.registration li:nth-child(1) p:first-of-type {background-image: url("/main/img/2024_registration_step1-1.png");}
+.steps_area.five_steps.registration li:nth-child(2) p:first-of-type {background-image: url("/main/img/2024_registration_step2-1.png");}
+.steps_area.five_steps.registration li:nth-child(3) p:first-of-type {background-image: url("/main/img/2024_registration_step3-1.png");}
 .steps_area.five_steps.registration li:nth-child(4) p:first-of-type {background-image: url("/main/img/2024_registration_step4.png");}
 .steps_area.five_steps.registration li:nth-child(5) p:first-of-type {background-image: url("/main/img/2024_registration_step5.png");}
 

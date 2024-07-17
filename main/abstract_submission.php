@@ -137,7 +137,7 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
 <h1 class="page_title">Call for Abstract
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
-				<a href="/main/abstract_submission.php" class="on">Online submission</a>
+				<a href="/main/abstract_submission.php" class="on">Online Submission</a>
                 <a href="/main/comingsoon.php">Presentation Guidelines</a>
 				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
 
@@ -159,7 +159,7 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
 
             <!-- 제목 시작 -->
             <div class="steps_area">
-                <img src="/main/img/2024_abstract_step1.png"/>
+                <img src="/main/img/2024_abstract_step1-1.png"/>
                 <!-- <ul class="clearfix">
                     <li class="on">
                         <p>STEP 01</p>

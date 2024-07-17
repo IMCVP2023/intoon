@@ -202,7 +202,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th class="nowrap">Verify password</th>
+							<th class="nowrap">Verify Password</th>
 							<td>
 								<div class="max_normal">
 									<input class="passwords" type="password" id="re_password" name="re_password" placeholder="Re-type password">

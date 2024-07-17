@@ -25,7 +25,7 @@ $info = sql_fetch($sql_info);
         <h1 class="page_title">Call for Abstract
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php" class="on">Abstract Submission Guidelines</a>
-				<a href="/main/abstract_submission.php">Online submission</a>
+				<a href="/main/abstract_submission.php">Online Submission</a>
                 <a href="/main/comingsoon.php">Presentation Guidelines</a>
 				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
 
@@ -39,7 +39,7 @@ $info = sql_fetch($sql_info);
             <div>
                 <div class="text_box">
                     <ul>
-                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="dark_blue_t bold">poster oral,&nbsp;</span><span class="light_blue_t bold">poster exhibitions,&nbsp;</span><span class="dark_gray_txt bold">Either.</span></li>
+                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="dark_blue_t bold">poster Oral,&nbsp;</span><span class="light_blue_t bold">Poster Exhibitions,&nbsp;</span><span class="dark_gray_txt bold">either.</span></li>
                         <li>All congress abstracts must be submitted online via the "Online Submission System."</li>
                         <li>Submitted abstracts will be reviewed by the Scientific Program Committee, and committee might request an oral presentation.</li>
                         <li>All presenters are required to register and pay the registration fee.</li>
@@ -65,9 +65,9 @@ $info = sql_fetch($sql_info);
                         <h3 class="title"><!--<?= $locale("keydate") ?>-->Key Dates<span>&nbsp;&nbsp;&nbsp; *KST (UTC+9)</span></h3>
                     </div>
                     <div class="abstract_key_date_box">
-                        <img src="/main/img/icons/key_date-1.png" alt="key_dates-1"/>
-                        <img src="/main/img/icons/key_date-2.png" alt="key_dates-2"/>
-                        <img src="/main/img/icons/key_date-3.png" alt="key_dates-3"/>
+                        <img src="/main/img/icons/key_date-1-1.png" alt="key_dates-1"/>
+                        <img src="/main/img/icons/key_date-2-1.png" alt="key_dates-2"/>
+                        <img src="/main/img/icons/key_date-3-1.png" alt="key_dates-3"/>
                     </div>
                     <!-- <div class="table_wrap detail_table_common x_scroll">
 						<table class="c_table detail_table td_nowrap_table">
@@ -106,9 +106,9 @@ $info = sql_fetch($sql_info);
                     </div>
                     <div class="text_box">
                     <ul class="abstract_type">
-                        <li><a href="./comingsoon.php">Poster oral</a></li>
+                        <li><a href="./comingsoon.php">Poster Oral</a></li>
                         <!-- <li><a href="./abstract_submission_oral.php">Poster oral</a></li> -->
-                        <li><a href="./comingsoon.php">Poster exhibitions</a></li>
+                        <li><a href="./comingsoon.php">Poster Exhibitions</a></li>
                         <li><a href="./comingsoon.php">Either</a></li>
                     </ul>
                 </div>
@@ -143,7 +143,7 @@ $info = sql_fetch($sql_info);
 							<p class="">You will receive an acceptance notification via email.</p>
 						</li>
 					</ul>
-                    <p class="red_t bold text_center font20">* Note: Accepted abstracts qualify for free registration for <span class="bold dark_blue_t font20">the presenting author only per abstract.</span></p>
+                    <p class="red_t bold text_center font20">* Note: Accepted abstracts qualify for free registration to <span class="bold dark_blue_t font20">the presenting author only per abstract.</span></p>
 				</div>
             </div>
             <!--Steps for Abstract Submission end-->
@@ -151,7 +151,7 @@ $info = sql_fetch($sql_info);
             <!--Instructions start-->
             <div>
                 <div class="section_title_wrap2">
-                    <h3 class="title">General guidelines</h3>
+                    <h3 class="title">General Guidelines</h3>
                 </div>
                 <div class="table_wrap detail_table_common x_scroll">
                     <table class="c_table detail_table type2">
@@ -162,18 +162,18 @@ $info = sql_fetch($sql_info);
                         <tr>
                             <th>Presentation Type </th>
                             <td>
-                                <p class="dark_blue_t bold">Poster oral</p>
-                                <p class="light_blue_t bold">Poster exhibitions only</p>
+                                <p class="dark_blue_t bold">Poster Oral</p>
+                                <p class="light_blue_t bold">Poster Exhibitions Only</p>
                                 <p class="dark_gray_txt bold">Either</p>
-                                <p>(* Scientific committee may change your presentation type after reviewing it.)</p>
+                                <p>(* Scientific Program Committee may change your presentation type after reviewing it.)</p>
                             </td>
                         </tr>
                         <tr>
                             <th>Language</th>
-                            <td>English only</td>
+                            <td>English Only</td>
                         </tr>
                         <tr>
-                            <th>Length of body</th>
+                            <th>Length of Body</th>
                             <td>No longer than 300 words</td>
                         </tr>
                         <tr>
@@ -198,7 +198,7 @@ $info = sql_fetch($sql_info);
                             </td>
                         </tr>
                         <tr>
-                            <th>Structure of research abstract</th>
+                            <th>Structure of Research Abstract</th>
                             <td>Objectives / Methods / Results / Conclusions</td>
                         </tr>
                         <!-- <tr>
@@ -228,19 +228,19 @@ $info = sql_fetch($sql_info);
                 </div>
                 <div class="text_box">
                     <ul>
-                        <li class="f_bold"><span class="bold">1. </span>Ischemic heart disease/coronary artery disease</li>
-                        <li class="f_bold"><span class="bold">2. </span>Heart failure with reduced ejection fraction and preserved ejection fraction</li>
+                        <li class="f_bold"><span class="bold">1. </span>Ischemic Heart Disease/Coronary Artery Disease</li>
+                        <li class="f_bold"><span class="bold">2. </span>Heart Failure with Reduced Ejection Fraction and Preserved Ejection Fraction</li>
                         <li class="f_bold"><span class="bold">3. </span>Cardiomyopathies</li>
-                        <li class="f_bold"><span class="bold">4. </span>Chronic Kidney Disease (CKD) and Cardiovascular Disease</li>
+                        <li class="f_bold"><span class="bold">4. </span>Chronic Kidney Disease and Cardiovascular Disease</li>
                         <li class="f_bold"><span class="bold">5. </span>Preventive Cardiology</li>
-                        <li class="f_bold"><span class="bold">6. </span>Cardiac arrhythmias</li>
-                        <li class="f_bold"><span class="bold">7. </span>Peripheral arterial disease</li>
-                        <li class="f_bold"><span class="bold">8. </span>Basic science and genetics</li>
-                        <li class="f_bold"><span class="bold">9. </span>COVID-19 related cardio-pharmacotherapy</li>
-                        <li class="f_bold"><span class="bold">10. </span>Diabetes & Obesity</li>
-                        <li class="f_bold"><span class="bold">11. </span>Hyperlipidemia and CVD</li>
+                        <li class="f_bold"><span class="bold">6. </span>Cardiac Arrhythmias</li>
+                        <li class="f_bold"><span class="bold">7. </span>Peripheral Arterial Disease</li>
+                        <li class="f_bold"><span class="bold">8. </span>Basic Science and Genetics</li>
+                        <li class="f_bold"><span class="bold">9. </span>COVID-19 Related Cardio-Pharmacotherapy</li>
+                        <li class="f_bold"><span class="bold">10. </span>Diabetes and Obesity</li>
+                        <li class="f_bold"><span class="bold">11. </span>Hyperlipidemia and Cardiovascular Disease</li>
                         <li class="f_bold"><span class="bold">12. </span>Epidemiology</li>
-                        <li class="f_bold"><span class="bold">13. </span>Precision medicine/ Digital healthcare</li>
+                        <li class="f_bold"><span class="bold">13. </span>Precision Medicine/Digital Healthcare</li>
                         <li class="f_bold"><span class="bold">14. </span>Others</li>
                     </ul>
                 </div>
@@ -253,10 +253,10 @@ $info = sql_fetch($sql_info);
                 </div>
                 <div class="text_box indent">
                     <ul class="indent_ul">
-                        <li>• All submitted abstracts will be reviewed by the Scientific Program Committee according to reviewing procedures.</li>
+                        <li>• All submitted abstracts will be reviewed by the Scientific Program Committee, following the reviewing procedures.</li>
                         <li>• It is mandatory for all presenters to complete the registration process and pay the full registration fee by the registration deadline of <span class="point4_txt bold">November 3, 2024.</span> The registration fee will be fully refunded after the conference.</li>
-                        <li>• If the submission deadline changes, the acceptance notification also changes. The
-                            secretariat will be notified via IMCVP website or newsletter.</li>
+                        <li>• If the submission deadline changes, the acceptance notification date will also change. The
+                            secretariat will announce via IMCVP website or newsletter.</li>
                     </ul>
                 </div>
             </div>
@@ -269,7 +269,7 @@ $info = sql_fetch($sql_info);
                 </div>
                 <div class="text_box indent">
                     <ul class="indent_ul">
-                        <li>• If the presenting author of an accepted abstract does not register by 3 November 2024, the abstract will be automatically withdrawn from the final program.</li>
+                        <li>• If the presenting author of an accepted abstract does not register by November 3, 2024 the abstract will be automatically withdrawn from the final program.</li>
                         <li>• If you would like to withdraw an abstract, please notify the IMCVP 2024 Secretariat(<a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>) as soon as possible.</li>
                     </ul>
                 </div>
@@ -284,10 +284,11 @@ $info = sql_fetch($sql_info);
                 <div class="text_box indent">
                     <ul class="indent_ul">
                         <li>• If the submission does not comply with the prescribed format or deviates from the basic purpose of this congress, it may be rejected at the discretion of the Scientific Committee.</li>
-                        <li>• The subject of the abstract is limited to unpublished research results, and editing of content previously presented at other conferences is not accepted for submission.</li>
+                        <li>• The subject of the abstract is limited to unpublished research results, and editing of content previously presented at other conferences will not be accepted. </li>
                         <li>• The submitted and accepted abstracts may be published on the website, application, abstract book(PDF), and other printed materials of the Korean Society of Cardiovascular Disease Prevention(KSCP).</li>
-						<li>• If any related issue arises, please contact the congress secretariat at <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>.</li>
+						<!-- <li>• If any related issue arises, please contact the congress secretariat at <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>.</li> -->
 						<li>• Submitted abstracts may be considered for online or offline publications and presentations, but they should not have been previously announced, publicized, or distributed online and offline in full article form before the abstract submission deadline.</li>
+                        <li>• For any further assistance, please contact the IMCVP2024 secretariat at <a class="link under" href="mailto:sci@imcvp.org">sci@imcvp.org</a>.</li>
                     </ul>
                 </div>
             </div>
