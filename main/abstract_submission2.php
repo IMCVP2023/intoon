@@ -158,7 +158,7 @@ var g5_editor_url = "<?= $editor_url ?>",
 <h1 class="page_title">Call for Abstract
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
-				<a href="/main/abstract_submission.php" class="on">Online submission</a>
+				<a href="/main/abstract_submission.php" class="on">Online Submission</a>
                 <a href="/main/comingsoon.php">Presentation Guidelines</a>
 				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
 
@@ -169,7 +169,7 @@ var g5_editor_url = "<?= $editor_url ?>",
     <div class="inner">
         <div class="section section1">
             <div class="steps_area">
-            <img src="/main/img/2024_abstract_step2.png"/>
+            <img src="/main/img/2024_abstract_step2-1.png"/>
                 <!-- <ul class="clearfix">
                     <li>
                         <p>STEP 01</p>
@@ -219,7 +219,7 @@ var g5_editor_url = "<?= $editor_url ?>",
                                         <input type="radio" class="radio" id="preferred_presentation_type_1"
                                             name="preferred_presentation_type" value="1"
                                             <?= ($detail['preferred_presentation_type'] == "1" ? "checked" : "") ?>>
-                                        <label for="preferred_presentation_type_1">Poster Exhibition only</label>
+                                        <label for="preferred_presentation_type_1">Poster Exhibition Only</label>
                                         <input type="radio" class="radio" id="preferred_presentation_type_2"
                                             name="preferred_presentation_type" value="2"
                                             <?= ($detail['preferred_presentation_type'] == "2" ? "checked" : "") ?>>

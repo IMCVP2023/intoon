@@ -192,7 +192,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
 		<h1 class="page_title">Call for Abstract
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
-				<a href="/main/abstract_submission.php" class="on">Online submission</a>
+				<a href="/main/abstract_submission.php" class="on">Online Submission</a>
 
 				<a href="/main/comingsoon.php">Presentation Guidelines</a>
 				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
@@ -204,7 +204,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
     <div class="inner">
         <div class="section section1">
             <div class="steps_area">
-			<img src="/main/img/2024_abstract_step3.png"/>
+			<img src="/main/img/2024_abstract_step3-1.png"/>
                 <!-- <ul class="clearfix">
                     <li>
                         <p>STEP 01</p>
@@ -230,7 +230,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                     <div class="x_scroll">
                         <div class="gray_border">
                             <div class="clearfix2">
-                                <span>[-]</span>
+                                <span></span>
                                 <span>
                                     <?php
 										foreach ($topic1_list as $tp) {

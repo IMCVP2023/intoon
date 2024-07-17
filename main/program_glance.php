@@ -61,7 +61,7 @@
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_2">
-								Symposium 2<p>Updates on novel drugs in the field of diabetes and obesity</p>
+								Symposium 2<p>Updates on Novel Drugs in the Field of Diabetes and Obesity</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -94,7 +94,7 @@
 						<tr>
 							<td class="">13:00~14:40</td>
 							<td class="yellow_bg pointer" name="symposium_3">
-								Symposium 3<p>Non-atherosclerotic, non-cardioembolic cerebral infarction</p>
+								Symposium 3<p>Non-Atherosclerotic, Non-Cardioembolic Cerebral Infarction</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_4">
@@ -116,7 +116,7 @@
 						<tr>
 							<td class="">15:40~17:20</td>
 							<td class="yellow_bg pointer" name="symposium_5">
-								Symposium 5<p>KSCP-ASPC joint session</p>
+								Symposium 5<p>KSCP-ASPC Joint Session</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_6">
@@ -182,11 +182,11 @@
 						<tr>
 							<td class="">08:30~10:10</td>
 							<td class="yellow_bg pointer" name="symposium_7">
-								Symposium 7<p>What SGLT2 inhibitors have changed in our field - Multidisciplinary Perspectives</p>
+								Symposium 7<p>What SGLT2 Inhibitors have Changed in Our Field – Multidisciplinary Perspectives</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_8">
-								Symposium 8<p>Non-traditional risk risk factors of cardiovascular disease</p>
+								Symposium 8<p>Non-Traditional Risk Factors of Cardiovascular Disease</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -208,7 +208,7 @@
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_10">
-								Symposium 10<p>Regional, Social disparities in CV and metabolic health outcomes</p>
+								Symposium 10<p>Regional, Social Disparities in CV and Metabolic Health Outcomes</p>
 								<input type="hidden" name="e" value="room2">
 							</td>
 						</tr>
@@ -237,7 +237,7 @@
 						<tr>
 							<td class="">14:50~16:30</td>
 							<td class="yellow_bg pointer" name="symposium_11">
-								Symposium 11<p>Lifestyle modification for Prevention of CVD</p>
+								Symposium 11<p>Lifestyle Modification for Prevention of Cardiovascular Disease</p>
 								<input type="hidden" name="e" value="room1">
 							</td>
 							<td class="yellow_bg pointer" name="symposium_12">

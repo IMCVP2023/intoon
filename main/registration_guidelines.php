@@ -48,7 +48,7 @@ $price = get_data($sql_price);
                         <ul class="clearfix">
                             <li>
                                 <p></p>
-                                <p class="">Click the <span class="point4_txt">“go to online registration”</span> button</p>
+                                <p class="">Click the <span class="point4_txt">“Go to Registration”</span> button</p>
                             </li>
                             <li>
                                 <p></p>
@@ -179,7 +179,7 @@ $price = get_data($sql_price);
                                 <tr class="text_center">
 									<td>
                                         Trainee,<br>
-										students
+										Students
 									</td>
 									<td class="point4_txt bold">USD 50</td>
 									<td class="point4_txt bold">USD 75</td>
@@ -191,7 +191,7 @@ $price = get_data($sql_price);
 								<tr class="text_center">
 									<td>
                                         Pharmacist,<br>
-										 Nurse, exercisetherapist,<br>
+										 Nurse, Excercisetherapist,<br>
                                          Nutritionists,Researchers<br>
 										<!-- Corporate member, Others<br> -->
 									</td>
@@ -240,7 +240,7 @@ $price = get_data($sql_price);
                                 <tr class="text_center">
 									<td>
                                     Trainee (<span class="kor bold">전임의, 전공의</span>),<br>
-										students
+                                    Students
 									</td>
                                     <td class="point4_txt bold">KRW 50,000</td>
 									<td class="point4_txt bold">KRW 75,000</td>
@@ -251,7 +251,7 @@ $price = get_data($sql_price);
 								</tr>
 								<tr class="text_center">
 									<td>
-                                        Pharmacist,<br>
+                                        Pharmacist, Excercisetherapist<br>
 										 Nurse, exercisetherapist,<br>
                                          Nutritionists,Researchers<br>
 										<!-- Corporate member, Others<br> -->
@@ -269,11 +269,13 @@ $price = get_data($sql_price);
                     
 					<div class="mt10">
 						<ul class="indent_ul">
-							<li>• A registration confirmation will be sent to your registered email address once you have completed your registration with full payment.<br/>If you have not received it, please contact the congress secretariat.</li>
-							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as <span class="bold point4_txt">'unpaid.'</span><br/>If you need to confirm the payment completion, you can check the payment status on <span class="bold point4_txt">'my page.'</span> (Please be aware that it may take some time for the payment confirmation to be updated.)</li>
-							<li>• Registration will not be considered complete until the full registration fee has been paid.</li>
-							<li>• The online registration page is optimized for <span class="bold point4_txt">Google Chrome</span> and <span class="bold point4_txt">Microsoft Edge</span>.<br/>If you encounter any issues with online registration, please reach out to the congress secretariat for assistance.</li>
-							<li>• If you would like to modify your registration information, please contact the congress secretariat at <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
+							<li>• A confirmation letter for registration will be sent to your registered email address once you complete your registration with full payment.<br/>If you have not received it, please contact the congress secretariat(<a href="mailto:info@imcvp.org">info@imcvp.org</a>).</li>
+							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as <span class="bold point4_txt">'Unpaid.'</span><br/>If you need to confirm the payment, you can check the payment status on <span class="bold point4_txt">'My Page.'</span> (Please be aware that it may take 3~5 business days for the payment confirmation to be updated.)</li>
+							<li>• Registration status will not be considered ‘Complete’ after the full payment.</li>
+							<li>• The online registration page is optimized for <span class="bold point4_txt">Google Chrome</span> and <span class="bold point4_txt">Microsoft Edge</span>.
+                            <!-- <br/>If you encounter any issues with online registration, please reach out to the congress secretariat for assistance. -->
+                        </li>
+							<li>• For any further assistance, please contact the congress secretariat at <a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a></li>
 						</ul>
 					</div>
                 </div>
@@ -356,7 +358,7 @@ $price = get_data($sql_price);
                 <div class="">
                     <ul class="indent_ul">
                         <li>• The cancellation of full payment registration and reimbursement will only be accepted in written form and must be submitted via email to the secretariat.<br>(<a href="mailto:info@imcvp.org" class="font_inherit link">info@imcvp.org</a>)</li>
-                        <li>• Prior to making a payment, it is possible to cancel registration through <span class="point4_txt bold">"My IMCVP - Registration"</span>. <br/>However, payment has already been processed, it is necessary to contact the secretariat for further assistance.</li>
+                        <li>• Prior to making a payment, it is possible to cancel registration through <span class="point4_txt bold">"My IMCVP - Registration"</span>. <br/>However, if payment has already been processed, it is necessary to contact the secretariat for further assistance.</li>
                         <li>• Please note that refunds will be processed after the conference.</li>
                         <li>• All bank service charges and administration fees will be deducted from the refund.</li>
                     </ul>
@@ -399,7 +401,7 @@ $price = get_data($sql_price);
     <!-- 	<?= $locale("registration") ?> -->
     <!-- </button> -->
 	<div class="centerT" >
-		<a href="./registration.php" class="btn long_btn text_long" style="color:#FFF !important">Go to Online Registration</a>
+		<a href="./registration.php" class="btn long_btn text_long" style="color:#FFF !important">Go to Registration</a>
 	</div>
 
     <!-- 평점안내 팝업 / 시작 -->
