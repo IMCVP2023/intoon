@@ -19,9 +19,10 @@
 <h1 class="page_title">News & Information
 			<div class="sub_btn_box">
 				<a href="/main/board_notice.php">News</a>
-				<a href="/main/board_newsletter.php">Newsletter</a>
+				<!-- <a href="/main/board_newsletter.php">Newsletter</a> -->
 				<a href="/main/visa.php" class="on">VISA</a>
 				<a href="/main/useful_information.php">Useful Information</a>
+				<a href="/main/attraction_seoul.php">Attractions in Seoul</a>
 			</div>
 		</h1>
     <div class="inner">
