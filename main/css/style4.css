@@ -2527,7 +2527,8 @@ select[name="topic1"] option:disabled {
 @media screen and (max-width:740px) {
 
 	section.container .page_title{
-		padding: 60px 0 48px;
+		/* padding: 60px 0 48px; */
+		padding: 10px 0 48px;
 	}
 	.page_title .sub_btn_box {
 		width: 100%;

@@ -145,6 +145,7 @@ $locale = locale($language);
                             <!-- <li><a href="/main/comingsoon.php">Newsletter</a></li> -->
                             <li><a href="/main/visa.php">VISA</a></li>
                             <li><a href="/main/useful_information.php">Useful Information</a></li>
+                            <li><a href="/main/attraction_seoul.php">Attractions in Seoul</a></li>
 
                             <!-- <li><a href="/main/board_notice.php">Notice</a></li>
                             <li><a href="/main/board_newsletter.php">Newsletter</a></li>
@@ -353,6 +354,7 @@ $(document).ready(function() {
                     <!-- <li><a href="/main/comingsoon.php">Newsletter</a></li> -->
                     <li><a href="/main/visa.php">VISA</a></li>
                     <li><a href="/main/useful_information.php">Useful Information</a></li>
+                    <li><a href="/main/attraction_seoul.php">Attractions in Seoul</a></li>
 
                     <!-- <li><a href="/main/board_notice.php">Notice</a></li>
                     <li><a href="/main/board_newsletter.php">Newsletter</a></li>
