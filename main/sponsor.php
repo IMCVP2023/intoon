@@ -96,6 +96,9 @@
 				<li>
 					<a href="https://www.lgchem.com/main/index" class="lg_chem">lg_chem</a>
 				</li>
+				<li class="small">
+					<a href="https://www.inno-n.com/eng/" class="inno_n">inno_n</a>
+				</li>
 			</ul>
 			<p class="grade_title gold_bg">Gold</p>
 			<ul class="grade_wrap length_4">
@@ -109,6 +112,12 @@
 					<a href="https://www.boehringer-ingelheim.com" class="bily">bily</a>
 				</li>
 				<li>
+					<a href="https://www.viatris.com/en" class="viatris">viatris</a>
+				</li>
+				<li>
+					<a href="https://www.astrazeneca.com/" class="astra_zeneca">astra_zeneca</a>
+				</li>
+				<li>
 					<a href="https://www.otsuka.co.jp/en/" class="otsuka">otsuka</a>
 				</li>
 			</ul>
@@ -120,18 +129,15 @@
 				<li>
 					<a href="https://www.bayer.com/en/" class="bayer">Bayer</a>
 				</li>
-
+				<li>
+					<a href="http://www.dalimpharm.co.kr/en_index.html" class="dalimbiotech">dalimbiotech</a>
+				</li>
 				<li class="small">
 					<a href="https://www.sanofi.com/en/our-company" class="sanofi">sanofi</a>
 				</li>
 				<li>
-					<a href="http://www.dalimpharm.co.kr/en_index.html" class="dalimbiotech">dalimbiotech</a>
-				</li>
-				<li>
 					<a href="https://www.organon.com/" class="organon">ORGANON</a>
 				</li>
-
-				
 				<li class="small">
 					<a href="https://www.handok.co.kr" class="handok">handok</a>
 				</li>

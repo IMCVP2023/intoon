@@ -1349,6 +1349,9 @@ a.daewon {background-image: url("../img/sponsor/logo24.png");}
 a.lilly {background-image: url("../img/sponsor/logo25.png");}
 a.otsuka {background-image: url("../img/sponsor/logo31.png");}
 a.dksh {background-image: url("../img/sponsor/logo26.png");}
+a.viatris {background-image: url("../img/sponsor/logo34.png");}
+
+
 /*app STAMP TOUR > My Stamp*/
 .container.app_my_stamp .container_inner {padding-bottom: 40px;}
 .stamp_collect {padding:10px 16px; background-color:#E7E6E6; display:flex; align-items:center; justify-content:space-between;} /*임시 스타일*/
