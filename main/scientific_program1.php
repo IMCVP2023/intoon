@@ -507,7 +507,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
+											<!-- <p>Sang Hong Baek (The Catholic University of Korea, Korea)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -671,7 +671,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 							</table>
 						</div>
 						<!-- Gala Dinner  -->
-						<div>
+						<!-- <div>
 							<table class="table color_table gray_table">
 								<colgroup>
 									<col class="col_th">
@@ -681,7 +681,6 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th class="dark_gray_bg">18:00 ~</th>
 										<td class="gray_bg">Gala Dinner<br/>								
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
 								</tbody>
@@ -697,7 +696,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									</tr>
 								</tbody>
 							</table>
-						</div>
+						</div> -->
 					</div>
 						<!-- <div class="circle_title">Breakfast &amp; Luncheon Symposium</div> -->
 						<!-- Luncheon Symposium 1 (K) [Daewoong]  -->
@@ -1071,7 +1070,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
+											<!-- <p>Sang Hong Baek (The Catholic University of Korea, Korea)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
