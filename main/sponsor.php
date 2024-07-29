@@ -83,10 +83,22 @@
 				<li>
 					<a href="https://www.hanmipharm.com/ehanmi/handler/Home-Start" class="hanmi_pharm">Hanmi Pharm</a>
 				</li>
-			
+
+				<li>
+					<a href="https://www.jw-pharma.co.kr/pharma/en/main.jsp" class="jw_pharm">jw_pharm</a>
+				</li>
+				<li class="">
+					<a href="http://en.donga-st.com/Main.da" class="dong_a">dong-a</a>
+				</li>
+				<li>
+					<a href="http://eng.yuhan.co.kr/Main/" class="yuhan">yuhan</a>
+				</li>
+				<li>
+					<a href="https://www.lgchem.com/main/index" class="lg_chem">lg_chem</a>
+				</li>
 			</ul>
 			<p class="grade_title gold_bg">Gold</p>
-			<ul class="grade_wrap length_3">
+			<ul class="grade_wrap length_4">
 				<li class="small">
 					<a href="https://www.daewonpharm.com/eng/main/index.jsp" class="daewon">Daewon</a>
 				</li>
@@ -94,9 +106,11 @@
 					<a href="http://www.ckdpharm.com/en/home" class="chong_kun_dang">Chong Kun Dang</a>
 				</li>
 				<li>
-					<a href="https://www.boehringer-ingelheim.com/" class="bily">bily</a>
+					<a href="https://www.boehringer-ingelheim.com" class="bily">bily</a>
 				</li>
-
+				<li>
+					<a href="https://www.otsuka.co.jp/en/" class="otsuka">otsuka</a>
+				</li>
 			</ul>
 			<p class="grade_title silver_bg">Silver</p>
 			<ul class="grade_wrap length_5">
@@ -115,6 +129,17 @@
 				</li>
 				<li>
 					<a href="https://www.organon.com/" class="organon">ORGANON</a>
+				</li>
+
+				
+				<li class="small">
+					<a href="https://www.handok.co.kr" class="handok">handok</a>
+				</li>
+				<li>
+					<a href="http://www.gcbiopharma.com/kor/index.do" class="gc_biopharma">gc</a>
+				</li>
+				<li>
+					<a href="https://www.dksh.com/kr-ko/home" class="dksh">dksh</a>
 				</li>
 
 			</ul>

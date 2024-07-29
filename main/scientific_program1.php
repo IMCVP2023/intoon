@@ -183,10 +183,10 @@
 										<th>10:00 - 10:20</th>
 										<td>
 											<p class="s_bold">
-												<!-- Current Guidelines for Heart Failure  -->
+												Current Guidelines for Heart Failure 
 											</p>
 											<p>
-												<!-- Byung-Soo Yoo (Yonsei University, Korea) -->
+												TBD
 											</p>
 										</td>
 									</tr>
@@ -196,7 +196,7 @@
 											<p class="s_bold">Panel Discussion</p>
 											<p>Jong-Chan Youn (The Catholic University of Korea, Korea), Minjae Yoon (Seoul National University, Korea)</p>
 											<p>
-												<!-- Jun Hwa Hong (Eulji university, Korea),  -->
+												Jun Hwa Hong (Eulji University, Korea), 
 												Suk Jeon (Kyung Hee University, Korea)</p>
 										</td>
 									</tr>
@@ -418,26 +418,26 @@
 									<tr>
 										<th>13:00 - 13:20</th>
 										<td>
-											<p class="s_bold">Dissection</p>
+											<p class="s_bold">Cervicocephalic arterial dissections</p>
 											<p>Seong Joon Lee (Ajou University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>13:20 - 13:40</th>
 										<td>
-											<p class="s_bold">Vasculitis</p>
+											<p class="s_bold">Antiphospholipid syndrome and stroke</p>
 											<p>Wookjin Yang (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>13:40 - 14:00</th>
 										<td>
-											<!-- <p class="s_bold">
-												Cancer-related stroke 
+											 <p class="s_bold">
+											 Cancer-related Stroke 
 											</p>
 											<p>
-												Dongwhane Lee (Eulji University, Korea)
-											</p> -->
+												TBD
+											</p> 
 										</td>
 									</tr>
 									<tr>
@@ -453,8 +453,10 @@
 										<th>14:20 - 14:40</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
+											<p>Jin Jung (The Catholic University of Korea, Korea), Ho Girl Woo (Kyung Hee University, Korea)</p>
+											<p>Jong Moo Park (Eulji University, Korea)
+												<!-- , TBD (TBD) -->
+											</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -500,18 +502,18 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="green_panel_tr">
+								<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
+											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>15:00 - 15:40</th>
 										<td>
-											 <p class="s_bold">TBD</p>
+											<p class="s_bold">Significance of Home Blood Pressure Measurement : Perspectives from Experience In Japan</p>
 											<p>Takayoshi Ohkubo (Teikyo University School of Medicine, Japan)</p> 
 										</td>
 									</tr>
@@ -1069,13 +1071,13 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
+											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>15:00 - 15:40</th>
 										<td>
-											<p class="s_bold">TBD</p>
+											<p class="s_bold">Significance of Home Blood Pressure Measurement : Perspectives from Experience In Japan</p>
 											<p>Takayoshi Ohkubo (Teikyo University School of Medicine, Japan)</p> 
 										</td>
 									</tr>

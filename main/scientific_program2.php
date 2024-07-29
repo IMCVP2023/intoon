@@ -267,8 +267,8 @@
 										<th>09:50 - 10:10</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<p>Jinhwa Kim (Chosun University, Korea)</p>
-											<!-- <p>Sang-Eun Lee (Ewha Womans University, Korea), Seon Ha Baek (Hallym University, Korea)</p> -->
+											<p>Jinhwa Kim (Chosun University, Korea), Yoo Ran Ahn (The Catholic University of Korea, Korea)</p>
+											<p>Han Bi Lee (The Catholic University of Korea, Korea), Ji Yeon Hong (Hallym University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -319,15 +319,15 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>Sang Hong Baek (The Catholic University of Korea, Korea)</p> -->
+											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 								 
 									<tr class="non_border_b">
 										<th>10:30 - 11:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">The Role of SGLT2i in Integrative Management of Cardio-Renal-Metabolic Diseases</p>
+											<p>David Cherney (University Health Network, Canada)</p> 
 										</td>
 									</tr>
 								</tbody>
@@ -404,21 +404,25 @@
 										<th>11:50 - 12:10</th>
 										<td>
 											<p class="s_bold">Bariatric Surgery for Obese Patients with Cardiovascular Disease</p>
-											<p>Moon Won Yoo (University of Ulsan, Korea)</p>
+											<p>TBD</p>
+											<!-- <p>Moon Won Yoo (University of Ulsan, Korea)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>12:10 - 12:30</th>
 										<td>
 											<p class="s_bold">Novel Pharmacotherapy for Obese Patients with Cardiovascular Disease</p>
-											<p>Soo Lim (Seoul National University, Korea)</p>
+											<p>TBD</p>
+											<!-- <p>Soo Lim (Seoul National University, Korea)</p> -->
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>12:30 - 12:50</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<p>Dae Young Cheon (Hallym University, Korea), Joon Ho Hyun (University of Ulsan, Korea)</p>
+											<p>Dae Young Cheon (Hallym University, Korea)
+												<!-- , Joon Ho Hyun (University of Ulsan, Korea) -->
+											</p>
 											<p>Yeoree Yang (The Catholic University of Korea, Korea), Mihae Seo (Soonchunhyang University, Korea)</p>
 										</td>
 									</tr>
@@ -525,8 +529,8 @@
 									<tr class="green_panel_tr">
 										<th>13:50 - 14:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>Yong Jae Kim</p>
+											<p class="s_bold">Black and White: The Evolving Role of Carotid Intima-Media Thickness in Risk Stratification</p>
+											<p>Yong Jae Kim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -931,19 +935,20 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
-									<tr class="green_panel_tr">
+								<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>Sang Hong Baek (The Catholic University of Korea, Korea)</p> -->
+											<p>Sang Hong Baek (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
+								 
 									<tr class="non_border_b">
 										<th>10:30 - 11:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">The Role of SGLT2i in Integrative Management of Cardio-Renal-Metabolic Diseases</p>
+											<p>David Cherney (University Health Network, Canada)</p> 
 										</td>
 									</tr>
 								</tbody>
@@ -1152,8 +1157,8 @@
 									<tr class="green_panel_tr">
 										<th>13:50 - 14:30</th>
 										<td>
-											<p class="s_bold">TBD</p>
-											<p>Yong Jae Kim</p>
+											<p class="s_bold">Black and White: The Evolving Role of Carotid Intima-Media Thickness in Risk Stratification</p>
+											<p>Yong Jae Kim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">

@@ -154,26 +154,24 @@
 				<li class="index_speaker1">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
 					<h5 class="title">Brian Tomlinson</h5>
-					<div class="career">Macau University of Science and Technology Faculty of Medicine
+					<div class="career">Macau University of Science and Technology,<br>Macao SAR</div>
 						<!-- ,<br>TBD -->
-					</div>
 				</li>
 				<li class="index_speaker2">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
 					<h5 class="title">Takayoshi Ohkubo</h5>
-					<div class="career">Department of Hygiene and Public Health, Teikyo University School of Medicine
+					<div class="career">Teikyo University School of Medicine,<br>Japan</div>
 						<!-- <br>TBD -->
-					</div>
 				</li>
 				<li class="index_speaker3">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">TBD</h5>
-					<div class="career">TBD,<br>TBD</div>
+					<h5 class="title">David Cherney</h5>
+					<div class="career">University Health Network,<br>Canada</div>
 				</li>
 				<li class="index_speaker4">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">TBD</h5>
-					<div class="career">TBD,<br>TBD</div>
+					<h5 class="title">Yong Jae Kim</h5>
+					<div class="career">The Catholic University of Korea,<br>Korea</div>
 				</li>
 				<!-- <li class="index_speaker5">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
