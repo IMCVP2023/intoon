@@ -30,9 +30,9 @@
 						<li><a href="/main/venue.php">Venue</a></li>
 					</ul>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="/main/app_floor_plan.php">Floor Plan</a>
-				</li>
+				</li> -->
 				<li>
 					<a href="javascript:;">Program</a>
 					<ul class="app_sub">
