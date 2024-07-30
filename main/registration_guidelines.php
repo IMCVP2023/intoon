@@ -168,7 +168,7 @@ $price = get_data($sql_price);
 							</thead>
 							<tbody>
 								<tr class="text_center">
-									<td>MD,Professor</td>
+									<td>MD, Professor</td>
 									<td class="point4_txt bold">USD 100</td>
 									<td class="point4_txt bold">USD 150</td>
 									<td>USD 150</td>
@@ -192,7 +192,7 @@ $price = get_data($sql_price);
 									<td>
                                         Pharmacist,<br>
 										 Nurse, Excercisetherapist,<br>
-                                         Nutritionists,Researchers<br>
+                                         Nutritionists, Researchers<br>
 										<!-- Corporate member, Others<br> -->
 									</td>
 									<td class="point4_txt bold">USD 75</td>

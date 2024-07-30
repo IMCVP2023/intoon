@@ -208,7 +208,7 @@
 						<h2>Abstract<br/>submission<br/>Deadline</h2>
 							<div>
 								<p>August</p>
-								<p>18</p>
+								<p>28</p>
 							</div>
 						</a>
 					</li>
@@ -217,7 +217,7 @@
 						<h2>Notification of<br/>acceptance</h2>
 							<div>
 								<p>October</p>
-								<p>16</p>
+								<p>25</p>
 							</div>
 						</a>
 					</li>
