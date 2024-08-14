@@ -1,5 +1,9 @@
 <?php include_once("../../common/common.php");?>
 <?php
+
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
+
 if($_POST["flag"] === "onsite") {
     $data = isset($_POST["data"]) ? $_POST["data"] : "";
 
@@ -269,6 +273,185 @@ if($_POST["flag"] === "onsite") {
         $res = [
             'code' => 200,
             'msg' => "onsite_registration success"
+        ];
+        echo json_encode($res);
+    } else {
+        $res = [
+            'code' => 400,
+            'msg' => "onsite_registration error"
+        ];
+        echo json_encode($res);
+    }
+    exit;
+} else if($_POST["flag"] === "promotion_onsite") {
+    $data = isset($_POST["data"]) ? $_POST["data"] : "";
+
+    // ksso 회원 상태(0:비회원, 1:정회원, 2:평생회원)
+    $ksso_member_status = $data["ksso_member_status"] ?? "0";
+    // ksso 회원 id
+    $ksso_member_check = $data["ksso_member_check"] ?? "";
+
+    // member
+    $nation_no = $data["nation_no"] ?? "";
+    $email = $data["email"] ?? "";
+    $password = $data["password"] ?? "";
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    $first_name = $data["first_name"] ?? "";
+    $first_name_kor = $data["first_name_kor"] ?? "";
+    $last_name = $data["last_name"] ?? "";
+    $last_name_kor = $data["last_name_kor"] ?? "";
+    $affiliation = $data["affiliation"] ?? "";
+    $affiliation_kor = $data["affiliation_kor"] ?? "";
+    $department = $data["department"] ?? "";
+    $department_kor = $data["department_kor"] ?? "";
+    $phone = $data["phone"] ?? "";
+    $date_of_birth = $data["date_of_birth"] ?? "";
+
+    // registration
+    $participation_type = $data["participation_type"] ?? "";
+
+    switch($participation_type){
+        case "Committee":
+            $attendance_type = 0;
+            break;
+        case "Speaker":
+            $attendance_type = 1;
+            break;
+        case "Chairperson":
+            $attendance_type = 2;
+            break;
+        case "Panel":
+            $attendance_type = 3;
+            break;
+        case "Participants":
+            $attendance_type = 4;
+            break;
+        case "Sponsor":
+            $attendance_type = 5;
+            break;
+    }
+
+    $member_type = $data["member_type"] ?? "";
+    $member_other_type = $data["member_other_type"] ?? "";
+
+    $is_score = $data["is_score"] ?? "";
+    $licence_number = $data["licence_number"] ?? "";
+    $specialty_number = $data["specialty_number"] ?? "";
+
+    $day1_luncheon_yn = $data["day1_luncheon_yn"] !== null ? "Y" : "N";
+    $day1_satellite_yn    = $data["day1_satellite_yn"] !== null ? "Y" : "N";
+    $day2_breakfast_yn     = $data["day2_breakfast_yn"] !== null ? "Y" : "N";
+    $day2_luncheon_yn    = $data["day2_luncheon_yn"] !== null ? "Y" : "N";
+    $day2_satellite_yn     = $data["day2_satellite_yn"] !== null ? "Y" : "N";
+
+    //sujeong / promotion code 
+    $promotion_code = $data["promotion_code"] ?? "";
+    $payment_methods = $data["payment_methods"] ?? "";
+
+    $special_request = $data["special_request"] ?? "";
+
+    $conference_info = implode("*", $data["conference_info_arr"]);
+    $price = $data["price"] ?? "";
+    $fee= str_replace(",","",$price);
+
+    $insert_member_query =	"
+                                INSERT member
+                                SET
+                                    nation_no = {$nation_no},
+                                    email = '{$email}',
+                                    password = '{$password_hash}',
+                                    last_name = '{$last_name}',
+                                    first_name = '{$first_name}',
+                                    affiliation = '{$affiliation}',
+                                    department = '{$department}',
+                                    phone = '{$phone}', 
+                                    date_of_birth = '{$date_of_birth}',
+                                    terms_access = 'Y',
+                                    terms_access_date = NOW(),
+                                    privacy_access = 'Y',
+                                    privacy_access_date = NOW(),
+                                    email_certified = 'Y',
+                                    ksola_member_status = '{$ksso_member_status}'
+                            ";
+
+    // 국내 일 때
+    if($nation_no == 25) {
+        $insert_member_query .= ", last_name_kor = '{$last_name_kor}' ";
+        $insert_member_query .= ", first_name_kor = '{$first_name_kor}' ";
+        $insert_member_query .= ", affiliation_kor = '{$affiliation_kor}' ";
+        $insert_member_query .= ", department_kor = '{$department_kor}' ";
+    }
+
+    if($ksso_member_status == 1 || $ksso_member_status == 2) {
+        $insert_member_query .= ", ksola_member_check = '{$ksso_member_check}' ";
+    }
+
+    sql_query($insert_member_query);
+    $insert_member =  sql_insert_id();
+
+    $member_idx = $insert_member;
+
+    $insert_registration_query =	"
+                                        INSERT request_registration
+                                        SET
+                                            status = 6,
+                                            attendance_type = '{$attendance_type}',
+                                            is_score = '{$is_score}',
+                                            ksso_member_status = '{$ksso_member_status}',
+                                            email = '{$email}',
+                                            nation_no = '{$nation_no}',
+                                            last_name = '{$last_name}',
+                                            first_name = '{$first_name}',
+                                            phone = '{$phone}',
+                                            affiliation = '{$affiliation}',
+                                            department = '{$department}',
+                                            member_type = '{$member_type}',
+                                            register = '{$member_idx}',
+                                            conference_info = '{$conference_info}',
+                                            day1_luncheon_yn = '{$day1_luncheon_yn}',
+                                            day1_satellite_yn = '{$day1_satellite_yn}',
+                                            day2_breakfast_yn = '{$day2_breakfast_yn}',
+                                            day2_luncheon_yn = '{$day2_luncheon_yn}',
+                                            day2_satellite_yn = '{$day2_satellite_yn}',
+                                            special_request_food = {$special_request},
+                                            payment_methods = '{$payment_methods}',
+                                            promotion_code_number = '{$promotion_code}',
+                                            price = '{$fee}'
+                                    ";
+
+    if(!empty($member_other_type)){
+        $insert_registration_query .= ", member_other_type = '{$member_other_type}' ";
+    } else {
+        $insert_registration_query .= ", member_other_type = NULL ";
+    }
+
+    if(!empty($occupation_other_type)){
+        $insert_registration_query .= ", occupation_other_type = '{$occupation_other_type}' ";
+    } else {
+        $insert_registration_query .= ", occupation_other_type = NULL ";
+    }
+
+    if(!empty($licence_number)){
+        $insert_registration_query .= ", licence_number = '{$licence_number}' ";
+    }
+    if(!empty($nutritionist_number)){
+        $insert_registration_query .= ", nutritionist_number = '{$nutritionist_number}' ";
+    }
+    if(!empty($dietitian_number)){
+        $insert_registration_query .= ", dietitian_number = '{$dietitian_number}' ";
+    }
+
+    $insert_registration = sql_query($insert_registration_query);
+    $insert_reg = sql_insert_id();
+
+    $reg_idx = $insert_reg;
+
+    if($insert_registration) {
+        $res = [
+            'code' => 200,
+            'msg' => "onsite_registration success",
+            'member_idx' => $member_idx,
+            'reg_idx' => $reg_idx 
         ];
         echo json_encode($res);
     } else {

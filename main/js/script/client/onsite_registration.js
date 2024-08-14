@@ -187,6 +187,10 @@ function calc_fee(){
             success : function(res){
                 if(res.code == 200) {
                     $("input[name=reg_fee]").val(comma(res.data)).change();
+                    if($("input[name=promotion_code]").val() != ""){
+                        const promotionCode = $("input[name=promotion_code]").val();
+                        select_promotion_code(promotionCode);
+                    }
                 } else if(res.code == 400){
                     alert(locale(language.value)("error_registration"));
                     return false;
@@ -210,6 +214,43 @@ function remove_value() {
     $("input[name=specialty_number]").val("");
     $("input[name=nutritionist_number]").val("");
 }
+
+function select_promotion_code(promotion_code) {
+    $.ajax({
+        url: PATH + "ajax/client/ajax_promotion.php",
+        type: "POST",
+        data: {
+            flag: "select",
+            promotion_code: promotion_code
+        },
+        dataType: "JSON",
+        success: function (res) {
+            if (res.code == 200) {
+                var result=res.result;
+                if(result.count_limit==0){
+                    alert("This code has already been used.");
+                    $("input[name=promotion_code]").val('');
+                    $("input[name=recommended_by]").val('');
+                    return;
+                } else{
+                    var discount_rate=result.discount_rate;
+                        $("input[name=promotion_code_idx]").val(result.idx).change();
+                        if(discount_rate == 0){
+                            $("input[name=promotion_confirm_code]").val(0).change();
+                        } else if (discount_rate == 1) {
+                            $("input[name=promotion_confirm_code]").val(1).change();
+                        } else if (discount_rate == 2) {
+                            $("input[name=promotion_confirm_code]").val(2).change();
+                    }
+                }
+            } else {
+                alert("Please check the promotion code.");
+                return;
+            }
+        }
+    });
+}
+
 
 function submit(){
     if(requiredCheck()!=false){
@@ -237,14 +278,15 @@ function onsite_submit(){
     var date_of_birth = $("input[name=date_of_birth]").val();
 
     var participation_type = $('#participation_type > option:selected').val();
-    var occupation = $('#occupation > option:selected').val();
-    var occupation_other_type = $("input[name=occupation_input]").val();
+   // var occupation = $('#occupation > option:selected').val();
+   // var occupation_other_type = $("input[name=occupation_input]").val();
     var member_type = $('#category > option:selected').val();
     var member_other_type = $("input[name=title_input]").val();
     var is_score = $('input[name=review]:checked').val();
     var licence_number = $("input[name=licence_number]").val();
-    var nutritionist_number = $("input[name=nutritionist_number]").val();
-    var dietitian_number = $("input[name=dietitian_number]").val();
+    var specialty_number = $("input[name=specialty_number]").val();
+  //  var nutritionist_number = $("input[name=nutritionist_number]").val();
+   // var dietitian_number = $("input[name=dietitian_number]").val();
 
     var day1_luncheon_yn = $("input:checkbox[id='others1']:checked").val()
     var day1_satellite_yn = $("input:checkbox[id='others2']:checked").val()
@@ -265,12 +307,9 @@ function onsite_submit(){
     // ksso api 연동 id
     var ksso_member_check = $("input[name=ksso_member_check]").val();
     // ksso 회원 유형
-    var ksso_member_type = $("input[name=ksso_member_type]").val();
     var ksso_member_status = 0;
 
-    if(ksso_member_type == "평생회원"){
-        ksso_member_status = 2;
-    }else if(ksso_member_type == "정회원"){
+    if(ksso_member_check !== ""){
         ksso_member_status = 1;
     }else {
         ksso_member_status = 0; //비회원
@@ -293,14 +332,11 @@ function onsite_submit(){
         phone : phone,
         date_of_birth : date_of_birth,
         participation_type : participation_type,
-        occupation : occupation,
-        occupation_other_type : occupation_other_type,
         member_type : member_type,
         member_other_type : member_other_type,
         is_score : is_score,
         licence_number : licence_number,
-        nutritionist_number : nutritionist_number,
-        dietitian_number : dietitian_number,
+        specialty_number : specialty_number,
         day1_luncheon_yn : day1_luncheon_yn,
         day1_satellite_yn : day1_satellite_yn,
         day2_breakfast_yn : day2_breakfast_yn,
@@ -325,6 +361,129 @@ function onsite_submit(){
                 alert("On-site registration has been completed.\n" +
                     "Please pay your registration fee at the registration desk.");
                 window.location.replace(PATH+"onsite_registration.php");
+            } else {
+                alert("onsite registration error.");
+                return;
+            }
+        }
+    });
+}
+
+function promotion_submit(){
+    if(requiredCheck()!=false){
+        if(confirm("Would you like to proceed with on-site registration?")){
+            promotion_onsite_submit();
+        } else {
+            return;
+        }
+    }
+}
+function promotion_onsite_submit(){
+    var nation_no = $('#nation_no > option:selected').val();
+    var email = $("input[name=email]").val();
+    var password = $("input[name=password]").val();
+    var first_name = $("input[name=first_name]").val();
+    var first_name_kor = $("input[name=first_name_kor]").val();
+    var last_name = $("input[name=last_name]").val();
+    var last_name_kor = $("input[name=last_name_kor]").val();
+    var affiliation = $("input[name=affiliation]").val();
+    var affiliation_kor = $("input[name=affiliation_kor]").val();
+    var department = $("input[name=department]").val();
+    var department_kor = $("input[name=department_kor]").val();
+    var nation_tel = $("input[name=nation_tel]").val();
+    var phone = nation_tel+"-"+$("input[name=phone]").val();
+    var date_of_birth = $("input[name=date_of_birth]").val();
+
+    var participation_type = $('#participation_type > option:selected').val();
+   // var occupation = $('#occupation > option:selected').val();
+   // var occupation_other_type = $("input[name=occupation_input]").val();
+    var member_type = $('#category > option:selected').val();
+    var member_other_type = $("input[name=title_input]").val();
+    var is_score = $('input[name=review]:checked').val();
+    var licence_number = $("input[name=licence_number]").val();
+    var specialty_number = $("input[name=specialty_number]").val();
+  //  var nutritionist_number = $("input[name=nutritionist_number]").val();
+   // var dietitian_number = $("input[name=dietitian_number]").val();
+
+    var day1_luncheon_yn = $("input:checkbox[id='others1']:checked").val()
+    var day1_satellite_yn = $("input:checkbox[id='others2']:checked").val()
+    var day2_breakfast_yn = $("input:checkbox[id='others3']:checked").val()
+    var day2_luncheon_yn = $("input:checkbox[id='others4']:checked").val()
+    var day2_satellite_yn = $("input:checkbox[id='others5']:checked").val()
+
+    var special_request = $("input[name='special_request']:checked").val()
+
+    const conference_info_arr=[];
+    var info = $("input[name='list']:checked");
+    $(info).each(function (){
+        conference_info_arr.push($(this).val());
+    });
+
+    var price = $("input[name=reg_fee]").val();
+
+    // ksso api 연동 id
+    var ksso_member_check = $("input[name=ksso_member_check]").val();
+    // ksso 회원 유형
+    var ksso_member_status = 0;
+
+    if(ksso_member_check !== ""){
+        ksso_member_status = 1;
+    }else {
+        ksso_member_status = 0; //비회원
+    }
+
+    //sujeong / promotion code 
+    const promotion_code = $("input[name=promotion_code]").val();
+
+    const payment_method = $('input[name=payment_method]:checked').val();
+
+    var data = {
+        nation_no : nation_no,
+        ksso_member_check : ksso_member_check,
+        ksso_member_status : ksso_member_status,
+        email : email,
+        password : password,
+        first_name : first_name,
+        first_name_kor, first_name_kor,
+        last_name : last_name,
+        last_name_kor : last_name_kor,
+        affiliation : affiliation,
+        affiliation_kor : affiliation_kor,
+        department : department,
+        department_kor : department_kor,
+        phone : phone,
+        date_of_birth : date_of_birth,
+        participation_type : participation_type,
+        member_type : member_type,
+        member_other_type : member_other_type,
+        is_score : is_score,
+        licence_number : licence_number,
+        specialty_number : specialty_number,
+        day1_luncheon_yn : day1_luncheon_yn,
+        day1_satellite_yn : day1_satellite_yn,
+        day2_breakfast_yn : day2_breakfast_yn,
+        day2_luncheon_yn : day2_luncheon_yn,
+        day2_satellite_yn : day2_satellite_yn,
+        special_request : special_request,
+        conference_info_arr : conference_info_arr,
+        price : price,
+        promotion_code : promotion_code,
+        payment_method : payment_method
+    };
+
+    $.ajax({
+        url : PATH+"ajax/client/ajax_onsite_registration.php",
+        type : "POST",
+        data : {
+            flag : "promotion_onsite",
+            data : data
+        },
+        dataType : "JSON",
+        success : function(res){
+            if(res.code == 200) {
+                console.log(res);
+                alert("On-site registration has been completed.");
+                    window.location.href = `/main/registration2.php?idx=${res.reg_idx}&member=${res.member_idx}`;
             } else {
                 alert("onsite registration error.");
                 return;
@@ -389,9 +548,9 @@ function requiredCheck(){
         alert("Please check the Type of Participation section.");
         return false;
     // Occupation type
-    } else if(!$('#occupation > option:selected').val()) {
-        alert("Please check the Type of Occupation section.");
-        return false;
+    // } else if(!$('#occupation > option:selected').val()) {
+    //     alert("Please check the Type of Occupation section.");
+    //     return false;
     // Category
     } else if(!$('#category > option:selected').val()) {
         alert("Please check the Category section.");
