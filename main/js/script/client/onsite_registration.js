@@ -489,88 +489,83 @@ function email_check(email) {
 }
 
 function kor_api() {
-    var kor_id = $("input[name=kor_id]").val().trim();
-    var kor_pw = $("input[name=kor_pw]").val().trim();
-    //제 3자 개인정보 수집에 동의 여부
-    var privacy = $("#privacy").is(":checked");
 
-    if(!kor_id) {
-        alert("Invalid id");
-        //$(".red_api").eq(0).html("format_id");
-        return;
-    }
-    if(!kor_pw) {
-        alert("Invalid password");
-        //$(".red_api").eq(0).html("format_password");
-        return;
-    }
 
-    if(privacy == false) {
-        alert("Please agree to the collection of personal information.");
-        $(".red_api").eq(0).html("Please agree to the collection of personal information.");
-        return;
-    }
+	var kor_id = $("input[name=kor_id]").val().trim();
+	var kor_name = $("input[name=kor_name]").val().trim();
+	//제 3자 개인정보 수집에 동의 여부
+	var privacy = $("#privacy").is(":checked");
 
-    var data = {
-        'id' : kor_id,
-        'password' : kor_pw
-    };
+	if(!kor_id) {
+		alert("Invalid id");
+		//$(".red_api").eq(0).html("format_id");
+		return;
+	}
+	if(!kor_name) {
+		alert("Invalid Name");
+		//$(".red_api").eq(0).html("format_password");
+		return;
+	}
+	
+	if(privacy == false) {
+		alert("Please agree to the collection of personal information.");
+		$(".red_api").eq(0).html("Please agree to the collection of personal information.");
+		return;
+	}
 
-    $.ajax({
-        url			: PATH+"/signup_api.php",
-        type		: "POST",
-        data		: data,
-        dataType	: "JSON",
-        success		: success,
-        fail		: fail,
-        error		: error
-    });
+	$.ajax({
+        url: PATH + "ajax/client/ajax_member.php",
+        type: "POST",
+        data: {
+            flag: "kscp_memeber_check",
+            email: kor_id,
+            nick_name: kor_name
+        },
+        dataType: "JSON",
+        success: function(res) {
+            //console.log("1",res);
+            if (res.code == 200) { 
+				if(res.result.is_used === "1"){
+					alert("이미 사용된 ID입니다.")
+					return false;
+				}else if(res.result.is_used === "0"){
+					alert("회원이 인증되었습니다."); 
+					setInfo(res.result); 
+                    
+                    $("input[name=ksso_member_type]").val(user_row.user_type);
+                    $("input[name=ksso_member_check]").val(user_row.id);
 
-    function success(res) {
-        var kor_sign = JSON.parse(res.value);
-        //console.log(kor_sign);
-        var user_row = kor_sign.user_row;
-        //alert(user_row.user_type); return;
+                    $("input[name=licence_number]").val(kor_sign.license_number);
+                    $("input[name=affiliation_kor]").val(kor_sign.office_name);
 
-        if(kor_sign.code == "N1") {
-            alert("아이디를 입력해주세요.");
-        } else if(kor_sign.code == "N2") {
-            alert("비밀번호를 입력해주세요.");
-        } else if(kor_sign.code == "N3") {
-            alert("가입되지 않은 아이디입니다.");
-        } else if(kor_sign.code == "N4") {
-            alert("잘못된 비밀번호 입니다.");
-        } else if(kor_sign.code == "N5") {
-            alert("탈퇴된 아이디 입니다.");
-        } else if(kor_sign.code == "N7") {
-            alert("이미 인증된 계정입니다.");
-            $("[name=kor_id]").val("");
-            $("[name=kor_pw]").val("");
-            $("#privacy").prop("checked", false);
-            $("[name=kor_id]").focus();
-        } else if(kor_sign.code == "N6") {
-            alert("회원님은 대한비만학회 " + user_row.user_type + " 입니다");
-            var check_email= email_check(user_row.email);
-            if(check_email == false) {
-                return;
+                    calc_fee();        
+				}
             }
-
-            $("input[name=ksso_member_type]").val(user_row.user_type);
-            $("input[name=ksso_member_check]").val(user_row.id);
-
-            $("input[name=licence_number]").val(kor_sign.license_number);
-            $("input[name=affiliation_kor]").val(kor_sign.office_name);
-
-            calc_fee();
+             else if(res.code == 401) {
+				alert("ID와 성함을 확인해주세요.")
+			}
+        },
+        complete: function(res) {
+            //console.log("2",res)
         }
-
-    }
-    function fail(res) {
-        alert("Failed.\nPlease try again later.");
-        return false;
-    }
-    function error(res) {
-        alert("An error has occurred. \nPlease try again later.");
-        return false;
-    }
+    });
 }
+
+
+//kscp 정보 받아와서 넣어주기(email, name_kor, affiliation_kor, department_kor)
+function setInfo(result){
+	const email = result.email;
+	const nickname = result.nick_name;
+	const org = result.org;
+	const department = result.department;
+	const userId = result.id;
+
+	$('input[name=ksola_member_check]').val(email);
+    $('input[name=email]').val(email);
+    $('input[name=first_name_kor]').val(nickname.slice(1));
+    $('input[name=last_name_kor]').val(nickname.slice(0,1));
+    $('input[name=affiliation_kor]').val(org);
+    $('input[name=department_kor]').val(department);
+	
+}
+

@@ -59,14 +59,15 @@ function validCheck(data){
         var type = $("input[name="+key+"]").data("type");
             type = (type != null && type != "" && typeof(type) != "undefined") ? type : "";
 
-        if(type != "date" && val != "" && val.length < 2){
-            if(key != "attendance_type") {
-                $("input[name="+key+"]").focus();
-                alert("최소 2자 이상 입력해주세요.");
-                valid = false;
-                return false;
-            }
-        }else if(type == "date" && val != "" && validDate(val) == false){
+        // if(type != "date" && val != "" && val.length < 2){
+        //     if(key != "attendance_type") {
+        //         $("input[name="+key+"]").focus();
+        //         alert("최소 2자 이상 입력해주세요.");
+        //         valid = false;
+        //         return false;
+        //     }
+        // }else 
+        if(type == "date" && val != "" && validDate(val) == false){
             $("input[name="+key+"]").focus();
             alert("날짜 형식이 올바르지 않습니다.");
             valid = false;
