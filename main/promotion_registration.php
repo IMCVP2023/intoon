@@ -253,12 +253,41 @@
                                         <option value="" selected hidden>Choose</option>
                                         <?php
                                         $participation_arr = array("Participants", "Committee", "Speaker", "Chairperson", "Panel", "Sponsor");
-                                        foreach($participation_arr as $a_arr) {
-                                            $selected = $prev["attendance_type"] == $a_arr ? "selected" : "";
+                                      
+										foreach($participation_arr as $a_arr) {
+											$attendance_type = "";
+											if(!empty($prev["attendance_type"])){
+											switch($prev["attendance_type"]) {
+												case 0:
+													$attendance_type = "Committee";
+													break;
+												case 1:
+													$attendance_type = "Speaker";
+													break;
+												case 2:
+													$attendance_type = "Chairperson";
+													break;
+												case 3:
+													$attendance_type = "Panel";
+													break;
+												case 4:
+													$attendance_type = "Participants";
+													break;
+												case 5:
+													$attendance_type = "Sponsor";
+													break;
+												default:
+													$attendance_type = "Participants";
+											}
+										}else{
+											$attendance_type = "Participants";
+										}
+											$selected = $attendance_type === $a_arr ? "selected" : "";
 
-                                            echo '<option value="'.$a_arr.'" '.$selected.'>'.$a_arr.'</option>';
-                                        }
-                                        ?>
+											echo '<option value="'.$a_arr.'" '.$selected.'>'.$a_arr.'</option>';
+		//									$idx = $idx + 1;
+										}
+									?>
 									</select>
 								</div>
 							</td>
@@ -432,26 +461,41 @@
 							<td><input type="text" id="reg_fee" name="reg_fee" style="border: none; background: transparent;" placeholder="0" readonly value="<?=$prev["calc_fee"] || $prev["calc_fee"] == 0 ? number_format($prev["calc_fee"]) : ""?>"></td>
 						</tr>
 						<tr class="">
-											<th>Invitation Code</th>
-											<td>
-												<ul class="half_ul" style="min-width:300px;justify-content :flex-start;">
-													<li>
-														<input type="text" placeholder="Invitation Code" name="promotion_code" value="<?=$promotion_code ?? ""?>">
-														<input type="hidden" name="promotion_confirm_code" value="<?=$promotion_code ?? ""?>"/>
-													</li>
-													<!-- <li><input type="text" placeholder="Recommended by" name="recommended_by" value="<?=$prev["recommended_by"] ?? ""?>" maxlength="100" onkeyup="checkRegExp(this);" onchange="checkRegExp(this);"></li>-->
-													<li class="">
-														<button type="button" class="btn gray2_btn form_btn apply_btn" style="color:#FFF!important">Apply</button>
-													</li> 
-												</ul>
-											</td>
-										</tr>
+							<th>Invitation Code</th>
+							<td>
+								<ul class="half_ul" style="min-width:300px;justify-content :flex-start;">
+									<li>
+										<input type="text" placeholder="Invitation Code" name="promotion_code" value="<?=$promotion_code ?? ""?>" disabled>
+										<input type="hidden" name="promotion_confirm_code" value="<?=""?>"/>
+									</li>
+									<!-- <li><input type="text" placeholder="Recommended by" name="recommended_by" value="<?=$prev["recommended_by"] ?? ""?>" maxlength="100" onkeyup="checkRegExp(this);" onchange="checkRegExp(this);"></li>-->
+									<!-- <li class="">
+										<button type="button" class="btn gray2_btn form_btn apply_btn" style="color:#FFF!important">Apply</button>
+									</li>  -->
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>Payment Methods</th>
+							<td>
+								<ul class="chk_list info_check_list flex_center type2">
+                                    <li>
+                                        <input type="radio" class='checkbox other_check' id="card" name='payment_method' value="1"/>
+                                        <label for="card"><i></i>Credit card</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" class='checkbox other_check' id="bank" name='payment_method' value="2"/>
+                                        <label for="bank"><i></i>Wire transfer</label>
+                                    </li>
+                                </ul>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
 		<div class="pager_btn_wrap half">
-			<button id="submit" type="button" class="btn green_btn" onclick="submit()">Submit</button>
+			<button id="submit" type="button" class="btn green_btn" onclick="promotion_submit()">Submit</button>
 		</div>
 	</div>
 </section>
@@ -515,19 +559,6 @@
             }
         });
 
-        $("select[name=occupation]").on("change", function(){
-            const val2 = $(this).val();
-            const prevTitle2 = $("input[name=occupation_prev_input]").val() ?? "";
-
-            if(val2 == 'Others'){
-                if(!$(this).parent("li").next('.hide_input').hasClass("on")){
-                    $(this).parent("li").next('.hide_input').addClass("on");
-                }
-            }else{
-                $(this).parent("li").next('.hide_input').removeClass("on");
-                $("input[name=occupation_input]").val(prevTitle2);
-            }
-        });
 
 		$("input[name=reg_fee], input[name=promotion_confirm_code]").on("change", function(){
 			const status =  $("input[name=promotion_confirm_code]").val() ?? "";
