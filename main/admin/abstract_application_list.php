@@ -13,6 +13,7 @@ $name = isset($_GET["name"]) ? $_GET["name"] : "";
 $title = isset($_GET["title"]) ? $_GET["title"] : "";
 $s_date = isset($_GET["s_date"]) ? $_GET["s_date"] : "";
 $e_date = isset($_GET["e_date"]) ? $_GET["e_date"] : "";
+$category = isset($_GET["category"]) ? $_GET["category"] : "";
 
 $where = "";
 
@@ -36,6 +37,9 @@ if ($e_date != "") {
 	$where .= " AND DATE(rs.modify_date) <= '" . $e_date . "' ";
 }
 
+if ($category != "") {
+	$where .= " AND rs.topic LIKE '%" . $category . "%' ";
+}
 
 $abstract_list_query = "SELECT
 								rs.idx, rs.etc1, rs.etc2,rs.etc1_date, rr.status AS registration_status,
@@ -514,6 +518,30 @@ $count = count($abstract_list);
 							<th>등록일</th>
 							<td class="input_wrap"><input type="text" value="<?= $s_date; ?>" name="s_date" class="datepicker-here" data-language="en" data-date-format="yyyy-mm-dd" data-type="date"> <span>~</span> <input type="text" value="<?= $e_date; ?>" name="e_date" class="datepicker-here" data-language="en" data-date-format="yyyy-mm-dd" data-type="date"></td>
 						</tr>
+						<tr>
+							<th>카테고리</th>
+				
+							<td colspan="3">
+									<select name="category">
+										<option value="">카테고리를 선택해주세요.</option>
+										<option value="1">1. Ischemic Heart Disease/Coronary Artery Disease</option>
+										<option value="2">2. Heart Failure with Reduced Ejection Fraction and Preserved Ejection Fraction</option>
+										<option value="3">3. Cardiomyopathies</option>
+										<option value="4">4. Chronic Kidney Disease and Cardiovascular Disease</option>
+										<option value="5">5. Preventive Cardiology</option>
+										<option value="6">6. Cardiac Arrhythmias</option>
+										<option value="7">7. Peripheral Arterial Disease</option>
+										<option value="8">8. Basic Science and Genetics</option>
+										<option value="9">9. COVID-19 Related Cardio-Pharmacotherapy</option>
+										<option value="10">10. Diabetes and Obesity</option>
+										<option value="11">11. Hyperlipidemia and Cardiovascular Disease</option>
+										<option value="12">12. Epidemiology</option>
+										<option value="13">13. Precision Medicine/Digital Healthcare</option>
+										<option value="14">14. Others</option>
+									</select>
+								</td>
+							
+						</tr>
 					</tbody>
 				</table>
 				<button type="button" class="btn search_btn">검색</button>
@@ -613,7 +641,7 @@ $count = count($abstract_list);
 	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 	checkList.forEach((checkBox)=>{
-		checkBox.dataset.id = 
+		checkBox.dataset.id = ""
 	})
 
 	allCheck.addEventListener("change", ()=>{
@@ -667,5 +695,5 @@ $count = count($abstract_list);
     }
 });
 </script>
-<script src="./js/common.js?v=0.1"></script>
+<script src="./js/common.js?v=0.15"></script>
 <?php include_once('./include/footer.php'); ?>

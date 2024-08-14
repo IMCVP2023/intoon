@@ -154,7 +154,7 @@ $price = get_data($sql_price);
 								<tr>
 									<th rowspan="2">Classification</th>
 									<th colspan="2" class="dark_blue_th">Early-bird Registration</th>
-									<th colspan="2" class="light_blue_th pre_txt">Pre-registration</th>
+									<th colspan="2" class="light_blue_th pre_txt">Pre Registration</th>
 									<th colspan="2" class="light_gray_th pre_txt">On-site Registration</th>
 								</tr>
                                 <tr>
@@ -190,8 +190,9 @@ $price = get_data($sql_price);
 								</tr>
 								<tr class="text_center">
 									<td>
-                                        Pharmacist,<br>
-										 Nurse, Excercisetherapist,<br>
+                                        <!-- Healthcare Professional other <br/>than Medical Doctors<span class="red_t">*</span> -->
+                                         Pharmacist,<br>
+										 Nurse, Excercise therapist,<br>
                                          Nutritionists, Researchers<br>
 										<!-- Corporate member, Others<br> -->
 									</td>
@@ -204,6 +205,7 @@ $price = get_data($sql_price);
 								</tr>
 							</tbody>
 						</table>
+                        <!-- <p class="text_r">* Nurse, Dietician, Nutritionist, Pharmacist, Exercise Specialist, Coporate Member, Others</p> -->
 					</div>
                 </div>
                 <!--2. icomes-Air Registration start-->
@@ -215,7 +217,7 @@ $price = get_data($sql_price);
 								<tr>
 									<th rowspan="2">Classification</th>
 									<th colspan="2" class="dark_blue_th">Early-bird Registration</th>
-									<th colspan="2" class="light_blue_th pre_txt">Pre-registration</th>
+									<th colspan="2" class="light_blue_th pre_txt">Pre Registration</th>
 									<th colspan="2" class="light_gray_th pre_txt">On-site Registration</th>
 								</tr>
                                 <tr>
@@ -239,8 +241,9 @@ $price = get_data($sql_price);
 								</tr>
                                 <tr class="text_center">
 									<td>
-                                    Trainee (<span class="kor bold">전임의, 전공의</span>),<br>
-                                    Students
+                                    Trainee (<span class="kor bold">전임의</span>)
+                                    <!-- Trainee (<span class="kor bold">전임의, 전공의</span>),<br>
+                                    Students -->
 									</td>
                                     <td class="point4_txt bold">KRW 50,000</td>
 									<td class="point4_txt bold">KRW 75,000</td>
@@ -251,8 +254,9 @@ $price = get_data($sql_price);
 								</tr>
 								<tr class="text_center">
 									<td>
+                                    <!-- Healthcare Professional other <br/>than Medical Doctors<span class="red_t">*</span> -->
                                         Pharmacist, Excercisetherapist<br>
-										 Nurse, exercisetherapist,<br>
+										 Nurse, exercise therapist,<br>
                                          Nutritionists,Researchers<br>
 										<!-- Corporate member, Others<br> -->
 									</td>
@@ -265,10 +269,12 @@ $price = get_data($sql_price);
 								</tr>
 							</tbody>
 						</table>
+                        <!-- <p class="text_r">* Nurse, Dietician, Nutritionist, Pharmacist, Exercise Specialist, Coporate Member, Others</p> -->
 					</div>
                     
 					<div class="mt10">
 						<ul class="indent_ul">
+                            <li class="bold">※ 국내 전공의 및 학생은 등록비 무료 （신분증 확인) </li>
 							<li>• A confirmation letter for registration will be sent to your registered email address once you complete your registration with full payment.<br/>If you have not received it, please contact the congress secretariat(<a href="mailto:info@imcvp.org">info@imcvp.org</a>).</li>
 							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as <span class="bold point4_txt">'Unpaid.'</span><br/>If you need to confirm the payment, you can check the payment status on <span class="bold point4_txt">'My Page.'</span> (Please be aware that it may take 3~5 business days for the payment confirmation to be updated.)</li>
 							<li>• Registration status will not be considered ‘Complete’ after the full payment.</li>
