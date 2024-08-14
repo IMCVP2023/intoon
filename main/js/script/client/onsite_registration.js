@@ -482,8 +482,7 @@ function promotion_onsite_submit(){
         success : function(res){
             if(res.code == 200) {
                 console.log(res);
-                alert("On-site registration has been completed.\n" +
-                    "Please pay your registration fee at the registration desk.");
+                alert("On-site registration has been completed.");
                     window.location.href = `/main/registration2.php?idx=${res.reg_idx}&member=${res.member_idx}`;
             } else {
                 alert("onsite registration error.");
