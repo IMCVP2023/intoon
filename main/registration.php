@@ -484,9 +484,9 @@ if ($during_yn !== "Y") {
 <li>
 						<!-- [240607] sujeong / 기획팀 요청 수정   -->
 						<p class="label">Have you received the IMCVP 2024 invitation code?</p>
-						<input type="radio" class='checkbox' name="promotion_code" value="Y" id="promotion_y"/>
+						<input type="radio" class='checkbox' name="promotion_code_yn" value="Y" id="promotion_y"/>
 						<label for="promotion_y" style="margin-right:14px;">Yes</label>
-						<input type="radio" class='checkbox' name="promotion_code" value="N" id="promotion_n" checked/>
+						<input type="radio" class='checkbox' name="promotion_code_yn" value="N" id="promotion_n" checked/>
 						<label for="promotion_n">No</label>
 					</li>
                         </ul>
@@ -663,7 +663,7 @@ if ($during_yn !== "Y") {
 			}
 		};
 
-		$("input[name=promotion_code]").on("click", function(){
+		$("input[name=promotion_code_yn]").on("click", function(){
 			if($("#promotion_y").is(":checked")){
 				showPromotionCode('Y')
 			}else if($("#promotion_n").is(":checked")){

@@ -57,7 +57,9 @@
             $res = [
                 code => 200,
                 msg => "success",
-                update($promotion_code_idx)
+                
+                //sujeong / 프로모션 코드 중복 사용 가능
+                //update($promotion_code_idx)
             ];
             echo json_encode($res);
             exit;

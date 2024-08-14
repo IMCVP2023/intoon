@@ -106,18 +106,18 @@
 								<p>대한심뇌혈관질환예방학회 회원 정보로 간편 가입</p>
 								<ul class="simple_join clearfix">
 									<li>
-										<label for="">KSCP ID<span class="red_txt">*</span></label>
+										<label for="">KSCP Email<span class="red_txt">*</span></label>
 										<input class="email_id" name="kor_id" type="text" maxlength="60">
 									</li>
 									<li>
-										<label for="">KSCP PW<span class="red_txt">*</span></label>
-										<input class="passwords" name="kor_pw" type="password" maxlength="60">
+										<label for="">성함<span class="red_txt">*</span></label>
+										<input class="" name="kor_name" type="text" maxlength="60">
 									</li>
 									<li>
 										</li>
 									</ul>
 									<button onclick="kor_api()" type="button" class="btn">회원인증</button>
-									<a href="https://www.kosso.or.kr/join/search_id.html" target="_blank" class="id_pw_find" style="    padding: 6px 10px;">KSSO 회원 ID/PW 찾기</a>
+									<a href="https://www.kosso.or.kr/join/search_id.html" target="_blank" class="id_pw_find" style="padding: 6px 10px;">KSSO 회원 ID/PW 찾기</a>
 								<div class="clearfix2">
 									<div>
 										<input type="checkbox" class="checkbox" id="privacy">
@@ -156,8 +156,7 @@
 						</tr>
 						<!-- Name -->
 						<tr>
-							<th><span class="red_txt">*</span> Name</th
-							>
+							<th><span class="red_txt">*</span> Name</th>
 							<td class="name_td clearfix">
 								<div class="max_normal">
 									<input name="first_name" type="text" placeholder="First name" maxlength="60">
@@ -253,7 +252,7 @@
 									<select id="participation_type" name="participation_type" class="required" onChange="calc_fee()">
                                         <option value="" selected hidden>Choose</option>
                                         <?php
-                                        $participation_arr = array("Committee", "Speaker", "Chairperson", "Panel", "Participants", "Sponsor");
+                                        $participation_arr = array("Participants", "Committee", "Speaker", "Chairperson", "Panel", "Sponsor");
                                         foreach($participation_arr as $a_arr) {
                                             $selected = $prev["attendance_type"] == $a_arr ? "selected" : "";
 
@@ -264,32 +263,7 @@
 								</div>
 							</td>
 						</tr>
-						<tr>
-							<th><span class="red_txt">*</span> Type of Occupation</th>
-							<td>
-								<ul class="max_normal flex_hide">
-                                    <li>
-                                        <select id="occupation" name="occupation" class="required">
-                                            <option value="" selected hidden>Choose</option>
-                                            <?php
-                                            $occupation_arr = array("Medical", "Food & Nutrition", "Exercise", "Others");
 
-                                            foreach($occupation_arr as $a_arr) {
-                                                $selected = $prev["occupation_type"] === $a_arr ? "selected" : "";
-
-                                                echo '<option value="'.$a_arr.'" '.$selected.'>'.$a_arr.'</option>';
-                                            }
-                                            ?>
-                                        </select>
-                                    </li>
-                                    <!-- 'Other' 선택시, ▼ li.hide_input에 'on' 클래스 추가 -->
-                                    <li class="hide_input <?=$prev["occupation_type"] === "Others" ? "on" : ""?>">
-                                        <input type="hidden" name="occupation_prev_input" value="<?=$prev["occupation_other_type"] ?? ""?>"/>
-                                        <input type="text" id="occupation_input" name="occupation_input" value="<?=$prev["occupation_other_type"] ?? ""?>">
-                                    </li>
-								</ul>
-							</td>
-						</tr>
 						<tr>
 							<th><span class="red_txt">*</span> Category</th>
 							<td>
@@ -298,7 +272,7 @@
                                         <select id="category" name="category" class="required" onChange="calc_fee()">
                                             <option value="" selected hidden>Choose</option>
                                             <?php
-                                            $category_arr = array("Certified M.D.", "Professor", "Fellow", "Resident", "Researcher", "Nutritionist", "Exercise Specialist", "Nurse", "Pharmacist", "Military Surgeon(군의관)", "Public Health Doctor", "Corporate Member", "Student", "Others");
+                                            $category_arr = array("Certified M.D.", "Professor", "Researcher", "Nutritionist", "Exercise Specialist", "Nurse", "Pharmacist", "Trainee","Student", "Others");
 
                                             foreach($category_arr as $a_arr) {
                                                 $selected = $prev["member_type"] == $a_arr ? "selected" : "";
@@ -336,18 +310,10 @@
 							</td>
 						</tr>
 						<tr class="review_sub_list korea_only">
-							<th>영양사 면허번호</th>
+							<th>전문의 번호</th>
 							<td>
 								<div class="max_normal">
-									<input type="text" name="nutritionist_number" id="nutritionist_number">
-								</div>
-							</td>
-						</tr>
-						<tr class="review_sub_list korea_only">
-							<th>임상영양사 자격번호</th>
-							<td>
-								<div class="max_normal">
-									<input type="text" name="dietitian_number" id="dietitian_number">
+									<input type="text" name="specialty_number" id="specialty_number">
 								</div>
 							</td>
 						</tr>
@@ -374,7 +340,7 @@
 
                                             echo "
                                             <li>
-                                                <input type='checkbox' class='checkbox' id='others".$i."' name='others' value='".$others_arr[$i-1]."' ".$checked.">
+                                                <input type='checkbox' class='checkbox other_check' id='others".$i."' name='others' value='".$others_arr[$i-1]."' ".$checked.">
                                                 <label for='others".$i."'>
                                                     <i></i>".$others_arr[$i-1]."
                                                 </label>
@@ -392,15 +358,15 @@
                                 <ul class="chk_list info_check_list flex_center type2">
                                     <?= $prev["special_request_food"] === '0' ? "selected" : "" ?>
                                     <li>
-                                        <input type="radio" class='checkbox' id="special_request1" name='special_request' value="0" <?= $prev["special_request_food"] === '0' ? "checked" : "" ?>/>
+                                        <input type="radio" class='checkbox special_request' id="special_request1" name='special_request' value="0" <?= $prev["special_request_food"] === '0' ? "checked" : "" ?>/>
                                         <label for="special_request1"><i></i>Not Applicable</label>
                                     </li>
                                     <li>
-                                        <input type="radio" class='checkbox' id="special_request2" name='special_request' value="1" <?= $prev["special_request_food"] === '1' ? "checked" : "" ?>/>
+                                        <input type="radio" class='checkbox special_request' id="special_request2" name='special_request' value="1" <?= $prev["special_request_food"] === '1' ? "checked" : "" ?>/>
                                         <label for="special_request2"><i></i>Vegetarian</label>
                                     </li>
                                     <li>
-                                        <input type="radio" class='checkbox' id="special_request3" name='special_request' value="2" <?= $prev["special_request_food"] === '2' ? "checked" : "" ?>/>
+                                        <input type="radio" class='checkbox special_request' id="special_request3" name='special_request' value="2" <?= $prev["special_request_food"] === '2' ? "checked" : "" ?>/>
                                         <label for="special_request3"><i></i>Halal</label>
                                     </li>
                                 </ul>
@@ -436,7 +402,7 @@
 
                                             echo "
                                             <li>
-                                                <input type='checkbox' class='checkbox' id='list".$i."' name='list' value='".$conference_info_arr[$i-1]."' ".$checked.">
+                                                <input type='checkbox' class='checkbox other_check' id='list".$i."' name='list' value='".$conference_info_arr[$i-1]."' ".$checked.">
                                                 <label for='list".$i."'>
                                                     <i></i>".$conference_info_arr[$i-1]."
                                                 </label>
@@ -468,13 +434,13 @@
 						<tr class="">
 											<th>Invitation Code</th>
 											<td>
-												<ul class="half_ul" style="min-width:300px;">
+												<ul class="half_ul" style="min-width:300px;justify-content :flex-start;">
 													<li>
 														<input type="text" placeholder="Invitation Code" name="promotion_code" value="<?=$promotion_code ?? ""?>">
 														<input type="hidden" name="promotion_confirm_code" value="<?=$promotion_code ?? ""?>"/>
 													</li>
 													<!-- <li><input type="text" placeholder="Recommended by" name="recommended_by" value="<?=$prev["recommended_by"] ?? ""?>" maxlength="100" onkeyup="checkRegExp(this);" onchange="checkRegExp(this);"></li>-->
-													<li class="flex_none">
+													<li class="">
 														<button type="button" class="btn gray2_btn form_btn apply_btn" style="color:#FFF!important">Apply</button>
 													</li> 
 												</ul>
@@ -489,7 +455,7 @@
 		</div>
 	</div>
 </section>
-
+<script src="./js/script/client/promotion.js?v=0.3"></script>
 <script>
 	$(document).ready(function(){
         $("select[name=nation_no]").change(function(){
@@ -562,5 +528,36 @@
                 $("input[name=occupation_input]").val(prevTitle2);
             }
         });
+
+		$("input[name=reg_fee], input[name=promotion_confirm_code]").on("change", function(){
+			const status =  $("input[name=promotion_confirm_code]").val() ?? "";
+			let v = $("input[name=reg_fee]").val();
+
+			v = (v != "") ? parseFloat(v.replace(/[^0-9.]/gi, "")) : 0;
+
+			if(status !== ""){
+				if(status == 0){
+					v = v  - (v * 1.0);
+				}else if(status == 1){
+					v = v  - (v * 0.5);
+				} else if(status == 2){
+                    v = v  - (v * 0.3);
+                }
+			}
+
+			$("input[name=reg_fee]").val(comma(v));
+
+			if(v < 1){
+				if(!$(".payment_method_wrap").hasClass("hidden")){
+					$(".payment_method_wrap").addClass("hidden");
+				}
+				$(".payment_method_wrap li input[name=payment_method]:eq(0)").prop("checked", true);
+                // 0628 추가
+                $(".online_btn.next_btn").addClass("green_btn");
+			}else{
+				$(".payment_method_wrap").removeClass("hidden");
+				$(".payment_method_wrap li input[name=payment_method]").prop("checked", false);
+			}
+		})
 	});
 </script>
