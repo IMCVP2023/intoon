@@ -531,13 +531,6 @@ function kor_api() {
 				}else if(res.result.is_used === "0"){
 					alert("회원이 인증되었습니다."); 
 					setInfo(res.result); 
-                    
-                    $("input[name=ksso_member_type]").val(user_row.user_type);
-                    $("input[name=ksso_member_check]").val(user_row.id);
-
-                    $("input[name=licence_number]").val(kor_sign.license_number);
-                    $("input[name=affiliation_kor]").val(kor_sign.office_name);
-
                     calc_fee();        
 				}
             }
