@@ -39,6 +39,11 @@
 </style>
 
 <img src="./img/2024_mail_header-2.png" class="w100" alt="">
+<div class="promotion_header">
+	<img src="./img/icons/KSCP_logo.png"/>
+	<img src="./img/icons/pop_close.png"/>
+	<img src="./img/icons/ASPC_Logo_NEW.jpg"/>
+</div>
 <section class="container window_open onsite_register promotion_reg">
 	<div class="">
 		<div class="term_wrap">
@@ -53,7 +58,7 @@
 			</div>
 			<div class="term_label">
 				<input type="checkbox" class="checkbox input required" data-name="terms 1" id="terms1" name="terms1" value="Y">
-				<label for="terms1">I agree to the collection and use of my personal information. </label>
+				<label for="terms1" class="terms1_label">I agree to the collection and use of my personal information. </label>
 			</div>	
 		</div>
 		<div class="section_div">
@@ -387,15 +392,15 @@
                                 <ul class="chk_list info_check_list flex_center type2">
                                     <?= $prev["special_request_food"] === '0' ? "selected" : "" ?>
                                     <li>
-                                        <input type="radio" class='checkbox special_request' id="special_request1" name='special_request' value="0" <?= $prev["special_request_food"] === '0' ? "checked" : "" ?>/>
+                                        <input type="radio" class='new_radio' id="special_request1" name='special_request' value="0" <?= $prev["special_request_food"] === '0' ? "checked" : "" ?>/>
                                         <label for="special_request1"><i></i>Not Applicable</label>
                                     </li>
                                     <li>
-                                        <input type="radio" class='checkbox special_request' id="special_request2" name='special_request' value="1" <?= $prev["special_request_food"] === '1' ? "checked" : "" ?>/>
+                                        <input type="radio" class='new_radio' id="special_request2" name='special_request' value="1" <?= $prev["special_request_food"] === '1' ? "checked" : "" ?>/>
                                         <label for="special_request2"><i></i>Vegetarian</label>
                                     </li>
                                     <li>
-                                        <input type="radio" class='checkbox special_request' id="special_request3" name='special_request' value="2" <?= $prev["special_request_food"] === '2' ? "checked" : "" ?>/>
+                                        <input type="radio" class='new_radio' id="special_request3" name='special_request' value="2" <?= $prev["special_request_food"] === '2' ? "checked" : "" ?>/>
                                         <label for="special_request3"><i></i>Halal</label>
                                     </li>
                                 </ul>
@@ -407,23 +412,14 @@
 								<ul class="radio_list">
                                     <?php
                                         $conference_info_arr = array(
-                                            "Website of the Korean Society of Cardiovascular Disease Prevention",
-											"Promotional email from the Korean Society of Cardiovascular Disease Prevention",
-											"Advertising email or the bulletin board from the relevant society",
-											"Information about affiliated companies/organizations",
-											"Invited as a speaker, moderator, and panelist",
-											"Recommended by a professor",
-											"Recommended by acquaintances",
-											"Pharmaceutical company",
-											"Medical community (MEDI:GATE, Dr.Ville, etc.)",
-											"Medical news and journals"
+											"Advertising email or the bulletin board from the ASPC (The American Society for Preventive Cardiology)"
                                         );
 
                                         $prev_list = explode("*", $prev["conference_info"] ?? "");
 
                                         for($i = 1; $i <= count($conference_info_arr); $i++) {
                                             $content = $conference_info_arr[$i-1];
-                                            $checked = "";
+                                            $checked = "checked";
 
                                             if($content && in_array($content, $prev_list)){
                                                 $checked = "checked";
@@ -466,7 +462,7 @@
 								<ul class="half_ul" style="min-width:300px;justify-content :flex-start;">
 									<li>
 										<input type="text" placeholder="Invitation Code" name="promotion_code" value="<?=$promotion_code ?? ""?>" disabled>
-										<input type="hidden" name="promotion_confirm_code" value="<?=""?>"/>
+										<input type="hidden" name="promotion_confirm_code"/>
 									</li>
 									<!-- <li><input type="text" placeholder="Recommended by" name="recommended_by" value="<?=$prev["recommended_by"] ?? ""?>" maxlength="100" onkeyup="checkRegExp(this);" onchange="checkRegExp(this);"></li>-->
 									<!-- <li class="">
@@ -480,11 +476,11 @@
 							<td>
 								<ul class="chk_list info_check_list flex_center type2">
                                     <li>
-                                        <input type="radio" class='checkbox other_check' id="card" name='payment_method' value="1"/>
+                                        <input type="radio" class='new_radio' id="card" name='payment_method' value="1"/>
                                         <label for="card"><i></i>Credit card</label>
                                     </li>
                                     <li>
-                                        <input type="radio" class='checkbox other_check' id="bank" name='payment_method' value="2"/>
+                                        <input type="radio" class='new_radio' id="bank" name='payment_method' value="2"/>
                                         <label for="bank"><i></i>Wire transfer</label>
                                     </li>
                                 </ul>
@@ -559,11 +555,10 @@
             }
         });
 
-
-		$("input[name=reg_fee], input[name=promotion_confirm_code]").on("change", function(){
+		
+		$("input[name=promotion_confirm_code]").on("change", function(){
 			const status =  $("input[name=promotion_confirm_code]").val() ?? "";
 			let v = $("input[name=reg_fee]").val();
-
 			v = (v != "") ? parseFloat(v.replace(/[^0-9.]/gi, "")) : 0;
 
 			if(status !== ""){
@@ -575,20 +570,20 @@
                     v = v  - (v * 0.3);
                 }
 			}
-
+			console.log(v)
 			$("input[name=reg_fee]").val(comma(v));
 
-			if(v < 1){
-				if(!$(".payment_method_wrap").hasClass("hidden")){
-					$(".payment_method_wrap").addClass("hidden");
-				}
-				$(".payment_method_wrap li input[name=payment_method]:eq(0)").prop("checked", true);
-                // 0628 추가
-                $(".online_btn.next_btn").addClass("green_btn");
-			}else{
-				$(".payment_method_wrap").removeClass("hidden");
-				$(".payment_method_wrap li input[name=payment_method]").prop("checked", false);
-			}
+			// if(v < 1){
+			// 	if(!$(".payment_method_wrap").hasClass("hidden")){
+			// 		$(".payment_method_wrap").addClass("hidden");
+			// 	}
+			// 	$(".payment_method_wrap li input[name=payment_method]:eq(0)").prop("checked", true);
+            //     // 0628 추가
+            //     $(".online_btn.next_btn").addClass("green_btn");
+			// }else{
+			// 	$(".payment_method_wrap").removeClass("hidden");
+			// 	$(".payment_method_wrap li input[name=payment_method]").prop("checked", false);
+			// }
 		})
 	});
 </script>

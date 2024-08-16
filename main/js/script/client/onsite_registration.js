@@ -187,10 +187,9 @@ function calc_fee(){
             success : function(res){
                 if(res.code == 200) {
                     $("input[name=reg_fee]").val(comma(res.data)).change();
-                    if($("input[name=promotion_code]").val() != ""){
-                        const promotionCode = $("input[name=promotion_code]").val();
-                        select_promotion_code(promotionCode);
-                    }
+                    const promotionCode = $("input[name=promotion_code]").val();
+                    select_promotion_code(promotionCode);
+                    
                 } else if(res.code == 400){
                     alert(locale(language.value)("error_registration"));
                     return false;
@@ -227,22 +226,15 @@ function select_promotion_code(promotion_code) {
         success: function (res) {
             if (res.code == 200) {
                 var result=res.result;
-                if(result.count_limit==0){
-                    alert("This code has already been used.");
-                    $("input[name=promotion_code]").val('');
-                    $("input[name=recommended_by]").val('');
-                    return;
-                } else{
-                    var discount_rate=result.discount_rate;
-                        $("input[name=promotion_code_idx]").val(result.idx).change();
-                        if(discount_rate == 0){
-                            $("input[name=promotion_confirm_code]").val(0).change();
-                        } else if (discount_rate == 1) {
-                            $("input[name=promotion_confirm_code]").val(1).change();
-                        } else if (discount_rate == 2) {
-                            $("input[name=promotion_confirm_code]").val(2).change();
+                var discount_rate = result.discount_rate;
+                    $("input[name=promotion_code_idx]").val(result.idx).change();
+                    if(discount_rate == 0){
+                        $("input[name=promotion_confirm_code]").val(0).change();
+                    } else if (discount_rate == 1) {
+                        $("input[name=promotion_confirm_code]").val(1).change();
+                    } else if (discount_rate == 2) {
+                        $("input[name=promotion_confirm_code]").val(2).change();
                     }
-                }
             } else {
                 alert("Please check the promotion code.");
                 return;
@@ -482,8 +474,8 @@ function promotion_onsite_submit(){
         success : function(res){
             if(res.code == 200) {
                 console.log(res);
-                alert("On-site registration has been completed.");
-                    window.location.href = `/main/registration2.php?idx=${res.reg_idx}&member=${res.member_idx}`;
+                alert("Registration has been completed.");
+                window.location.href = `/main/registration2.php?idx=${res.reg_idx}&member=${res.member_idx}`;
             } else {
                 alert("onsite registration error.");
                 return;
@@ -497,55 +489,123 @@ function requiredCheck(){
     // Terms
     if(!$('#terms1').is(':checked')) {
         alert("Please check the Terms section.");
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        $('.terms1_label').css("color", "red");
+        $('.terms1_label').css("font-weight", "bold");
+
         return false;
     // Country
     } else if(!$('#nation_no > option:selected').val()) {
         alert("Please check the Country section.");
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        $('#nation_no').css("border-color", "red");
         return false;
     // Email
     } else if(!$("input[name=email]").val()) {
         alert("Please check the Email section.");
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        $('input[name=email]').css("border-color", "red");
         return false;
     // Password
     } else if(!$("input[name=password]").val()) {
         alert("Please check the Password section.");
+        window.scrollTo({
+            top: 100,
+            behavior: 'smooth'
+        });
+        $('input[name=password]').css("border-color", "red");
         return false;
     // Password match
     } else if($("input[name=password]").val()!=$("input[name=password2]").val()) {
         alert("Please check the Password section.\n" +
             "Password do not match.");
+            window.scrollTo({
+                top: 100,
+                behavior: 'smooth'
+            });
+            $('input[name=password]').css("border-color", "red");
+            $('input[name=password2]').css("border-color", "red");
         return false;
     // Verify password
     } else if(!$("input[name=password2]").val()) {
         alert("Please check the Verify Password section.");
+        window.scrollTo({
+            top: 100,
+            behavior: 'smooth'
+        });
+        $('input[name=password2]').css("border-color", "red");
         return false;
     // Fisrt name
     } else if(!$("input[name=first_name]").val()) {
         alert("Please check the Name section.");
+        window.scrollTo({
+            top: 500,
+            behavior: 'smooth'
+        });
+        $('input[name=first_name]').css("border-color", "red");
         return false;
     // Last name
     } else if(!$("input[name=last_name]").val()) {
         alert("Please check the Name section.");
+        window.scrollTo({
+            top: 500,
+            behavior: 'smooth'
+        });
+        $('input[name=last_name]').css("border-color", "red");
         return false;
     // Affiliation
     } else if(!$("input[name=affiliation]").val()) {
         alert("Please check the Affiliation(Institute) section.");
+        window.scrollTo({
+            top: 500,
+            behavior: 'smooth'
+        });
+        $('input[name=affiliation]').css("border-color", "red");
         return false;
     // Department
     } else if(!$("input[name=department]").val()) {
         alert("Please check the Department section.");
+        window.scrollTo({
+            top: 500,
+            behavior: 'smooth'
+        });
+        $('input[name=department]').css("border-color", "red");
         return false;
     // Phone
     } else if(!$("input[name=phone]").val()) {
         alert("Please check the Mobile Phone Number section.");
+        window.scrollTo({
+            top: 500,
+            behavior: 'smooth'
+        });
+        $('input[name=phone]').css("border-color", "red");
         return false;
     // Date of birth
     } else if(!$("input[name=date_of_birth]").val()) {
         alert("Please check the Date of Birth section.");
+        window.scrollTo({
+            top: 500,
+            behavior: 'smooth'
+        });
+        $('input[name=date_of_birth]').css("border-color", "red");
         return false;
     // Paticipation type
     } else if(!$('#participation_type > option:selected').val()) {
         alert("Please check the Type of Participation section.");
+        window.scrollTo({
+            top: 1200,
+            behavior: 'smooth'
+        });
+        $('#participation_type').css("border-color", "red");
         return false;
     // Occupation type
     // } else if(!$('#occupation > option:selected').val()) {
@@ -554,42 +614,97 @@ function requiredCheck(){
     // Category
     } else if(!$('#category > option:selected').val()) {
         alert("Please check the Category section.");
+        window.scrollTo({
+            top: 1200,
+            behavior: 'smooth'
+        });
+        $('#category').css("border-color", "red");
         return false;
     // Others
     } else if(others_check()==false){
+        window.scrollTo({
+            top: 1200,
+            behavior: 'smooth'
+        });
+        $('input[name=others]').css("border-color", "red");
         return false;
     // Special Request for Food
     } else if(!$('input:radio[name=special_request]').is(':checked')){
         alert("Please check the Special Request for Food section.");
+        window.scrollTo({
+            top: 1200,
+            behavior: 'smooth'
+        });
+        $('input[name=special_request]').css("border-color", "red");
         return false;
     // Information
     } else if(info_check()==false){
+        window.scrollTo({
+            top: 1200,
+            behavior: 'smooth'
+        });
+        $('input[name=list]').css("border-color", "red");
+        return false;
+    // payment_method
+    } else if(!$('input:radio[name=payment_method]').is(':checked')){
+        alert("Please check the Payment Methods section.");
+        $('input[name=payment_method]').css("border-color", "red");
         return false;
     // Country = Repulic of Korea 한국일때 추가 입력값
     } else if($('#nation_no > option:selected').val() == '25'){
         // KSSO Member
         if(!$('input:radio[name=user]').is(':checked')){
             alert("Please check the KSSO Member section");
-            return
+            window.scrollTo({
+                top: 500,
+                behavior: 'smooth'
+            });
+            $('input:radio[name=user]').css("border-color", "red");
+            return false;
         // 이름
         } else if(!$("input[name=first_name_kor]").val()) {
             alert("Please check the Name_kor section.");
+            window.scrollTo({
+                top: 500,
+                behavior: 'smooth'
+            });
+            $('input[name=first_name_kor]').css("border-color", "red");
             return false;
         // 성
         } else if(!$("input[name=last_name_kor]").val()) {
             alert("Please check the Name_kor section.");
+            window.scrollTo({
+                top: 500,
+                behavior: 'smooth'
+            });
+            $('input[name=last_name_kor]').css("border-color", "red");
             return false;
         // 소속
         } else if(!$("input[name=affiliation_kor]").val()) {
             alert("Please check the Affiliation_kor section.");
+            window.scrollTo({
+                top: 500,
+                behavior: 'smooth'
+            });
+            $('input[name=affiliation_kor]').css("border-color", "red");
             return false;
         // 부서
         } else if(!$("input[name=department_kor]").val()) {
             alert("Please check the Department_kor section.");
+            window.scrollTo({
+                top: 500,
+                behavior: 'smooth'
+            });
+            $('input[name=department_kor]').css("border-color", "red");
             return false;
         // 평점 신청
         } else if(!$('input:radio[name=review]').is(':checked')) {
             alert("Please check the Review section.");
+            window.scrollTo({
+                top: 500,
+                behavior: 'smooth'
+            });
+            $('input:radio[name=review]').css("border-color", "red");
             return false;
         }
     }

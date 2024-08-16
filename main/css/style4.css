@@ -3269,3 +3269,16 @@ table.type2 th{
 	font-family: 'Sriracha', cursive;
 	margin-bottom: 30px;
 }
+
+.promotion_header{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0 auto;
+}
+
+.promotion_header > img:nth-child(1), .promotion_header > img:nth-child(3){
+	height: 110px;
+}
