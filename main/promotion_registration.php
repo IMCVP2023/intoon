@@ -42,7 +42,7 @@
 <div class="promotion_header">
 	<img src="./img/icons/KSCP_logo.png"/>
 	<img src="./img/icons/pop_close.png"/>
-	<img src="./img/icons/ASPC_Logo_NEW.jpg"/>
+	<img src="./img/icons/ASPC_Logo_NEW.png"/>
 </div>
 <section class="container window_open onsite_register promotion_reg">
 	<div class="">
@@ -555,7 +555,7 @@
             }
         });
 
-		
+
 		$("input[name=promotion_confirm_code]").on("change", function(){
 			const status =  $("input[name=promotion_confirm_code]").val() ?? "";
 			let v = $("input[name=reg_fee]").val();
@@ -570,7 +570,7 @@
                     v = v  - (v * 0.3);
                 }
 			}
-			console.log(v)
+			//console.log(v)
 			$("input[name=reg_fee]").val(comma(v));
 
 			// if(v < 1){

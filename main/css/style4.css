@@ -3271,6 +3271,7 @@ table.type2 th{
 }
 
 .promotion_header{
+	/* width: 40%; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -3281,4 +3282,18 @@ table.type2 th{
 
 .promotion_header > img:nth-child(1), .promotion_header > img:nth-child(3){
 	height: 110px;
+}
+
+@media screen and (max-width:710px) {
+	.promotion_header{
+		flex-direction: column;
+	}
+ 	.promotion_header > img:nth-child(1), .promotion_header > img:nth-child(3){
+		width: 36%;
+		height: auto;
+	}
+	.promotion_header > img:nth-child(2){
+		width: 10%;
+		height: auto;
+	}
 }
