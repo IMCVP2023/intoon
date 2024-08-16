@@ -37,7 +37,7 @@ if ($_SERVER["HTTP_HOST"] == "www.imcvp.org") {
 
 //날짜 변경 필요!!!
 $sql_during =	"SELECT
-						IF(NOW() BETWEEN '2022-08-18 17:00:00' AND '2024-09-07 22:00:00', 'Y', 'N') AS yn
+						IF(NOW() BETWEEN '2022-08-18 17:00:00' AND '2024-11-04 09:00:00', 'Y', 'N') AS yn
 					FROM info_event";
 $during_yn = sql_fetch($sql_during)['yn'];
 //!=="Y"
