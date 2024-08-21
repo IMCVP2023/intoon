@@ -82,7 +82,7 @@ $locale = locale($language);
                         <ul class="sub_nav">
                             <li><a href="/main/program_glance.php">Program at a Glance</a></li>
                             <li><a href="/main/scientific_program1.php">Scientific Program</a></li>
-                            <li><a href="/main/comingsoon.php">Invited Speakers</a></li>
+                            <li><a href="/main/invited_speaker.php">Invited Speakers</a></li>
 
                             <!-- <li><a href="/main/program_glance.php">Program at a Glance</a></li>
                             <li><a href="/main/program_detail.php">Scientific Program</a></li>
@@ -288,7 +288,7 @@ $(document).ready(function() {
                 <ul class="m_sub_nav" style="display:<?= (in_array($_page, $_page_config["m2"]) ? "block" : "none") ?>">
                     <li><a href="/main/program_glance.php">Program at a Glance</a></li>
                     <li><a href="/main/scientific_program1.php">Scientific Program</a></li>
-                    <li><a href="/main/comingsoon.php">Invited Speakers</a></li>
+                    <li><a href="/main/invited_speaker.php">Invited Speakers</a></li>
 
                     <!-- <li><a href="/main/program_glance.php">Program at a Glance</a></li>
                     <li><a href="/main/program_detail.php">Scientific Program</a></li>

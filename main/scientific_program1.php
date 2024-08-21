@@ -79,7 +79,7 @@
 			<div class="sub_btn_box">
 				<a href="/main/program_glance.php">Program at a Glance</a>
 				<a href="/main/scientific_program1.php" class="on">Scientific Program</a>
-				<a href="/main/comingsoon.php">Invited Speakers</a>
+				<a href="/main/invited_speaker.php">Invited Speakers</a>
 				<!-- <a href="/main/invited_speaker.php">Invited Speakers</a> -->
 			</div>
 		</h1>
