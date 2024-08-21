@@ -224,7 +224,7 @@
 						html +=			"</div>";
 						html +=		"</div>";
 						html +=		"<div class='lecture_title'>";
-						html +=			"<strong class='session_title' data-room='"+list['session_room']+"' data-date='"+list['session_date']+"' data-name='"+list['session_name']+"' onclick='onClickTitle(event)'>"+list['session_type']+"</strong>";
+						html +=			"<strong class='session_title' data-room='"+list['session_room']+"' data-date='"+list['session_date']+"' data-name='"+list['session_name']+"''>"+list['session_type']+"</strong>";
 						html +=			list['title'];
 						if(list['session_type2']) {
 							html +=			"<strong>"+list['session_type2']+"</strong>";
