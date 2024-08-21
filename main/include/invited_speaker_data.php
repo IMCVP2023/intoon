@@ -21,7 +21,7 @@ array
 		'last_name'=>'Ohkubo', 
 		'affiliation'=>'Teikyo University School of Medicine', 
 		'nation'=>'Japan', 
-		'session_type'=>'Plenary Lecture 2', 
+		'session_type'=>'Plenary Lectures 2', 
 		'title'=>'Significance of Home Blood Pressure Measurement : Perspectives from Experience In Japan', 
 		'image'=>'./img/2024_invited_speaker/2024_plenary_2.jpg'
 ), 
@@ -32,7 +32,7 @@ array
 		'last_name'=>'Cherney', 
 		'affiliation'=>'University Health Network', 
 		'nation'=>'Canada', 
-		'session_type'=>'Plenary Lecture 3', 
+		'session_type'=>'Plenary Lectures 3', 
 		'title'=>'The Role of SGLT2i in Integrative Management of Cardio-Renal-Metabolic Diseases', 
 		'image'=>'./img/2024_invited_speaker/2024_plenary_3.png'
 ), 
@@ -43,7 +43,7 @@ array
 		'last_name'=>'Kim', 
 		'affiliation'=>'The Catholic University of Korea', 
 		'nation'=>'Korea', 
-		'session_type'=>'Plenary Lecture 4', 
+		'session_type'=>'Plenary Lectures 4', 
 		'title'=>'Black and White: The Evolving Role of Carotid Intima-Media Thickness in Risk Stratification', 
 		'image'=>'./img/2024_invited_speaker/2024_plenary_4.png'
 ), 
@@ -103,16 +103,6 @@ array
 		'image'=>'./img/2024_invited_speaker/TBD.png'
 		), 
 
-	 array(
-		'idx'=>8, 
-		'first_name'=>'Eun Ho', 
-		'last_name'=>'Choo', 
-		'affiliation'=>'The Catholic University of Korea', 
-		'nation'=>'Korea', 
-		'session_type'=>'Symposium 18', 
-		'title'=>'Recent trial results of new drugs targeting TG rich lipoprotein', 
-		'image'=>'./img/2024_invited_speaker/TBD.png'
-), 
 
 	 array(
 		'idx'=>9, 
