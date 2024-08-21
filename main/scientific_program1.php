@@ -602,7 +602,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>16:40 - 17:00</th>
 										<td>
-											<p class="s_bold">Measurement of Socioeconomic Factors for Cardiovascular Disease Risk Assessmentt</p>
+											<p class="s_bold">Measurement of Socioeconomic Factors for Cardiovascular Disease Risk Assessment</p>
 											<p>Hyeon Chang Kim (Yonsei University, Korea)</p>
 										</td>
 									</tr>
