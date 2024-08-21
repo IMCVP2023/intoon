@@ -375,7 +375,7 @@ div.bg input[type=button]:hover{background-color: #23509F; border-color: #23509F
 .speaker_list li {padding:30px; border: 1px solid #F6F6FA; background-color: #F6F6FA; width:calc(50% - 16px);/*height: 200px;*/}
 .speaker_list_2 {margin-top:40px; display:flex; flex-wrap:wrap; justify-content:space-between;}
 .speaker_list li:nth-child(2n+1) {margin-left:0;}
-.speaker_img {width:108px; height:138px; } /*background:url('../img/img_invited01.jpg') no-repeat center /cover;*/
+.speaker_img {width:108px; height:138px; border: 1px solid #dfdfe1; } /*background:url('../img/img_invited01.jpg') no-repeat center /cover;*/
 .speaker_img.logo_img {background-size:contain !important;}
 /*.speaker_list li:nth-child(2) .speaker_img {background-image:url('../img/img_invited02.jpg');}*/
 /*.speaker_list li:nth-child(3) .speaker_img {background-image:url('../img/img_invited03.jpg');}*/
