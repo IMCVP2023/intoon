@@ -207,7 +207,7 @@ The secretariat will contact awardees individually.</li>
 						<li>• Certificates will be available at <a class="mypage_btn" href="./mypage_abstract.php">My IMCVP</a> after the congress. <br/>It is mandatory to complete the congress evaluation survey to receive certification.</li>
 						<li>• In person attendance will be checked. This data will be the basis for certification.</li>
 						<!-- <li>• IMCVP does not share the attendee's certificate with any third party, not even the sponsor of the registration.</li> -->
-						<li>• For more detail, please contact IMCVP2024 Secretariat at <a href="mailto:sci@imcvp.org">&nbsp;&nbsp;&nbsp;  sci@imcvp.org</a></li>
+						<li>• For more detail, please contact IMCVP2024 Secretariat at <a href="mailto:sci@imcvp.org" class="link under"> sci@imcvp.org</a></li>
 					</ul>
 				</div>
             </div>

@@ -178,6 +178,21 @@ $price = get_data($sql_price);
 								</tr>
                                 <tr class="text_center">
 									<td>
+                                        Healthcare Professional other <br/>than Medical Doctors<span class="red_t">*</span>
+                                         <!-- Pharmacist,<br>
+										 Nurse, Excercise therapist,<br>
+                                         Nutritionists, Researchers<br> -->
+										<!-- Corporate member, Others<br> -->
+									</td>
+									<td class="point4_txt bold">USD 75</td>
+									<td class="point4_txt bold">USD 100</td>
+									<td>USD 100</td>
+									<td>USD 125</td>
+									<td>USD 125</td>
+									<td>USD 150</td>
+								</tr>
+                                <tr class="text_center">
+									<td>
                                         Trainee,<br>
 										Students
 									</td>
@@ -188,24 +203,10 @@ $price = get_data($sql_price);
 									<td>USD 80</td>
 									<td>USD 100</td>
 								</tr>
-								<tr class="text_center">
-									<td>
-                                        <!-- Healthcare Professional other <br/>than Medical Doctors<span class="red_t">*</span> -->
-                                         Pharmacist,<br>
-										 Nurse, Excercise therapist,<br>
-                                         Nutritionists, Researchers<br>
-										<!-- Corporate member, Others<br> -->
-									</td>
-									<td class="point4_txt bold">USD 75</td>
-									<td class="point4_txt bold">USD 100</td>
-									<td>USD 100</td>
-									<td>USD 125</td>
-									<td>USD 125</td>
-									<td>USD 150</td>
-								</tr>
+							
 							</tbody>
 						</table>
-                        <!-- <p class="text_r">* Nurse, Dietician, Nutritionist, Pharmacist, Exercise Specialist, Coporate Member, Others</p> -->
+                        <p class="text_r">* Nurse, Dietician, Nutritionist, Pharmacist, Exercise Specialist, Corporate Member, Others</p>
 					</div>
                 </div>
                 <!--2. icomes-Air Registration start-->
@@ -241,6 +242,21 @@ $price = get_data($sql_price);
 								</tr>
                                 <tr class="text_center">
 									<td>
+                                    Healthcare Professional other <br/>than Medical Doctors<span class="red_t">*</span>
+                                        <!-- Pharmacist, Excercisetherapist<br>
+										 Nurse, exercise therapist,<br>
+                                         Nutritionists,Researchers<br> -->
+										<!-- Corporate member, Others<br> -->
+									</td>
+									<td class="point4_txt bold">KRW 75,000</td>
+									<td class="point4_txt bold">KRW 100,000</td>
+									<td>KRW 100,000</td>
+									<td>KRW 125,000</td>
+									<td>KRW 125,000</td>
+									<td>KRW 150,000</td>
+								</tr>
+                                <tr class="text_center">
+									<td>
                                     Trainee (<span class="kor bold">전임의</span>)
                                     <!-- Trainee (<span class="kor bold">전임의, 전공의</span>),<br>
                                     Students -->
@@ -252,31 +268,17 @@ $price = get_data($sql_price);
 									<td>KRW 80,000</td>
 									<td>KRW 100,000</td>
 								</tr>
-								<tr class="text_center">
-									<td>
-                                    <!-- Healthcare Professional other <br/>than Medical Doctors<span class="red_t">*</span> -->
-                                        Pharmacist, Excercisetherapist<br>
-										 Nurse, exercise therapist,<br>
-                                         Nutritionists,Researchers<br>
-										<!-- Corporate member, Others<br> -->
-									</td>
-									<td class="point4_txt bold">KRW 75,000</td>
-									<td class="point4_txt bold">KRW 100,000</td>
-									<td>KRW 100,000</td>
-									<td>KRW 125,000</td>
-									<td>KRW 125,000</td>
-									<td>KRW 150,000</td>
-								</tr>
+								
 							</tbody>
 						</table>
-                        <!-- <p class="text_r">* Nurse, Dietician, Nutritionist, Pharmacist, Exercise Specialist, Coporate Member, Others</p> -->
+                        <p class="text_r">* Nurse, Dietician, Nutritionist, Pharmacist, Exercise Specialist, Corporate Member, Others</p>
 					</div>
                     
 					<div class="mt10">
 						<ul class="indent_ul">
                             <li class="bold">※ 국내 전공의 및 학생은 등록비 무료 （신분증 확인) </li>
 							<li>• A confirmation letter for registration will be sent to your registered email address once you complete your registration with full payment.<br/>If you have not received it, please contact the congress secretariat(<a href="mailto:info@imcvp.org">info@imcvp.org</a>).</li>
-							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as <span class="bold point4_txt">'Unpaid.'</span><br/>If you need to confirm the payment, you can check the payment status on <span class="bold point4_txt">'My Page.'</span> (Please be aware that it may take 3~5 business days for the payment confirmation to be updated.)</li>
+							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as <span class="bold point4_txt">'Unpaid.'</span><br/>If you need to confirm the payment, you can check the payment status on <span class="bold point4_txt">'My Page.'</span> (Please be aware that it may take 3~5 business days for the payment confirmation to be updated).</li>
 							<li>• Registration status will not be considered ‘Complete’ after the full payment.</li>
 							<li>• The online registration page is optimized for <span class="bold point4_txt">Google Chrome</span> and <span class="bold point4_txt">Microsoft Edge</span>.
                             <!-- <br/>If you encounter any issues with online registration, please reach out to the congress secretariat for assistance. -->

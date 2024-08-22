@@ -221,9 +221,8 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!--
-										 <p>Seung-Hyun Ko (The Catholic University of Korea, Korea)<br>-->
-										 	<!-- Hye Young Lee (Seoul National University, Korea)</p>  -->
+										 <p>Hye Young Lee (Seoul National University, Korea)<br>
+										 Jae Hyuk Lee (Myongji Hospital, Korea)</p>  
 										</td>
 									</tr>
 									
@@ -381,9 +380,8 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											
-												<!--<p> Eun-Jung Rhee (Sungkyunkwan University, Korea)<br/>-->
-                                                <!-- Sang Hak Lee (Yonsei University, Korea)</p>  -->
+											<p>Hyuk Sang Kwon (The Catholic University of Korea, Korea)<br/>
+											Sang Hak Lee (Yonsei University, Korea)</p>  
 										</td>
 									</tr>
 									<tr>
@@ -404,7 +402,7 @@
 										<th>11:50 - 12:10</th>
 										<td>
 											<p class="s_bold">Bariatric Surgery for Obese Patients with Cardiovascular Disease</p>
-											<p>TBD</p>
+											<p>Moon Won Yoo (University of Ulsan, Korea)</p>
 											<!-- <p>Moon Won Yoo (University of Ulsan, Korea)</p> -->
 										</td>
 									</tr>
@@ -412,7 +410,7 @@
 										<th>12:10 - 12:30</th>
 										<td>
 											<p class="s_bold">Novel Pharmacotherapy for Obese Patients with Cardiovascular Disease</p>
-											<p>TBD</p>
+											<p>Soo Lim (Seoul National University, Korea)</p>
 											<!-- <p>Soo Lim (Seoul National University, Korea)</p> -->
 										</td>
 									</tr>
@@ -420,8 +418,7 @@
 										<th>12:30 - 12:50</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<p>Dae Young Cheon (Hallym University, Korea)
-												<!-- , Joon Ho Hyun (University of Ulsan, Korea) -->
+											<p>Dae Young Cheon (Hallym University, Korea), Joon Ho Hyun (University of Ulsan, Korea)
 											</p>
 											<p>Yeoree Yang (The Catholic University of Korea, Korea), Mihae Seo (Soonchunhyang University, Korea)</p>
 										</td>
@@ -495,7 +492,8 @@
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">13:50 - 14:30</th>
-										<td class="green_bg">Plenary Lecture 4<br/>								
+										<td class="green_bg">Plenary Lecture 4<br/>		
+										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -518,6 +516,15 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr green">
+										<td colspan="2">
+											<ul>
+												<li>The carotid intima‑media thickness test (CIMT) is a measure used to diagnose the extent of carotid atherosclerotic vascular disease. The test measures the thickness of the inner two layers of the carotid artery—the intima and media—and alerts physicians to any thickening when patients are still asymptomatic. CIMT shows good correlation with the extent of one person’s atherosclerotic disease and predicts future cardiovascular events. CIMT is non-invasive and could be easily performed in the clinic for the prediction of atherosclerotic disease in our patients. In this plenary lecture, Prof. Yong-Jae Kim from The Catholic University of Korea will tell us about the role of CIMT in the risk stratification of cardiovascular risk.
+
+												</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -1122,7 +1129,8 @@
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">13:50 - 14:30</th>
-										<td class="green_bg">Plenary Lecture 4<br/>								
+										<td class="green_bg">Plenary Lecture 4<br/>	
+										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>									
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -1145,6 +1153,15 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr green">
+										<td colspan="2">
+											<ul>
+												<li>The carotid intima‑media thickness test (CIMT) is a measure used to diagnose the extent of carotid atherosclerotic vascular disease. The test measures the thickness of the inner two layers of the carotid artery—the intima and media—and alerts physicians to any thickening when patients are still asymptomatic. CIMT shows good correlation with the extent of one person’s atherosclerotic disease and predicts future cardiovascular events. CIMT is non-invasive and could be easily performed in the clinic for the prediction of atherosclerotic disease in our patients. In this plenary lecture, Prof. Yong-Jae Kim from The Catholic University of Korea will tell us about the role of CIMT in the risk stratification of cardiovascular risk.
+
+												</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
