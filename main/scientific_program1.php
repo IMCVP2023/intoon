@@ -176,7 +176,7 @@
 										<th>09:40 - 10:00</th>
 										<td>
 											<p class="s_bold">Current Guidelines for Diabetes </p>
-											<p>Sung Hee Choi (Seoul National University, Korea)</p>
+											<p>Byung-Wan Lee (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -186,7 +186,7 @@
 												Current Guidelines for Heart Failure 
 											</p>
 											<p>
-												TBD
+											Seong Mi Park (Korea University, Korea)
 											</p>
 										</td>
 									</tr>
@@ -262,7 +262,8 @@
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">11:10 - 11:50</th>
-										<td class="green_bg">Plenary Lecture 1<br/>								
+										<td class="green_bg">Plenary Lecture 1<br/>	
+										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -285,6 +286,14 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+									<tr class="preview_tr green">
+										<td colspan="2">
+											<ul>
+												<li>Familial hypercholesterolemia (FH) is a genetic disorder characterized by high cholesterol levels, specifically very high levels of low-density lipoprotein cholesterol (LDL cholesterol), and most often caused by a defect in 3 different genes (LDL-receptor gene, PCSK 9 gene and Apo B gene). As the FH affects the way the body processes cholesterol, people with FH have a higher risk of heart disease and a greater risk of early heart attack. In this plenary lecture, the world renowned expert in FH research, Professor Brian Tomlinson from Macau University of Science and Technology, Macau, China will provide us with beautiful insights and future perspectives in the field of diagnosis and treatment of FH. 
+												</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -312,7 +321,7 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_pink_bg">11:50 - 13:00</th>
+										<th class="dark_pink_bg">11:50 - 12:10</th>
 										<td class="pink_bg">Luncheon Symposium 1 
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -322,7 +331,7 @@
 							<table class="table color_table mobile" name="luncheon_symposium_1_mb">
 								<tbody>
 									<tr>
-										<th class="dark_pink_bg">11:50 - 13:00</th>
+										<th class="dark_pink_bg">11:50 - 12:10</th>
 									</tr>
 									<tr class="non_border_b">
 										<td class="pink_bg">Luncheon Symposium 1 </td>
@@ -348,19 +357,26 @@
 									</tr>
 									
 									<tr class="">
+									<!-- <tr class="pink_panel_tr"> -->
 										<th>11:50 - 12:10</th>
 										<td>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="non_border_b">
+									<!-- <tr class="non_border_b">
+										<th>12:10 - 13:00</th>
+										<td>
+											<p>Break</p>
+										</td>
+									</tr> -->
+									<!-- <tr class="non_border_b">
 										<th>12:10 - 12:30</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											 <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> 
 										</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</table>
 						</div>
@@ -412,7 +428,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+											<p>Hyung Min Kwon (Seoul National University, Korea)<br>Yo Han Jung (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -453,10 +469,8 @@
 										<th>14:20 - 14:40</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<p>Jin Jung (The Catholic University of Korea, Korea), Ho Girl Woo (Kyung Hee University, Korea)</p>
-											<p>Jong Moo Park (Eulji University, Korea)
-												<!-- , TBD (TBD) -->
-											</p>
+											<p>Jin Jung (The Catholic University of Korea, Korea), Ho Geol Woo (Kyung Hee University, Korea)</p>
+											<p>Seong heon Kim (Kangwon National University, Korea), Jong Moo Park (Eulji University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -479,7 +493,8 @@
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">15:00 - 15:40</th>
-										<td class="green_bg">Plenary Lecture 2<br/>								
+										<td class="green_bg">Plenary Lecture 2<br/>
+										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>									
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -502,6 +517,14 @@
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr green">
+										<td colspan="2">
+											<ul>
+												<li>Home blood pressure monitoring (HBPM) is a reliable, convenient, and less costly alternative to ambulatory blood pressure monitoring (ABPM) for the diagnosis and management of hypertension. Recognition and use of HBPM have dramatically increased over the last 20 years and current guidelines make strong recommendations for the use of both HBPM and ABPM in patients with hypertension. In this plenary lecture, Prof. Takayoshi Ohkubo from Teikyo University School of Medicine, Japan will give us a wonderful lecture on the current knowledge and his experience in Japan on significance of home blood pressure measurement.
+												</li>
+											</ul>
+										</td>
+									</tr>
 								<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -573,8 +596,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										</th>
 										<td>
 											<p>
-												 <!-- Heather M. Johnson (Florida Atlantic University, USA) -->
-												<!--<br>Won-Young Lee (Sungkyunkwan University, Korea) -->
+												Heather M. Johnson (Florida Atlantic University, USA) 
+												<br>Dae Jung Kim (Ajou University, Korea)
 											</p>
 										</td>
 									</tr>
@@ -610,8 +633,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>17:00 - 17:20</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
+											<p>Ho Kyu Lee (Yonsei University, Korea), Dae Young Chun (Hallym University, Korea)</p>
+											<p>TBD, Song Vogue Ahn (Ewha Womans University, Korea)</p>
 										</td>
 									</tr>
 								</tbody>
@@ -740,7 +763,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+											<p>Jung Hyun Noh (Inje University, Korea)<br>Seong Hun Choi (Hallym University, Korea)</p>
 										</td>
 									</tr>
 									
@@ -757,14 +780,14 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p class="s_bold">
 												Cardiovascular Effects of Tirzepatide 
 											</p>
-											<p>TBD (TBD)</p>
+											<p>Claire Lee (Eli Lilly and Company, U.S.A)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:40 - 10:00</th>
 										<td>
-											<p class="s_bold">Anti-Obesity Drugs</p>
-											<p>TBD (TBD)</p>
+											<p class="s_bold">Transforming Obesity Care: Next-Gen Treatments for Weight Loss </p>
+											<p>Jang Won Son (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -778,8 +801,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>10:20 - 10:40</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											 <p>Yoo Jin Han (Keimyung University, Korea)</p>
-											<!--<p>TBD (TBD), TBD (TBD)</p> -->
+											 <p>Yoo Jin Han (Keimyung University, Korea), TBD</p>
+											<p>TBD, TBD</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -844,7 +867,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">11:10 - 11:50</th>
-										<td class="green_bg">Plenary Lecture 1<br/>								
+										<td class="green_bg">Plenary Lecture 1<br/>
+										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -867,6 +891,14 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr green">
+										<td colspan="2">
+											<ul>
+												<li>Familial hypercholesterolemia (FH) is a genetic disorder characterized by high cholesterol levels, specifically very high levels of low-density lipoprotein cholesterol (LDL cholesterol), and most often caused by a defect in 3 different genes (LDL-receptor gene, PCSK 9 gene and Apo B gene). As the FH affects the way the body processes cholesterol, people with FH have a higher risk of heart disease and a greater risk of early heart attack. In this plenary lecture, the world renowned expert in FH research, Professor Brian Tomlinson from Macau University of Science and Technology, Macau, China will provide us with beautiful insights and future perspectives in the field of diagnosis and treatment of FH. 
+												</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -1018,8 +1050,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>14:20 - 14:40</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
+											<p>Eun Joo Lee (University of Ulsan, Korea), TBD</p>
+											<p>TBD, TBD</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -1042,7 +1074,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">15:00 - 15:40</th>
-										<td class="green_bg">Plenary Lecture 2<br/>								
+										<td class="green_bg">Plenary Lecture 2<br/>	
+										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -1065,6 +1098,14 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<col width="*">
 								</colgroup>
 								<tbody>
+								<tr class="preview_tr green">
+										<td colspan="2">
+											<ul>
+												<li>Home blood pressure monitoring (HBPM) is a reliable, convenient, and less costly alternative to ambulatory blood pressure monitoring (ABPM) for the diagnosis and management of hypertension. Recognition and use of HBPM have dramatically increased over the last 20 years and current guidelines make strong recommendations for the use of both HBPM and ABPM in patients with hypertension. In this plenary lecture, Prof. Takayoshi Ohkubo from Teikyo University School of Medicine, Japan will give us a wonderful lecture on the current knowledge and his experience in Japan on significance of home blood pressure measurement.
+												</li>
+											</ul>
+										</td>
+									</tr>
 									<tr class="green_panel_tr">
 										<th class="leftT">
 											<p>Chairpersons</p>
@@ -1142,7 +1183,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
+											<p>Bum Soon Choi (The Catholic University of Korea, Korea)<br/>TBD</p>
 										</td>
 									</tr>
 									

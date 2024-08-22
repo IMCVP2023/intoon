@@ -3165,6 +3165,10 @@ table.type2 th{
 	background-color: #FFFDEF;
 }
 
+.preview_tr.green{
+	background-color: #F4FFE8;
+}
+
 .venue_txt{
 	/* margin-top: 200px !important; */
 	font-size: 18px !important;

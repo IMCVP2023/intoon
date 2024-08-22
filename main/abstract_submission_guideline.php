@@ -39,7 +39,7 @@ $info = sql_fetch($sql_info);
             <div>
                 <div class="text_box">
                     <ul>
-                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="dark_blue_t bold">poster Oral,&nbsp;</span><span class="light_blue_t bold">Poster Exhibitions,&nbsp;</span><span class="dark_gray_txt bold">either.</span></li>
+                        <li>The IMCVP 2024 organizing committee cordially invites you to submit abstracts for <span class="dark_blue_t bold">Poster Oral,&nbsp;</span><span class="light_blue_t bold">Poster Exhibitions,&nbsp;</span><span class="dark_gray_txt bold">either.</span></li>
                         <li>All congress abstracts must be submitted online via the "Online Submission System."</li>
                         <li>Submitted abstracts will be reviewed by the Scientific Program Committee, and committee might request an oral presentation.</li>
                         <li>All presenters are required to register and pay the registration fee.</li>
@@ -255,8 +255,7 @@ $info = sql_fetch($sql_info);
                     <ul class="indent_ul">
                         <li>• All submitted abstracts will be reviewed by the Scientific Program Committee, following the reviewing procedures.</li>
                         <li>• It is mandatory for all presenters to complete the registration process and pay the full registration fee by <span class="point4_txt bold">November 3, 2024.</span></li>
-                        <li>• If the submission deadline changes, the acceptance notification date will also change. The
-                            secretariat will announce via IMCVP website or newsletter.</li>
+                        <li>• Acceptance notifications will be announced through the IMCVP website or newsletter.</li>
                     </ul>
                 </div>
             </div>
