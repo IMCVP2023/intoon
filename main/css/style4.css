@@ -1496,10 +1496,10 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 .noti_wrap > div:first-child {width: calc(60% - 10px); min-height: 100px;}
 .noti_wrap > div {width: calc(40% - 10px); min-height: 100px;}
 .noti_wrap_title {font-size: 26px; font-weight: bold; color: #000000; /*margin-bottom: 15px;*/}
-.dates_area ul {display: flex; flex-wrap: wrap; justify-content: space-between; min-height: 228px;gap: 8px;}
+.dates_area ul {display: flex; flex-wrap: wrap; justify-content: space-between; min-height: 228px;gap: 6px;}
 .dates_area li {width: 24%; background-image: url("../img/2024_key_date_1.png"); background-position: center; background-size: contain;background-repeat: no-repeat;}
-.dates_area li:nth-of-type(2) {background-image: url("../img/2024_key_date_2.png")}
-.dates_area li:nth-of-type(3) {background-image: url("../img/2024_key_date_3.png")}
+.dates_area li:nth-of-type(2) {background-image: url("../img/2024_key_date_2-1.png")}
+.dates_area li:nth-of-type(3) {background-image: url("../img/2024_key_date_3-1.png")}
 .dates_area li:nth-of-type(4) {background-image: url("../img/2024_key_date_4.png")}
 .dates_area li a {width: 100%; height: 100%; padding: 21px 16px 0px; display: flex; justify-content: space-between; align-items: flex-start; flex-direction: column;}
 .dates_area li a div {display: flex; flex-direction: column; align-items: flex-start; justify-content: center;}
@@ -1516,12 +1516,24 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 
 @media screen and (max-width:1024px) {
 	.noti_wrap > div:first-child {width: 100%}
-	.dates_area li{width: 23%; background-size: cover; border-radius: 20px;}
+	.dates_area li{width: 23%; background-size: contain; border-radius: 20px;}
 	/* .dates_area li h2 {font-size: 16px;} */
 	.dates_area li p {font-size: 20px;}
 	.dates_area li p:last-child{font-size: 80px}
+	.dates_area li a{padding: 21px 45px 0px;}
 }
 
+@media screen and (max-width: 740px) {
+	.dates_area li a{padding: 21px 20px 0px;}
+}
+
+@media screen and (max-width: 610px) {
+	.dates_area li a{padding: 21px 57px 0px;}
+}
+
+@media screen and (max-width: 450px) {
+	.dates_area li a{padding: 21px 24px 0px;}
+}
 
 /* main > News&Notice */
 .noti_area ul {height:247px; list-style: disc;/* border: 1px solid #707070;*/ padding: 37px 21px 24px;}
@@ -2945,6 +2957,10 @@ select[name="topic1"] option:disabled {
 	justify-content: flex-start;
 	gap : 24px;
 	flex-wrap: wrap;
+}
+
+.abstract_key_date_box > img {
+	height: 328px;
 }
 
 .abstract_type{

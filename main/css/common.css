@@ -129,13 +129,14 @@ a.underline {text-decoration: underline !important;}
 .regi_fee {display:flex; align-items:center; margin-bottom: -1px;}
 .italic {font-style:italic;}
 .font_b {font-weight:bold !important;}
-.under{text-underline-position: under;}
+.under{text-underline-position: under; text-decoration:underline !important;}
 .violet_t{color: purple;}
 .dark_blue_t{color: #23509F;}
 .light_blue_t{color: #009DDC;}
 .font20{font-size: 20px;}
 .font14{font-size: 14px;}
 .line6{line-height: 1.6;}
+.font400{font-weight:400 !important;}
 
 /* title */
 .sub_section_title{font-size:20px;display:inline-block;background:#ADF002;color:#000;padding:6px 28px;border-radius:20px;}

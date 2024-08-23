@@ -196,7 +196,7 @@
 				<ul>
 					<li>
 						<a href="/main/registration_guidelines.php">
-							<h2>Early bird<br/>registration<br/>Deadline</h2>
+							<h2>Early bird<br/>registration<br/>deadline</h2>
 							<div>
 								<p>September</p>
 								<p>1</p>
@@ -205,20 +205,20 @@
 					</li>
 					<li>
 						<a href="/main/abstract_submission_guideline.php">
-						<h2>Abstract<br/>submission<br/>Deadline</h2>
+						<!-- <h2>Abstract<br/>submission<br/>deadline</h2>
 							<div>
 								<p>August</p>
 								<p>28</p>
-							</div>
+							</div> -->
 						</a>
 					</li>
 					<li>
 						<a href="/main/registration_guidelines.php">
-						<h2>Notification of<br/>acceptance</h2>
+						<!-- <h2>Notification of<br/>acceptance</h2>
 							<div>
 								<p>October</p>
 								<p>25</p>
-							</div>
+							</div> -->
 						</a>
 					</li>
 					<li>
