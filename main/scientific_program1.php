@@ -785,7 +785,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>09:20 - 09:40</th>
 										<td>
 											<p class="s_bold">
-												Cardiovascular Effects of Tirzepatide 
+												Cardiovascular Effects of Tirzepatide <img class="virtual_mark" src="./img/icons/virtual.svg"/>
 											</p>
 											<p>Claire Lee (Eli Lilly and Company, U.S.A)</p>
 										</td>
