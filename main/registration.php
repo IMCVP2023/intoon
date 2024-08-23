@@ -264,7 +264,13 @@ if ($during_yn !== "Y") {
 								<select id="category" name="category" onChange="calc_fee(this)" <?=$prev["status"] == 2 || $prev["status"] == 3 ? "readonly disabled" : ""?>>
 									<option value="" selected hidden>Choose</option>
 									<?php
-										$category_arr = array("Certified M.D.", "Professor", "Researcher", "Nutritionist", "Exercise Specialist", "Nurse", "Pharmacist", "Trainee", "Student", "Others");
+										$category_arr = [];
+										if($member_data['nation_en'] == "Republic of Korea"){
+											$category_arr = array("Certified M.D.", "Professor", "Researcher", "Nutritionist", "Exercise Specialist", "Nurse", "Pharmacist", "Trainee", "Student", "Others", "Trainee (전공의)");
+										}else{
+											$category_arr = array("Certified M.D.", "Professor", "Researcher", "Nutritionist", "Exercise Specialist", "Nurse", "Pharmacist", "Trainee", "Student", "Others");
+										}
+										
 
 										foreach($category_arr as $a_arr) {
 											$selected = $prev["member_type"] == $a_arr ? "selected" : "";

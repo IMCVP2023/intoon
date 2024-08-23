@@ -213,6 +213,7 @@ $price = get_data($sql_price);
                 <h3 class="title">Registration Fees for Korean</h3>
                 <div class="details icomes_air">
 					<div class="table_wrap x_scroll">
+                        <p class="red_t kor text_r font400">※  국내 Trainee(전공의), Student(학생)은 등록비 무료 <a href="https://forms.gle/aWuj92c7iKmrEyD1A " class="red_t bold under" target="_blank">(자세히알아보기)</a></p>
 						<table class="c_table2 detail_table center type1">
 							<thead>
 								<tr>
@@ -276,7 +277,7 @@ $price = get_data($sql_price);
                     
 					<div class="mt10">
 						<ul class="indent_ul">
-                            <li class="bold">※ 국내 전공의 및 학생은 등록비 무료 （신분증 확인) </li>
+                            <!-- <li class="bold">※ 국내 전공의 및 학생은 등록비 무료 （신분증 확인) </li> -->
 							<li>• A confirmation letter for registration will be sent to your registered email address once you complete your registration with full payment.<br/>If you have not received it, please contact the congress secretariat(<a href="mailto:info@imcvp.org">info@imcvp.org</a>).</li>
 							<li>• For wire transfers, the automatically generated confirmation letter may indicate the payment status as <span class="bold point4_txt">'Unpaid.'</span><br/>If you need to confirm the payment, you can check the payment status on <span class="bold point4_txt">'My Page.'</span> (Please be aware that it may take 3~5 business days for the payment confirmation to be updated).</li>
 							<li>• Registration status will not be considered ‘Complete’ after the full payment.</li>

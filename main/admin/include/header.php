@@ -32,6 +32,7 @@
 				<li class="apply_poster"><a href="./abstract_application_list.php">Poster Abstract Submission</a></li>
 				<!-- <li class="apply_lecture"><a href="./lecture_note_list.php">Lecture Note Submission</a></li> -->
 				<li class="apply_registration"><a href="./registration_list.php">Registration</a></li>
+				<li class="apply_registration"><a href="./registration_list_deleted.php">Registration(TEST)</a></li>
 				<li class="apply_sponsorship"><a href="./sponsorship_list.php">Sponsorship & Exhibition</a></li>
 			</ul>
 		</li>

@@ -299,7 +299,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>Won-Young Lee (Sungkyunkwan University, Korea)</p> -->
+											<p>Won-Young Lee (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -322,7 +322,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_pink_bg">11:50 - 12:10</th>
-										<td class="pink_bg">Luncheon Symposium 1 
+										<td class="pink_bg">Luncheon Symposium 1 [ Daewoong Pharmaceutical ]
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -334,7 +334,7 @@
 										<th class="dark_pink_bg">11:50 - 12:10</th>
 									</tr>
 									<tr class="non_border_b">
-										<td class="pink_bg">Luncheon Symposium 1 </td>
+										<td class="pink_bg">Luncheon Symposium 1 [ Daewoong Pharmaceutical ]</td>
 									</tr>
 									<!-- <tr>
 										<td><button type="button" class="favorite_btn centerT">My Favorite</button></td>
@@ -352,24 +352,24 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)</p> -->
+											<p>TBD</p> 
 										</td>
 									</tr>
-									
-									<tr class="">
-									<!-- <tr class="pink_panel_tr"> -->
+								
+									<tr class="pink_panel_tr">
 										<th>11:50 - 12:10</th>
 										<td>
+										<p class="s_bold">TBD</p>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<!-- <tr class="non_border_b">
+									<tr class="non_border_b">
 										<th>12:10 - 13:00</th>
 										<td>
 											<p>Break</p>
 										</td>
-									</tr> -->
+									</tr>
 									<!-- <tr class="non_border_b">
 										<th>12:10 - 12:30</th>
 										<td>
@@ -651,7 +651,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 									<tr>
 										<th class="dark_violet_bg">17:20 - 18:00</th>
-										<td class="violet_bg">Satellite Symposium 1  <br/>
+										<td class="violet_bg">Satellite Symposium 1 [ Yuhan & Hanmi Pharmaceutical ]
+										<br/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -663,7 +664,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th class="dark_violet_bg">17:20 - 18:00</th>
 									</tr>
 									<tr class="violet_bg non_border_b">
-										<td class="violet_bg">Satellite Symposium 1 <br/>
+										<td class="violet_bg">Satellite Symposium 1 [ Yuhan & Hanmi Pharmaceutical ]<br/>
 										</td>
 									</tr>
 								</tbody>
@@ -679,17 +680,23 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br/>TBD (TBD)</p> -->
+											<p>TBD</p>
+										</td>
+									</tr>
+									<tr class="">
+										<th>17:20 - 17:40</th>
+										<td>
+											 <p class="s_bold">TBD</p>
+										<!--	<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
-										<th>17:20 - 18:00</th>
+										<th>17:40 - 18:00</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											 <p class="s_bold">TBD</p>
+										<!--	<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-
 								</tbody>
 							</table>
 						</div>
@@ -904,7 +911,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>Won-Young Lee (Sungkyunkwan University, Korea)</p> -->
+											<p>Won-Young Lee (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -925,8 +932,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_pink_bg">11:50 - 13:00</th>
-										<td class="pink_bg">Luncheon Symposium 2 
+										<th class="dark_pink_bg">11:50 - 12:30</th>
+										<td class="pink_bg">Luncheon Symposium 2 [ LG Chem & Dong-A ST ]
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -938,7 +945,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th class="dark_pink_bg">11:50 - 13:00</th>
 									</tr>
 									<tr class="pink_bg non_border_b">
-										<td class="pink_bg ">Luncheon Symposium 2 </td>
+										<td class="pink_bg ">Luncheon Symposium 2 [ LG Chem & Dong-A ST ]</td>
 									</tr>
 									<!-- <tr>
 										<td><button type="button" class="favorite_btn centerT">My Favorite</button></td>
@@ -956,21 +963,30 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairperson</p>
 										</th>
 										<td>
+										<p class="">TBD</p>
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr>
 										<th>11:50 - 12:10</th>
 										<td>
+										<p class="s_bold">TBD</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
+									<tr class="pink_panel_tr">
+										<th>12:10 - 12:30</th>
+										<td>
+										<p class="s_bold">TBD</p>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
-										<th>12:10 - 12:30</th>
+										<th>12:10 - 13:00</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p>Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -1243,7 +1259,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 									<tr>
 										<th class="dark_violet_bg">17:20 - 18:00</th>
-										<td class="violet_bg">Satellite Symposium 2  <br/>
+										<td class="violet_bg">Satellite Symposium 2  [HK inno.N & JW Pharmaceutical ]
+										<br/>
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -1255,7 +1272,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th class="dark_violet_bg">17:20 - 18:00</th>
 									</tr>
 									<tr class="violet_bg non_border_b">
-										<td class="violet_bg ">Satellite Symposium 2 <br/>
+										<td class="violet_bg ">Satellite Symposium 2 [HK inno.N & JW Pharmaceutical ]<br/>
 										</td>
 									</tr>
 								</tbody>
@@ -1271,18 +1288,28 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
+										<p class="">TBD</p>
 											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
 									<tr>
-										<th>17:20 - 18:00</th>
+										<th>17:20 - 17:40</th>
 										<td>
+										<p class="s_bold">TBD</p>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 
+									<tr>
+										<th>17:40 - 18:00</th>
+										<td>
+										<p class="s_bold">TBD</p>
+											<!-- <p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
 								</tbody>
 							</table>
 						</div>

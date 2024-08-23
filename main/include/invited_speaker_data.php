@@ -63,8 +63,8 @@ array
 		'idx'=>4, 
 		'first_name'=>'Claire', 
 		'last_name'=>'Lee', 
-		'affiliation'=>'Eli Lilly', 
-		'nation'=>'Korea', 
+		'affiliation'=>'Eli Lilly and Company', 
+		'nation'=>'U.S.A', 
 		'session_type'=>'Symposium 2', 
 		'title'=>'Cardiovascular Effects of Tirzepatide', 
 		'image'=>'./img/2024_invited_speaker/TBD.png'

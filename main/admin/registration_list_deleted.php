@@ -293,8 +293,8 @@
 						total_price_us
 					FROM payment
 				) AS p ON p.idx = rr.payment_no
-				LEFT JOIN request_submission rs ON rr.register = rs.register AND rs.is_deleted = 'N' 
-				WHERE rr.is_deleted = 'N' AND m.affiliation != 'into-on'
+				LEFT JOIN request_submission rs ON rr.register = rs.register AND rs.is_deleted = 'N'
+				WHERE rr.is_deleted = 'N' AND m.affiliation = 'into-on'
 				{$where}
 				GROUP BY rr.idx;
 

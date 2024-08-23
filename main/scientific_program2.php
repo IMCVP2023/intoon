@@ -114,7 +114,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_pink_bg">07:00 - 08:00</th>
-										<td class="pink_bg"> Breakfast Symposium 1
+										<td class="pink_bg"> Breakfast Symposium 1 [ Daiichi-Sankyo ]
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -126,7 +126,7 @@
 										<th class="dark_pink_bg"> 07:00 - 08:00</th>
 									</tr>
 									<tr class="pink_bg non_border_b">
-										<td class="pink_bg">Breakfast Symposium 1 </td>
+										<td class="pink_bg">Breakfast Symposium 1 [ Daiichi-Sankyo ]</td>
 									</tr>
 									<!-- <tr>
 										<td><button type="button" class="favorite_btn centerT">My Favorite</button></td>
@@ -144,12 +144,14 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
+										<p class="">TBD</p>
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="">
 										<th>07:00 - 07:30</th>
 										<td>
+										<p class="s_bold">TBD</p>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
@@ -157,6 +159,7 @@
 									<tr class="pink_panel_tr">
 										<th>07:30 - 08:00</th>
 										<td>
+										<p class="s_bold">TBD</p>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
@@ -438,7 +441,8 @@
 								<tbody>
 									<tr>
 										<th class="dark_pink_bg">12:50 - 13:50</th>
-										<td class="pink_bg">Luncheon Symposium 3 
+										<td class="pink_bg">Luncheon Symposium 3 [ Daewoong Bio Incorporated ]
+
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -450,7 +454,7 @@
 										<th class="dark_pink_bg">12:50 - 13:50</th>
 									</tr>
 									<tr class="pink_bg non_border_b">
-										<td class="pink_bg">Luncheon Symposium 3 </td>
+										<td class="pink_bg">Luncheon Symposium 3 [ Daewoong Bio Incorporated ]</td>
 									</tr>
 									<!-- <tr>
 										<td><button type="button" class="favorite_btn centerT">My Favorite</button></td>
@@ -468,14 +472,14 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)</p> -->
+											<p>Sang Hyun Lim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
 										<th>12:50 - 13:50</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">[ICOSA] Clinical Value of EPA</p>
+											<p>Dae Young Cheon (Hallym University, Korea)</p>
 										</td>
 									</tr>
 								</tbody>
@@ -764,7 +768,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_pink_bg">07:00 - 08:00</th>
-										<td class="pink_bg"> Breakfast Symposium 2
+										<td class="pink_bg"> Breakfast Symposium 2 [TBD]
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -776,7 +780,7 @@
 										<th class="dark_pink_bg">07:00 - 08:00</th>
 									</tr>
 									<tr class="pink_bg non_border_b">
-										<td class="pink_bg">Breakfast Symposium 2 </td>
+										<td class="pink_bg">Breakfast Symposium 2 [TBD]</td>
 									</tr>
 									<!-- <tr>
 										<td><button type="button" class="favorite_btn centerT">My Favorite</button></td>
@@ -800,15 +804,15 @@
 									<tr class="">
 										<th>07:00 - 07:30</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											 <p class="s_bold">TBD</p>
+											<!--<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="pink_panel_tr">
 										<th>07:30 - 08:00</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											 <p class="s_bold">TBD</p>
+										<!--	<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -1073,8 +1077,9 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_pink_bg">12:50 - 13:50</th>
-										<td class="pink_bg">Luncheon Symposium 4 
+										<th class="dark_pink_bg">12:50 - 13:30</th>
+										<td class="pink_bg">Luncheon Symposium 4 [Celltrion & Boryung ]
+
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -1086,7 +1091,8 @@
 										<th class="dark_pink_bg">12:50 - 13:50</th>
 									</tr>
 									<tr class="pink_bg non_border_b">
-										<td class="pink_bg">Luncheon Symposium 4 </td>
+										<td class="pink_bg">Luncheon Symposium 4 [Celltrion & Boryung ]
+										</td>
 									</tr>
 									<!-- <tr>
 										<td><button type="button" class="favorite_btn centerT">My Favorite</button></td>
@@ -1104,15 +1110,23 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
+											<p>TBD</p>
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
 									<tr class="non_border_b">
-										<th>12:50 - 13:50</th>
+										<th>12:50 - 13:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											 <p class="s_bold">TBD</p>
+											<!--<p>TBD (TBD)</p> -->
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>13:10 - 13:30</th>
+										<td>
+											 <p class="s_bold">TBD</p>
+											<p>Seung-Hwan Lee (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 								</tbody>
