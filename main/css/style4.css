@@ -3317,3 +3317,8 @@ table.type2 th{
 		height: auto;
 	}
 }
+
+.virtual_mark{
+	height: 24px;
+	padding-left: 12px;
+}
