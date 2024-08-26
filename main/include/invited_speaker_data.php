@@ -39,7 +39,7 @@ array
 
 	 array(
 		'idx'=>79, 
-		'first_name'=>'Yong Jae', 
+		'first_name'=>'Yong-Jae', 
 		'last_name'=>'Kim', 
 		'affiliation'=>'The Catholic University of Korea', 
 		'nation'=>'Korea', 

@@ -170,7 +170,7 @@
 				</li>
 				<li class="index_speaker4">
 					<div class="profile_circle"><div class="profile_wrap"></div></div>
-					<h5 class="title">Yong Jae Kim</h5>
+					<h5 class="title">Yong-Jae Kim</h5>
 					<div class="career">The Catholic University of Korea,<br>Korea</div>
 				</li>
 				<!-- <li class="index_speaker5">
