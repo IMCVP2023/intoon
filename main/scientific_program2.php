@@ -541,7 +541,7 @@
 										<th>13:50 - 14:30</th>
 										<td>
 											<p class="s_bold">Black and White: The Evolving Role of Carotid Intima-Media Thickness in Risk Stratification</p>
-											<p>Yong Jae Kim (The Catholic University of Korea, Korea)</p>
+											<p>Yong-Jae Kim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -1189,7 +1189,7 @@
 										<th>13:50 - 14:30</th>
 										<td>
 											<p class="s_bold">Black and White: The Evolving Role of Carotid Intima-Media Thickness in Risk Stratification</p>
-											<p>Yong Jae Kim (The Catholic University of Korea, Korea)</p>
+											<p>Yong-Jae Kim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
