@@ -61,7 +61,7 @@ array
 
 	 array(
 		'idx'=>4, 
-		'first_name'=>'Claire', 
+		'first_name'=>'Clare', 
 		'last_name'=>'Lee', 
 		'affiliation'=>'Eli Lilly and Company', 
 		'nation'=>'U.S.A', 

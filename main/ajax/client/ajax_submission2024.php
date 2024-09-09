@@ -447,6 +447,50 @@ else if($flag == "etc2"){
 	return_value(200, 'submission update success');
 }
 
+//[240909] sujeong / 초록 채택 프로모션 코드 etc3 추가
+else if($flag == "etc3"){
+	$submission_idx = $_POST['idx'];
+	$etc3 =  $_POST['etc3'];
+
+	$sql_update = "
+			UPDATE request_submission
+			SET
+				etc3 = '" . $etc3 . "', 
+				modify_date = NOW()
+			WHERE idx = '" . $submission_idx . "'
+		";
+	$sql_update_result = sql_query($sql_update);
+	
+	if (!$sql_update_result) {
+		return_value(500, 'submission update fail', array("sql" => $sql_update));
+	}
+
+	return_value(200, 'submission update success');
+}
+
+
+
+//[240909] sujeong / 초록 TG etc4 추가
+else if($flag == "etc4"){
+	$submission_idx = $_POST['idx'];
+	$etc4 =  $_POST['etc4'];
+
+	$sql_update = "
+			UPDATE request_submission
+			SET
+				etc4 = '" . $etc4 . "', 
+				modify_date = NOW()
+			WHERE idx = '" . $submission_idx . "'
+		";
+	$sql_update_result = sql_query($sql_update);
+	
+	if (!$sql_update_result) {
+		return_value(500, 'submission update fail', array("sql" => $sql_update));
+	}
+
+	return_value(200, 'submission update success');
+}
+
 //[240702] suejong / 일괄 심사 완료 추가
 // else if ($flag == 'all_check'){
 // 	$submission_code_list = $_POST['idx_list'];
