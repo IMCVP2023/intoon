@@ -475,6 +475,9 @@ function promotion_onsite_submit(){
             if(res.code == 200) {
                 console.log(res);
                 alert("Registration has been completed.");
+                //window.location.href = `/main`;
+                
+                // sujeong 결제 필요시 
                 window.location.href = `/main/registration2.php?idx=${res.reg_idx}&member=${res.member_idx}`;
             } else {
                 alert("onsite registration error.");

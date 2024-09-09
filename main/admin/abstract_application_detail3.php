@@ -40,7 +40,7 @@ $sql_detail = "
 			preferred_presentation_type,
 			topic, topic_detail,
 			title,
-			objectives, methods, results, conclusions, keywords, etc1, etc2, etc1_date,
+			objectives, methods, results, conclusions, keywords, etc1, etc2, etc1_date, etc3, etc4,
 			IFNULL(CONCAT(fi_image1.path, '/', fi_image1.save_name), '') AS image1_path, fi_image1.original_name AS image1_original_name, rs.image1_caption,
 			IFNULL(CONCAT(fi_image2.path, '/', fi_image2.save_name), '') AS image2_path, fi_image2.original_name AS image2_original_name, rs.image2_caption,
 			IFNULL(CONCAT(fi_image3.path, '/', fi_image3.save_name), '') AS image3_path, fi_image3.original_name AS image3_original_name, rs.image3_caption,
@@ -261,6 +261,21 @@ function get_auther_affiliation($author_idx)
                                 <input type="radio" value="N" id="etc2_n" <?=($detail["etc2"] == 'N' ? "checked" : "")?> name="etc2"/>
                                 <label for="etc2_n">No</label>
                                 <button class="border_btn etc2_save">Save</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>초록 프로모션코드</th>
+                            <td>
+                                <input type="text" name="etc3" value="<?php echo $detail["etc3"]; ?>" class=""/>
+                                <button class="border_btn etc3_save">Save</button>
+                            </td>
+                            <th>Travel Grants 채택 여부</th>
+                            <td>
+                                <input type="radio" value="Y" id="etc4_y" <?=($detail["etc4"] == 'Y' ? "checked" : "")?> name="etc4"/>
+                                <label for="etc4_y">Yes</label>
+                                <input type="radio" value="N" id="etc4_n" <?=($detail["etc4"] == 'N' ? "checked" : "")?> name="etc4"/>
+                                <label for="etc4_n">No</label>
+                                <button class="border_btn etc4_save">Save</button>
                             </td>
                         </tr>
                         <tr>
@@ -613,13 +628,21 @@ function get_auther_affiliation($author_idx)
 
     $(".etc1_save").click(function(){
         const idx = new URLSearchParams(window.location.search).get("idx");
+        let etc1Value = '';
+
+        if($("input[id='etc1_y']").is(":checked")){
+            etc1Value = 'Y';
+        }else if($("input[id='etc1_n']").is(":checked")){
+            etc1Value = 'N';
+        }
+
         $.ajax({
             url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
             type: "POST",
             data: {
                 flag: "etc1",
                 idx: idx,
-                etc1 : $("input[name='etc1']").val()
+                etc1 : etc1Value
             },
             dataType: "JSON",
             success: function(res) {
@@ -638,20 +661,31 @@ function get_auther_affiliation($author_idx)
 
     $(".etc2_save").click(function(){
         const idx = new URLSearchParams(window.location.search).get("idx");
+        let etc2Value = '';
+
+        if($("input[id='etc2_y']").is(":checked")){
+            etc2Value = 'Y'
+        }else if($("input[id='etc2_n']").is(":checked")){
+            etc2Value = 'N'
+        }
+        
+
         $.ajax({
             url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
             type: "POST",
             data: {
                 flag: "etc2",
                 idx: idx,
-                etc2 : $("input[name='etc2']").val()
+                etc2 : etc2Value
             },
             dataType: "JSON",
             success: function(res) {
                 if (res.code == 200) {
                     alert("초록 채택 여부가 업데이트 되었습니다.");
-                    if(window.confirm("채택자에게 메일을 발송하시겠습니까?")){
-                        postGmail()
+                    if(etc2Value == 'Y'){
+                        if(window.confirm("채택자에게 메일을 발송하시겠습니까?")){
+                            postGmail()
+                        }
                     }
                 } else if (res.code == 400) {
                     alert("초록 채택 여부가 업데이트에 실패했습니다.");
@@ -663,6 +697,68 @@ function get_auther_affiliation($author_idx)
             }
         });
     })
+
+    
+    $(".etc3_save").click(function(){
+        const idx = new URLSearchParams(window.location.search).get("idx");
+
+        $.ajax({
+            url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
+            type: "POST",
+            data: {
+                flag: "etc3",
+                idx: idx,
+                etc3 :  $("input[name='etc3']").val()
+            },
+            dataType: "JSON",
+            success: function(res) {
+                if (res.code == 200) {
+                    alert("프로모션 코드가 업데이트 되었습니다.");
+                } else if (res.code == 400) {
+                    alert("프로모션 코드 업데이트에 실패했습니다.");
+                    return false;
+                } else {
+                    alert("프로모션 코드 업데이트에 실패했습니다.");
+                    return false;
+                }
+            }
+        });
+    })
+
+    $(".etc4_save").click(function(){
+        const idx = new URLSearchParams(window.location.search).get("idx");
+        let etc4Value = '';
+
+        if($("input[id='etc4_y']").is(":checked")){
+            etc4Value = 'Y'
+        }else if($("input[id='etc4_n']").is(":checked")){
+            etc4Value = 'N'
+        }
+        
+
+        $.ajax({
+            url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
+            type: "POST",
+            data: {
+                flag: "etc4",
+                idx: idx,
+                etc4 : etc4Value
+            },
+            dataType: "JSON",
+            success: function(res) {
+                if (res.code == 200) {
+                    alert("TG 여부가 업데이트 되었습니다.");
+                } else if (res.code == 400) {
+                    alert("TG 여부가 업데이트에 실패했습니다.");
+                    return false;
+                } else {
+                    alert("TG 여부가 업데이트에 실패했습니다.");
+                    return false;
+                }
+            }
+        });
+    })
+
 
     	//[240419] sujoeng / 초록 채택 메일 추가
     function postGmail(){
