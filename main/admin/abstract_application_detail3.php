@@ -12,7 +12,7 @@ $submission_idx = $_GET["idx"];
 $member_idx = $_GET["no"];
 
 $member_info = "SELECT
-						m.idx AS member_idx, m.email, n.nation_ko AS nation, CONCAT(m.first_name,' ',m.last_name) AS name,
+						m.idx AS member_idx, m.email, n.nation_ko AS nation, CONCAT(m.first_name,' ',m.last_name) AS name, m.affiliation,
 						DATE_FORMAT(m.register_date, '%y-%m-%d') AS member_register_date
 					FROM member m
 					JOIN nation n
@@ -764,16 +764,20 @@ function get_auther_affiliation($author_idx)
     function postGmail(){
         const email = "<?php echo $member_info_data['email']; ?>";
         const nickname = "<?php echo $member_info_data['name']; ?>";
+        const org = "<?php echo $member_info_data['affiliation']; ?>";
         const submissionCode = "<?php echo $detail['submission_code']; ?>";
         const abstractTitle = "<?php echo strip_tags(htmlspecialchars_decode(stripslashes($detail['title']))); ?>";
         const titleWithoutTags = abstractTitle.replace(/&nbsp;/g, ' ');
         const topic = "<?php echo $topic; ?>";
+        const idx = "<?php echo $submission_idx; ?>"
 
         $.ajax({
                 url: "https://imcvp.org/main/" + "ajax/client/ajax_gmail.php",
                 type: "POST",
                 data: {
                     flag: "abstract_etc2",
+                    idx : idx,
+                    org : org,
                     email: email,
                     name: nickname,
                     title: titleWithoutTags,

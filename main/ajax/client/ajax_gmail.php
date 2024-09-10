@@ -3,8 +3,8 @@
 
 <?php
 //include_once('../../common/common.php');
-error_reporting( E_ALL );
-ini_set( "display_errors", 1 );
+// error_reporting( E_ALL );
+// ini_set( "display_errors", 1 );
 include_once('../../plugin/google-api-php-client-main/vendor/autoload.php');
 
 
@@ -1202,74 +1202,109 @@ if($language == "ko") {
 	}
 
 	else if($mail_type == "abstract_etc2") {
+
+		$submit_data = $data["submit_data"] ?? [];
+		$submission_no	= $submit_data["submission_code"] ?? "";
+
+		$abstractTitle = isset($submit_data["title"]) ? $submit_data["title"] : "-";
+		$title = strip_tags(htmlspecialchars_decode(stripslashes($abstractTitle)));
+		
+		$promotion_code = isset($submit_data["etc3"]) ? $submit_data["etc3"] : "-";
+		$tg = isset($submit_data["etc4"]) ? $submit_data["etc4"] : "-";
+		
+		$category = isset($data["topic"]) ? $data["topic"] : "-";
+		$nickname = isset($data["nickname"]) ? $data["nickname"] : "-";
+		$org = isset($data["org"]) ? $data["org"] : "-";
+
 		$rawMessageString .= "
-<table width='750' style='border:1px solid #000; padding: 0;'>
-    <tbody>
-        <tr>
-            <td colspan='3'>
-                <img src='https://imcvp.org/main/img/2024_mail_header-2.png' width='750' style='width:100%; max-width:100%;'>
-            </td>
-        </tr>
-        <tr>
-            <td colspan='3'>
-                <div style='font-weight:bold; text-align:center;font-size: 21px; color: #257FE6;padding: 20px 0;'>[IMCVP 2024] Completed Abstract Submission</div>
-            </td>
-        </tr>
-        <tr>
-            <td width='74' style='width:74px;'></td>
-            <td>
-                <div style='margin-bottom:25px; padding:17px 34px; box-sizing:border-box;'>
-                        <p style='font-size:15px; font-weight:bold; color:#000; margin:0;'>Dear {$fname}</p>
-                        <p style='font-size:14px;color:#170F00;margin-top:14px;'>
-                            Attention Potential Presenting Author: Upon successful submission of your abstract, you will immediately see the following confirmation notice on your screen, followed by the same message via e&#45;mail. If you did not receive the following message, your abstract was not successfully submitted. Please try again, or contact (sci@imcvp.org) for assistance if you are having difficulty. 
-                        </p>
-    
-                        <p style='font-size:15px; font-weight:bold; color:#000; margin-top:30px;'>Abstract Successfully Submitted</p>
-                        <p style='font-size:14px; color:#170F00; margin-top:14px;'>This is an automated message. Please do not reply</p>
-                        <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>ID (Email Address) : {$to} </div>
-                        <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>Submission date : {$date} </div>
-                        <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>Topic : {$category} </div>
-                        <div style='font-size:14px; padding:10px; border-bottom:1px solid #000; margin-top:10px;'>Abstract title : {$title} </div>
-						<div style='font-size:14px; padding:10px; margin-top:10px;'>If you have any questions regarding call for abstracts, please contact the secretariat (sci@imcvp.org)</div>
-						<div style='font-size:14px; padding:10px; margin-top:10px;'>We look forward to seeing you in IMCVP 2024.</div>
-						<div style='font-size:14px; padding:10px; margin-top:10px;'>Warmest regards, 감사합니다.</div>
-						<div style='font-size:14px; padding:10px; margin-top:10px;'>IMCVP 2024 Secretariat.</div>
-                </div>
-					
-            </td>
-            <td width='74' style='width:74px;'></td>
-        </tr>
-        <tr>
-            <td width='74' style='width:74px;'></td>
-            <td>
-                <div style='text-align: center; padding-top:30px;'>
-        <table align='center' cellspacing='0' cellpadding='0' width='100%'>
-            <tr>
-                <td align='center'>
-                    <table border='0' cellspacing='0' cellpadding='0'>
-                        <tr>
-                            <td align='center' bgcolor='#ffcc33' style='background-color: #000066; margin: auto; max-width: 600px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding: 12px 32px;box-shadow: 0px 5px 0px 0px #000066;' width='100%'><!--[if mso]>&nbsp;<![endif]-->
-                                <a href='https://imcvp.org/main' target='_blank' style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #003466; font-weight:600; text-align:center; background-color: #000066; text-decoration: none; border: none; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; display: inline-block;'>
-                                    <span style='font-size: 24px; font-family: Helvetica, Arial, sans-serif; color: #fff; font-weight:600; text-align:center;'>Go to IMCVP 2024 Website</span>
-                                </a><!--[if mso]>&nbsp;<![endif]-->
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div>
-                
-            </td>
-            <td width='74' style='width:74px;'></td>
-        </tr>
-        <tr>
-            <td colspan='3' style='padding-top:50px;'>
-                <img src='https://imcvp.org/main/img/2024_mail_footer-2.png' width='750' style='width:100%; max-width:100%;'>
-            </td>
-        </tr>
-    </tbody>
-</table>";
+			<table width='1000px' style='border:1px solid #000; padding: 0;'>
+				<tbody>
+					<tr>
+						<td colspan='3'>
+							<img src='https://imcvp.org/main/img/2024_mail_header-2.png' width='1000px' style='width:100%; max-width:100%;'>
+						</td>
+					</tr>
+					<tr>
+						<td colspan='3'>
+							<!-- <div style='font-weight:bold; text-align:center;font-size: 24px; color: #20509f;padding: 20px 0;'>Notification of Abstract Acceptance</div> -->
+						</td>
+					</tr>
+					<tr>
+						<td width='74' style='width:74px;'></td>
+						<td>
+							<div style='margin-bottom:25px; padding:17px 34px; box-sizing:border-box;'>
+									<p style='font-size:25px; font-weight:bold; color:#000; margin:0;font-style: italic;'>Dear {$fname}</p>
+									<div style='background-color: #bfbfbf;width: 100%;height: 1px;margin-top: 12px;'></div>
+									<p style='font-size:14px;color:#170F00;margin-top:12px;'>
+										On behalf of the Scientific Organizing Committee of IMCVP 2024, we would like to express our gratitude for your valuable contribution to this conference. After a thorough evaluation by Scientific Organizing Committee of IMCVP 2024, We are pleased to announce that your abstract has been accepted. We are delighted to welcome you to join us at the conference, where you will have the opportunity to engage in enlightening discussions and explore new horizons in your field of interest.
+									</p>
+				
+									<p style='font-size:20px; font-weight:bold; color:#000; margin: 30px 0 8px 0;'>Accepted Abstract Information</p>
+								
+											<table style='border-collapse: collapse;border-spacing: 0;text-align: left;line-height: 1.5; font-size: 15px;letter-spacing: -0.5px;font-family: 'arial', 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; color: #000000; ' cellpadding='0' cellspacing='0'>
+												<tr>
+													<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Submission Number</th>	
+													<td style='width: 600px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;border-top: 1px solid #bfbfbf; color: #000000;background-color:#ffffff;word-break:keep-all;'>{$submission_no}</td>
+												</tr>
+												<tr>
+													<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align: left;vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #fff;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Category</th>
+													<td style='width: 600px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;color: #000000;word-break:keep-all; background-color:#ffffff;'>{$category}</td>
+												</tr>
+												<tr>
+													<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align: left;vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #fff;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Abstract Title</th>
+													<td style='width: 600px;padding: 10px;vertical-align: middle;border-right: 1px solid #ffffff;border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;color: #000000;background-color:#ffffff;word-break:keep-all;'>{$title}</td>
+												</tr>
+												<tr>
+													<th rowspan='2' scope='row' style='width: 85px;padding: 10px;font-weight: bold;text-align: left;vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #fff;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Presenting Author's Information</th>
+													<th scope='row' style='width: 85px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Name</th>
+													<td style='width: 600px;padding: 10px;vertical-align: middle;border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;color: #000000;word-break:keep-all;background-color:#ffffff;'>{$nickname}</td>
+												</tr>				
+												<tr>	
+													<th scope='row' style='width: 85px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Insitution</th>
+													<td style='width: 600px;padding: 10px;vertical-align: middle;border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse; color:#000000;word-break:keep-all;background-color:#ffffff;'>{$org}</td>
+												</tr>
+											</table>
+									<p style='font-size:20px; font-weight:bold; color:#000; margin: 30px 0 8px 0;'>Information for the Registration</p>
+									<table style='border-collapse: collapse;border-spacing: 0;text-align: left;line-height: 1.5; font-size: 15px;letter-spacing: -0.5px;font-family: 'arial', 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; color: #000000; ' cellpadding='0' cellspacing='0'>
+										<tr>
+											<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Invitation code for free registration</th>	
+											<td style='width: 600px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;border-top: 1px solid #bfbfbf; color: #000000;background-color:#ffffff;word-break:keep-all;'>{$promotion_code}</td>
+										</tr>
+										<tr>
+											<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align: left;vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #fff;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Travel Grants</th>
+											<td style='width: 600px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;color: #000000;word-break:keep-all; background-color:#ffffff;'>{$tg}</td>
+										</tr>
+									</table>
+							</div>
+								
+						</td>
+						<td width='74' style='width:74px;'></td>
+					</tr>
+					<tr>
+						<td width='74' style='width:74px;'></td>
+						<td style='padding: 0px 40px;'>
+							<div style='background-color: #fff6f0;padding: 12px 20px;border-radius: 12px;line-height: 1.5;letter-spacing: -0.5px;'>
+								<p style='margin: 0;font-size: 20px;font-weight: 900;'>Notification</p>
+								<p style='margin: 0; font-size: 18px; font-weight: 700; color: #b03130;'>For the 'Poster Oral' type presenter will be selected and announced personally with the registered email by Scientific Program Committee of IMCVP 2024</p>
+							</div>
+						</td>
+						<td width='74' style='width:74px;'></td>
+					</tr>
+					<tr>
+						<td width='74' style='width:74px;'></td>
+						<td style='padding: 20px 40px;'>
+						<p>Should you need any further assistance, please feel to contact IMCVP 2024 Secretariat at <a href='mailto:sci@imcvp.org' style='font-weight: bold;color: #284fa0;text-decoration: none;'>sci@imcvp.org</a></p>
+						<p>Best regards.</p>
+						</td>
+						<td width='74' style='width:74px;'></td>
+					</tr>
+					<tr>
+						<td colspan='3' style='padding-top:50px;'>
+							<img src='https://imcvp.org/main/img/2024_mail_footer-2.png' width='1000' style='width:100%; max-width:100%;'>
+						</td>
+					</tr>
+				</tbody>
+			</table>";
 	}
 	//[240617] sujoeng / 좌장, 연자, 패널 메일 추가 / 템플릿 변경 필요
 	else if($mail_type == "speaker") {
@@ -1753,16 +1788,29 @@ if($_POST["flag"] == "abstract") {
 }
 
 	//[240419] sujoeng / 초록 채택 메일 추가 / 템플릿 변경 필요
+	// 필요 data => 제출 코드, 카테고리, 제목, 성함, 소속, 프로모션 코드, TG 채택 유무
 else if($_POST["flag"] == "abstract_etc2"){
-	$name = $_POST["name"] ?? null;
-	$email = $_POST["email"] ?? null;
-	$title = $_POST["title"] ?? null;
-	$topic = $_POST["topic_text"] ?? null;
+	 $name = $_POST["name"] ?? null;
+	 $org = $_POST["org"] ?? null;
+	 $email = $_POST["email"] ?? null;
+	// $title = $_POST["title"] ?? null;
+	 $topic = $_POST["topic_text"] ?? null;
+	$idx = $_POST["idx"] ?? null;
+
+	// submission_info
+	$submit_data_query = "SELECT 
+							submission_code, title, topic, etc3, etc4
+						FROM request_submission";
+	$submit_data = sql_fetch($submit_data_query." WHERE idx = ".$idx) ?? [];
+
 	$data = [
-		'title' => $title,
-		'topic' => $topic
+		'submit_data' => $submit_data,
+		"topic" => $topic,
+		"nickname" => $name,
+		"org" => $org
 	];
-	$message =createMessage("en", "abstract_etc2", $name , $email, "[IMCVP 2024] 초록이 채택되었습니다!", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
+
+	$message =createMessage("en", "abstract_etc2", $name , $email, "[IMCVP 2024] Notification of Abstract Acceptance", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
 	createDraft($service, "secretariat@imcvp.org", $message);
 	sendMessage($service, "secretariat@imcvp.org", $message);
 
