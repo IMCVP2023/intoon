@@ -1274,7 +1274,7 @@ if($language == "ko") {
 													<td style='width: 400px;padding: 10px;vertical-align: middle;border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse; color:#000000;word-break:keep-all;background-color:#ffffff;'>{$org}</td>
 												</tr>
 											</table>
-									<p style='font-size:20px; font-weight:bold; color:#000; margin: 30px 0 8px 0;'>Information for the Registration</p>
+									<p style='font-size:16px; font-weight:bold; color:#000; margin: 30px 0 8px 0;'>Information for the Registration</p>
 									<table style='border-collapse: collapse;border-spacing: 0;text-align: left;line-height: 1.5; font-size: 15px;letter-spacing: -0.5px;color: #000000; ' cellpadding='0' cellspacing='0'>
 										<tr>
 											<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Invitation code for free registration</th>	
