@@ -1211,6 +1211,16 @@ if($language == "ko") {
 		
 		$promotion_code = isset($submit_data["etc3"]) ? $submit_data["etc3"] : "-";
 		$tg = isset($submit_data["etc4"]) ? $submit_data["etc4"] : "-";
+
+		$tg_text = '';
+
+		if($tg == 'Y'){
+			$tg_text = 'Approved';
+		}else if($tg == 'N'){
+			$tg_text = 'Denied';
+		}else{
+			$tg_text = '';
+		}
 		
 		$category = isset($data["topic"]) ? $data["topic"] : "-";
 		$nickname = isset($data["nickname"]) ? $data["nickname"] : "-";
@@ -1232,16 +1242,16 @@ if($language == "ko") {
 					<tr>
 						<td width='74' style='width:74px;'></td>
 						<td>
-							<div style='margin-bottom:25px; padding:17px 34px; box-sizing:border-box;'>
+							<div style='margin-bottom:25px; padding:17px 34px; box-sizing:border-box;width: 852px;'>
 									<p style='font-size:25px; font-weight:bold; color:#000; margin:0;font-style: italic;'>Dear {$fname}</p>
 									<div style='background-color: #bfbfbf;width: 100%;height: 1px;margin-top: 12px;'></div>
-									<p style='font-size:14px;color:#170F00;margin-top:12px;'>
+									<p style='font-size:14px;color:#170F00;margin-top:12px;width: 784px;'>
 										On behalf of the Scientific Organizing Committee of IMCVP 2024, we would like to express our gratitude for your valuable contribution to this conference. After a thorough evaluation by Scientific Organizing Committee of IMCVP 2024, We are pleased to announce that your abstract has been accepted. We are delighted to welcome you to join us at the conference, where you will have the opportunity to engage in enlightening discussions and explore new horizons in your field of interest.
 									</p>
 				
 									<p style='font-size:20px; font-weight:bold; color:#000; margin: 30px 0 8px 0;'>Accepted Abstract Information</p>
 								
-											<table style='border-collapse: collapse;border-spacing: 0;text-align: left;line-height: 1.5; font-size: 15px;letter-spacing: -0.5px;font-family: 'arial', 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; color: #000000; ' cellpadding='0' cellspacing='0'>
+											<table style='border-collapse: collapse;border-spacing: 0;text-align: left;line-height: 1.5; font-size: 15px;letter-spacing: -0.5px;color: #000000;' cellpadding='0' cellspacing='0'>
 												<tr>
 													<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Submission Number</th>	
 													<td style='width: 600px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;border-top: 1px solid #bfbfbf; color: #000000;background-color:#ffffff;word-break:keep-all;'>{$submission_no}</td>
@@ -1265,14 +1275,14 @@ if($language == "ko") {
 												</tr>
 											</table>
 									<p style='font-size:20px; font-weight:bold; color:#000; margin: 30px 0 8px 0;'>Information for the Registration</p>
-									<table style='border-collapse: collapse;border-spacing: 0;text-align: left;line-height: 1.5; font-size: 15px;letter-spacing: -0.5px;font-family: 'arial', 'Apple SD Gothic Neo', '맑은 고딕', sans-serif; color: #000000; ' cellpadding='0' cellspacing='0'>
+									<table style='border-collapse: collapse;border-spacing: 0;text-align: left;line-height: 1.5; font-size: 15px;letter-spacing: -0.5px;color: #000000; ' cellpadding='0' cellspacing='0'>
 										<tr>
 											<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Invitation code for free registration</th>	
 											<td style='width: 600px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;border-top: 1px solid #bfbfbf; color: #000000;background-color:#ffffff;word-break:keep-all;'>{$promotion_code}</td>
 										</tr>
 										<tr>
 											<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align: left;vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #fff;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Travel Grants</th>
-											<td style='width: 600px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;color: #000000;word-break:keep-all; background-color:#ffffff;'>{$tg}</td>
+											<td style='width: 600px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;color: #000000;word-break:keep-all; background-color:#ffffff;'>{$tg_text}</td>
 										</tr>
 									</table>
 							</div>
@@ -1282,10 +1292,10 @@ if($language == "ko") {
 					</tr>
 					<tr>
 						<td width='74' style='width:74px;'></td>
-						<td style='padding: 0px 40px;'>
-							<div style='background-color: #fff6f0;padding: 12px 20px;border-radius: 12px;line-height: 1.5;letter-spacing: -0.5px;'>
+						<td style='padding: 0px 40px; width: 775px;'>
+							<div style='background-color: #fff6f0;padding: 12px 20px;border-radius: 12px;line-height: 1.5;letter-spacing: -0.5px; width: 775px;'>
 								<p style='margin: 0;font-size: 20px;font-weight: 900;'>Notification</p>
-								<p style='margin: 0; font-size: 18px; font-weight: 700; color: #b03130;'>For the 'Poster Oral' type presenter will be selected and announced personally with the registered email by Scientific Program Committee of IMCVP 2024</p>
+								<p style='margin: 0; font-size: 18px; font-weight: 700; color: #b03130; width: 775px;'>For the 'Poster Oral' type presenter will be selected and announced personally with the registered email by Scientific Program Committee of IMCVP 2024</p>
 							</div>
 						</td>
 						<td width='74' style='width:74px;'></td>

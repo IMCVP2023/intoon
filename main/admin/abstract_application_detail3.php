@@ -8,6 +8,9 @@ if ($admin_permission["auth_apply_poster"] == 0) {
     echo '<script>alert("권한이 없습니다.");history.back();</script>';
 }
 
+// error_reporting( E_ALL );
+// ini_set( "display_errors", 1 );
+
 $submission_idx = $_GET["idx"];
 $member_idx = $_GET["no"];
 
@@ -142,14 +145,14 @@ foreach ($topic1_list as $tp) {
         $topic = $tp["idx"] . ". " . $tp["name_en"];
     }
 }
-if ($detail['topic'] != 5) {
-    //echo " / ";
-    foreach ($topic2_list as $tp) {
-        if ($tp['idx'] == $detail['topic_detail']) {
-            $topic_detail = $tp["idx"] . ". " . $tp['order'] . ". " . $tp["name_en"];
-        }
-    }
-}
+// if ($detail['topic'] != 5) {
+//     //echo " / ";
+//     foreach ($topic2_list as $tp) {
+//         if ($tp['idx'] == $detail['topic_detail']) {
+//             $topic_detail = $tp["idx"] . ". " . $tp['order'] . ". " . $tp["name_en"];
+//         }
+//     }
+// }
 
 // 소속 구하기
 function get_auther_affiliation($author_idx)
@@ -766,7 +769,7 @@ function get_auther_affiliation($author_idx)
         const nickname = "<?php echo $member_info_data['name']; ?>";
         const org = "<?php echo $member_info_data['affiliation']; ?>";
         const submissionCode = "<?php echo $detail['submission_code']; ?>";
-        const abstractTitle = "<?php echo strip_tags(htmlspecialchars_decode(stripslashes($detail['title']))); ?>";
+        const abstractTitle = `<?php echo strip_tags(htmlspecialchars_decode(stripslashes($detail['title']))); ?>`;
         const titleWithoutTags = abstractTitle.replace(/&nbsp;/g, ' ');
         const topic = "<?php echo $topic; ?>";
         const idx = "<?php echo $submission_idx; ?>"
