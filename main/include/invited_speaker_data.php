@@ -205,13 +205,13 @@ array
 
 	 array(
 		'idx'=>17, 
-		'first_name'=>'In ha', 
+		'first_name'=>'Inha', 
 		'last_name'=>'Jung', 
 		'affiliation'=>'Korea University', 
 		'nation'=>'Korea', 
 		'session_type'=>'Symposium 10', 
 		'title'=>'Increasing Disparities in Diabetes Mellitus Prevalence Among People with Disabilities in South Korea', 
-		'image'=>'./img/2024_invited_speaker/sympsium10.jpg'
+		'image'=>'./img/2024_invited_speaker/symposium10-1.png'
 ), 
 
 	 array(
