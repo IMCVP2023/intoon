@@ -821,6 +821,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 	header .toggle_wrap{display:none;}
 	/*common*/
     section.sub_page{padding-top:74px;}
+	section.program_glance_sj{padding-top: 200px;}
 	/* 220311 HUBDNC LJH2 추가 */
 	.header {padding: 10px 0;}
 	.new_tool_wrap .logo img {display: block;}

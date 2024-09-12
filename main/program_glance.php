@@ -20,7 +20,7 @@
 			<li><i></i>&nbsp;:&nbsp;Korean</li>
 			<li><i></i>&nbsp;:&nbsp;English</li>
 		</ul> -->
-		<div class="tab_wrap">
+		<div class="program_table_wrap">
 			<div class="tab_cont on">
 				<table class="table program_glance_table" name="1">
 					<colgroup>

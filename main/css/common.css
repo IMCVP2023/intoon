@@ -672,7 +672,8 @@ section.container.sponsor {padding-top: 164px;}
 .fixed_btn_clone {position: fixed; /*bottom: 32px;*/bottom: 170px; left: 32px; z-index: 1; width: 5px; height: 5px;}
 .fixed_btn_wrap {position: fixed; /*bottom: 32px;*/bottom: 170px; right: 53px; z-index: 100;}
 @media screen and (max-width:830px) {
-	.fixed_btn_wrap{right: -40px;}
+	.fixed_btn_wrap{right: 0px;}
+	.btn_top{right: 0px !important;}
 }
 .toolbar_wrap {margin-bottom: -4px;}
 .toolbar_wrap li:not(:last-of-type) {margin-bottom: 6px;}
