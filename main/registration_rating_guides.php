@@ -48,7 +48,7 @@
 	<!-- </div> -->
 	<div class="inner">
 		<!-- 1. 연수 평점 안내 start -->
-		<h3 class="title">CME Credits (Korean Only)<span class="red_t bold kor">&nbsp;&nbsp;** 11월 29일(금)부터 30일(토) 내에 이수한 강의만 평점 인정됩니다.</span></h3>
+		<h3 class="title">CME Credits (Korean Only)<br class="mb_only"/><span class="red_t bold kor">&nbsp;&nbsp;** 11월 29일(금)부터 30일(토) 내에 이수한 강의만 평점 인정됩니다.</span></h3>
 		<div class="details">
 			<!-- <ul class="indent_ul">
 				<li>• 'ICOMES 2023' 참가에 따른 평점을 아래와 같이 안내해 드립니다.</li>
@@ -173,7 +173,7 @@
 			</div>
 		</div> -->
 		<!-- 3. 이수 시간에 따른 부분 평점 및 주의사항 안내 end -->
-		 <h3 class="title kor">평점인정기준<span class="red_t bold kor">&nbsp;&nbsp;** 수강 시간의 총합으로 평점 발급</span></h3>
+		 <h3 class="title kor">평점인정기준<br class="mb_only"/><span class="red_t bold kor">&nbsp;&nbsp;** 수강 시간의 총합으로 평점 발급</span></h3>
 		<div class="details">
 			<div class="table_wrap x_scroll flex_table">
 				<table class="c_table2 detail_table center type1 ">
@@ -231,7 +231,7 @@
 				</ul>
 			</div> -->
 		</div>
-		<h3 class="title kor">출결방법(오프라인 참석)<span class="red_t bold kor">&nbsp;&nbsp;** 현장 1일 최소 2회의 QR코드 미 태그 시, 평점 인정이 불가합니다.</span></h3>
+		<h3 class="title kor">출결방법(오프라인 참석)<br class="mb_only"/><span class="red_t bold kor">&nbsp;&nbsp;** 현장 1일 최소 2회의 QR코드 미 태그 시, 평점 인정이 불가합니다.</span></h3>
 		<div class="text_box">
 			<ul>
 				<li class="kor">• 현장 1일 최소 2회의 QR 태그 필수</li>

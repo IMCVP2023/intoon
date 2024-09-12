@@ -51,7 +51,7 @@
 				<!-- Thank you so much.<br/><br/>With best regards,<br/><br/>Won-Young Lee,<br/><br/>President of KSCP (Korean Society of Cardiovascular Disease Prevention) -->
 				</p>
 			</div>
-			<img src="./img/2024_headman_img-1.png" alt = ""/>
+			<img src="./img/2024_headman_img-1.png" alt = "" class="welcome_img"/>
             <div class="head_profile">
 				<div class="headman">
 				
