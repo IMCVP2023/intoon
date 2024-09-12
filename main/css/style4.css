@@ -986,6 +986,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 
 @media screen and (max-width: 830px) {
 	.package_sponsorship_details .table_wrap {max-width: 100%; overflow-x: auto;}
+	.welcome_img{width: 100%;}
 }
 
 @media screen and (max-width: 768px) {
@@ -2558,6 +2559,10 @@ select[name="topic1"] option:disabled {
 
 	.abstract_key_date_box > img {
 		width: 40%;
+	}
+
+	.abstract_submission_guideline .abstract_key_date_box > img {
+		width: auto;
 	}
 }
 

@@ -1216,7 +1216,7 @@ br.br_530_only {display: none;}
 
 	/* registration */
 	.form_btn {font-size:16px; height:40px;}
-	.details p, .details li {font-size:14px;}
+	.details p, .details li, .details li span, .details li a {font-size:14px;}
 	.basic_ul > li:not(:first-child) {margin-top: 30px;}
 	.submit_application .details.details_bg {padding:15px 15px 20px;}
 	.registration_form {margin-top:0;}

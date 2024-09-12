@@ -7,7 +7,8 @@
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
 				<a href="/main/abstract_submission.php">Online Submission</a>
-				<a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
+				<a href="/main/comingsoon.php">Presentation Guidelines</a>
+				<!-- <a href="/main/abstract_submission_oral.php">Presentation Guidelines</a> -->
 				<a href="/main/abstract_submission_award.php" class="on">Awards & Grants</a>
 			</div>
 		</h1>
