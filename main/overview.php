@@ -141,7 +141,7 @@ $floor = get_data($sql_floor);
 				</tr>
 				<tr>
 					<th>Early-Bird Registration Deadline</th>
-					<td>Sunday, <span class="bold point4_txt">September 1</span>, 2024</td>
+					<td>Monday, <span class="bold point4_txt">October 7</span>, 2024</td>
 				</tr>
 				<tr>
 					<th>Pre-Registration Deadline</th>
