@@ -43,7 +43,7 @@ if ($category != "") {
 
 $abstract_list_query = "SELECT
 								rs.idx, rs.etc1, rs.etc2,rs.etc1_date, rr.status AS registration_status,
-								member_idx,
+								member_idx, rs.register_date,
 								DATE_FORMAT(rs.modify_date, '%y-%m-%d') AS submission_date,
 								IFNULL(rs.submission_code,'-') AS submission_code,
 								m.email,
@@ -620,7 +620,7 @@ $count = count($abstract_list);
 								<!-- <td><?= $list["category"] ?></td> -->
 								<!-- <td><?= $list["preferred_presentation_type"] == 1 ? "No" : "Yes" ?></td> -->
 								<!-- <td>13 / 32</td> -->
-								<td class="ellipsis"><?= $list["submission_date"] ?></td>
+								<td class="ellipsis"><?= $list["register_date"] ?></td>
 							</tr>
 					<?php
 						}
