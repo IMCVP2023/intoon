@@ -435,7 +435,7 @@ else if($flag == "etc2"){
 			UPDATE request_submission
 			SET
 				etc2 = '" . $etc2 . "', 
-				modify_date = NOW()
+				etc2_date = NOW()
 			WHERE idx = '" . $submission_idx . "'
 		";
 	$sql_update_result = sql_query($sql_update);
@@ -455,8 +455,7 @@ else if($flag == "etc3"){
 	$sql_update = "
 			UPDATE request_submission
 			SET
-				etc3 = '" . $etc3 . "', 
-				modify_date = NOW()
+				etc3 = '" . $etc3 . "'
 			WHERE idx = '" . $submission_idx . "'
 		";
 	$sql_update_result = sql_query($sql_update);
@@ -478,8 +477,7 @@ else if($flag == "etc4"){
 	$sql_update = "
 			UPDATE request_submission
 			SET
-				etc4 = '" . $etc4 . "', 
-				modify_date = NOW()
+				etc4 = '" . $etc4 . "'
 			WHERE idx = '" . $submission_idx . "'
 		";
 	$sql_update_result = sql_query($sql_update);
