@@ -198,8 +198,8 @@
 						<a href="/main/registration_guidelines.php">
 							<h2>Early bird<br/>registration<br/>deadline</h2>
 							<div>
-								<p>September</p>
-								<p>1</p>
+								<p>October</p>
+								<p>7</p>
 							</div>
 						</a>
 					</li>
