@@ -127,14 +127,25 @@ $floor = get_data($sql_floor);
 					<col width="280px">
 					<col width="*">
 				</colgroup>
-				<tr>
+				<!-- <tr>
 					<th>Abstract Submission Deadline 1<sup class="font_small">st</sup></th>
 					<td>Sunday, <span class="bold point4_txt">August 18</span>, 2024</td>
 				</tr>
 				<tr>
 					<th>Abstract Submission Deadline 2<sup class="font_small">nd</sup></th>
 					<td>Sunday, <span class="bold point4_txt">October 6</span>, 2024</td>
+				</tr> -->
+				<tr>
+					<th>Abstract Submission Deadline</th>
+					<td>
+						Monday, <span class="bold point4_txt">September 30</span>, 2024
+						<br/>*Acceptant notification within 10 days after abstract submission
+					</td>
 				</tr>
+				<!-- <tr>
+					<th>Abstract Submission Deadline</th>
+					<td>Monday, <span class="bold point4_txt">September 30</span>, 2024</td>
+				</tr> -->
 				<tr>
 					<th>Notification of Abstract Acceptance</th>
 					<td>Wednesday, <span class="bold point4_txt">October 16</span>, 2024</td>
