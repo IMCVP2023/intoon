@@ -261,7 +261,7 @@ array
 		'idx'=>22, 
 		'first_name'=>'Keun-Hwa', 
 		'last_name'=>'Jung', 
-		'affiliation'=>'Jung', 
+		'affiliation'=>'Seoul National University', 
 		'nation'=>'Korea', 
 		'session_type'=>'Symposium 10', 
 		'title'=>'Regional Disparities in Prehospital Delay of Acute Ischemic Stroke', 
