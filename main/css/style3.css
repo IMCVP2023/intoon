@@ -330,8 +330,8 @@ section.visa .circle_title + .details {margin-bottom: 72px;}
 .close_area .checkbox + label:before {border-radius:2px;}
 
 /*메인페이지 초록접수 마감 연장 팝업 추가*/
-.deadline_pop .pop_bg {background-color:transparent;}
-.deadline_pop .pop_contents {padding:20px 30px 48px; background-color:#0C666B; overflow:visible; max-width:500px; top:130px; left:10px; transform:translate(0);}
+.deadline_pop .pop_bg {background-color:rgba(0,0,0,0.6);}
+.deadline_pop .pop_contents {padding:20px 30px 48px; background-color:#0a48af; overflow:visible; max-width:500px; top:130px; left:50%; transform:translateX(-50%);}
 .deadline_pop .pop_contents > img {max-width:60%;}
 .deadline_pop .inner {position:relative; padding:14px 14px 0 0; margin:10px 0 0 0; }
 .deadline_pop .inner:after {content:''; display:block; width:calc(100% - 10px); height:8px; position:absolute; top:0; right:0; background: #fff url('../img/deadline_border.png') no-repeat top center /cover;}

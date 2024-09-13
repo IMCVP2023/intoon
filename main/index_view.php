@@ -291,6 +291,65 @@
 
 </script> -->
 
+<div class="popup deadline_pop extension">
+	<div class="pop_bg"></div>
+	<div class="pop_contents">
+		<img src="./img/deadline_logo.png" alt="">
+		<div class="inner">
+			<div>
+				<h1>Exciting news! <br/>We’re thrilled to announce that we’ve extended the early bird registration rates until <p>Monday 7 October 2024.</p> Don’t miss out on this fantastic offer— it’s available for a limited time only!</h1>
+				<!-- <p>August 26(Fri)</p> -->
+				<button type="button" class="main_pop_btn" onClick="javascript:window.open('/main/registration_guidelines.php')">Register Now<img src="./img/travel_pointer.png" alt=""></button>			
+			</div>
+		</div>
+		<div class="close_area clearfix2">
+			<div>
+				<input type="checkbox" id="today_check" class="checkbox input required">
+				<label for="today_check">Do not open this window for 24 hours.</label>
+			</div>
+			<a href="javascript:;" class="pop_close">Close <img src="./img/main_pop_close.png" alt=""></a>
+		</div>	
+	</div>
+</div>
+
+<script>
+// 오늘 하루만 보기
+
+	// 쿠키 가져오기
+	function getCookie (name) {
+		var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+		return value? value[2] : null;
+	}
+
+	console.log(getCookie("pop"))
+
+	//쿠키가 존재하지 않으면 팝업창을 연다.
+	if(getCookie("pop") == null)  {
+		$('.pop_2023').show();
+		$('.travel_grant_pop').show();
+		$('.deadline_pop').show();
+		$('.notification_pop').show();
+	} else {
+		$('.pop_2023').hide();
+		$('.travel_grant_pop').hide();
+		$('.deadline_pop').hide();
+		$('.notification_pop').hide();
+	}
+
+	$('.pop_2023 .close_area a, .travel_grant_pop .pop_close, .deadline_pop .pop_close, .notification_pop .pop_close').click(function(){
+		if($("#today_check, #today_check1").is(":checked")){
+			var toDate = new Date();
+			setHeaderCookie("pop", "done", 1);
+
+			console.log($("#today_check, #today_check1").is(":checked"))
+		}
+		$(this).parents(".popup").hide();
+		//$('.travel_grant_pop, .deadline_pop, .notification_pop').hide();
+	});
+
+</script>
+
+
 <script>
 	$('document').ready(function(){
 		$('.close_area a').click(function(){
