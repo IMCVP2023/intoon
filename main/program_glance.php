@@ -165,13 +165,14 @@
 						<tr>
 							<td class="">07:00~08:00</td>
 							<td class="orange_bg pointer" name="breakfast_symposium_1">
-								Breakfast Symposium 1<br/>
+								Breakfast Symposium<br/>
 								<input type="hidden" name="e" value="room1">
 							</td>
-							<td class="orange_bg pointer" name="breakfast_symposium_2">
+							<td></td>
+							<!-- <td class="orange_bg pointer" name="breakfast_symposium_2">
 								Breakfast Symposium 2<br/>
 								<input type="hidden" name="e" value="room2">
-							</td>
+							</td> -->
 							<!-- <td rowspan="12">TBD</td> -->
 						</tr>
 						<tr>

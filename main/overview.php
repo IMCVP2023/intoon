@@ -146,10 +146,10 @@ $floor = get_data($sql_floor);
 					<th>Abstract Submission Deadline</th>
 					<td>Monday, <span class="bold point4_txt">September 30</span>, 2024</td>
 				</tr> -->
-				<tr>
+				<!-- <tr>
 					<th>Notification of Abstract Acceptance</th>
 					<td>Wednesday, <span class="bold point4_txt">October 16</span>, 2024</td>
-				</tr>
+				</tr> -->
 				<tr>
 					<th>Early-Bird Registration Deadline</th>
 					<td>Monday, <span class="bold point4_txt">October 7</span>, 2024</td>

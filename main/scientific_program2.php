@@ -421,7 +421,7 @@
 										<th>12:30 - 12:50</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<p>Dae Young Cheon (Hallym University, Korea), Joon Ho Hyun (University of Ulsan, Korea)
+											<p>Dae Young Cheon (Hallym University, Korea), Junho Hyun (University of Ulsan, Korea)
 											</p>
 											<p>Yeoree Yang (The Catholic University of Korea, Korea), Mihae Seo (Soonchunhyang University, Korea)</p>
 										</td>
@@ -534,7 +534,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>Kyung Yeol Lee (Yonsei University, Korea)</p> -->
+											<p>Sang Hyun Lim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="green_panel_tr">
@@ -759,7 +759,7 @@
 					<div class="tab_cont2">
 
 						<!-- Breakfast Symposium 2  -->
-						<div>
+						<!-- <div>
 							<table class="table color_table pink_table" name="breakfast_symposium_2">
 								<colgroup>
 									<col class="col_th">
@@ -769,7 +769,7 @@
 									<tr>
 										<th class="dark_pink_bg">07:00 - 08:00</th>
 										<td class="pink_bg"> Breakfast Symposium 2 [TBD]
-											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
+									<button type="button" class="favorite_btn centerT">My Favorite</button> 
 										</td>
 									</tr>
 								</tbody>
@@ -782,9 +782,6 @@
 									<tr class="pink_bg non_border_b">
 										<td class="pink_bg">Breakfast Symposium 2 [TBD]</td>
 									</tr>
-									<!-- <tr>
-										<td><button type="button" class="favorite_btn centerT">My Favorite</button></td>
-									</tr> -->
 								</tbody>
 							</table>
 							<table class="table detail_table2">
@@ -798,21 +795,21 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)</p> -->
+										
 										</td>
 									</tr>
 									<tr class="">
 										<th>07:00 - 07:30</th>
 										<td>
 											 <p class="s_bold">TBD</p>
-											<!--<p>TBD (TBD)</p> -->
+											
 										</td>
 									</tr>
 									<tr class="pink_panel_tr">
 										<th>07:30 - 08:00</th>
 										<td>
 											 <p class="s_bold">TBD</p>
-										<!--	<p>TBD (TBD)</p> -->
+										
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -823,7 +820,7 @@
 									</tr>
 								</tbody>
 							</table>
-						</div>
+						</div> -->
 							<!-- Symposium 8 -->
 							<div>
 							<table class="table color_table yellow_table" name="symposium_8">
@@ -862,14 +859,14 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+											<p>Sang Ho Cho (Hallym University, Korea)<br>Hoon Joon Park (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>08:30 - 08:50</th>
 										<td>
-											<p class="s_bold">Cardiovascular Risk in Breast Cancer Survivorship: Latest Findings </p>
-											<p>Yong-Moon Mark Park (University of Arkansas for Medical Sciences, USA)</p>
+											<p class="s_bold">Cancer Treatment as a Possible Risk Factor for Cardiovascular Disease</p>
+											<p>Woo-Baek Chung (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -923,7 +920,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">10:30 - 11:10</th>
-										<td class="green_bg">Plenary Lecture 3<br/>								
+										<td class="green_bg">Plenary Lecture 3<img class="virtual_mark" src="./img/icons/virtual.svg"/><br/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -935,7 +932,7 @@
 										<th class="dark_green_bg">10:30 - 11:10</th>
 									</tr>
 									<tr class="green_bg non_border_b">
-										<td class="green_bg">Plenary Lecture 3<br/>
+										<td class="green_bg">Plenary Lecture 3<img class="virtual_mark" src="./img/icons/virtual.svg"/><br/>
 										</td>
 									</tr>
 								</tbody>
@@ -1047,12 +1044,12 @@
 									<tr>
 										<th>12:10 - 12:30</th>
 										<td>
-											<!-- <p class="s_bold">
-												Increasing Disparities in Diabetes Mellitus Prevalence Among People with Disabilities in South Korea
+											<p class="s_bold">
+											Increasing Disparities in Diabetes Mellitus Prevalence Among People with Disabilities in South Korea 
 											</p>
 											<p>
-												Jong Hyuk Park (Chungbuk National University Hospital, Korea)
-											</p>  -->
+											Inha Jung (Korea University, Korea)
+											</p> 
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
@@ -1143,7 +1140,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">13:50 - 14:30</th>
-										<td class="green_bg">Plenary Lecture 4<br/>	
+										<td class="green_bg">Plenary Lecture 4<img class="virtual_mark" src="./img/icons/virtual.svg"/><br/>	
 										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>									
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -1156,7 +1153,7 @@
 										<th class="dark_green_bg">13:50 - 14:30</th>
 									</tr>
 									<tr class="green_bg non_border_b">
-										<td class="green_bg">Plenary Lecture 4<br/>
+										<td class="green_bg">Plenary Lecture 4<img class="virtual_mark" src="./img/icons/virtual.svg"/><br/>
 										</td>
 									</tr>
 								</tbody>
@@ -1181,7 +1178,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+											<p>Sang Hyun Lim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									

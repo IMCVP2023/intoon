@@ -338,13 +338,13 @@ section.visa .circle_title + .details {margin-bottom: 72px;}
 .deadline_pop .inner:before {content:''; display:block; width:8px; height:100%; background-color:#fff; position:absolute; top:0; right:0; background: #fff url('../img/deadline_border.png') no-repeat top center; z-index:1;}
 .deadline_pop .inner > div {background-color:#fff; padding:36px 0 28px;}
 .deadline_pop .inner > div * {text-align:center;}
-.deadline_pop h1 {font-family:'Montserrat', sans-serif; font-size:26px; font-weight:bold; line-height:32px; color:#0C666B; margin-bottom:6px;}
-.deadline_pop p {font-family:'Montserrat', sans-serif; font-size:35px; font-weight:bold; line-height:38px; color:#BD1847;}
+.deadline_pop h1 {/*font-size:20px;*/ font-weight:bold; line-height:32px; color:#0C666B; margin-bottom:6px;}
+.deadline_pop p { font-size:35px; font-weight:bold; line-height:38px; color:#BD1847;}
 .deadline_pop .main_pop_btn {font-family:'Montserrat', sans-serif; font-size:25px; font-weight:bold; margin-top:20px; background-image:url('../img/deadline_btn.png'); border-radius:0;}
 
 
 .deadline_pop.extension .pop_contents {padding:20px 16px 48px;}
-.deadline_pop.extension h1 {font-size:25px;}
+.deadline_pop.extension h1 {font-size:22px;}
 
 /*invited speaker 수정*/
 .italic {font-style: italic;}
