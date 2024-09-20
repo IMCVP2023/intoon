@@ -604,7 +604,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>15:40 - 16:00</th>
 										<td>
-											<p class="s_bold">Adverse Pregnancy Outcomes and Cardiovascular Disease Risk</p>
+											<p class="s_bold">Evaluating Blood Pressure Patterns and Developing Interventions for Hypertensive Disorders of Pregnancy</p>
 											<p>Heather M. Johnson (Florida Atlantic University, USA)</p>
 										</td>
 									</tr>
@@ -874,7 +874,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">11:10 - 11:50</th>
-										<td class="green_bg">Plenary Lecture 1<br/>
+										<td class="green_bg">Plenary Lecture 1<img class="virtual_mark" src="./img/icons/virtual.svg"/><br/>
+										
 										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -887,7 +888,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th class="dark_green_bg">11:10 - 11:50</th>
 									</tr>
 									<tr class="green_bg non_border_b">
-										<td class="green_bg">Plenary Lecture 1<br/>
+										<td class="green_bg">Plenary Lecture 1<img class="virtual_mark" src="./img/icons/virtual.svg"/><br/>
 										</td>
 									</tr>
 								</tbody>
@@ -984,7 +985,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										</td>
 									</tr>
 									<tr class="non_border_b">
-										<th>12:10 - 13:00</th>
+										<th>12:30 - 13:00</th>
 										<td>
 											<p>Break</p>
 										</td>
@@ -1090,7 +1091,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 								<tbody>
 									<tr>
 										<th class="dark_green_bg">15:00 - 15:40</th>
-										<td class="green_bg">Plenary Lecture 2<br/>	
+										<td class="green_bg">Plenary Lecture 2<img class="virtual_mark" src="./img/icons/virtual.svg"/><br/>	
 										<img class="program_plus_btn" src="./img/icons/green_plus_btn.svg"/>								
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
@@ -1103,7 +1104,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th class="dark_green_bg">15:00 - 15:40</th>
 									</tr>
 									<tr class="green_bg non_border_b">
-										<td class="green_bg">Plenary Lecture 2<br/>
+										<td class="green_bg">Plenary Lecture 2<img class="virtual_mark" src="./img/icons/virtual.svg"/><br/>
 										</td>
 									</tr>
 								</tbody>
