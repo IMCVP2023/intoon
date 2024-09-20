@@ -425,7 +425,7 @@ function promotion_onsite_submit(){
     }
 
     //sujeong / promotion code 
-    const promotion_code = $("input[name=promotion_code]").val();
+    //const promotion_code = $("input[name=promotion_code]").val();
 
     const payment_method = $('input[name=payment_method]:checked').val();
 
