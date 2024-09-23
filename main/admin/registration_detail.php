@@ -576,6 +576,8 @@
 									<option value="2" <?=$registration_status == 2 ? "selected" : ""?>>Payment Received</option>
 									<option value="3" <?=$registration_status == 3 ? "selected" : ""?>>Request Cancel</option>
 									<option value="4" <?=$registration_status == 4 ? "selected" : ""?>>Canceled</option>
+									<option value="5" <?=$registration_status == 5 ? "selected" : ""?>>On-site</option>
+									<option value="6" <?=$registration_status == 6 ? "selected" : ""?>>promotion registration</option>
 								</select>
 								<div class="rs2_hidden">
 									<select name="rs2_unit">

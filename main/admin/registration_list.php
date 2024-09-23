@@ -201,6 +201,7 @@
 						WHEN '3' THEN '환불대기'
 						WHEN '4' THEN '환불완료'
 						WHEN '5' THEN '현장결제'
+						WHEN '6' THEN '프로모션등록'
 						ELSE '-'
 					END AS payment_status,
 					CASE rr.payment_methods
