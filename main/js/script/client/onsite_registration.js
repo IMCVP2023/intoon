@@ -361,6 +361,9 @@ function onsite_submit(){
     });
 }
 
+
+
+
 function promotion_submit(){
     if(requiredCheck()!=false){
         if(confirm("Would you like to proceed with on-site registration?")){
@@ -370,6 +373,8 @@ function promotion_submit(){
         }
     }
 }
+
+//promotion registration 1, 2 => promotion code 필요
 function promotion_onsite_submit(){
     var nation_no = $('#nation_no > option:selected').val();
     var email = $("input[name=email]").val();
@@ -425,7 +430,7 @@ function promotion_onsite_submit(){
     }
 
     //sujeong / promotion code 
-    //const promotion_code = $("input[name=promotion_code]").val();
+    const promotion_code = $("input[name=promotion_code]").val();
 
     const payment_method = $('input[name=payment_method]:checked').val();
 
