@@ -346,9 +346,12 @@ if($_POST["flag"] === "onsite") {
 
     //sujeong / promotion code 
     $promotion_code = $data["promotion_code"] ?? "";
-    $payment_methods = $data["payment_methods"] ?? "";
+    $payment_methods = $data["payment_method"] ?? "";
 
     $special_request = $data["special_request"] ?? "";
+
+    //sujeong / status 추가
+    $status = $data["status"] ?? "";
 
     $conference_info = implode("*", $data["conference_info_arr"]);
     $price = $data["price"] ?? "";
@@ -394,7 +397,7 @@ if($_POST["flag"] === "onsite") {
     $insert_registration_query =	"
                                         INSERT request_registration
                                         SET
-                                            status = 6,
+                                            status = '{$status}',
                                             attendance_type = '{$attendance_type}',
                                             is_score = '{$is_score}',
                                             ksso_member_status = '{$ksso_member_status}',

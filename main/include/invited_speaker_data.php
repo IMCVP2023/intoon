@@ -183,7 +183,7 @@ array
 
 	 array(
 		'idx'=>15, 
-		'first_name'=>'Hyung Deok', 
+		'first_name'=>'Hyung Duk', 
 		'last_name'=>'Kim', 
 		'affiliation'=>'The Catholic University of Korea', 
 		'nation'=>'Korea', 
@@ -439,7 +439,7 @@ array
 		'affiliation'=>'The Catholic University of Korea', 
 		'nation'=>'Korea', 
 		'session_type'=>'Symposium 6', 
-		'title'=>'Latest Guidelines for Dyslipidemia Management in CKD: update in dyslipidemia guideline in CKD', 
+		'title'=>'Dyslipidemia and Cardiovascular Health in CKD patients', 
 		'image'=>'./img/2024_invited_speaker/TBD.png'), 
 
 	 array(
@@ -458,7 +458,7 @@ array
 		'idx'=>40, 
 		'first_name'=>'Wookjin', 
 		'last_name'=>'Yang', 
-		'affiliation'=>'Seoul National University', 
+		'affiliation'=>'University of Ulsan', 
 		'nation'=>'Korea', 
 		'session_type'=>'Symposium 3', 
 		'title'=>'Antiphospholipid syndrome and stroke', 
@@ -472,7 +472,7 @@ array
 		'affiliation'=>'Yonsei University', 
 		'nation'=>'Korea', 
 		'session_type'=>'Symposium 7', 
-		'title'=>'The Known and Unknonw Mechanisms of SGLT2 Inhibitors', 
+		'title'=>'The known and unknown mechanisms of SGLT2 inhibitors', 
 		'image'=>'./img/2024_invited_speaker/TBD.png'
 ), 
 
@@ -485,6 +485,17 @@ array
 		'session_type'=>'Symposium 8', 
 		'title'=>'Cardiovascular Risk in Breast Cancer Survivorship: Latest Findings', 
 		'image'=>'./img/2024_invited_speaker/TBD.png'
+),
+
+array(
+	'idx'=>43, 
+	'first_name'=>'Su Jeong', 
+	'last_name'=>'Song', 
+	'affiliation'=>'TBD', 
+	'nation'=>'Korea', 
+	'session_type'=>'Symposium 12', 
+	'title'=>'From Doctor to Doctorpreneur: Initial software platform company building experience', 
+	'image'=>'./img/2024_invited_speaker/TBD.png'
 ),
 ) 
 ?>

@@ -363,7 +363,7 @@ function onsite_submit(){
 
 
 
-
+//프로모션 사이트 등록
 function promotion_submit(){
     if(requiredCheck()!=false){
         if(confirm("Would you like to proceed with on-site registration?")){
@@ -432,9 +432,17 @@ function promotion_onsite_submit(){
     //sujeong / promotion code 
     const promotion_code = $("input[name=promotion_code]").val();
 
-    const payment_method = $('input[name=payment_method]:checked').val();
+    const payment_method = Number($('input[name=payment_method]:checked').val());
+
+    //[240923] sujeong / promotion 등록 status 추가
+    const status = $('input[name=registration_status]').val();
+
+    // if(status == '6' && price == 0){
+    //     payment_method = "3";
+    // }
 
     var data = {
+        status : status,
         nation_no : nation_no,
         ksso_member_check : ksso_member_check,
         ksso_member_status : ksso_member_status,
@@ -483,7 +491,9 @@ function promotion_onsite_submit(){
                 //window.location.href = `/main`;
                 
                 // sujeong 결제 필요시 
-                window.location.href = `/main/registration2.php?idx=${res.reg_idx}&member=${res.member_idx}`;
+                if(data.price != 0){
+                    window.location.href = `/main/registration2.php?idx=${res.reg_idx}&member=${res.member_idx}`;
+                }
             } else {
                 alert("onsite registration error.");
                 return;
@@ -654,10 +664,10 @@ function requiredCheck(){
         $('input[name=list]').css("border-color", "red");
         return false;
     // payment_method
-    } else if(!$('input:radio[name=payment_method]').is(':checked')){
-        alert("Please check the Payment Methods section.");
-        $('input[name=payment_method]').css("border-color", "red");
-        return false;
+    // } else if(!$('input:radio[name=payment_method]').is(':checked')){
+    //     alert("Please check the Payment Methods section.");
+    //     $('input[name=payment_method]').css("border-color", "red");
+    //     return false;
     // Country = Repulic of Korea 한국일때 추가 입력값
     } else if($('#nation_no > option:selected').val() == '25'){
         // KSSO Member

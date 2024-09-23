@@ -14,7 +14,7 @@
 
         $program_query = "	
             SELECT es.nick_name, es.org, es.email, es.attendance_type, es.cv_path, es.abstract_path, es.is_mailed, es.idx AS email_idx,
-			p.program_name, p.contents_title, p.start_time, p.end_time, p.idx
+			    p.program_name, p.contents_title, p.start_time, p.end_time, p.idx
             FROM program_contents AS p
             LEFT JOIN email_speaker AS es ON es.program_contents_idx = p.idx
             WHERE p.is_deleted = 'N' AND p.program_idx = {$idx}

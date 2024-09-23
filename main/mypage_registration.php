@@ -470,7 +470,7 @@
 													<td><?=$info_html?></td>
 												</tr>
 												<!-- Credit Card 선택 시 -->
-												<tr class="tr_bg">
+												<!-- <tr class="tr_bg">
 													<th>Registration fee</th>
 													<td><?=$list["is_korea"] == 1 ? "KRW" : "USD"?> <?=$list["price"] || $list["price"] == 0 ? number_format($list["price"]) : "-"?></td>
 												</tr>
@@ -481,13 +481,113 @@
 												<tr class="tr_bg">
 													<th>Payment Method</th>
 													<td><?=$payment_methods?></td>
-												</tr>
+												</tr> -->
 											</tbody>
 										</table>
 									</div>
 								</td>
 
-								<?php	}else{?>
+								<?php	}
+
+								else if ($list["status"] == 7){ ?>
+										<!-- 그룹등록일 경우 -->
+										<td>Complete</td>
+											<td>
+												<button type="button" class="btn review_regi_open" data-idx="<?=$list["idx"]?>">Review</button>
+
+												<div class="review_data hidden">
+													<table class="detail_table">
+														<tbody>
+															<tr>
+																<th>Registration No.</th>
+																<td><?=$register_no ?? "-"?></td>
+															</tr>
+															<tr>
+																<th>Registration Date</th>
+																<td><?=$list["register_date2"] ?? "-"?></td>
+															</tr>
+															<tr>
+																<th>Name</th>
+																<td><?=$list["first_name"]." ".$list["last_name"]?></td>
+															</tr>
+															<tr>
+																<th>Country</th>
+																<td><?=$list["nation_en"]?></td>
+															</tr>
+															<tr>
+																<th>Affiliation</th>
+																<td><?=$list["affiliation"] ?? "-"?></td>
+															</tr>
+															<tr>
+																<th>Phone Number</th>
+																<td><?=$list["phone"] ?? "-"?></td>
+															</tr>
+															<tr>
+																<th>Member of KSCP</th>
+																<td><?=$list["ksso_member_status"] ?? "-"?></td>
+															</tr>
+															<tr>
+																<th>Type of<br/>Participation</th>
+																<td><?=$attendance_type?></td>
+															</tr>
+															<tr>
+																<th>Category</th>
+																<td><?=$list["member_type"] ?? "-"?></td>
+															</tr>
+															<?php if($list["is_korea"] == 1){?>
+																<tr>
+																	<th>평점신청</th>
+																	<td><?=$list["is_score"] == 1 ? "필요" : "불필요"?></td>
+																</tr>
+																<tr>
+																	<th>의사 면허번호</th>
+																	<td><?=$list["licence_number"] ?? "Not applicable"?></td>
+																</tr>
+																<tr>
+																	<th>전문의 번호</th>
+																	<td><?=$list["specialty_number"] ?? "Not applicable"?></td>
+																</tr>
+																<!-- <tr>
+																	<th>영양사 면허번호</th>
+																	<td><?=$list["nutritionist_number"] ?? "Not applicable"?></td>
+																</tr>
+																<tr>
+																	<th>임상영양사 면허번호</th>
+																	<td><?=$list["dietitian_number"] ?? "Not applicable"?></td>
+																</tr> -->
+															<?php }?>
+															<tr>
+																<th>Others</th>
+																<td><?=$other_html?></td>
+															</tr>
+															<tr>
+																<th>Special Request <br/>for Food</th>
+																<td><?=$special_request_food?></td>
+															</tr>
+															<tr>
+																<th>Where did you get the <br/>information about<br/> the conference?</th>
+																<td><?=$info_html?></td>
+															</tr>
+															<!-- Credit Card 선택 시 -->
+															<tr class="tr_bg">
+																<th>Registration fee</th>
+																<td><?=$list["is_korea"] == 1 ? "KRW" : "USD"?> <?=$list["price"] || $list["price"] == 0 ? number_format($list["price"]) : "-"?></td>
+															</tr>
+															<tr class="tr_bg">
+																<th>Total Registration fee</th>
+																<td><?=$list["is_korea"] == 1 ? "KRW" : "USD"?> <?=$list["price"] || $list["price"] == 0 ? number_format($list["price"]) : "-"?></td>
+															</tr>
+															<tr class="tr_bg">
+																<th>Payment Method</th>
+																<td><?=$payment_methods?></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</td>
+																	
+								
+								<?php } else{ ?>
 								<td>-</td>
 								<td>canceled</td>
 							<?php }?>

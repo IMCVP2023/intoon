@@ -442,7 +442,7 @@
 										<th>13:20 - 13:40</th>
 										<td>
 											<p class="s_bold">Antiphospholipid syndrome and stroke</p>
-											<p>Wookjin Yang (Seoul National University, Korea)</p>
+											<p>Wookjin Yang (University of Ulsan, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -1217,7 +1217,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>16:00 - 16:20</th>
 										<td>
 											<p class="s_bold">
-												Latest Guidelines for Dyslipidemia Management in CKD: Update in Dyslipidemia Guideline in CKD
+												Dyslipidemia and Cardiovascular Health in CKD patients
 											</p>
 											<p>Tae Hyun Ban (The Catholic University of Korea, Korea)</p>
 										</td>

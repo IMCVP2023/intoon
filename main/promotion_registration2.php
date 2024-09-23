@@ -472,7 +472,7 @@
 								</ul>
 							</td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<th>Payment Methods</th>
 							<td>
 								<ul class="chk_list info_check_list flex_center type2">
@@ -486,12 +486,14 @@
                                     </li>
                                 </ul>
 							</td>
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
 			</div>
 		</div>
 		<div class="pager_btn_wrap half">
+			<input hidden type="radio" name='payment_method' value="3" checked/>
+			<input hidden name="registration_status" value="6"/>
 			<button id="submit" type="button" class="btn green_btn" onclick="promotion_submit()">Submit</button>
 		</div>
 	</div>

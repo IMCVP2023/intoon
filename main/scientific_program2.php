@@ -233,7 +233,7 @@
 										<th>08:30 - 08:50</th>
 										<td>
 											<p class="s_bold">
-												The Known and Unknonw Mechanisms of SGLT2 Inhibitors 
+												The known and unknown mechanisms of SGLT2 inhibitors 
 											</p>
 											<p>Yong-Ho Lee (Yonsei University, Korea)</p>
 										</td>
@@ -262,7 +262,7 @@
 											<p class="s_bold">
 												What SGLT2 Inhibitors have Changed in Our Field - Nephrologist's Perspectives
 											</p>
-											<p>Hyung Deok Kim (The Catholic University of Korea, Korea)</p>
+											<p>Hyung Duk Kim (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
@@ -1243,15 +1243,15 @@
 									<tr>
 										<th>14:50 - 15:10</th>
 										<td>
-											<p class="s_bold">TBD</p>
+											<p class="s_bold">Bird view of digital health in arrythmia & HF</p>
 											<p>Seonghoon Choi (Hallym University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>15:10 - 15:30</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">From Doctor to Doctorpreneur: Initial software platform company building experience</p>
+											<p>Su Jeong Song (TBD)</p>
 										</td>
 									</tr>
 									<tr>
