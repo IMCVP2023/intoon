@@ -201,12 +201,16 @@
 						WHEN '3' THEN '환불대기'
 						WHEN '4' THEN '환불완료'
 						WHEN '5' THEN '현장결제'
+						WHEN '6' THEN '프로모션등록'
+						WHEN '7' THEN '그룹등록'
 						ELSE '-'
 					END AS payment_status,
 					CASE rr.payment_methods
 						WHEN '0' THEN 'Credit card'
 						WHEN '1' THEN 'Bank transfer'
 						WHEN '2' THEN 'Onsite payment'
+						WHEN '3' THEN 'Promotion payment'
+						ELSE '-'
 					END AS payment_methods,
 				    rr.etc1,
 					rr.licence_number,

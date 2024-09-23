@@ -79,7 +79,7 @@
 												WHEN rr.payment_methods = '0' THEN 'Credit card'
 												WHEN rr.payment_methods = '1' THEN 'Bank transfer'
 												WHEN rr.payment_methods = '2' THEN 'Onsite payment'
-												WHEN rr.payment_methods = '3' THEN 'Admin registration'
+												WHEN rr.payment_methods = '3' THEN 'Promotion registration'
 											END
 										    ) AS payment_methods,
 											rr.invitation_check_yn, n_visa.nation_ko AS invitation_nation_text, 
@@ -578,6 +578,7 @@
 									<option value="4" <?=$registration_status == 4 ? "selected" : ""?>>Canceled</option>
 									<option value="5" <?=$registration_status == 5 ? "selected" : ""?>>On-site</option>
 									<option value="6" <?=$registration_status == 6 ? "selected" : ""?>>promotion registration</option>
+									<option value="7" <?=$registration_status == 7 ? "selected" : ""?>>Group registration</option>
 								</select>
 								<div class="rs2_hidden">
 									<select name="rs2_unit">
@@ -595,7 +596,7 @@
 								?>
 							</td>
 							<?php
-								if ($registration_status == 1) {
+								if ($registration_status == 1 ||$registration_status == 7) {
 							?>
 							<th>결제 예정금액</th>
 							<td>
@@ -680,7 +681,7 @@ $(document).ready(function(){
 	$("select[name=payment_status]").on("change", function(){
 		var _this_status = $(this).val();
 
-		if (reg_status == 1 && _this_status == 2) {
+		if (reg_status == 1 && _this_status == 2 ||reg_status == 7 && _this_status == 2 ) {
 			$('.rs2_hidden').css('display', 'inline-block');
 		} else {
 			$('.rs2_hidden').hide();
@@ -715,7 +716,7 @@ $(document).ready(function(){
 			}
 			data["payment_status"] = $("select[name=payment_status]").val();
 
-			if (reg_status == 1 && data["payment_status"] == 2) {
+			if (reg_status == 1 && data["payment_status"] == 2 || reg_status == 7 && data["payment_status"] == 2) {
 				// 금액
 				if(!$("input[name=rs2_price]").val()) {
 					alert("결제금액이 입력되지 않았습니다.");

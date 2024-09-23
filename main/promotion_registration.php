@@ -490,7 +490,8 @@
 				</table>
 			</div>
 		</div>
-		<div class="pager_btn_wrap half">
+		<div class="pager_btn_wrap half">	
+			<input hidden name="registration_status" value="6"/>
 			<button id="submit" type="button" class="btn green_btn" onclick="promotion_submit()">Submit</button>
 		</div>
 	</div>
