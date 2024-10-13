@@ -16,7 +16,7 @@
 /*coming*/
 .coming .container{height: 45vh;text-align: center;}
 .coming .container .sub_banner{width: 100%;height: 100%;margin: 0;}
-.coming h5{color: #0281f0b5;}
+.coming h5{color: #23509F;}
 
 /* 220323 HUBDNC LJH2 수정 */
 section.container.overview {/*padding-bottom: 200px; 326px;*/}
@@ -1499,10 +1499,10 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 .noti_wrap > div {width: calc(40% - 10px); min-height: 100px;}
 .noti_wrap_title {font-size: 26px; font-weight: bold; color: #000000; /*margin-bottom: 15px;*/}
 .dates_area ul {display: flex; flex-wrap: wrap; justify-content: space-between; min-height: 228px;gap: 6px;}
-.dates_area li {width: 24%; background-image: url("../img/2024_key_date_1.png"); background-position: center; background-size: contain;background-repeat: no-repeat;}
-.dates_area li:nth-of-type(2) {background-image: url("../img/2024_key_date_2-1.png")}
+.dates_area li {width: 24%; height: auto; background-image: url("../img/2024_key_date_1-1.png"); background-position: center; background-size: contain;background-repeat: no-repeat;}
+.dates_area li:nth-of-type(2) {background-image: url("../img/2024_key_date_2-2.png")}
 .dates_area li:nth-of-type(3) {background-image: url("../img/2024_key_date_3-1.png")}
-.dates_area li:nth-of-type(4) {background-image: url("../img/2024_key_date_4.png")}
+.dates_area li:nth-of-type(4) {background-image: url("../img/2024_key_date_4-1.png")}
 .dates_area li a {width: 100%; height: 100%; padding: 21px 16px 0px; display: flex; justify-content: space-between; align-items: flex-start; flex-direction: column;}
 .dates_area li a div {display: flex; flex-direction: column; align-items: flex-start; justify-content: center;}
 .dates_area li h2 {font-size: 20px; font-weight: bold; color: #FFFFFF; font-family: "Barlow", sans-serif;}
@@ -1530,6 +1530,8 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 }
 
 @media screen and (max-width: 610px) {
+	.dates_area ul{min-height: 500px;}
+	.dates_area li{width: 48%; padding-bottom: 12px;}
 	.dates_area li a{padding: 21px 57px 0px;}
 }
 
@@ -1656,7 +1658,7 @@ section.container.login .page_title {color:#fff; text-align:center; margin-botto
 	.main_speaker2 .career {font-size: 13px;}
 
 	/* main > key dates */
-	.dates_area li {width: 48%;}
+	/* .dates_area li {width: 48%;} */
 	.dates_area li h2 {font-size: 18px;}
 	.dates_area li p {font-size: 13px;}
 	
@@ -3327,4 +3329,21 @@ table.type2 th{
 .virtual_mark{
 	height: 24px;
 	padding-left: 12px;
+}
+
+
+.loading_box {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	transform: translateX(-200px);
+	z-index: 9999;
+}
+
+.loading {
+	position: absolute;
+	top: 20%;
+	left: 52%;
+	transform: translate(-50%, -50%);
 }

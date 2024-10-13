@@ -138,3 +138,19 @@ table .phone_num input[type="text"] {width:calc(100% - 85px);}
 /* 신청서 관리 */
 .refund_forms {display:flex; align-items:center; gap:4px;}
 .refund_forms span, .refund_forms button {flex-shrink: 0;}
+
+.loading_box {
+    position: absolute;
+    width: 100%;
+    height: 230%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* transform: translateX(-200px); */
+    z-index: 9999;
+}
+
+.loading {
+    position: absolute;
+    top: 20%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}

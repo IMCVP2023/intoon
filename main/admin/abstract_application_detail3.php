@@ -41,7 +41,7 @@ $sql_detail = "
 			rs.submission_code,
 			`status`,
 			preferred_presentation_type,
-			topic, topic_detail,
+			topic, topic_detail, mail_status,
 			title,
 			objectives, methods, results, conclusions, keywords, etc1, etc2, etc1_date, etc3, etc4,
 			IFNULL(CONCAT(fi_image1.path, '/', fi_image1.save_name), '') AS image1_path, fi_image1.original_name AS image1_original_name, rs.image1_caption,
@@ -194,11 +194,25 @@ function get_auther_affiliation($author_idx)
 
 <body>
     <section class="detail">
+    <div style="display: none;" class="loading_box" onclick="alert('진행중입니다.')">
+                <svg class="loading" version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve" width="70px" height="70px">
+                    <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
+                    </circle>
+                    <circle fill="#fff" stroke="none" cx="30" cy="50" r="6">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
+                    </circle>
+                    <circle fill="#fff" stroke="none" cx="54" cy="50" r="6">
+                        <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3" />
+                    </circle>
+                </svg>
+            </div>
         <div class="container">
             <div class="title">
                 <h1 class="font_title">Poster Abstract Submission</h1>
             </div>
             <div id="print_1" class="contwrap has_fixed_title" style="background-color: #fff;">
+                
                 <!-- <div class="tab_box">
 					<ul class="tab_wrap clearfix">
 						<li class="active"><a href="./abstract_application_detail.php">기본 정보</a></li>
@@ -283,7 +297,20 @@ function get_auther_affiliation($author_idx)
                         </tr>
                         <tr>
                             <th>초록 심사 일자</th>
-                            <td colspan="3"><?php echo $detail['etc1_date'] ?></td>
+                            <td><?php echo $detail['etc1_date'] ?></td>
+                            <th>발송 초록 메일</th>
+                            <td>
+                                <input type="radio" value="1" id="mail_status_1" <?=($detail["mail_status"] == '1' ? "checked" : "")?> name="mail_status"/>
+                                <label for="mail_status_1">1. Poster Oral & TG - O</label>
+                                <input type="radio" value="2" id="mail_status_2" <?=($detail["mail_status"] == '2' ? "checked" : "")?> name="mail_status"/>
+                                <label for="mail_status_2">2. Poster Exhibition & TG - O</label>
+                                <br/>
+                                <input type="radio" value="3" id="mail_status_3" <?=($detail["mail_status"] == '3' ? "checked" : "")?> name="mail_status"/>
+                                <label for="mail_status_3">3. Poster Exhibition & TG - X</label>
+                                <input type="radio" value="4" id="mail_status_4" <?=($detail["mail_status"] == '4' ? "checked" : "")?> name="mail_status"/>
+                                <label for="mail_status_4">4. TG - X</label>
+                                <button class="border_btn mail_status_save">Save</button>
+                            </td>
                         </tr>
 
                     </tbody>
@@ -521,6 +548,9 @@ function get_auther_affiliation($author_idx)
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
 <script>
+
+    const loading = document.querySelector(".loading_box")
+
     function createPDFfromHTML() {
         const print_1 = document.querySelector("#print_1");
         const print_2 = document.querySelector("#print_2");
@@ -638,6 +668,8 @@ function get_auther_affiliation($author_idx)
         }else if($("input[id='etc1_n']").is(":checked")){
             etc1Value = 'N';
         }
+       
+        loading.style.display = ""
 
         $.ajax({
             url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
@@ -651,6 +683,7 @@ function get_auther_affiliation($author_idx)
             success: function(res) {
                 if (res.code == 200) {
                     alert("초록 심사가 업데이트 되었습니다.");
+                     loading.style.display = "none"
                 } else if (res.code == 400) {
                     alert("초록 심사 업데이트에 실패했습니다.");
                     return false;
@@ -671,7 +704,7 @@ function get_auther_affiliation($author_idx)
         }else if($("input[id='etc2_n']").is(":checked")){
             etc2Value = 'N'
         }
-        
+        loading.style.display = ""
 
         $.ajax({
             url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
@@ -685,11 +718,12 @@ function get_auther_affiliation($author_idx)
             success: function(res) {
                 if (res.code == 200) {
                     alert("초록 채택 여부가 업데이트 되었습니다.");
-                    if(etc2Value == 'Y'){
-                        if(window.confirm("채택자에게 메일을 발송하시겠습니까?")){
-                            postGmail()
-                        }
-                    }
+                    loading.style.display = "none"
+                    // if(etc2Value == 'Y'){
+                    //     if(window.confirm("채택자에게 메일을 발송하시겠습니까?")){
+                    //         postGmail()
+                    //     }
+                    // }
                 } else if (res.code == 400) {
                     alert("초록 채택 여부가 업데이트에 실패했습니다.");
                     return false;
@@ -704,6 +738,7 @@ function get_auther_affiliation($author_idx)
     
     $(".etc3_save").click(function(){
         const idx = new URLSearchParams(window.location.search).get("idx");
+        loading.style.display = ""
 
         $.ajax({
             url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
@@ -717,6 +752,7 @@ function get_auther_affiliation($author_idx)
             success: function(res) {
                 if (res.code == 200) {
                     alert("프로모션 코드가 업데이트 되었습니다.");
+                    loading.style.display = "none"
                 } else if (res.code == 400) {
                     alert("프로모션 코드 업데이트에 실패했습니다.");
                     return false;
@@ -737,7 +773,7 @@ function get_auther_affiliation($author_idx)
         }else if($("input[id='etc4_n']").is(":checked")){
             etc4Value = 'N'
         }
-        
+        loading.style.display = ""
 
         $.ajax({
             url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
@@ -751,6 +787,7 @@ function get_auther_affiliation($author_idx)
             success: function(res) {
                 if (res.code == 200) {
                     alert("TG 여부가 업데이트 되었습니다.");
+                    loading.style.display = "none"
                 } else if (res.code == 400) {
                     alert("TG 여부가 업데이트에 실패했습니다.");
                     return false;
@@ -762,9 +799,43 @@ function get_auther_affiliation($author_idx)
         });
     })
 
+    $(".mail_status_save").click(function(){
+        const idx = new URLSearchParams(window.location.search).get("idx");
+        const checkedValue = $('input[name="mail_status"]:checked').val();
+        if(!checkedValue){
+            alert('발송할 초록 메일을 확인해주세요!')
+        }
+        loading.style.display = ""
+        $.ajax({
+            url: "https://imcvp.org/main/" + "ajax/client/ajax_submission2024.php",
+            type: "POST",
+            data: {
+                flag: "mail_status",
+                idx: idx,
+                mail_status : checkedValue
+            },
+            dataType: "JSON",
+            success: function(res) {
+                if (res.code == 200) {
+                    if(window.confirm(`${checkedValue}번 템플릿의 메일을 발송하시겠습니까?`)){
+                        postGmail(checkedValue)
+                    }else{
+                         loading.style.display = "none"
+                    }
+                } else if (res.code == 400) {
+                    alert("프로모션 코드 업데이트에 실패했습니다.");
+                    return false;
+                } else {
+                    alert("프로모션 코드 업데이트에 실패했습니다.");
+                    return false;
+                }
+            }
+        });
+       
+    })
 
-    	//[240419] sujoeng / 초록 채택 메일 추가
-    function postGmail(){
+    //[240419] sujoeng / 초록 채택 메일 추가
+    function postGmail(mailValue){
         const email = "<?php echo $member_info_data['email']; ?>";
         const nickname = "<?php echo $member_info_data['name']; ?>";
         const org = "<?php echo $member_info_data['affiliation']; ?>";
@@ -784,12 +855,14 @@ function get_auther_affiliation($author_idx)
                     email: email,
                     name: nickname,
                     title: titleWithoutTags,
-                    topic_text: topic
+                    topic_text: topic,
+                    mail_status : mailValue
                 },
                 dataType: "JSON",
                 success: function(res) {
                     if(res.code === 200){
                         alert("초록 채택 메일 발송 완료했습니다.")
+                        loading.style.display = "none"
                     }else{
                         alert("초록 채택 메일 발송 실패했습니다.")
                     }

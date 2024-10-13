@@ -13,7 +13,7 @@ $submission_idx = $_GET["idx"];
 
 // 등록 가능한 기간인지
 $sql_during =    "SELECT
-						IF(DATE(NOW()) BETWEEN '2022-08-18 17:00:00' AND '2024-10-07 18:00:00', 'Y', 'N') AS yn
+						IF(DATE(NOW()) BETWEEN '2022-08-18 17:00:00' AND '2024-10-15 18:00:00', 'Y', 'N') AS yn
 					FROM info_event";
 $during_yn = sql_fetch($sql_during)['yn'];
 
@@ -22,24 +22,26 @@ if ($during_yn !== "Y" && empty($submission_idx)) {
     // 행사 기간이 아닐 때
 ?>
 <section class="container submit_application">
-    <div class="sub_background_box">
+    <h1 class="page_title">Call for Abstract
+			<div class="sub_btn_box">
+				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
+				<a href="/main/abstract_submission.php" class="on">Online Submission</a>
+                <a href="/main/comingsoon.php">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
+
+				<!-- <a href="/main/abstract_submission_oral.php">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->
+			</div>
+		</h1>
+    <!-- <div class="sub_background_box">
         <div class="sub_inner">
             <div>
                 <h2>Online Submission</h2>
                 <div class="color-bar"></div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="inner">
-        <ul class="tab_pager location tab_pager_small">
-            <li><a href="./submission_guideline.php">
-                    <!--<?= $locale("abstract_menu1") ?>-->Abstract Submission<br>Guideline
-                </a></li>
-            <li class="on"><a href="./abstract_submission.php">
-                    <!--<?= $locale("abstract_menu2") ?>-->Online Submission
-                </a></li>
-            <!--<li><a href="./award.php"><!--<?= $locale("abstract_menu3") ?>Awards & Grants</a></li>-->
-        </ul>
         <section class="coming">
             <div class="container">
                 <div class="sub_banner">

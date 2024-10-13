@@ -196,11 +196,11 @@
 				<ul>
 					<li>
 						<a href="/main/registration_guidelines.php">
-							<h2>Early bird<br/>registration<br/>deadline</h2>
+							<!-- <h2>Early bird<br/>registration<br/>deadline</h2>
 							<div>
 								<p>October</p>
 								<p>7</p>
-							</div>
+							</div> -->
 						</a>
 					</li>
 					<li>
@@ -223,11 +223,11 @@
 					</li>
 					<li>
 						<a href="/main/registration_guidelines.php">
-							<h2>Pre-registration<br/>Deadline</h2>
+							<!-- <h2>Pre-registration<br/>Deadline</h2>
 							<div>
 								<p>November</p>
 								<p>3</p>
-							</div>
+							</div> -->
 						</a>
 					</li>
 				</ul>
@@ -291,14 +291,13 @@
 
 </script> -->
 
-<div class="popup deadline_pop extension">
+<!-- <div class="popup deadline_pop extension">
 	<div class="pop_bg"></div>
 	<div class="pop_contents">
 		<img src="./img/deadline_logo.png" alt="">
 		<div class="inner">
 			<div>
 				<h1>Exciting news! <br/>We’re thrilled to announce that we’ve extended the early bird registration rates until <p>Monday 7 October 2024.</p> Don’t miss out on this fantastic offer— it’s available for a limited time only!</h1>
-				<!-- <p>August 26(Fri)</p> -->
 				<button type="button" class="main_pop_btn" onClick="javascript:window.open('/main/registration_guidelines.php')">Register Now<img src="./img/travel_pointer.png" alt=""></button>			
 			</div>
 		</div>
@@ -310,7 +309,7 @@
 			<a href="javascript:;" class="pop_close">Close <img src="./img/main_pop_close.png" alt=""></a>
 		</div>	
 	</div>
-</div>
+</div> -->
 
 <script>
 // 오늘 하루만 보기

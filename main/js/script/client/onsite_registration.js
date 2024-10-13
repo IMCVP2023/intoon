@@ -2,15 +2,20 @@ $(document).ready(function(){
     //이메일 중복 검증
     $("input[name=email]").on("change", function(){
         var email = $(this).val();
+        checkEmail(email);
+    });
+
+
+    function checkEmail(emailValue){
         var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
-        if(email.match(regExp) != null) {
+        if(emailValue.match(regExp) != null) {
             $.ajax({
                 url : PATH+"ajax/client/ajax_member.php",
                 type : "POST",
                 data :  {
                     flag : "id_check",
-                    email : email
+                    email : emailValue
                 },
                 dataType : "JSON",
                 success : function(res){
@@ -30,7 +35,7 @@ $(document).ready(function(){
             $(this).val("").focus();
             return;
         }
-    });
+    }
 
     //비밀번호 띄어쓰기 막기
     $(".passwords").on("keyup", function(){
@@ -247,6 +252,7 @@ function select_promotion_code(promotion_code) {
 function submit(){
     if(requiredCheck()!=false){
         if(confirm("Would you like to proceed with on-site registration?")){
+            checkEmail($("input[name=email]").val())
             onsite_submit();
         } else {
             return;
@@ -367,6 +373,7 @@ function onsite_submit(){
 function promotion_submit(){
     if(requiredCheck()!=false){
         if(confirm("Would you like to proceed with on-site registration?")){
+            checkEmail($("input[name=email]").val())
             promotion_onsite_submit();
         } else {
             return;

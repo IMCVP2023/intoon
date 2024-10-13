@@ -303,7 +303,7 @@ section.container.window_open {margin-top: 50px; padding-top:0;}
 /*.sub_page .container{padding:0 20px;}*/
 /*.sub_page .section{padding-bottom:180px;}*/
 .sub_banner {text-align:center;position:relative;margin:50px 0;}
-.sub_banner h5{width:100%;font-family: 'Sriracha', cursive;font-size:100px;font-weight:100;color:#F2F2F2;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:-1;}
+.sub_banner h5{width:100%;font-family: 'Sriracha', cursive;font-size:65px;font-weight:100;color:#F2F2F2;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);z-index:-1;}
 .sub_banner h1{display:inline-block;font-size:36px;font-weight:bold;margin:44px 0;position:relative;z-index:1;color:#000;}
 .sub_banner h1:after{content:'';display:block;width:100%;height:17px;background:rgba(169,239,0,0.6);position:absolute;left:0;bottom:0;z-index:-1;}
 section.sub_page{padding-top:270px;}
