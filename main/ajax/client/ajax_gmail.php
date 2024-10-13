@@ -1211,20 +1211,50 @@ if($language == "ko") {
 		
 		$promotion_code = isset($submit_data["etc3"]) ? $submit_data["etc3"] : "-";
 		$tg = isset($submit_data["etc4"]) ? $submit_data["etc4"] : "-";
+		$mail_status = isset($submit_data["mail_status"]) ? $submit_data["mail_status"] : "-";
 
 		$tg_text = '';
 
-		if($tg == 'Y'){
-			$tg_text = 'Approved';
-		}else if($tg == 'N'){
-			$tg_text = 'Denied';
-		}else{
-			$tg_text = '';
-		}
+		// if($tg == 'Y'){
+		// 	$tg_text = 'Approved';
+		// }else if($tg == 'N'){
+		// 	$tg_text = 'rejected';
+		// }else{
+		// 	$tg_text = '';
+		// }
 		
 		$category = isset($data["topic"]) ? $data["topic"] : "-";
 		$nickname = isset($data["nickname"]) ? $data["nickname"] : "-";
 		$org = isset($data["org"]) ? $data["org"] : "-";
+
+		if($mail_status == "1"){
+			$poster_type_text = 'Poster Oral';
+			$tg_text = "[Approved] 
+			<br/>
+			<br/>
+			*Please read the following*
+			<br/>
+			<br/>
+			1. Poster Presentation is required to receive Travel Grants.<br/>
+			2. Please be advised that, due to the congress policy, the prize will only be handed after your presentation is done. If you come to the secretariat office before your presentation, you will not be able to receive the prize.<br/>
+			3. We will not give you the Travel Grants by bank transfer after the congress period for any reasons. Please make sure to receive the Travel Grants before you leave the venue.";
+		}
+		else if($mail_status == "2"){
+			$poster_type_text = 'Poster Exhibition';
+			$tg_text = "[Approved] 
+			<br/>
+			<br/>
+			*Please read the following*
+			<br/>
+			<br/>
+			1. Complete registration and attend the congress on-site with your poster displayed.<br/>
+			2. We will not give you the Travel Grants by bank transfer after the congress period for any reasons. Please make sure to receive the Travel Grants before you leave the venue.
+";
+		}
+		else if($mail_status == "3"){
+			$poster_type_text = 'Poster Exhibition';
+			$tg_text = "[Rejected]";
+		}
 
 		$rawMessageString .= "
 			<table width='750' style='border:1px solid #000; padding: 0;'>
@@ -1257,6 +1287,10 @@ if($language == "ko") {
 													<td style='width: 400px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;border-top: 1px solid #bfbfbf; color: #000000;background-color:#ffffff;word-break:keep-all;'>{$submission_no}</td>
 												</tr>
 												<tr>
+													<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Poster type</th>	
+													<td style='width: 400px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;border-top: 1px solid #bfbfbf; color: #000000;background-color:#ffffff;word-break:keep-all;'>{$poster_type_text}</td>
+												</tr>
+												<tr>
 													<th colspan='2' scope='row' style='width: 190px;padding: 10px;font-weight: bold;text-align: left;vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #fff;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Category</th>
 													<td style='width: 400px;padding: 10px;vertical-align: middle; border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;color: #000000;word-break:keep-all; background-color:#ffffff;'>{$category}</td>
 												</tr>
@@ -1270,7 +1304,7 @@ if($language == "ko") {
 													<td style='width: 400px;padding: 10px;vertical-align: middle;border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse;color: #000000;word-break:keep-all;background-color:#ffffff;'>{$nickname}</td>
 												</tr>				
 												<tr>	
-													<th scope='row' style='width: 85px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Insitution</th>
+													<th scope='row' style='width: 85px;padding: 10px;font-weight: bold;text-align:left; vertical-align: middle;border-bottom: 1px solid #bfbfbf;border-top: 1px solid #bfbfbf ;border-left: 1px solid #fff;background: #ffffff;height: 35px;border-collapse: collapse; color:#000000; border-right:1px solid #bfbfbf;'>Institution</th>
 													<td style='width: 400px;padding: 10px;vertical-align: middle;border-bottom: 1px solid #bfbfbf;padding-left: 10px;height: 35px;border-collapse: collapse; color:#000000;word-break:keep-all;background-color:#ffffff;'>{$org}</td>
 												</tr>
 											</table>
@@ -1292,19 +1326,67 @@ if($language == "ko") {
 					</tr>
 					<tr>
 						<td width='74' style='width:74px;'></td>
-						<td style='padding: 0px 40px; width: 775px;'>
-							<div style='background-color: #fff6f0;padding: 12px 20px;border-radius: 12px;line-height: 1.5;letter-spacing: -0.5px; width: 600px;'>
-								<p style='margin: 0;font-size: 16px;font-weight: 900;'>Notification</p>
-								<p style='margin: 0; font-size: 14px; font-weight: 700; color: #b03130; width: 600px;'>For the 'Poster Oral' type presenter will be selected and announced personally with the registered email by Scientific Program Committee of IMCVP 2024</p>
-							</div>
+						<td style='padding: 20px 40px;'>
+						<p>Should you need any further assistance, please feel to contact IMCVP 2024 Secretariat at <a href='mailto:sci@imcvp.org' style='font-weight: bold;color: #284fa0;text-decoration: none;'>sci@imcvp.org</a></p>
+						<p>Best regards.</p>
 						</td>
 						<td width='74' style='width:74px;'></td>
 					</tr>
 					<tr>
+						<td colspan='3' style='padding-top:50px;'>
+							<img src='https://imcvp.org/main/img/2024_mail_footer-2.png' width='750' style='width:100%; max-width:100%;'>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+";
+	}
+	//sujeong / reject / mail status 4번 메일
+	else if($mail_type == "abstract_etc4") {
+		$rawMessageString .= "
+			<table width='750' style='border:1px solid #000; padding: 0;'>
+				<tbody>
+					<tr>
+						<td colspan='3'>
+							<img src='https://imcvp.org/main/img/2024_mail_header-2.png' width='750' style='width:100%; max-width:100%;'>
+						</td>
+					</tr>
+					<tr>
+						<td colspan='3'>
+							<!-- <div style='font-weight:bold; text-align:center;font-size: 24px; color: #20509f;padding: 20px 0;'>Notification of Abstract Acceptance</div> -->
+						</td>
+					</tr>
+					<tr>
+						<td width='74' style='width:74px;'></td>
+						<td>
+							<div style=' padding:17px 34px 0px 34px; box-sizing:border-box;width: 852px;'>
+									<p style='font-size:16px; font-weight:bold; color:#000; margin:0;font-style: italic;'>Dear {$fname}</p>
+									<div style='background-color: #bfbfbf;width: 100%;height: 1px;margin-top: 12px;'></div>
+									<p style='font-size:14px;color:#170F00;margin-top:12px;width: 784px;'>
+										On behalf of the Scientific Organizing Committee of IMCVP 2024, we would like to express our gratitude for your valuable contribution to this conference. 
+									</p>
+
+									<p style='font-size:14px;color:#170F00;margin-top:12px;width: 784px;'>
+										After a thorough evaluation by Scientific Organizing Committee of IMCVP 2024, we would like to inform you that your abstract has been rejected. 
+									</p>
+									<p style='font-size:14px;color:#170F00;margin-top:12px;width: 784px;'>
+										We deeply apologize that we couldn’t provide the opportunity to engage in enlightening discussions and explore new horizons in your field of interest. 
+									</p>
+									<p style='font-size:14px;color:#170F00;margin-top:12px;width: 784px;'>
+										Our Committee will hold congress every year with different theme, with many experts from the variety of fields. 
+									</p>
+									<p style='font-size:14px;color:#170F00;margin-top:12px;width: 784px;'>
+										Thank you for your generous understanding in advance and we look forward to your continuous interests toward our Committee.
+									</p>
+									</div>
+						</td>
+						<td width='74' style='width:74px;'></td>     
+					<tr>
 						<td width='74' style='width:74px;'></td>
 						<td style='padding: 20px 40px;'>
-						<p>Should you need any further assistance, please feel to contact IMCVP 2024 Secretariat at <a href='mailto:sci@imcvp.org' style='font-weight: bold;color: #284fa0;text-decoration: none;'>sci@imcvp.org</a></p>
-						<p>Best regards.</p>
+						<p>Thank you.</p>
+						<p>Best regards,</p>
+						<p>Scientific Organizing Committee of IMCVP2024 </p>
 						</td>
 						<td width='74' style='width:74px;'></td>
 					</tr>
@@ -1810,7 +1892,7 @@ else if($_POST["flag"] == "abstract_etc2"){
 
 	// submission_info
 	$submit_data_query = "SELECT 
-							submission_code, title, topic, etc3, etc4
+							submission_code, title, topic, etc3, etc4, mail_status
 						FROM request_submission";
 	$submit_data = sql_fetch($submit_data_query." WHERE idx = ".$idx) ?? [];
 
@@ -1818,12 +1900,20 @@ else if($_POST["flag"] == "abstract_etc2"){
 		'submit_data' => $submit_data,
 		"topic" => $topic,
 		"nickname" => $name,
-		"org" => $org
+		"org" => $org,
+		"mail_status" => $mail_status
 	];
 
-	$message =createMessage("en", "abstract_etc2", $name , $email, "[IMCVP 2024] Notification of Abstract Acceptance", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
-	createDraft($service, "secretariat@imcvp.org", $message);
-	sendMessage($service, "secretariat@imcvp.org", $message);
+	if($mail_status != "4"){
+		$message =createMessage("en", "abstract_etc2", $name , $email, "[IMCVP 2024] Notification of Abstract Acceptance", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
+		createDraft($service, "secretariat@imcvp.org", $message);
+		sendMessage($service, "secretariat@imcvp.org", $message);
+	}else if ($mail_status == "4"){
+		$message =createMessage("en", "abstract_etc4", $name , $email, "[IMCVP 2024] Notification of Abstract Rejection", date("Y-m-d H:i:s"), "", "", 1, "", "", "", "", "", "", "", $data);
+		createDraft($service, "secretariat@imcvp.org", $message);
+		sendMessage($service, "secretariat@imcvp.org", $message);
+	}
+
 
 	if($message) {
 		$res = [

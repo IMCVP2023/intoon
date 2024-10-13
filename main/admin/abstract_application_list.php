@@ -42,7 +42,7 @@ if ($category != "") {
 }
 
 $abstract_list_query = "SELECT
-								rs.idx, rs.etc1, rs.etc2,rs.etc1_date, rr.status AS registration_status,
+								rs.idx, rs.etc1, rs.etc2,rs.etc1_date, rs.etc3, rs.etc4, rr.status AS registration_status,
 								member_idx, rs.register_date,
 								DATE_FORMAT(rs.modify_date, '%y-%m-%d') AS submission_date,
 								IFNULL(rs.submission_code,'-') AS submission_code,
@@ -222,7 +222,7 @@ $html = '<table id="datatable" class="list_table">';
 $html .= '<thead>';
 $html .= '<thead>';
 $html .= '<tr class="tr_center">';
-$html .= '<th style="background-color:#D0CECE; border-style: solid; border-width:thin;" colspan="5">Submission Information</th>';
+$html .= '<th style="background-color:#D0CECE; border-style: solid; border-width:thin;" colspan="7">Submission Information</th>';
 $html .= '<th style="background-color:#D0CECE; border-style: solid; border-width:thin;" colspan="4">Abstract Information</th>';
 $html .= '<th style="background-color:#D9E1F2; border-style: solid; border-width:thin;" colspan="8">Abstract</th>';
 
@@ -247,6 +247,8 @@ $html .= '<th style="border-style: solid; border-width:thin;">사전 등록 상�
 $html .= '<th style="border-style: solid; border-width:thin;">초록 심사 유무</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">초록 심사 일자</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">초록 채택 유무</th>';
+$html .= '<th style="border-style: solid; border-width:thin;">초록 TG 유무</th>';
+$html .= '<th style="border-style: solid; border-width:thin;">초록 발급 프로모션코드</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">Name</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">Oral or Poster / Poster</th>';
 $html .= '<th style="border-style: solid; border-width:thin;">Topic Category</th>';
@@ -277,7 +279,7 @@ for ($i = 0; $i < $max_au; $i++) {
 }
 
  $html .= '<th style="background-color:#CCCCFF; border-style: solid; border-width:thin;">Q1. Have you submitted this abstract or ab abstract of a similar topic at another conference? </th>';
-$html .= '<th style="background-color:#CCCCFF; border-style: solid; border-width:thin;">Q2. TThis research is supported by the grant of Korean Society of Cardiovascular Disease Prevention</th>';
+$html .= '<th style="background-color:#CCCCFF; border-style: solid; border-width:thin;">Q2. This research is supported by the grant of Korean Society of Cardiovascular Disease Prevention</th>';
 $html .= '<th style="background-color:#CC66E1; border-style: solid; border-width:thin;">Travel Grants</th>';
 // $html .= '<th style="background-color:#CC66E1; border-style: solid; border-width:thin;">APSAVD Award</th>';
 // $html .= '<th style="background-color:#CC66E1; border-style: solid; border-width:thin;">IAS Grant</th>';
@@ -380,6 +382,8 @@ foreach ($abstract_list as $al) {
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["etc1"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["etc1_date"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["etc2"] . '</td>';
+	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["etc4"] . '</td>';
+	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["etc3"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["name"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $al["pre_type"] . '</td>';
 	$html .= '<td style="border-style: solid; border-width:thin;">' . $topic . '</td>';
@@ -540,7 +544,6 @@ $count = count($abstract_list);
 										<option value="14">14. Others</option>
 									</select>
 								</td>
-							
 						</tr>
 					</tbody>
 				</table>
@@ -612,14 +615,6 @@ $count = count($abstract_list);
 								<td class="ellipsis"><?= $list["name"] ?></td>
 								<td><a class="ellipsis" href="./abstract_application_detail3.php?idx=<?= $list["idx"] ?>&no=<?= $list['member_idx'] ?>"><?= strip_tags(htmlspecialchars_decode($list["title"])) ?></a>
 								</td>
-								<!-- <?php if ($ext == "pdf") { ?> -->
-								<!-- 	<td><a href="./pdf_viewer.php?path=<?= $list["path"] ?>" target="_blank"><?= $list["abstract_file_name"] ?></a></td> -->
-								<!-- <?php } else { ?> -->
-								<!-- 	<td><a href="<?= $list["path"] ?>" download><?= $list["abstract_file_name"] ?></a></td> -->
-								<!-- <?php } ?> -->
-								<!-- <td><?= $list["category"] ?></td> -->
-								<!-- <td><?= $list["preferred_presentation_type"] == 1 ? "No" : "Yes" ?></td> -->
-								<!-- <td>13 / 32</td> -->
 								<td class="ellipsis"><?= $list["register_date"] ?></td>
 							</tr>
 					<?php
@@ -628,7 +623,6 @@ $count = count($abstract_list);
 					?>
 				</tbody>
 			</table>
-
 		</div>
 	</div>
 </section>

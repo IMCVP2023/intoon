@@ -50,12 +50,12 @@ array
 
 	 array(
 		'idx'=>3, 
-		'first_name'=>'Byeong Wan', 
+		'first_name'=>'Byeong-Wan', 
 		'last_name'=>'Lee', 
 		'affiliation'=>'Yonsei University', 
 		'nation'=>'Korea', 
 		'session_type'=>'Symposium 1', 
-		'title'=>'Current Guidelines for Diabetes', 
+		'title'=>'Advancing diabetes management: insights from the KDA clinical practice guidelines', 
 		'image'=>'./img/2024_invited_speaker/symposium1-3.jpg'
 ), 
 
@@ -406,7 +406,7 @@ array
 		"affiliation'=>'Korea University", 
 		'nation'=>'Korea', 
 		'session_type'=>'Symposium 1', 
-		'title'=>'	Current Guidelines for Dyslipidemia', 
+		'title'=>'Current Guidelines for Dyslipidemia - overview and unanswered questions', 
 		'image'=>'./img/2024_invited_speaker/TBD.png'
 ), 
 

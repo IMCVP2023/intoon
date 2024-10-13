@@ -135,13 +135,17 @@ $floor = get_data($sql_floor);
 					<th>Abstract Submission Deadline 2<sup class="font_small">nd</sup></th>
 					<td>Sunday, <span class="bold point4_txt">October 6</span>, 2024</td>
 				</tr> -->
+
+				<!-- !!! 초록 접수일 연장(1007) !!! -->
 				<tr>
 					<th>Abstract Submission Deadline</th>
 					<td>
-						Monday, <span class="bold point4_txt">September 30</span>, 2024
+						Monday, <span class="bold point4_txt">October 7</span>, 2024
 						<br/>*Acceptant notification within 10 days after abstract submission
 					</td>
 				</tr>
+
+
 				<!-- <tr>
 					<th>Abstract Submission Deadline</th>
 					<td>Monday, <span class="bold point4_txt">September 30</span>, 2024</td>
