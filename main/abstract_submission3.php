@@ -340,11 +340,14 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                                 <div>
                                     <?= $au_presenting['first_name'] . " " . $au_presenting['last_name'] ?><br />
                                     <!-- <?= $au_presenting['affiliation_kor'] . ", " . $au_presenting['nation_name_en'] ?><br/> -->
-                                    <!-- <?= get_auther_affiliation($au_presenting['idx']) ?><br/>-->
-                                    <?php
+
+									<!-- [241007] sujeong / 저자에 맞는 소속 1개만 보이도록 수정 / 주석 코드 -> 소속 모두 보이는 코드!! -->
+                                    <?= get_auther_affiliation($au_presenting['idx']) ?><br/>
+                                    <!-- <?php
 										foreach ($af_list as $af) {
 											foreach ($department_list as $dp) {
 												$department_details = "";
+												
 												if ($dp['idx'] == $af['department']) {
 													if (!empty($af['department_detail'])) {
 														$department_details = "(" . $af['department_detail'] . ")";
@@ -361,7 +364,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                                     <?php
 											}
 										}
-										?>
+										?> -->
                                     <br /><a href="<?= $au_presenting['email'] ?>"><?= $au_presenting['email'] ?></a>
                                 </div>
                             </div>
@@ -370,8 +373,10 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                                 <div>
                                     <?= $au_corresponding['first_name'] . " " . $au_corresponding['last_name'] ?><br />
                                     <!-- <?= $au_corresponding['affiliation_kor'] . ", " . $au_corresponding['nation_name_en'] ?><br/> -->
-                                    <!-- <?= get_auther_affiliation($au_corresponding['idx']) ?><br/>-->
-                                    <?php
+
+									<!-- [241007] sujeong / 저자에 맞는 소속 1개만 보이도록 수정 / 주석 코드 -> 소속 모두 보이는 코드!! -->
+                                    <?= get_auther_affiliation($au_corresponding['idx']) ?><br/>
+                                    <!-- <?php
 										foreach ($af_list as $af) {
 											foreach ($department_list as $dp) {
 												$department_details = "";
@@ -390,19 +395,22 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                                     <?php
 											}
 										}
-										?>
+										?> -->
                                     <br /><a
                                         href="<?= $au_corresponding['email'] ?>"><?= $au_corresponding['email'] ?></a>
                                 </div>
                             </div>
                             <?php
 								foreach ($au_co_cuthor as $k => $acc) {
+									//print_r($acc['affiliation_selected']);
 								?>
                             <div class="last_box clearfix">
                                 <span>Co-Author<?= ($k + 1); ?> :</span><br />
                                 <div>
                                     <?= $acc['first_name'] . " " . $acc['last_name'] ?></br>
-                                    <?php
+									<!-- [241007] sujeong / 저자에 맞는 소속 1개만 보이도록 수정 / 주석 코드 -> 소속 모두 보이는 코드!! -->
+									<?= get_auther_affiliation($acc['idx']) ?><br/>
+                                    <!-- <?php
 											foreach ($af_list as $af) {
 												foreach ($department_list as $dp) {
 													$department_details = "";
@@ -421,7 +429,7 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
                                     <?php
 												}
 											}
-											?>
+											?> -->
                                     <br /><a href="<?= $acc['email'] ?>"><?= $acc['email'] ?></a>
                                 </div>
                             </div>
@@ -441,11 +449,14 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
 			</div>
                 <div class="pager_btn_wrap">
                     <!-- <button type="button" class="btn submit is_submit" onclick="javascript:window.location.href='./abstract_submission2.php';"><?= $locale("next_btn") ?></button> -->
-                    <button type="button" class="btn"
-                        onclick="javascript:location.href='./abstract_submission2.php?idx=<?= $submission_idx ?>';">Modify</button>
+					<!-- <button type="button" class="btn"
+					onclick="javascript:location.href='./abstract_submission2.php?idx=<?= $submission_idx ?>';">Modify</button> -->
                     <?php
 						if ($detail['status'] == 0) {
-						?>
+					//sujeong / 수정버튼 status 0일 때만 보이도록 수정
+					?>
+					<button type="button" class="btn"
+						 onclick="javascript:location.href='./abstract_submission2.php?idx=<?= $submission_idx ?>';">Modify</button>
                     <button type="button" class="btn orange_btn submit_btn">Submit</button>
                     <?php
 						}

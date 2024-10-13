@@ -543,6 +543,26 @@ else if ($flag == 'all_check') {
     }
 }
 
+//[240909] sujeong / 초록 메일 status
+else if($flag == "mail_status"){
+	$submission_idx = $_POST['idx'];
+	$mail_status =  $_POST['mail_status'];
+
+	$sql_update = "
+			UPDATE request_submission
+			SET
+				mail_status = '" . $mail_status . "'
+			WHERE idx = '" . $submission_idx . "'
+		";
+	$sql_update_result = sql_query($sql_update);
+	
+	if (!$sql_update_result) {
+		return_value(500, 'submission update fail', array("sql" => $sql_update));
+	}
+
+	return_value(200, 'submission update success');
+}
+
 
 function affiliationJson($affiliation)
 {

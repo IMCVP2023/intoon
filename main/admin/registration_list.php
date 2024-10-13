@@ -170,6 +170,7 @@
 					rr.email,
 					rr.phone,
 					CONCAT(rr.first_name,' ',rr.last_name) AS `name`,
+					rr.first_name, rr.last_name,
 					DATE_FORMAT(rr.register_date, '%y-%m-%d') AS register_date,
 					rr.etc2,
 					rr.member_type,
@@ -249,16 +250,20 @@
 					m.ksola_member_status AS ksola_member_status,
 					GROUP_CONCAT(
 						CASE rs.topic
-							WHEN 1 THEN 'Ischemic heart disease/ coronary artery disease'
-							WHEN 2 THEN 'Anti-platelets and anticoagulation'
+							WHEN 1 THEN 'Ischemic Heart Disease/Coronary Artery Disease'
+							WHEN 2 THEN 'Heart Failure with Reduced Ejection Fraction and Preserved Ejection Fraction'
 							WHEN 3 THEN 'Heart failure with reduced ejection fraction and preserved ejection fraction'
 							WHEN 4 THEN 'Cardiomyopathies'
-							WHEN 5 THEN 'Cardio-renal syndromes'
-							WHEN 6 THEN 'Preventive Cardiology'
-							WHEN 7 THEN 'Cardiac arrhythmias'
-							WHEN 8 THEN 'Peripheral arterial disease'
-							WHEN 9 THEN 'Pulmonary hypertension'
-							WHEN 10 THEN 'Geriatric pharmacology'
+							WHEN 5 THEN 'Preventive Cardiology'
+							WHEN 6 THEN 'Cardiac Arrhythmias'
+							WHEN 7 THEN 'Peripheral Arterial Disease'
+							WHEN 8 THEN 'Basic Science and Genetics'
+							WHEN 9 THEN 'COVID-19 Related Cardio-Pharmacotherapy'
+							WHEN 10 THEN 'Diabetes and Obesity'
+							WHEN 11 THEN 'Hyperlipidemia and Cardiovascular Disease'
+							WHEN 12 THEN 'Epidemiology'
+							WHEN 13 THEN 'Precision Medicine/Digital Healthcare'
+							WHEN 14 THEN 'Others'
 							ELSE '-'
 						END
 						SEPARATOR '* '
@@ -332,7 +337,7 @@
 	$html .= '<tr class="tr_center">';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="3">Registration</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan='.($star_count*4).'>Abstract Inforatmion</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="15">Participants Inforatmion</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="16">Participants Inforatmion</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="4">평점신청(Korean Only)</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="6">Payment Information</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;" colspan="7">Others</th>';
@@ -350,7 +355,8 @@
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">국내/국외</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Country</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">KSCP 회원 여부</th>';
-	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Name</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">First Name</th>';
+	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Last Name</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">성함</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">Affiliation(Institution)</th>';
 	$html .= '<th style="background-color:#C5E0B4; border-style: solid; border-width:thin;">소속</th>';
@@ -527,7 +533,8 @@
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$nation_type.'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["nation_en"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["ksola_member_status"].'</td>';
-		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["name"].'</td>';
+		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["first_name"].'</td>';
+		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["last_name"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["kor_name"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["affiliation"].'</td>';
 		$html .= '<td style="border-style: solid; border-width:thin;">'.$rl["affiliation_kor"].'</td>';
@@ -634,7 +641,7 @@
 							<th>Affiliation(Institution)</th>
 							<th>Phone Number</th>
 							<th>Type of Participation</th>
-							<th>Type of Occupation</th>
+							<!-- <th>Type of Occupation</th> -->
 							<th>Category</th>
 							<th>평점신청여부</th>
 							<th>Special Request for Food</th>
@@ -680,7 +687,7 @@
 									<td><?=$list["affiliation"]?></td>
 									<td><?=$list["phone"]?></td>
                                     <td><?=isset($list["attendance_type_text"]) ? $list["attendance_type_text"] : "-"?></td>
-									<td><?=$list["occupation_type"]?></td>
+									<!-- <td><?=$list["occupation_type"]?></td> -->
 									<td><?=$list["member_type"]?></td>
 									<td><?=isset($list["is_score_text"]) ? $list["is_score_text"] : "-"?></td>
 									<td><?=$special_request_food?></td>

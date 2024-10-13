@@ -66,7 +66,7 @@ $info = sql_fetch($sql_info);
                     </div>
                     <div class="abstract_key_date_box">
                         <img src="/main/img/icons/key_date-1-1.png" alt="key_dates-1"/>
-                        <img src="/main/img/icons/key_date-2-4.png" alt="key_dates-2"/>
+                        <img src="/main/img/icons/key_date-2-5.png" alt="key_dates-2"/>
                         <img src="/main/img/icons/key_date-3-1.png" alt="key_dates-3"/>
                     </div>
                     <!-- <div class="table_wrap detail_table_common x_scroll">

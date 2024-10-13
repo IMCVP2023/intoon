@@ -78,6 +78,7 @@
 
 	
 ?>
+
 	<section class="detail">
 		<div class="container">
 			<div class="title">

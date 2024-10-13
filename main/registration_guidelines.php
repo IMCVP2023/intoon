@@ -84,7 +84,7 @@ $price = get_data($sql_price);
                         <td class="f_bold">Monday, <span class="f_bold point4_txt">June 3</span>, 2024</td>
                     </tr>
                     <tr>
-                        <th>Early-bird Registration<br class="br_mb_only"> Deadline</th>
+                        <th class="">Early-bird Registration<br class="br_mb_only"> Deadline</th>
                         <td class="f_bold">Monday, <span class="f_bold point4_txt">October 7</span>, 2024</td>
                     </tr>
                     <!-- <tr>
@@ -169,10 +169,10 @@ $price = get_data($sql_price);
 							<tbody>
 								<tr class="text_center">
 									<td>MD, Professor</td>
-									<td class="point4_txt bold">USD 100</td>
-									<td class="point4_txt bold">USD 150</td>
+									<td class="point4_txt ">USD 100</td>
 									<td class="point4_txt ">USD 150</td>
-									<td class="point4_txt ">USD 200</td>
+									<td class="point4_txt bold">USD 150</td>
+									<td class="point4_txt bold">USD 200</td>
 									<td>USD 200</td>
 									<td>USD 300</td>
 								</tr>
@@ -184,10 +184,10 @@ $price = get_data($sql_price);
                                          Nutritionists, Researchers<br> -->
 										<!-- Corporate member, Others<br> -->
 									</td>
-									<td class="point4_txt bold">USD 75</td>
-									<td class="point4_txt bold">USD 100</td>
+									<td class="point4_txt ">USD 75</td>
 									<td class="point4_txt ">USD 100</td>
-									<td class="point4_txt ">USD 125</td>
+									<td class="point4_txt bold">USD 100</td>
+									<td class="point4_txt bold">USD 125</td>
 									<td>USD 125</td>
 									<td>USD 150</td>
 								</tr>
@@ -196,10 +196,10 @@ $price = get_data($sql_price);
                                         Trainee,<br>
 										Students
 									</td>
-									<td class="point4_txt bold">USD 50</td>
-									<td class="point4_txt bold">USD 75</td>
+									<td class="point4_txt ">USD 50</td>
 									<td class="point4_txt ">USD 75</td>
-									<td class="point4_txt ">USD 80</td>
+									<td class="point4_txt bold">USD 75</td>
+									<td class="point4_txt bold">USD 80</td>
 									<td>USD 80</td>
 									<td>USD 100</td>
 								</tr>
@@ -234,10 +234,10 @@ $price = get_data($sql_price);
 							<tbody>
 								<tr class="text_center">
 									<td>MD (<span class="kor bold">봉직의</span>),Professor</td>
-									<td class="point4_txt bold">KRW 100,000</td>
-									<td class="point4_txt bold">KRW 150,000</td>
+									<td class="point4_txt ">KRW 100,000</td>
 									<td class="point4_txt ">KRW 150,000</td>
-									<td class="point4_txt ">KRW 200,000</td>
+									<td class="point4_txt bold">KRW 150,000</td>
+									<td class="point4_txt bold">KRW 200,000</td>
 									<td>KRW 200,000</td>
 									<td>KRW 300,000</td>
 								</tr>
@@ -249,10 +249,10 @@ $price = get_data($sql_price);
                                          Nutritionists,Researchers<br> -->
 										<!-- Corporate member, Others<br> -->
 									</td>
-									<td class="point4_txt bold">KRW 75,000</td>
-									<td class="point4_txt bold">KRW 100,000</td>
+									<td class="point4_txt ">KRW 75,000</td>
 									<td class="point4_txt ">KRW 100,000</td>
-									<td class="point4_txt ">KRW 125,000</td>
+									<td class="point4_txt bold">KRW 100,000</td>
+									<td class="point4_txt bold">KRW 125,000</td>
 									<td>KRW 125,000</td>
 									<td>KRW 150,000</td>
 								</tr>
@@ -262,10 +262,10 @@ $price = get_data($sql_price);
                                     <!-- Trainee (<span class="kor bold">전임의, 전공의</span>),<br>
                                     Students -->
 									</td>
-                                    <td class="point4_txt bold">KRW 50,000</td>
-									<td class="point4_txt bold">KRW 75,000</td>
+                                    <td class="point4_txt ">KRW 50,000</td>
 									<td class="point4_txt ">KRW 75,000</td>
-									<td class="point4_txt ">KRW 80,000</td>
+									<td class="point4_txt bold">KRW 75,000</td>
+									<td class="point4_txt bold">KRW 80,000</td>
 									<td>KRW 80,000</td>
 									<td>KRW 100,000</td>
 								</tr>
