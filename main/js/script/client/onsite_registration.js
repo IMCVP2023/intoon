@@ -5,7 +5,7 @@ $(document).ready(function(){
         checkEmail(email);
     });
 
-
+//sujeong / email 중복체크
     function checkEmail(emailValue){
         var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
@@ -20,20 +20,21 @@ $(document).ready(function(){
                 dataType : "JSON",
                 success : function(res){
                     if(res.code == 200) {
+                        return true;
                     } else if(res.code == 400) {
                         alert(locale(language.value)("used_email_msg"));
                         $("input[name=email]").val("").focus();
-                        return;
+                        return false;
                     } else {
                         alert(locale(language.value)("reject_msg"))
-                        return;
+                        return false;
                     }
                 }
             });
         } else {
             alert(locale(language.value)("format_email"));
             $(this).val("").focus();
-            return;
+            return false;
         }
     }
 
@@ -252,8 +253,9 @@ function select_promotion_code(promotion_code) {
 function submit(){
     if(requiredCheck()!=false){
         if(confirm("Would you like to proceed with on-site registration?")){
-            checkEmail($("input[name=email]").val())
-            onsite_submit();
+            if(checkEmail($("input[name=email]").val())){
+                onsite_submit();
+            }
         } else {
             return;
         }
@@ -373,8 +375,9 @@ function onsite_submit(){
 function promotion_submit(){
     if(requiredCheck()!=false){
         if(confirm("Would you like to proceed with on-site registration?")){
-            checkEmail($("input[name=email]").val())
-            promotion_onsite_submit();
+            if(checkEmail($("input[name=email]").val())){
+                promotion_onsite_submit();
+            }
         } else {
             return;
         }
@@ -502,7 +505,7 @@ function promotion_onsite_submit(){
                     window.location.href = `/main/registration2.php?idx=${res.reg_idx}&member=${res.member_idx}`;
                 }
             } else {
-                alert("onsite registration error.");
+                alert("registration error.");
                 return;
             }
         }

@@ -168,15 +168,15 @@
 									<tr>
 										<th>09:20 - 09:40</th>
 										<td>
-											<p class="s_bold">Current Guidelines for Dyslipidemia</p>
+											<p class="s_bold">Current Guidelines for Dyslipidemia - overview and unanswered questions</p>
 											<p>Sin Gon Kim (Korea University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:40 - 10:00</th>
 										<td>
-											<p class="s_bold">Current Guidelines for Diabetes </p>
-											<p>Byung-Wan Lee (Yonsei University, Korea)</p>
+											<p class="s_bold">Advancing diabetes management: insights from the KDA clinical practice guidelines</p>
+											<p>Byeong-Wan Lee (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -186,7 +186,7 @@
 												Current Guidelines for Heart Failure 
 											</p>
 											<p>
-											Seong Mi Park (Korea University, Korea)
+											 	Seong-Mi Park (Korea University, Korea)
 											</p>
 										</td>
 									</tr>
@@ -195,9 +195,7 @@
 										<td>
 											<p class="s_bold">Panel Discussion</p>
 											<p>Jong-Chan Youn (The Catholic University of Korea, Korea), Minjae Yoon (Seoul National University, Korea)</p>
-											<p>
-												Jun Hwa Hong (Eulji University, Korea), 
-												Suk Jeon (Kyung Hee University, Korea)</p>
+											<p>Jun Hwa Hong (Eulji University, Korea), Suk Jeon (Kyung Hee University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -808,7 +806,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>10:20 - 10:40</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											 <p>Yoo Jin Han (Keimyung University, Korea), TBD</p>
+											 <p>Eugene Han (Keimyung University, Korea), TBD</p>
 											<p>TBD, TBD</p>
 										</td>
 									</tr>
@@ -1052,7 +1050,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>13:40 - 14:00</th>
 										<td>
-											<p class="s_bold">Diabetes in the Elderly</p>
+											<p class="s_bold">Current Insights and Individualized Approaches in Elderly Diabetes</p>
 											<p>Jae Seung Yun (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
