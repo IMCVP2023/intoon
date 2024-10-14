@@ -13,7 +13,7 @@ $submission_idx = $_GET["idx"];
 
 // 등록 가능한 기간인지
 $sql_during =    "SELECT
-						IF(DATE(NOW()) BETWEEN '2022-08-18 17:00:00' AND '2024-10-15 18:00:00', 'Y', 'N') AS yn
+						IF(DATE(NOW()) BETWEEN '2022-08-18 17:00:00' AND '2024-10-13 09:00:00', 'Y', 'N') AS yn
 					FROM info_event";
 $during_yn = sql_fetch($sql_during)['yn'];
 

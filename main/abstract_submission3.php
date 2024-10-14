@@ -449,8 +449,8 @@ if ($during_yn !== "Y" && (empty($submission_idx))) {
 			</div>
                 <div class="pager_btn_wrap">
                     <!-- <button type="button" class="btn submit is_submit" onclick="javascript:window.location.href='./abstract_submission2.php';"><?= $locale("next_btn") ?></button> -->
-                    <button type="button" class="btn"
-                        onclick="javascript:location.href='./abstract_submission2.php?idx=<?= $submission_idx ?>';">Modify</button>
+                    <!-- <button type="button" class="btn"
+                        onclick="javascript:location.href='./abstract_submission2.php?idx=<?= $submission_idx ?>';">Modify</button> -->
                     <?php
 						if ($detail['status'] == 0) {
 						?>
