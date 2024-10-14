@@ -154,7 +154,7 @@
 										</th>
 										<td>
 											<p>
-											Sang-Hyun Kim(Seoul National University, Korea) <br/>Kwang Joon Kim(Yonsei University, Korea)
+											Sang-Hyun Kim (Seoul National University, Korea) <br/>Kwang Joon Kim (Yonsei University, Korea)
 											</p>
 										</td>
 									</tr>
@@ -617,7 +617,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>16:20 - 16:40</th>
 										<td>
 											<p class="s_bold">Measurement of Physical Activity for Cardiovascular Disease Risk Assessment</p>
-											<p>Charles German (University of Chicago, USA)</p>
+											<p>Charles German (Georgetown University, USA)</p>
 										</td>
 									</tr>
 									<tr>

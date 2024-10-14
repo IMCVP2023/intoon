@@ -148,16 +148,16 @@
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="">
+									<!-- <tr class="">
 										<th>07:00 - 07:30</th>
 										<td>
 										<p class="s_bold">TBD</p>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
 										</td>
-									</tr>
+									</tr> -->
 									<tr class="pink_panel_tr">
-										<th>07:30 - 08:00</th>
+										<th>07:00 - 08:00</th>
 										<td>
 										<p class="s_bold">TBD</p>
 											<!-- <p class="s_bold">TBD</p>
@@ -883,8 +883,8 @@
 									<tr>
 										<th>08:50 - 09:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Sleep and Cardiovascular Disease</p>
+											<p>Jung Kyung Hong (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -1138,7 +1138,7 @@
 										</td>
 									</tr>
 									<tr class="non_border_b">
-										<th>13:10 - 13:30</th>
+										<th>13:30 - 13:50</th>
 										<td>
 											 <p class="s_bold">Break</p>
 										</td>
