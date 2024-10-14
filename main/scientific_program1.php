@@ -154,7 +154,7 @@
 										</th>
 										<td>
 											<p>
-												<!-- Won-Young Lee (Sungkyunkwan University, Korea) <br/>Sang Hyun Ihm (The Catholic University of Korea, Korea) -->
+											Sang-Hyun Kim(Seoul National University, Korea) <br/>Kwang Joon Kim(Yonsei University, Korea)
 											</p>
 										</td>
 									</tr>
@@ -168,14 +168,14 @@
 									<tr>
 										<th>09:20 - 09:40</th>
 										<td>
-											<p class="s_bold">Current Guidelines for Dyslipidemia - overview and unanswered questions</p>
+											<p class="s_bold">Current Guidelines for Dyslipidemia - Overview and Unanswered Questions</p>
 											<p>Sin Gon Kim (Korea University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>09:40 - 10:00</th>
 										<td>
-											<p class="s_bold">Advancing diabetes management: insights from the KDA clinical practice guidelines</p>
+											<p class="s_bold">Advancing Diabetes Management: Insights from the KDA Clinical Practice Guidelines</p>
 											<p>Byeong-Wan Lee (Yonsei University, Korea)</p>
 										</td>
 									</tr>
@@ -433,7 +433,7 @@
 										<th>13:00 - 13:20</th>
 										<td>
 											<p class="s_bold">Cervicocephalic arterial dissections</p>
-											<p>Seong Joon Lee (Ajou University, Korea)</p>
+											<p>Seong-Joon Lee (Ajou University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -450,7 +450,7 @@
 											 Cancer-related Stroke 
 											</p>
 											<p>
-												TBD
+											Jun-sang Yoo (Yonsei University, Korea)
 											</p> 
 										</td>
 									</tr>
@@ -468,7 +468,7 @@
 										<td>
 											<p class="s_bold">Panel Discussion</p>
 											<p>Jin Jung (The Catholic University of Korea, Korea), Ho Geol Woo (Kyung Hee University, Korea)</p>
-											<p>Seong heon Kim (Kangwon National University, Korea), Jong Moo Park (Eulji University, Korea)</p>
+											<p>Seong Heon Kim (Kangwon National University, Korea), Jong-Moo Park (Eulji University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -528,7 +528,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>Sang Hong Baek (The Catholic University of Korea, Korea)</p> -->
+											<p>Kyung Yeol Lee (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -631,8 +631,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>17:00 - 17:20</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<p>Ho Kyu Lee (Yonsei University, Korea), Dae Young Chun (Hallym University, Korea)</p>
-											<p>TBD, Song Vogue Ahn (Ewha Womans University, Korea)</p>
+											<p>Hokyou Lee (Yonsei University, Korea), Dae Young Chun (Hallym University, Korea)</p>
+											<p>Song Vogue Ahn (Ewha Womans University, Korea)</p>
 										</td>
 									</tr>
 								</tbody>
@@ -775,7 +775,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>09:00 - 09:20</th>
 										<td>
-											<p class="s_bold">SGLT1/2 Dual Inhibitor</p>
+											<p class="s_bold">Effects of SGLT1/2 Dual Inhibitors on Cardiovascular Risk</p>
 											<p>Eun-Jung Rhee (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
@@ -791,7 +791,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>09:40 - 10:00</th>
 										<td>
-											<p class="s_bold">Transforming Obesity Care: Next-Gen Treatments for Weight Loss </p>
+											<p class="s_bold">Transforming Obesity Care: Next-Gen Treatments for Weight Loss</p>
 											<p>Jang Won Son (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
@@ -806,8 +806,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>10:20 - 10:40</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											 <p>Eugene Han (Keimyung University, Korea), TBD</p>
-											<p>TBD, TBD</p>
+											 <p>Eugene Han (Keimyung University, Korea)</p>
+											<!-- <p>TBD, TBD</p> -->
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -969,7 +969,6 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>11:50 - 12:10</th>
 										<td>
-										<p class="s_bold">TBD</p>
 											<!-- <p class="s_bold">TBD</p>
 											<p>TBD (TBD)</p> -->
 										</td>
@@ -977,9 +976,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr class="pink_panel_tr">
 										<th>12:10 - 12:30</th>
 										<td>
-										<p class="s_bold">TBD</p>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Edarbi_How to treat Hypertension in the Metabolic Syndrome</p>
+											<p>Jong Young Lee (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -1036,7 +1034,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr>
 										<th>13:00 - 13:20</th>
 										<td>
-											<p class="s_bold">Medical Problems and Costs in Korean Elderly</p>
+											<p class="s_bold">Disease Burden and Health Care Costs in Korean Elderly</p>
 											<p>Seok-Jun Yoon (Korea University, Korea)</p>
 										</td>
 									</tr>
@@ -1065,8 +1063,8 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 										<th>14:20 - 14:40</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<p>Eun Joo Lee (University of Ulsan, Korea), TBD</p>
-											<p>TBD, TBD</p>
+											<p>Eun Joo Lee (University of Ulsan, Korea), Joo Hyun Lim (Korea Disease Control and Prevention Agency(KDCA))</p>
+											<p>Seung Jin Han (Ajou University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -1126,7 +1124,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>Sang Hong Baek (The Catholic University of Korea, Korea)</p> -->
+											<p>Kyung Yeol Lee (Yonsei University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
