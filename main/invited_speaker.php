@@ -149,14 +149,16 @@
 			session_word_value = "Plenary";
 		} else if(session_word_value === "Symposia") {
 			session_word_value = "Symposium";
-		} else if(session_word_value === "Workshops") {
-			session_word_value = "Workshop";
-		} else if(session_word_value === "Joint Symposia") {
-			session_word_value = "joint";
 		} else if(session_word_value === "Sponsors session") {
-			session_word_value = "Sponsors";
+			session_word_value = "Luncheon";
 		}
 
+		// else if(session_word_value === "Workshops") {
+		// 	session_word_value = "Workshop";
+		// } else if(session_word_value === "Joint Symposia") {
+		// 	session_word_value = "joint";
+		// } 
+		
 		$("input[name=session_word]").val(session_word_value);
 
 		ajax_submit(2);
