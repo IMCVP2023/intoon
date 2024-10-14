@@ -233,7 +233,7 @@
 										<th>08:30 - 08:50</th>
 										<td>
 											<p class="s_bold">
-												The known and unknown mechanisms of SGLT2 inhibitors 
+											The Known and Unknown Mechanisms of SGLT2 Inhibitors
 											</p>
 											<p>Yong-Ho Lee (Yonsei University, Korea)</p>
 										</td>
@@ -451,7 +451,7 @@
 							<table class="table color_table mobile" name="luncheon_symposium_3_mb">
 								<tbody>
 									<tr class="dark_pink_bg">
-										<th class="dark_pink_bg">12:50 - 13:50</th>
+										<th class="dark_pink_bg">12:50 - 13:10</th>
 									</tr>
 									<tr class="pink_bg non_border_b">
 										<td class="pink_bg">Luncheon Symposium 3 [ Daewoong Bio Incorporated ]</td>
@@ -472,15 +472,20 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<p>Sang Hyun Lim (The Catholic University of Korea, Korea)</p>
+											<p>Byung Jin Kim (Sungkyunkwan University, Korea) </p>
 										</td>
 									</tr>
-									<tr class="non_border_b">
-										<th>12:50 - 13:50</th>
+									<tr class="pink_panel_tr">
+										<th>12:50 - 13:10</th>
 										<td>
 											<p class="s_bold">[ICOSA] Clinical Value of EPA</p>
 											<p>Dae Young Cheon (Hallym University, Korea)</p>
 										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>13:10-13:40</th>
+										<td>
+											<p class="s_bold">Break</p>
 									</tr>
 								</tbody>
 							</table>
@@ -564,8 +569,8 @@
 								</colgroup>
 								<tbody>
 									<tr>
-										<th class="dark_yellow_bg">14:50 - 16:30</th>
-										<td class="yellow_bg">Symposium 11 <br/> Lifestyle Modification for Prevention of Cardiovascular Disease
+										<th class="dark_yellow_bg">14:50 - 16:10</th>
+										<td class="yellow_bg">Symposium 11 <br/> Lifestyle Modification for Prevention of Cardiovascular Disease (K)
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -574,10 +579,10 @@
 							<table class="table color_table mobile" name="symposium_11_mb">
 								<tbody>
 									<tr class="dark_yellow_bg">
-										<th class="dark_yellow_bg">13:50 - 15:00</th>
+										<th class="dark_yellow_bg">14:50 - 16:10</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 11 <br/> Lifestyle Modification for Prevention of Cardiovascular Disease
+										<td class="yellow_bg">Symposium 11 <br/> Lifestyle Modification for Prevention of Cardiovascular Disease (K)
 										</td>
 									</tr>
 								</tbody>
@@ -593,45 +598,51 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+											<p>SungHee Choi (Seoul National University, Korea)<br>Min Kyong Moon (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>14:50 - 15:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Physical Activity for Prevention of Cardiovascular Disease: Consensus Statement of Korean Society of Cardiovascular Disease Prevention </p>
+											<p>Ye Seul Yang (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>15:10 - 15:30</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Lifestyle Modification Program of the Korean Diabetes Prevention Study and Its Application in Clinical Practice</p>
+											<p>Suk Jeon (Kyung Hee University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>15:30 - 15:50</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Beyond diet and exercise: Hidden Lifestyle Factors in CVD Prevention </p>
+											<p>Eu Jeong Ku (Seoul National University, Korea)</p>
 										</td>
 									</tr>
-									<tr>
+									<!-- <tr>
 										<th>15:50 - 16:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">TBD</p>
+											<p>TBD (TBD)</p>
 										</td>
-									</tr>
-									<tr class="discussion non_border_b">
-										<th>16:10 - 16:30</th>
+									</tr> -->
+									<tr class="discussion yellow_panel_tr">
+										<th>15:50 - 16:10</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
+											<p>In-Kyung Jeong (Kyung Hee University, Korea), Ga Eun Nam (Korea University, Korea)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
+									<tr class="non_border_b ">
+										<th>16:10 - 16:30</th>
+										<td>
+											<p>Break</p>
+										</td>
+									</tr> 
 								</tbody>
 							</table>
 						</div>
@@ -865,8 +876,8 @@
 									<tr>
 										<th>08:30 - 08:50</th>
 										<td>
-											<p class="s_bold">Cancer Treatment as a Possible Risk Factor for Cardiovascular Disease</p>
-											<p>Woo-Baek Chung (The Catholic University of Korea, Korea)</p>
+											<p class="s_bold">Cardiovascular Risk in Breast Cancer Survivorship: Latest Findings</p>
+											<p>Yong-Moon Mark Park (University of Arkansas for Medical Sciences, USA)</p>
 										</td>
 									</tr>
 									<tr>
@@ -888,16 +899,16 @@
 									<tr>
 										<th>09:30 - 09:50</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Cancer Treatment as a Possible Risk Factor for Cardiovascular Disease</p>
+											<p>Woo-Baek Chung (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion yellow_panel_tr">
 										<th>09:50 - 10:10</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
+											<p>Dughyun Choi (Soonchunhyang University, Korea), Hyo-In Choi (Sungkyunkwan University, Korea)</p>
+											<p>Hwiseung Kim (Chung-Ang University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
@@ -1011,7 +1022,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+											<p>Sung Kee Ryu (Ewha Womans University, Korea)<br>Masayuki Yoshida (Tokyo Medical and Dental University, Japan)</p>
 										</td>
 									</tr>
 									<tr>
@@ -1107,23 +1118,29 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-											<p>TBD</p>
+											<p>Chong Hwa Kim (Bucheon Sejong Hospital, Korea)</p>
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
-									<tr class="non_border_b">
+									<tr class="">
 										<th>12:50 - 13:10</th>
 										<td>
 											 <p class="s_bold">TBD</p>
 											<!--<p>TBD (TBD)</p> -->
 										</td>
 									</tr>
-									<tr class="non_border_b">
+									<tr class="pink_panel_tr">
 										<th>13:10 - 13:30</th>
 										<td>
 											 <p class="s_bold">TBD</p>
 											<p>Seung-Hwan Lee (The Catholic University of Korea, Korea)</p>
+										</td>
+									</tr>
+									<tr class="non_border_b">
+										<th>13:10 - 13:30</th>
+										<td>
+											 <p class="s_bold">Break</p>
 										</td>
 									</tr>
 								</tbody>
@@ -1209,7 +1226,7 @@
 								<tbody>
 									<tr>
 										<th class="dark_yellow_bg">14:50 - 16:30</th>
-										<td class="yellow_bg">Symposium 12<br/>Digital Healthcare
+										<td class="yellow_bg">Symposium 12<br/>Digital Healthcare (K)
 											<!-- <button type="button" class="favorite_btn centerT">My Favorite</button> -->
 										</td>
 									</tr>
@@ -1221,7 +1238,7 @@
 										<th class="dark_yellow_bg">14:50 - 16:30</th>
 									</tr>
 									<tr class="yellow_bg non_border_b">
-										<td class="yellow_bg">Symposium 12<br/>
+										<td class="yellow_bg">Symposium 12<br/>Digital Healthcare (K)
 										</td>
 									</tr>
 								</tbody>
@@ -1237,7 +1254,7 @@
 											<p>Chairpersons</p>
 										</th>
 										<td>
-											<!-- <p>TBD (TBD)<br>TBD (TBD)</p> -->
+											<p>Seung-Hyun Ko (The Catholic University of Korea, Korea)<br>Cho Jae Hyoung (The Catholic University of Korea, Korea)</p>
 										</td>
 									</tr>
 									<tr>
@@ -1251,29 +1268,29 @@
 										<th>15:10 - 15:30</th>
 										<td>
 											<p class="s_bold">From Doctor to Doctorpreneur: Initial software platform company building experience</p>
-											<p>Su Jeong Song (TBD)</p>
+											<p>Su Jeong Song (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>
 									<tr>
 										<th>15:30 - 15:50</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Global Trends in AI research</p>
+											<p>Chi Hoon Lee (CJ Corporation)</p>
 										</td>
 									</tr>
                                     <tr>
 										<th>15:50 - 16:10</th>
 										<td>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">Digital Biomarker and Digital Therapeutics for Patients wit Cognitive Impairment</p>
+											<p>Geon Ha Kim (Ewha Womans University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="discussion non_border_b">
 										<th>16:10 - 16:30</th>
 										<td>
 											<p class="s_bold">Panel Discussion</p>
-											<!-- <p>TBD (TBD), TBD (TBD)</p>
-											<p>TBD (TBD), TBD (TBD)</p> -->
+											<p>Sang Youl Rhee (Kyung Hee University, Korea)</p>
+											<!-- <p>TBD (TBD), TBD (TBD)</p> -->
 										</td>
 									</tr>
 									
