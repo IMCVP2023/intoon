@@ -22,20 +22,30 @@ $info = sql_fetch($sql_info);
 
 ?>
 <section class="abstract_submission_guideline container abstract_presentation_guideline">
-    <h1 class="page_title">Presentation Guidelines</h1>
+		<h1 class="page_title">Call for Abstract
+			<div class="sub_btn_box">
+				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
+				<a href="/main/abstract_submission.php">Online submission</a>
+				<a href="/main/comingsoon.php" class="on">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
+				
+				<!-- <a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_award.php">Awards & Grants</a> -->
+			</div>
+		</h1>
     <div class="inner">
-        <ul class="tab_green long presentation">
-            <li><a href="./abstract_submission_oral.php">Oral Presentation</a></li>
-            <li><a href="./abstract_submission_poster.php">Guided Poster Presentation</a></li>
-            <li class="on"><a href="./abstract_submission_exhibition.php">Poster Exhibition</a></li>
-        </ul>
+        <div class="type_btn_box">
+            <div class="" onclick="window.location.href='/main/abstract_submission_oral.php'">Poster oral</div>
+            <div class="exhibition" onclick="window.location.href='/main/abstract_submission_exhibition.php'">Poster exhibitions</div>
+        </div>
+       
         <div class="section section1">
             <?php
             if (count($key_date) > 0) {
                 $weekday = ["일", "월", "화", "수", "목", "금", "토"];
             ?>
             <!--List of Accepted Abstract-->
-            <div>
+            <!-- <div>
                 <div class="section_title_wrap2">
                     <h3 class="title">List of Accepted Abstract</h3>
                 </div>
@@ -44,9 +54,9 @@ $info = sql_fetch($sql_info);
 					<button type="button" onClick="javascript:window.open('./download/Guided Poster Presentation_0817.pdf')"><img src="./img/icons/download_w.svg" />Guided Poster Presentation</button>
 					<button type="button" onClick="javascript:window.open('./download/Poster Exhibition_0817_v2.pdf')"><img src="./img/icons/download_w.svg" />Poster Exhibition</button>
                 </div>
-            </div>
+            </div> -->
             <!--keydate-->
-            <div>
+            <!-- <div>
                 <div class="section_title_wrap2">
                     <h3 class="title">Key Dates</h3>
                 </div>
@@ -74,9 +84,9 @@ $info = sql_fetch($sql_info);
                         </tr>
                     </table>
                 </div>
-            </div>
+            </div> -->
 			<!--Schedule of Poster Exhibition-->
-            <div>
+            <!-- <div>
                 <div class="section_title_wrap2">
                     <h3 class="title">Schedule of Poster Exhibition</h3>
                 </div>
@@ -105,9 +115,9 @@ $info = sql_fetch($sql_info);
 				   </table>
                 </div>
             </div>
-			<p class="mt10">* September 7th is closed for poster installation. </p>
+			<p class="mt10">* September 7th is closed for poster installation. </p> -->
 			<!--Submission of Presentation Material-->
-			<div>
+			<!-- <div>
 				<div class="section_title_wrap2">
 					<h3 class="title">Submission of Presentation Material</h3>
 				</div>
@@ -121,12 +131,8 @@ $info = sql_fetch($sql_info);
 				</div>
 				<div class="text_center btn_box mt25">
 					<a href="./download/ICOMES_2023_Poster_template.pptx" class="btn long_btn" target="_blank" download><img src="./img/icons/icon_download_white.svg" alt="">Poster Form Download</a>
-                    <!--
-					<a href="javascript:;" class="btn long_btn type2" target="_blank" download="">
-						Poster Form Download<img src="./img/icons/icon_download_yellow.svg" alt="">
-					</a> -->
                 </div>
-			</div>
+			</div> -->
 			<!--Poster Panel-->
 			<div class="poster_panel">
 				<div class="section_title_wrap2">
@@ -135,11 +141,68 @@ $info = sql_fetch($sql_info);
 				<div class="text_box indent">
 					<img src="./img/poster_panel.png" alt="Poster Panel">
 					<ul>
-						<li>• Poster Panel Size: W100 x H250</li>
-						<li>• Paper Size: A0 (W84.1 X H118.9)</li>
+						<li>• Poster Panel Size: W100 x H250 cm</li>
+						<li>• Paper Size: A0 (W84.1 X H118.9 cm)</li>
 					</ul>
 				</div>
 			</div>
+
+			<!--Poster Template-->
+			<div class="poster_panel">
+				<div class="section_title_wrap2">
+					<h3 class="title">Poster Template</h3>
+				</div>
+				<div class="text_box indent">
+					<ul>
+						<li class="underline">• Please use the official IMCVP2024 template.</li>
+						<button class="template" onClick="javascript:window.open('./download/IMCVP2024_Poster_template.pptx')">Poster template</button>
+					</ul>
+				</div>
+			</div>
+
+			<div>
+				<div class="section_title_wrap2">
+					<h3 class="title">Schedule for Affixation & Removal</h3>
+				</div>
+				<table class="c_table2 detail_table type2">
+					<tr>
+						<th>Date</th>
+						<td>November 29th (Friday) – November 30th (Saturday)</td>
+					</tr>
+					<tr>
+						<th>Venue</th>
+						<td>Grandball Room, Exhibition & Poster Zone (B1)</td>
+					</tr>
+					<tr>
+						<th>Affixation</th>
+						<td>November 29th (Friday) – 09:00 ~</td>
+					</tr>
+					<tr>
+						<th>Removal</th>
+						<td>November 30th (Saturday) – 16:00 ~ 17:00</td>
+					</tr>
+				</table>
+				<div class="text_box indent">
+					<ul>
+						<li>• All presenters are requested to affix and remove posters on the appropriate dates and time as indicated.</li>
+						<li>• Each poster will be provided with 1 panel.</li>
+					</ul>
+				</div>
+			</div> 
+
+			<div>
+				<div class="section_title_wrap2">
+					<h3 class="title">Regulations</h3>
+				</div>
+				<div class="text_box indent">
+					<ul>
+						<li>• Posters should be readable by viewers from 1.5 meters away. The poster title, author(s)'s name(s) and affiliation(s) should appear on the top. The message should be clear and understandable without oral explanation.</li>
+						<li>• Posters should be able to show the main content or the main results of the research.</li>
+						<li>• 3M Double-sided tapes and adhesive tapes will be available to attach your poster to the panel. (The tapes will be provided on the site.)</li>
+						<li>• All presenters should remove posters at the removal time. Otherwise, the remaining posters will be removed by staff without notice and the organizing committee will not take responsibilities for any damages or losses of the posters.</li>
+					</ul>
+				</div>
+			</div> 
             <?php
             }
             ?>
