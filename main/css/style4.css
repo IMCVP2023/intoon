@@ -3069,6 +3069,7 @@ select[name="topic1"] option:disabled {
 	background-color: #23509F;
 	border: 1px solid #23509F;
 	color: #FFF;
+	cursor: pointer;
 }
 
 .abstract_presentation_guideline .type_btn_box > div.oral:hover{
@@ -3076,6 +3077,20 @@ select[name="topic1"] option:disabled {
 	border: 1px solid #23509F;
 	color: #FFF;
 }
+
+.abstract_presentation_guideline .type_btn_box > div.exhibition{
+	background-color: #009DDC;
+	border: 1px solid #009DDC;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.abstract_presentation_guideline .type_btn_box > div.exhibition:hover{
+	background-color: #009DDC;
+	border: 1px solid #009DDC;
+	color: #FFF;
+}
+
 
 table.type1 thead th {
 	border-right:1px solid #FFF !important;
@@ -3346,4 +3361,16 @@ table.type2 th{
 	top: 20%;
 	left: 52%;
 	transform: translate(-50%, -50%);
+}
+
+
+.template{
+	border : none !important;
+	background-color: orange;
+	margin-top: 12px;
+	cursor: pointer !important;
+}
+
+.template:hover{
+	text-decoration: underline;
 }

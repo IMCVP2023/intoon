@@ -26,7 +26,7 @@ $info = sql_fetch($sql_info);
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
 				<a href="/main/abstract_submission.php">Online submission</a>
-				<a href="/main/comingsoon.php" class="on">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
 				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
 				
 				<!-- <a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
@@ -35,8 +35,8 @@ $info = sql_fetch($sql_info);
 		</h1>
     <div class="inner">
         <div class="type_btn_box">
-            <div class="oral">Poster oral</div>
-            <div class="not_yet">Poster exhibitions</div>
+            <div class="oral" onclick="window.location.href='/main/abstract_submission_oral.php'">Poster oral</div>
+            <div class="" onclick="window.location.href='/main/abstract_submission_exhibition.php'">Poster exhibitions</div>
         </div>
        
         <div class="section section1">
@@ -123,13 +123,14 @@ $info = sql_fetch($sql_info);
 			<!--Length of Presentation-->
 			<div>
 				<div class="section_title_wrap2">
-					<h3 class="title">Presentation Length</h3>
+					<h3 class="title">Poster Presentation</h3>
 				</div>
 				<div class="text_box indent">
 					<ul>
-						<li>• Each presenter will be given 10 minutes.</li>
-						<li>• When the 7minute presentation ends, a Question and Answer session for participants with the panel and the presenter will follow for 3 minutes.</li>
-						<li class="red_t">※ Each individual presenter should take no more than 10 minutes to present. The slide show will end after passing the designated time.</li>
+						<li>• Each presenter will be given 8 minutes.</li>
+						<li>• Presenters will share their perspectives and recent advancements with the displayed posters for 5 minutes.</li>
+						<li>• When the presentation ends, a Q&A session for participants with panels and presenters will follow for 3 minutes.</li>
+						<!-- <li class="red_t">※ Each individual presenter should take no more than 10 minutes to present. The slide show will end after passing the designated time.</li> -->
 					</ul>
 				</div>
 			</div>
@@ -142,21 +143,21 @@ $info = sql_fetch($sql_info);
 				</div>
 				<div class="text_box indent">
 					<ul>
-						<li>• The presentation should be in English, which is the official language of the IMCVP 2024.</li>
+						<li>• The presentation should be in English, which is the official language of the IMCVP2024.</li>
 					</ul>
 				</div>
 			</div>
 
 
 			<!--Preview Room-->
-			<div>
+			<!-- <div>
 				<div class="section_title_wrap2">
 					<h3 class="title">Preview Room</h3>
 					<p>
                     All speakers must visit the Preview Room to check and upload their presentation files ahead of their session.
 					</p>
 				</div>
-				<!-- <div class="table_wrap detail_table_common">
+				<div class="table_wrap detail_table_common">
                        <table class="c_table detail_table">
                            <colgroup>
                                <col>
@@ -178,10 +179,38 @@ $info = sql_fetch($sql_info);
 							<td class="text_center">07:30 - 17:00</td>
 						</tr>
                        </table>
-                   </div> -->
+                   </div>
+			</div> -->
+
+			<!--Poster Panel-->
+			<div class="poster_panel">
+				<div class="section_title_wrap2">
+					<h3 class="title">Poster Panel</h3>
+				</div>
+				<div class="text_box indent">
+					<img src="./img/poster_panel.png" alt="Poster Panel">
+					<ul>
+						<li>• Poster Panel Size: W100 x H250 cm</li>
+						<li>• Paper Size: A0 (W84.1 X H118.9 cm)</li>
+					</ul>
+				</div>
 			</div>
+
+			<!--Poster Template-->
+			<div class="poster_panel">
+				<div class="section_title_wrap2">
+					<h3 class="title">Poster Template</h3>
+				</div>
+				<div class="text_box indent">
+					<ul>
+						<li class="underline under">• Please use the official IMCVP2024 template.</li>
+						<button class="template" onClick="javascript:window.open('./download/IMCVP2024_Poster_template.pptx')">Poster template</button>
+					</ul>
+				</div>
+			</div>
+
 			<!--Presentation File-->
-			<div>
+			<!-- <div>
 				<div class="section_title_wrap2">
 					<h3 class="title">Presentation File</h3>
 				</div>
@@ -193,9 +222,9 @@ $info = sql_fetch($sql_info);
 						<li>• If you do not visit the preview room before your presentation for any urgent reason, you will be responsible for loading your file onto the PC in the session room directly.</li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 			<!--Audio/Visual Guidelines -->
-            <div>
+            <!-- <div>
 				<div class="section_title_wrap2">
 					<h3 class="title">Audio/Visual Guidelines</h3>
 				</div>
@@ -205,7 +234,57 @@ $info = sql_fetch($sql_info);
                         </li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
+
+			<div>
+				<div class="section_title_wrap2">
+					<h3 class="title">Schedule for Poster Oral Presentation</h3>
+				</div>
+				<table class="c_table2 detail_table type2">
+					<tr>
+						<th>Date</th>
+						<td>November 29th (Friday) – November 30th (Saturday)</td>
+					</tr>
+					<tr>
+						<th>Venue</th>
+						<td>Grandball Room, Exhibition & Poster Zone (B1)</td>
+					</tr>
+					<tr>
+						<th>Date & Time</th>
+						<td>November 29th (Friday) – TBA <br/>November 30th (Saturday) – TBA </td>
+					</tr>
+				</table>
+			</div> 
+
+			<div>
+				<div class="section_title_wrap2">
+					<h3 class="title">Schedule for Affixation & Removal</h3>
+				</div>
+				<table class="c_table2 detail_table type2">
+					<tr>
+						<th>Date</th>
+						<td>November 29th (Friday) – November 30th (Saturday)</td>
+					</tr>
+					<tr>
+						<th>Venue</th>
+						<td>Grandball Room, Exhibition & Poster Zone (B1)</td>
+					</tr>
+					<tr>
+						<th>Affixation</th>
+						<td>November 29th (Friday) – 09:00 ~</td>
+					</tr>
+					<tr>
+						<th>Removal</th>
+						<td>November 30th (Saturday) – 16:00 ~ 17:00</td>
+					</tr>
+				</table>
+				<div class="text_box indent">
+					<ul>
+						<li>• All presenters are requested to affix and remove posters on the appropriate dates and time as indicated.</li>
+						<li>• Each poster will be provided with 1 panel.</li>
+					</ul>
+				</div>
+			</div> 
             <?php
             }
             ?>
