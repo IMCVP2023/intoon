@@ -3057,11 +3057,24 @@ select[name="topic1"] option:disabled {
 	justify-content: center;
 	font-size: 22px;
 	border: 1px solid #ADA9BB;
+	cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+	.abstract_presentation_guideline .type_btn_box > div{
+		font-size: 16px;
+	}
 }
 
 .abstract_presentation_guideline .type_btn_box > div:hover{
 	background-color: #009DDC;
 	border: 1px solid #009DDC;
+	color: #FFF;
+}
+
+.abstract_presentation_guideline .type_btn_box.exhibition > div:hover{
+	background-color: #23509F;
+	border: 1px solid #23509F;
 	color: #FFF;
 }
 

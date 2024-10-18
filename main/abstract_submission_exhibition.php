@@ -34,7 +34,7 @@ $info = sql_fetch($sql_info);
 			</div>
 		</h1>
     <div class="inner">
-        <div class="type_btn_box">
+        <div class="type_btn_box exhibition">
             <div class="" onclick="window.location.href='/main/abstract_submission_oral.php'">Poster oral</div>
             <div class="exhibition" onclick="window.location.href='/main/abstract_submission_exhibition.php'">Poster exhibitions</div>
         </div>
