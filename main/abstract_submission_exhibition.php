@@ -26,7 +26,7 @@ $info = sql_fetch($sql_info);
 			<div class="sub_btn_box">
 				<a href="/main/abstract_submission_guideline.php">Abstract Submission Guidelines</a>
 				<a href="/main/abstract_submission.php">Online submission</a>
-				<a href="/main/comingsoon.php" class="on">Presentation Guidelines</a>
+				<a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
 				<a href="/main/abstract_submission_award.php">Awards & Grants</a>
 				
 				<!-- <a href="/main/abstract_submission_oral.php" class="on">Presentation Guidelines</a>
@@ -198,7 +198,7 @@ $info = sql_fetch($sql_info);
 					<ul>
 						<li>• Posters should be readable by viewers from 1.5 meters away. The poster title, author(s)'s name(s) and affiliation(s) should appear on the top. The message should be clear and understandable without oral explanation.</li>
 						<li>• Posters should be able to show the main content or the main results of the research.</li>
-						<li>• 3M Double-sided tapes and adhesive tapes will be available to attach your poster to the panel. (The tapes will be provided on the site.)</li>
+						<li>• 3M Double-sided tapes and adhesive tapes will be available to attach your poster to the panel.<br/>(The tapes will be provided on the site.)</li>
 						<li>• All presenters should remove posters at the removal time. Otherwise, the remaining posters will be removed by staff without notice and the organizing committee will not take responsibilities for any damages or losses of the posters.</li>
 					</ul>
 				</div>
