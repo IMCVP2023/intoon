@@ -144,7 +144,7 @@
 											<p>Chairperson</p>
 										</th>
 										<td>
-										<p class="">TBD</p>
+										<p class="">Sang Hyun Lim (The Catholic University of Korea, Korea)</p>
 											<!-- <p>TBD (TBD)</p> -->
 										</td>
 									</tr>
@@ -159,9 +159,8 @@
 									<tr class="pink_panel_tr">
 										<th>07:00 - 08:00</th>
 										<td>
-										<p class="s_bold">TBD</p>
-											<!-- <p class="s_bold">TBD</p>
-											<p>TBD (TBD)</p> -->
+											<p class="s_bold">A Practical Approach to Hypertension Management in Elderly Patients</p>
+											<p>Hak Ryung Kim (Seoul National University, Korea)</p>
 										</td>
 									</tr>
 									<tr class="non_border_b">
