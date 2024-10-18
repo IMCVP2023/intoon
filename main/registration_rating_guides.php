@@ -75,9 +75,9 @@
 					<tbody>
 						<tr>
 							<td class="kor">대한의사협회</td>
-							<td class="kor">최대 6평점<span class="red_t bold">(예상)</span></td>
-							<td class="kor">최대 6평점<span class="red_t bold">&nbsp;(예상)</span></td>
-							<td class="kor">최대 12평점<span class="red_t bold">&nbsp;(예상)</span></td>
+							<td class="kor">최대 6평점</td>
+							<td class="kor">최대 6평점</td>
+							<td class="kor">최대 12평점</td>
 						</tr>
 						<!-- <tr>
 							<td class="kor">내과전공의 외부학술회의(학술대회)</td>
@@ -180,7 +180,7 @@
 					<thead>
 						<tr>
 							<th class="kor">구분</th>
-							<th class="kor">기준<span class="red_t bold">&nbsp;(예상)</span></th>
+							<th class="kor">기준</th>
 						</tr>
 					</thead>
 					<tbody>

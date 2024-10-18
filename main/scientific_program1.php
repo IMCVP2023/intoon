@@ -450,7 +450,7 @@
 											 Cancer-related Stroke 
 											</p>
 											<p>
-											Jun-sang Yoo (Yonsei University, Korea)
+											Joonsang Yoo (Yonsei University, Korea)
 											</p> 
 										</td>
 									</tr>
@@ -976,7 +976,7 @@ and Dr. Hyeon Chang Kim will address the impact of socioeconomic factors on card
 									<tr class="pink_panel_tr">
 										<th>12:10 - 12:30</th>
 										<td>
-											<p class="s_bold">Edarbi_How to treat Hypertension in the Metabolic Syndrome</p>
+											<p class="s_bold">Importance of 24h BP Control for Reducing CVD Risk; The Role of Edarbi</p>
 											<p>Jong Young Lee (Sungkyunkwan University, Korea)</p>
 										</td>
 									</tr>

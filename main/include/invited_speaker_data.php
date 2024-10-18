@@ -156,7 +156,7 @@ array(
 ), 
 array(
 	'idx'=>90, 
-	'first_name'=>'Jun-sang', 
+	'first_name'=>'Joonsang', 
 	'last_name'=>'Yoo', 
 	'affiliation'=>'Yonsei University', 
 	'nation'=>'Korea', 
